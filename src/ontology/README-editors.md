@@ -93,6 +93,8 @@ If you have IDs in your range already, you may wish to set Protege at the next u
 
 Setting up ID ranges in Protege: http://obofoundry.github.io/docs/SettingUpProtege.html
 
+You now want to set up Protege so that future entities you create are, by default, following the ID policy (and also auto incrementing their ID). To do so, go to "Protege > Preferences > New entities" 
+
 **Plugins**: 
 
 Obsolescence Plugin: 

@@ -8,6 +8,7 @@ SETTING UP
 3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
 
 **DO Files**  
+
 1. production file, actively edited: doid-edit.owl
 2. production GitHub file: produced after editing: doid.owl and doid.obo
 3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]

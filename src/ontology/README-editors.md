@@ -26,6 +26,7 @@ The current (2015) ID ranges include
  	DOID:$sequence(7,80000,80999)$  Lynn
 
 **Protege Configuration**
+
 Ensure that you have Protege configured to generate new URIs in your
 own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
 http://purl.obolibrary.org/obo/DOID_0000473

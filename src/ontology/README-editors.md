@@ -25,36 +25,6 @@ The current (2015) ID ranges include
  	DOID:$sequence(7,70000,70999)$  in reserve (UMB)
  	DOID:$sequence(7,80000,80999)$  Lynn
 
-**Protege Configuration**
-
-Ensure that you have Protege configured to generate new URIs in your
-own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
-http://purl.obolibrary.org/obo/DOID_0000473
-Do a test to ensure that the ID generator is working properly.
-
-A word of caution about protege auto-id functionality. 
-Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it. Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. 
-Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range. 
-If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
-
-
-**Plugins**: 
-
-Obsolescence Plugin: 
-Get Jim's awesome obsolescence plugin here:
-https://github.com/balhoff/obo-actions/downloads
-
-To add plugins to Protege, 
-navigate to the application, open the application contents, 
-navigate to contents/Resources/Java/plugins 
-and put the jar file in there. 
-Your plugin should be installed next time you start protege.
-
-Elk Plugin: 
-Get Elk here:
-http://code.google.com/p/elk-reasoner/downloads/list
-perform same operation as above to install.
-
 
 GETTING STARTED -- Setting up a DO Git remote repository
 ---------------
@@ -100,7 +70,50 @@ a '#'. E.g.
    git commit -m "Fixed definition of hirsutism. Fixes issue #3" doid-edit.owl
 
 
+PROTEGE
+------------------------
+
+Install Protege 4.3 (or higher version, if not in beta) and OBO-Edit Tools for Ontology Development 
+Download and install the latest version of Protege and OBO-Edit (2.3.1) for ontology development.
+http://protege.stanford.edu/products.php#desktop-protege
+https://sourceforge.net/projects/geneontology/files/OBO-Edit 2.3.1
+
+
+**Protege Configuration**
+
+Ensure that you have Protege configured to generate new URIs in your
+own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
+http://purl.obolibrary.org/obo/DOID_0000473
+Do a test to ensure that the ID generator is working properly.
+
+A word of caution about protege auto-id functionality. 
+Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it. Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. 
+Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range. 
+If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
+
+
+**Plugins**: 
+
+Obsolescence Plugin: 
+Get Jim's awesome obsolescence plugin here:
+https://github.com/balhoff/obo-actions/downloads
+
+To add plugins to Protege, 
+navigate to the application, open the application contents, 
+navigate to contents/Resources/Java/plugins 
+and put the jar file in there. 
+Your plugin should be installed next time you start protege.
+
+Elk Plugin: 
+Get Elk here:
+http://code.google.com/p/elk-reasoner/downloads/list
+perform same operation as above to install.
 ## Editing DO in OWL 
+
+**Starting Protege**
+	1. Open Protege
+	2. Open the doid-edit.owl file from your local HumanDiseaseOntology repository
+	3. If prompted, updated imports [from your local repository files]
 
 Then, open the file doid-edit.owl in Protege
 

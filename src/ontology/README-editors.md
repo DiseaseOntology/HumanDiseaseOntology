@@ -7,7 +7,10 @@ SETTING UP
 2. Get the Elk plugin
 3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
 
-
+*DO Files*
+1. production file, actively edited: doid-edit.owl
+2. production GitHub file: produced after editing: doid.owl and doid.obo
+3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
 
 PRE-EDIT CHECKLIST
 ------------------
@@ -32,7 +35,7 @@ Protege will allow reuse of a URI in your range according to the numbering schem
 Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range. 
 If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
 
-Creating new classes in DO.
+*Creating new classes in DO*
 
 Plugins: 
 
@@ -63,9 +66,42 @@ Create a local DO git repository:
 2. [in that directory]: run the command: create git directory
      by the command: git init 
 3. clone the HumanDiseaseOntology git repository: 
-    by the command: git clone https://github.com:DiseaseOntology/HumanDiseaseOntology.git
+    by the command: git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git
 
-   git pull
+4. to view the status of your git repository: 
+   git status
+5. to bring in new udpates to your git repository: 
+   git pull https://github.com/DiseaseOntology/HumanDiseaseOntology.git
+
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+# Git command steps: 
+Before working on DO file:
+git pull    -- get updates from master archive
+
+if adding a new file:
+git add FILENAME
+git commit -m "MY_TEXT" FILENAME      -- this a local commit
+
+Before committing the updated or new file to the Master archive:
+git pull    -- get updates from master archive
+git push   -- to commit the updated or new file to the master archive
+
+
+Commit your changes
+
+   git commit -m "COMMIT MESSAGE" doid-edit.owl
+
+If you are fixing as issue in the tracker, always reference this with
+a '#'. E.g.
+
+   git commit -m "Fixed definition of hirsutism. Fixes issue #3" doid-edit.owl
+
+
+## Editing DO in OWL 
 
 Then, open the file doid-edit.owl in Protege
 
@@ -84,18 +120,9 @@ Edit the ontology in protege:
 
 Save
 
-**do not edit any other files!!!**
 
-Commit your changes
 
-   git commit -m "COMMIT MESSAGE" doid-edit.owl
 
-If you are fixing as issue in the tracker, always reference this with
-a '#'. E.g.
-
-   git commit -m "Fixed definition of hirsutism. Fixes issue #3" doid-edit.owl
-
-Note: if you prefer a GUI contact us for instructions about using Tower.
 
 OBSOLETING
 ---------------

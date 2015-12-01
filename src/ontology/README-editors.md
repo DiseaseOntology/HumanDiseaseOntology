@@ -12,11 +12,10 @@ SETTING UP
 2. production GitHub file: produced after editing: doid.owl and doid.obo
 3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
 
-PRE-EDIT CHECKLIST
-------------------
 
-Do you have an ID range in the idranges file (doid-idranges.owl), 
-in the HumanDiseaseOntology/src/ontology/ directory)? 
+**ID range**: documented in the idranges file (doid-idranges.owl), 
+in the HumanDiseaseOntology/src/ontology/ directory)
+
 The current (2015) ID ranges include 
  for the University of Maryland Baltimore curation team: 
    DOID:$sequence(7,50000,50999)$  Lynn
@@ -24,7 +23,7 @@ The current (2015) ID ranges include
    DOID:$sequence(7,70000,70999)$  in reserve (UMB)
    DOID:$sequence(7,80000,80999)$  Lynn
 
-
+**Protege Configuration**
 Ensure that you have Protege configured to generate new URIs in your
 own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
 http://purl.obolibrary.org/obo/DOID_0000473
@@ -35,9 +34,8 @@ Protege will allow reuse of a URI in your range according to the numbering schem
 Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range. 
 If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
 
-*Creating new classes in DO*
 
-Plugins: 
+**Plugins**: 
 
 Obsolescence Plugin: 
 Get Jim's awesome obsolescence plugin here:
@@ -54,7 +52,7 @@ Get Elk here:
 http://code.google.com/p/elk-reasoner/downloads/list
 perform same operation as above to install.
 
-Setting up: Obtain the Disease Ontology from git (one time only):
+**Setting up DO Git remote repository**: Obtain the Disease Ontology from git (one time only):
 
 
 GETTING STARTED
@@ -107,7 +105,7 @@ Then, open the file doid-edit.owl in Protege
 
 Switch on the Elk reasoner (see how to get plugins above). If you are making changes, be sure to synchronize the reasoner.
 
-Edit the ontology in protege:
+**Edit the ontology in protege**:
  * Find parent term in Protégé by searching (at top of screen)
  * Double check that term is not already there
  * Add subclass
@@ -117,11 +115,6 @@ Edit the ontology in protege:
  * database_cross_reference
  * GOC:initials
  * Under annotations, add synonyms, if necessary (has_exact_synonym, etc)
-
-Save
-
-
-
 
 
 OBSOLETING
@@ -241,12 +234,10 @@ The official purls for DO are
 
 These currently redirect to the central OBO library build
 
-Currently (Oct 2014) the central OBO library build is built from the sourceforge version of DO
+Currently, the central OBO library build is built from the sourceforge version of DO
 (http://sourceforge.net/p/diseaseontology/code/HEAD/tree/trunk/HumanDO.obo?format=raw)
 
 This will soon be deprecated, and the central obo build will be made
 from the version in this repository.
 
-TODO: decide between either continuous release (build is made from
-doid-edit) or whether doid has a release management process (e.g. doid
-editor runs "make release")
+Continuous release: (DO build is made from doid-edit) 

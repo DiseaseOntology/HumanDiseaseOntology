@@ -55,10 +55,8 @@ Get Elk here:
 http://code.google.com/p/elk-reasoner/downloads/list
 perform same operation as above to install.
 
-**Setting up DO Git remote repository**: Obtain the Disease Ontology from git (one time only):
 
-
-GETTING STARTED
+GETTING STARTED -- Setting up a DO Git remote repository
 ---------------
 
 Create a local DO git repository: 

@@ -63,7 +63,7 @@ Create a local DO git repository:
 2. [in that directory]: run the command: create git directory
      by the command: git init 
 3. clone the HumanDiseaseOntology git repository: 
-    by the command: git clone https://github.com:DiseaseOntology/HumanDiseaseOntology.git
+    by the command: git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git
 
    git pull
 

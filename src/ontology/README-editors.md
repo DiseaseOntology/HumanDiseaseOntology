@@ -18,10 +18,10 @@ in the HumanDiseaseOntology/src/ontology/ directory)
 
 The current (2015) ID ranges include 
  for the University of Maryland Baltimore curation team: 
-   DOID:$sequence(7,50000,50999)$  Lynn 
-   DOID:$sequence(7,60000,60999)$  Elvira
-   DOID:$sequence(7,70000,70999)$  in reserve (UMB)
-   DOID:$sequence(7,80000,80999)$  Lynn
+ 	DOID:$sequence(7,50000,50999)$  Lynn 
+ 	DOID:$sequence(7,60000,60999)$  Elvira
+ 	DOID:$sequence(7,70000,70999)$  in reserve (UMB)
+ 	DOID:$sequence(7,80000,80999)$  Lynn
 
 **Protege Configuration**
 Ensure that you have Protege configured to generate new URIs in your

@@ -91,6 +91,7 @@ Protege will allow reuse of a URI in your range according to the numbering schem
 Some tips to check to see where you are in your range: Go to the view menu, click "render by name (rdf:id)", and then use the search box to search for things starting within your range. 
 If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
 
+Setting up ID ranges in Protege: http://obofoundry.github.io/docs/SettingUpProtege.html
 
 **Plugins**: 
 

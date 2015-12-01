@@ -7,57 +7,26 @@ SETTING UP
 2. Get the Elk plugin
 3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
 
-*DO Files*
+**DO Files**  
+
 1. production file, actively edited: doid-edit.owl
 2. production GitHub file: produced after editing: doid.owl and doid.obo
 3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
 
-PRE-EDIT CHECKLIST
-------------------
 
-Do you have an ID range in the idranges file (doid-idranges.owl), 
-in the HumanDiseaseOntology/src/ontology/ directory)? 
+**ID range**: documented in the idranges file (doid-idranges.owl), 
+in the HumanDiseaseOntology/src/ontology/ directory)
+
 The current (2015) ID ranges include 
  for the University of Maryland Baltimore curation team: 
-   DOID:$sequence(7,50000,50999)$  Lynn
-   DOID:$sequence(7,60000,60999)$  Elvira
-   DOID:$sequence(7,70000,70999)$  in reserve (UMB)
-   DOID:$sequence(7,80000,80999)$  Lynn
+ 
+ 	DOID:$sequence(7,50000,50999)$  Lynn 
+ 	DOID:$sequence(7,60000,60999)$  Elvira
+ 	DOID:$sequence(7,70000,70999)$  in reserve (UMB)
+ 	DOID:$sequence(7,80000,80999)$  Lynn
 
 
-Ensure that you have Protege configured to generate new URIs in your
-own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
-http://purl.obolibrary.org/obo/DOID_0000473
-Do a test to ensure that the ID generator is working properly.
-
-A word of caution about protege auto-id functionality. 
-Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it. Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. 
-Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range. 
-If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
-
-*Creating new classes in DO*
-
-Plugins: 
-
-Obsolescence Plugin: 
-Get Jim's awesome obsolescence plugin here:
-https://github.com/balhoff/obo-actions/downloads
-
-To add plugins to Protege, 
-navigate to the application, open the application contents, 
-navigate to contents/Resources/Java/plugins 
-and put the jar file in there. 
-Your plugin should be installed next time you start protege.
-
-Elk Plugin: 
-Get Elk here:
-http://code.google.com/p/elk-reasoner/downloads/list
-perform same operation as above to install.
-
-Setting up: Obtain the Disease Ontology from git (one time only):
-
-
-GETTING STARTED
+GETTING STARTED -- Setting up a DO Git remote repository
 ---------------
 
 Create a local DO git repository: 
@@ -101,13 +70,59 @@ a '#'. E.g.
    git commit -m "Fixed definition of hirsutism. Fixes issue #3" doid-edit.owl
 
 
+PROTEGE
+------------------------
+
+Install Protege 4.3 (or higher version, if not in beta) and OBO-Edit Tools for Ontology Development 
+Download and install the latest version of Protege and OBO-Edit (2.3.1) for ontology development.
+http://protege.stanford.edu/products.php#desktop-protege
+https://sourceforge.net/projects/geneontology/files/OBO-Edit 2.3.1
+
+
+**Protege Configuration**
+
+Ensure that you have Protege configured to generate new URIs in your
+own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
+http://purl.obolibrary.org/obo/DOID_0000473
+Do a test to ensure that the ID generator is working properly.
+
+A word of caution about protege auto-id functionality. 
+Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it. Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. 
+Some tips to check to see where you are in your range: Go to the view menu, click "render by name (rdf:id)", and then use the search box to search for things starting within your range. 
+If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
+
+Setting up ID ranges in Protege: http://obofoundry.github.io/docs/SettingUpProtege.html
+
+You now want to set up Protege so that future entities you create are, by default, following the ID policy (and also auto incrementing their ID). To do so, go to "Protege > Preferences > New entities" 
+
+**Plugins**: 
+
+Obsolescence Plugin: 
+Get Jim's awesome obsolescence plugin here:
+https://github.com/balhoff/obo-actions/downloads
+
+To add plugins to Protege, 
+navigate to the application, open the application contents, 
+navigate to contents/Resources/Java/plugins 
+and put the jar file in there. 
+Your plugin should be installed next time you start protege.
+
+Elk Plugin: 
+Get Elk here:
+http://code.google.com/p/elk-reasoner/downloads/list
+perform same operation as above to install.
 ## Editing DO in OWL 
+
+**Starting Protege**
+	1. Open Protege
+	2. Open the doid-edit.owl file from your local HumanDiseaseOntology repository
+	3. If prompted, updated imports [from your local repository files]
 
 Then, open the file doid-edit.owl in Protege
 
 Switch on the Elk reasoner (see how to get plugins above). If you are making changes, be sure to synchronize the reasoner.
 
-Edit the ontology in protege:
+**Edit the ontology in protege**:
  * Find parent term in Protégé by searching (at top of screen)
  * Double check that term is not already there
  * Add subclass
@@ -117,11 +132,6 @@ Edit the ontology in protege:
  * database_cross_reference
  * GOC:initials
  * Under annotations, add synonyms, if necessary (has_exact_synonym, etc)
-
-Save
-
-
-
 
 
 OBSOLETING
@@ -241,12 +251,10 @@ The official purls for DO are
 
 These currently redirect to the central OBO library build
 
-Currently (Oct 2014) the central OBO library build is built from the sourceforge version of DO
+Currently, the central OBO library build is built from the sourceforge version of DO
 (http://sourceforge.net/p/diseaseontology/code/HEAD/tree/trunk/HumanDO.obo?format=raw)
 
 This will soon be deprecated, and the central obo build will be made
 from the version in this repository.
 
-TODO: decide between either continuous release (build is made from
-doid-edit) or whether doid has a release management process (e.g. doid
-editor runs "make release")
+Continuous release: (DO build is made from doid-edit) 

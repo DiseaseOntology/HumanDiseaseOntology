@@ -1,0 +1,45 @@
+DO Ontology files in the DiseaseOntology/HumanDiseaseOntology/src/ontology directory
+
+DO production work, conducted by the University of Maryland team, is done on the 
+doid-edit.owl file.
+
+The DO team will update the other files in this directly on a weekly basis.
+    This is done by running DO's Makefile. 
+    This creates several OWL and OBO version of DO. 
+    
+This README is to document and describe what is found in each file/set of files.
+The DO production file has been called: HumanDO.obo. 
+This file is archived in this directory and in DO's SVN directory. 
+
+DO Production Ontology Files:
+doid-edit.owl           :  DO team editing environment 
+                          -- this file currently includes axioms to ontology files in the IMPORTS directory.
+                          -- DO includes axioms from: Cell Ontology (CL), UBERON and NCBITaxon
+                          
+doid.obo                : --DO's public OBO file, containing DO axioms
+doid.owl                : --DO's public OWL file, containing DO axioms
+
+doid-non-classified.obo :  this file is equivalent to DO's HumanDO.obo file  -- this file does not contain axioms
+doid-non-classified.owl :  OWL version of HumanDO.obo 
+
+
+DO Production Non-Ontology Files
+doid-idranges.owl
+doid-metadata.txt
+doid-non-classified-metadata.txt
+doid-reasoner-report.txt 
+ext.owl 
+
+
+Experimental - NON PRODUCTION files
+These files are only for testing and development purposes.
+They should not be used for data comparisons nor downloaded for research purposes.
+
+doid-plus-ncit.owl
+doid-plus-omim.owl
+doid-plus-orphanet.owl
+doid.-potential-redundant-module.owl
+doid-simple.obo
+doid-simple.owl
+doid-simple-metadata.txt
+doidx.obo

@@ -52,12 +52,14 @@ Before working on DO file:
 git pull    -- get updates from master archive
 
 if adding a new file:
-git add FILENAME
-git commit -m "MY_TEXT" FILENAME      -- this a local commit
+
+	git add FILENAME
+	git commit -m "MY_TEXT" FILENAME      -- this a local commit
 
 Before committing the updated or new file to the Master archive:
-git pull    -- get updates from master archive
-git push   -- to commit the updated or new file to the master archive
+
+	git pull    -- get updates from master archive
+	git push   -- to commit the updated or new file to the master archive
 
 
 Commit your changes

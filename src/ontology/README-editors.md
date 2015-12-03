@@ -59,7 +59,7 @@ if adding a new file:
 Before committing the updated or new file to the Master archive:
 
 	git pull    -- get updates from master archive
-	git push   -- to commit the updated or new file to the master archive
+	git push origin master   -- to commit the updated or new file to the master archive
 
 
 Commit your changes

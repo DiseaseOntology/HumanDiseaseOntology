@@ -235,6 +235,27 @@ any of the following:
  * violation of obo-format (e.g. two labels for a class; two text
    definitions; etc)
 
+Final steps: 
+-- pull the latest doid-edit.owl file
+-- in HumanDiseaseOntology directory
+cd src/ontology directory
+> command: make release
+once complete: check releases directory to ensure that files were created
+edit doid.obo and doid.owl files (as text files)
+        -- check the release date at the top of the file 
+	-- remove the 'import' line of text at the top of the file
+	-- save the text file (in your local directory) 
+	
+-- for now, also edit the doid-simple.obo and doid-simple.owl 
+
+-- edit doid-nonclassified.obo and .owl --> this is equivalent to HumanDO.obo and HumanDO.owl
+           -- once edited, save doid-nonclassified.obo as HumanDO.obo
+lastly: push all files to master (github directory)
+
+-- cp HumanDO.obo and commit to DO's SVN directory
+
+check files: 
+
 CONTINUOUS INTEGRATION
 ----------------------
 

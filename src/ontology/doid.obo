@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-12-04
-date: 04:12:2015 17:44
+data-version: releases/2015-12-21
+date: 21:12:2015 16:27
 saved-by: elvira
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: DO_cancer_slim "DO cancer slim"
@@ -15,6 +15,7 @@ subsetdef: TopNodes_DOcancerslim "TopNodes_DOcancerslim"
 subsetdef: zoonotic_infectious_disease "zoonotic infectious disease"
 default-namespace: disease_ontology
 remark: This work is licensed under a Creative Commons Attribution 3.0 Unported License http://creativecommons.org/licenses/by/3.0/.
+import: http://purl.obolibrary.org/obo/doid/obo/ext.owl
 ontology: doid
 
 [Term]
@@ -3085,7 +3086,7 @@ synonym: "hypophosphatemic rickets X-linked dominant" EXACT []
 synonym: "Rickets, Vitamin D-Resistant" EXACT []
 synonym: "Vitamin D-Resistant Rickets, X-Linked" EXACT []
 synonym: "X-linked hypophosphatemia" EXACT []
-xref: ICD10:E83.3
+xref: ICD10:E83.31
 xref: MSH:D053098
 xref: NCI:C85234
 xref: OMIM:300554
@@ -7971,7 +7972,7 @@ id: DOID:0050865
 name: tongue squamous cell carcinoma
 def: "A tongue cancer that is located_in the squamous cells of the tongue." [url:http\://en.wikipedia.org/wiki/Squamous_cell_carcinoma]
 synonym: "squamous-cell carcinoma" EXACT []
-xref: ICD10:C44
+xref: ICD10:141.9
 xref: MSH:D002294
 xref: NCI:C2929
 xref: SNOMEDCT_US_2015_03_01:154605007
@@ -8402,8 +8403,6 @@ id: DOID:0050908
 name: myelodysplastic syndrome
 def: "A bone marrow cancer that is characterized by under production of white blood cells, red blood cells and platelets." [url:http\://en.wikipedia.org/wiki/Myelodysplastic_syndrome, url:http\://www.cancer.gov/dictionary?CdrID=45266]
 subset: DO_cancer_slim
-xref: ICD10:D46
-xref: ICD10CM:D46
 xref: ICD10CM:D46.9
 xref: ICD9:238.7
 xref: ICD9CM:238.75
@@ -14984,7 +14983,7 @@ creation_date: 2015-11-11T21:29:39Z
 [Term]
 id: DOID:0060468
 name: Holt-Oram syndrome
-def: "An autosomal dominant disease characterized by congenital anomalies located_in heart and located_in upper limb." [PMID:12223419, PMID:12436037, url:http\://ghr.nlm.nih.gov/condition/holt-oram-syndrome, url:https\://en.wikipedia.org/wiki/Holt–Oram_syndrome]
+def: "An autosomal dominant disease characterized by congenital anomalies located_in heart and located_in upper limb." [PMID:12223419, PMID:12436037, url:http\://ghr.nlm.nih.gov/condition/holt-oram-syndrome, url:https\://en.wikipedia.org/wiki/Holt-Oram_syndrome]
 synonym: "atrio-digital syndrome" EXACT []
 synonym: "atriodigital dysplasia" EXACT []
 synonym: "heart-hand syndrome" EXACT []
@@ -15123,6 +15122,37 @@ synonym: "Shwachman-Bodian-Diamond syndrome" EXACT []
 xref: ICD10CM:D61.0
 xref: MSH:C537330
 xref: OMIM:260400
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060480
+name: left ventricular noncompaction
+def: "An intrinsic cardiomyopathy characterized by distinctive (spongy) morphological appearance of the LV myocardium." [PMID:16567565]
+synonym: "left ventricular hypertrabeculation" EXACT []
+xref: OMIM:604169
+xref: ORDO:54260
+is_a: DOID:0060036 ! intrinsic cardiomyopathy
+
+[Term]
+id: DOID:0060481
+name: Goldberg-Shprintzen syndrome
+def: "A syndrome characterized by intellectual disability, specific facial gestalt and Hirschsprung's disease (HSCR). It is caused by homozygous mutation in the KIAA1279 gene on chromosome 10q21.1." [PMID:15883926, PMID:23427148, url:https\://en.wikipedia.org/wiki/Goldberg-Shprintzen_syndrome]
+synonym: "Goldberg-Shprintzen megacolon syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537279
+xref: OMIM:609460
+xref: ORDO:66629
+xref: UMLS_CUI:C1836123
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060482
+name: oculoauricular syndrome
+def: "A syndrome characterized by microcornea, microphthalmia, anterior-segment dysgenesis, cataract, coloboma of various parts of the eye, abnormalities of the retinal pigment epithelium, and rod-cone dystrophy and a particular cleft ear lobule." [PMID:18423520, PMID:25574057]
+xref: ICD10CM:Q87.8
+xref: MSH:C567416
+xref: OMIM:612109
+xref: ORDO:157962
 is_a: DOID:225 ! syndrome
 
 [Term]
@@ -18290,8 +18320,8 @@ name: anthracosis
 synonym: "black lung" EXACT [CSP2005:2596-4484]
 synonym: "Coal Miner's Pneumoconiosis" EXACT [NCI2004_11_17:C34390]
 synonym: "Coal workers' lung" EXACT [MTHICD9_2006:500]
-synonym: "Coal workers' pneumoconiosis" EXACT [SNOMEDCT_2005_07_31:155588007]
 synonym: "Coal workers' pneumoconiosis" EXACT [ICD9CM_2006:500]
+synonym: "Coal workers' pneumoconiosis" EXACT [SNOMEDCT_2005_07_31:155588007]
 synonym: "Melanoedema" EXACT [SNOMEDCT_2005_07_31:29422001]
 xref: ICD10CM:J60
 xref: ICD9CM:500
@@ -21872,10 +21902,8 @@ comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
 synonym: "idiopathic hypertension" EXACT [CSP2005:4003-0017]
 synonym: "primary hypertension" EXACT [NCI2004_11_17:C3478]
-xref: ICD10:10
 xref: ICD10CM:I10
 xref: ICD9CM:401
-xref: ICD9CM:401.9
 xref: MSH:C562386
 xref: NCI:C3478
 xref: OMIM:145500
@@ -34149,8 +34177,8 @@ synonym: "Stem cell Leukemia" EXACT [NCI2004_11_17:C9298]
 xref: ICD10CM:C95.0
 xref: ICD10CM:C95.00
 xref: ICD9CM:208.0
-xref: NCI:C9300
 xref: NCI2009_04D:C9298
+xref: NCI:C9300
 xref: OMIM:308960
 xref: SNOMEDCT_US_2015_03_01:154599000
 xref: SNOMEDCT_US_2015_03_01:188763007
@@ -40326,8 +40354,8 @@ synonym: "Alveolitis of jaw" EXACT [ICD9CM_2006:526.5]
 synonym: "Alveolitis of jaw (disorder)" EXACT [SNOMEDCT_2005_07_31:61804006]
 synonym: "Alveolitis of jaw NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:196467004]
 synonym: "Dry socket" EXACT [MTHICD9_2006:526.5]
-synonym: "Dry tooth socket" EXACT [SNOMEDCT_2005_07_31:196466008]
 synonym: "Dry tooth socket" EXACT [SNOMEDCT_2005_07_31:196465007]
+synonym: "Dry tooth socket" EXACT [SNOMEDCT_2005_07_31:196466008]
 xref: ICD10CM:M27.3
 xref: ICD9CM:526.5
 xref: MSH:D004368
@@ -45193,8 +45221,8 @@ synonym: "pseudocoxalgia" EXACT [CSP2005:2715-2772]
 xref: ICD10CM:M91.2
 xref: ICD10CM:M91.3
 xref: MSH:D007873
-xref: NCI:C34766
 xref: NCI2009_04D:C34766
+xref: NCI:C34766
 xref: OMIM:150600
 xref: SNOMEDCT_US_2015_03_01:111255008
 xref: SNOMEDCT_US_2015_03_01:156817009
@@ -47119,7 +47147,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 synonym: "Dejerine-Thomas syndrome" EXACT [MTHICD9_2006:333.0]
 synonym: "Thomas' syndrome" EXACT [SNOMEDCT_2005_07_31:37250002]
 synonym: "WADIA-SWAMI SYNDROME" EXACT []
-xref: ICD10:G238
+xref: ICD10:G23.8
 xref: MSH:D009849
 xref: NCI:C84947
 xref: SNOMEDCT_US_2015_03_01:67761004
@@ -56950,8 +56978,8 @@ alt_id: DOID:7387
 synonym: "adenoma of the Sebaceous gland" EXACT [NCI2004_11_17:C4174]
 synonym: "Sebaceous adenoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:78424008]
 synonym: "skin appendage sebaceous adenoma" EXACT []
-xref: NCI:C4174
 xref: NCI2009_04D:C4174
+xref: NCI:C4174
 xref: SNOMEDCT_US_2015_03_01:78424008
 xref: UMLS_CUI:C1368816
 is_a: DOID:5759 ! sebaceous gland neoplasm
@@ -65094,7 +65122,7 @@ subset: DO_cancer_slim
 synonym: "mucinous Ascites" EXACT [NCI2004_11_17:C3345]
 synonym: "Pseudomyxoma peritonei (disorder)" EXACT [SNOMEDCT_2005_07_31:307601000]
 synonym: "Pseudomyxoma peritonei (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:112679004]
-xref: ICD10:C48.2
+xref: ICD10:C78.6
 xref: MSH:D011553
 xref: NCI:C3345
 xref: SNOMEDCT_US_2015_03_01:112679004
@@ -74262,8 +74290,8 @@ alt_id: DOID:14537
 synonym: "Epicardial tumor" EXACT [NCI2004_11_17:C5347]
 synonym: "malignant Epicardial tumor" EXACT [NCI2004_11_17:C4568]
 synonym: "malignant neoplasm of epicardium" EXACT []
-xref: NCI:C5347
 xref: NCI2009_04D:C5347
+xref: NCI:C5347
 xref: SNOMEDCT_US_2015_03_01:126733004
 xref: SNOMEDCT_US_2015_03_01:93782004
 xref: UMLS_CUI:C0346610
@@ -80627,8 +80655,8 @@ synonym: "primary squamous cell carcinoma of breast" RELATED []
 synonym: "primary squamous cell carcinoma of the breast" EXACT [NCI2004_11_17:C5179]
 synonym: "SCC of breast" EXACT [NCI2004_11_17:C5177]
 synonym: "squamous cell carcinoma of breast" RELATED []
-xref: NCI:C5177
 xref: NCI2009_04D:C5177
+xref: NCI:C5177
 xref: UMLS_CUI:C1336079
 is_a: DOID:1749 ! squamous cell carcinoma
 is_a: DOID:4680 ! breast metaplastic carcinoma
@@ -83358,8 +83386,8 @@ id: DOID:5838
 name: extragonadal seminoma
 alt_id: DOID:6136
 synonym: "primary extragonadal seminoma" EXACT []
-xref: NCI:C7327
 xref: NCI2009_04D:C7327
+xref: NCI:C7327
 xref: UMLS_CUI:C1333502
 is_a: DOID:4440 ! seminoma
 
@@ -85806,8 +85834,8 @@ id: DOID:627
 name: severe combined immunodeficiency
 def: "A combined T cell and B cell immunodeficiency that is caused by a defect in several genes encoding for B and T lymphocytes resulting in individuals with non-functional immune systems." [url:http\://www.merriam-webster.com/medlineplus/severe%20combined%20immunodeficiency, url:http\://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=gnd&part=severecombinedimmunodeficiency, url:http\://www.scid.net/]
 synonym: "combined T and B cell inborn immunodeficiency" EXACT [CSP2005:1560-6660]
-synonym: "SCID" EXACT [NCI2004_11_17:C3472]
 synonym: "SCID" EXACT [MTHICD9_2006:279.2]
+synonym: "SCID" EXACT [NCI2004_11_17:C3472]
 synonym: "Severe combined immunodeficiency" EXACT [SNOMEDCT_2005_07_31:190994004]
 synonym: "Severe combined immunodeficiency disease (disorder)" EXACT [SNOMEDCT_2005_07_31:31323000]
 xref: MSH:D016511
@@ -88806,10 +88834,10 @@ synonym: "adult primary hepatocellular carcinoma" EXACT []
 synonym: "HCC" EXACT [NCI2004_11_17:C3099]
 synonym: "Hepatoma" EXACT [SNOMEDCT_2005_07_31:126851005]
 xref: EFO:0000182
-xref: NCI:C7711
-xref: NCI:C7956
 xref: NCI2009_04D:C7711
 xref: NCI2009_04D:C7956
+xref: NCI:C7711
+xref: NCI:C7956
 xref: OMIM:114550
 xref: UMLS_CUI:C0279607
 is_a: DOID:686 ! liver carcinoma
@@ -90139,8 +90167,8 @@ synonym: "combined small and large cell lung cancer" EXACT []
 synonym: "mixed small cell and squamous cell carcinoma of lung" RELATED []
 synonym: "small cell and large cell carcinoma of the lung" EXACT [NCI2004_11_17:C9424]
 synonym: "small cell and squamous cell carcinoma of the lung" EXACT [NCI2004_11_17:C9423]
-xref: NCI:C9423
 xref: NCI2009_04D:C9423
+xref: NCI:C9423
 xref: UMLS_CUI:C1334788
 is_a: DOID:5410 ! pulmonary neuroendocrine tumor
 
@@ -104257,8 +104285,6 @@ name: priapism
 def: "A peripheral vascular disease characterized by blood trapped in the penis that is unable to drain." [url:http\://en.wikipedia.org/wiki/Priapism, url:http\://my.clevelandclinic.org/disorders/priapism/hic_priapism.aspx]
 synonym: "Mentulagra" EXACT [SNOMEDCT_2005_07_31:4287008]
 synonym: "Priapism (disorder)" EXACT [SNOMEDCT_2005_07_31:6273006]
-xref: ICD10:N48.3
-xref: ICD10CM:N48.3
 xref: ICD10CM:N48.30
 xref: ICD9CM:607.3
 xref: MSH:D011317
@@ -107514,9 +107540,9 @@ synonym: "anti-glomerular basement membrane disease" EXACT []
 xref: ICD10CM:M31.0
 xref: ICD9CM:446.21
 xref: MSH:D019867
+xref: NCI2009_04D:C34649
 xref: NCI:C34649
 xref: NCI:C84566
-xref: NCI2009_04D:C34649
 xref: OMIM:233450
 xref: SNOMEDCT_US_2015_03_01:155445002
 xref: SNOMEDCT_US_2015_03_01:195351002
@@ -108189,7 +108215,6 @@ name: median arcuate ligament syndrome
 synonym: "Celiac artery compression syndrome" EXACT [ICD9CM_2006:447.4]
 synonym: "Harjola-Marable syndrome" EXACT []
 synonym: "Marable's syndrome" EXACT []
-xref: ICD10:177.4
 xref: ICD10CM:I77.4
 xref: ICD9CM:447.4
 xref: SNOMEDCT_US_2015_03_01:9250002

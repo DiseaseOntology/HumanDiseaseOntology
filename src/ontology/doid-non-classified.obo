@@ -1,10 +1,11 @@
 format-version: 1.2
-data-version: releases/2016-01-29
-date: 29:01:2016 16:27
+data-version: releases/2016-02-05
+date: 05:02:2016 16:27
 saved-by: elvira
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: DO_cancer_slim "DO cancer slim"
 subsetdef: DO_MGI_slim "DO_MGI_slim"
+subsetdef: DO_rare_slim "DO_rare_slim"
 subsetdef: GOLD "GOLD"
 subsetdef: gram-negative_bacterial_infectious_disease "gram-negative bacterial infectious disease"
 subsetdef: gram-positive_bacterial_infectious_disease "gram-positive bacterial infectious disease"
@@ -420,12 +421,13 @@ is_a: DOID:5113 ! nutritional deficiency disease
 
 [Term]
 id: DOID:0050084
-name: rhinotracheitis
+name: obsolete rhinotracheitis
 def: "An upper respiratory tract disease involving inflammation of the nasal cavities and trachea caused by feline herpesvirus 1, of the family Herpesviridae in cats and especially young kittens that is characterized by sneezing, conjunctivitis with discharge, and nasal discharges." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=rhinotracheitis]
+comment: Not a human disease.
 synonym: "feline coryza" EXACT []
 synonym: "feline influenza" EXACT []
 synonym: "Feline viral rhinotracheitis" EXACT []
-is_a: DOID:974 ! upper respiratory tract disease
+is_obsolete: true
 
 [Term]
 id: DOID:0050085
@@ -835,6 +837,7 @@ xref: SNOMEDCT_US_2015_03_01:42402006
 xref: SNOMEDCT_US_2015_03_01:86204009
 xref: UMLS_CUI:C0022521
 is_a: DOID:9562 ! primary ciliary dyskinesia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050145
@@ -2184,6 +2187,7 @@ xref: OMIM:608415
 xref: ORDO:75374
 xref: UMLS_CUI:C1842073
 is_a: DOID:5679 ! retinal disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050336
@@ -2898,6 +2902,7 @@ xref: SNOMEDCT_US_2015_03_01:253528005
 xref: SNOMEDCT_US_2015_03_01:281170005
 xref: UMLS_CUI:C0349788
 is_a: DOID:0060036 ! intrinsic cardiomyopathy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050432
@@ -2920,6 +2925,7 @@ xref: SNOMEDCT_US_2015_03_01:192586006
 xref: SNOMEDCT_US_2015_03_01:23560001
 xref: UMLS_CUI:C0236792
 is_a: DOID:0060041 ! autism spectrum disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050433
@@ -3417,6 +3423,7 @@ xref: SNOMEDCT_US_2015_03_01:400211001
 xref: SNOMEDCT_US_2015_03_01:45342007
 xref: UMLS_CUI:C0221348
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050469
@@ -3468,6 +3475,7 @@ xref: UMLS_CUI:C0406810
 xref: UMLS_CUI:C1854540
 xref: UMLS_CUI:C2607929
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050472
@@ -3552,6 +3560,7 @@ xref: OMIM:302060
 xref: SNOMEDCT_US_2015_03_01:297231002
 xref: UMLS_CUI:C0574083
 is_a: DOID:3146 ! lipid metabolism disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050477
@@ -4096,6 +4105,7 @@ xref: SNOMEDCT_US_2015_03_01:193689002
 xref: SNOMEDCT_US_2015_03_01:89208008
 xref: UMLS_CUI:C1306122
 is_a: DOID:8499 ! night blindness
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050535
@@ -4118,6 +4128,7 @@ xref: SNOMEDCT_US_2015_03_01:31411005
 xref: SNOMEDCT_US_2015_03_01:42873008
 xref: UMLS_CUI:C0004608
 is_a: DOID:2462 ! retinal vascular disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050536
@@ -4196,6 +4207,7 @@ xref: SNOMEDCT_US_2015_03_01:193159008
 xref: SNOMEDCT_US_2015_03_01:65017003
 xref: UMLS_CUI:C0392553
 is_a: DOID:10595 ! Charcot-Marie-Tooth disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050540
@@ -4211,7 +4223,7 @@ id: DOID:0050541
 name: Charcot-Marie-Tooth disease type 4
 alt_id: DOID:0050582
 def: "A Charcot-Marie-Tooth disease characterized by demyelinating or axonal abnormalities that has_material_basis_in autosomal recessive inheritance." [url:http\://www.ninds.nih.gov/disorders/charcot_marie_tooth/detail_charcot_marie_tooth.htm]
-comment: MERGED COMMENT:\nTARGET COMMENT: Xref MGI.\nOMIM mapping confirmed by DO. [SN].\n--------------------\nSOURCE COMMENT: OMIM mapping confirmed by DO. [SN].
+comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
 synonym: "distal hereditary motor neuropathy" EXACT []
 synonym: "hereditary motor and sensory neuropathy Russe type" EXACT []
@@ -4240,6 +4252,7 @@ xref: OMIM:615284
 xref: OMIM:615575
 xref: ORDO:64749
 is_a: DOID:10595 ! Charcot-Marie-Tooth disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050542
@@ -4257,6 +4270,7 @@ xref: OMIM:310490
 xref: OMIM:311070
 xref: ORDO:64747
 is_a: DOID:10595 ! Charcot-Marie-Tooth disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050543
@@ -4422,6 +4436,7 @@ xref: SNOMEDCT_US_2015_03_01:193221009
 xref: SNOMEDCT_US_2015_03_01:193224001
 xref: UMLS_CUI:C2937300
 is_a: DOID:9884 ! muscular dystrophy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050558
@@ -4531,6 +4546,7 @@ xref: OMIM:616340
 xref: OMIM:616357
 xref: ORDO:90635
 is_a: DOID:0050563 ! nonsyndromic deafness
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050565
@@ -4621,6 +4637,7 @@ xref: OMIM:616042
 xref: OMIM:616515
 xref: ORDO:90635
 is_a: DOID:0050563 ! nonsyndromic deafness
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050566
@@ -4795,6 +4812,7 @@ xref: OMIM:615860
 xref: OMIM:615973
 xref: ORDO:1872
 is_a: DOID:8466 ! retinal degeneration
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050573
@@ -4908,6 +4926,7 @@ xref: OMIM:613382
 xref: OMIM:615072
 xref: ORDO:294937
 is_a: DOID:1934 ! dysostosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050583
@@ -5362,6 +5381,7 @@ xref: OMIM:604348
 xref: OMIM:615224
 xref: ORDO:164736
 is_a: DOID:535 ! sleep disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050629
@@ -5380,6 +5400,7 @@ xref: OMIM:615010
 xref: OMIM:615846
 xref: ORDO:51
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050630
@@ -5441,6 +5462,7 @@ xref: OMIM:104290
 xref: OMIM:614820
 xref: ORDO:2131
 is_a: DOID:10969 ! hemiplegia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050636
@@ -5533,6 +5555,7 @@ xref: OMIM:208000
 xref: OMIM:614473
 xref: ORDO:51608
 is_a: DOID:178 ! vascular disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050645
@@ -5569,6 +5592,7 @@ xref: OMIM:615065
 xref: ORDO:1147
 xref: ORDO:97120
 is_a: DOID:66 ! muscle tissue disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050647
@@ -5620,6 +5644,7 @@ xref: OMIM:615378
 xref: OMIM:615770
 xref: ORDO:334
 is_a: DOID:0060224 ! atrial fibrillation
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050651
@@ -5649,6 +5674,7 @@ xref: SNOMEDCT_US_2015_03_01:204326006
 xref: SNOMEDCT_US_2015_03_01:204331008
 xref: UMLS_CUI:C0014116
 is_a: DOID:1681 ! heart septal defect
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050652
@@ -5672,6 +5698,7 @@ xref: ORDO:1223
 xref: SNOMEDCT_US_2015_03_01:77608001
 xref: UMLS_CUI:C0265308
 is_a: DOID:11971 ! synostosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050655
@@ -5842,6 +5869,7 @@ xref: ORDO:79301
 xref: ORDO:79302
 xref: ORDO:79303
 is_a: DOID:1701 ! steroid inherited metabolic disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050675
@@ -5903,6 +5931,7 @@ xref: OMIM:301900
 xref: SNOMEDCT_US_2015_03_01:21634003
 xref: UMLS_CUI:C0265339
 is_a: DOID:0050735 ! X-linked disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0050682
@@ -5989,6 +6018,7 @@ xref: OMIM:271630
 xref: OMIM:613678
 xref: ORDO:1293
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: DO_rare_slim "" xsd:string
 created_by: snadendla
 creation_date: 2011-06-17T04:00:27Z
 
@@ -6078,6 +6108,7 @@ xref: UMLS_CUI:C0878681
 xref: UMLS_CUI:C1845167
 xref: UMLS_CUI:C1848336
 is_a: DOID:447 ! renal tubular transport disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2015-03-12T14:32:47Z
 
@@ -6250,6 +6281,7 @@ xref: OMIM:604377
 xref: OMIM:615119
 xref: ORDO:1561
 is_a: DOID:700 ! mitochondrial metabolism disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2012-05-22T01:03:41Z
 
@@ -6758,6 +6790,7 @@ synonym: "MRXSA" EXACT [OMIM:300261]
 xref: OMIM:300261
 xref: ORDO:85276
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-01-17T12:48:15Z
 
@@ -7021,6 +7054,7 @@ synonym: "X-linked Malformation and Infantile Lethality Syndrome" EXACT []
 xref: OMIM:300013
 xref: OMIM:300855
 is_a: DOID:0050735 ! X-linked disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-07-17T10:18:00Z
 
@@ -7094,6 +7128,7 @@ xref: OMIM:137600
 xref: OMIM:601631
 xref: ORDO:98634
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-11-12T10:28:51Z
 
@@ -7114,6 +7149,7 @@ synonym: "Cushing's symphalangism" EXACT []
 xref: KEGG:H00484
 xref: OMIM:185800
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-11-12T11:43:22Z
 
@@ -7123,6 +7159,7 @@ name: tarsal-carpal coalition syndrome
 def: "An autosomal dominant disease that is characterized by fusion of the carpals, tarsals, and phalanges, short first metacarpals causing brachydactyly; and humeroradial fusion." [url:http\://ghr.nlm.nih.gov/condition/tarsal-carpal-coalition-syndrome, url:http\://omim.org/entry/186570?search=186570&highlight=186570, url:http\://rarediseases.info.nih.gov/gard/9225/tarsal-carpal-coalition-syndrome/resources/1, url:http\://www.ncbi.nlm.nih.gov/pubmed/22326510, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=1412]
 xref: OMIM:186570
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-11-12T11:50:00Z
 
@@ -7177,6 +7214,7 @@ xref: OMIM:186500
 xref: OMIM:610017
 xref: OMIM:612961
 is_a: DOID:1934 ! dysostosis
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-11-12T01:08:42Z
 
@@ -7205,6 +7243,7 @@ xref: MSH:C536010
 xref: OMIM:200450
 xref: UMLS_CUI:C1860212
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-11-20T03:01:06Z
 
@@ -7275,6 +7314,7 @@ xref: OMIM:615349
 xref: ORDO:75496
 xref: UMLS_CUI:C1869122
 is_a: DOID:13359 ! Ehlers-Danlos syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2013-12-02T11:55:24Z
 
@@ -7617,6 +7657,7 @@ xref: SNOMEDCT_US_2015_03_01:47535005
 xref: UMLS_CUI:C0265354
 xref: UMLS_CUI:C2936502
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2014-03-18T11:58:38Z
 
@@ -7896,6 +7937,7 @@ def: "A syndrome that is characterized by advanced bone age, failure to thrive, 
 xref: OMIM:602535
 xref: Orphanet:ORPHA561
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2014-04-24T02:06:30Z
 
@@ -8055,6 +8097,7 @@ def: "A pancreas disease that is characterized by the failure of the pancreas to
 synonym: "partial pancreatic agenesis" EXACT []
 xref: OMIM:260370
 is_a: DOID:26 ! pancreas disease
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2014-07-09T03:35:41Z
 
@@ -9622,6 +9665,7 @@ xref: OMIM:614227
 xref: ORDO:209886
 xref: ORDO:217330
 is_a: DOID:557 ! kidney disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0060063
@@ -10525,6 +10569,7 @@ xref: OMIM:607745
 xref: OMIM:612627
 xref: ORDO:306
 is_a: DOID:0050703 ! infancy electroclinical syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2011-10-28T02:55:02Z
 
@@ -10545,6 +10590,7 @@ xref: OMIM:613828
 xref: OMIM:613863
 xref: ORDO:36387
 is_a: DOID:1827 ! idiopathic generalized epilepsy
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2011-10-28T02:57:50Z
 
@@ -10632,6 +10678,7 @@ xref: SNOMEDCT_US_2015_03_01:193040008
 xref: SNOMEDCT_US_2015_03_01:194493009
 xref: UMLS_CUI:C0477373
 is_a: DOID:10024 ! migraine with aura
+property_value: DO_rare_slim "" xsd:string
 created_by: lschriml
 creation_date: 2011-11-08T02:54:32Z
 
@@ -10883,6 +10930,7 @@ synonym: "distal hereditary motor neuropathy with upper motor neuron signs" EXAC
 xref: OMIM:602433
 xref: ORDO:357043
 is_a: DOID:332 ! amyotrophic lateral sclerosis
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2014-09-16T13:49:59Z
 
@@ -11137,6 +11185,7 @@ xref: SNOMEDCT_US_2015_03_01:26018001
 xref: SNOMEDCT_US_2015_03_01:405810005
 xref: UMLS_CUI:C0271270
 is_a: DOID:5614 ! eye disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2014-09-22T16:29:20Z
 
@@ -11151,6 +11200,7 @@ xref: SNOMEDCT_US_2015_03_01:129624009
 xref: SNOMEDCT_US_2015_03_01:404633004
 xref: UMLS_CUI:C1168173
 is_a: DOID:5614 ! eye disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2014-09-23T12:31:25Z
 
@@ -11258,6 +11308,7 @@ xref: OMIM:257920
 xref: OMIM:265050
 xref: ORDO:293843
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-16T15:08:40Z
 
@@ -11275,6 +11326,7 @@ xref: OMIM:239710
 xref: ORDO:1784
 xref: UMLS_CUI:C1860118
 is_a: DOID:1934 ! dysostosis
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-16T15:39:56Z
 
@@ -11371,6 +11423,7 @@ xref: OMIM:259450
 xref: OMIM:609220
 xref: ORDO:2771
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T15:12:40Z
 
@@ -11388,6 +11441,7 @@ xref: OMIM:602588
 xref: OMIM:608389
 xref: ORDO:52429
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T15:24:02Z
 
@@ -11405,6 +11459,7 @@ xref: OMIM:615279
 xref: OMIM:615280
 xref: ORDO:1340
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T15:37:07Z
 
@@ -11423,6 +11478,7 @@ xref: SNOMEDCT_US_2015_03_01:205813009
 xref: SNOMEDCT_US_2015_03_01:403767009
 xref: UMLS_CUI:C1275078
 is_a: DOID:12960 ! acrocephalosyndactylia
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T16:06:03Z
 
@@ -11443,6 +11499,7 @@ xref: ORDO:157
 xref: SNOMEDCT_US_2015_03_01:238002005
 xref: UMLS_CUI:C0342790
 is_a: DOID:3146 ! lipid metabolism disorder
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T16:35:22Z
 
@@ -11561,6 +11618,7 @@ xref: SNOMEDCT_US_2015_03_01:702342007
 xref: UMLS_CUI:C1848862
 xref: UMLS_CUI:C1851996
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-27T16:10:58Z
 
@@ -11830,6 +11888,7 @@ xref: SNOMEDCT_US_2015_03_01:239133004
 xref: UMLS_CUI:C0406811
 xref: UMLS_CUI:C3714534
 is_a: DOID:10123 ! pigmentation disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-30T11:04:57Z
 
@@ -11846,6 +11905,7 @@ xref: ORDO:41
 xref: SNOMEDCT_US_2015_03_01:239085000
 xref: UMLS_CUI:C0406775
 is_a: DOID:10123 ! pigmentation disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-01-30T16:08:47Z
 
@@ -12330,6 +12390,7 @@ xref: OMIM:121400
 xref: OMIM:217300
 xref: ORDO:53691
 is_a: DOID:10124 ! corneal disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-04T17:04:28Z
 
@@ -12380,6 +12441,7 @@ xref: ORDO:3047
 xref: SNOMEDCT_US_2015_03_01:699298009
 xref: UMLS_CUI:C1863557
 is_a: DOID:0060289 ! Ohdo syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-05T10:07:12Z
 
@@ -12427,6 +12489,7 @@ xref: OMIM:118651
 xref: OMIM:602497
 xref: ORDO:79344
 is_a: DOID:2581 ! chondrodysplasia punctata
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-05T16:49:46Z
 
@@ -12445,6 +12508,7 @@ xref: ORDO:157820
 xref: SNOMEDCT_US_2015_03_01:702363009
 xref: UMLS_CUI:C1832409
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-06T16:10:07Z
 
@@ -12457,6 +12521,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:217000
 xref: ORDO:169147
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12474,6 +12539,7 @@ xref: ORDO:53689
 xref: SNOMEDCT_US_2015_03_01:24412005
 xref: UMLS_CUI:C0267662
 is_a: DOID:0050129 ! secretory diarrhea
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T16:42:50Z
 
@@ -12486,6 +12552,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:614380
 xref: ORDO:169147
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12498,6 +12565,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:614379
 xref: ORDO:169147
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12510,6 +12578,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:612446
 xref: ORDO:169150
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12522,6 +12591,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:610102
 xref: ORDO:1695150
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12558,6 +12628,7 @@ xref: ICD10CM:D84.1
 xref: OMIM:613825
 xref: ORDO:169150
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T15:32:25Z
 
@@ -12574,6 +12645,7 @@ xref: OMIM:615402
 xref: ORDO:241
 xref: UMLS_CUI:C2930995
 is_a: DOID:10123 ! pigmentation disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-09T16:53:42Z
 
@@ -12657,6 +12729,7 @@ xref: OMIM:615873
 xref: OMIM:615886
 xref: ORDO:178469
 is_a: DOID:0050889 ! non-syndromic intellectual disability
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-10T16:47:55Z
 
@@ -12707,6 +12780,7 @@ xref: OMIM:615817
 xref: OMIM:615942
 xref: ORDO:88616
 is_a: DOID:0050889 ! non-syndromic intellectual disability
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-11T10:32:11Z
 
@@ -12880,6 +12954,7 @@ xref: SNOMEDCT_US_2015_03_01:110004001
 xref: SNOMEDCT_US_2015_03_01:28950004
 xref: UMLS_CUI:C0023487
 is_a: DOID:9119 ! acute myeloid leukemia
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-02-24T16:50:50Z
 
@@ -13116,6 +13191,7 @@ synonym: "anhidrotic ectodermal dysplasia with cleft lip/palate" EXACT []
 xref: OMIM:129400
 xref: ORDO:3022
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-03-12T13:47:30Z
 
@@ -13198,6 +13274,7 @@ xref: OMIM:616271
 xref: ORDO:289902
 xref: ORDO:67046
 is_a: DOID:0060159 ! organic acidemia
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-04-16T10:50:48Z
 
@@ -13212,6 +13289,7 @@ xref: OMIM:609528
 xref: ORDO:66631
 xref: UMLS_CUI:C1836033
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-05-11T10:31:37Z
 
@@ -13254,6 +13332,7 @@ xref: ICD10CM:Q18.2
 xref: OMIM:202650
 xref: ORDO:990
 is_a: DOID:0080015 ! physical disorder
+property_value: DO_rare_slim "" xsd:string
 created_by: emitraka
 creation_date: 2015-05-26T16:14:08Z
 
@@ -13431,6 +13510,7 @@ synonym: "amyotrophic lateral sclerosis 22" EXACT []
 xref: OMIM:616208
 xref: ORDO:803
 is_a: DOID:332 ! amyotrophic lateral sclerosis
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-07-22T11:37:41Z
 
@@ -13461,6 +13541,7 @@ xref: SNOMEDCT_US_2015_03_01:190792005
 xref: SNOMEDCT_US_2015_03_01:702364003
 xref: UMLS_CUI:C0795956
 is_a: DOID:3146 ! lipid metabolism disorder
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-08-20T12:44:44Z
 
@@ -13552,6 +13633,7 @@ xref: OMIM:307030
 xref: ORDO:408
 xref: UMLS_CUI:C0574108
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T15:45:20Z
 
@@ -13569,6 +13651,7 @@ xref: OMIM:251300
 xref: ORDO:2065
 xref: UMLS_CUI:C0795949
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T16:00:31Z
 
@@ -13595,6 +13678,7 @@ xref: OMIM:616006
 xref: ORDO:2136
 xref: UMLS_CUI:C0340834
 is_a: DOID:75 ! lymphatic system disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T16:36:59Z
 
@@ -13606,6 +13690,7 @@ synonym: "PARK1" EXACT []
 xref: OMIM:168601
 xref: ORDO:411601
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T16:48:14Z
 
@@ -13617,6 +13702,7 @@ synonym: "PARK2" EXACT []
 xref: OMIM:600116
 xref: ORDO:2828
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T16:56:33Z
 
@@ -13629,6 +13715,7 @@ synonym: "PARK6" EXACT []
 xref: OMIM:605909
 xref: ORDO:2828
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T17:00:11Z
 
@@ -13640,6 +13727,7 @@ synonym: "PARK7" EXACT []
 xref: OMIM:606324
 xref: ORDO:2828
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T17:04:57Z
 
@@ -13651,6 +13739,7 @@ synonym: "PARK8" EXACT []
 xref: OMIM:607060
 xref: ORDO:411602
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T17:07:35Z
 
@@ -13664,6 +13753,7 @@ synonym: "Parkinsonian-pyramidal syndrome" EXACT []
 xref: OMIM:260300
 xref: ORDO:171695
 is_a: DOID:14330 ! Parkinson's disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-17T17:13:37Z
 
@@ -13818,6 +13908,7 @@ xref: OMIM:201170
 xref: ORDO:1788
 xref: UMLS_CUI:C1860119
 is_a: DOID:0060379 ! acrofacial dysostosis
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-21T15:30:41Z
 
@@ -13833,6 +13924,7 @@ xref: OMIM:101805
 xref: ORDO:1786
 xref: UMLS_CUI:C2931762
 is_a: DOID:0060379 ! acrofacial dysostosis
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-21T15:34:09Z
 
@@ -13846,6 +13938,7 @@ xref: OMIM:601829
 xref: ORDO:1787
 xref: UMLS_CUI:C1866168
 is_a: DOID:0060379 ! acrofacial dysostosis
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-21T15:38:31Z
 
@@ -13859,6 +13952,7 @@ xref: OMIM:614415
 xref: ORDO:90280
 xref: UMLS_CUI:C0024145
 is_a: DOID:0050169 ! cutaneous lupus erythematosus
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-22T17:10:37Z
 
@@ -13873,6 +13967,7 @@ xref: OMIM:205045
 xref: ORDO:50945
 xref: UMLS_CUI:C1859148
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-24T16:23:12Z
 
@@ -13907,6 +14002,7 @@ xref: MSH:C567182
 xref: OMIM:609625
 xref: ORDO:96148
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:08:42Z
 
@@ -13919,6 +14015,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613884
 xref: ORDO:1587
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:14:46Z
 
@@ -13930,6 +14027,7 @@ synonym: "14q11.2 microdeletion syndrome" EXACT []
 xref: OMIM:613457
 xref: ORDO:261120
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:18:44Z
 
@@ -13943,6 +14041,7 @@ xref: OMIM:615656
 xref: ORDO:261183
 xref: UMLS_CUI:C3180937
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:21:07Z
 
@@ -13956,6 +14055,7 @@ xref: MSH:C567439
 xref: OMIM:612001
 xref: ORDO:199318
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:23:21Z
 
@@ -13969,6 +14069,7 @@ xref: MSH:C579849
 xref: OMIM:613406
 xref: ORDO:94065
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:25:55Z
 
@@ -13994,6 +14095,7 @@ xref: MSH:C567232
 xref: OMIM:612626
 xref: ORDO:1596
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:30:51Z
 
@@ -14006,6 +14108,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613444
 xref: ORDO:261222
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:35:34Z
 
@@ -14028,6 +14131,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613604
 xref: ORDO:261211
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:42:38Z
 
@@ -14061,6 +14165,7 @@ xref: ICD10CM:Q85.0
 xref: OMIM:613675
 xref: ORDO:97685
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:52:05Z
 
@@ -14073,6 +14178,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:614527
 xref: ORDO:261265
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:55:38Z
 
@@ -14086,6 +14192,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613355
 xref: ORDO:261279
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T16:58:27Z
 
@@ -14101,6 +14208,7 @@ xref: OMIM:146390
 xref: ORDO:1598
 xref: UMLS_CUI:C0432442
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:01:47Z
 
@@ -14116,6 +14224,7 @@ xref: MSH:C536580
 xref: OMIM:601808
 xref: ORDO:1600
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:05:53Z
 
@@ -14130,6 +14239,7 @@ xref: OMIM:613026
 xref: ORDO:217346
 xref: UMLS_CUI:C2751651
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:09:44Z
 
@@ -14142,6 +14252,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613735
 xref: ORDO:401986
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:12:14Z
 
@@ -14159,6 +14270,7 @@ xref: OMIM:607872
 xref: ORDO:1606
 xref: UMLS_CUI:C1842870
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:14:10Z
 
@@ -14172,6 +14284,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:612474
 xref: ORDO:250989
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:17:38Z
 
@@ -14185,6 +14298,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:612530
 xref: ORDO:250999
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:24:43Z
 
@@ -14196,6 +14310,7 @@ synonym: "distal 22q11.2 microdeletion syndrome" EXACT []
 xref: OMIM:611867
 xref: ORDO:261330
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:28:28Z
 
@@ -14218,6 +14333,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:612513
 xref: ORDO:261349
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:32:44Z
 
@@ -14240,6 +14356,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:613792
 xref: ORDO:1620
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:38:32Z
 
@@ -14255,6 +14372,7 @@ xref: OMIM:615433
 xref: ORDO:1621
 xref: UMLS_CUI:C2931338
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:42:28Z
 
@@ -14269,6 +14387,7 @@ xref: MSH:C567184
 xref: OMIM:609425
 xref: ORDO:65286
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:45:50Z
 
@@ -14281,6 +14400,7 @@ synonym: "monosomy 4q21" EXACT []
 xref: OMIM:613509
 xref: ORDO:238750
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:49:18Z
 
@@ -14304,6 +14424,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:612582
 xref: ORDO:96125
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:55:16Z
 
@@ -14325,6 +14446,7 @@ synonym: "monosomy 6q25" EXACT []
 xref: OMIM:612863
 xref: ORDO:251056
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T17:59:36Z
 
@@ -14337,6 +14459,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:614230
 xref: ORDO:284160
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-28T18:06:23Z
 
@@ -14360,6 +14483,7 @@ xref: ICD10CM:Q99.8
 xref: OMIM:300679
 xref: ORDO:261476
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-09-29T16:13:28Z
 
@@ -14377,6 +14501,7 @@ xref: ICD10CM:Q93.5
 xref: OMIM:612313
 xref: ORDO:251019
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-01T15:37:11Z
 
@@ -14413,6 +14538,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:613458
 xref: ORDO:96078
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T15:43:05Z
 
@@ -14428,6 +14554,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:613215
 xref: ORDO:217385
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T15:45:43Z
 
@@ -14441,6 +14568,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:614526
 xref: ORDO:261272
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T15:49:05Z
 
@@ -14454,6 +14582,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:613533
 xref: ORDO:217340
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T15:50:26Z
 
@@ -14467,6 +14596,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:612475
 xref: ORDO:250994
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T16:58:42Z
 
@@ -14481,6 +14611,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:608363
 xref: ORDO:1727
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-02T17:02:03Z
 
@@ -14505,6 +14636,7 @@ xref: OMIM:616294
 xref: ORDO:2050
 xref: UMLS_CUI:C1862178
 is_a: DOID:12347 ! osteogenesis imperfecta
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-06T16:24:18Z
 
@@ -14566,6 +14698,7 @@ xref: OMIM:607541
 xref: ORDO:98963
 xref: UMLS_CUI:C1275685
 is_a: DOID:0060441 ! epithelial-stromal TGFBI dystrophy
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-16T16:44:27Z
 
@@ -14580,6 +14713,7 @@ xref: MSH:C566452
 xref: OMIM:610048
 xref: ORDO:101068
 is_a: DOID:0060442 ! stromal dystrophy
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-16T17:09:23Z
 
@@ -14608,6 +14742,7 @@ xref: MSH:C535477
 xref: OMIM:121820
 xref: ORDO:98956
 is_a: DOID:0060440 ! epithelial and subepithelial dystrophy
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-16T17:17:01Z
 
@@ -14623,6 +14758,7 @@ xref: OMIM:121850
 xref: ORDO:98970
 xref: UMLS_CUI:C1562113
 is_a: DOID:0060442 ! stromal dystrophy
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-16T17:20:34Z
 
@@ -14640,6 +14776,7 @@ xref: OMIM:204870
 xref: ORDO:98957
 xref: UMLS_CUI:C0339273
 is_a: DOID:0060440 ! epithelial and subepithelial dystrophy
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-16T17:26:37Z
 
@@ -14790,6 +14927,7 @@ xref: MSH:C567626
 xref: OMIM:611936
 xref: ORDO:251038
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-19T14:45:49Z
 
@@ -14803,6 +14941,7 @@ xref: ICD10CM:Q92.3
 xref: OMIM:613174
 xref: ORDO:329802
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-19T15:25:26Z
 
@@ -14816,6 +14955,7 @@ xref: ICD10CM:Q99.8
 xref: OMIM:300801
 xref: ORDO:217377
 is_a: DOID:0060429 ! chromosomal duplication syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-10-19T15:29:51Z
 
@@ -14833,6 +14973,7 @@ xref: OMIM:615777
 xref: ORDO:1425
 xref: UMLS_CUI:C0432242
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-02T16:22:42Z
 
@@ -14865,6 +15006,7 @@ xref: OMIM:164280
 xref: OMIM:614326
 xref: ORDO:1305
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-04T16:11:58Z
 
@@ -14879,6 +15021,7 @@ xref: OMIM:614524
 xref: ORDO:2021
 xref: UMLS_CUI:C0265282
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-04T16:24:41Z
 
@@ -14898,6 +15041,7 @@ xref: OMIM:611010
 xref: ORDO:2024
 xref: UMLS_CUI:C0399440
 is_a: DOID:3086 ! gingival overgrowth
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-04T16:47:21Z
 
@@ -14967,6 +15111,7 @@ xref: OMIM:609442
 xref: ORDO:1906
 xref: UMLS_CUI:C0236026
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-17T16:47:50Z
 
@@ -15012,6 +15157,7 @@ xref: ICD10CM:D75.1
 xref: OMIM:263400
 xref: ORDO:238557
 is_a: DOID:10780 ! primary polycythemia
+property_value: DO_rare_slim "" xsd:string
 created_by: elvira
 creation_date: 2015-11-18T16:42:50Z
 
@@ -15079,6 +15225,7 @@ xref: OMIM:609460
 xref: ORDO:66629
 xref: UMLS_CUI:C1836123
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0060482
@@ -15113,6 +15260,7 @@ xref: OMIM:612780
 xref: ORDO:199343
 xref: UMLS_CUI:C2748572
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0060485
@@ -15402,6 +15550,7 @@ xref: OMIM:614099
 xref: OMIM:614378
 xref: ORDO:1522
 is_a: DOID:4254 ! osteosclerosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:0080034
@@ -18847,6 +18996,7 @@ xref: SNOMEDCT_US_2015_03_01:51092000
 xref: SNOMEDCT_US_2015_03_01:92814006
 xref: UMLS_CUI:C0023434
 is_a: DOID:1037 ! lymphoblastic leukemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10400
@@ -20523,6 +20673,7 @@ xref: SNOMEDCT_US_2015_03_01:266478000
 xref: SNOMEDCT_US_2015_03_01:396331005
 xref: UMLS_CUI:C0007570
 is_a: DOID:0060031 ! autoimmune disease of gastrointestinal tract
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10609
@@ -20659,6 +20810,7 @@ xref: SNOMEDCT_US_2015_03_01:44673006
 xref: UMLS_CUI:C0015624
 xref: UMLS_CUI:C0341703
 is_a: DOID:447 ! renal tubular transport disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10621
@@ -20795,6 +20947,7 @@ xref: SNOMEDCT_US_2015_03_01:367374009
 xref: SNOMEDCT_US_2015_03_01:62332007
 xref: UMLS_CUI:C2931187
 is_a: DOID:3211 ! lysosomal storage disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10645
@@ -21873,6 +22026,7 @@ xref: SNOMEDCT_US_2015_03_01:266228004
 xref: SNOMEDCT_US_2015_03_01:59621000
 xref: UMLS_CUI:C0085580
 is_a: DOID:10763 ! hypertension
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10827
@@ -23282,6 +23436,7 @@ xref: OMIM:606752
 xref: SNOMEDCT_US_2015_03_01:72986009
 xref: UMLS_CUI:C0014077
 is_a: DOID:639 ! acute disseminated encephalomyelitis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:10993
@@ -27223,6 +27378,7 @@ xref: SNOMEDCT_US_2015_03_01:193839007
 xref: SNOMEDCT_US_2015_03_01:393581005
 xref: UMLS_CUI:C0016781
 is_a: DOID:0060443 ! endothelial dystrophy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:11557
@@ -27292,6 +27448,7 @@ xref: SNOMEDCT_US_2015_03_01:60782007
 xref: UMLS_CUI:C0033802
 xref: UMLS_CUI:C0157852
 is_a: DOID:848 ! arthritis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:11561
@@ -28303,6 +28460,7 @@ xref: ORDO:63273
 xref: SNOMEDCT_US_2015_03_01:58795000
 xref: UMLS_CUI:C0751336
 is_a: DOID:9884 ! muscular dystrophy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:11721
@@ -28420,6 +28578,7 @@ xref: ORDO:199
 xref: SNOMEDCT_US_2015_03_01:40354009
 xref: UMLS_CUI:C0270972
 is_a: DOID:630 ! genetic disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:11726
@@ -28445,6 +28604,7 @@ xref: SNOMEDCT_US_2015_03_01:129620000
 xref: SNOMEDCT_US_2015_03_01:193233004
 xref: UMLS_CUI:C0410189
 is_a: DOID:9884 ! muscular dystrophy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:11727
@@ -31372,6 +31532,7 @@ xref: SNOMEDCT_US_2015_03_01:191010004
 xref: SNOMEDCT_US_2015_03_01:23238000
 xref: UMLS_CUI:C0009447
 is_a: DOID:2583 ! agammaglobulinemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12179
@@ -31808,6 +31969,7 @@ xref: SNOMEDCT_US_2015_03_01:65959000
 xref: SNOMEDCT_US_2015_03_01:79592006
 xref: UMLS_CUI:C0005283
 is_a: DOID:10241 ! thalassemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12245
@@ -31990,6 +32152,7 @@ xref: SNOMEDCT_US_2015_03_01:92828000
 xref: SNOMEDCT_US_2015_03_01:93390002
 xref: UMLS_CUI:C0009363
 is_a: DOID:5614 ! eye disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12271
@@ -33005,6 +33168,7 @@ xref: SNOMEDCT_US_2015_03_01:111395007
 xref: SNOMEDCT_US_2015_03_01:123294004
 xref: UMLS_CUI:C0162283
 is_a: DOID:11705 ! impaired renal function disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12388
@@ -33805,6 +33969,7 @@ xref: SNOMEDCT_US_2015_03_01:111407006
 xref: SNOMEDCT_US_2015_03_01:123308008
 xref: UMLS_CUI:C0019061
 is_a: DOID:583 ! hemolytic anemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12555
@@ -35499,6 +35664,7 @@ xref: SNOMEDCT_US_2015_03_01:408857007
 xref: SNOMEDCT_US_2015_03_01:43614003
 xref: UMLS_CUI:C0004352
 is_a: DOID:0060041 ! autism spectrum disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1285
@@ -35573,6 +35739,7 @@ xref: OMIM:118700
 xref: OMIM:215450
 xref: ORDO:1429
 is_a: DOID:480 ! movement disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12860
@@ -36001,6 +36168,7 @@ xref: SNOMEDCT_US_2015_03_01:399020009
 xref: SNOMEDCT_US_2015_03_01:74368002
 xref: UMLS_CUI:C0007193
 is_a: DOID:0060036 ! intrinsic cardiomyopathy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:12932
@@ -36978,6 +37146,7 @@ xref: SNOMEDCT_US_2015_03_01:69116000
 xref: SNOMEDCT_US_2015_03_01:89142007
 xref: UMLS_CUI:C0026654
 is_a: DOID:3527 ! cerebral arterial disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13100
@@ -38107,6 +38276,7 @@ xref: ORDO:79278
 xref: SNOMEDCT_US_2015_03_01:51022005
 xref: UMLS_CUI:C0162568
 is_a: DOID:3133 ! acute porphyria
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13271
@@ -38868,6 +39038,7 @@ xref: SNOMEDCT_US_2015_03_01:191272005
 xref: SNOMEDCT_US_2015_03_01:52951008
 xref: UMLS_CUI:C0002876
 is_a: DOID:589 ! congenital hemolytic anemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13380
@@ -38985,6 +39156,7 @@ xref: SNOMEDCT_US_2015_03_01:234371002
 xref: SNOMEDCT_US_2015_03_01:88854002
 xref: UMLS_CUI:C1260899
 is_a: DOID:1342 ! congenital hypoplastic anemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13397
@@ -40378,6 +40550,7 @@ xref: SNOMEDCT_US_2015_03_01:77480004
 xref: SNOMEDCT_US_2015_03_01:82821008
 xref: UMLS_CUI:C0005411
 is_a: DOID:13580 ! cholestasis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1361
@@ -40470,10 +40643,8 @@ is_a: DOID:4677 ! keratitis
 
 [Term]
 id: DOID:13628
-name: glucose-6-phosphate dehydrogenase deficiency
+name: favism
 def: "A glucosephosphate dehydrogenase deficiency characterized by a hemolytic reaction to consumption of broad beans." [url:http\://en.wikipedia.org/wiki/Glucosephosphate_dehydrogenase_deficiency]
-synonym: "favism" EXACT []
-synonym: "G6PD deficiency" EXACT []
 xref: ICD10CM:D55.0
 xref: MSH:D005236
 xref: NCI:C34607
@@ -40538,6 +40709,7 @@ xref: ORDO:84
 xref: SNOMEDCT_US_2015_03_01:30575002
 xref: UMLS_CUI:C0015625
 is_a: DOID:1342 ! congenital hypoplastic anemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1364
@@ -41559,6 +41731,7 @@ xref: SNOMEDCT_US_2015_03_01:389985001
 xref: SNOMEDCT_US_2015_03_01:398036000
 xref: UMLS_CUI:C0020445
 is_a: DOID:1168 ! familial hyperlipidemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13811
@@ -41779,6 +41952,7 @@ xref: SNOMEDCT_US_2015_03_01:190787008
 xref: SNOMEDCT_US_2015_03_01:83123000
 xref: UMLS_CUI:C0000744
 is_a: DOID:1387 ! hypolipoproteinemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13861
@@ -42091,6 +42265,7 @@ xref: ORDO:49382
 xref: SNOMEDCT_US_2015_03_01:56852002
 xref: UMLS_CUI:C0152200
 is_a: DOID:13399 ! color blindness
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13912
@@ -42184,6 +42359,7 @@ xref: ORDO:73247
 xref: SNOMEDCT_US_2015_03_01:235599003
 xref: UMLS_CUI:C0341106
 is_a: DOID:11963 ! esophagitis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13923
@@ -42644,6 +42820,7 @@ xref: SNOMEDCT_US_2015_03_01:240193006
 xref: SNOMEDCT_US_2015_03_01:65976001
 xref: UMLS_CUI:C0008928
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:13995
@@ -43761,6 +43938,7 @@ xref: SNOMEDCT_US_2015_03_01:190983003
 xref: SNOMEDCT_US_2015_03_01:65880007
 xref: UMLS_CUI:C0221026
 is_a: DOID:2583 ! agammaglobulinemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14181
@@ -44039,6 +44217,7 @@ xref: SNOMEDCT_US_2015_03_01:425558002
 xref: SNOMEDCT_US_2015_03_01:48188009
 xref: UMLS_CUI:C0004509
 is_a: DOID:12336 ! male infertility
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14228
@@ -44327,6 +44506,7 @@ xref: SNOMEDCT_US_2015_03_01:276724002
 xref: SNOMEDCT_US_2015_03_01:38281008
 xref: UMLS_CUI:C0270851
 is_a: DOID:0050702 ! neonatal period electroclinical syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14265
@@ -45364,6 +45544,7 @@ xref: OMIM:614324
 xref: ORDO:243
 xref: UMLS_CUI:C0949595
 is_a: DOID:14447 ! gonadal dysgenesis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14451
@@ -46285,6 +46466,7 @@ xref: MSH:C537632
 xref: OMIM:239800
 xref: UMLS_CUI:C0220742
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14671
@@ -46392,6 +46574,7 @@ xref: SNOMEDCT_US_2015_03_01:47507006
 xref: SNOMEDCT_US_2015_03_01:86628002
 xref: UMLS_CUI:C0265341
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14687
@@ -46595,6 +46778,7 @@ xref: ORDO:93932
 xref: SNOMEDCT_US_2015_03_01:49984004
 xref: UMLS_CUI:C0220769
 is_a: DOID:0050735 ! X-linked disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14717
@@ -46618,6 +46802,7 @@ xref: SNOMEDCT_US_2015_03_01:193223007
 xref: SNOMEDCT_US_2015_03_01:82077006
 xref: UMLS_CUI:C0175709
 is_a: DOID:423 ! myopathy
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14720
@@ -46722,7 +46907,7 @@ id: DOID:14743
 name: trichorhinophalangeal syndrome type I
 alt_id: DOID:0050552
 def: "An autosomal dominant disease that is characterized by short stature, sparse hair, a bulbous nasal tip and cone-shaped epiphyses (the growing ends of bones), as well as severe generalized shortening of all finger and toe bones (brachydactyly)." [url:http\://rarediseases.info.nih.gov/gard/7802/trichorhinophalangeal-syndrome-type-3/resources/1, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=77258, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/732/viewAbstract]
-comment: MERGED COMMENT:\nTARGET COMMENT: OMIM mapping confirmed by DO. [LS].\n--------------------\nSOURCE COMMENT: OMIM mapping confirmed by DO. [SN].
+comment: OMIM mapping confirmed by DO. [LS].\n
 subset: DO_MGI_slim
 synonym: "Sugio-Kajii syndrome" EXACT []
 synonym: "Trichorhinophalangeal dysplasia type I" RELATED [MTH:NOCODE]
@@ -46736,6 +46921,7 @@ xref: SNOMEDCT_US_2015_03_01:239016009
 xref: SNOMEDCT_US_2015_03_01:254091006
 xref: UMLS_CUI:C0432233
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:14744
@@ -48223,7 +48409,6 @@ xref: NCI:C9335
 xref: OMIM:114480
 xref: OMIM:600048
 xref: OMIM:605365
-xref: ORDO:227535
 xref: SNOMEDCT_US_2015_03_01:126926005
 xref: SNOMEDCT_US_2015_03_01:154521006
 xref: SNOMEDCT_US_2015_03_01:190121004
@@ -49053,6 +49238,7 @@ xref: UMLS_CUI:C0003507
 xref: UMLS_CUI:C0152417
 xref: UMLS_CUI:C0155567
 is_a: DOID:62 ! aortic valve disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1713
@@ -50420,6 +50606,7 @@ xref: SNOMEDCT_US_2015_03_01:69524004
 xref: SNOMEDCT_US_2015_03_01:70142008
 xref: UMLS_CUI:C0018817
 is_a: DOID:1681 ! heart septal defect
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1883
@@ -50799,6 +50986,7 @@ xref: SNOMEDCT_US_2015_03_01:2859005
 xref: SNOMEDCT_US_2015_03_01:62201009
 xref: UMLS_CUI:C0017205
 is_a: DOID:1927 ! sphingolipidosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1927
@@ -50956,6 +51144,7 @@ xref: ORDO:110
 xref: SNOMEDCT_US_2015_03_01:5619004
 xref: UMLS_CUI:C0752166
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:1936
@@ -51860,6 +52049,7 @@ xref: ORDO:1334
 xref: SNOMEDCT_US_2015_03_01:234568006
 xref: UMLS_CUI:C0006845
 is_a: DOID:1508 ! candidiasis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2059
@@ -52877,6 +53067,7 @@ xref: ORDO:88661
 xref: SNOMEDCT_US_2015_03_01:78494001
 xref: UMLS_CUI:C0002452
 is_a: DOID:693 ! dental enamel hypoplasia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:219
@@ -53114,6 +53305,7 @@ xref: SNOMEDCT_US_2015_03_01:307652003
 xref: SNOMEDCT_US_2015_03_01:65471002
 xref: UMLS_CUI:C0040028
 is_a: DOID:2226 ! chronic myeloproliferative disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2225
@@ -54016,6 +54208,7 @@ xref: SNOMEDCT_US_2015_03_01:205414007
 xref: SNOMEDCT_US_2015_03_01:57219006
 xref: UMLS_CUI:C0010278
 is_a: DOID:11971 ! synostosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2344
@@ -54192,6 +54385,7 @@ xref: SNOMEDCT_US_2015_03_01:399187006
 xref: SNOMEDCT_US_2015_03_01:86781004
 xref: UMLS_CUI:C0018995
 is_a: DOID:896 ! metal metabolism disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2354
@@ -57281,6 +57475,7 @@ xref: ORDO:125
 xref: SNOMEDCT_US_2015_03_01:4434006
 xref: UMLS_CUI:C0005859
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2718
@@ -57400,6 +57595,7 @@ xref: ORDO:1775
 xref: SNOMEDCT_US_2015_03_01:74911008
 xref: UMLS_CUI:C0265965
 is_a: DOID:37 ! skin disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2730
@@ -57808,6 +58004,7 @@ xref: SNOMEDCT_US_2015_03_01:237971004
 xref: SNOMEDCT_US_2015_03_01:29291001
 xref: UMLS_CUI:C0017925
 is_a: DOID:2747 ! glycogen storage disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2755
@@ -58666,10 +58863,12 @@ xref: SNOMEDCT_US_2015_03_01:301317008
 xref: SNOMEDCT_US_2015_03_01:82775009
 xref: UMLS_CUI:C0002882
 is_a: DOID:589 ! congenital hemolytic anemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2862
 name: glucosephosphate dehydrogenase deficiency
+alt_id: DOID:13628
 def: "A carbohydrate metabolic disorder that is characterised by abnormally low levels of glucose-6-phosphate dehydrogenase (abbreviated G6PD or G6PDH)." [url:http\://en.wikipedia.org/wiki/Glucosephosphate_dehydrogenase_deficiency]
 synonym: "deficiency of G-6PD" EXACT [SNOMEDCT_2005_07_31:124134002]
 synonym: "Glucose-6-phosphate dehydrogenase deficiency" EXACT [SNOMEDCT_2005_07_31:62403005]
@@ -59005,6 +59204,7 @@ xref: SNOMEDCT_US_2015_03_01:367462009
 xref: SNOMEDCT_US_2015_03_01:46567003
 xref: UMLS_CUI:C0265240
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2908
@@ -59225,6 +59425,7 @@ xref: SNOMEDCT_US_2015_03_01:190696004
 xref: SNOMEDCT_US_2015_03_01:191356000
 xref: UMLS_CUI:C0007965
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2936
@@ -59480,6 +59681,7 @@ xref: SNOMEDCT_US_2015_03_01:205832003
 xref: SNOMEDCT_US_2015_03_01:21086008
 xref: UMLS_CUI:C0009207
 is_a: DOID:0050737 ! autosomal recessive disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2964
@@ -59696,6 +59898,7 @@ xref: ORDO:342
 xref: SNOMEDCT_US_2015_03_01:12579009
 xref: UMLS_CUI:C0031069
 is_a: DOID:417 ! hypersensitivity reaction type II disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:2988
@@ -61070,6 +61273,7 @@ xref: ORDO:100924
 xref: SNOMEDCT_US_2015_03_01:55056006
 xref: UMLS_CUI:C0162533
 is_a: DOID:13268 ! porphyria
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3134
@@ -61227,6 +61431,7 @@ xref: SNOMEDCT_US_2015_03_01:238825007
 xref: SNOMEDCT_US_2015_03_01:58588007
 xref: UMLS_CUI:C0010495
 is_a: DOID:37 ! skin disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3145
@@ -62068,6 +62273,7 @@ xref: SNOMEDCT_US_2015_03_01:14269005
 xref: SNOMEDCT_US_2015_03_01:404051002
 xref: UMLS_CUI:C0206656
 is_a: DOID:3247 ! rhabdomyosarcoma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3247
@@ -62274,6 +62480,7 @@ xref: SNOMEDCT_US_2015_03_01:191354002
 xref: SNOMEDCT_US_2015_03_01:387759001
 xref: UMLS_CUI:C0018203
 is_a: DOID:3262 ! phagocyte bactericidal dysfunction
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3267
@@ -62517,6 +62724,7 @@ xref: OMIM:215400
 xref: SNOMEDCT_US_2015_03_01:50007008
 xref: UMLS_CUI:C0008487
 is_a: DOID:3303 ! notochordal cancer
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3303
@@ -65497,6 +65705,7 @@ xref: ORDO:590
 xref: SNOMEDCT_US_2015_03_01:230672006
 xref: UMLS_CUI:C0751882
 is_a: DOID:439 ! neuromuscular junction disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3636
@@ -66752,6 +66961,7 @@ xref: NCI:C5592
 xref: SNOMEDCT_US_2015_03_01:128789002
 xref: UMLS_CUI:C1322252
 is_a: DOID:3070 ! malignant glioma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3777
@@ -67160,6 +67370,7 @@ xref: SNOMEDCT_US_2015_03_01:266511003
 xref: SNOMEDCT_US_2015_03_01:39839004
 xref: UMLS_CUI:C0019284
 is_a: DOID:10481 ! diaphragm disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:3828
@@ -68691,6 +68902,7 @@ xref: SNOMEDCT_US_2015_03_01:195382003
 xref: SNOMEDCT_US_2015_03_01:49465005
 xref: UMLS_CUI:C0263637
 is_a: DOID:471 ! skin hemangioma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4029
@@ -69642,6 +69854,7 @@ xref: NCI:C6902
 xref: SNOMEDCT_US_2015_03_01:128784007
 xref: UMLS_CUI:C1266173
 is_a: DOID:3302 ! chordoma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4153
@@ -72009,6 +72222,7 @@ xref: SNOMEDCT_US_2015_03_01:302891003
 xref: SNOMEDCT_US_2015_03_01:422338006
 xref: UMLS_CUI:C0024437
 is_a: DOID:8466 ! retinal degeneration
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4449
@@ -72661,6 +72875,7 @@ xref: SNOMEDCT_US_2015_03_01:205417000
 xref: SNOMEDCT_US_2015_03_01:7903009
 xref: UMLS_CUI:C0018522
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4535
@@ -76050,6 +76265,7 @@ xref: ORDO:221117
 xref: SNOMEDCT_US_2015_03_01:36785009
 xref: UMLS_CUI:C0017494
 is_a: DOID:863 ! nervous system disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4970
@@ -76246,6 +76462,7 @@ xref: SNOMEDCT_US_2015_03_01:192839001
 xref: SNOMEDCT_US_2015_03_01:632009
 xref: UMLS_CUI:C0270736
 is_a: DOID:480 ! movement disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:4991
@@ -77699,6 +77916,7 @@ xref: ORDO:137
 xref: SNOMEDCT_US_2015_03_01:238049009
 xref: UMLS_CUI:C0282577
 is_a: DOID:2978 ! carbohydrate metabolic disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:5213
@@ -80607,6 +80825,7 @@ xref: ORDO:116
 xref: SNOMEDCT_US_2015_03_01:81780002
 xref: UMLS_CUI:C0004903
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:5573
@@ -81446,6 +81665,7 @@ synonym: "primary malignant Extragonadal Nonseminoma" EXACT [NCI2004_11_17:C8885
 xref: NCI:C8885
 xref: UMLS_CUI:C1334582
 is_a: DOID:4717 ! extragonadal germ cell cancer
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:5678
@@ -81512,7 +81732,6 @@ xref: OMIM:604370
 xref: OMIM:612555
 xref: OMIM:613399
 xref: OMIM:614291
-xref: ORDO:227535
 xref: UMLS_CUI:C0677776
 is_a: DOID:0050736 ! autosomal dominant disease
 
@@ -85228,6 +85447,7 @@ xref: ORDO:101972
 xref: SNOMEDCT_US_2015_03_01:191003005
 xref: UMLS_CUI:C0494261
 is_a: DOID:612 ! primary immunodeficiency disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:6284
@@ -85961,7 +86181,7 @@ id: DOID:6457
 name: Cowden disease
 alt_id: DOID:3471
 def: "An autosomal dominant disease characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium. It is caused  by mutations in the PTEN, SDHB, SDHD and KLLN genes." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome, url:http\://rarediseases.info.nih.gov/gard/6202/cowden-syndrome/resources/1]
-comment: Xref MGI.\nMERGED COMMENT:\nTARGET COMMENT: OMIM mapping confirmed by DO. [SN].\n--------------------\nSOURCE COMMENT: OMIM mapping confirmed by DO. [SN].
+comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].\n
 subset: DO_MGI_slim
 synonym: "dysplastic Gangliocytoma of Cerebellum" EXACT [NCI2004_11_17:C8419]
 synonym: "Lhermitte-Duclos disease (disorder)" EXACT [SNOMEDCT_2005_07_31:67944007]
@@ -85980,6 +86200,7 @@ xref: SNOMEDCT_US_2015_03_01:67944007
 xref: UMLS_CUI:C0018553
 xref: UMLS_CUI:C0391826
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:6458
@@ -87245,6 +87466,7 @@ xref: ORDO:3261
 xref: SNOMEDCT_US_2015_03_01:702444009
 xref: UMLS_CUI:C1328840
 is_a: DOID:2916 ! hypersensitivity reaction type IV disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:6689
@@ -87270,6 +87492,7 @@ xref: ORDO:1414
 xref: SNOMEDCT_US_2015_03_01:28724005
 xref: UMLS_CUI:C0268314
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:6692
@@ -87627,6 +87850,7 @@ xref: SNOMEDCT_US_2015_03_01:268196005
 xref: SNOMEDCT_US_2015_03_01:87979003
 xref: UMLS_CUI:C0008925
 is_a: DOID:0050567 ! orofacial cleft
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:6740
@@ -89013,6 +89237,7 @@ xref: SNOMEDCT_US_2015_03_01:109492001
 xref: SNOMEDCT_US_2015_03_01:45742009
 xref: UMLS_CUI:C0011430
 is_a: DOID:214 ! teeth hard tissue disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:7011
@@ -89632,6 +89857,7 @@ xref: SNOMEDCT_US_2015_03_01:156619005
 xref: SNOMEDCT_US_2015_03_01:9631008
 xref: UMLS_CUI:C0038013
 is_a: DOID:3342 ! bone inflammation disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:7148
@@ -94007,6 +94233,7 @@ synonym: "Parachordoma of the Chest Wall" EXACT [NCI2004_11_17:C6720]
 xref: NCI:C6720
 xref: UMLS_CUI:C1332934
 is_a: DOID:2647 ! parachordoma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:8045
@@ -95429,6 +95656,7 @@ xref: OMIM:613779
 xref: ORDO:280133
 xref: UMLS_CUI:C1332655
 is_a: DOID:626 ! complement deficiency
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:8358
@@ -95474,6 +95702,7 @@ xref: SNOMEDCT_US_2015_03_01:399709001
 xref: SNOMEDCT_US_2015_03_01:57606003
 xref: UMLS_CUI:C1370510
 is_a: DOID:4210 ! clear cell meningioma
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:8369
@@ -96091,6 +96320,7 @@ xref: ORDO:50
 xref: SNOMEDCT_US_2015_03_01:80651009
 xref: UMLS_CUI:C0175713
 is_a: DOID:225 ! syndrome
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:8463
@@ -102803,6 +103033,7 @@ xref: ORDO:85458
 xref: SNOMEDCT_US_2015_03_01:56453003
 xref: UMLS_CUI:C0268394
 is_a: DOID:9120 ! amyloidosis
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9248
@@ -102908,6 +103139,7 @@ xref: ORDO:282
 xref: SNOMEDCT_US_2015_03_01:42369001
 xref: UMLS_CUI:C0520716
 is_a: DOID:679 ! basal ganglia disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9256
@@ -102965,6 +103197,7 @@ xref: UMLS_CUI:C0079661
 xref: UMLS_CUI:C1847800
 xref: UMLS_CUI:C3266898
 is_a: DOID:0050736 ! autosomal dominant disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9261
@@ -103177,6 +103410,7 @@ xref: SNOMEDCT_US_2015_03_01:360381004
 xref: SNOMEDCT_US_2015_03_01:367388008
 xref: UMLS_CUI:C0002066
 is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9271
@@ -103215,6 +103449,7 @@ xref: SNOMEDCT_US_2015_03_01:398630005
 xref: SNOMEDCT_US_2015_03_01:398680004
 xref: UMLS_CUI:C0175683
 is_a: DOID:9267 ! urea cycle disorder
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9274
@@ -105218,6 +105453,7 @@ xref: SNOMEDCT_US_2015_03_01:155580000
 xref: SNOMEDCT_US_2015_03_01:195986009
 xref: UMLS_CUI:C0006267
 is_a: DOID:1176 ! bronchial disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9565
@@ -105555,6 +105791,7 @@ xref: ORDO:211062
 xref: SNOMEDCT_US_2015_03_01:421455009
 xref: UMLS_CUI:C1720189
 is_a: DOID:0050951 ! hereditary ataxia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9630
@@ -105658,6 +105895,7 @@ xref: SNOMEDCT_US_2015_03_01:267750005
 xref: SNOMEDCT_US_2015_03_01:64635004
 xref: UMLS_CUI:C0700501
 is_a: DOID:9650 ! pathologic nystagmus
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9650
@@ -107647,6 +107885,7 @@ xref: SNOMEDCT_US_2015_03_01:90151006
 xref: SNOMEDCT_US_2015_03_01:91857003
 xref: UMLS_CUI:C0023449
 is_a: DOID:1037 ! lymphoblastic leukemia
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9953
@@ -107682,6 +107921,7 @@ xref: OMIM:614435
 xref: SNOMEDCT_US_2015_03_01:62067003
 xref: UMLS_CUI:C0152101
 is_a: DOID:1682 ! congenital heart disease
+property_value: DO_rare_slim "" xsd:string
 
 [Term]
 id: DOID:9957

@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/cmungall/HumanDiseaseOntology.svg?branch=master)](https://travis-ci.org/cmungall/HumanDiseaseOntology)
+[![DOI](https://zenodo.org/badge/13996/cmungall/HumanDiseaseOntology.svg)](https://zenodo.org/badge/latestdoi/13996/cmungall/HumanDiseaseOntology)
+
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO).
 DO website: http://www.disease-ontology.org

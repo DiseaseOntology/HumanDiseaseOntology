@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2016-05-13
-date: 13:05:2016 16:27
+data-version: releases/2016-05-27
+date: 27:05:2016 16:27
 saved-by: elvira
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: DO_cancer_slim "DO cancer slim"
@@ -15914,6 +15914,38 @@ xref: EFO:0000306
 is_a: DOID:3459 ! breast carcinoma
 
 [Term]
+id: DOID:0060549
+name: Barber-Say syndrome
+def: "A syndrome characterized by d by the association of excessive hair growth (hypertrichosis), papery thin and fragile (atrophic) skin, outward turned eyelids (ectropion) and a large mouth (macrostomia). It is caused by heterozygous mutation in the TWIST2 gene on chromosome 2q37." [PMID:27196381, url:https\://rarediseases.info.nih.gov/gard/819/barber-say-syndrome/resources/1]
+xref: ICD10CM:Q87.0
+xref: MESH:C537908
+xref: OMIM:209885
+xref: ORDO:1231
+xref: UMLS_CUI:C1319466
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060550
+name: ablepharon macrostomia syndrome
+def: "A syndrome characterized by  by the association of ablepharon, macrostomia, abnormal external ears, syndactyly of the hands and feet, skin findings (such as dry and coarse skin or redundant folds of skin), absent or sparse hair, genital malformations and developmental delay. Other reported manifestations include malar hypoplasia, absent or hypoplastic nipples, umbilical abnormalities and growth retardation. It is caused by heterozygous mutation in the TWIST2 gene on chromosome 2q37." [PMID:27196381, url:http\://rarediseases.org/rare-diseases/ablepharon-macrostomia-syndrome/, url:https\://en.wikipedia.org/wiki/Ablepharon_macrostomia_syndrome]
+synonym: "poikiloderma with neutropenia, Clericuzio type" EXACT []
+xref: ICD10CM:Q87.0
+xref: MESH:C535557
+xref: OMIM:200110
+xref: ORDO:920
+xref: UMLS_CUI:C1860224
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060551
+name: poikiloderma with neutropenia
+def: "A skin disease characterized by poikiloderma, hyperkeratotic nails, generalized hyperkeratosis on palms and soles, neutropenia, short stature, and recurrent pulmonary infections. It is caused by mutation in the C16ORF57 gene on chromosome 16q13." [PMID:20734427]
+xref: IC10CM:D82.8
+xref: OMIM:604173
+xref: ORDO:221046
+is_a: DOID:37 ! skin disease
+
+[Term]
 id: DOID:0070001
 name: neoplastic disease
 def: "A disease of cellular proliferation that results in an abnormal mass of tissue." [url:http\://en.wikipedia.org/wiki/Neoplasm]
@@ -17021,6 +17053,55 @@ xref: OMIM:616219
 xref: url:http\://rarediseases.org/rare-diseases/congenital-fibrosis-of-the-extraocular-muscles/
 xref: url:https\://ghr.nlm.nih.gov/condition/congenital-fibrosis-of-the-extraocular-muscles#synonyms
 is_a: DOID:1279 ! ocular motility disease
+
+[Term]
+id: DOID:0080144
+name: childhood acute lymphocytic leukemia
+def: "An acute lymphocytic leukemia occuring during childhood. " []
+synonym: "Childhood Acute Lymphoblastic Leukemia" EXACT []
+xref: NCI:C3168
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.04d&ns=NCI_Thesaurus&code=C3168&key=736438179&b=1&n=null
+is_a: DOID:9952 ! acute lymphocytic leukemia
+
+[Term]
+id: DOID:0080145
+name: T-cell childhood acute lymphocytic leukemia
+def: "A childhood acute lymphoblastic leukemia that has_material_basis in T-cells. " []
+xref: NCI:C7953
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf
+is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
+
+[Term]
+id: DOID:0080146
+name: B-cell childhood acute lymphoblastic leukemia
+def: "A childhood acute lymphoblastic leukemia that has_material_basis in B-cells. " []
+xref: NCI:C9140 
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf
+is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
+
+[Term]
+id: DOID:0080147
+name: lymphoblastic lymphoma
+def: "A lymphoma that has_material_basis_in immature malignant lymphocytes (lymphoblasts) committed to the B-cell or T-cell lineage and located_in primarily lymph nodes or located_in extranodal sites." []
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C7055\n
+is_a: DOID:0060058 ! lymphoma
+
+[Term]
+id: DOID:0080148
+name: T-cell childhood lymphoblastic lymphoma
+def: "A lymphoblastic lymphoma that has_material_basis_in T-cells and that occurs during childhood." []
+synonym: "Childhood T lymphoblastic lymphoma" EXACT []
+xref: NCI:C7210
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf
+is_a: DOID:0080147 ! lymphoblastic lymphoma
+
+[Term]
+id: DOID:0080149
+name: adult acute monocytic leukemia
+def: "An acute monocytic leukemia occurring in adults." []
+xref: NCI:C8263
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf
+is_a: DOID:8864 ! acute monocytic leukemia
 
 [Term]
 id: DOID:100
@@ -81860,9 +81941,11 @@ is_a: DOID:5656 ! cranial nerve disease
 [Term]
 id: DOID:5600
 name: precursor lymphoblastic lymphoma/leukemia
+def: "A lymphoblastic leukemia that has_material_basis_in immature malignant lymphocytes (lymphoblasts) committed to the B-cell or T-cell lineage and located_in bone marrow and located_in peripheral blood." []
 xref: NCI:C7055
 xref: UMLS_CUI:C1335469
-is_a: DOID:0060058 ! lymphoma
+xref: url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C7055
+is_a: DOID:1037 ! lymphoblastic leukemia
 
 [Term]
 id: DOID:5601

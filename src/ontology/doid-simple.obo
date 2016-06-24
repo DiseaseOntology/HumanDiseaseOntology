@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2016-06-17
-date: 17:06:2016 16:27
+data-version: releases/2016-06-24
+date: 24:06:2016 16:27
 saved-by: elvira
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: DO_cancer_slim "DO cancer slim"
@@ -2950,7 +2950,7 @@ is_a: DOID:649 ! prion disease
 [Term]
 id: DOID:0050434
 name: Andersen-Tawil syndrome
-def: "A long QY syndrome that has_material_basis_in autosomal dominant inheritance of a mutation in the KCNJ2 gene which disrupts the rhythm of the heart's lower chambers (ventricular arrhythmia) and results_in an unusually small lower jaw (micrognathia), low-set ears, and an abnormal curvature of the fingers called clinodactyly." [url:http\://en.wikipedia.org/wiki/Andersen%E2%80%93Tawil_syndrome, url:http\://en.wikipedia.org/wiki/Long_QT_syndrome]
+def: "A long QT syndrome that has_material_basis_in autosomal dominant inheritance of a mutation in the KCNJ2 gene which disrupts the rhythm of the heart's lower chambers (ventricular arrhythmia) and results_in an unusually small lower jaw (micrognathia), low-set ears, and an abnormal curvature of the fingers called clinodactyly." [url:http\://en.wikipedia.org/wiki/Andersen%E2%80%93Tawil_syndrome, url:http\://en.wikipedia.org/wiki/Long_QT_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 synonym: "ANDERSEN CARDIODYSRHYTHMIC PERIODIC PARALYSIS" EXACT []
 synonym: "Andersen syndrome " EXACT []
@@ -3472,6 +3472,7 @@ def: "An autosomal dominant disease characterized by myxomas, spotty pigmentatio
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
 subset: DO_rare_slim
+synonym: "Carney complex variant" EXACT []
 synonym: "Carney Complex, Type 1" EXACT []
 synonym: "Carney Complex, Type 2" EXACT []
 synonym: "Carney Syndrome" EXACT []
@@ -18253,6 +18254,7 @@ name: malignant hypertensive renal disease
 xref: SNOMEDCT_US_2015_03_01:65443008
 xref: UMLS_CUI:C0155593
 is_a: DOID:1073 ! renal hypertension
+is_a: DOID:10824 ! malignant hypertension
 
 [Term]
 id: DOID:10182
@@ -41871,6 +41873,7 @@ is_a: DOID:0060095 ! uterine benign neoplasm
 [Term]
 id: DOID:13730
 name: malignant renovascular hypertension
+is_a: DOID:10177 ! malignant hypertensive renal disease
 is_a: DOID:13731 ! malignant secondary hypertension
 
 [Term]
@@ -41914,9 +41917,9 @@ is_a: DOID:345 ! uterine disease
 
 [Term]
 id: DOID:13738
-name: infarct of liver
-synonym: "hepatic infarction" EXACT [ICD9CM_2006:573.4]
+name: hepatic infarction {xref="ICD9CM_2006:573.4"}
 synonym: "hepatic infarction (disorder)" EXACT [SNOMEDCT_2005_07_31:17890003]
+synonym: "infarct of liver" EXACT []
 xref: ICD10CM:K76.3
 xref: ICD9CM:573.4
 xref: SNOMEDCT_US_2015_03_01:17890003
@@ -48656,7 +48659,8 @@ is_a: DOID:302 ! substance abuse
 id: DOID:1575
 name: rheumatic disease
 def: "A hypersensitivity reaction type II disease that involves inflammation or pain in the muscles, joints, or fibrous tissue." [url:http\://www.niams.nih.gov/Health_Info/Scleroderma/default.asp]
-is_a: DOID:417 ! hypersensitivity reaction type II disease
+is_a: DOID:0060032 ! autoimmune disease of musculoskeletal system
+is_a: DOID:65 ! connective tissue disease
 
 [Term]
 id: DOID:1577
@@ -55336,6 +55340,7 @@ xref: SNOMEDCT_US_2015_03_01:197814004
 xref: SNOMEDCT_US_2015_03_01:266559003
 xref: UMLS_CUI:C0268790
 is_a: DOID:0050828 ! artery disease
+is_a: DOID:557 ! kidney disease
 
 [Term]
 id: DOID:2389
@@ -70854,7 +70859,6 @@ xref: SNOMEDCT_US_2015_03_01:268049000
 xref: SNOMEDCT_US_2015_03_01:287005009
 xref: SNOMEDCT_US_2015_03_01:89155008
 xref: UMLS_CUI:C0011644
-is_a: DOID:0060032 ! autoimmune disease of musculoskeletal system
 is_a: DOID:1575 ! rheumatic disease
 is_a: DOID:854 ! collagen disease
 
@@ -102928,8 +102932,7 @@ xref: SNOMEDCT_US_2015_03_01:201435004
 xref: SNOMEDCT_US_2015_03_01:201439005
 xref: SNOMEDCT_US_2015_03_01:55464009
 xref: UMLS_CUI:C0024141
-is_a: DOID:0060032 ! autoimmune disease of musculoskeletal system
-is_a: DOID:65 ! connective tissue disease
+is_a: DOID:1575 ! rheumatic disease
 is_a: DOID:8857 ! lupus erythematosus
 
 [Term]

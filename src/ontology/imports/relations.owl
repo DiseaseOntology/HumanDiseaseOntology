@@ -11,11 +11,30 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Ontology: <http://purl.obolibrary.org/obo/doid/imports/relations.owl>
 
 
+AnnotationProperty: obo:IAO_0000115
+
+    
 AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
 
     
 Datatype: rdf:PlainLiteral
 
+    
+ObjectProperty: obo:RO_0001020
+
+    Annotations: 
+        rdfs:comment "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)",
+        rdfs:label "is allergic trigger for"
+    
+    
+ObjectProperty: obo:RO_0001021
+
+    Annotations: 
+        rdfs:label "is autoimmune trigger for"
+    
     
 ObjectProperty: obo:RO_0002218
 
@@ -23,10 +42,30 @@ ObjectProperty: obo:RO_0002218
         rdfs:label "has active participant"@en
     
     
+ObjectProperty: obo:RO_0003001
+
+    Annotations: 
+        obo:IAO_0000115 "A produced_by b iff some process that occurs_in b has_output a.",
+        rdfs:label "produced by"
+    
+    InverseOf: 
+        obo:RO_0003000
+    
+    
 ObjectProperty: obo:IDO_0000664
 
     Annotations: 
         rdfs:label "has material basis in"
+    
+    
+ObjectProperty: obo:RO_0003000
+
+    Annotations: 
+        rdfs:label "produces",
+        obo:IAO_0000115 "A produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix."
+    
+    InverseOf: 
+        obo:RO_0003001
     
     
 ObjectProperty: obo:RO_0002200

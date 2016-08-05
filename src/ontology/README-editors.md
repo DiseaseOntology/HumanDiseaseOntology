@@ -24,6 +24,9 @@ The current (2015) ID ranges include
  	DOID:$sequence(7,60000,60999)$  Elvira
  	DOID:$sequence(7,70000,70999)$  in reserve (UMB)
  	DOID:$sequence(7,80000,80999)$  Lynn
+ 	
+ 	DOID:0100000 Stan (RGD)
+ 	DOID:0110000 Sue (MGD)
 
 
 GETTING STARTED -- Setting up a DO Git remote repository

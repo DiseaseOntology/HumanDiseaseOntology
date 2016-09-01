@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/NCIthesaurus.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2016-08-12/subsets/NCIthesaurus.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2016-09-01/subsets/NCIthesaurus.owl"/>
     </owl:Ontology>
     
 
@@ -29,6 +29,15 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim">
+        <rdfs:label xml:lang="en">DO_FlyBase_slim</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
@@ -609,6 +618,14 @@ MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
     </owl:Class>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lymphatic system disease that is characterized by an expansion of the monocyte-macrophage population and intense hemophagocytosis. It can occur de novo, but more often occurs in the setting of another disorder, usually an infection or a malignancy. A clinical picture of fever, hepatosplenomegaly, lymphadenopathy and peripheral pancytopenia. The morphologic hallmark of this syndrome is the phagocytosis of hematopoietic elements by morphologically normal macrophages.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/familial-hemophagocytic-lymphohistiocytosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.mayoclinicproceedings.com/inside.asp?AID=57&amp;UID=</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1516-31801997000500007&amp;lng=pt&amp;nrm=iso</oboInOwl:hasDbXref>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemophagocytic syndrome</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI2004_11_17:C35439</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
@@ -619,14 +636,6 @@ MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:C537250</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lymphatic system disease that is characterized by an expansion of the monocyte-macrophage population and intense hemophagocytosis. It can occur de novo, but more often occurs in the setting of another disorder, usually an infection or a malignancy. A clinical picture of fever, hepatosplenomegaly, lymphadenopathy and peripheral pancytopenia. The morphologic hallmark of this syndrome is the phagocytosis of hematopoietic elements by morphologically normal macrophages.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/familial-hemophagocytic-lymphohistiocytosis</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.mayoclinicproceedings.com/inside.asp?AID=57&amp;UID=</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1516-31801997000500007&amp;lng=pt&amp;nrm=iso</oboInOwl:hasDbXref>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
     
 

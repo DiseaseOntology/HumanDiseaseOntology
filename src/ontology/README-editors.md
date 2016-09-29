@@ -3,7 +3,7 @@ SETTING UP
 
 ## Editing environment
 
-1. Install Protege 4.3 or higher
+1. Install Protege 5
 2. Get the Elk plugin
 3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
 
@@ -14,8 +14,7 @@ SETTING UP
 3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
 
 
-**ID range**: documented in the idranges file (doid-idranges.owl), 
-in the HumanDiseaseOntology/src/ontology/ directory)
+**ID range**:
 
 The current (2015) ID ranges include 
  for the University of Maryland Baltimore curation team: 
@@ -78,10 +77,7 @@ a '#'. E.g.
 PROTEGE
 ------------------------
 
-Install Protege 4.3 (or higher version, if not in beta) and OBO-Edit Tools for Ontology Development 
-Download and install the latest version of Protege and OBO-Edit (2.3.1) for ontology development.
-http://protege.stanford.edu/products.php#desktop-protege
-https://sourceforge.net/projects/geneontology/files/OBO-Edit 2.3.1
+Install Protege 5
 
 
 **Protege Configuration**
@@ -277,10 +273,3 @@ The official purls for DO are
 
 These currently redirect to the central OBO library build
 
-Currently, the central OBO library build is built from the sourceforge version of DO
-(http://sourceforge.net/p/diseaseontology/code/HEAD/tree/trunk/HumanDO.obo?format=raw)
-
-This will soon be deprecated, and the central obo build will be made
-from the version in this repository.
-
-Continuous release: (DO build is made from doid-edit) 

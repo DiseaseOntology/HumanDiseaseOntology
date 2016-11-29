@@ -4,6 +4,7 @@
 # requirements: 
 #   - OWLTools (http://code.google.com/p/owltools/)
 #   - Oort (http://code.google.com/p/owltools/wiki/OortIntro)
+#   - ROBOT (https://github.com/ontodev/robot) for template
 #   - owljs (advanced operations only)
 #   - apache-jena arq (for generating reports)
 #
@@ -126,6 +127,16 @@ seed.owl: doid-edit.owl
 
 imports/%.obo: imports/%.owl
 	owltools $< -o -f obo $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+
+# ----------------------------------------
+# Templates
+# ----------------------------------------
+doid-template.owl: doid-edit.owl doid-template.tsv
+	echo '' > $@
+	robot merge --input $(word 1,$^) \
+		template --template $(word 2,$^) \
+		annotate --ontology-iri "http://purl.obolibrary.org/obo/doid/obo/doid-template.owl" \
+			--output $@
 
 # ----------------------------------------
 # Bridge

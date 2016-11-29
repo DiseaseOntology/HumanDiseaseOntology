@@ -61,7 +61,7 @@ imports/%.owl: imports/%.txt
 	> $@
 
 .PHONY: ontofox_imports
-ontofox_imports: imports/ncbitaxon_import.owl
+ontofox_imports: imports/bto_import.owl imports/envo_import.owl imports/chebi_import.owl imports/ncbitaxon_import.owl
 
 all_imports: imports/omim_import.owl imports/ncit_import.owl
 

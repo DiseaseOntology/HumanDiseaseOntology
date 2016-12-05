@@ -4,6 +4,7 @@
 # requirements: 
 #   - OWLTools (http://code.google.com/p/owltools/)
 #   - Oort (http://code.google.com/p/owltools/wiki/OortIntro)
+#   - ROBOT (https://github.com/ontodev/robot) for template
 #   - owljs (advanced operations only)
 #   - apache-jena arq (for generating reports)
 #
@@ -48,6 +49,21 @@ update-svn:
 # ----------------------------------------
 # Imports
 # ----------------------------------------
+# Get all NCBITaxon_* IDs used in doid-edit.owl and ext.owl
+imports/ncbitaxon_list.txt: doid-edit.owl ext.owl
+	grep -ho 'NCBITaxon.[0-9][0-9]*' $^ | sed 's/:/_/' | sort -u > $@
+
+# Update OntoFox import using cURL to fetch the data.
+# See http://ontofox.hegroup.org/tutorial/index.php#service
+# Also trim final comment.
+imports/%.owl: imports/%.txt
+	curl -s -F file=@$< http://ontofox.hegroup.org/service.php \
+	| sed '/^<\/rdf:RDF>/q' \
+	> $@
+
+.PHONY: ontofox_imports
+ontofox_imports: imports/bto_import.owl imports/envo_import.owl imports/chebi_import.owl imports/ncbitaxon_import.owl
+
 all_imports: imports/omim_import.owl imports/ncit_import.owl
 
 KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
@@ -111,6 +127,16 @@ seed.owl: doid-edit.owl
 
 imports/%.obo: imports/%.owl
 	owltools $< -o -f obo $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+
+# ----------------------------------------
+# Templates
+# ----------------------------------------
+doid-template.owl: doid-edit.owl doid-template.tsv
+	echo '' > $@
+	robot merge --input $(word 1,$^) \
+		template --template $(word 2,$^) \
+		annotate --ontology-iri "http://purl.obolibrary.org/obo/doid/obo/doid-template.owl" \
+			--output $@
 
 # ----------------------------------------
 # Bridge

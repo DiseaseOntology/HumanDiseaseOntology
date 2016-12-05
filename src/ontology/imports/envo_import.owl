@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/envo_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/doid/imports/envo_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/envo_import.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002002">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002216">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental material</rdfs:label>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010000">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anthropogenic environmental material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010129">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010168"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000012"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010168">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal derived beverage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010000"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000011">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dairy product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010000"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000012">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000011"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000757 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000757">
+        <rdfs:label xml:lang="en">fruit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002216"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+    </owl:Class>
+</rdf:RDF>

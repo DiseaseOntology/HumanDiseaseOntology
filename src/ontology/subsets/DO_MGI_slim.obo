@@ -12,6 +12,7 @@ subsetdef: tick-borne_infectious_disease "tick-borne infectious disease"
 subsetdef: TopNodes_DOcancerslim "TopNodes_DOcancerslim"
 subsetdef: zoonotic_infectious_disease "zoonotic infectious disease"
 ontology: doid/subsets/DO_MGI_slim
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/DOID_0060759> \"DOID:060759\")\n)
 
 [Term]
 id: DOID:0050013
@@ -114,6 +115,29 @@ subset: DO_MGI_slim
 is_a: DOID:1579 ! respiratory system disease
 
 [Term]
+id: DOID:0050681
+name: Borjeson-Forssman-Lehmann syndrome
+namespace: disease_ontology
+def: "An X-linked disease that is characterized by intellectual disability, truncal obesity, seizures, hypogonadism, developmental delay, distinctive facial features, tapered fingers and short toes and has_material_basis_in X-linked recessive inheritance of mutations in the PHF6 gene." [url:http\://rarediseases.info.nih.gov/gard/936/borjeson-forssman-lehmann-syndrome/resources/1, url:http\://www.nature.com/ejhg/journal/v14/n12/full/5201639a.html]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_MGI_slim
+subset: DO_rare_slim
+synonym: "BFLS" EXACT []
+synonym: "BORJ" EXACT []
+synonym: "Borjeson syndrome" EXACT []
+synonym: "intellectual deficiency-epilepsy-endocrine disorders syndrome" EXACT []
+synonym: "mental retardation, epilepsy, and endocrine disorder" EXACT []
+synonym: "MRXSBFL" EXACT []
+synonym: "syndromic X-linked mental retardation Borjeson-Forssman-Lehmann type" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C536575
+xref: OMIM:301900
+xref: ORDO:127
+xref: SNOMEDCT_US_2016_03_01:21634003
+xref: UMLS_CUI:C0265339
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
 id: DOID:0050700
 name: cardiomyopathy
 namespace: disease_ontology
@@ -158,6 +182,25 @@ created_by: lschriml
 creation_date: 2012-07-24T12:47:31Z
 
 [Term]
+id: DOID:0050764
+name: Armfield syndrome
+namespace: disease_ontology
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability, short stature, seizures, and small hands and feet  and in some cases cleft palate or cataracts/glaucoma that has_material_basis_in variation in the chromosomal region Xq28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10398235]
+subset: DO_MGI_slim
+subset: DO_rare_slim
+synonym: "Armfield X-linked mental retardation syndrome" EXACT [OMIM:300261]
+synonym: "mental retardation syndrome, X-linked, Armfield type" EXACT []
+synonym: "MRXSA" EXACT []
+synonym: "syndromic X-linked mental retardation Armfield type" EXACT []
+synonym: "X-linked intellectual disability, Armfield type" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300261
+xref: ORDO:85276
+is_a: DOID:0060038 ! specific developmental disorder
+created_by: lschriml
+creation_date: 2013-01-17T12:48:15Z
+
+[Term]
 id: DOID:0050766
 name: chorea-acanthocytosis
 namespace: disease_ontology
@@ -172,6 +215,19 @@ xref: UMLS_CUI:C0393576
 is_a: DOID:1289 ! neurodegenerative disease
 created_by: lschriml
 creation_date: 2013-01-17T12:54:19Z
+
+[Term]
+id: DOID:0060023
+name: CD40 deficiency
+namespace: disease_ontology
+def: "A combined T cell and B cell immunodeficiency that has material basis in mutation in the TNFRSF5 gene, resulting in type 3 hyper-IgM immunodeficiency characterized by an inability of B cells to undergo isotype switching, an inability to mount an antibody-specific immune response, and a lack of germinal center formation." [url:http\://bioinf.uta.fi/CD40base/]
+subset: DO_MGI_slim
+synonym: "hyper-IgM syndrome due to CD40 deficiency" EXACT []
+synonym: "immunodeficiency with hyper-IgM type 3" EXACT []
+synonym: "type 3 hyper-IgM immunodeficiency " EXACT []
+xref: OMIM:606843
+xref: ORDO:101090
+is_a: DOID:612 ! primary immunodeficiency disease
 
 [Term]
 id: DOID:0060038
@@ -206,6 +262,27 @@ def: "An organ system cancer located_in the immune system that is characterized 
 subset: DO_MGI_slim
 created_by: lschriml
 creation_date: 2011-06-08T01:11:18Z
+
+[Term]
+id: DOID:0060179
+name: Renpenning syndrome
+namespace: disease_ontology
+def: "An intellectual disability that is characterized by small head size (microcephaly), long narrow face, short stature, small testes, and intellectual deficit which follows X-linked inheritance and presents most often in males." [url:http\://en.wikipedia.org/wiki/Renpenning%27s_syndrome]
+subset: DO_FlyBase_slim
+subset: DO_MGI_slim
+synonym: "Golabi-Ito-Hall syndrome" EXACT []
+synonym: "Sutherland-Haan X-linked mental retardation syndrome" EXACT []
+synonym: "syndromic X-linked mental retardation 8" EXACT []
+synonym: "X-linked intellectual disability due to PQBP1 mutations" EXACT []
+synonym: "X-linked intellectual disability, Renpenning type" EXACT []
+synonym: "X-linked mental retardation Renpenning type" EXACT []
+synonym: "X-linked mental retardation with spastic diplegia" EXACT []
+xref: ICD10CM:Q87.5
+xref: OMIM:309500
+xref: ORDO:3242
+is_a: DOID:0060038 ! specific developmental disorder
+created_by: lschriml
+creation_date: 2011-11-08T03:21:30Z
 
 [Term]
 id: DOID:0060340
@@ -1066,6 +1143,1382 @@ xref: ORDO:91132
 is_a: DOID:0060655 ! autosomal recessive congenital ichthyosis
 
 [Term]
+id: DOID:0060737
+name: junctional epidermolysis bullosa Herlitz type
+def: "A junctional epidermolysis bullosa characterized by autosomal recessive inheritance of severe blisters and extensive erosions, localized to the skin and mucous membranes, resulting in a failure to thrive and that has_material_basis_in  mutations in any 1 of the 3 genes encoding the subunits of laminin-5: LAMA3, LAMB3, and LAMC2. The Herlitz type is more severe than the related non-Herlitz type of junctional epidermolysis bullosa." [https://www.ncbi.nlm.nih.gov/pubmed/18374450, url:https\://www.ncbi.nlm.nih.gov/pubmed/8012393, url:https\://www.ncbi.nlm.nih.gov/pubmed/8586427]
+subset: DO_MGI_slim
+synonym: "epidermolysis bullosa letalis" EXACT []
+synonym: "Herlitz type epidermolysis bullosa junctionalis" EXACT []
+synonym: "Herlitz-Pearson-type epidermolysis bullosa" EXACT []
+synonym: "JEB-H" EXACT []
+synonym: "JEB-Herlitz type" EXACT []
+synonym: "junctional epidermolysis bullosa generalisata gravis" EXACT []
+synonym: "junctional epidermolysis bullosa, Herlitz-Pearson type" EXACT []
+xref: ICD10CM:Q81.1
+xref: OMIM:226700
+xref: ORDO:79404
+is_a: DOID:16 ! integumentary system disease
+
+[Term]
+id: DOID:0060738
+name: junctional epidermolysis bullosa non-Herlitz type
+def: "A junctional epidermolysis bullosa characterized by skin and mucosal blistering, nail dystrophy or nail absence and enamel hypoplasia and that has_material_basis_in homozygous or compound heterozygous mutation in several genes including COL17A1, ITGB4 and the 3 genes that encode the subunits of laminin-5: LAMA3, LAMB3, and LAMC2. The non-Herlitz type is less severe than the related Herlitz type of junctional epidermolysis bullosa." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10792571, url:https\://www.ncbi.nlm.nih.gov/pubmed/11810295, url:https\://www.ncbi.nlm.nih.gov/pubmed/18374450, url:https\://www.ncbi.nlm.nih.gov/pubmed/7550320, url:https\://www.ncbi.nlm.nih.gov/pubmed/7706760]
+subset: DO_MGI_slim
+synonym: "GABEB" EXACT []
+synonym: "generalized atrophic benign epidermolysis bullosa" EXACT []
+synonym: "generalized junctional epidermolysis bullosa, non-Herlitz type" EXACT []
+synonym: "JEB-nH gen" EXACT []
+synonym: "JEN-nH" EXACT []
+synonym: "junctional epidermolysis bullosa generalisata mitis" EXACT []
+synonym: "junctional epidermolysis bullosa, Disentis type" EXACT []
+xref: ICD10CM:Q81.8
+xref: OMIM:226650
+xref: ORDO:79402
+xref: ORDO:89840
+is_a: DOID:16 ! integumentary system disease
+
+[Term]
+id: DOID:0060739
+name: hand-foot-genital syndrome
+def: "A autosomal dominant disease characterized by distal limb defects (short thumbs and first toes, clinodactyly of the fifth fingers, delayed ossification of the wrist and ankle bones), urogenital defects and that has_material_basis_in heterozygous mutation in the HOXA13 gene on chromosome 7p15." [url:https\://www.ncbi.nlm.nih.gov/pubmed/5450271, url:https\://www.ncbi.nlm.nih.gov/pubmed/9020844]
+subset: DO_MGI_slim
+synonym: "hand-foot-uterus syndrome" EXACT []
+synonym: "HFGS" EXACT []
+xref: ICD10CM:Q51.2
+xref: OMIM:140000
+xref: ORDO:2438
+
+[Term]
+id: DOID:0060740
+name: methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency
+def: "A methylmalonic acidemia characterized by accumulation of methylmalonic acid in the blood that is unresponsive to vitamn B12 therapy and that has_material_basis_in mutation in the MUT gene on chromosome 6p12.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1975493, url:https\://www.ncbi.nlm.nih.gov/pubmed/1977311]
+subset: DO_MGI_slim
+synonym: "methylmalonic acidemia due to methylmalonyl-CoA mutase deficiency" EXACT []
+synonym: "methylmalonic aciduria mut type" EXACT []
+synonym: "vitamin B12-unresponsive methylmalonic aciduria" EXACT []
+xref: ICD10CM:E71.1
+xref: OMIM:251000
+xref: ORDO:27
+
+[Term]
+id: DOID:0060741
+name: methylmalonic acidemia due to transcobalamin receptor defect
+def: "A methylmalonic acidemia characterized by autosomal recessive inheritance of low uptake of transcobalamin-bound cobalamin, but normal conversion to adenosylcobalamin and methylcobalamin and that has_material_basis_in mutation in the CD320 gene." [url:https\://www.ncbi.nlm.nih.gov/pubmed/20524213]
+subset: DO_MGI_slim
+synonym: "methylmalonic acidemia, TCb1R type" EXACT []
+synonym: "methylmalonic acidemia, TCbIR type" EXACT []
+synonym: "methylmalonic aciduria due to transcobalamin receptor defect" EXACT []
+xref: ICD10CM:E71.1
+xref: OMIM:613646
+xref: ORDO:280183
+
+[Term]
+id: DOID:0060742
+name: methylmalonic acidemia cb1A type
+def: "A methylmalonic acidemia characterized by autosomal recessive inheritance, defects in the synthesis of AdoCbl, vitamin B12 therapy responsiveness and that has_material_basis_in homozygous or compound heterozygous mutation in the MMAA gene on chromosome 4q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12438653, url:https\://www.ncbi.nlm.nih.gov/pubmed/5686220]
+subset: DO_MGI_slim
+synonym: "methylmalonic aciduria cb1A type" EXACT []
+synonym: "methylmalonic aciduria, vitamin B12-responsive due to a defect in synthesis of adenosylcobalamin cb1A type" EXACT []
+xref: ICD10CM:E71.1
+xref: OMIM:251100
+xref: ORDO:79310
+
+[Term]
+id: DOID:0060743
+name: methylmalonic acidemia cb1B type
+def: "A methylmalonic acidemia characterized by autosomal recessive inheritance, defects in the synthesis of AdoCbl, vitamin B12 therapy responsiveness and that has_material_basis_in homozygous or compound heterozygous mutation in the MMAB gene on chromosome 12q24." [https://www.ncbi.nlm.nih.gov/pubmed/12471062, url:https\://www.ncbi.nlm.nih.gov/pubmed/7213387]
+subset: DO_MGI_slim
+synonym: "methylmalonic aciduria cb1B type" EXACT []
+synonym: "methylmalonic aciduria, vitamin B12-responsive, due to defect in synthesis of adenosylcobalamin, cblB complementation type" EXACT []
+xref: ICD10CM:E71.1
+xref: OMIM:251110
+xref: ORDO:79311
+
+[Term]
+id: DOID:0060744
+name: Pendred Syndrome
+def: "An autosomal recessive disease characterized by bilateral prelingual sensorineural hearing loss and euthyroid goiter and that has_material_basis_in homozygous or compound heterozygous mutation in the SLC26A4 gene on chromosome 7q." [url:https\://www.ncbi.nlm.nih.gov/pubmed/9398842]
+subset: DO_MGI_slim
+synonym: "congenital hypothyroidism due to dyshormonogenesis 2B" EXACT []
+synonym: "deafness with goiter" EXACT []
+synonym: "genetic defect in thyroid hormonogenesis 2B" EXACT []
+synonym: "goiter-deafness syndrome" EXACT []
+synonym: "TDH2B" EXACT []
+synonym: "thyroid dyshormonogenesis 2B" EXACT []
+xref: ICD10CM:E07.1
+xref: MSH:C536648
+xref: OMIM:274600
+xref: ORDO:705
+xref: UMLS_CUI:C0271829
+
+[Term]
+id: DOID:0060745
+name: Doyne honeycomb retinal dystrophy
+def: "A retinal drusen characterized by yellow-white deposits (drusen) that accumulate beneath the retinal pigment epithelium in the posterior pole of the eye in a honeycomb pattern and that has_material_basis_in mutations in the EFEMP1 gene on chromosome 2p16." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10369267, url:https\://www.ncbi.nlm.nih.gov/pubmed/11384588]
+subset: DO_MGI_slim
+synonym: "DHRD" EXACT []
+synonym: "Doyne honeycomb degeneration of retina" EXACT []
+xref: ICD10CM:H35.5
+xref: OMIM:126600
+xref: ORDO:75376
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060746
+name: basal laminar drusen
+def: "A retinal drusen characterized by yellow-white deposits (drusen) that accumulate beneath the retinal pigment epithelium on Bruch membrane and that has_material_basis_in mutations in the CFH gene on chromosome 1q31.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18252232, url:https\://www.ncbi.nlm.nih.gov/pubmed/5448127]
+subset: DO_MGI_slim
+synonym: "cuticular drusen" EXACT []
+synonym: "drusen of bruch membrane" EXACT []
+synonym: "early adult-onset grouped drusen" EXACT []
+xref: ICD10CM:H35.5
+xref: OMIM:126700
+xref: ORDO:75376
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060747
+name: Duane-radial ray syndrome
+def: "An autosomal dominant disease characterized by upper limb anomalies, ocular anomalies, and, in some cases, renal anomalies and that has_material_basis_in heterozygous mutation in the SALL4 gene on chromosome 20q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12393809, url:https\://www.ncbi.nlm.nih.gov/pubmed/12843316, url:https\://www.ncbi.nlm.nih.gov/pubmed/8882787]
+subset: DO_MGI_slim
+synonym: "acrorenocular syndrome" EXACT []
+synonym: "DR syndrome" EXACT []
+synonym: "Duane anomaly with radial ray abnormalities and deafness" EXACT []
+synonym: "Okihiro syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:607323
+xref: ORDO:93293
+
+[Term]
+id: DOID:0060748
+name: familial temporal lobe epilepsy 1
+def: "A temporal lobe epilepsy characterized by autosomal dominant inheritance of partial seizures originating from the temporal lobe that are often accompanied by auditory symptoms and that has_material_basis_in heterozygous mutation in the LGI1 gene on chromosome 10q24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10851389, url:https\://www.ncbi.nlm.nih.gov/pubmed/12205652, url:https\://www.ncbi.nlm.nih.gov/pubmed/15079010]
+subset: DO_MGI_slim
+synonym: "ETL1" EXACT []
+synonym: "partial epilepsy with auditory features" EXACT []
+xref: OMIM:600512
+xref: ORDO:101046
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060749
+name: familial temporal lobe epilepsy 6
+def: "A temporal lobe epilepsy that has_material_basis_in variation in the chromosome region 3q25-q26." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24021842]
+subset: DO_MGI_slim
+synonym: "ETL6" EXACT []
+xref: OMIM:615697
+xref: ORDO:163717
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060750
+name: familial temporal lobe epilepsy 3
+def: "A temporal lobe epilepsy characterized by simple or complex partial seizures often accompanied by intense feelings of deja or altered awareness and that has_material_basis_in variation in the chromosome region 4q13.2-q21.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17377072]
+subset: DO_MGI_slim
+synonym: "familial mesial temporal lobe epilepsy" EXACT []
+synonym: "FMTLE" EXACT []
+xref: OMIM:611630
+xref: ORDO:163717
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060751
+name: familial temporal lobe epilepsy 7
+def: "A temporal lobe epilepsy characterized by autosomal dominant inheritance of focal seizures with prominent auditory symptoms and that has_material_basis_in heterozygous mutation in the RELN gene on chromosome 7q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26046367]
+subset: DO_MGI_slim
+synonym: "ETL7" EXACT []
+xref: OMIM:616436
+xref: ORDO:101046
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060752
+name: familial temporal lobe epilepsy 5
+def: "A temporal lobe epilepsy that has_material_basis_in heterozygous mutation in the CPA6 gene on chromosome 8q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21922598]
+subset: DO_MGI_slim
+synonym: "ETL5" EXACT []
+xref: OMIM:614417
+xref: ORDO:163717
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060753
+name: familial temporal lobe epilepsy 4
+def: "A temporal lobe epilepsy characterized by autosomal dominant inheritance of occipitotemporal lobe epilepsy and migraine with visual aura and that has_material_basis_in variation in the chromosome region 9q21-q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17460155, url:https\://www.ncbi.nlm.nih.gov/pubmed/18332351]
+subset: DO_MGI_slim
+synonym: "EPOLM" EXACT []
+synonym: "ETL4" EXACT []
+synonym: "occipitotemporal lobe epilepsy and migraine with aura" EXACT []
+xref: OMIM:611631
+xref: ORDO:98819
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060754
+name: familial temporal lobe epilepsy 8
+def: "A temporal lobe epilepsy characterized by autosomal dominant inheritance of complex partial seizures with occasional secondary generalization and that has_material_basis_in heterozygous mutation in the GAL gene on chromosome 11q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25691535]
+subset: DO_MGI_slim
+synonym: "ETL8" EXACT []
+xref: OMIM:616461
+xref: ORDO:101046
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060755
+name: familial temporal lobe epilepsy 2
+def: "A temporal lobe epilepsy characterized by autosomal dominant inheritance of complex or partial seizures and childhood febrile seizures that has_material_basis_in variation in the chromosome region 12q22-q23.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12011300, url:https\://www.ncbi.nlm.nih.gov/pubmed/15342703]
+subset: DO_MGI_slim
+synonym: "ETL2" EXACT []
+xref: OMIM:608096
+xref: ORDO:98819
+is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0060756
+name: sclerosteosis 1
+def: "A sclerosteosis that has_material_basis_in homozygous mutation in the SOST gene on chromosome 17q21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11179006]
+subset: DO_MGI_slim
+synonym: "SOST1" EXACT []
+xref: ICD10CM:M85.2
+xref: OMIM:269500
+xref: ORDO:3152
+is_a: DOID:0080001 ! bone disease
+
+[Term]
+id: DOID:0060757
+name: sclerosteosis 2
+def: "A sclerosteosis that has_material_basis_in heterozygous or homozygous mutation in the LRP4 gene on chromosome 11p11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21471202]
+subset: DO_MGI_slim
+synonym: "SOST2" EXACT []
+xref: ICD10CM:M85.2
+xref: OMIM:614305
+xref: ORDO:3152
+is_a: DOID:0080001 ! bone disease
+
+[Term]
+id: DOID:0060758
+name: immunodeficiency with hyper-IgM type 2
+def: "A hyperimmunoglobulin syndrome characterized by normal or elevated serum IgM levels with absence of IgG, IgA, and IgE, resulting in a profound susceptibility to bacterial infections that has_material_basis_in homozygous or compound heterozygous mutation in the AICDA gene on chromosome 12p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11007475]
+subset: DO_MGI_slim
+synonym: "activation-induced cytidine deaminase deficiency" EXACT []
+synonym: "AID deficiency" EXACT []
+synonym: "HIGM2" EXACT []
+synonym: "hyper-IgM syndrome type 2" EXACT []
+xref: ICD10CM:D80.5
+xref: OMIM:605258
+xref: ORDO:101089
+xref: ORDO:183666
+is_a: DOID:612 ! primary immunodeficiency disease
+
+[Term]
+id: DOID:0060759
+name: immunodeficiency with hyper IgM type 5
+def: "A hyperimmunoglobulin syndrome characterized by normal or increased serum IgM concentrations associated with low or absent serum IgG, IgA, and IgE concentrations, indicating a defect in the class-switch recombination (CSR) process that has_material_basis_in homozygous or compound heterozygous mutation in the UNG gene on chromosome 12q23-q24.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12958596]
+subset: DO_MGI_slim
+synonym: "HIGM5" EXACT []
+synonym: "hyper-IgM syndrome 5" EXACT []
+synonym: "hyper-IgM syndrome due to UNG deficiency" EXACT []
+synonym: "hyper-IgM syndrome due to uracil N-glycosylase" EXACT []
+xref: ICD10CM:D80.5
+xref: OMIM:608106
+xref: ORDO:101092
+xref: ORDO:183666
+is_a: DOID:612 ! primary immunodeficiency disease
+
+[Term]
+id: DOID:0060760
+name: immunodeficiency with hyper-IgM type 4
+def: "A hyperimmunoglobulin syndrome characterized by normal or increased serum IgM concentrations associated with low or absent serum IgG, IgA, and IgE concentrations, indicating a defect in the class-switch recombination (CSR) process." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12840068]
+subset: DO_MGI_slim
+synonym: "HIGM4" EXACT []
+synonym: "hyper-IgM syndrome type 4" EXACT []
+xref: ICD10CM:D80.5
+xref: OMIM:608184
+xref: ORDO:101091
+xref: ORDO:183666
+is_a: DOID:612 ! primary immunodeficiency disease
+
+[Term]
+id: DOID:0060761
+name: familial chronic myelocytic leukemia-like syndrome
+def: "A chronic myeloid leukemia characterized by chronic myelocytic leukemia in early infancy and absence of the BCR/ABL fusion gene (Philadelphia chromosome)." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8086739]
+subset: DO_MGI_slim
+synonym: "familial CML-like syndrome" EXACT []
+xref: OMIM:600080
+is_a: DOID:0060083 ! immune system cancer
+
+[Term]
+id: DOID:0060762
+name: lethal restrictive dermopathy
+def: "A skin disease characterized by thin, tightly adherent translucent skin with erosions at flexure sites, superficial vessels, typical facial dysmorphism, and generalized joint ankylosis that has_material_basis_in heterozygous mutation in the LMNA gene on chromosome 1q22 or by homozygous or compound heterozygous mutation in the ZMPSTE24 gene on chromosome 1p34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15317753, url:https\://www.ncbi.nlm.nih.gov/pubmed/20101687]
+subset: DO_MGI_slim
+synonym: "hyperkeratosis-contracture syndrome" EXACT []
+synonym: "lethal restrictive dermopathy" EXACT []
+synonym: "tight skin contracture syndrome" EXACT []
+xref: ICD10CM:Q82.8
+xref: OMIM:275210
+xref: ORDO:1662
+xref: UMLS_CUI:C0406585
+is_a: DOID:16 ! integumentary system disease
+
+[Term]
+id: DOID:0060763
+name: X-linked juvenile retinoschisis 1
+def: "A retinoschisis characterized by schisis (splitting) of the neural retina leading to reduced visual acuity in males due that has_material_basis_in the RS1 gene on chromosome Xp22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17172462, url:https\://www.ncbi.nlm.nih.gov/pubmed/9326935]
+subset: DO_MGI_slim
+synonym: "X-linked juvenile retinoschisis" EXACT []
+synonym: "X-linked retinoschisis" EXACT []
+synonym: "XLRS" EXACT []
+xref: ICD10CM:Q14.1
+xref: OMIM:312700
+xref: ORDO:792
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060764
+name: autosomal recessive Robinow syndrome
+def: "A Robinow syndrome characterized by autosomal recessive inheritance of severe skeletal dysplasia characterized by dysmorphic facial features, including frontal bossing, hypertelorism, and broad nose, short-limbed dwarfism, vertebral segmentation, and genital hypoplasia that has_material_basis_in homozygous or compound heterozygous mutations in the ROR2 gene on chromosome 9q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10932186, url:https\://www.ncbi.nlm.nih.gov/pubmed/10932187]
+subset: DO_MGI_slim
+synonym: "costovertebral segmentation defect-mesomelia syndrome" EXACT []
+synonym: "COVESDEM syndrome" EXACT []
+synonym: "RRS" EXACT []
+xref: ICD10CM:Q87.1
+xref: OMIM:268310
+xref: ORDO:1507
+xref: ORDO:97360
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060765
+name: autosomal dominant Robinow syndrome 2
+def: "A Robinow syndrome characterized by autosomal dominant inheritance of mesomelic limb shortening, genital hypoplasia, and distinctive facial features that has_material_basis_in heterozygous mutation in the DVL1 gene on chromosome 1p36." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25817014, url:https\://www.ncbi.nlm.nih.gov/pubmed/26924530]
+subset: DO_MGI_slim
+synonym: "DRS2" EXACT []
+xref: ICD10CM:Q87.1
+xref: OMIM:616331
+xref: ORDO:3107
+xref: ORDO:97360
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060766
+name: autosomal dominant Robinow syndrome 1
+def: "A Robinow syndrome characterized by autosomal dominant inheritance of dysmorphic features resembling a fetal face, mesomelic limb shortening, hypoplastic external genitalia in males, and renal and vertebral anomalies that has_material_basis_in heterozygous mutation in the WNT5A gene on chromosome 3p." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19918918, url:https\://www.ncbi.nlm.nih.gov/pubmed/24716670]
+subset: DO_MGI_slim
+synonym: "DRS1" EXACT []
+xref: ICD10CM:Q87.1
+xref: OMIM:180700
+xref: ORDO:3107
+xref: ORDO:97360
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060767
+name: autosomal dominant Robinow syndrome 3
+def: "A Robinow syndrome characterized by autosomal dominant inheritance of mesomelia, genital hypoplasia, and distinctive facial features comprising frontal bossing, prominent eyes, and a depressed nasal bridge that has_material_basis_in heterozygous mutation in the DVL3 gene on chromosome 3q27." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26924530]
+subset: DO_MGI_slim
+synonym: "DRS3" EXACT []
+xref: ICD10CM:Q87.1
+xref: OMIM:616894
+xref: ORDO:3107
+xref: ORDO:97360
+is_a: DOID:225 ! syndrome
+
+[Term]
+id: DOID:0060768
+name: Smith-Magenis syndrome
+def: "A chromosome deletion syndrome characterized by mild-to-moderate infantile hypotonia, minor skeletal anomalies, prepubertal short stature, brachydactyly, ophthalmologic and otolaryngologic abnormalities, peripheral neuropathy, developmental delay, cognitive impairment, and behavioral abnormalities that has_material basis_in a 3.7-Mb interstitial deletion in chromosome 17p11.2 or sometimes by mutations in the RAI1 gene in the same region." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1310/, url:https\://www.ncbi.nlm.nih.gov/pubmed/16845274, url:https\://www.ncbi.nlm.nih.gov/pubmed/21844811, url:https\://www.ncbi.nlm.nih.gov/pubmed/6745947]
+subset: DO_MGI_slim
+synonym: "17p11.2 microdeletion syndrome" EXACT []
+synonym: "chromosome 17p11.2 deletion syndrome" EXACT []
+xref: ICD10CM:Q93.5
+xref: OMIM:182290
+xref: ORDO:819
+is_a: DOID:0060388 ! chromosomal deletion syndrome
+
+[Term]
+id: DOID:0060769
+name: T-cell immunodeficiency, congenital alopecia, and nail dystrophy
+def: "A severe combined immunodeficiency characterized by congenital alopecia, severe T-cell immunodeficiency, and ridging, pitting or curving of all nails that has_material_basis_in homozygous mutation in the FOXN1 gene on chromosome 17q11-q12." [url:https\://ghr.nlm.nih.gov/condition/t-cell-immunodeficiency-congenital-alopecia-and-nail-dystrophy, url:https\://www.ncbi.nlm.nih.gov/pubmed/10206641, url:https\://www.ncbi.nlm.nih.gov/pubmed/8911612]
+subset: DO_MGI_slim
+synonym: "alymphoid cystic thymic dysgenesis" EXACT []
+synonym: "severe T-cell immunodeficiency-congenital alopecia-nail dystrophy syndrome" EXACT []
+synonym: "winged helix deficiency" EXACT []
+xref: ICD10CM:D82.8
+xref: OMIM:601705
+xref: ORDO:169095
+is_a: DOID:612 ! primary immunodeficiency disease
+
+[Term]
+id: DOID:0060770
+name: dextro-looped transposition of the great arteries
+def: "A congenital heart disease characterized by complete inversion of the great vessels where the aorta incorrectly arises from the right ventricle and the pulmonary artery incorrectly arises from the left ventricle." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11799476]
+subset: DO_MGI_slim
+synonym: "congenitally uncorrected transposition of the great arteries" EXACT []
+synonym: "congenitally uncorrected transposition of the great vessels" EXACT []
+synonym: "D-TGA" EXACT []
+synonym: "isolated ventriculoarterial discordance" EXACT []
+synonym: "ventriculoarterial discordance with atrioventricular concordance" EXACT []
+xref: ICD10CM:Q20.3
+xref: OMIM:PS608808
+xref: ORDO:860
+is_a: DOID:114 ! heart disease
+
+[Term]
+id: DOID:0060771
+name: dextro-looped transposition of the great arteries 1
+def: "A dextro-looped transposition of the great arteries that has_material_basis_in heterozygous missense mutation in the MED13L gene on chromosome 12q24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14638541]
+subset: DO_MGI_slim
+synonym: "DTGA1" EXACT []
+xref: ICD10CM:Q20.3
+xref: OMIM:608808
+xref: ORDO:860
+is_a: DOID:0060770 ! dextro-looped transposition of the great arteries
+
+[Term]
+id: DOID:0060772
+name: dextro-looped transposition of the great arteries 3
+def: "A dextro-looped transposition of the great arteries that has_material_basis_in heterozygous mutation in the GDF1 gene on chromosome 19p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17924340]
+subset: DO_MGI_slim
+synonym: "DTGA3" EXACT []
+xref: ICD10CM:Q20.3
+xref: OMIM:613854
+xref: ORDO:860
+is_a: DOID:0060770 ! dextro-looped transposition of the great arteries
+
+[Term]
+id: DOID:0060773
+name: cleft lip-palate-ectodermal dysplasia syndrome
+def: "An autosomal recessive disease characterized by cleft lip, cleft palate, hypodontia, anodontia, microdontia, syndactyly, palmoplantar hyperkeratosis, onychodysplasia, and sparse hair that has_material_basis_in homozygous mutation in the NECTIN1 gene on chromosome 11q23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/3035184, url:https\://www.ncbi.nlm.nih.gov/pubmed/9758630]
+subset: DO_MGI_slim
+synonym: "cleft lip/palate-syndactyly-pili torti syndrome" EXACT []
+synonym: "CLPED1" EXACT []
+synonym: "Margarita type of ectodermal dysplasia" EXACT []
+synonym: "syndactyly-ectodermal dysplasia-cleft/lip palate" EXACT []
+synonym: "Zlotogora-Zilberman-Tenenbaum syndrome" EXACT []
+xref: OMIM:225060
+xref: ORDO:3253
+
+[Term]
+id: DOID:0060774
+name: congenital diarrhea
+def: "A diarrhea characterized by frequent loose or liquid bowel movements where the disease is present from birth." []
+subset: DO_MGI_slim
+xref: OMIM:PS214700
+is_a: DOID:77 ! gastrointestinal system disease
+
+[Term]
+id: DOID:0060775
+name: microvillus inclusion disease
+def: "A congenital diarrhea characterized by onset of intractable life-threatening watery diarrhea during infancy, lack of microvilli on the surface of enterocytes and occurrence of intracellular vacuolar structures containing microvilli that has_material_basis_in homozygous or compound heterozygous mutation in the MYO5B gene on chromosome 18q21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18724368]
+subset: DO_MGI_slim
+synonym: "congenital familial protracted diarrhea with enterocyte brush-border abnormalities" EXACT []
+synonym: "congenital microvillus atrophy" EXACT []
+synonym: "Davidson disease" EXACT []
+synonym: "diarrhea 2 with microvillus atrophy" EXACT []
+synonym: "intractable diarrhea of infancy" EXACT []
+synonym: "MVD" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:251850
+xref: ORDO:2290
+is_a: DOID:0060774 ! congenital diarrhea
+
+[Term]
+id: DOID:0060776
+name: congenital diarrhea 5 with tufting enteropathy
+def: "A congenital diarrhea characterized by intractable diarrhea of infancy with villous atrophy, absence of inflammation, and intestinal epithelial cell dysplasia manifesting as focal epithelial tufts in the duodenum and jejunum that has_material_basis_in homozygous or compound heterozygous mutation in the EPCAM gene on chromosome 2p21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18572020, url:https\://www.ncbi.nlm.nih.gov/pubmed/23462293]
+subset: DO_MGI_slim
+synonym: "congenital familial intractable diarrhea with epithelial or epithelium abnormalities" EXACT []
+synonym: "congenital tufting enteropathy" EXACT []
+synonym: "DIAR5" EXACT []
+synonym: "tufting enteropathy" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:613217
+xref: ORDO:92050
+is_a: DOID:0060774 ! congenital diarrhea
+
+[Term]
+id: DOID:0060777
+name: congenital secretory sodium diarrhea 8
+def: "A secretory diarrhea that has_material_basis_in homozygous or compound heterozygous mutation in the SLC9A3 gene on chromosome 5p15." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26358773]
+subset: DO_MGI_slim
+synonym: "DIAR8" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:616868
+xref: ORDO:103908
+is_a: DOID:77 ! gastrointestinal system disease
+
+[Term]
+id: DOID:0060778
+name: congenital diarrhea 7 with exudative enteropathy
+def: "A congenital diarrhea characterized by watery diarrhea, protein-losing enteropathy, patchy areas of dystrophic microvilli in the duodenum and patchy areas of villous atrophy that has_material_basis_in homozygous mutation in the DGAT1 gene on chromosome 8q24.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23114594]
+subset: DO_MGI_slim
+synonym: "congenital chronic diarrhea with exudative enteropathy" EXACT []
+synonym: "congenital chronic diarrhea with protein-losing enteropathy" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:615863
+xref: ORDO:329242
+is_a: DOID:0060774 ! congenital diarrhea
+
+[Term]
+id: DOID:0060779
+name: congenital malabsorptive diarrhea 4
+def: "A congenital diarrhea characterized by chronic unremitting malabsorptive diarrhea and a profound dysgenesis of the enteroendocrine cells that has_material_basis_in mutation in the gene encoding neurogenin-3 (NEUROG3) on chromosome 10q21.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16855267]
+subset: DO_MGI_slim
+synonym: "congenital malabsorptive diarrhea due to paucity of enteroendocrine cells" EXACT []
+synonym: "enteric anendocrinosis" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:610370
+xref: ORDO:83620
+is_a: DOID:0060774 ! congenital diarrhea
+
+[Term]
+id: DOID:0060780
+name: congenital diarrhea 6
+def: "A congenital diarrhea characterized by mild, early-onset chronic diarrhea that has_material_basis_in heterozygous mutation in the GUCY2C gene on chromosome 12p12." [urL:https\://www.ncbi.nlm.nih.gov/pubmed/22436048]
+subset: DO_MGI_slim
+synonym: "chronic diarrhea due to guanylate cyclase 2C overactivity" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:614616
+xref: ORDO:314373
+is_a: DOID:0060774 ! congenital diarrhea
+
+[Term]
+id: DOID:0060781
+name: congenital secretory sodium diarrhea 3
+def: "A secretory diarrhea that has_material_basis_in homozygous or compound heterozygous mutation in the SPINT2 gene on chromosome 19q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19185281]
+subset: DO_MGI_slim
+synonym: "congenital secretory sodium diarrhea 3 syndromic" EXACT []
+synonym: "congenital secretory sodium diarrhea 3 with or without other congenital anomalies" EXACT []
+xref: ICD10CM:P78.3
+xref: OMIM:270420
+xref: ORDO:103908
+is_a: DOID:77 ! gastrointestinal system disease
+
+[Term]
+id: DOID:0060782
+name: EEC syndrome
+def: "An autosomal dominant disease characterized by ectrodactyly, ectodermal dysplasia, and orofacial clefts (cleft lip-palate)." [url:https\://rarediseases.info.nih.gov/diseases/2076/eec-syndrome]
+subset: DO_MGI_slim
+synonym: "ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome" EXACT []
+synonym: "ectrodactyly-ectodermal dysplasia-clefting syndrome" EXACT []
+synonym: "Rudiger syndrome 1" EXACT []
+synonym: "Walker-Clodius syndrome" EXACT []
+xref: ICD10CM:Q82.4
+xref: ORDO:1896
+xref: UMLS_CUI:C0406704
+
+[Term]
+id: DOID:0060783
+name: ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome 3
+def: "An EEC syndrome characterized by autosomal dominant inheritance of absence of the central parts of the hands and feet, resulting in split-hand/foot malformation, ectodermal dysplasia, and cleft lip with or without cleft palate that has_material basis in heterozygous mutation in the TP63 gene on chromosome 3q28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10535733, url:https\://www.ncbi.nlm.nih.gov/pubmed/8737655]
+subset: DO_MGI_slim
+synonym: "EEC syndrome 3" EXACT []
+synonym: "EEC3" EXACT []
+xref: ICD10CM:Q82.4
+xref: OMIM:604292
+xref: ORDO:1896
+xref: UMLS_CUI:C0406704
+is_a: DOID:0060782 ! EEC syndrome
+
+[Term]
+id: DOID:0060784
+name: ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome 1
+def: "An EEC syndrome characterized by autosomal dominant inheritance that has_material basis in variation in the chromosome region 7q11.2-q21.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1424230, url:https\://www.ncbi.nlm.nih.gov/pubmed/5454938]
+subset: DO_MGI_slim
+synonym: "EEC syndrome 1" EXACT []
+synonym: "EEC1" EXACT []
+xref: ICD10CM:Q82.4
+xref: OMIM:129900
+xref: ORDO:1896
+xref: UMLS_CUI:C0406704
+is_a: DOID:0060782 ! EEC syndrome
+
+[Term]
+id: DOID:0060785
+name: adult-onset autosomal dominant demyelinating leukodystrophy
+def: "A leukodystrophy characterized by onset in the 4th or 5th decade of life of autonomic abnormalities, pyramidal and cerebellar dysfunction, and symmetric demyelination of the CNS that has_material_basis_in heterozygous tandem genomic duplication resulting in an extra copy of the LMNB1 gene on chromosome 5q." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16951681, url:https\://www.ncbi.nlm.nih.gov/pubmed/19151023]
+subset: DO_MGI_slim
+synonym: "ADLD" EXACT []
+synonym: "adult-onset autosomal dominant leukodystrophy" EXACT []
+synonym: "autosomal-dominant or late-onset type Pelizaeus-Merzbacher disease" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:169500
+xref: ORDO:99027
+xref: UMLS_CUI:C3164344
+is_a: DOID:1443 ! cerebral degeneration
+
+[Term]
+id: DOID:0060786
+name: hypomyelinating leukodystrophy
+def: "A leukodystrophy characterized by T2 hyperintensity and T1 iso- or hyperintensity of affected white matter in the central nervous system." [url:https\://en.wikipedia.org/wiki/Leukodystrophy, url:https\://www.ncbi.nlm.nih.gov/books/NBK184570/]
+subset: DO_MGI_slim
+synonym: "HLD" EXACT []
+xref: OMIM:PS312080
+is_a: DOID:1443 ! cerebral degeneration
+
+[Term]
+id: DOID:0060787
+name: hypomyelinating leukodystrophy 2
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of nystagmus, impaired motor development, ataxia, choreoathetotic movements, dysarthria, and progressive spasticity that has_material_basis_in homozygous or compound heterozygous mutation in the GJC2 gene on chromosome 1q42." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15192806, url:https\://www.ncbi.nlm.nih.gov/pubmed/18094336]
+subset: DO_MGI_slim
+synonym: "HLD2" EXACT []
+synonym: "Pelizaeus-Merzbacher-like disease 1" EXACT []
+synonym: "Pelizaeus-Merzbacher-like disease due to GJC2 mutation" EXACT []
+synonym: "PMLD1" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:608804
+xref: ORDO:280282
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060788
+name: hypomyelinating leukodystrophy 10
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of progressive postnatal microcephaly, severely delayed psychomotor development and hypomyelination that has_material_basis_in homozygous mutation in the PYCR2 gene on chromosome 1q42." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25865492, url:https\://www.ncbi.nlm.nih.gov/pubmed/27130255]
+subset: DO_MGI_slim
+synonym: "HLD10" EXACT []
+xref: OMIM:616420
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060789
+name: hypomyelinating leukodystrophy 4
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of hypotonia, nystagmus, psychomotor developmental delay, and severe hypomyelinating leukoencephalopathy that has_material_basis_in homozygous mutation in the HSPD1 gene on chromosome 2q33." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18571143]
+subset: DO_MGI_slim
+synonym: "HLD4" EXACT []
+synonym: "MitCHAP60 disease" EXACT []
+synonym: "mitochondrial HSP60 chaperonopathy" EXACT []
+synonym: "Pelizaeus-Merzbacher-like disease due to HSPD1 mutation" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:612233
+xref: ORDO:280288
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060790
+name: hypomyelinating leukodystrophy 3
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of early infantile onset of global developmental delay, lack of development, lack of speech acquisition, and peripheral spasticity associated with decreased myelination in the central nervous system that has_material_basis_in homozygous mutation in the AIMP1 gene on chromosome 4q24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21092922, url:https\://www.ncbi.nlm.nih.gov/pubmed/24958424]
+subset: DO_MGI_slim
+synonym: "HLD3" EXACT []
+synonym: "Pelizaeus-Merzbacher-like disease due to AIMP1 mutation" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:260600
+xref: ORDO:280293
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060791
+name: hypomyelinating leukodystrophy 9
+def: "A hypomyelinating leukodystrophy characterized by delayed psychomotor development, spasticity, and nystagmus starting in the first year of life that has_material_basis_in compound heterozygous mutation in the RARS gene on chromosome 5q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24777941]
+subset: DO_MGI_slim
+synonym: "HLD9" EXACT []
+synonym: "RARS-related autosomal recessive hypomyelinating leukodystrophy" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:616140
+xref: ORDO:438114
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060792
+name: hypomyelinating leukodystrophy 11
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of delayed psychomotor development and other neurologic features associated with hypomyelination that has_material_basis_in homozygous or compound heterozygous mutation in the POLR1C gene on chromosome 6p21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26151409]
+subset: DO_MGI_slim
+synonym: "HLD11" EXACT []
+xref: ICD10CM:G11.1
+xref: OMIM:616494
+xref: ORDO:88637
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060793
+name: hypomyelinating leukodystrophy 5
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of congenital cataract, progressive neurologic impairment, and diffuse myelin deficiency that has_material_basis_in homozygous mutation in the FAM126A gene on chromosome 7p15." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16951682, url:https\://www.ncbi.nlm.nih.gov/pubmed/17683097]
+subset: DO_MGI_slim
+synonym: "HLD5" EXACT []
+synonym: "hypomyelination-congenital cataract syndrome" EXACT []
+xref: ICD10CM:G37.8
+xref: OMIM:610532
+xref: ORDO:85163
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060795
+name: hypomyelinating leukodystrophy 13
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of infantile onset of delayed psychomotor development, axial hypotonia, and spasticity associated with delayed myelination and periventricular white matter abnormalities that has_material_basis_in homozygous mutation in the C11ORF73 gene on chromosome 11q14." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26545878]
+subset: DO_MGI_slim
+synonym: "HLD13" EXACT []
+xref: OMIM:616881
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060796
+name: hypomyelinating leukodystrophy 12
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of severely delayed or even lack of psychomotor development that becomes apparent in the first months of life, acquired microcephaly and delayed myelination that has_material_basis_in homozygous mutation in the VPS11 gene on chromosome 11q23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26307567, url:https\://www.ncbi.nlm.nih.gov/pubmed/27120463]
+subset: DO_MGI_slim
+synonym: "HLD12" EXACT []
+xref: OMIM:616683
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060797
+name: hypomyelinating leukodystrophy 8 with or without oligodontia and-or hypogonadotropic hypogonadism
+def: "A hypomyelinating leukodystrophy characterized by autosomal recessive inheritance of early childhood onset of cerebellar ataxia, mild intellectual disabilities associated with diffuse hypomyelination and variable development of oligodontia and/or  hypogonadotropic hypogonadism that has_material_basis_in compound heterozygous mutation in the POLR3B gene on chromosome 12q23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22036171, url:https\://www.ncbi.nlm.nih.gov/pubmed/22036172]
+subset: DO_MGI_slim
+synonym: "HLD8" EXACT []
+xref: ICD10CM:G11.1
+xref: OMIM:614381
+xref: ORDO:88637
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060798
+name: hypomyelinating leukodystrophy 6
+def: "A hypomyelinating leukodystrophy characterized by infant or early childhood onset of delayed motor development and gait instability, followed by extrapyramidal movement disorders, progressive spastic tetraplegia, ataxia, hypomyelination, cerebellar atrophy, and atrophy or disappearance of the putamen that has_material_basis_in heterozygous mutation in the TUBB4A gene on chromosome 19p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23582646]
+subset: DO_MGI_slim
+synonym: "H-ABC" EXACT []
+synonym: "HABC" EXACT []
+synonym: "HLD6" EXACT []
+synonym: "hypomyelinating leukodystrophy with atrophy of the basal ganglia and cerebellum" EXACT []
+synonym: "hypomyelination with atrophy of basal ganglia and cerebellum" EXACT []
+xref: ICD10CM:E75.2
+xref: OMIM:612438
+xref: ORDO:139441
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
+
+[Term]
+id: DOID:0060799
+name: syndromic X-linked intellectual disability Lubs type
+def: "A syndromic X-linked intellectual disability characterized by moderate to profound intellectual disability, infantile hypotonia, mild dysmorphic features, poor speech development, autistic features, seizures, progressive spasticity, and recurrent infections in males that has_material_basis_in duplication or triplication of the MECP2 gene on chromosome Xq28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15689435, url:https\://www.ncbi.nlm.nih.gov/pubmed/20425814]
+subset: DO_MGI_slim
+synonym: "Lubs X-linked mental retardation syndrome" EXACT []
+synonym: "MECP2 duplication syndrome" EXACT []
+synonym: "mental retardation, X-linked, syndromic, Lubs type" EXACT []
+synonym: "mental retardation, X-linked, with recurrent respiratory infections" EXACT []
+synonym: "MRXSL" EXACT []
+synonym: "X-linked intellectual disability-hypotonia-recurrent Infections syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537723
+xref: OMIM:300260
+xref: ORDO:85281
+xref: UMLS_CUI:C1846058
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060800
+name: syndromic X-linked intellectual disability 5
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability and variable features including; choreoathetosis, hydrocephalus, Dandy-Walker malformation, seizures, and iron or calcium deposition in the brain that has_material_basis_in mutation in the AP1S2 gene on chromosome Xp22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19377476, url:https\://www.ncbi.nlm.nih.gov/pubmed/23756445]
+subset: DO_MGI_slim
+synonym: "Fried syndrome" EXACT []
+synonym: "Mental retardation, X-linked syndromic 5" EXACT []
+synonym: "MRX59" EXACT []
+synonym: "MRXS21" EXACT []
+synonym: "Pettigrew syndrome" EXACT []
+synonym: "syndromic X-linked mental retardation 21" EXACT []
+synonym: "syndromic X-linked mental retardation Fried type" EXACT []
+synonym: "X-linked intellectual disability-Dandy-Walker malformation-basal ganglia disease-seizures syndrome" EXACT []
+synonym: "X-linked mental retardation 59" EXACT []
+synonym: "X-linked metal retardation with Dandy-Walker malformation, basal ganglia disease, and seizures" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:304340
+xref: ORDO:1568
+xref: ORDO:85335
+xref: UMLS_CUI:C0796254 
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060801
+name: MEHMO syndrome
+def: "A syndromic X-linked intellectual disability characterized by severe intellectual deficit, epilepsy, microcephaly, hypogenitalism and obesity with variable occurrence of growth delay and diabetes that has_material_basis_in variation in the chromosome region Xp22.13-p21.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12032729, url:https\://www.ncbi.nlm.nih.gov/pubmed/9781023]
+subset: DO_MGI_slim
+synonym: "mental retardation, epileptic seizures, hypogonadism and hypogenitalism, microcephaly, and obesity" EXACT []
+synonym: "MRXS20" EXACT []
+synonym: "MRXS25" EXACT []
+synonym: "syndromic X-linked mental retardation 20" EXACT []
+synonym: "syndromic X-linked mental retardation 25" EXACT []
+synonym: "X-linked intellectual disability-epileptic seizures-hypogenitalism-microcephaly-obesity syndrome" EXACT []
+xref: C537451
+xref: ICD10CM:Q87.8
+xref: OMIM:300148
+xref: ORDO:85282
+xref: UMLS_CUI:C2931496
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060803
+name: syndromic X-linked intellectual disability 17
+def: "A syndromic X-linked intellectual disability characterized by global developmental delay, delayed motor development, lack of speech development, intellectual disability, alacrima and in some patients achalasia and/or anisocoria that has_material_basis_in variation in the chromosome region Xp21.1-p11.23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21744492]
+subset: DO_MGI_slim
+synonym: "intellectual disability-alacrima-achalasia syndrome" EXACT []
+synonym: "mental retardation, X-linked, syndromic 17" EXACT []
+synonym: "X-linked mental retardation with alacrima and achalasia" EXACT []
+xref: OMIM:300858
+xref: ORDO:289483
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060804
+name: syndromic X-linked intellectual disability 12
+def: "A syndromic X-linked intellectual disability characterized by severe intellectual deficit, mutism, epilepsy, growth retardation or failure and recurrent infections that has_material_basis_in variation in the chromosome region Xp11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1357179]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 12" EXACT []
+synonym: "X-linked intellectual disability, Wilson type" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:309545
+xref: ORDO:85290
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060805
+name: Prieto syndrome
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability, facial dysmorphism, patella luxation, clinodactyly, subcortical cerebral atrophy, and abnormal growth of the teeth that has_material_basis_in variation in the chromosome region Xp11-q21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1673297, url:https\://www.ncbi.nlm.nih.gov/pubmed/3121220]
+subset: DO_MGI_slim
+synonym: "Prieto-Badia-Mulas syndrome" EXACT []
+synonym: "X-linked intellectual disability-dysmorphism-cerebral atrophy syndrome" EXACT []
+xref: OMIM:309610
+xref: ORDO:2958
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060806
+name: syndromic X-linked intellectual disability Hedera type
+def: "A syndromic X-linked intellectual disability characterized by mild to moderate mental retardation and epilepsy that has_material_basis_in  mutation in the ATP6AP2 gene on chromosome Xp11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11782983, url:https\://www.ncbi.nlm.nih.gov/pubmed/15746149]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic, Hedera type" EXACT []
+synonym: "MRXE" EXACT []
+synonym: "MRXSH" EXACT []
+synonym: "X-linked mental retardation with epilepsy" EXACT []
+xref: OMIM:300423
+xref: ORDO:2076
+xref: ORDO:93952
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060807
+name: syndromic X-linked intellectual disability Najm type
+def: "A syndromic X-linked intellectual disability characterized by severe intellectual disability, microcephaly with pontine and cerebellar hypoplasia that has_material_basis_in heterozygous mutation or deletion in the CASK gene on chromosome Xp11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19165920, url:https\://www.ncbi.nlm.nih.gov/pubmed/21954287]
+subset: DO_MGI_slim
+synonym: "mental retardation and microcephaly with pontine and cerebellar hypoplasia" EXACT []
+synonym: "MICPCH" EXACT []
+synonym: "X-linked intellectual disability-microcephaly-pontocerebellar hypoplasia syndrome" EXACT []
+xref: ICD10CM:Q04.3
+xref: OMIM:300749
+xref: ORDO:163937
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060808
+name: syndromic X-linked intellectual disability 7
+def: "A syndromic X-linked intellectual disability characterized by intellectual deficit, obesity, hypogonadism, and tapering fingers that has_material_basis_in variation in the chromosome region Xp11.3-q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10573017]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked syndromic 7" EXACT []
+synonym: "MRXS7" EXACT []
+synonym: "X-linked intellectual disability, Ahmad type" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537449
+xref: OMIM:300218
+xref: ORDO:85274
+xref: UMLS_CUI:C1846170 
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060809
+name: syndromic X-linked intellectual disability Claes-Jensen type
+def: "A syndromic X-linked intellectual disability characterized by severe intellectual deficit associated with variable clinical manifestations including spasticity, cryptorchidism, maxillary hypoplasia, alopecia areata, epilepsy, short stature, impaired speech and behavioural problems that has_material_basis_in mutation in the KDM5C gene on chromosome Xp11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10982473, url:https\://www.ncbi.nlm.nih.gov/pubmed/15586325]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic, Claes-Jensen type" EXACT []
+synonym: "MRXSCJ" EXACT []
+synonym: "MRXSJ" EXACT []
+synonym: "syndromic X-linked intellectual disability due to JARID1C mutation" EXACT []
+synonym: "syndromic X-linked mental retardation JARID1C-related" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300534
+xref: ORDO:85279
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060810
+name: syndromic X-linked intellectual disability type 10
+def: "A syndromic X-linked intellectual disability characterized by mild intellectual deficit associated with choreoathetosis and abnormal behaviour that has_material_basis_in mutation in the HSD17B10 gene on chromosome Xp11.22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10521307, url:https\://www.ncbi.nlm.nih.gov/pubmed/17236142]
+subset: DO_MGI_slim
+synonym: " X-linked intellectual disability-choreoathetosis-abnormal behavior syndrome" EXACT []
+synonym: "HSD10 deficiency, atypical type" EXACT []
+synonym: "HSD10 disease, atypical type" EXACT []
+synonym: "mental retardation, X-linked syndromic 10" EXACT []
+synonym: "MRXS10" EXACT []
+xref: ICD10CM:G25.5
+xref: OMIM:300220
+xref: ORDO:85295
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060811
+name: syndromic X-linked intellectual disability Turner type
+def: "A syndromic X-linked intellectual disability characterized by moderate to severe intellectual deficit in boys and moderate intellectual deficit in girls, macrocephaly, and holoprosencephaly present in some cases that has_material_basis_in mutation in the HUWE1 gene on chromosome Xp11.22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18252223, url:https\://www.ncbi.nlm.nih.gov/pubmed/7943042]
+subset: DO_MGI_slim
+synonym: "mental retardation and macrocephaly syndrome" EXACT []
+synonym: "mental retardation, X-linked syndromic, Turner type" EXACT []
+synonym: "MRXST" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300706
+xref: ORDO:85328
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060812
+name: syndromic X-linked intellectual disability Siderius type
+def: "A syndromic X-linked intellectual disability characterized by mild to moderate intellectual disability, long face and a broad nasal tip with in some cases cleft lip/palate, preaxial polydactyly and cryptorchidism that has_material_basis_in mutation in the PHF8 gene on chromosome Xp11.22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10398231, url:https\://www.ncbi.nlm.nih.gov/pubmed/16199551]
+subset: DO_MGI_slim
+synonym: "mental retardation syndrome, X-linked, Siderius type" EXACT []
+synonym: "MRXSSD" EXACT []
+synonym: "Siderius X-linked mental retardation syndrome" EXACT []
+synonym: "Siderius-Hamel syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537333
+xref: OMIM:300263
+xref: ORDO:85287
+xref: UMLS_CUI:C1846055
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060813
+name: syndromic X-linked intellectual disability Shrimpton type
+def: "A syndromic X-linked intellectual disability characterized by evere mental retardation, microcephaly, speech delay and variable short stature that has_material_basis_in variation in the chromosomal region Xq12-q21.31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10331611, url:https\://www.ncbi.nlm.nih.gov/pubmed/10797443]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 9" EXACT []
+synonym: "MRXS9" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300709
+xref: ORDO:85324
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060814
+name: Wilson-Turner syndrome
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability, truncal obesity, gynecomastia, hypogonadism, dysmorphic facial features, and short stature  that has_material_basis_in hemizygous mutation in the LAS1L gene (300964) on chromosome Xq12." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1746601, url:https\://www.ncbi.nlm.nih.gov/pubmed/25644381]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 6" EXACT []
+synonym: "mental retardation, X-linked, with gynecomastia and obesity" EXACT []
+synonym: "MRXS6" EXACT []
+synonym: "WTS" EXACT []
+synonym: "X-linked intellectual disability-gynecomastia-obesity syndrome" EXACT []
+xref: OMIM:309585
+xref: ORDO:3459
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060815
+name: Miles-Carpenter syndrome
+def: "A syndromic X-linked intellectual disability characterized by severe intellectual deficit, microcephaly, exotropia, distal muscle wasting and low digital arches that has_material_basis_in variation in chromosomal region Xq13-q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/2018061]
+subset: DO_MGI_slim
+synonym: "MCS" EXACT []
+synonym: "mental retardation, X-linked, syndromic 4" EXACT []
+synonym: "mental retardation, X-linked, with congenital contractures and low fingertip arches" EXACT []
+synonym: "MRXS4" EXACT []
+synonym: "X-linked intellectual disability, Miles-Carpenter type" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537472
+xref: OMIM:309605
+xref: ORDO:85283
+xref: UMLS_CUI:C1839735
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060816
+name: corpus callosum agenesis-intellectual disability-coloboma-micrognathia syndrome
+def: "A syndromic X-linked intellectual disability characterized by agenesis of the corpus callosum, intellectual disability, ocular coloboma, micrognathia,  sensorineural hearing loss, skeletal anomalies, and short stature that has_material_basis_in mutation in the IGBP1 gene on chromosome Xq13.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14556245]
+subset: DO_MGI_slim
+synonym: "corpus callosum, agenesis of, with mental retardation, ocular coloboma and micrognathia" EXACT []
+synonym: "Graham-Cox syndrome" EXACT []
+synonym: "mental retardation, X-linked, syndromic 28" EXACT []
+synonym: "MRXS28" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300472
+xref: ORDO:52055
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060817
+name: syndromic X-linked intellectual disability 34
+def: "A syndromic X-linked intellectual disability characterized by delayed psychomotor development, intellectual disability, impaired speech, dysmorphic facial features, and mild structural brain abnormalities, including thickening of the corpus callosum that has_material_basis_in mutation in the NONO gene on chromosome Xq13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26571461]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 34" EXACT []
+synonym: "MRXS34" EXACT []
+synonym: "MRXSML" EXACT []
+synonym: "syndromic X-linked mental retardation Mircsof-Langouet type" EXACT []
+xref: OMIM:300967
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060818
+name: syndromic X-linked intellectual disability Abidi type
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability with variable occurrence of short stature, small head circumference, sloping forehead, hearing loss, abnormally shaped ears, and small testes that has_material_basis_in variation in the chromosomal region Xq13.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10398233]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked syndromic, Abidi type" EXACT []
+synonym: "MRXSAB" EXACT []
+synonym: "syndromic X-linked mental retardation Abidi type" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C535556
+xref: OMIM:300262
+xref: ORDO:85273
+xref: UMLS_CUI:C1846056 
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060819
+name: syndromic X-linked intellectual disability Chudley-Schwartz type
+def: "A syndromic X-linked intellectual disability characterized by moderate intellectual disability, seizures, dysmorphic facial features and in some older patients slowly progressive unsteady gait and progressive weakness that has_material_basis_in variation in the chromosomal region Xq21.33-q23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10398239]
+subset: DO_MGI_slim
+synonym: " X-linked mental retardation with seizures, hypogammaglobinemia, and gait disturbance" EXACT []
+synonym: "mental retardation, X-linked, syndromic, Chudley-Schwartz type" EXACT []
+synonym: "MRXSCS" EXACT []
+xref: OMIM:300861
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060820
+name: syndromic X-linked intellectual disability Nascimento type
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability with dysmorphic features, including large head, synophrys, prominent supraorbital ridges, almond-shaped and deep-set eyes, large ears, wide mouth, myxedematous appearance, hirsutism, abnormal hair whorls, micropenis, and onychodystrophy that has_material_basis_in mutation in the UBE2A gene on chromosome Xq24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16909393, url:https\://www.ncbi.nlm.nih.gov/pubmed/20412111]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked syndromic, Nascimento-type" EXACT []
+synonym: "X-linked intellectual disability-nail dystrophy-seizures syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300860
+xref: ORDO:163956
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060821
+name: syndromic X-linked intellectual disability 14
+def: "A syndromic X-linked intellectual disability characterized by mild to severe intellectual disability, autistic features, slender build, poor musculature, long, thin face, high-arched palate, high nasal bridge, and pectus deformities that has_material_basis_in mutation in the UPF3B gene on chromosome Xq24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17704778, url:https\://www.ncbi.nlm.nih.gov/pubmed/22957832]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 14" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537923
+xref: OMIM:300676
+xref: ORDO:323
+xref: ORDO:776
+xref: UMLS_CUI:C0796022
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060822
+name: syndromic X-linked intellectual disability Cabezas type
+def: "A syndromic X-linked intellectual disability characterized by intellectual deficit, muscle wasting, short stature, hypogonadism, and  bnormal gait, with variable occurrence of prominent lower lip, kyphosis, joint hyperextensibility, tremor, decreased fine motor coordination and impaired speech that has_material_basis_in  mutation in the CUL4B gene on chromosome Xq23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10978355, url:https\://www.ncbi.nlm.nih.gov/pubmed/17236139]
+subset: DO_MGI_slim
+synonym: "Cabezas syndrome; syndromic X-linked mental retardation 15" EXACT []
+synonym: "mental retardation, X-linked, syndromic 15 (Cabezas type)" EXACT []
+synonym: "MRSS" EXACT []
+synonym: "MRXS15" EXACT []
+synonym: "MRXSC" EXACT []
+synonym: "X-linked mental retardation with short stature" EXACT []
+synonym: "X-linked mental retardation with short stature, hypogonadism, and abnormal gait" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300354
+xref: ORDO:85293
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060823
+name: syndromic X-linked intellectual disability 94
+def: "A syndromic X-linked intellectual disability characterized by moderate intellectual disability with variable occurrence of asthenic body habitus, dysmorphic features, autistic features, macrocephaly, seizures, myoclonic jerks, and hyporeflexia that has_material_basis_in mutation in the GRIA3 gene on chromosome Xq25." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17989220, url:https\://www.ncbi.nlm.nih.gov/pubmed/19449417, url:https\://www.ncbi.nlm.nih.gov/pubmed/24721225]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked 94" EXACT []
+synonym: "MRX94" EXACT []
+synonym: "MRXS29" EXACT []
+synonym: "syndromic X-linked intellectual disability due to GRIA3 anomalies" EXACT []
+synonym: "syndromic X-linked mental retardation 29" EXACT []
+synonym: "syndromic X-linked mental retardation Wu type" EXACT []
+xref: ICD10CM:F72
+xref: OMIM:300699
+xref: ORDO:364028
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060824
+name: syndromic X-linked intellectual disability Raymond type
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability and marfanoid habitus that has_material_basis_in mutation in the ZDHHC9 gene on chromosome Xq26.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17436253, url:https\://www.ncbi.nlm.nih.gov/pubmed/19377476]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked syndromic, Raymond type" EXACT []
+synonym: "MRXSR" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300799
+xref: ORDO:163953
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060825
+name: Christianson syndrome
+def: "A syndromic X-linked intellectual disability characterized by severe developmental delay, intellectual disability, microcephaly, impaired speech, ataxia, hypotonia and early-onset seizures that has_material_basis_in mutation in the SLC9A6 gene on chromosome Xq26." [url:https\://www.ncbi.nlm.nih.gov/pubmed/18342287, url:https\://www.ncbi.nlm.nih.gov/pubmed/20949524, url:https\://www.ncbi.nlm.nih.gov/pubmed/25044251]
+subset: DO_MGI_slim
+synonym: "mental retardation, microcephaly, epilepsy, and ataxia syndrome" EXACT []
+synonym: "mental retardation, X-linked syndromic, Christianson type" EXACT []
+synonym: "MRXSCH" EXACT []
+synonym: "X-linked Angelman-like syndrome" EXACT []
+synonym: "X-linked intellectual disability, South African type" EXACT []
+synonym: "X-linked intellectual disability-craniofacial dysmorphism-epilepsy-ophthalmoplegia-cerebellar atrophy syndrome" EXACT []
+xref: ICD10CM:Q87.8
+xref: MSH:C537450
+xref: OMIM:300243
+xref: ORDO:85278
+xref: UMLS_CUI:C1846130
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060826
+name: syndromic X-linked intellectual disability Shashi type
+def: "A syndromic X-linked intellectual disability characterized by moderate intellectual deficit, obesity, macroorchidism and a characteristic facies that has_material_basis_in mutation in the RBMX gene on chromosome Xq26." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10677307, url:https\://www.ncbi.nlm.nih.gov/pubmed/25256757]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 11, Shashi type" EXACT []
+synonym: "MRXS11" EXACT []
+synonym: "Shashi X-linked mental retardation syndrome" EXACT []
+synonym: "SMRXS" EXACT []
+synonym: "syndromic X-linked intellectual disability type 11" EXACT []
+synonym: "X-linked mental retardation Shashi type" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300238
+xref: ORDO:85286
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060827
+name: X-linked intellectual disability-psychosis-macroorchidism syndrome
+def: "A syndromic X-linked intellectual disability characterized by moderate intellectual deficit, manic-depressive psychosis, pyramidal signs and macroorchidism that has_material_basis_in mutation in the MECP2 gene on chromosome Xq28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10986043, url:https\://www.ncbi.nlm.nih.gov/pubmed/8651288]
+subset: DO_MGI_slim
+synonym: "Lindsay-Burn syndrome" EXACT []
+synonym: "mental retardation with psychosis, pyramidal signs, and macroorchidism" EXACT []
+synonym: "mental retardation, X-linked, syndromic 13" EXACT []
+synonym: "MRXS13" EXACT []
+synonym: "PPM-X" EXACT []
+synonym: "X-linked mental retardation 79" EXACT []
+synonym: "X-linked mental retardation with spasticity" EXACT []
+xref: ICD10CM:F71.1
+xref: OMIM:300055
+xref: ORDO:3077
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060828
+name: X-linked intellectual disability-cardiomegaly-congestive heart failure syndrome
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability, delayed psychomotor development, seizures, large joint contractures, cardiac abnormalities, and abnormal positioning of the thumbs that has_material_basis_in mutation in the CLIC2 gene on chromosome Xq28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22814392]
+subset: DO_MGI_slim
+synonym: "mental retardation, X-linked, syndromic 32" EXACT []
+synonym: "MRXS32" EXACT []
+xref: OMIM:300886
+xref: ORDO:324410
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060829
+name: Brooks-Wisniewski-Brown syndrome
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability, distinct facial appearance and growth retardation that has_material_basis_in variation on the X chromosome." [url:https\://www.ncbi.nlm.nih.gov/pubmed/7943044]
+subset: DO_MGI_slim
+synonym: "X-linked intellectual disability, Brooks type" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300612
+xref: ORDO:3056
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060830
+name: deafness-intellectual disability, Martin-Probst type syndrome
+def: "A syndromic X-linked intellectual disability characterized by severe bilateral deafness, intellectual disability, umbilical hernia and abnormal dermatoglyphics that has_material_basis_in variation on the X chromosome." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11073537]
+subset: DO_MGI_slim
+synonym: "Martin-Probst syndrome" EXACT []
+synonym: "mental retardation, X-linked, syndromic, Martin-Probst type" EXACT []
+xref: ICD10CM:Q87.8
+xref: OMIM:300519
+xref: ORDO:85321
+is_a: DOID:0060038 ! specific developmental disorder
+
+[Term]
+id: DOID:0060831
+name: Griscelli syndrome
+def: "An autosomal recessive disease characterized by silvery gray sheen of the hair and hypopigmentation of the skin." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12452176, url:https\://www.ncbi.nlm.nih.gov/pubmed/707528]
+subset: DO_MGI_slim
+synonym: "Chédiak-Higashi-like syndrome" EXACT []
+synonym: "Griscelli-Pruniéras syndrome" EXACT []
+synonym: "partial albinism-immunodeficiency syndrome" EXACT []
+xref: ICD10CM:E70.3
+xref: OMIM:PS214450
+xref: ORDO:381
+
+[Term]
+id: DOID:0060832
+name: Griscelli syndrome type 1
+def: "A Griscelli syndrome characterized by silvery gray sheen of the hair, hypopigmentation of the skin and neurological impairment without immunodeficiency that has_material_basis_in mutations in the MYO5A gene on chromosome 15q21.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12452176, url:https\://www.ncbi.nlm.nih.gov/pubmed/9207796]
+subset: DO_MGI_slim
+synonym: "Griscelli syndrome with neurological impairment" EXACT []
+synonym: "Griscelli syndrome, cutaneous and neurological type" EXACT []
+synonym: "Griscelli-Pruniéras syndrome type 1" EXACT []
+synonym: "GS1" EXACT []
+synonym: "hypopigmentation-neurologic impairment syndrome" EXACT []
+xref: ICD10CM:E70.3
+xref: MSH:C537301
+xref: OMIM:214450
+xref: ORDO:381
+xref: ORDO:79476
+xref: UMLS_CUI:C1859194
+is_a: DOID:0060831 ! Griscelli syndrome
+
+[Term]
+id: DOID:0060833
+name: Griscelli syndrome type 2
+def: "A Griscelli syndrome characterized by silvery gray sheen of the hair, hypopigmentation of the skin and immunodeficiency with or without neurologic impairment that has_material_basis_in mutation in the RAB27A gene on chromosome 15q21.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12452176, url:https\://www.ncbi.nlm.nih.gov/pubmed/707528]
+subset: DO_MGI_slim
+synonym: "Griscelli syndrome with hemophagocytic syndrome" EXACT []
+synonym: "Griscelli-Pruniéras syndrome type 2" EXACT []
+synonym: "GS2" EXACT []
+synonym: "hypopigmentation-immunodeficiency with or without neurologic impairment syndrome" EXACT []
+synonym: "PAID syndrome" EXACT []
+synonym: "partial albinism and immunodeficiency syndrome" EXACT []
+xref: ICD10CM:E70.3
+xref: MSH:C537302
+xref: OMIM:607624
+xref: ORDO:381
+xref: ORDO:79477
+xref: UMLS_CUI:C1868679
+is_a: DOID:0060831 ! Griscelli syndrome
+
+[Term]
+id: DOID:0060834
+name: Griscelli syndrome type 3
+def: "A Griscelli syndrome characterized by isolated silvery gray sheen of the hair and hypopigmentation of the skin that has_material_basis_in mutation in the MLPH or MYO5A genes." [https://www.ncbi.nlm.nih.gov/pubmed/12148598, https://www.ncbi.nlm.nih.gov/pubmed/12897212]
+subset: DO_MGI_slim
+synonym: "Griscelli-Pruniéras syndrome type 3" EXACT []
+synonym: "GS3" EXACT []
+xref: ICD10CM:E70.3
+xref: MSH:C537303
+xref: OMIM:609227
+xref: ORDO:381
+xref: ORDO:79478
+xref: UMLS_CUI:C1836573
+is_a: DOID:0060831 ! Griscelli syndrome
+
+[Term]
+id: DOID:0060835
+name: isolated microphthalmia 6
+def: "A microphthalmia characterized by autosomal recessive inheritance reduction in eye size that is restricted to the posterior segment of the eye, extreme hyperopia, and short axial length that has_material_basis_in homozygous or compound heterozygous mutation in the PRSS56 gene on chromosome 2q37." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15823920, url:https\://www.ncbi.nlm.nih.gov/pubmed/21397065]
+subset: DO_MGI_slim
+synonym: "MCOP6" EXACT []
+synonym: "posterior nonsyndromic microphthalmia" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:613517
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060836
+name: isolated microphthalmia 4
+def: "A microphthalmia that has_material_basis_in mutation in the GDF6 gene on chromosome 8q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19129173]
+subset: DO_MGI_slim
+synonym: "MCOP4" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:613094
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060837
+name: isolated microphthalmia 5
+def: "A microphthalmia characterized by autosomal recessive inheritance of posterior microphthalmia, hypermetropia, night blindness, decreased visual acuity, reduced macular reflex, scleral thickening, impared rod and cone responses on ERG, foveoschisis and in some patients retinal pigment epithelium atrophy, arteriolar attenuation, angle-closure glaucoma and optic disc drusen that has_material_basis_in homozygous or compound heterozygous mutation in the MFRP gene on chromosome 11q23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17167404, url:https\://www.ncbi.nlm.nih.gov/pubmed/18554571, url:https\://www.ncbi.nlm.nih.gov/pubmed/19753314]
+subset: DO_MGI_slim
+synonym: "MCOP5" EXACT []
+synonym: "microphthalmia-retinitis pigmentosa-foveoschisis-optic disc drusen syndrome" EXACT []
+synonym: "posterior microphthalmia with retinitis pigmentosa, foveoschisis and optic disc drusen" EXACT []
+xref: ICD10CM:Q15.8
+xref: OMIM:611040
+xref: ORDO:251279
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060838
+name: isolated microphthalmia 7
+def: "A microphthalmia characterized by unilateral microphthalmia that has_material_basis_in caused by mutation in the GDF3 gene on chromosome 12p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19864492]
+subset: DO_MGI_slim
+synonym: "MCOP7" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:613704
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060839
+name: isolated microphthalmia 2
+def: "A microphthalmia characterized by autosomal recessive inheritance of bilateral profound microphthalmia without associated anomalies and with normal intelligence that has_material_basis_in homozygous mutation in the CHX10 gene on chromosome 14q24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15257456, url:https\://www.ncbi.nlm.nih.gov/pubmed/3378363]
+subset: DO_MGI_slim
+synonym: "MCOP2" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:610093
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060840
+name: isolated microphthalmia 1
+def: "A microphthalmia that has_material_basis_in variation in the chromosomal region 14q32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/9545413]
+subset: DO_MGI_slim
+synonym: "MCOP1" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:251600
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060841
+name: isolated microphthalmia 8
+def: "A microphthalmia characterized by  bilateral severe microphthalmia autosomal recessive inheritance of that has_material_basis_in homozygous mutation in the ALDH1A3 gene on chromosome 15q26." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23312594, url:https\://www.ncbi.nlm.nih.gov/pubmed/23591992]
+subset: DO_MGI_slim
+synonym: "MCOP8" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:615113
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060842
+name: isolated microphthalmia 3
+def: "A microphthalmia characterized by clinical anophthalmia and/or microphthalmia that has_material_basis_in compound heterozygous mutation in the RAX gene on chromosome 18q21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14662654, url:https\://www.ncbi.nlm.nih.gov/pubmed/18783408]
+subset: DO_MGI_slim
+synonym: "MCOP3" EXACT []
+xref: ICD10CM:Q11.0
+xref: OMIM:611038
+xref: ORDO:2542
+is_a: DOID:5614 ! eye disease
+
+[Term]
+id: DOID:0060843
+name: hereditary neuropathy with liability to pressure palsies
+def: "A neuropathy characterized by autosomal dominant inheritance of peroneal muscle weakness, peripheral neuropathy, hyporeflexia, tomacula, segmental demyelination/remyelination, decreased motor nerve conduction that has_material_basis_in deletion or point mutation of the PMP22 gene on chromosome 17p12." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12682341, url:https\://www.ncbi.nlm.nih.gov/pubmed/2540008, url:https\://www.ncbi.nlm.nih.gov/pubmed/8422677]
+subset: DO_MGI_slim
+synonym: "current pressure-sensitive neuropathy" EXACT []
+synonym: "familial recurrent polyneuropathy" EXACT []
+synonym: "heterozygous microdeletion 17p11.2p12" EXACT []
+synonym: "HNPP" EXACT []
+synonym: "potato-grubbing palsy" EXACT []
+synonym: "tomaculous neuropathy" EXACT []
+synonym: "tulip-bulb digger's palsy" EXACT []
+xref: ICD10CM:G60.0
+xref: OMIM:162500
+xref: ORDO:640
+xref: UMLS_CUI:C0393814
+is_a: DOID:574 ! peripheral nervous system disease
+
+[Term]
+id: DOID:0060844
+name: Norrie disease
+def: "A X-linked disease characterized by X-linked recessive inheritance of degenerative and proliferative changes of the neuroretina resulting in congenital blindness along with progressive mental disorders in about 50% of patients and sensorineural deafness in about 33% of patients that has_material_basis_in mutation in the NDP gene on chromosome Xp11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1303235, url:https\://www.ncbi.nlm.nih.gov/pubmed/13998843, url:https\://www.ncbi.nlm.nih.gov/pubmed/7627181]
+subset: DO_MGI_slim
+synonym: "atrophia bulborum hereditaria" EXACT []
+synonym: "Episkopi blindness" EXACT []
+synonym: "Norrie-Warburg disease" EXACT []
+xref: ICD10CM:H35.5
+xref: MSH:C537849
+xref: OMIM:310600
+xref: ORDO:649
+xref: UMLS_CUI:C0266526
+is_a: DOID:0050735 ! X-linked disease
+
+[Term]
 id: DOID:0080001
 name: bone disease
 namespace: disease_ontology
@@ -1489,6 +2942,29 @@ synonym: "dyslipidemia" EXACT []
 synonym: "fatty acid metabolism disorder" EXACT []
 xref: MSH:D008052
 xref: UMLS_CUI:C0023772
+
+[Term]
+id: DOID:3210
+name: Pelizaeus-Merzbacher disease
+namespace: disease_ontology
+def: "A hypomyelinating leukodystrophy characterized by impaired myelin formation, nystagmus, spastic quadriplegia, ataxia, and developmental delay that has_material_basis_in mutation in the PLP1 gene on chromosome Xq22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15627202, url:https\://www.ncbi.nlm.nih.gov/pubmed/2773936, url:https\://www.ncbi.nlm.nih.gov/pubmed/3476455]
+subset: DO_MGI_slim
+synonym: "diffuse familial brain sclerosis" EXACT []
+synonym: "HLD1" EXACT []
+synonym: "hypomyelinating leukodystrophy 1" EXACT []
+synonym: "Leukodystrophy, sudanophilic" EXACT [MTHICD9_2006:330.0]
+synonym: "Pelizaeus Merzbacher brain sclerosis" EXACT [CSP2005:1849-5479]
+synonym: "Pelizaeus-Merzbacher brain sclerosis" EXACT []
+synonym: "PMD" EXACT []
+synonym: "sudanophilic leukodystrophy, Paelizeus-Merzbacher type" EXACT []
+xref: ICD10CM:E75.2
+xref: MSH:D020371
+xref: NCI:C75487
+xref: OMIM:312080
+xref: ORDO:702
+xref: SNOMEDCT_US_2016_03_01:64855000
+xref: UMLS_CUI:C0205711
+is_a: DOID:0060786 ! hypomyelinating leukodystrophy
 
 [Term]
 id: DOID:374

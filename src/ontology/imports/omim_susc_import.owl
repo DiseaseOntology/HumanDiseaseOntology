@@ -1,4 +1,15 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -23,7 +34,7 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
     
 
 
@@ -100,7 +111,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_000000">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omim_susceptibilty</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">omim_susceptibilty</rdfs:label>
     </owl:Class>
     
 
@@ -172,7 +183,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_608907 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_608907">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alzheimer’s disease 9</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Alzheimer&apos;s disease 9</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>

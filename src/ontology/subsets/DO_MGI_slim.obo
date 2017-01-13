@@ -20,6 +20,7 @@ namespace: disease_ontology
 def: "An acquired metabolic disease that is characterized by abnormal carbohydrate metabolism." [url:http\://www.nlm.nih.gov/medlineplus/metabolicdisorders.html]
 subset: DO_FlyBase_slim
 subset: DO_MGI_slim
+is_a: DOID:0060158 ! acquired metabolic disease
 
 [Term]
 id: DOID:0050117
@@ -47,71 +48,13 @@ xref: ICD9CM:079.0
 xref: UMLS_CUI:C0001485
 
 [Term]
-id: DOID:0050439
-name: Usher syndrome
+id: DOID:0050687
+name: cell type cancer
 namespace: disease_ontology
-def: "A syndrome characterized by a combination of hearing loss and visual impairment." [url:http\://en.wikipedia.org/wiki/Usher_syndrome]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [LS].
+def: "A cancer that is classified by the type of cell from which it is derived." [url:http\://cancerguide.org/basic.html, url:http\://en.wikipedia.org/wiki/Cancer]
 subset: DO_MGI_slim
-subset: DO_rare_slim
-xref: MSH:D052245
-xref: NCI:C85217
-xref: OMIM:276900
-xref: OMIM:276901
-xref: OMIM:276902
-xref: OMIM:276904
-xref: OMIM:601067
-xref: OMIM:602083
-xref: OMIM:602097
-xref: OMIM:605472
-xref: OMIM:606943
-xref: OMIM:611383
-xref: OMIM:612632
-xref: OMIM:614504
-xref: OMIM:614869
-xref: OMIM:614990
-xref: ORDO:886
-xref: SNOMEDCT_US_2016_03_01:57838006
-xref: SNOMEDCT_US_2016_03_01:73119000
-xref: UMLS_CUI:C0271097
-xref: UMLS_CUI:C1568248
-xref: UMLS_CUI:C1568249
-xref: UMLS_CUI:C2931205
-
-[Term]
-id: DOID:0050524
-name: maturity-onset diabetes of the young
-namespace: disease_ontology
-def: "A genetic disease that has_material_basis_in mutations in the MODY genes disrupting insulin production." [url:http\://en.wikipedia.org/wiki/Maturity_onset_diabetes_of_the_young]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
-subset: DO_MGI_slim
-synonym: "Mason-type diabetes" EXACT []
-synonym: "MODY" EXACT []
-xref: ICD10CM:E11.8
-xref: KEGG:04950
-xref: OMIM:125850
-xref: OMIM:125851
-xref: OMIM:137920
-xref: OMIM:600496
-xref: OMIM:606391
-xref: OMIM:606392
-xref: OMIM:606394
-xref: OMIM:609812
-xref: OMIM:610508
-xref: OMIM:612225
-xref: OMIM:613370
-xref: OMIM:613375
-xref: OMIM:616329
-xref: OMIM:616511
-xref: ORDO:552
-
-[Term]
-id: DOID:0050615
-name: respiratory system cancer
-namespace: disease_ontology
-def: "An organ system cancer located_in the respiratory system that is characterized by uncontrolled cellular proliferation in the respiratory tract." [url:http\://en.wikipedia.org/wiki/Respiratory_tract_neoplasm]
-subset: DO_MGI_slim
-is_a: DOID:1579 ! respiratory system disease
+created_by: snadendla
+creation_date: 2011-06-13T03:28:50Z
 
 [Term]
 id: DOID:0050735
@@ -123,22 +66,35 @@ created_by: lschriml
 creation_date: 2012-07-24T12:47:31Z
 
 [Term]
-id: DOID:0060038
-name: specific developmental disorder
+id: DOID:0050738
+name: Y-linked disease
 namespace: disease_ontology
-def: "A developmental disorder of mental health that categorizes specific learning disabilities and developmental disorders affecting coordination." [url:http\://en.wikipedia.org/wiki/Specific_developmental_disorder]
+def: "A monogenic disease that has_material_basis_in muations on the Y chromosome." [url:http\://en.wikipedia.org/wiki/Genetic_disorder#Y-linked]
 subset: DO_MGI_slim
+created_by: lschriml
+creation_date: 2012-07-24T12:51:47Z
 
 [Term]
-id: DOID:0060040
-name: pervasive developmental disorder
+id: DOID:0050739
+name: autosomal genetic disease
 namespace: disease_ontology
-alt_id: DOID:1208
-def: "A developmental disorder of mental health that refers to a group of five disorders characterized by impairments in socialization and communication, as well as restricted interests and repetitive behaviors." [url:http\://www.ninds.nih.gov/disorders/pdd/pdd.htm]
+def: "A monogenic disease that is has material basis in a mutation in a single gene on one of the non-sex chromosomes." [url:http\://ghr.nlm.nih.gov/glossary=autosomaldominant, url:http\://ghr.nlm.nih.gov/handbook/inheritance/inheritancepatterns]
 subset: DO_MGI_slim
-synonym: "pervasive development disorder" EXACT []
-xref: ICD9CM:299.80
-xref: UMLS_CUI:C0154451
+created_by: lschriml
+creation_date: 2012-07-24T04:45:53Z
+
+[Term]
+id: DOID:0050780
+name: Opitz-GBBB syndrome
+namespace: disease_ontology
+def: "A monogenic disease that is characterized by hypertelorism, hypospadias, and additional midline defects resulting from mutations to the MID1 gene in the X-linked form or from a deletion on chromosome 22q11.2 in the autosomal dominant form." [url:http\://www.genome.jp/dbget-bin/www_bget?ds\:H00583, url:http\://www.ncbi.nlm.nih.gov/books/NBK1327/, url:http\://www.ncbi.nlm.nih.gov/books/NBK1523/, url:http\://www.omim.org/entry/145410?search=Opitz-GBBB%20syndrome&highlight=syndromic%20syndrome%20opitzgbbb]
+subset: DO_MGI_slim
+synonym: "Opitz G/BBB Syndrome" EXACT []
+xref: KEGG:H00583
+xref: OMIM:145410
+xref: OMIM:300000
+created_by: lschriml
+creation_date: 2013-06-24T01:18:03Z
 
 [Term]
 id: DOID:0060056
@@ -146,15 +102,43 @@ name: hypersensitivity reaction disease
 namespace: disease_ontology
 def: "An immune system disease that has material basis in abnormal immune responses." [url:http\://en.wikipedia.org/wiki/Hypersensitivity, url:http\://physio.ucsf.edu/GEMS/courses/Immunology/materials/fa13_essential_immunology/090313_hypersensitivity_defranco.pdf, url:http\://www.ncbi.nlm.nih.gov/books/NBK27136/]
 subset: DO_MGI_slim
+is_a: DOID:2914 ! immune system disease
 
 [Term]
-id: DOID:0060083
-name: immune system cancer
+id: DOID:0060071
+name: pre-malignant neoplasm
 namespace: disease_ontology
-def: "An organ system cancer located_in the immune system that is characterized by uncontrolled cellular proliferation in organs of the immune system." [url:http\://en.wikipedia.org/wiki/Immune_system]
+def: "A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer." [url:http\://en.wikipedia.org/wiki/Neoplasm]
 subset: DO_MGI_slim
 created_by: lschriml
-creation_date: 2011-06-08T01:11:18Z
+creation_date: 2011-05-11T12:18:41Z
+
+[Term]
+id: DOID:0060072
+name: benign neoplasm
+namespace: disease_ontology
+def: "A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize." [url:http\://en.wikipedia.org/wiki/Benign_neoplasm, url:http\://www.nlm.nih.gov/medlineplus/benigntumors.html]
+subset: DO_MGI_slim
+created_by: lschriml
+creation_date: 2011-05-11T12:18:41Z
+
+[Term]
+id: DOID:0060118
+name: thoracic disease
+namespace: disease_ontology
+def: "A disease of anatomical entity that is located_in the thoracic cavity." [url:http\://en.wikipedia.org/wiki/Thoracic_cavity]
+subset: DO_MGI_slim
+created_by: lschriml
+creation_date: 2011-07-25T02:23:47Z
+
+[Term]
+id: DOID:0060158
+name: acquired metabolic disease
+namespace: disease_ontology
+def: "A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to an endocrine organ disease, organ malfunction, inadequate intake, dietary deficiency, or malabsorption." [url:http\://en.wikipedia.org/wiki/Inborn_error_of_metabolism, url:http\://www.ncbi.nlm.nih.gov/mesh/68008659]
+subset: DO_MGI_slim
+created_by: lschriml
+creation_date: 2011-08-24T02:53:03Z
 
 [Term]
 id: DOID:0060340
@@ -170,26 +154,16 @@ id: DOID:0060388
 name: chromosomal deletion syndrome
 namespace: disease_ontology
 subset: DO_MGI_slim
+is_a: DOID:0080014 ! chromosomal disease
 created_by: elvira
 creation_date: 2015-09-28T15:48:41Z
 
 [Term]
-id: DOID:0080001
-name: bone disease
+id: DOID:0080014
+name: chromosomal disease
 namespace: disease_ontology
-alt_id: DOID:1290
-def: "A connective tissue disease that affects the structure or development of bone or causes an impairment of normal bone function." [url:http\://en.wikipedia.org/wiki/Bone_disease, url:http\://www.dsls.usra.edu/meetings/bonehealth_2005/information/factsheet1.pdf]
+def: "A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes." [url:http\://en.wikipedia.org/wiki/Chromosome_abnormality, url:http\://www.genome.gov/11508982#al-5, url:http\://www.rarechromo.org/html/chromosomesanddisorders.asp]
 subset: DO_MGI_slim
-synonym: "skeletal disease" RELATED []
-xref: ICD10CM:M89.9
-xref: MSH:D001847
-xref: SNOMEDCT_US_2016_03_01:156814002
-xref: SNOMEDCT_US_2016_03_01:203524000
-xref: SNOMEDCT_US_2016_03_01:268126004
-xref: SNOMEDCT_US_2016_03_01:274145000
-xref: SNOMEDCT_US_2016_03_01:308147009
-xref: SNOMEDCT_US_2016_03_01:76069003
-xref: UMLS_CUI:C0005940
 
 [Term]
 id: DOID:0080015
@@ -199,124 +173,141 @@ def: "A disease that has_material_basis_in a genetic abnormality, error with emb
 subset: DO_MGI_slim
 
 [Term]
-id: DOID:10241
-name: thalassemia
-namespace: disease_ontology
-alt_id: DOID:12242
-alt_id: DOID:12243
-comment: OMIM mapping confirmed by DO. [LS].
+id: DOID:0080110
+name: multiple pterygium syndrome
+def: "A genetic disease that is characterized by permanently bent fingers (camptodactyly), short stature, rocker-bottom or club feet, joints that are bent in a fixed position (contractures), union or webbing of the skin between the fingers (syndactyly), and/or webbing of the neck, inside bend of the elbows, back of the knees and armpits." [url:http\://rarediseases.org/rare-diseases/pterygium-syndrome-multiple/, url:http\://www.ncbi.nlm.nih.gov/pubmed/25957469, url:https\://en.wikipedia.org/wiki/Multiple_pterygium_syndrome, url:https\://ghr.nlm.nih.gov/condition/multiple-pterygium-syndrome]
 subset: DO_MGI_slim
-synonym: "Sickle-cell thalassemia with crisis" EXACT [ICD9CM_2006:282.42]
-synonym: "Sickle-cell thalassemia without crisis" EXACT [ICD9CM_2006:282.41]
-synonym: "thalassemia Hb-S disease with crisis" EXACT []
-synonym: "thalassemia Hb-S disease without crisis" EXACT []
-xref: ICD10CM:D56
-xref: ICD10CM:D56.9
-xref: ICD9CM:282.4
-xref: ICD9CM:282.40
-xref: MSH:D013789
-xref: NCI:C35069
-xref: OMIM:604131
-xref: SNOMEDCT_US_2016_03_01:154796005
-xref: SNOMEDCT_US_2016_03_01:191182000
-xref: SNOMEDCT_US_2016_03_01:191192008
-xref: SNOMEDCT_US_2016_03_01:191193003
-xref: SNOMEDCT_US_2016_03_01:267521001
-xref: SNOMEDCT_US_2016_03_01:267557006
-xref: SNOMEDCT_US_2016_03_01:40108008
-xref: SNOMEDCT_US_2016_03_01:84188003
-xref: UMLS_CUI:C0039730
+subset: DO_rare_slim
+xref: OMIM:178110
+xref: OMIM:253290
+xref: OMIM:265000
+xref: OMIM:312150
 
 [Term]
-id: DOID:114
-name: heart disease
+id: DOID:10983
+name: Alport syndrome
 namespace: disease_ontology
-def: "A cardiovascular system disease that involves the heart." [url:http\://en.wikipedia.org/wiki/Heart_disease]
-subset: DO_FlyBase_slim
+def: "A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss." [url:http\://en.wikipedia.org/wiki/Alport_syndrome]
+comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
-xref: ICD10CM:I51.9
-xref: ICD9CM:429.9
-xref: MSH:D006331
-xref: NCI:C3079
+synonym: "Hereditary Nephritis" EXACT [NCI2004_11_17:C34842]
+xref: MSH:D009394
+xref: SNOMEDCT_US_2016_03_01:399340005
+xref: SNOMEDCT_US_2016_03_01:57333009
+xref: UMLS_CUI:C0027706
+
+[Term]
+id: DOID:11725
+name: Cornelia de Lange syndrome
+namespace: disease_ontology
+def: "A genetic disease that is characterized by slow growth before and after birth, intellectual disability that is usually severe to profound, skeletal abnormalities involving the arms and hands, and distinctive facial features." [url:http\://en.wikipedia.org/wiki/Cornelia_de_Lange_Syndrome, url:http\://ghr.nlm.nih.gov/condition/cornelia-de-lange-syndrome, url:http\://www.omim.org/entry/122470, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/30/viewAbstract]
+comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+subset: DO_MGI_slim
+subset: DO_rare_slim
+synonym: "Brachmann de Lange syndrome" EXACT [CSP2005:2403-8925]
+synonym: "De Lange syndrome" EXACT []
+xref: ICD10CM:Q87.1
+xref: MSH:D003635
+xref: NCI:C75016
+xref: OMIM:122470
+xref: OMIM:300590
+xref: OMIM:300882
+xref: OMIM:610759
+xref: OMIM:614701
+xref: ORDO:199
+xref: SNOMEDCT_US_2016_03_01:40354009
+xref: UMLS_CUI:C0270972
+
+[Term]
+id: DOID:11934
+name: head and neck cancer
+namespace: disease_ontology
+def: "An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx." [url:http\://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&codlan=1&codcol=70&codcch=9, url:http\://en.wikipedia.org/wiki/Head_and_neck_cancer, url:http\://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck, url:http\://www.cancer.gov/dictionary?CdrID=257519, url:http\://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php]
+subset: DO_MGI_slim
+subset: TopNodes_DOcancerslim
+synonym: "head and neck neoplasm" EXACT [MTH:NOCODE]
+synonym: "head and neck tumours" EXACT []
+synonym: "head/neck neoplasm" EXACT [CSP2005:2005-4325]
+synonym: "tumor of head and neck (disorder)" EXACT [SNOMEDCT_2005_07_31:255055008]
+xref: MSH:D006258
+xref: NCI:C3077
+xref: SNOMEDCT_US_2016_03_01:255055008
+xref: UMLS_CUI:C0018671
+
+[Term]
+id: DOID:1287
+name: cardiovascular system disease
+namespace: disease_ontology
+alt_id: DOID:73
+def: "A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis." [url:http\://en.wikipedia.org/wiki/Circulatory_system]
+subset: DO_MGI_slim
+synonym: "disease of subdivision of hemolymphoid system" EXACT []
+xref: ICD9CM:429.2
+xref: MSH:D002318
+xref: NCI:C2931
 xref: SNOMEDCT_US_2016_03_01:155263000
 xref: SNOMEDCT_US_2016_03_01:194707003
-xref: SNOMEDCT_US_2016_03_01:195152001
+xref: SNOMEDCT_US_2016_03_01:195139006
+xref: SNOMEDCT_US_2016_03_01:195594006
 xref: SNOMEDCT_US_2016_03_01:266275004
-xref: SNOMEDCT_US_2016_03_01:266311004
-xref: SNOMEDCT_US_2016_03_01:56265001
-xref: UMLS_CUI:C0018799
+xref: SNOMEDCT_US_2016_03_01:266336005
+xref: SNOMEDCT_US_2016_03_01:49601007
+xref: UMLS_CUI:C0007222
 
 [Term]
-id: DOID:12798
-name: mucopolysaccharidosis
+id: DOID:14793
+name: hypohidrotic ectodermal dysplasia
 namespace: disease_ontology
-alt_id: DOID:14716
-def: "A lysosomal storage disease that involves the accumulation of glycosaminoglycans in the tissues and their excretion in the urine." [url:http\://en.wikipedia.org/wiki/Mucopolysaccharidosis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Mucopolysaccharidosis]
-comment: Xref MGI.\nOMIM mapping submitted by NeuroDevNet. [LS].
+alt_id: DOID:0050446
+alt_id: DOID:0050447
+def: "A monogenic disease that is characterized by malformation of ectodermal (skin, hair, teeth and sweat glands) structures including hypotrichosis (sparseness of scalp and body hair), hypohidrosis (reduced ability to sweat), and hypodontia (congenital absence of teeth)." [url:http\://ghr.nlm.nih.gov/condition/hypohidrotic-ectodermal-dysplasia, url:http\://www.ncbi.nlm.nih.gov/books/NBK1112/, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=238468]
+comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
-xref: ICD10CM:E76.3
-xref: ICD9CM:277.5
-xref: MSH:D009083
-xref: NCI:C61259
-xref: OMIM:252700
-xref: OMIM:607014
-xref: ORDO:79213
-xref: SNOMEDCT_US_2016_03_01:11380006
-xref: SNOMEDCT_US_2016_03_01:190936000
-xref: SNOMEDCT_US_2016_03_01:190942001
-xref: SNOMEDCT_US_2016_03_01:267452003
-xref: UMLS_CUI:C0026703
+synonym: "anhidrotic ectodermal dysplasia 3" EXACT []
+synonym: "Christ-Siemens-Touraine Syndrome" EXACT []
+synonym: "Ectodermal Dysplasia 1, Anhydrotic" EXACT []
+synonym: "Hypohidrotic X-linked ectodermal dysplasia (disorder)" EXACT [SNOMEDCT_2005_07_31:239007005]
+xref: MSH:D053358
+xref: NCI:C84562
+xref: OMIM:129490
+xref: OMIM:224900
+xref: OMIM:300291
+xref: OMIM:305100
+xref: SNOMEDCT_US_2016_03_01:239007005
+xref: SNOMEDCT_US_2016_03_01:4826006
+xref: SNOMEDCT_US_2016_03_01:7731005
+xref: UMLS_CUI:C0162359
+is_a: DOID:0050739 ! autosomal genetic disease
 
 [Term]
-id: DOID:1289
-name: neurodegenerative disease
+id: DOID:15
+name: reproductive system disease
 namespace: disease_ontology
-alt_id: DOID:4874
-def: "A central nervous system disease that results_in the progressive deterioration of function or structure of neurons." [url:http\://en.wikipedia.org/wiki/Degenerative_disease, url:http\://en.wikipedia.org/wiki/Neurodegeneration]
-subset: DO_FlyBase_slim
+alt_id: DOID:6309
+def: "A disease of anatomical entity that is located_in reproductive system organs." [url:http\://en.wikipedia.org/wiki/Reproductive_system]
 subset: DO_MGI_slim
-synonym: "degenerative disease" EXACT []
-synonym: "Neurodegenerative disease" EXACT [NCI2004_11_17:C4802]
-xref: ICD10CM:G31.9
-xref: MSH:D019636
-xref: NCI:C27090
-xref: SNOMEDCT_US_2016_03_01:362975008
-xref: UMLS_CUI:C0524851
-xref: UMLS_CUI:C1285162
+synonym: "genital system disease" EXACT []
+xref: NCI:C27613
+xref: UMLS_CUI:C1335037
 
 [Term]
-id: DOID:1443
-name: cerebral degeneration
+id: DOID:150
+name: disease of mental health
 namespace: disease_ontology
+def: "A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture." [url:http\://en.wikipedia.org/wiki/Mental_disorder]
 subset: DO_MGI_slim
-synonym: "Brain degeneration" EXACT [SNOMEDCT_2005_07_31:267686002]
-xref: ICD9CM:331.9
-xref: SNOMEDCT_US_2016_03_01:154994001
-xref: SNOMEDCT_US_2016_03_01:154998003
-xref: SNOMEDCT_US_2016_03_01:192824002
-xref: SNOMEDCT_US_2016_03_01:267579001
-xref: SNOMEDCT_US_2016_03_01:267686002
-xref: SNOMEDCT_US_2016_03_01:267688001
-xref: SNOMEDCT_US_2016_03_01:418143002
-xref: SNOMEDCT_US_2016_03_01:52522001
-xref: SNOMEDCT_US_2016_03_01:73768007
-xref: UMLS_CUI:C0154671
-is_a: DOID:74 ! hematopoietic system disease
-
-[Term]
-id: DOID:1561
-name: cognitive disorder
-namespace: disease_ontology
-def: "A disease of mental health that affects cognitive functions including memory processing, perception and problem solving." [url:http\://en.wikipedia.org/wiki/Cognitive_disorder]
-subset: DO_MGI_slim
-synonym: "cognitive disease" EXACT []
-synonym: "Organic Mental disorder" RELATED [NCI2004_11_17:C34870]
-xref: ICD10CM:F09
-xref: MSH:D019965
-xref: NCI:C34870
-xref: SNOMEDCT_US_2016_03_01:106014008
-xref: SNOMEDCT_US_2016_03_01:111479008
-xref: UMLS_CUI:C0029227
+xref: ICD10CM:F99
+xref: ICD10CM:F99-F99
+xref: MSH:D001523
+xref: NCI:C2893
+xref: SNOMEDCT_US_2016_03_01:154843007
+xref: SNOMEDCT_US_2016_03_01:154971002
+xref: SNOMEDCT_US_2016_03_01:154972009
+xref: SNOMEDCT_US_2016_03_01:154980002
+xref: SNOMEDCT_US_2016_03_01:192637001
+xref: SNOMEDCT_US_2016_03_01:192639003
+xref: SNOMEDCT_US_2016_03_01:74732009
+xref: UMLS_CUI:C0004936
 
 [Term]
 id: DOID:1579
@@ -344,6 +335,67 @@ def: "A disease of anatomical entity that is located_in the integumentary system
 subset: DO_MGI_slim
 
 [Term]
+id: DOID:17
+name: musculoskeletal system disease
+namespace: disease_ontology
+def: "A disease of anatomical entity that occurs in the muscular and/or skeletal system." [url:http\://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders]
+subset: DO_MGI_slim
+xref: MSH:D009140
+xref: NCI:C107377
+xref: SNOMEDCT_US_2016_03_01:156881000
+xref: SNOMEDCT_US_2016_03_01:268047003
+xref: SNOMEDCT_US_2016_03_01:268142006
+xref: SNOMEDCT_US_2016_03_01:274149006
+xref: SNOMEDCT_US_2016_03_01:928000
+xref: UMLS_CUI:C0026857
+
+[Term]
+id: DOID:170
+name: endocrine gland cancer
+namespace: disease_ontology
+alt_id: DOID:10009
+def: "An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system." [url:http\://en.wikipedia.org/wiki/Endocrine_system]
+subset: DO_MGI_slim
+subset: TopNodes_DOcancerslim
+synonym: "endocrine neoplasm" EXACT [CSP2005:2009-5861]
+synonym: "Endocrine tumor" EXACT [NCI2004_11_17:C3010]
+synonym: "malignant Endocrine tumor" EXACT [NCI2004_11_17:C3575]
+synonym: "malignant neoplasm of endocrine gland" EXACT []
+synonym: "malignant tumour of endocrine gland" EXACT [SNOMEDCT_2005_07_31:93780007]
+synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:387922007]
+synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:127015005]
+synonym: "neoplasm of endocrine system (disorder)" EXACT [SNOMEDCT_2005_07_31:387927001]
+xref: ICD10CM:C75.9
+xref: ICD9CM:194.9
+xref: MSH:D004701
+xref: NCI:C3010
+xref: NCI:C3575
+xref: SNOMEDCT_US_2016_03_01:127015005
+xref: SNOMEDCT_US_2016_03_01:190140005
+xref: SNOMEDCT_US_2016_03_01:363347009
+xref: SNOMEDCT_US_2016_03_01:371982006
+xref: SNOMEDCT_US_2016_03_01:387922007
+xref: SNOMEDCT_US_2016_03_01:387927001
+xref: SNOMEDCT_US_2016_03_01:93780007
+xref: UMLS_CUI:C0014132
+xref: UMLS_CUI:C0153658
+
+[Term]
+id: DOID:1725
+name: peritoneum cancer
+namespace: disease_ontology
+def: "An organ system cancer that is located in the peritoneum." [url:http\://en.wikipedia.org/wiki/Peritoneal_cancer]
+subset: DO_MGI_slim
+subset: TopNodes_DOcancerslim
+synonym: "cancer of peritoneum" RELATED []
+synonym: "peritoneal neoplasm" RELATED []
+xref: ICD10CM:C48.1
+xref: ICD9CM:158.8
+xref: SNOMEDCT_US_2016_03_01:187808008
+xref: SNOMEDCT_US_2016_03_01:187816004
+xref: UMLS_CUI:C0153466
+
+[Term]
 id: DOID:18
 name: urinary system disease
 namespace: disease_ontology
@@ -356,32 +408,21 @@ xref: NCI:C27599
 xref: UMLS_CUI:C1335051
 
 [Term]
-id: DOID:1826
-name: epilepsy
+id: DOID:1925
+name: Coffin-Siris syndrome
 namespace: disease_ontology
-def: "A brain disease that is characterized by the occurrance of at least two unprovoked seizures resulting from a persistent epileptogenic abnormality of the brain that is able to spontaneously generate paroxysmal activity and typically manifested by sudden brief episodes of altered or diminished consciousness, involuntary movements, or convulsions." [url:http\://books.google.com/books?id=YXqX04Te9ioC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false, url:http\://www.merriam-webster.com/medlineplus/epilepsy]
-subset: DO_FlyBase_slim
+def: "A genetic disease that is characterized by underdevelopment of the tips of fingers or toes, underdevelopment or abscense of finger or toe nails and developmental disability." [url:http\://en.wikipedia.org/wiki/Coffin%E2%80%93Siris_syndrome, url:http\://ghr.nlm.nih.gov/condition/coffin-siris-syndrome, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=1465]
+comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
-synonym: "epilepsy syndrome" EXACT []
-synonym: "epileptic syndrome" EXACT []
-xref: EFO:0000474
-xref: ICD10CM:G40.9
-xref: ICD10CM:G40.909
-xref: ICD9CM:345.9
-xref: MSH:D004827
-xref: NCI:C3020
-xref: SNOMEDCT_US_2016_03_01:128613002
-xref: SNOMEDCT_US_2016_03_01:155036009
-xref: SNOMEDCT_US_2016_03_01:155045005
-xref: SNOMEDCT_US_2016_03_01:193026007
-xref: SNOMEDCT_US_2016_03_01:246545002
-xref: SNOMEDCT_US_2016_03_01:267593008
-xref: SNOMEDCT_US_2016_03_01:267698007
-xref: SNOMEDCT_US_2016_03_01:271788002
-xref: SNOMEDCT_US_2016_03_01:313307000
-xref: SNOMEDCT_US_2016_03_01:84757009
-xref: UMLS_CUI:C0014544
-is_a: DOID:74 ! hematopoietic system disease
+synonym: "Dwarfism-Onychodysplasia" EXACT []
+synonym: "Fifth Digit Syndrome" EXACT []
+synonym: "Short Stature-Onychodysplasia." EXACT []
+xref: MSH:C536436
+xref: NCI:C35321
+xref: OMIM:135900
+xref: SNOMEDCT_US_2016_03_01:10007009
+xref: UMLS_CUI:C0265338
+is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:193
@@ -408,35 +449,23 @@ xref: SNOMEDCT_US_2016_03_01:64572001
 xref: UMLS_CUI:C0039082
 
 [Term]
-id: DOID:2742
-name: auditory system disease
+id: DOID:2581
+name: chondrodysplasia punctata
 namespace: disease_ontology
-alt_id: DOID:1490
-alt_id: DOID:2011
-subset: DO_FlyBase_slim
+comment: DeObs MGI.
 subset: DO_MGI_slim
-synonym: "Destruction - ear drum" EXACT [SNOMEDCT_2005_07_31:267768008]
-synonym: "Destruction - ear drum" EXACT [SNOMEDCT_2005_07_31:155253008]
-synonym: "disorder of ear (disorder)" EXACT [SNOMEDCT_2005_07_31:25906001]
-synonym: "ear and mastoid disease" EXACT []
-synonym: "ear disease" EXACT [SNOMEDCT_2005_07_31:194193002]
-synonym: "ear disorder" EXACT [NCI2004_11_17:C26757]
-synonym: "ear disorder" EXACT [CSP2005:0977-5187]
-synonym: "ear disorder NOS" EXACT [SNOMEDCT_2005_07_31:155261003]
-synonym: "ear disorder NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:194410006]
-synonym: "Unspecified disorder of ear" EXACT [ICD9CM_2006:388.9]
-xref: ICD10CM:H93.9
-xref: ICD10CM:H93.90
-xref: ICD9CM:388.9
-xref: MSH:D004427
-xref: NCI:C26757
-xref: SNOMEDCT_US_2016_03_01:155253008
-xref: SNOMEDCT_US_2016_03_01:155261003
-xref: SNOMEDCT_US_2016_03_01:194193002
-xref: SNOMEDCT_US_2016_03_01:194410006
-xref: SNOMEDCT_US_2016_03_01:25906001
-xref: SNOMEDCT_US_2016_03_01:267768008
-xref: UMLS_CUI:C0013447
+synonym: "Chondrodysplasia calcificans congenita" EXACT [SNOMEDCT_2005_07_31:22932004]
+synonym: "Chondrodysplasia punctata congenita (disorder)" EXACT [SNOMEDCT_2005_07_31:360507004]
+xref: ICD10CM:Q77.3
+xref: MSH:D002806
+xref: NCI:C84632
+xref: OMIM:215105
+xref: SNOMEDCT_US_2016_03_01:205486004
+xref: SNOMEDCT_US_2016_03_01:22932004
+xref: SNOMEDCT_US_2016_03_01:278715001
+xref: SNOMEDCT_US_2016_03_01:360507004
+xref: SNOMEDCT_US_2016_03_01:42778005
+xref: UMLS_CUI:C0008445
 
 [Term]
 id: DOID:28
@@ -463,19 +492,21 @@ xref: SNOMEDCT_US_2016_03_01:67432001
 xref: UMLS_CUI:C0014130
 
 [Term]
-id: DOID:2978
-name: carbohydrate metabolic disorder
+id: DOID:2914
+name: immune system disease
 namespace: disease_ontology
-alt_id: DOID:9434
-def: "An inherited metabolic disorder that affect the catabolism and anabolism of carbohydrates." [url:http\://en.wikipedia.org/wiki/Inborn_errors_of_carbohydrate_metabolism]
+def: "A disease of anatomical entity that is located_in the immune system." [url:http\://en.wikipedia.org/wiki/Immune_system]
+subset: DO_FlyBase_slim
 subset: DO_MGI_slim
-synonym: "disorder of carbohydrate transport and metabolism" EXACT []
-synonym: "inborn carbohydrate metabolism disorder" EXACT [CSP2005:0551-8201]
-synonym: "inborn errors of carbohydrate metabolism" EXACT []
-xref: ICD9CM:271.8
-xref: MSH:D002239
-xref: UMLS_CUI:C0007001
-xref: UMLS_CUI:C0029777
+xref: EFO:0000540
+xref: ICD10CM:D89.9
+xref: ICD9CM:279
+xref: ICD9CM:279.9
+xref: SNOMEDCT_US_2016_03_01:154782004
+xref: SNOMEDCT_US_2016_03_01:191015009
+xref: SNOMEDCT_US_2016_03_01:191019003
+xref: SNOMEDCT_US_2016_03_01:191035005
+xref: UMLS_CUI:C0041806
 
 [Term]
 id: DOID:3093
@@ -484,7 +515,7 @@ namespace: disease_ontology
 alt_id: DOID:1193
 alt_id: DOID:3195
 alt_id: DOID:4695
-def: "An organ system cancer located_in the nervous sytem that affects the central or peripheral nervous system." [url:http\://emedicine.medscape.com/oncology, url:http\://en.wikipedia.org/wiki/Nervous_system_disease]
+def: "An organ system cancer located_in the nervous system that affects the central or peripheral nervous system." [url:http\://emedicine.medscape.com/oncology, url:http\://en.wikipedia.org/wiki/Nervous_system_disease]
 subset: DO_MGI_slim
 synonym: "malignant neoplasm of nervous system" EXACT []
 synonym: "neoplasm of nervous system (disorder)" EXACT [SNOMEDCT_2005_07_31:126950007]
@@ -533,18 +564,6 @@ xref: UMLS_CUI:C0017185
 xref: UMLS_CUI:C0685938
 
 [Term]
-id: DOID:3146
-name: lipid metabolism disorder
-namespace: disease_ontology
-def: "An inherited metabolic disorder that involves the creation and degradation of lipids." [url:http\://en.wikipedia.org/wiki/Lipid_metabolism]
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-synonym: "dyslipidemia" EXACT []
-synonym: "fatty acid metabolism disorder" EXACT []
-xref: MSH:D008052
-xref: UMLS_CUI:C0023772
-
-[Term]
 id: DOID:374
 name: nutrition disease
 namespace: disease_ontology
@@ -556,53 +575,17 @@ xref: NCI:C26836
 xref: SNOMEDCT_US_2016_03_01:191077005
 xref: SNOMEDCT_US_2016_03_01:2492009
 xref: UMLS_CUI:C3714509
+is_a: DOID:0060158 ! acquired metabolic disease
 
 [Term]
-id: DOID:3753
-name: Hermansky-Pudlak syndrome
+id: DOID:4501
+name: orofaciodigital syndrome
 namespace: disease_ontology
-def: "An autosomal recessive disease characterized by oculocutaneous albinism, bleeding problems due to platelet storage pool defect, visual impairment and lysosomal accumulation of ceroid lipofuscin." [url:http\://en.wikipedia.org/wiki/Hermansky%E2%80%93Pudlak_syndrome, url:http\://ghr.nlm.nih.gov/condition/hermansky-pudlak-syndrome, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/946/viewAbstract]
+def: "A genetic disease that is characterized by malformations of the face, oral cavity, and digits with polycystic kidney disease and variable involvement of the central nervous system and has_material_basis_in X-linked inheritance of an OFD gene." [url:http\://en.wikipedia.org/wiki/Orofaciodigital_syndrome]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
-subset: DO_FlyBase_slim
 subset: DO_MGI_slim
-subset: DO_rare_slim
-synonym: "HPS (Hermansky Pudlak syndrome)" EXACT [CSP2005:0446-1413]
-xref: ICD10CM:E70.331
-xref: MSH:D022861
-xref: NCI:C37261
-xref: ORDO:231531
-xref: ORDO:231537
-xref: ORDO:280663
-xref: ORDO:79430
-xref: SNOMEDCT_US_2016_03_01:190697008
-xref: SNOMEDCT_US_2016_03_01:60255003
-xref: SNOMEDCT_US_2016_03_01:9311003
-xref: UMLS_CUI:C0079504
-
-[Term]
-id: DOID:423
-name: myopathy
-namespace: disease_ontology
-def: "A muscular disease in which the muscle fibers do not function resulting in muscular weakness." [url:http\://en.wikipedia.org/wiki/Myopathy]
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-xref: ICD10CM:G72.9
-xref: ICD10CM:M60-M63
-xref: ICD10CM:M62.9
-xref: ICD9CM:359.9
-xref: MSH:D009135
-xref: NCI:C101216
-xref: SNOMEDCT_US_2016_03_01:129565002
-xref: SNOMEDCT_US_2016_03_01:155094005
-xref: SNOMEDCT_US_2016_03_01:155099000
-xref: SNOMEDCT_US_2016_03_01:203833006
-xref: SNOMEDCT_US_2016_03_01:203845002
-xref: SNOMEDCT_US_2016_03_01:267711006
-xref: SNOMEDCT_US_2016_03_01:267714003
-xref: SNOMEDCT_US_2016_03_01:268103006
-xref: SNOMEDCT_US_2016_03_01:52794005
-xref: SNOMEDCT_US_2016_03_01:75047002
-xref: UMLS_CUI:C0026848
+xref: MSH:D009958
+xref: UMLS_CUI:C0029294
 
 [Term]
 id: DOID:5093
@@ -625,71 +608,6 @@ xref: SNOMEDCT_US_2016_03_01:188365003
 xref: SNOMEDCT_US_2016_03_01:255058005
 xref: UMLS_CUI:C0039981
 xref: UMLS_CUI:C0153661
-
-[Term]
-id: DOID:5419
-name: schizophrenia
-namespace: disease_ontology
-alt_id: DOID:14734
-def: "A psychotic disorder that is characterized by a disintegration of thought processes and of emotional responsiveness." [url:http\://en.wikipedia.org/wiki/Schizophrenia]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-synonym: "schizophrenia-1" EXACT []
-xref: EFO:0000692
-xref: HP:0100753
-xref: ICD9CM:295.8
-xref: ICD9CM:295.80
-xref: OMIM:181500
-xref: OMIM:181510
-xref: OMIM:600511
-xref: OMIM:600850
-xref: OMIM:603013
-xref: OMIM:603175
-xref: OMIM:603176
-xref: OMIM:603206
-xref: OMIM:603342
-xref: OMIM:604906
-xref: OMIM:605419
-xref: OMIM:608078
-xref: OMIM:608543
-xref: OMIM:612361
-xref: OMIM:613025
-xref: OMIM:613950
-xref: OMIM:613959
-xref: OMIM:615232
-xref: UMLS_CUI:C0029838
-xref: UMLS_CUI:C0220702
-is_a: DOID:1561 ! cognitive disorder
-
-[Term]
-id: DOID:5614
-name: eye disease
-namespace: disease_ontology
-alt_id: DOID:2933
-def: "An eye and adnexa disease that is located_in the eye." [url:http\://en.wikipedia.org/wiki/Eye_disease]
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-xref: ICD10CM:H44
-xref: ICD10CM:H44.9
-xref: ICD9CM:360
-xref: ICD9CM:360.9
-xref: ICD9CM:379.90
-xref: MSH:D005128
-xref: NCI:C26767
-xref: SNOMEDCT_US_2016_03_01:111509007
-xref: SNOMEDCT_US_2016_03_01:155101007
-xref: SNOMEDCT_US_2016_03_01:155198005
-xref: SNOMEDCT_US_2016_03_01:193265001
-xref: SNOMEDCT_US_2016_03_01:193266000
-xref: SNOMEDCT_US_2016_03_01:193316008
-xref: SNOMEDCT_US_2016_03_01:194183009
-xref: SNOMEDCT_US_2016_03_01:264555006
-xref: SNOMEDCT_US_2016_03_01:366261005
-xref: SNOMEDCT_US_2016_03_01:371405004
-xref: SNOMEDCT_US_2016_03_01:371409005
-xref: SNOMEDCT_US_2016_03_01:79517001
-xref: UMLS_CUI:C0015397
 
 [Term]
 id: DOID:574
@@ -717,6 +635,47 @@ xref: SNOMEDCT_US_2016_03_01:302226006
 xref: SNOMEDCT_US_2016_03_01:42658009
 xref: UMLS_CUI:C0031117
 xref: UMLS_CUI:C1335029
+is_a: DOID:863 ! nervous system disease
+
+[Term]
+id: DOID:5875
+name: retroperitoneal cancer
+namespace: disease_ontology
+alt_id: DOID:12340
+alt_id: DOID:9860
+def: "An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum." [url:http\://en.wikipedia.org/wiki/Retroperitoneal_space]
+subset: DO_MGI_slim
+synonym: "malignant neoplasm of retroperitoneum" RELATED [ICD9CM_2006:158.0]
+synonym: "malignant neoplasm of retroperitoneum and peritoneum" EXACT [ICD9CM_2006:158]
+synonym: "malignant neoplasm of retroperitoneum and peritoneum NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:187817008]
+synonym: "malignant retroperitoneal cancer" RELATED []
+synonym: "malignant tumor of peritoneum and retroperitoneum" EXACT []
+synonym: "malignant tumor of peritoneum and retroperitoneum (disorder)" EXACT [SNOMEDCT_2005_07_31:187801002]
+synonym: "neoplasm of retroperitoneum" EXACT [SNOMEDCT_2005_07_31:359767009]
+synonym: "neoplasm of the retroperitoneum" EXACT [SNOMEDCT_2005_07_31:126872008]
+synonym: "neoplasm of the retroperitoneum" EXACT [SNOMEDCT_2005_07_31:359770008]
+synonym: "retroperitoneal neoplasm" EXACT [NCI2004_11_17:C3357]
+synonym: "retroperitoneal neoplasm" EXACT [CSP2005:2005-3788]
+synonym: "tumor of retroperitoneum (disorder)" EXACT [SNOMEDCT_2005_07_31:254617008]
+xref: ICD10CM:C48
+xref: ICD10CM:C48.0
+xref: ICD9CM:158
+xref: ICD9CM:158.0
+xref: MSH:D012186
+xref: NCI:C3357
+xref: NCI:C3537
+xref: SNOMEDCT_US_2016_03_01:126872008
+xref: SNOMEDCT_US_2016_03_01:187801002
+xref: SNOMEDCT_US_2016_03_01:187805006
+xref: SNOMEDCT_US_2016_03_01:187817008
+xref: SNOMEDCT_US_2016_03_01:254617008
+xref: SNOMEDCT_US_2016_03_01:359767009
+xref: SNOMEDCT_US_2016_03_01:359770008
+xref: SNOMEDCT_US_2016_03_01:363420003
+xref: SNOMEDCT_US_2016_03_01:94092006
+xref: UMLS_CUI:C0035358
+xref: UMLS_CUI:C0153464
+xref: UMLS_CUI:C0153465
 
 [Term]
 id: DOID:612
@@ -740,6 +699,22 @@ xref: SNOMEDCT_US_2016_03_01:191005003
 xref: SNOMEDCT_US_2016_03_01:234532001
 xref: SNOMEDCT_US_2016_03_01:64431000
 xref: UMLS_CUI:C0021051
+is_a: DOID:2914 ! immune system disease
+
+[Term]
+id: DOID:655
+name: inherited metabolic disorder
+namespace: disease_ontology
+def: "A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to inherited enzyme abnormality." [url:http\://en.wikipedia.org/wiki/Inborn_errors_of_metabolism, url:http\://www.ncbi.nlm.nih.gov/mesh/68008659]
+subset: DO_MGI_slim
+synonym: "Inborn Errors of Metabolism" EXACT [NCI2004_11_17:C34816]
+synonym: "inborn metabolism disorder" EXACT [CSP2005:1849-0057]
+synonym: "Metabolic hereditary disorder" EXACT [SNOMEDCT_2005_07_31:363205007]
+xref: MSH:D008661
+xref: NCI:C34816
+xref: SNOMEDCT_US_2016_03_01:363205007
+xref: SNOMEDCT_US_2016_03_01:86095007
+xref: UMLS_CUI:C0025521
 
 [Term]
 id: DOID:74
@@ -767,35 +742,7 @@ xref: SNOMEDCT_US_2016_03_01:267552000
 xref: SNOMEDCT_US_2016_03_01:267573000
 xref: SNOMEDCT_US_2016_03_01:34093004
 xref: UMLS_CUI:C0018939
-
-[Term]
-id: DOID:75
-name: lymphatic system disease
-namespace: disease_ontology
-def: "An immune system disease that is located_in the lymphatic system." [url:http\://en.wikipedia.org/wiki/Lymphatic_disease, url:http\://www.nlm.nih.gov/medlineplus/lymphaticdiseases.html]
-subset: DO_MGI_slim
-synonym: "Adenopathy" EXACT [SNOMEDCT_2005_07_31:141342003]
-synonym: "Adenopathy" EXACT [SNOMEDCT_2005_07_31:269044004]
-synonym: "disease of lympoid system" EXACT []
-synonym: "disorder of lymph node and lymphatics (disorder)" EXACT [SNOMEDCT_2005_07_31:234087005]
-synonym: "disorder of lymphatic system" EXACT [SNOMEDCT_2005_07_31:362971004]
-synonym: "disorder of lymphoid system" EXACT [SNOMEDCT_2005_07_31:111590001]
-synonym: "Lymphangiopathy, NOS" EXACT [SNOMEDCT_2005_07_31:3305006]
-synonym: "Lymphatic disease" EXACT [SNOMEDCT_2005_07_31:266326002]
-synonym: "Lymphatic disease" EXACT [SNOMEDCT_2005_07_31:155452000]
-synonym: "Lymphatic disease" EXACT [MTH:461]
-synonym: "Lymphatic disease" EXACT [MTH:NOCODE]
-synonym: "Lymphatic disorder" EXACT [NCI2004_11_17:C3206]
-synonym: "lymphatic disorder" EXACT [CSP2005:0427-7757]
-synonym: "lympoid system disease" EXACT []
-xref: MSH:D008206
-xref: SNOMEDCT_US_2016_03_01:111590001
-xref: SNOMEDCT_US_2016_03_01:155452000
-xref: SNOMEDCT_US_2016_03_01:234087005
-xref: SNOMEDCT_US_2016_03_01:266326002
-xref: SNOMEDCT_US_2016_03_01:3305006
-xref: SNOMEDCT_US_2016_03_01:362971004
-xref: UMLS_CUI:C0024228
+is_a: DOID:2914 ! immune system disease
 
 [Term]
 id: DOID:77
@@ -822,76 +769,54 @@ xref: SNOMEDCT_US_2016_03_01:53619000
 xref: UMLS_CUI:C0012242
 
 [Term]
-id: DOID:896
-name: metal metabolism disorder
+id: DOID:8545
+name: malignant hyperthermia
 namespace: disease_ontology
-def: "An inherited metabolic disorder that involves metabolic disturbances in the processing or distribution of dietary minerals." [url:http\://en.wikipedia.org/wiki/Inborn_errors_of_metal_metabolism]
-subset: DO_MGI_slim
-synonym: "inborn metal metabolism disorder" EXACT [CSP2005:4000-0215]
-xref: MSH:D008664
-xref: UMLS_CUI:C0025534
-
-[Term]
-id: DOID:9258
-name: Waardenburg's syndrome
-namespace: disease_ontology
-def: "An autosomal disease characterized by varying degrees of deafness, minor defects in structures arising from the neural crest and pigmentation anomalies of the hair, the skin and/or the iris of both eyes." [url:http\://en.wikipedia.org/wiki/Waardenburg_syndrome, url:http\://rarediseases.info.nih.gov/gard/5525/waardenburg-syndrome/resources/1, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/430/viewAbstract]
+def: "A genetic disease that is characterized by a drastic and uncontrolled increase in skeletal muscle oxidative metabolism, which overwhelms the body's capacity to supply oxygen, remove carbon dioxide, and regulate body temperature." [url:http\://en.wikipedia.org/wiki/Malignant_hyperthermia]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
 subset: DO_rare_slim
-synonym: "van der Hoeve Halbertsona Waardenburg syndrome" EXACT [CSP2005:4006-0098]
-synonym: "Waardenburg Shah syndrome" EXACT []
-synonym: "Waardenburg syndrome" EXACT [MTHICD9_2006:270.2]
-synonym: "Waardenburg, types I and/or II" EXACT [SNOMEDCT_2005_07_31:47434006]
-synonym: "Waardenburg-Klein syndrome" EXACT []
-xref: MSH:D014849
-xref: NCI:C75008
-xref: NCI:C85222
-xref: OMIM:148820
-xref: OMIM:193500
-xref: OMIM:193510
-xref: OMIM:277580
-xref: OMIM:600193
-xref: OMIM:606662
-xref: OMIM:608890
-xref: OMIM:611584
-xref: OMIM:613265
-xref: OMIM:613266
-xref: ORDO:3440
-xref: ORDO:894
-xref: ORDO:895
-xref: ORDO:896
-xref: SNOMEDCT_US_2016_03_01:47434006
-xref: UMLS_CUI:C0079661
-xref: UMLS_CUI:C1847800
-xref: UMLS_CUI:C3266898
+synonym: "anesthesia related hyperthermia" EXACT [CSP2005:2871-4352]
+synonym: "malignant hyperpyrexia due to anesthesia" EXACT [MTHICD9_2006:995.86]
+xref: ICD10CM:T88.3
+xref: ICD9CM:995.86
+xref: MSH:D008305
+xref: NCI:C84869
+xref: OMIM:145600
+xref: OMIM:154275
+xref: OMIM:154276
+xref: OMIM:600467
+xref: OMIM:601887
+xref: OMIM:601888
+xref: ORDO:423
+xref: SNOMEDCT_US_2016_03_01:111738008
+xref: SNOMEDCT_US_2016_03_01:157762007
+xref: SNOMEDCT_US_2016_03_01:213026003
+xref: SNOMEDCT_US_2016_03_01:248453001
+xref: SNOMEDCT_US_2016_03_01:269435009
+xref: SNOMEDCT_US_2016_03_01:405500008
+xref: SNOMEDCT_US_2016_03_01:405501007
+xref: UMLS_CUI:C0024591
 
 [Term]
-id: DOID:9455
-name: lipid storage disease
+id: DOID:863
+name: nervous system disease
 namespace: disease_ontology
-alt_id: DOID:10583
-def: "A lysosomal storage disease that involves the accumulation of harmful amounts of lipids (fats) in some of the body's cells and tissues." [url:http\://en.wikipedia.org/wiki/Lipidoses]
+def: "A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system." [url:http\://en.wikipedia.org/wiki/Nervous_system]
 subset: DO_MGI_slim
-synonym: "inborn lipid storage disorder" EXACT [CSP2005:1849-5707]
-synonym: "Lipoid storage diseas" EXACT [MTHICD9_2006:272.7]
-synonym: "Lipoidosis" EXACT [SNOMEDCT_2005_07_31:11455007]
-synonym: "lipoidosis" EXACT []
-xref: ICD10CM:E75.6
-xref: ICD9CM:272.7
-xref: ICD9CM:272.8
-xref: MSH:D008064
-xref: SNOMEDCT_US_2016_03_01:10741005
-xref: SNOMEDCT_US_2016_03_01:11455007
-xref: SNOMEDCT_US_2016_03_01:154744007
-xref: SNOMEDCT_US_2016_03_01:190792005
-xref: SNOMEDCT_US_2016_03_01:190797004
-xref: SNOMEDCT_US_2016_03_01:190798009
-xref: SNOMEDCT_US_2016_03_01:190805007
-xref: SNOMEDCT_US_2016_03_01:267437005
-xref: SNOMEDCT_US_2016_03_01:267438000
-xref: UMLS_CUI:C0023794
-xref: UMLS_CUI:C0029591
+xref: ICD10CM:G00-G99
+xref: ICD10CM:G98
+xref: ICD10CM:G98.8
+xref: ICD9CM:349.9
+xref: MSH:D009422
+xref: NCI:C26835
+xref: SNOMEDCT_US_2016_03_01:118940003
+xref: SNOMEDCT_US_2016_03_01:154981003
+xref: SNOMEDCT_US_2016_03_01:155262005
+xref: SNOMEDCT_US_2016_03_01:192641002
+xref: SNOMEDCT_US_2016_03_01:267679005
+xref: SNOMEDCT_US_2016_03_01:286946008
+xref: UMLS_CUI:C0027765
 
 [Typedef]
 id: complicated_by

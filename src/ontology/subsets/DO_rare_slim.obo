@@ -1,4 +1,5 @@
 format-version: 1.2
+subsetdef: DO_AGR_slim "DO_AGR_slim"
 subsetdef: DO_cancer_slim "DO cancer slim"
 subsetdef: DO_FlyBase_slim "DO_FlyBase_slim"
 subsetdef: DO_MGI_slim "DO_MGI_slim"
@@ -1835,10 +1836,7 @@ synonym: "micro syndrome" EXACT []
 synonym: "WARBM" EXACT []
 synonym: "Warburg-Sjo-Fledelius syndrome" EXACT []
 xref: MSH:C536681
-xref: OMIM:600118
-xref: OMIM:614222
-xref: OMIM:614225
-xref: OMIM:615663
+xref: OMIM:PS600118
 xref: ORDO:2510
 xref: UMLS_CUI:C1838625
 created_by: emitraka
@@ -3240,7 +3238,7 @@ namespace: disease_ontology
 def: "A Parkinson's disease that has_material_basis_in mutation in the alpha-synuclein (SNCA) gene on chromosome 4q22.1." [url:http\://www.ncbi.nlm.nih.gov/pubmed/?term=22315721, url:http\://www.omim.org/entry/168601]
 subset: DO_rare_slim
 xref: OMIM:168601
-xref: ORDO:411601
+xref: ORDO:411602
 is_a: DOID:14330 ! Parkinson's disease
 created_by: elvira
 creation_date: 2015-09-17T16:48:14Z
@@ -5024,6 +5022,17 @@ xref: OMIM:602400
 xref: ORDO:91132
 
 [Term]
+id: DOID:0060847
+name: Leri-Weill dyschondrosteosis
+def: "An osteochondrodysplasia characterized by abnormal shortening of the forearms and lower legs, abnormal misalignment of the wrist (Madelung deformity of the wrist), and associated short stature. It has_material_basis_in heterozygous defects in the pseudoautosomal genes SHOX or SHOXY or by deletion of the SHOX downstream regulatory domain." [url:https\://en.wikipedia.org/wiki/Léri–Weill_dyschondrosteosis, url:https\://ghr.nlm.nih.gov/condition/leri-weill-dyschondrosteosis, url:https\://rarediseases.info.nih.gov/diseases/3224/leri-weill-dyschondrosteosis, url:https\://rarediseases.org/rare-diseases/leri-weilldyschondrosteosis/, url:https\://www.ncbi.nlm.nih.gov/pubmed/10713888, url:https\://www.ncbi.nlm.nih.gov/pubmed/21712857, url:https\://www.ncbi.nlm.nih.gov/pubmed/9590292]
+subset: DO_rare_slim
+xref: ICD10CM:Q77.8
+xref: MSH:C537119
+xref: OMIM:127300
+xref: ORDO:240
+xref: UMLS_CUI:C0265309
+
+[Term]
 id: DOID:0080028
 name: spondyloepimetaphyseal dysplasia, Strudwick type
 namespace: disease_ontology
@@ -6501,15 +6510,15 @@ xref: UMLS_CUI:C0005411
 
 [Term]
 id: DOID:13636
-name: Fanconi's anemia
+name: Fanconi anemia
 namespace: disease_ontology
 def: "A congenital hypoplastic anemia characterized by progressive pancytopenia with bone marrow failure, variable congenital malformations and predisposition to develop hematological or solid tumors. It is a result of a genetic defect in a cluster of proteins responsible for DNA repair." [url:http\://en.wikipedia.org/wiki/Fanconi_anemia, url:http\://ghr.nlm.nih.gov/condition/fanconi-anemia, url:http\://rarediseases.info.nih.gov/gard/6425/fanconi-anemia/resources/1]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].\nOMIM mapping by NeuroDevNet. [LS].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
-synonym: "Fanconi anemia" EXACT []
 synonym: "Fanconi pancytopenia" EXACT []
 synonym: "Fanconi panmyelopathy" EXACT []
+synonym: "Fanconi's anemia" EXACT []
 xref: ICD10CM:D61.09
 xref: MSH:D005199
 xref: NCI:C62505
@@ -6858,20 +6867,7 @@ synonym: "hereditary ceroid lipofuscinosis" EXACT [CSP2005:1849-6833]
 xref: ICD10CM:E75.4
 xref: MSH:D009472
 xref: NCI:C61257
-xref: OMIM:162350
-xref: OMIM:204200
-xref: OMIM:204300
-xref: OMIM:204500
-xref: OMIM:256730
-xref: OMIM:256731
-xref: OMIM:600143
-xref: OMIM:601780
-xref: OMIM:609055
-xref: OMIM:610003
-xref: OMIM:610127
-xref: OMIM:610951
-xref: OMIM:614706
-xref: OMIM:615362
+xref: OMIM:PS256730
 xref: ORDO:216
 xref: ORDO:79262
 xref: SNOMEDCT_US_2016_03_01:42012007
@@ -6902,7 +6898,7 @@ xref: UMLS_CUI:C0152171
 id: DOID:14670
 name: hypertelorism, microtia, facial clefting syndrome
 namespace: disease_ontology
-def: "An autosomal recessive disease that is characterized by the combination of hypertelorism, cleft lip and palate and microtia." [url:http\://ovidsp.tx.ovid.com/sp-3.11.0a/ovidweb.cgi?QS2=434f4e1a73d37e8c3b61fcc465cfeaf2a2013829b68d4ecac328a15066a4e94f4fb1f4acbd8cc7c65811b91a8feef027953893ddb6bfcb1631f0060f898c44ae88de08c6c0fe6de4b5dba7b84217009a26ab94c9f71bea6aee20d60f25222be27b7d6b1390e46803afc650533d8f13f8b71635cbcd0e3cef555939236d918d7334debc9cda1b2bba9890b137c5668d7c37aba08c1985f3b99e219ad3509efcccf39f692ddf2fb5bc2f3ff8a7c86a7290ba4b4aa893a5b6237af4c8242133de5fa146b6239aa90a45d111d31c53be4e17bf20e37ae83aa6b6c8044b9b3611b9e2b85f44e8037ff774b3255d20ed14b0661ffe5f72bc206ee6b3c0116bca48f8be3a48b1d1a93ae0095fff75ad0ef3804470c0f854c8f6f3b7c455b149e81a878a34b1dbb6c5ee342a82edad1b81aa89f4d528a8e66ba8f3707d0f00ad6c3a0debce6abf36d722320ca749875cceb40b1669b8219c3fa0a9551d2bdab98278d66676834719eb173f8dfc2b1b595be161bd4b8b4f1272f478537ff75ea68e4964c6a68ae33d3a194d94d2243ee51876f6e556503aa527e15d18, url:http\://rarediseases.info.nih.gov/gard/897/bixler-christian-gorlin-syndrome/resources/1, url:http\://www.ncbi.nlm.nih.gov/medgen?LinkName=pubmed_medgen_omim&from_uid=11152141, url:http\://www.ncbi.nlm.nih.gov/pubmed/11152141, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2213]
+def: "An autosomal recessive disease that is characterized by the combination of hypertelorism, cleft lip and palate and microtia." [url:http\://rarediseases.info.nih.gov/gard/897/bixler-christian-gorlin-syndrome/resources/1, url:http\://www.ncbi.nlm.nih.gov/medgen?LinkName=pubmed_medgen_omim&from_uid=11152141, url:http\://www.ncbi.nlm.nih.gov/pubmed/11152141, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2213]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "Bixler Christian Gorlin syndrome" EXACT []

@@ -2,7 +2,7 @@
 #
 # requirements: 
 #   - OWLTools
-#   - Oort (http://code.google.com/p/owltools/wiki/OortIntro)
+#   - Oort
 #   - apache-jena arq (for generating reports)
 #
 # See the file ".travis.yml" in the root directory to

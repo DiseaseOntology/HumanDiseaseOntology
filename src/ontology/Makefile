@@ -1,11 +1,12 @@
-
 # This Makefile is for use by the doid Release Manager.
 #
 # requirements: 
-#   - OWLTools (http://code.google.com/p/owltools/)
-#   - Oort (http://code.google.com/p/owltools/wiki/OortIntro)
-#   - owljs (advanced operations only)
+#   - OWLTools
+#   - Oort
 #   - apache-jena arq (for generating reports)
+#
+# See the file ".travis.yml" in the root directory to
+# download these tools
 #
 # To make a release, type 'make release' in this directory
 #
@@ -38,12 +39,6 @@ doid-merged.obo: doid-merged.owl
 
 doid-plus-%.obo: doid-plus-%.owl
 	owltools --use-catalog $< --merge-imports-closure -o -f obo --no-check $@
-
-# TEMPORARY!!! Sync with SVN. Once github is primary, this will be removed
-doid-edit.owl:
-	owltools $(HOME)/repos/diseaseontology/HumanDO.obo --add-imports-declarations $(OBO)/doid/ext.owl -o -f ofn $@.tmp && perl -npe 's@"ORDO:@"Orphanet:@' $@.tmp > $@
-update-svn:
-	svn update $(HOME)/repos/diseaseontology/HumanDO.obo
 
 # ----------------------------------------
 # Imports

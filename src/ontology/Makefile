@@ -40,12 +40,6 @@ doid-merged.obo: doid-merged.owl
 doid-plus-%.obo: doid-plus-%.owl
 	owltools --use-catalog $< --merge-imports-closure -o -f obo --no-check $@
 
-# TEMPORARY!!! Sync with SVN. Once github is primary, this will be removed
-doid-edit.owl:
-	owltools $(HOME)/repos/diseaseontology/HumanDO.obo --add-imports-declarations $(OBO)/doid/ext.owl -o -f ofn $@.tmp && perl -npe 's@"ORDO:@"Orphanet:@' $@.tmp > $@
-update-svn:
-	svn update $(HOME)/repos/diseaseontology/HumanDO.obo
-
 # ----------------------------------------
 # Imports
 # ----------------------------------------

@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/NCIthesaurus.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2016-09-26/subsets/NCIthesaurus.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2017-02-17/subsets/NCIthesaurus.owl"/>
     </owl:Ontology>
     
 
@@ -29,6 +29,15 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#DO_AGR_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#DO_AGR_slim">
+        <rdfs:comment>DO_AGR_slim</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
@@ -577,6 +586,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0001485</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infectious disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
     </owl:Class>
     <owl:Axiom>
@@ -614,15 +624,8 @@
 MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haemophagocytic syndrome</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemophagocytic syndrome</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI2004_11_17:C35439</oboInOwl:hasDbXref>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lymphatic system disease that is characterized by an expansion of the monocyte-macrophage population and intense hemophagocytosis. It can occur de novo, but more often occurs in the setting of another disorder, usually an infection or a malignancy. A clinical picture of fever, hepatosplenomegaly, lymphadenopathy and peripheral pancytopenia. The morphologic hallmark of this syndrome is the phagocytosis of hematopoietic elements by morphologically normal macrophages.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/familial-hemophagocytic-lymphohistiocytosis</oboInOwl:hasDbXref>
@@ -630,6 +633,12 @@ MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1516-31801997000500007&amp;lng=pt&amp;nrm=iso</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemophagocytic syndrome</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI2004_11_17:C35439</oboInOwl:hasDbXref>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050120"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemophagocytic lymphohistiocytosis, familial, 2</owl:annotatedTarget>
@@ -862,7 +871,6 @@ MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xref MGI.</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emitraka</oboInOwl:created_by>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
     </owl:Class>
     <owl:Axiom>
@@ -900,6 +908,24 @@ MSH:C537250 added from NeuroDevNet [WAK].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3240"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002202">
+        <rdfs:label>develops from</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_0060598">
+        <oboInOwl:hasDbXref>ORDO:39041</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>familial reticuloendotheliosis with eosinophilia</oboInOwl:hasExactSynonym>
+    </rdf:Description>
 </rdf:RDF>
 
 

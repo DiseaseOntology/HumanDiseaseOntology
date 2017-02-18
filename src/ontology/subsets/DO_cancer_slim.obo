@@ -1,4 +1,5 @@
 format-version: 1.2
+subsetdef: DO_AGR_slim "DO_AGR_slim"
 subsetdef: DO_cancer_slim "DO cancer slim"
 subsetdef: DO_FlyBase_slim "DO_FlyBase_slim"
 subsetdef: DO_MGI_slim "DO_MGI_slim"
@@ -829,6 +830,7 @@ xref: KEGG:05213
 xref: MSH:D016889
 xref: NCI:C27815
 xref: NCI:C3012
+xref: OMIM:608089
 xref: SNOMEDCT_US_2016_03_01:123844007
 xref: UMLS_CUI:C0007103
 xref: UMLS_CUI:C0014170
@@ -853,7 +855,6 @@ alt_id: DOID:4241
 def: "A thoracic cancer that originates in the mammary gland." [url:http\://en.wikipedia.org/wiki/Breast_cancer, url:http\://en.wikipedia.org/wiki/Mammary, url:http\://www.cancer.gov/cancertopics/types/breast, url:http\://www.nlm.nih.gov/medlineplus/breastcancer.html]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 subset: TopNodes_DOcancerslim
 synonym: "breast tumor" EXACT [NCI2004_11_17:C2910]
 synonym: "malignant neoplasm of breast" EXACT []
@@ -1107,7 +1108,6 @@ xref: MSH:D016889
 xref: MSH:D018269
 xref: NCI:C3769
 xref: NCI:C7558
-xref: OMIM:608089
 xref: SNOMEDCT_US_2016_03_01:154526001
 xref: SNOMEDCT_US_2016_03_01:254878006
 xref: SNOMEDCT_US_2016_03_01:269600001
@@ -1144,7 +1144,6 @@ synonym: "carcinoma OF CERVIX" EXACT [MTH:166]
 synonym: "carcinoma of cervix (disorder)" EXACT [SNOMEDCT_2005_07_31:285432005]
 synonym: "carcinoma of the Cervix Uteri" EXACT [NCI2004_11_17:C9039]
 xref: NCI:C9039
-xref: OMIM:603956
 xref: SNOMEDCT_US_2016_03_01:154522004
 xref: SNOMEDCT_US_2016_03_01:154525002
 xref: SNOMEDCT_US_2016_03_01:188174005
@@ -1456,10 +1455,7 @@ name: breast carcinoma
 namespace: disease_ontology
 def: "A breast cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://en.wikipedia.org/wiki/Breast_cancer]
 subset: DO_cancer_slim
-synonym: "carcinoma OF breast" EXACT [MTH:118]
-synonym: "carcinoma of breast" EXACT [SNOMEDCT_2005_07_31:154513000]
-synonym: "carcinoma of breast (disorder)" EXACT [SNOMEDCT_2005_07_31:254838004]
-synonym: "carcinoma of breast NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:286898006]
+synonym: "carcinoma of breast" EXACT [SNOMEDCT_2005_07_31:254838004]
 synonym: "Mammary carcinoma" EXACT [NCI2004_11_17:C4872]
 xref: EFO:0000305
 xref: NCI:C4872
@@ -1626,7 +1622,6 @@ synonym: "squamous cell carcinoma of esophagus" RELATED []
 synonym: "squamous cell carcinoma of esophagus (disorder)" EXACT [SNOMEDCT_2005_07_31:276804009]
 xref: MSH:C562729
 xref: NCI:C4024
-xref: OMIM:133239
 xref: SNOMEDCT_US_2016_03_01:276804009
 xref: UMLS_CUI:C0279626
 is_a: DOID:1107 ! esophageal carcinoma
@@ -1668,7 +1663,6 @@ namespace: disease_ontology
 def: "A lung cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells and is located_in the lungs and has_symptom cough and has_symptom chest discomfort or pain and has_symptom weight loss and has_symptom hemoptysis." [url:https\://merck.com/mmpe/sec05/ch062/ch062b.html]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 synonym: "cancer of lung" EXACT [NCI2004_11_17:C4878]
 synonym: "carcinoma of lung" RELATED []
 xref: EFO:0001071
@@ -1890,6 +1884,7 @@ xref: ICD9CM:180.9
 xref: MSH:D002583
 xref: NCI:C2940
 xref: NCI:C9311
+xref: OMIM:603956
 xref: SNOMEDCT_US_2016_03_01:123841004
 xref: SNOMEDCT_US_2016_03_01:188174005
 xref: SNOMEDCT_US_2016_03_01:188186008
@@ -1906,7 +1901,6 @@ namespace: disease_ontology
 def: "A renal carcinoma that has_material_basis_in the lining of the proximal convoluted renal tubule of the kidney." [url:http\://en.wikipedia.org/wiki/Renal_cell_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=661352]
 comment: Xref MGI.
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 synonym: "adenocarcinoma of kidney" EXACT [SNOMEDCT_2005_07_31:254915003]
 synonym: "hypernephroma (disorder)" EXACT [SNOMEDCT_2005_07_31:188251003]
 synonym: "RCC" EXACT [CSP2005:4003-0049]
@@ -2159,7 +2153,7 @@ id: DOID:4971
 name: myelofibrosis
 namespace: disease_ontology
 alt_id: DOID:5737
-def: "A myeloma that is located_in the bone marrow which results_in bone marrow being replaced by fibrous (scar) tissue." [url:http\://en.wikipedia.org/wiki/Myelofibrosis]
+def: "A myeloid neoplasm that is located_in the bone marrow which results_in bone marrow being replaced by fibrous (scar) tissue." [url:http\://en.wikipedia.org/wiki/Myelofibrosis]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 synonym: "Agnogenic myeloid metaplasia" EXACT [SNOMEDCT_2005_07_31:52967002]
@@ -2271,6 +2265,7 @@ xref: NCI:C34447
 xref: OMIM:275355
 xref: UMLS_CUI:C1168401
 is_a: DOID:1542 ! head and neck carcinoma
+is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5526
@@ -2291,7 +2286,6 @@ namespace: disease_ontology
 def: "A testicular cancer that has_material_basis_in germ cells." [url:http\://cancergenome.nih.gov/cancersselected/TesticularGermCellCancer, url:http\://www.cancer.gov/dictionary?CdrID=445090, url:http\://www.cancer.gov/dictionary?CdrID=695185]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 subset: DO_rare_slim
 synonym: "germ cell tumor of testis" EXACT [NCI2004_11_17:C8591]
 synonym: "testicular germ cell neoplasm" RELATED []
@@ -2408,7 +2402,6 @@ namespace: disease_ontology
 def: "A uveal cancer that has_material_basis_in uvea pigment cells." [url:http\://cancergenome.nih.gov/cancersselected/UvealMelanoma, url:http\://en.wikipedia.org/wiki/Uveal_melanoma]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 subset: DO_rare_slim
 synonym: "melanoma of Uvea" EXACT [NCI2004_11_17:C7712]
 xref: MSH:C536494
@@ -2521,8 +2514,6 @@ synonym: "adult primary hepatocellular carcinoma" EXACT []
 synonym: "HCC" EXACT [NCI2004_11_17:C3099]
 synonym: "Hepatoma" EXACT [SNOMEDCT_2005_07_31:126851005]
 xref: EFO:0000182
-xref: NCI2009_04D:C7711
-xref: NCI2009_04D:C7956
 xref: NCI:C7711
 xref: NCI:C7956
 xref: OMIM:114550
@@ -2773,7 +2764,6 @@ alt_id: DOID:8922
 def: "A skin cancer that has_material_basis_in melanocytes." [url:http\://cancergenome.nih.gov/cancersselected/melanoma, url:http\://en.wikipedia.org/wiki/Melanoma, url:http\://www.cancer.gov/dictionary?CdrID=45135]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 synonym: "cutaneous melanoma" EXACT []
 synonym: "malignant ear melanoma" EXACT []
 synonym: "malignant lip melanoma" EXACT []
@@ -2851,7 +2841,6 @@ xref: MSH:D015470
 xref: NCI:C27753
 xref: NCI:C3171
 xref: OMIM:601626
-xref: OMIM:602439
 xref: SNOMEDCT_US_2016_03_01:154591002
 xref: SNOMEDCT_US_2016_03_01:17788007
 xref: SNOMEDCT_US_2016_03_01:277600006
@@ -2873,7 +2862,6 @@ alt_id: DOID:9229
 def: "A pharynx cancer that is located_in the nasopharynx, the uppermost region of the pharynx or \"throat\", where the nasal passages and auditory tubes join the remainder of the upper respiratory tract." [url:http\://en.wikipedia.org/wiki/Nasopharyngeal_carcinoma]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 subset: DO_rare_slim
 synonym: "carcinoma of nasopharynx" RELATED []
 synonym: "malignant Nasopharyngeal tumor" EXACT [NCI2004_11_17:C9321]
@@ -2936,7 +2924,7 @@ xref: UMLS_CUI:C0238301
 id: DOID:9538
 name: multiple myeloma
 namespace: disease_ontology
-def: "A myeloma that is located_in the plasma cells in bone marrow." [url:http\://en.wikipedia.org/wiki/Multiple_myeloma, url:http\://www.cancer.gov/dictionary?CdrID=411384]
+def: "A myeloid neoplasm that is located_in the plasma cells in bone marrow." [url:http\://en.wikipedia.org/wiki/Multiple_myeloma, url:http\://www.cancer.gov/dictionary?CdrID=411384]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 synonym: "plasma cell myeloma" EXACT []
@@ -2960,7 +2948,6 @@ namespace: disease_ontology
 def: "A lymphoblastic leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
 comment: Xref MGI.
 subset: DO_cancer_slim
-subset: DO_MGI_slim
 subset: DO_rare_slim
 synonym: "acute lymphoblastic leukemia" EXACT []
 xref: EFO:0000220

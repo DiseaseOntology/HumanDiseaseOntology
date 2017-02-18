@@ -1,11 +1,12 @@
-
 # This Makefile is for use by the doid Release Manager.
 #
 # requirements: 
-#   - OWLTools (http://code.google.com/p/owltools/)
+#   - OWLTools
 #   - Oort (http://code.google.com/p/owltools/wiki/OortIntro)
-#   - owljs (advanced operations only)
 #   - apache-jena arq (for generating reports)
+#
+# See the file ".travis.yml" in the root directory to
+# download these tools
 #
 # To make a release, type 'make release' in this directory
 #

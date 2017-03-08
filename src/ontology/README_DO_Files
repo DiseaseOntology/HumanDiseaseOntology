@@ -6,21 +6,37 @@ doid-edit.owl file.
 The DO team will update the other files in this directly on a weekly basis.
     This is done by running DO's Makefile. 
     This creates several OWL and OBO version of DO. 
+    The DO's primary representation of a disease classification (HumanDO.obo) is represented as a single is_a hierarchy, 
+    based on disease etiology. 
     
 This README is to document and describe what is found in each file/set of files.
-The DO production file has been called: HumanDO.obo. 
-This file is archived in this directory and in DO's SVN directory. 
+
+The DO production file was previously named: HumanDO.obo. 
+Previous versions of this are archived in DO's SVN directory. 
+In the current DO production environment, the HumanDO.obo and HumanDO.owl files are equivalent to the
+doid-non-classified.obo and doid-non-classified.owl files produced in this GitHub repository. 
 
 DO Production Ontology Files:
 doid-edit.owl           :  DO team editing environment 
-                          -- this file currently includes axioms to ontology files in the IMPORTS directory.
-                          -- DO includes axioms from: Cell Ontology (CL), UBERON and NCBITaxon
-                          
-doid.obo                : --DO's public OBO file, containing DO axioms
-doid.owl                : --DO's public OWL file, containing DO axioms
+                          -- this file is ONLY edited by the DO team. 
+                          -- this file currently includes logical definitions to ontology files in the IMPORTS directory.
+                          -- DO includes logical definition to: Cell Ontology (CL), UBERON and NCBITaxon
 
-doid-non-classified.obo :  this file is equivalent to DO's HumanDO.obo file  -- this file does not contain axioms
-doid-non-classified.owl :  OWL version of HumanDO.obo 
+DO weekly data releases in GitHub: produces a suite of files.
+    DO content has been enhanced through the inclusion of logical definitions. 
+
+    doid.obo                : --DO's OBO file containing logical definitions
+    doid.owl                : --DO's OWL file, containing logical definitions
+
+    doid-non-classified.obo :  DO's single is_a hierarchy (HumanDO.obo), this file does not contain logical definitions
+    doid-non-classified.owl :  DO's OWL version, of single is_a hierarchy, this file does not contain logical definitions
+    
+DO files in the OBO Foundry: 
+ The DO provides our single is_a hierarchy as a primary release file to the OBO Foundry. 
+
+products:
+- doid.owl: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-non-classified.owl
+- doid.obo: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-non-classified.obo
 
 
 DO Production Non-Ontology Files

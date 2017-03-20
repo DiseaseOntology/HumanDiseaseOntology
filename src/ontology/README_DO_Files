@@ -25,13 +25,15 @@ doid-edit.owl           :  DO team editing environment
 DO weekly data releases in GitHub: produces a suite of files.
     
 DO content has been enhanced through the inclusion of logical definitions.
+The DO imports other OBO Foundry ontologies to create the logical definitions, including: 
+NCBI Taxon, Cell Ontology, Uberon, HPO (Human Phenotype Ontology) and the RO (Relations Ontology). 
     
 (contain inferred links)
     doid.obo                : --DO's OBO file containing logical definitions
     doid.owl                : --DO's OWL file containing logical definitions
 
-    doid-merged.obo : includes the inferred branches
-    doid-merged.owl : includes the inferred brances 
+    doid-merged.obo : includes the inferred branches, includes ontology imports 
+    doid-merged.owl : includes the inferred brances, includes ontology imports
 
 (contain ONLY asserted links)
     doid-non-classified.obo :  DO's single asserted is_a hierarchy (HumanDO.obo), this file does not contain logical definitions

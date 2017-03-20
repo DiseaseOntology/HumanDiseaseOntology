@@ -23,19 +23,34 @@ doid-edit.owl           :  DO team editing environment
                           -- DO includes logical definition to: Cell Ontology (CL), UBERON and NCBITaxon
 
 DO weekly data releases in GitHub: produces a suite of files.
-    DO content has been enhanced through the inclusion of logical definitions. 
-
+    
+DO content has been enhanced through the inclusion of logical definitions.
+    
+(contain inferred links)
     doid.obo                : --DO's OBO file containing logical definitions
-    doid.owl                : --DO's OWL file, containing logical definitions
+    doid.owl                : --DO's OWL file containing logical definitions
 
-    doid-non-classified.obo :  DO's single is_a hierarchy (HumanDO.obo), this file does not contain logical definitions
-    doid-non-classified.owl :  DO's OWL version, of single is_a hierarchy, this file does not contain logical definitions
+    doid-merged.obo : includes the inferred branches
+    doid-merged.owl : includes the inferred brances 
+
+(contain ONLY asserted links)
+    doid-non-classified.obo :  DO's single asserted is_a hierarchy (HumanDO.obo), this file does not contain logical definitions
+    doid-non-classified.owl :  DO's OWL version, of single asserted is_a hierarchy, this file does not contain logical definitions
+    
+    
     
 DO files in the OBO Foundry: 
- The DO provides our single is_a hierarchy as a primary release file to the OBO Foundry. 
-
-products:
-- doid.owl: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-non-classified.owl
+DO's OBO Foundry release files:
+OBO File: 
+    The DO provides our single is_a hierarchy as a primary release file to the OBO Foundry. 
+    This file was previously named "HumanDO.obo", in the OBO Foundry this file is called doid.obo 
+    which links to the doid-non-classified.obo file in this GitHub repository. 
+OWL File: 
+    The DO provides the reasoned OWL file which includes all of the inferred links. This is eqivalent to the DO's GitHub doid.owl file. 
+ 
+ 
+OBO Foundry products:
+- doid.owl: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid.owl
 - doid.obo: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-non-classified.obo
 
 

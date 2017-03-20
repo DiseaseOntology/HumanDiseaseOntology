@@ -1,14 +1,23 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/imports/omim_susc_import.owl"/>
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl"/>
     
 
 
@@ -25,7 +34,7 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
     
 
 
@@ -87,12 +96,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/DOID_14330 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_14330"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/DOID_289 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_289"/>
@@ -108,7 +111,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_000000">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omim_susceptibilty</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">omim_susceptibilty</rdfs:label>
     </owl:Class>
     
 
@@ -116,6 +119,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_131200 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_131200">
+        <rdfs:label>endometriosis, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -124,7 +128,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:131200</oboInOwl:id>
-        <rdfs:label>endometriosis, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -132,6 +135,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_166760 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_166760">
+        <rdfs:label xml:lang="en">otitis media, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -140,7 +144,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:166760</oboInOwl:id>
-        <rdfs:label xml:lang="en">otitis media, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -148,6 +151,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_182940 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_182940">
+        <rdfs:label>neural tube defects, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -156,7 +160,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:182940</oboInOwl:id>
-        <rdfs:label>neural tube defects, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -164,6 +167,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_606657 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_606657">
+        <rdfs:label>normal tension glaucoma, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -172,22 +176,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:606657</oboInOwl:id>
-        <rdfs:label>normal tension glaucoma, susceptibility to</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIM_607688 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_607688">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_14330"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Parkinson disease 11, autosomal dominant, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -195,6 +183,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_608907 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_608907">
+        <rdfs:label rdf:datatype="&xsd;string">Alzheimer&apos;s disease 9</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -203,22 +192,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:608907</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alzheimer&apos;s disease 9</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIM_610297 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_610297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_14330"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Parkinson disease 13, autosomal dominant, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -226,6 +199,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_611162 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_611162">
+        <rdfs:label>malaria, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -234,7 +208,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:611162</oboInOwl:id>
-        <rdfs:label>malaria, susceptibility to</rdfs:label>
     </owl:Class>
     
 
@@ -242,6 +215,7 @@
     <!-- http://purl.obolibrary.org/obo/OMIM_613282 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_613282">
+        <rdfs:label>nonalchoholic fatty liver disease 1, susceptibility to</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -250,41 +224,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>OMIM:613282</oboInOwl:id>
-        <rdfs:label>nonalchoholic fatty liver disease 1, susceptibility to</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIM_613643 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_613643">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_14330"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Parkinson disease 5, autosomal dominant, susceptibility to</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIM_614251 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIM_614251">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIM_000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_14330"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Parkinson disease 18, autosomal dominant, susceptibility to</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 

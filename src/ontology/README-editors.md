@@ -135,7 +135,7 @@ OBSOLETING
 
 1. Find the  class you wish to obsolete, and compare it with the class you wish to replace (or consider) it with. You need to check that both the text definition and the logical axioms have the same intent, and that nothing desired is lost in the obsolescence.
 
-2. Copy any subClass axioms that you intend to keep for historical purposes (e.g. those that are not replicated on the target class) into a comment annotation property. If you do this, please ensure to add to any exisiting comments rather than adding a new COMMENT. There can be only one COMMENT in obo format and Jenkins will throw an error. If there are equivalence axioms, you may wish to consult with an expert to make sure the axioms are retained properly in the file.
+2. Copy any subClass axioms that you intend to keep for historical purposes (e.g. those that are not replicated on the target class) into a comment annotation property. If you do this, please ensure to add to any exisiting comments rather than adding a new COMMENT. There can be only one COMMENT in obo format. If there are equivalence axioms, you may wish to consult with an expert to make sure the axioms are retained properly in the file.
 
 3. Go to the obsolescenc plugin by going to the edit menu and scroll to the bottom, to "Make Entity Obsolete". This will perform the following for you:
 	Relabel the class as "obsolete your old term label here". 
@@ -202,35 +202,56 @@ introduce unsatisfiable classes? If so, investigate them.
 For any classes you have created, are they in your ID range? Did you
 add text definitions, adding provenance information? Is the reasoner finding unintended inferred equivalent classes? Subclasses? 
 
-Check the jenkins report after your commits. This should alert you to
-any of the following:
+-----------
+DO RELEASES
+-----------
+detailed notes: https://docs.google.com/document/d/1vDebWw9ykX4YtfrLY78v7PBOfmdTF_3Gf-tXWYslTb4/edit?usp=sharing
 
- * consistency problems with anatomy ontologies
- * consistency problems with other ontologies
- * violation of obo-format (e.g. two labels for a class; two text
-   definitions; etc)
-
-Final steps: 
-https://github.com/DiseaseOntology/HumanDiseaseOntology/src/ontology/
-
--- pull the latest doid-edit.owl file
--- in HumanDiseaseOntology directory
-cd src/ontology directory
-> command: make release
-      once complete: check releases directory to ensure that files were created
-     edit doid.obo and doid.owl files (as text files)
+(1) DO's production file: doid-edit.owl
+	this is the file where the DO team adds terms, edits the DO content
+	
+(2) DO release process:  [working in the DiseaseOntology/HumanDiseaseOntology/src/ontology  directory
+	(2.1): Make the DO release (suite of doid files)
+	 the "Make" file (in the src/ontology directory) 
+	 
+	 > git pull doid-edit.owl
+	 > make release
+	 	-- Input: doid-edit.owl
+		-- Output: 	doid-metadata.txt
+ 				doid-non-classified-metadata.txt
+				doid-non-classified.obo
+				doid-non-classified.owl
+				doid-potential-redundant-module.owl
+				doid.simple-metadata.txt
+				doid-simple.obo
+				doid-simple.owl
+				doid.obo
+				doid.owl
+				
+				
+				
+	(2.2) 	QC: check date, presense of owl axioms in header
+		 once complete: check releases directory to ensure that files were created
+                 edit doid.obo and doid.owl files (as text files)
         -- check the release date at the top of the file 
 	-- remove the 'import' line of text at the top of the file
 	-- save the text file (in your local directory) 
 	
--- edit the doid-simple.obo and doid-simple.owl 
+	Editing releaes files:
+	-- edit the doid-simple.obo and doid-simple.owl 
+        -- edit doid-nonclassified.obo and .owl 
+            --> this is equivalent to HumanDO.obo and HumanDO.owl
+             -- once edited, save doid-nonclassified.obo as HumanDO.obo
+				
+	(2.3) Create additional files for collaborators
+		MGI/RGD doid-merged.obo  
 
--- edit doid-nonclassified.obo and .owl 
-      --> this is equivalent to HumanDO.obo and HumanDO.owl
-       -- once edited, save doid-nonclassified.obo as HumanDO.obo
-lastly: push all files to master (github directory)
+     FINISH: 
+	> git add .
+	> git commit -m 'DO release' .
+	> git push 
 
--- cp HumanDO.obo and commit to DO's SVN directory
+        -- cp HumanDO.obo and commit to DO's SVN directory
         svn://svn.code.sf.net/p/diseaseontology/code/trunk/
 
 

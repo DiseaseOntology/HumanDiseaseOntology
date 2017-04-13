@@ -25,7 +25,7 @@ The current (2015) ID ranges include
  	DOID:$sequence(7,70000,70999)$  in reserve (UMB)
  	DOID:$sequence(7,80000,80999)$  Lynn
  	
- 	DOID:0100000 Stan (RGD)
+ 	DOID:0100000 Stan (RGD) (in reserve)
  	DOID:0110000 Sue (MGD)
 
 
@@ -127,16 +127,7 @@ Then, open the file doid-edit.owl in Protege
 
 Switch on the Elk reasoner (see how to get plugins above). If you are making changes, be sure to synchronize the reasoner.
 
-**Edit the ontology in protege**:
- * Find parent term in Protégé by searching (at top of screen)
- * Double check that term is not already there
- * Add subclass
- * Add label (URI should be auto-generated)
- * Under annotations, add definition, click OK
- * Annotation on definition (see below)
- * database_cross_reference
- * GOC:initials
- * Under annotations, add synonyms, if necessary (has_exact_synonym, etc)
+
 
 
 OBSOLETING
@@ -156,15 +147,6 @@ You should see the class crossed out after you do this.
 
 6. You may wish to add a comment regarding the reason for obsolescence or so as to include reference to why the term was replaced with whatever is indicated. Again, do not add more than one comment annotation on a class.
 
-SEARCHING BY URI
-----------------
-To view IDs instead of labels:
-View -> Render by name (rdf: id)
-search for ID
-View -> Render by label
-click on parent in description
-click back button to get back to your term
-(stupid, eh?)
 
 SAVING and COMMITTING
 ---------------
@@ -182,12 +164,8 @@ decipher, it can sometimes show you egregious errors, sometimes Protege's fault)
 Example session from view of command line:
 
   git pull
-  # [open in protege]
-  # [edit in Protege]
-  # [save in Protege]
-  # ...
-  # [edit in Protege]
-  # [save in Protege]
+  [open Protege, edit, save] 
+
   git diff doid-edit.owl
   git commit -m "polished up skull" doid-edit.owl
   git pull
@@ -196,14 +174,8 @@ Example session from view of command line:
 It is always a good idea to git pull immediately after an git
 commit. If there are changes, Protege will ask you to reload. You may wish not to trust the reload and simply reopen Protege.
 
-After an git push, Jenkins will check your changes to make sure they
-conform to guidelines and do not introduce any inconsistencies - an
-email will be sent to the curators list.
 
-You can check on the build here:
-  http://build.berkeleybop.org/job/build-doid/
-  
-Check for errors in the report, send an email to curators if you cannot determine what the error is.
+
 
 MIREOTING
 ---------
@@ -239,33 +211,28 @@ any of the following:
    definitions; etc)
 
 Final steps: 
+https://github.com/DiseaseOntology/HumanDiseaseOntology/src/ontology/
+
 -- pull the latest doid-edit.owl file
 -- in HumanDiseaseOntology directory
 cd src/ontology directory
 > command: make release
-once complete: check releases directory to ensure that files were created
-edit doid.obo and doid.owl files (as text files)
+      once complete: check releases directory to ensure that files were created
+     edit doid.obo and doid.owl files (as text files)
         -- check the release date at the top of the file 
 	-- remove the 'import' line of text at the top of the file
 	-- save the text file (in your local directory) 
 	
--- for now, also edit the doid-simple.obo and doid-simple.owl 
+-- edit the doid-simple.obo and doid-simple.owl 
 
--- edit doid-nonclassified.obo and .owl --> this is equivalent to HumanDO.obo and HumanDO.owl
-           -- once edited, save doid-nonclassified.obo as HumanDO.obo
+-- edit doid-nonclassified.obo and .owl 
+      --> this is equivalent to HumanDO.obo and HumanDO.owl
+       -- once edited, save doid-nonclassified.obo as HumanDO.obo
 lastly: push all files to master (github directory)
 
 -- cp HumanDO.obo and commit to DO's SVN directory
+        svn://svn.code.sf.net/p/diseaseontology/code/trunk/
 
-check files: 
-
-CONTINUOUS INTEGRATION
-----------------------
-
-See:
-http://build.berkeleybop.org/job/build-doid/
-
-This is triggered on commits to doid-edit.owl
 
 RELEASE MANAGEMENT
 ------------------
@@ -275,12 +242,6 @@ The official purls for DO are
  * http://purl.obolibrary.org/obo/doid.owl
  * http://purl.obolibrary.org/obo/doid.obo
 
-These currently redirect to the central OBO library build
+These redirect to the DO's GitHub repository /src/ontology   directory
 
-Currently, the central OBO library build is built from the sourceforge version of DO
-(http://sourceforge.net/p/diseaseontology/code/HEAD/tree/trunk/HumanDO.obo?format=raw)
-
-This will soon be deprecated, and the central obo build will be made
-from the version in this repository.
-
-Continuous release: (DO build is made from doid-edit) 
+Currently, the central OBO library build is built from DO GitHub repository

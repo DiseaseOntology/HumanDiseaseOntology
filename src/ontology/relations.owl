@@ -1,159 +1,102 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/relations.owl#"
-     xml:base="http://purl.obolibrary.org/obo/doid/imports/relations.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/relations.owl"/>
-    
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+
+Ontology: <http://purl.obolibrary.org/obo/doid/imports/relations.owl>
+
+
+AnnotationProperty: obo:IAO_0000115
 
     
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationProperty: rdfs:label
 
     
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationProperty: rdfs:comment
 
     
+Datatype: rdf:PlainLiteral
 
-
-    <!-- http://purl.obolibrary.org/obo/IDO_0000664 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000664">
-        <rdfs:label>has material basis in</rdfs:label>
-    </owl:ObjectProperty>
     
+Datatype: xsd:string
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001020 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001020">
-        <rdfs:label>is allergic trigger for</rdfs:label>
-        <rdfs:comment>Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)</rdfs:comment>
-    </owl:ObjectProperty>
     
+ObjectProperty: obo:RO_0001020
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001021 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001021">
-        <rdfs:label>is autoimmune trigger for</rdfs:label>
-    </owl:ObjectProperty>
+    Annotations: 
+        rdfs:comment "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)",
+        rdfs:label "is allergic trigger for"
     
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
-        <rdfs:label>located in</rdfs:label>
-    </owl:ObjectProperty>
     
+ObjectProperty: obo:RO_0001021
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200">
-        <rdfs:label>has phenotype</rdfs:label>
-    </owl:ObjectProperty>
+    Annotations: 
+        rdfs:label "is autoimmune trigger for"
     
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002218 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002218">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has active participant</rdfs:label>
-        <obo:IAO_0000115>A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has some contributing role in the manifestation of the condition.</obo:IAO_0000115>
-    </owl:ObjectProperty>
     
+ObjectProperty: obo:RO_0002218
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002451 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002451">
-        <rdfs:label>transmitted by</rdfs:label>
-    </owl:ObjectProperty>
+    Annotations: 
+        rdfs:label "has active participant"@en
     
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0003000 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
-        <rdfs:label>produces</rdfs:label>
-        <obo:IAO_0000115>A produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
-    </owl:ObjectProperty>
     
+ObjectProperty: obo:IDO_0000664
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0003001 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
-        <rdfs:label>produced by</rdfs:label>
-        <obo:IAO_0000115>A produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003000"/>
-    </owl:ObjectProperty>
+    Annotations: 
+        rdfs:label "has material basis in"
     
+    
+ObjectProperty: obo:RO_0003001
 
+    Annotations: 
+        obo:IAO_0000115 "A produced_by b iff some process that occurs_in b has_output a.",
+        rdfs:label "produced by"
+    
+    InverseOf: 
+        obo:RO_0003000
+    
+    
+ObjectProperty: obo:RO_0003000
 
-    <!-- http://purl.obolibrary.org/obo/RO_0003304 -->
+    Annotations: 
+        rdfs:label "produces",
+        obo:IAO_0000115 "A produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix."
+    
+    InverseOf: 
+        obo:RO_0003001
+    
+    
+ObjectProperty: obo:RO_0003304
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003304">
-        <rdfs:label xml:lang="en">contributes to condition</rdfs:label>
-    </owl:ObjectProperty>
-</rdf:RDF>
+    Annotations: 
+        rdfs:label "contributes to condition"^^xsd:string,
+        obo:IAO_0000115 "A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has some contributing role in the manifestation of the condition."
+    
+    
+ObjectProperty: obo:RO_0002200
 
+    Annotations: 
+        rdfs:label "has phenotype"
 
+ObjectProperty: obo:RO_0002202
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+   Annotations:
+      rdfs:label "develops from"    
+    
+ObjectProperty: obo:RO_0001025
 
+    Annotations: 
+        rdfs:label "located in"
+    
+    
+ObjectProperty: obo:RO_0002451
+
+    Annotations: 
+        rdfs:label "transmitted by"
+    
+    

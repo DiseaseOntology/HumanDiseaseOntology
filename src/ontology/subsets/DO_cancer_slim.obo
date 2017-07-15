@@ -38,7 +38,7 @@ creation_date: 2012-09-18T01:56:52Z
 id: DOID:0050745
 name: diffuse large B-cell lymphoma
 namespace: disease_ontology
-def: "A B-cell lymphoma that is a cancer of B cells presenting as an aggressive tumour which can arise in virtually any part of the body." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma]
+def: "A B-cell lymphoma that is a cancer of B cells presenting as an aggressive tumour which can arise in virtually any part of the body." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
 subset: DO_cancer_slim
 is_a: DOID:707 ! B-cell lymphoma
 created_by: lschriml
@@ -89,10 +89,10 @@ creation_date: 2014-05-12T02:45:04Z
 id: DOID:0050873
 name: follicular lymphoma
 namespace: disease_ontology
-def: "A non-Hodgkin lymphoma that is characterized as an indolent non-Hodgkin's lymphoma and has_material_basis_in follicle center B-cells (centrocytes and centroblasts)." [url:http\://en.wikipedia.org/wiki/Follicular_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=428287]
+def: "A B-cell lymphoma that is characterized as an indolent non-Hodgkin's lymphoma and has_material_basis_in follicle center B-cells (centrocytes and centroblasts)." [url:http\://en.wikipedia.org/wiki/Follicular_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=428287]
 subset: DO_cancer_slim
 xref: MESH:D008224
-is_a: DOID:0060058 ! lymphoma
+is_a: DOID:707 ! B-cell lymphoma
 created_by: lschriml
 creation_date: 2014-06-25T05:24:10Z
 
@@ -1711,10 +1711,12 @@ is_a: DOID:3905 ! lung carcinoma
 id: DOID:3910
 name: lung adenocarcinoma
 namespace: disease_ontology
+alt_id: DOID:3909
 alt_id: DOID:4826
 def: "A non-small cell lung carcinoma that derives_from epithelial cells of glandular origin." [url:http\://cancergenome.nih.gov/cancersselected/lungadenocarcinoma, url:http\://en.wikipedia.org/wiki/Adenocarcinoma, url:http\://en.wikipedia.org/wiki/Adenocarcinoma_of_the_lung]
 subset: DO_cancer_slim
 synonym: "adenocarcinoma of lung" RELATED []
+synonym: "bronchogenic lung adenocarcinoma" EXACT []
 synonym: "nonsmall cell adenocarcinoma" EXACT []
 xref: EFO:0000571
 xref: MESH:C538231

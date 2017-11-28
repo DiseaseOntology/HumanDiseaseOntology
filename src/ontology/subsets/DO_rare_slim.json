@@ -3934,6 +3934,15 @@
       "type" : "CLASS",
       "lbl" : "cystinosis"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "NCBITaxon:27317",
+          "xrefs" : [ ]
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050430",
       "meta" : {
         "definition" : {
@@ -4139,7 +4148,7 @@
       "meta" : {
         "definition" : {
           "val" : "An adrenal gland hyperfunction disease that results in the overproduction of aldosterone by the adrenal glands.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Hyperaldosteronism" ]
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Primary_aldosteronism", "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.12d&ns=NCI_Thesaurus&code=C34510" ]
         },
         "comments" : [ "Xref MGI." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -4154,9 +4163,17 @@
         }, {
           "val" : "ICD9CM:255.10"
         }, {
+          "val" : "UMLS_CUI:C0010481"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:47270006"
+        }, {
           "val" : "ICD9CM:255.1"
         }, {
+          "val" : "SNOMEDCT_US_2016_03_01:154705004"
+        }, {
           "val" : "SNOMEDCT_US_2016_03_01:190509005"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:190505004"
         }, {
           "val" : "ORDO:235936"
         }, {
@@ -4168,19 +4185,39 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:267484005"
         }, {
+          "val" : "NCI:C2969"
+        }, {
+          "val" : "MESH:D003480"
+        }, {
           "val" : "SNOMEDCT_US_2016_03_01:88213004"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154709005"
         }, {
           "val" : "NCI:C113213"
         } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "hyperaldosteronism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Cushing's syndrome",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Cushing syndrome",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:12252"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "hyperaldosteronism"
+      "lbl" : "primary hyperaldosteronism"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_206",
       "meta" : {
@@ -7572,9 +7609,9 @@
         }, {
           "val" : "OMIM:613268"
         }, {
-          "val" : "OMIM:613269"
-        }, {
           "val" : "ICD10CM:H18.51"
+        }, {
+          "val" : "OMIM:613269"
         }, {
           "val" : "OMIM:613267"
         }, {
@@ -8714,6 +8751,47 @@
       },
       "type" : "CLASS",
       "lbl" : "vesicoureteral reflux"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080201",
+      "meta" : {
+        "definition" : {
+          "val" : "A syndrome that is characterized by anterior chamber eye anomalies, short limbs with broad distal extremities, characteristic facial features, cleft lip/palate, and variable developmental delay/intellectual disability.",
+          "xrefs" : [ "url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=709", "url:https://en.wikipedia.org/wiki/Peters-plus_syndrome", "url:https://ghr.nlm.nih.gov/condition/peters-plus-syndrome", "url:https://www.ncbi.nlm.nih.gov/books/NBK1464/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "OMIM:261540"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Krause-Kivlin syndrome",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Peters anomaly-short limb dwarfism syndrome",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Peters-plus syndrome",
+          "xrefs" : [ ]
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Peters plus syndrome"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080200",
+      "meta" : {
+        "definition" : {
+          "val" : "A renal agenesis that is characterized by the absence of both kidneys at birth.",
+          "xrefs" : [ "url:https://rarediseases.org/rare-diseases/renal-agenesis-bilateral/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "ORDO:1848"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "bilateral renal aplasia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060720",
       "meta" : {

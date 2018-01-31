@@ -16,3 +16,6 @@ mirroring updates from GitHub on a weekly basis.
 
 A tutorial describing DO's editorial activies is avaiable at: 
 https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md
+
+Documentation on [Disease Ontology web site](http://disease-ontology.org).
+Contact: [Lynn Schriml](mailto:lynn.schriml@gmail.com)

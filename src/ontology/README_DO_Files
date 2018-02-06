@@ -29,11 +29,14 @@ The DO imports other OBO Foundry ontologies to create the logical definitions, i
 NCBI Taxon, Cell Ontology, Uberon, HPO (Human Phenotype Ontology) and the RO (Relations Ontology). 
     
 (contain inferred links)
-    doid.obo                : --DO's OBO file containing logical definitions
-    doid.owl                : --DO's OWL file containing logical definitions
+    doid.obo                : --Disease Ontology, OBO format. This file omits the equivalent axioms
+    doid.owl                : --Disease Ontology, OWL format. This file contains DO's is_a asserted hierarchy plus equivalent axioms to other OBO Foundry ontologies.
+    
+<u>DO merged files</u>: created for the Alliance of Genome Resources (AGR) that includes OMIM to DO associations as xrefs plus defined relationships between OMIM susceptibility IDs and DO terms.
 
-    doid-merged.obo : includes the inferred branches, includes ontology imports 
-    doid-merged.owl : includes the inferred brances, includes ontology imports
+
+    doid-merged.obo : includes the inferred branches, includes ontology imported. 
+    doid-merged.owl : includes the inferred brances, includes ontology imported 'susceptibility to' OMIM terms.
 
 (contain ONLY asserted links)
     doid-non-classified.obo :  DO's single asserted is_a hierarchy (HumanDO.obo), this file does not contain logical definitions

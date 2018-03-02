@@ -1,14 +1,22 @@
 {
   "graphs" : [ {
     "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002451",
+      "type" : "PROPERTY",
+      "lbl" : "transmitted by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9643",
       "meta" : {
         "definition" : {
-          "val" : "A parasitic protozoa infectious disease that has_symptommild fevers and has_symptom anemia described as malaria-like symptoms caused by a protozoan of genus Babesia, which reproduce in red blood cells and cause hemolytic anemia. They are transmitted by Ixodid ticks or by blood transfusion. Babesiosis is a zoonotic disease.",
+          "val" : "A parasitic protozoa infectious disease that has_symptom mild fevers and has_symptom anemia described as malaria-like symptoms caused by a protozoan of genus Babesia, which reproduce in red blood cells and cause hemolytic anemia. They are transmitted by Ixodid ticks or by blood transfusion. Babesiosis is a zoonotic disease.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Babesiosis" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "ICD9CM:088.82"
+        }, {
+          "val" : "MESH:D001404"
+        }, {
           "val" : "ICD10CM:B60.0"
         }, {
           "val" : "UMLS_CUI:C0004576"
@@ -20,16 +28,8 @@
           "val" : "SNOMEDCT_US_2016_03_01:187241002"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:21061004"
-        }, {
-          "val" : "ICD9CM:088.82"
-        }, {
-          "val" : "MESH:D001404"
         } ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Babesiasis",
-          "xrefs" : [ "MTHICD9_2006:088.82" ]
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "Infection by babesia",
           "xrefs" : [ "SNOMEDCT_2005_07_31:276204002" ]
@@ -37,6 +37,10 @@
           "pred" : "hasExactSynonym",
           "val" : "piroplasmosis",
           "xrefs" : [ "CSP2005:2214-4957" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Babesiasis",
+          "xrefs" : [ "MTHICD9_2006:088.82" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -85,15 +89,15 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "NCI:C34682"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:43489008"
-        }, {
           "val" : "ICD9CM:065.0"
         }, {
           "val" : "MESH:D006479"
         }, {
           "val" : "ICD10CM:A98.0"
+        }, {
+          "val" : "NCI:C34682"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:43489008"
         }, {
           "val" : "UMLS_CUI:C0019099"
         } ],
@@ -124,7 +128,7 @@
           "val" : "A spotted fever that has_material_basis_in Rickettsia japonica, which is transmitted_by ticks (Dermacentor taiwanensis and Haemaphysalis flava). The infection has_symptom fever, has_symptom eschars, has_symptom regional adenopathy, and has_symptom rash on extremities.",
           "xrefs" : [ "url:http://www.cdc.gov/otherspottedfever/index.html", "url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2627607/pdf/9204291.pdf" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Rickettsia japonica spotted fever",
@@ -216,10 +220,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
-          "val" : "Exanthematic typhus of Sao Paulo",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
           "val" : "Brazillian spotted",
           "xrefs" : [ ]
         }, {
@@ -232,6 +232,14 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
+          "val" : "Fiebre maculosa",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Exanthematic typhus of Sao Paulo",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
           "val" : "Choix",
           "xrefs" : [ ]
         }, {
@@ -241,10 +249,6 @@
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "Sao Paulo typhus",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Fiebre maculosa",
           "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -271,7 +275,7 @@
           "val" : "A spotted fever that has_material_basis_in Rickettsia parkeri, which is transmitted_by Gulf Coast tick (Amblyomma maculatum). The infection has_symptom fever, has_symptom headache, has_symptom eschar, and has_symptom rash.",
           "xrefs" : [ "url:http://cmr.asm.org/cgi/content/full/18/4/719#Rickettsia_parkeri", "url:http://www.cdc.gov/otherspottedfever/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "maculatum infection",
@@ -293,15 +297,15 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "UMLS_CUI:C0014054"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:16901001"
-        }, {
-          "val" : "ICD10CM:A84.1"
         }, {
           "val" : "MESH:D004675"
         }, {
           "val" : "ICD9CM:063.2"
+        }, {
+          "val" : "UMLS_CUI:C0014054"
+        }, {
+          "val" : "ICD10CM:A84.1"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -309,15 +313,7 @@
           "xrefs" : [ "SNOMEDCT_2005_07_31:16901001" ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Central European encephalitis",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Russian spring-summer encephalitis",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "west-Siberian encephalitis",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -329,6 +325,14 @@
           "xrefs" : [ "MTHICD9_2006:063.0" ]
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "Central European encephalitis",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "west-Siberian encephalitis",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "Siberian tick-borne encephalitis",
           "xrefs" : [ ]
         } ],
@@ -336,11 +340,11 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:10252"
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:10251"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:0050176"
@@ -355,11 +359,15 @@
           "val" : "A spotted fever that has_material_basis_in Rickettsia australis, which is transmitted_by ticks (Ixodes holocyclus). The infection has_symptom fever, has_symptom headache, has_symptom myalgia, has_symptom maculopapular rash, and has_symptom lymphadenopathy.",
           "xrefs" : [ "url:http://cmr.asm.org/cgi/content/full/18/4/719#Rickettsia_australis_%28Queensland_tick_typhus%29", "url:http://www.cdc.gov/otherspottedfever/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Queensland tick typhus (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:68981009" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Australian tick typhus ",
+          "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "North Queensland tick typhus",
@@ -368,17 +376,13 @@
           "pred" : "hasExactSynonym",
           "val" : "Rickettsia australis spotted fever",
           "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Australian tick typhus ",
-          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:0050038"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
@@ -406,9 +410,9 @@
         "xrefs" : [ {
           "val" : "UMLS_CUI:C0039753"
         }, {
-          "val" : "MESH:D013801"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:68771000"
+        }, {
+          "val" : "MESH:D013801"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -433,7 +437,7 @@
           "val" : "A primary bacterial infectious disease that results_in infection, has_material_basis_in Borrelia burgdorferi, which is transmitted_by blacklegged tick (Ixodes scapularis) or transmitted_by western blacklegged tick (Ixodes pacificus). The infection has_symptom fever, has_symptom headache, has_symptom fatigue, and has_symptom skin rash called erythema migrans. If left untreated, infection can spread to joints, the heart, and the nervous system.",
           "xrefs" : [ "url:http://www.cdc.gov/lyme/transmission/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
           "val" : "MESH:D008193"
         }, {
@@ -443,17 +447,17 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:48982009"
         }, {
+          "val" : "SNOMEDCT_US_2016_03_01:154376000"
+        }, {
+          "val" : "MESH:D020852"
+        }, {
           "val" : "NCI:C45161"
         }, {
           "val" : "UMLS_CUI:C0752235"
         }, {
           "val" : "UMLS_CUI:C0024198"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:154376000"
-        }, {
           "val" : "ICD10CM:A69.20"
-        }, {
-          "val" : "MESH:D020852"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:240672009"
         }, {
@@ -465,12 +469,16 @@
           "xrefs" : [ "SNOMEDCT_2005_07_31:240672009" ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Lyme borreliosis",
-          "xrefs" : [ "CSP2005:0368-3340" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "lyme neuroborreliosis",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Bannwarth syndrome (disorder)",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:48982009" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Lyme borreliosis",
+          "xrefs" : [ "CSP2005:0368-3340" ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Bannworth's syndrome",
@@ -479,17 +487,13 @@
           "pred" : "hasExactSynonym",
           "val" : "neuroborreliosis",
           "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Bannwarth syndrome (disorder)",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:48982009" ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:12233"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
@@ -501,7 +505,7 @@
           "val" : "A tularemia that is located_in lungs. The bacteria are transmitted_by breathing dusts or aerosols containing the organisms. The infection has_symptom cough, has_symptom chest has_symptom pain, and has_symptom difficulty breathing.",
           "xrefs" : [ "url:http://www.cdc.gov/tularemia/signssymptoms/" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2016_03_01:45556008"
         }, {
@@ -548,23 +552,13 @@
       "type" : "PROPERTY",
       "lbl" : "has_symptom"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/doid#occurs_with",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "occurs_with"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2123",
       "meta" : {
         "definition" : {
           "val" : "A primary bacterial infectious disease that has_material_basis_in Francisella tularensis, which is transmitted_by dog tick bite (Dermacentor variabilis), transmitted_by deer flies (Chrysops sp) or transmitted_by contact with infected animal tissues.",
           "xrefs" : [ "url:http://www.cdc.gov/tularemia/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
           "val" : "ICD9CM:021.8"
         }, {
@@ -572,9 +566,9 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:186299005"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:111834003"
-        }, {
           "val" : "UMLS_CUI:C0029835"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:111834003"
         }, {
           "val" : "MESH:D014406"
         } ],
@@ -585,6 +579,20 @@
       },
       "type" : "CLASS",
       "lbl" : "tularemia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/doid#occurs_with",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "occurs_with"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002200",
+      "type" : "PROPERTY",
+      "lbl" : "has phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#part_of",
       "meta" : {
@@ -622,12 +630,8 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_11361",
       "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Tick-borne fever (disorder)",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:25495004" ]
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "pasture fever",
           "xrefs" : [ ]
@@ -639,6 +643,10 @@
           "pred" : "hasExactSynonym",
           "val" : "Tick-borne fever NOS (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:186608000" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Tick-borne fever (disorder)",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:25495004" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -649,13 +657,17 @@
       "type" : "CLASS",
       "lbl" : "tickborne fever"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "lbl" : "located in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050484",
       "meta" : {
         "definition" : {
           "val" : "A spotted fever that has_material_basis_in Rickettsia helvetica, which is transmitted_by ticks (Ixodes sp). The infection has_symptom fever, has_symptom headache, has_symptom myalgia.",
           "xrefs" : [ "url:http://jcm.asm.org/cgi/reprint/42/2/816", "url:http://www.cdc.gov/otherspottedfever/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Rickettsia helvetica spotted fever",
@@ -708,6 +720,12 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "UMLS_CUI:C0152942"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:186292001"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:62769007"
+        }, {
           "val" : "SNOMEDCT_US_2016_03_01:398599000"
         }, {
           "val" : "ICD9CM:021.8"
@@ -718,12 +736,6 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:111834003"
         }, {
-          "val" : "UMLS_CUI:C0152942"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:186292001"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:62769007"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:186299005"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:186298002"
@@ -732,12 +744,12 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "intestinal tularaemia",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:186292001" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Enteric tularemia",
           "xrefs" : [ "ICD9CM_2006:021.1" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "intestinal tularaemia",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:186292001" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -796,6 +808,10 @@
       "type" : "CLASS",
       "lbl" : "Far Eastern spotted fever"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000664",
+      "type" : "PROPERTY",
+      "lbl" : "has material basis in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050041",
       "meta" : {
         "definition" : {
@@ -821,13 +837,13 @@
         "xrefs" : [ {
           "val" : "ICD9CM:065.2"
         }, {
-          "val" : "UMLS_CUI:C0022810"
-        }, {
           "val" : "ICD10CM:A98.2"
         }, {
-          "val" : "MESH:D007733"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:23097003"
+        }, {
+          "val" : "UMLS_CUI:C0022810"
+        }, {
+          "val" : "MESH:D007733"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -851,20 +867,6 @@
       "type" : "PROPERTY",
       "lbl" : "has_narrow_synonym"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/doid#transmitted_by",
-      "meta" : {
-        "definition" : {
-          "val" : "Pathogen is transmitted.",
-          "xrefs" : [ "DO:lh" ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "transmitted_by"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050043",
       "meta" : {
         "definition" : {
@@ -885,21 +887,35 @@
       "type" : "CLASS",
       "lbl" : "Israeli tick typhus"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/doid#transmitted_by",
+      "meta" : {
+        "definition" : {
+          "val" : "Pathogen is transmitted.",
+          "xrefs" : [ "DO:lh" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "transmitted_by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_13226",
       "meta" : {
         "definition" : {
           "val" : "A tularemia that results_in inflammation of eye and swelling of lymph glands in front of the ear.",
           "xrefs" : [ "url:http://www.cdc.gov/tularemia/signssymptoms/" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
           "val" : "ICD10CM:A21.1"
+        }, {
+          "val" : "ICD9CM:021.3"
         }, {
           "val" : "UMLS_CUI:C0152944"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:73363000"
-        }, {
-          "val" : "ICD9CM:021.3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -913,6 +929,18 @@
       },
       "type" : "CLASS",
       "lbl" : "oculoglandular tularemia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0050482",
+      "meta" : {
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ],
+        "deprecated" : true
+      },
+      "type" : "CLASS",
+      "lbl" : "lymphangitis-associated rickettsiosis"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050042",
       "meta" : {
@@ -928,18 +956,6 @@
       },
       "type" : "CLASS",
       "lbl" : "Indian tick typhus"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0050482",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ],
-        "deprecated" : true
-      },
-      "type" : "CLASS",
-      "lbl" : "lymphangitis-associated rickettsiosis"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#realized_by_supression_with",
       "meta" : {
@@ -975,14 +991,6 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Siberian tick typhus (disorder)",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:186782005" ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "manchurian typhus",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "North Asian tick typhus (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:186781003" ]
         }, {
@@ -992,6 +1000,14 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Rickettsia sibirica spotted fever",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Siberian tick typhus (disorder)",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:186782005" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "manchurian typhus",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -1055,7 +1071,7 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14090",
       "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Heartwater (disorder)",
@@ -1070,14 +1086,12 @@
       "type" : "CLASS",
       "lbl" : "heartwater disease"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
+      "id" : "http://purl.obolibrary.org/obo/RO_0001020",
       "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "NCBITaxon:27317",
-          "xrefs" : [ ]
-        } ]
-      }
+        "comments" : [ "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)" ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is allergic trigger for"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#has_material_basis_in",
       "meta" : {
@@ -1103,31 +1117,27 @@
           "val" : "A bartonellosis that results_in infection located_in lymph node, has_material_basis_in Bartonella henselae or has_material_basis_in Bartonella clarridgeiae, which are transmitted_by scratch or bite of a kitten, or transmitted_by contact of animal's saliva with an eye or through broken skin. The infection has_symptom regional lymphadenopathy, has_symptom headache, has_symptom chills, has_symptom backache, and has_symptom abdominal pain.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Cat_scratch_disease", "url:http://kidshealth.org/parent/infections/bacterial_viral/cat_scratch.html#" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "MESH:D002372"
-        }, {
           "val" : "ICD10CM:A28.1"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:79974007"
-        }, {
           "val" : "NCI:C84620"
+        }, {
+          "val" : "UMLS_CUI:C0007361"
+        }, {
+          "val" : "MESH:D002372"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:79974007"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154370006"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:123319006"
-        }, {
-          "val" : "UMLS_CUI:C0007361"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:266202002"
         }, {
           "val" : "ICD9CM:078.3"
         } ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Debre's Syndrome",
-          "xrefs" : [ ]
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "cat scratch fever",
           "xrefs" : [ ]
@@ -1143,6 +1153,10 @@
           "pred" : "hasExactSynonym",
           "val" : "benign lymphoreticulosis",
           "xrefs" : [ "MTHICD9_2006:078.3" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Debre's Syndrome",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1190,19 +1204,19 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "UMLS_CUI:C0085399"
+        }, {
+          "val" : "MESH:D016873"
+        }, {
+          "val" : "ICD10CM:A77.4"
+        }, {
           "val" : "ICD9CM:082.40"
         }, {
           "val" : "ICD10CM:A77.40"
         }, {
           "val" : "ICD9CM:082.4"
         }, {
-          "val" : "UMLS_CUI:C0085399"
-        }, {
-          "val" : "MESH:D016873"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:77361002"
-        }, {
-          "val" : "ICD10CM:A77.4"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1210,11 +1224,11 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:0050023"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
@@ -1238,17 +1252,17 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "ICD9CM:087.1"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:10301003"
+        }, {
           "val" : "UMLS_CUI:C0035022"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:186821005"
         }, {
-          "val" : "ICD9CM:087.1"
-        }, {
           "val" : "NCI:C34976"
         }, {
           "val" : "ICD10CM:A68.1"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:10301003"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1342,13 +1356,13 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "ICD10CM:A93.2"
-        }, {
-          "val" : "UMLS_CUI:C0009400"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:186607005"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:6452009"
+        }, {
+          "val" : "ICD10CM:A93.2"
+        }, {
+          "val" : "UMLS_CUI:C0009400"
         }, {
           "val" : "MESH:D003121"
         } ],
@@ -1405,15 +1419,15 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "MESH:D008146"
-        }, {
           "val" : "ICD9CM:063.1"
+        }, {
+          "val" : "UMLS_CUI:C0024025"
+        }, {
+          "val" : "MESH:D008146"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:59350003"
         }, {
           "val" : "ICD10CM:A84.8"
-        }, {
-          "val" : "UMLS_CUI:C0024025"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1434,9 +1448,17 @@
           "val" : "A spotted fever that has_material_basis_in Rickettsia conorii subsp conorii, which is transmitted_by dog tick (Rhipicephalus sanguineus). The infection has_symptom fever, has_symptom eschar (usually single), has_symptom regional adenopathy, has_symptom maculopapular rash on extremities.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Boutonneuse_fever", "url:http://www.cdc.gov/otherspottedfever/index.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#tick-borne_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2016_03_01:414658000"
+        }, {
+          "val" : "ICD10CM:A77.1"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:186779000"
+        }, {
+          "val" : "MESH:D001907"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:186778008"
         }, {
           "val" : "UMLS_CUI:C0006060"
         }, {
@@ -1447,16 +1469,24 @@
           "val" : "SNOMEDCT_US_2016_03_01:186780002"
         }, {
           "val" : "ICD9CM:082.1"
-        }, {
-          "val" : "ICD10CM:A77.1"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:186779000"
-        }, {
-          "val" : "MESH:D001907"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:186778008"
         } ],
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Kenyan tick typhus",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:186774005" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Kenya fever",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Conor and Bruch's disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "african tick typhus",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "Mediterranean spotted fever",
           "xrefs" : [ ]
@@ -1465,24 +1495,12 @@
           "val" : "Mediterranean tick fever",
           "xrefs" : [ ]
         }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Kenyan tick typhus",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:186774005" ]
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "African tick typhus (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:266118003" ]
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "Boutonneuse disease",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Kenya fever",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Conor and Bruch's disease",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -1494,10 +1512,6 @@
           "xrefs" : [ "SNOMEDCT_2005_07_31:415561000" ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "african tick typhus",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Rickettsia conorii spotted fever",
           "xrefs" : [ ]
         }, {
@@ -1507,9 +1521,6 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "DOID:0050039"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:0050040"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -1517,6 +1528,9 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:0050045"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0050039"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -1599,6 +1613,10 @@
       "type" : "PROPERTY",
       "lbl" : "subset_property"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+      "type" : "PROPERTY",
+      "lbl" : "has_alternative_id"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#located_in",
       "meta" : {
         "definition" : {
@@ -1612,12 +1630,12 @@
       },
       "type" : "PROPERTY",
       "lbl" : "located_in"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-      "type" : "PROPERTY",
-      "lbl" : "has_alternative_id"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_10242"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050308",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_11320"
@@ -1634,13 +1652,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_10242"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0050026",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_10242"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_13226",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2123"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050179",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050175"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_11990",
       "pred" : "is_a",

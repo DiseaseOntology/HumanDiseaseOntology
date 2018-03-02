@@ -871,8 +871,6 @@ xref: MESH:D001943
 xref: NCI:C2910
 xref: NCI:C9335
 xref: OMIM:114480
-xref: OMIM:600048
-xref: OMIM:605365
 xref: SNOMEDCT_US_2016_03_01:126926005
 xref: SNOMEDCT_US_2016_03_01:154521006
 xref: SNOMEDCT_US_2016_03_01:190121004
@@ -1951,16 +1949,17 @@ is_a: DOID:4450 ! renal cell carcinoma
 
 [Term]
 id: DOID:4467
-name: renal clear cell carcinoma
+name: clear cell renal cell carcinoma
 namespace: disease_ontology
 def: "A renal cell carcinoma that has_material_basis_in cells that appear very pale or clear when examined under microscope." [url:http\://cancergenome.nih.gov/cancersselected/kidneyclearcell, url:http\://www.cancer.gov/dictionary?CdrID=45063, URL:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html]
 comment: MESH:C538445 added from NeuroDevNet [WAK].
 subset: DO_cancer_slim
-synonym: "Clear cell carcinoma of kidney (disorder)" EXACT [SNOMEDCT_2005_07_31:254915003]
+synonym: "Clear cell carcinoma of kidney" EXACT [SNOMEDCT_2005_07_31:254915003]
 synonym: "clear cell kidney carcinoma" EXACT []
 synonym: "Clear-cell metastatic renal cell carcinoma" RELATED [MESH:C538445]
 synonym: "conventional (Clear cell) renal cell carcinoma" EXACT [MTH:NOCODE]
 synonym: "conventional renal cell carcinoma" EXACT [NCI2004_11_17:C4033]
+synonym: "renal clear cell carcinoma" EXACT []
 xref: MESH:D002292
 xref: NCI:C4033
 xref: SNOMEDCT_US_2016_03_01:188251003
@@ -2194,6 +2193,7 @@ is_a: DOID:1115 ! sarcoma
 id: DOID:5409
 name: lung small cell carcinoma
 namespace: disease_ontology
+alt_id: DOID:0050875
 def: "A lung carcinoma that has_material_basis_in primitive-appearing cells that are smaller than normal cells." [url:http\://en.wikipedia.org/wiki/Small-cell_carcinoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
@@ -2960,6 +2960,27 @@ xref: SNOMEDCT_US_2016_03_01:90151006
 xref: SNOMEDCT_US_2016_03_01:91857003
 xref: UMLS_CUI:C0023449
 is_a: DOID:1037 ! lymphoblastic leukemia
+
+[Typedef]
+id: IDO:0000664
+name: has material basis in
+
+[Typedef]
+id: RO:0001020
+name: is allergic trigger for
+comment: Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)
+
+[Typedef]
+id: RO:0001025
+name: located in
+
+[Typedef]
+id: RO:0002200
+name: has phenotype
+
+[Typedef]
+id: RO:0002451
+name: transmitted by
 
 [Typedef]
 id: complicated_by

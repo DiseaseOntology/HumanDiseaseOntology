@@ -468,7 +468,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_3144",
       "meta" : {
         "definition" : {
-          "val" : "A skin disease characterized by skin that is loose, hanging, wrinkled and lacking in elasticity; it can also affect connective tissue in other parts of the body, including the heart, blood vessels, joints, intestines and lungs.",
+          "val" : "A skin disease characterized by loose, hanging, wrinkled skin lacking in elasticity.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Cutis_laxa", "url:http://ghr.nlm.nih.gov/condition/cutis-laxa", "url:https://www.rarediseases.org/rare-disease-information/rare-diseases/byID/175/viewAbstract" ]
         },
         "comments" : [ "Xref MGI." ],
@@ -965,8 +965,6 @@
         }, {
           "val" : "OMIM:609265"
         }, {
-          "val" : "OMIM:609266"
-        }, {
           "val" : "MESH:D016864"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:428850001"
@@ -1025,6 +1023,50 @@
       },
       "type" : "CLASS",
       "lbl" : "acute porphyria"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_3490",
+      "meta" : {
+        "definition" : {
+          "val" : "A syndrome that is characterized by mildly unusual facial features, short stature, heart defects, bleeding problems, skeletal malformations, and many other signs and symptoms.",
+          "xrefs" : [ "url:https://ghr.nlm.nih.gov/condition/noonan-syndrome#definition", "url:https://rarediseases.info.nih.gov/diseases/10955/noonan-syndrome" ]
+        },
+        "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2016_03_01:205824006"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:205684007"
+        }, {
+          "val" : "NCI:C34854"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:88327006"
+        }, {
+          "val" : "NCI:C75459"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:205794007"
+        }, {
+          "val" : "OMIM:PS163950"
+        }, {
+          "val" : "ICD10CM:Q87.1"
+        }, {
+          "val" : "MESH:D009634"
+        }, {
+          "val" : "ORDO:648"
+        }, {
+          "val" : "UMLS_CUI:C0028326"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Turner's phenotype, karyotype normal (disorder)",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:205684007" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Noonan syndrome"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_230",
       "meta" : {
@@ -2538,58 +2580,6 @@
       "type" : "CLASS",
       "lbl" : "Paget's disease of bone"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0050569",
-      "meta" : {
-        "definition" : {
-          "val" : "An autosomal recessive disease characterized by intrauterine growth retardation and postnatal dwarfism with microcephaly and intellectual disability.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Seckel_syndrome" ]
-        },
-        "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
-        "xrefs" : [ {
-          "val" : "OMIM:613823"
-        }, {
-          "val" : "OMIM:606744"
-        }, {
-          "val" : "OMIM:210600"
-        }, {
-          "val" : "OMIM:615807"
-        }, {
-          "val" : "OMIM:614728"
-        }, {
-          "val" : "ICD10CM:Q87.1"
-        }, {
-          "val" : "OMIM:614851"
-        }, {
-          "val" : "OMIM:613676"
-        }, {
-          "val" : "ORDO:808"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Harper's syndrome",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Virchow-Seckel dwarfism",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "bird-headed dwarfism",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "microcephalic primordial dwarfism",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "Seckel syndrome"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050448",
       "meta" : {
         "definition" : {
@@ -2633,6 +2623,46 @@
       },
       "type" : "CLASS",
       "lbl" : "hereditary mucosal leukokeratosis"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0050569",
+      "meta" : {
+        "definition" : {
+          "val" : "An autosomal recessive disease characterized by intrauterine growth retardation and postnatal dwarfism with microcephaly and intellectual disability.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Seckel_syndrome" ]
+        },
+        "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:Q87.1"
+        }, {
+          "val" : "ORDO:808"
+        }, {
+          "val" : "OMIM:PS210600"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Harper's syndrome",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Virchow-Seckel dwarfism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bird-headed dwarfism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "microcephalic primordial dwarfism",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Seckel syndrome"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_13909",
       "meta" : {
@@ -2864,8 +2894,6 @@
         }, {
           "val" : "ICD9CM:712.1"
         }, {
-          "val" : "HP:0000934"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:60782007"
         }, {
           "val" : "MESH:D002805"
@@ -3051,6 +3079,10 @@
       },
       "type" : "CLASS",
       "lbl" : "hereditary hemorrhagic telangiectasia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "lbl" : "located in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_11720",
       "meta" : {
@@ -3934,14 +3966,12 @@
       "type" : "CLASS",
       "lbl" : "cystinosis"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
+      "id" : "http://purl.obolibrary.org/obo/RO_0001020",
       "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "NCBITaxon:27317",
-          "xrefs" : [ ]
-        } ]
-      }
+        "comments" : [ "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)" ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is allergic trigger for"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050430",
       "meta" : {
@@ -4876,41 +4906,11 @@
         "xrefs" : [ {
           "val" : "ICD9CM:753.10"
         }, {
-          "val" : "OMIM:611134"
-        }, {
           "val" : "ICD9CM:753.1"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:82525005"
-        }, {
-          "val" : "OMIM:611561"
-        }, {
-          "val" : "OMIM:615397"
-        }, {
-          "val" : "OMIM:614175"
         }, {
           "val" : "ORDO:564"
         }, {
-          "val" : "OMIM:267010"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:236440007"
-        }, {
-          "val" : "OMIM:607361"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:204966004"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:204954005"
-        }, {
-          "val" : "OMIM:249000"
-        }, {
-          "val" : "OMIM:603194"
-        }, {
-          "val" : "OMIM:612284"
-        }, {
           "val" : "UMLS_CUI:C0311245"
-        }, {
-          "val" : "OMIM:613885"
-        }, {
-          "val" : "OMIM:614209"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -5343,6 +5343,10 @@
       "type" : "CLASS",
       "lbl" : "congenital stationary night blindness"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002451",
+      "type" : "PROPERTY",
+      "lbl" : "transmitted by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050650",
       "meta" : {
         "definition" : {
@@ -5739,7 +5743,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0050768",
       "meta" : {
         "definition" : {
-          "val" : "A mitochondrial metabolism disease that has material basis in mutation in the ATPAF2 gene on chromosome 17p11.",
+          "val" : "A mitochondrial complex V (ATP synthase) deficiency that has material basis in mutation in the ATPAF2 gene on chromosome 17p11.",
           "xrefs" : [ "url:http://omim.org/entry/604273" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -5980,6 +5984,10 @@
       "type" : "CLASS",
       "lbl" : "malignant hyperthermia"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002200",
+      "type" : "PROPERTY",
+      "lbl" : "has phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#part_of",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -6066,6 +6074,10 @@
       },
       "type" : "CLASS",
       "lbl" : "anauxetic dysplasia 1"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000664",
+      "type" : "PROPERTY",
+      "lbl" : "has material basis in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_12697",
       "meta" : {
@@ -6209,7 +6221,7 @@
       "meta" : {
         "definition" : {
           "val" : "An autosomal recessive disease characterized by abnormal pigmentation of the skin, hair and eyes.",
-          "xrefs" : [ "url:en.wikipedia.org/wiki/Oculocutaneous_albinism", "url:http://ghr.nlm.nih.gov/condition/oculocutaneous-albinism" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Oculocutaneous_albinism", "url:http://ghr.nlm.nih.gov/condition/oculocutaneous-albinism" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -9144,26 +9156,18 @@
       "meta" : {
         "definition" : {
           "val" : "An amyloidosis where amyloid protein progressively deposits in cerebral blood vessel walls with subsequent degenerative vascular changes that usually result in spontaneous cerebral hemorrhage, ischemic lesions and progressive dementia.",
-          "xrefs" : [ "OMIM:605714", "url:http://en.wikipedia.org/wiki/Cerebral_amyloid_angiopathy" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Cerebral_amyloid_angiopathy" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "xrefs" : [ {
-          "val" : "OMIM:105150"
-        }, {
           "val" : "ORDO:85458"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:56453003"
         }, {
-          "val" : "OMIM:176500"
-        }, {
           "val" : "MESH:D028243"
         }, {
-          "val" : "OMIM:117300"
-        }, {
           "val" : "UMLS_CUI:C0268394"
-        }, {
-          "val" : "OMIM:605714"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -9556,8 +9560,6 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:205832003"
         }, {
-          "val" : "OMIM:216411"
-        }, {
           "val" : "ORDO:90324"
         }, {
           "val" : "OMIM:216400"
@@ -9728,6 +9730,35 @@
       "type" : "CLASS",
       "lbl" : "common variable immunodeficiency"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0111160",
+      "meta" : {
+        "definition" : {
+          "val" : "An autosomal genetic disease characterized by camptodactyly, tall stature, scoliosis, and hearing loss that has_material_basis_in partial loss of function in the FGFR3 gene on chromosome 4p16.",
+          "xrefs" : [ "url:https://rarediseases.info.nih.gov/diseases/10012/camptodactyly-tall-stature-and-hearing-loss-syndrome", "url:https://www.ncbi.nlm.nih.gov/pubmed/17033969" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C1864852"
+        }, {
+          "val" : "ICD10CM:Q87.2"
+        }, {
+          "val" : "OMIM:610474"
+        }, {
+          "val" : "ORDO:85164"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "CATSHL syndrome",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "camptodactyly-tall stature-scoliosis-hearing loss syndrome"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2729",
       "meta" : {
         "definition" : {
@@ -9739,27 +9770,13 @@
         "xrefs" : [ {
           "val" : "ORDO:1775"
         }, {
-          "val" : "OMIM:224230"
-        }, {
-          "val" : "OMIM:305000"
-        }, {
-          "val" : "OMIM:615190"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:74911008"
         }, {
           "val" : "NCI:C111802"
         }, {
+          "val" : "OMIM:PS127550"
+        }, {
           "val" : "UMLS_CUI:C0265965"
-        }, {
-          "val" : "OMIM:127550"
-        }, {
-          "val" : "OMIM:613987"
-        }, {
-          "val" : "OMIM:613988"
-        }, {
-          "val" : "OMIM:613989"
-        }, {
-          "val" : "OMIM:613990"
         }, {
           "val" : "MESH:D019871"
         } ],
@@ -9774,6 +9791,33 @@
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_related_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0111167",
+      "meta" : {
+        "definition" : {
+          "val" : "A spondyloepimetaphyseal dysplasia characterized by clawed fingers, platyspondyly of the spine, abnormalities of the iliac crest, intellectual disability and mucopolysaccharide in the urine that has_material_basis_in homozygous or compound heterozygous mutation in the DYM gene on chromosome 18q21.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/12491225", "url:https://www.ncbi.nlm.nih.gov/pubmed/21032395" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "OMIM:223800"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "DMC disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "pseudo-Morquio disease type I",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Dyggve-Melchior-Clausen disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#realized_by",
       "meta" : {
@@ -11959,55 +12003,9 @@
         "comments" : [ "NT MGI." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "xrefs" : [ {
-          "val" : "OMIM:614104"
-        }, {
-          "val" : "OMIM:612580"
-        }, {
-          "val" : "OMIM:612581"
-        }, {
-          "val" : "OMIM:615075"
-        }, {
-          "val" : "OMIM:615074"
-        }, {
-          "val" : "OMIM:615828"
-        }, {
-          "val" : "OMIM:614113"
-        }, {
-          "val" : "OMIM:614257"
-        }, {
-          "val" : "OMIM:614256"
-        }, {
-          "val" : "OMIM:614255"
-        }, {
-          "val" : "OMIM:614254"
-        }, {
-          "val" : "OMIM:614609"
-        }, {
-          "val" : "OMIM:614608"
-        }, {
-          "val" : "OMIM:614607"
-        }, {
-          "val" : "OMIM:612337"
-        }, {
-          "val" : "OMIM:156200"
-        }, {
-          "val" : "OMIM:615873"
-        }, {
-          "val" : "OMIM:612621"
-        }, {
-          "val" : "OMIM:613443"
+          "val" : "OMIM:PS156200"
         }, {
           "val" : "ORDO:178469"
-        }, {
-          "val" : "OMIM:613970"
-        }, {
-          "val" : "OMIM:615009"
-        }, {
-          "val" : "OMIM:615502"
-        }, {
-          "val" : "OMIM:614563"
-        }, {
-          "val" : "OMIM:615761"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -12197,8 +12195,6 @@
         "comments" : [ "NT MGI." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "xrefs" : [ {
-          "val" : "HP:0007660"
-        }, {
           "val" : "OMIM:309300"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:204118005"
@@ -12759,8 +12755,6 @@
           "val" : "MESH:C557675"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:95467005"
-        }, {
-          "val" : "HP:0002779"
         }, {
           "val" : "ORDO:95430"
         }, {
@@ -14073,7 +14067,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0060332",
       "meta" : {
         "definition" : {
-          "val" : "A mitochondrial metabolism disease that has material basis in mutation in the ATP5E gene on chromosome 20q13.",
+          "val" : "A mitochondrial complex V (ATP synthase) deficiency that has material basis in mutation in the ATP5E gene on chromosome 20q13.",
           "xrefs" : [ "url:http://omim.org/entry/614053" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -14137,7 +14131,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0060331",
       "meta" : {
         "definition" : {
-          "val" : "A mitochondrial metabolism disease that has material basis in mutation in the TMEM70 gene on chromosome 8q21.",
+          "val" : "A mitochondrial complex V (ATP synthase) deficiency that has material basis in mutation in the TMEM70 gene on chromosome 8q21.",
           "xrefs" : [ "url:http://omim.org/entry/614052" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -14388,7 +14382,7 @@
         }, {
           "val" : "ORDO:289902"
         }, {
-          "val" : "ICD10CM:E71.1"
+          "val" : "ICD10CM:E71.111"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -14727,7 +14721,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0060333",
       "meta" : {
         "definition" : {
-          "val" : "A mitochondrial metabolism disease that has material basis in mutation in the ATP5A1 gene on chromosome 18q.",
+          "val" : "A mitochondrial complex V (ATP synthase) deficiency that has material basis in mutation in the ATP5A1 gene on chromosome 18q.",
           "xrefs" : [ "url:http://omim.org/entry/615228" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -15890,8 +15884,6 @@
         }, {
           "val" : "OMIM:614252"
         }, {
-          "val" : "HP:0007029"
-        }, {
           "val" : "OMIM:611892"
         }, {
           "val" : "OMIM:609122"
@@ -16798,8 +16790,6 @@
           "val" : "SNOMEDCT_US_2016_03_01:72682008"
         }, {
           "val" : "MESH:C562584"
-        }, {
-          "val" : "HP:0010934"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:124147007"
         }, {
@@ -18128,8 +18118,8 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0060247",
       "meta" : {
         "definition" : {
-          "val" : "An osteochondrodysplasia characterized by short limbs and a short trunk with a barrel-shaped chest and has material basis in homozygous or compound heterozygous mutation in the DYM gene on chromosome 18q.",
-          "xrefs" : [ "url:http://www.ncbi.nlm.nih.gov/pubmed/1216821" ]
+          "val" : "A Syggve-Melchior-Clausen disease characterized by short limbs and a short trunk with a barrel-shaped chest and has material basis in homozygous or compound heterozygous mutation in the DYM gene on chromosome 18q.",
+          "xrefs" : [ "url:http://www.ncbi.nlm.nih.gov/pubmed/1216821", "url:https://rarediseases.info.nih.gov/diseases/10620/smith-mccort-dysplasia" ]
         },
         "comments" : [ "NT MGI." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -19005,8 +18995,6 @@
         }, {
           "val" : "UMLS_CUI:C1853235"
         }, {
-          "val" : "HP:0000647"
-        }, {
           "val" : "ORDO:91490"
         }, {
           "val" : "MESH:C565209"
@@ -19758,8 +19746,6 @@
           "val" : "MESH:D065708"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:204071008"
-        }, {
-          "val" : "HP:0002132"
         }, {
           "val" : "UMLS_CUI:C1867983"
         }, {
@@ -20939,8 +20925,6 @@
         }, {
           "val" : "OMIM:615399"
         }, {
-          "val" : "HP:0004818"
-        }, {
           "val" : "NCI:C61233"
         } ],
         "basicPropertyValues" : [ {
@@ -21103,8 +21087,6 @@
         }, {
           "val" : "ICD10CM:Q13.4"
         }, {
-          "val" : "HP:0007720"
-        }, {
           "val" : "ORDO:53691"
         }, {
           "val" : "OMIM:121400"
@@ -21140,8 +21122,6 @@
           "val" : "OMIM:609597"
         }, {
           "val" : "ORDO:60015"
-        }, {
-          "val" : "HP:0002697"
         }, {
           "val" : "UMLS_CUI:C1868598"
         }, {
@@ -22295,6 +22275,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060685",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060681"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0060247",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0111167"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060703",
       "pred" : "is_a",

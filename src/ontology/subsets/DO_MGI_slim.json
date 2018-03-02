@@ -68,6 +68,10 @@
       "type" : "CLASS",
       "lbl" : "cardiovascular system disease"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002451",
+      "type" : "PROPERTY",
+      "lbl" : "transmitted by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_28",
       "meta" : {
         "definition" : {
@@ -376,7 +380,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_225",
       "meta" : {
         "definition" : {
-          "val" : "A disease comprised of a group of signs and symptoms that occur together and characterize a particular abnormality.",
+          "val" : "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality.",
           "xrefs" : [ "URL:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
@@ -877,6 +881,10 @@
       "type" : "CLASS",
       "lbl" : "malignant hyperthermia"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002200",
+      "type" : "PROPERTY",
+      "lbl" : "has phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#part_of",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -1240,6 +1248,10 @@
       "type" : "CLASS",
       "lbl" : "hypohidrotic ectodermal dysplasia"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "lbl" : "located in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060118",
       "meta" : {
         "definition" : {
@@ -1264,6 +1276,10 @@
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_related_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000664",
+      "type" : "PROPERTY",
+      "lbl" : "has material basis in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#realized_by",
       "meta" : {
@@ -1419,14 +1435,12 @@
       "type" : "PROPERTY",
       "lbl" : "database_cross_reference"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
+      "id" : "http://purl.obolibrary.org/obo/RO_0001020",
       "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "NCBITaxon:27317",
-          "xrefs" : [ ]
-        } ]
-      }
+        "comments" : [ "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)" ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is allergic trigger for"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#has_material_basis_in",
       "meta" : {
@@ -2140,6 +2154,14 @@
       "lbl" : "inherited metabolic disorder"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_170",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_28"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3119",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_77"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_374",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060158"

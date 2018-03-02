@@ -36,6 +36,10 @@
       "type" : "PROPERTY",
       "lbl" : "database_cross_reference"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002451",
+      "type" : "PROPERTY",
+      "lbl" : "transmitted by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#results_in",
       "meta" : {
         "definition" : {
@@ -50,6 +54,13 @@
       "type" : "PROPERTY",
       "lbl" : "results_in"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001020",
+      "meta" : {
+        "comments" : [ "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)" ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is allergic trigger for"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9471",
       "meta" : {
         "definition" : {
@@ -58,11 +69,13 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#GOLD" ],
         "xrefs" : [ {
-          "val" : "ICD10CM:G03"
-        }, {
           "val" : "UMLS_CUI:C0025289"
         }, {
           "val" : "ICD10CM:G03.9"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:192681009"
+        }, {
+          "val" : "ICD10CM:G03"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154983000"
         }, {
@@ -77,8 +90,6 @@
           "val" : "SNOMEDCT_US_2016_03_01:192678004"
         }, {
           "val" : "MESH:D008581"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:192681009"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -91,15 +102,6 @@
       "type" : "CLASS",
       "lbl" : "meningitis"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
-      "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "NCBITaxon:27317",
-          "xrefs" : [ ]
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060345",
       "meta" : {
         "definition" : {
@@ -108,23 +110,23 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#GOLD" ],
         "xrefs" : [ {
+          "val" : "MESH:D016917"
+        }, {
           "val" : "UMLS_CUI:C0085434"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:58213005"
         }, {
           "val" : "NCI:C3477"
-        }, {
-          "val" : "MESH:D016917"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "emitraka"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2015-05-28T16:26:12Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "emitraka"
         } ]
       },
       "type" : "CLASS",
@@ -138,9 +140,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#GOLD" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2016_03_01:201088002"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:201079006"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:201088002"
         }, {
           "val" : "DERMO:0002165"
         }, {
@@ -150,11 +152,11 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "primary diffuse atrophy",
+          "val" : "Herxheimer disease",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Herxheimer disease",
+          "val" : "primary diffuse atrophy",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -171,23 +173,13 @@
       "type" : "CLASS",
       "lbl" : "acrodermatitis chronica atrophicans"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/doid#has_material_basis_in",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "has_material_basis_in"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_11092",
       "meta" : {
         "definition" : {
           "val" : "A Salmonella infectious disease that involves inflammation of the stomach and intestines caused by Salmonella infection. The symptoms include diarrhea, vomiting, abdominal pain, fever and weakness.",
           "xrefs" : [ "url:http://www.ncbi.nlm.nih.gov/sites/entrez/12631900" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#GOLD" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#GOLD", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Salmonellosis",
@@ -198,10 +190,6 @@
           "xrefs" : [ "ICD9CM_2006:003.0" ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Salmonellosis (& [gastroenteritis] or [food poisoning])",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:186094005" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Salmonella food poisoning (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:302229004" ]
         }, {
@@ -210,16 +198,20 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Salmonella gastroenteritis",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:154271008" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Salmonella gastroenteritis (disorder)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:42338000" ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Enteric paratyphosis",
           "xrefs" : [ "SNOMEDCT_2005_07_31:170879007" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Salmonellosis (& [gastroenteritis] or [food poisoning])",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:186094005" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Salmonella gastroenteritis",
+          "xrefs" : [ "SNOMEDCT_2005_07_31:154271008" ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Salmonella gastroenteritis [Ambiguous]",
@@ -233,6 +225,16 @@
       },
       "type" : "CLASS",
       "lbl" : "Salmonella gastroenteritis"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/doid#has_material_basis_in",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has_material_basis_in"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "type" : "PROPERTY",
@@ -252,25 +254,25 @@
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2016_03_01:19213003"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:236076004"
-        }, {
-          "val" : "UMLS_CUI:C0013369"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:111939009"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154268000"
         }, {
           "val" : "MESH:D003967"
         }, {
+          "val" : "SNOMEDCT_US_2016_03_01:186165000"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:186167008"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:236076004"
+        }, {
+          "val" : "UMLS_CUI:C0013369"
+        }, {
           "val" : "ICD9CM:009.2"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154279005"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:266180003"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:186165000"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:186167008"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:266173000"
         } ],
@@ -366,13 +368,13 @@
         }, {
           "val" : "UMLS_CUI:C0038159"
         }, {
+          "val" : "SNOMEDCT_US_2016_03_01:84622004"
+        }, {
           "val" : "MESH:D013202"
         }, {
           "val" : "ICD10CM:A05.0"
         }, {
           "val" : "ICD9CM:005.0"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:84622004"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -444,11 +446,7 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#GOLD" ],
         "xrefs" : [ {
-          "val" : "ICD10CM:A00"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:186088002"
-        }, {
-          "val" : "MESH:D002771"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:61972007"
         }, {
@@ -460,28 +458,32 @@
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:186087007"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:63650001"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:187267007"
         }, {
           "val" : "UMLS_CUI:C0008354"
         }, {
-          "val" : "ICD9CM:001"
-        }, {
-          "val" : "ICD10CM:A00.0"
-        }, {
           "val" : "ICD9CM:001.9"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:154269008"
+        }, {
+          "val" : "ICD10CM:A00"
+        }, {
+          "val" : "MESH:D002771"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:63650001"
+        }, {
+          "val" : "ICD9CM:001"
+        }, {
+          "val" : "ICD10CM:A00.0"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Cholera due to Vibrio cholerae",
-          "xrefs" : [ "ICD9CM_2006:001.0" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "(Cholera) or (Vibrio cholerae)",
           "xrefs" : [ "SNOMEDCT_2005_07_31:186087007" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Cholera due to Vibrio cholerae",
+          "xrefs" : [ "ICD9CM_2006:001.0" ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Cholera - Vibrio cholerae (disorder)",
@@ -506,6 +508,10 @@
       },
       "type" : "CLASS",
       "lbl" : "Pseudomonas septicemia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002200",
+      "type" : "PROPERTY",
+      "lbl" : "has phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#part_of",
       "meta" : {
@@ -540,6 +546,10 @@
       },
       "type" : "PROPERTY",
       "lbl" : "inheres_in"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "lbl" : "located in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#derives_from",
       "meta" : {
@@ -585,6 +595,10 @@
       "type" : "PROPERTY",
       "lbl" : "composed_of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000664",
+      "type" : "PROPERTY",
+      "lbl" : "has material basis in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#realized_by",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -595,13 +609,9 @@
       "type" : "PROPERTY",
       "lbl" : "realized_by"
     }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
-      "type" : "PROPERTY",
-      "lbl" : "subset_property"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_11144",
       "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#GOLD", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-positive_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-positive_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#GOLD" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Anthrax septicemia (disorder)",
@@ -619,6 +629,10 @@
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_narrow_synonym"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
+      "type" : "PROPERTY",
+      "lbl" : "subset_property"
     }, {
       "id" : "http://purl.obolibrary.org/obo/doid#located_in",
       "meta" : {
@@ -654,19 +668,19 @@
         }, {
           "val" : "NCI:C84586"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:17116008"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:187340003"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:186824002"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:266123003"
         }, {
           "val" : "UMLS_CUI:C0004771"
         }, {
-          "val" : "MESH:D001474"
-        }, {
           "val" : "ICD10CM:A44"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:17116008"
+        }, {
+          "val" : "SNOMEDCT_US_2016_03_01:187340003"
+        }, {
+          "val" : "MESH:D001474"
         }, {
           "val" : "ICD9CM:088.0"
         } ],
@@ -705,15 +719,15 @@
         }, {
           "val" : "ICD10CM:J15.9"
         }, {
+          "val" : "SNOMEDCT_US_2016_03_01:195892002"
+        }, {
+          "val" : "UMLS_CUI:C0004626"
+        }, {
           "val" : "SNOMEDCT_US_2016_03_01:195891009"
         }, {
           "val" : "SNOMEDCT_US_2016_03_01:155553007"
         }, {
-          "val" : "SNOMEDCT_US_2016_03_01:195892002"
-        }, {
           "val" : "ICD9CM:482.9"
-        }, {
-          "val" : "UMLS_CUI:C0004626"
         }, {
           "val" : "MESH:D018410"
         } ],

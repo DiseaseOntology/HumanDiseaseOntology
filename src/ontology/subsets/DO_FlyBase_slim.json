@@ -572,8 +572,6 @@
         }, {
           "val" : "UMLS_CUI:C0009207"
         }, {
-          "val" : "OMIM:216411"
-        }, {
           "val" : "ORDO:90324"
         }, {
           "val" : "OMIM:216400"
@@ -839,8 +837,12 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3490",
       "meta" : {
+        "definition" : {
+          "val" : "A syndrome that is characterized by mildly unusual facial features, short stature, heart defects, bleeding problems, skeletal malformations, and many other signs and symptoms.",
+          "xrefs" : [ "url:https://ghr.nlm.nih.gov/condition/noonan-syndrome#definition", "url:https://rarediseases.info.nih.gov/diseases/10955/noonan-syndrome" ]
+        },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "ORDO:648"
         }, {
@@ -2755,6 +2757,10 @@
       "type" : "PROPERTY",
       "lbl" : "results_in_formation_of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "lbl" : "located in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14791",
       "meta" : {
         "definition" : {
@@ -3192,6 +3198,13 @@
       "type" : "CLASS",
       "lbl" : "ovarian cancer"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001020",
+      "meta" : {
+        "comments" : [ "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)" ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is allergic trigger for"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_10283",
       "meta" : {
         "definition" : {
@@ -3304,15 +3317,6 @@
       },
       "type" : "CLASS",
       "lbl" : "prostate cancer"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_27317",
-      "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "NCBITaxon:27317",
-          "xrefs" : [ ]
-        } ]
-      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_680",
       "meta" : {
@@ -3523,45 +3527,11 @@
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
-          "val" : "OMIM:162400"
-        }, {
-          "val" : "OMIM:256800"
-        }, {
-          "val" : "OMIM:310470"
-        }, {
-          "val" : "OMIM:613640"
-        }, {
-          "val" : "OMIM:608654"
-        }, {
-          "val" : "OMIM:615632"
-        }, {
-          "val" : "OMIM:614116"
-        }, {
-          "val" : "OMIM:613708"
-        }, {
-          "val" : "OMIM:201300"
-        }, {
-          "val" : "OMIM:608088"
-        }, {
-          "val" : "OMIM:256860"
-        }, {
-          "val" : "OMIM:613115"
-        }, {
-          "val" : "OMIM:616488"
-        }, {
-          "val" : "OMIM:614213"
-        }, {
-          "val" : "OMIM:615548"
-        }, {
-          "val" : "OMIM:614653"
+          "val" : "OMIM:PS162400"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "hereditary sensory and autonomic neuropathy",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "congenital insensitivity to pain",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -3893,7 +3863,7 @@
           "xrefs" : [ "SNOMEDCT_2005_07_31:5360002" ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Steatosis of liver (disorder)",
+          "val" : "Steatosis of liver",
           "xrefs" : [ "SNOMEDCT_2005_07_31:197321007" ]
         }, {
           "pred" : "hasExactSynonym",
@@ -4009,9 +3979,9 @@
         }, {
           "val" : "OMIM:PS105400"
         }, {
-          "val" : "UMLS_CUI:C0002736"
-        }, {
           "val" : "KEGG:05014"
+        }, {
+          "val" : "UMLS_CUI:C0002736"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -4034,6 +4004,20 @@
       "type" : "CLASS",
       "lbl" : "amyotrophic lateral sclerosis"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/doid#located_in",
+      "meta" : {
+        "definition" : {
+          "val" : "Anatomical location.",
+          "xrefs" : [ "DO:lh" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "located_in"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_5419",
       "meta" : {
         "definition" : {
@@ -4043,15 +4027,7 @@
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
-          "val" : "OMIM:608543"
-        }, {
-          "val" : "OMIM:603342"
-        }, {
           "val" : "OMIM:181500"
-        }, {
-          "val" : "OMIM:603206"
-        }, {
-          "val" : "OMIM:612361"
         }, {
           "val" : "UMLS_CUI:C0029838"
         }, {
@@ -4059,39 +4035,11 @@
         }, {
           "val" : "EFO:0000692"
         }, {
-          "val" : "OMIM:600850"
-        }, {
-          "val" : "OMIM:603176"
-        }, {
-          "val" : "OMIM:603175"
-        }, {
           "val" : "ICD9CM:295.8"
-        }, {
-          "val" : "OMIM:604906"
-        }, {
-          "val" : "OMIM:608078"
-        }, {
-          "val" : "OMIM:615232"
-        }, {
-          "val" : "HP:0100753"
         }, {
           "val" : "MESH:D012559"
         }, {
           "val" : "UMLS_CUI:C0220702"
-        }, {
-          "val" : "OMIM:613959"
-        }, {
-          "val" : "OMIM:181510"
-        }, {
-          "val" : "OMIM:600511"
-        }, {
-          "val" : "OMIM:603013"
-        }, {
-          "val" : "OMIM:605419"
-        }, {
-          "val" : "OMIM:613950"
-        }, {
-          "val" : "OMIM:613025"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -4108,20 +4056,6 @@
       },
       "type" : "CLASS",
       "lbl" : "schizophrenia"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/doid#located_in",
-      "meta" : {
-        "definition" : {
-          "val" : "Anatomical location.",
-          "xrefs" : [ "DO:lh" ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "located_in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_699",
       "meta" : {
@@ -4381,6 +4315,10 @@
       "type" : "CLASS",
       "lbl" : "non-syndromic X-linked intellectual disability"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002451",
+      "type" : "PROPERTY",
+      "lbl" : "transmitted by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9884",
       "meta" : {
         "definition" : {
@@ -4557,70 +4495,28 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14504",
       "meta" : {
+        "definition" : {
+          "val" : "A sphingoliidosis characterized by the accumulation of the lipid sphingomyelin in lysosomes in cells.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Niemann–Pick_disease", "url:https://rarediseases.info.nih.gov/diseases/13334/niemann-pick-disease" ]
+        },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
-          "val" : "OMIM:257220"
-        }, {
-          "val" : "MESH:D052556"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:58459009"
-        }, {
-          "val" : "ICD10CM:E75.242"
-        }, {
           "val" : "ICD10CM:E75.249"
         }, {
           "val" : "NCI:C61269"
         }, {
-          "val" : "NCI:C85214"
-        }, {
-          "val" : "OMIM:257200"
-        }, {
-          "val" : "UMLS_CUI:C0220756"
-        }, {
-          "val" : "SNOMEDCT_US_2016_03_01:66751000"
-        }, {
           "val" : "MESH:D009542"
         }, {
-          "val" : "ICD10CM:E75.24"
-        }, {
           "val" : "UMLS_CUI:C0028064"
-        }, {
-          "val" : "OMIM:607625"
-        }, {
-          "val" : "OMIM:607616"
         } ],
         "synonyms" : [ {
-          "pred" : "hasNarrowSynonym",
-          "val" : "Type A Niemann-Pick Disease",
-          "xrefs" : [ ]
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "sphingomyelin lipidosis",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Niemann-Pick disease type C",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Niemann-Pick disease type B",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Niemann-Pick disease type A",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Sphingomyelinase Deficiency Disease",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Niemann-Pick disease with cholesterol esterification block",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Niemann-Pick disease, subacute juvenile form",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -5102,6 +4998,10 @@
       "type" : "CLASS",
       "lbl" : "Troyer syndrome"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002200",
+      "type" : "PROPERTY",
+      "lbl" : "has phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/doid#part_of",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -5261,8 +5161,6 @@
         }, {
           "val" : "UMLS_CUI:C0268118"
         }, {
-          "val" : "HP:0010934"
-        }, {
           "val" : "SNOMEDCT_US_2016_03_01:124147007"
         }, {
           "val" : "UMLS_CUI:C1863688"
@@ -5401,6 +5299,10 @@
       },
       "type" : "CLASS",
       "lbl" : "infantile cerebellar-retinal degeneration"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000664",
+      "type" : "PROPERTY",
+      "lbl" : "has material basis in"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050882",
       "meta" : {
@@ -8220,7 +8122,7 @@
       "meta" : {
         "definition" : {
           "val" : "A substance abuse that involves the recurring use of alcoholic beverages despite negative consequences.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Alcohol_abuse" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Alcohol_abuse", "url:https://www.niaaa.nih.gov/alcohol-health/overview-alcohol-consumption/alcohol-use-disorders" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
@@ -8244,6 +8146,10 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
+          "val" : "alcohol abuse",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "Ethanol abuse",
           "xrefs" : [ "SNOMEDCT_2005_07_31:304606004" ]
         } ],
@@ -8253,7 +8159,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "alcohol abuse"
+      "lbl" : "alcohol use disorder"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3753",
       "meta" : {
@@ -8824,13 +8730,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_14175",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_14566"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050547",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_305"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_14175",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060085"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060085",
       "pred" : "is_a",

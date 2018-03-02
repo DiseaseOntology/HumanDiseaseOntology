@@ -405,6 +405,7 @@ xref: SNOMEDCT_US_2016_03_01:387927001
 xref: SNOMEDCT_US_2016_03_01:93780007
 xref: UMLS_CUI:C0014132
 xref: UMLS_CUI:C0153658
+is_a: DOID:28 ! endocrine system disease
 
 [Term]
 id: DOID:1725
@@ -468,7 +469,7 @@ xref: UMLS_CUI:C0178830
 id: DOID:225
 name: syndrome
 namespace: disease_ontology
-def: "A disease comprised of a group of signs and symptoms that occur together and characterize a particular abnormality." [URL:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
+def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [URL:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
 subset: DO_MGI_slim
 xref: MESH:D013577
 xref: NCI:C28193
@@ -591,6 +592,7 @@ xref: SNOMEDCT_US_2016_03_01:93811007
 xref: UMLS_CUI:C0012243
 xref: UMLS_CUI:C0017185
 xref: UMLS_CUI:C0685938
+is_a: DOID:77 ! gastrointestinal system disease
 
 [Term]
 id: DOID:374
@@ -846,6 +848,27 @@ xref: SNOMEDCT_US_2016_03_01:192641002
 xref: SNOMEDCT_US_2016_03_01:267679005
 xref: SNOMEDCT_US_2016_03_01:286946008
 xref: UMLS_CUI:C0027765
+
+[Typedef]
+id: IDO:0000664
+name: has material basis in
+
+[Typedef]
+id: RO:0001020
+name: is allergic trigger for
+comment: Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)
+
+[Typedef]
+id: RO:0001025
+name: located in
+
+[Typedef]
+id: RO:0002200
+name: has phenotype
+
+[Typedef]
+id: RO:0002451
+name: transmitted by
 
 [Typedef]
 id: complicated_by

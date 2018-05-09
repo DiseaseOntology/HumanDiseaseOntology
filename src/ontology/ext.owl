@@ -11,14 +11,14 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 Ontology(<http://purl.obolibrary.org/obo/doid/obo/ext.owl>
 Import(<http://purl.obolibrary.org/obo/trans.owl>)
-Import(<http://purl.obolibrary.org/obo/symp.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/relations.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/symp.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/so.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/relations.owl>)
 
 Declaration(Class(obo:HP_0000271))
 Declaration(Class(obo:HP_0004207))
@@ -183,46 +183,9 @@ Declaration(Class(obo:SO_0000110))
 Declaration(Class(obo:SO_0000400))
 Declaration(Class(obo:SO_0001060))
 Declaration(Class(obo:SO_0001260))
-Declaration(Class(obo:UBERON_0000033))
-Declaration(Class(obo:UBERON_0000065))
-Declaration(Class(obo:UBERON_0000310))
-Declaration(Class(obo:UBERON_0000915))
-Declaration(Class(obo:UBERON_0000948))
-Declaration(Class(obo:UBERON_0000949))
-Declaration(Class(obo:UBERON_0000955))
-Declaration(Class(obo:UBERON_0000959))
-Declaration(Class(obo:UBERON_0000964))
-Declaration(Class(obo:UBERON_0000966))
-Declaration(Class(obo:UBERON_0000970))
-Declaration(Class(obo:UBERON_0000974))
-Declaration(Class(obo:UBERON_0000990))
-Declaration(Class(obo:UBERON_0001003))
-Declaration(Class(obo:UBERON_0001004))
-Declaration(Class(obo:UBERON_0001016))
-Declaration(Class(obo:UBERON_0001043))
-Declaration(Class(obo:UBERON_0001130))
-Declaration(Class(obo:UBERON_0001134))
-Declaration(Class(obo:UBERON_0001267))
-Declaration(Class(obo:UBERON_0001322))
-Declaration(Class(obo:UBERON_0001323))
-Declaration(Class(obo:UBERON_0001621))
-Declaration(Class(obo:UBERON_0001757))
-Declaration(Class(obo:UBERON_0002017))
-Declaration(Class(obo:UBERON_0002101))
-Declaration(Class(obo:UBERON_0002107))
-Declaration(Class(obo:UBERON_0002113))
-Declaration(Class(obo:UBERON_0002279))
-Declaration(Class(obo:UBERON_0002384))
-Declaration(Class(obo:UBERON_0002385))
-Declaration(Class(obo:UBERON_0002407))
-Declaration(Class(obo:UBERON_0002420))
-Declaration(Class(obo:UBERON_0003691))
-Declaration(Class(obo:UBERON_0004535))
-Declaration(Class(obo:UBERON_0004681))
-Declaration(Class(obo:UBERON_0005396))
-Declaration(Class(obo:UBERON_0005409))
-Declaration(Class(obo:UBERON_0007798))
-Declaration(Class(obo:UBERON_0018707))
+
+
+
 ############################
 #   Classes
 ############################
@@ -248,10 +211,6 @@ AnnotationAssertion(oboInOwl:id obo:NCBITaxon_1 "NCBITaxon:1")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_11021 "NCBITaxon:11021")
 AnnotationAssertion(rdfs:label obo:NCBITaxon_11021 "Eastern equine encephalitis virus")
 SubClassOf(obo:NCBITaxon_11021 obo:NCBITaxon_1)
-
-# Class: obo:NCBITaxon_27317 (Geotrichum candidum [NCBITaxon:27317])
-
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_27317 "NCBITaxon:27317")
 
 # Class: obo:NCBITaxon_29960 (Fenneropenaeus indicus)
 
@@ -1351,258 +1310,10 @@ SubClassOf(obo:SO_0001060 obo:SO_0000000)
 
 SubClassOf(obo:SO_0001260 obo:SO_0000000)
 
-# Class: obo:UBERON_0000033 (head)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000033 "head"^^xsd:string)
-SubClassOf(obo:UBERON_0000033 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000065 (respiratory tract)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000065 "respiratory tract"^^xsd:string)
-SubClassOf(obo:UBERON_0000065 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000310 (breast)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000310 "breast"^^xsd:string)
-SubClassOf(obo:UBERON_0000310 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000915 (thorax)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000915 "thorax"^^xsd:string)
-SubClassOf(obo:UBERON_0000915 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000948 (heart)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000948 "heart"^^xsd:string)
-SubClassOf(obo:UBERON_0000948 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000949 (endocrine system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000949 "endocrine system"^^xsd:string)
-SubClassOf(obo:UBERON_0000949 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000955 (brain)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000955 "brain"^^xsd:string)
-SubClassOf(obo:UBERON_0000955 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000959 (optic chiasma)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000959 "optic chiasma"^^xsd:string)
-SubClassOf(obo:UBERON_0000959 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000964 (cornea)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000964 "cornea"^^xsd:string)
-SubClassOf(obo:UBERON_0000964 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000966 (retina)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000966 "retina"^^xsd:string)
-SubClassOf(obo:UBERON_0000966 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000970 (eye)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000970 "eye"^^xsd:string)
-SubClassOf(obo:UBERON_0000970 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000974 (neck)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000974 "neck"^^xsd:string)
-SubClassOf(obo:UBERON_0000974 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000990 (reproductive system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0000990 "reproductive system"^^xsd:string)
-SubClassOf(obo:UBERON_0000990 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0000992 (ovary)
-
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:UBERON_0000992 "female gonad")
-
-# Class: obo:UBERON_0001003 (skin epidermis)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001003 "skin epidermis"^^xsd:string)
-SubClassOf(obo:UBERON_0001003 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001004 (respiratory system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001004 "respiratory system"^^xsd:string)
-SubClassOf(obo:UBERON_0001004 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001016 (nervous system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001016 "nervous system"^^xsd:string)
-SubClassOf(obo:UBERON_0001016 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001043 (esophagus)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001043 "esophagus"^^xsd:string)
-SubClassOf(obo:UBERON_0001043 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001130 (spine)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001130 "spine"^^xsd:string)
-SubClassOf(obo:UBERON_0001130 obo:UBERON_0000000)
-
 # Class: obo:UBERON_0001134 (skeletal muscle tissue)
 
-AnnotationAssertion(rdfs:label obo:UBERON_0001134 "skeletal muscle tissue"^^xsd:string)
 SubClassOf(obo:UBERON_0001134 obo:UBERON_0004755)
 
-# Class: obo:UBERON_0001267 (femoral nerve)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001267 "femoral nerve"^^xsd:string)
-SubClassOf(obo:UBERON_0001267 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001322 (sciatic nerve)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001322 "sciatic nerve"^^xsd:string)
-SubClassOf(obo:UBERON_0001322 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001323 (tibial nerve)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001323 "tibial nerve"^^xsd:string)
-SubClassOf(obo:UBERON_0001323 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001621 (coronary artery)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0001621 "coronary artery"^^xsd:string)
-SubClassOf(obo:UBERON_0001621 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0001757 (coronary artery)
-
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:UBERON_0001757 "auricle"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0001757 "coronary artery"^^xsd:string)
-SubClassOf(obo:UBERON_0001757 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002017 (portal vein)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002017 "portal vein"^^xsd:string)
-SubClassOf(obo:UBERON_0002017 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002101 (limb)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002101 "limb"^^xsd:string)
-SubClassOf(obo:UBERON_0002101 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002107 (liver)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002107 "liver"^^xsd:string)
-SubClassOf(obo:UBERON_0002107 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002113 (kidney)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002113 "kidney"^^xsd:string)
-SubClassOf(obo:UBERON_0002113 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002279 (vestibular aqueduct)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002279 "vestibular aqueduct"^^xsd:string)
-SubClassOf(obo:UBERON_0002279 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002384 (connective tissue)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002384 "connective tissue"^^xsd:string)
-SubClassOf(obo:UBERON_0002384 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002385 (muscle tissue)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002385 "muscle tissue"^^xsd:string)
-SubClassOf(obo:UBERON_0002385 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002407 (pericardium)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002407 "pericardium"^^xsd:string)
-SubClassOf(obo:UBERON_0002407 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0002420 (basal ganglion)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0002420 "basal ganglion"^^xsd:string)
-SubClassOf(obo:UBERON_0002420 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0003587 (limb connective tissue)
-
-SubClassOf(obo:UBERON_0003587 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0003691 (epidural space)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0003691 "epidural space"^^xsd:string)
-SubClassOf(obo:UBERON_0003691 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0003898 (skeletal muscle tissue of trunk)
-
-SubClassOf(obo:UBERON_0003898 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004057 (skeletal muscle fiber triad)
-
-SubClassOf(obo:UBERON_0004057 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004496 (skeletal muscle tissue of iliacus)
-
-SubClassOf(obo:UBERON_0004496 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004497 (skeletal muscle tissue of gluteus maximus)
-
-SubClassOf(obo:UBERON_0004497 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004498 (skeletal muscle tissue of quadriceps femoris)
-
-SubClassOf(obo:UBERON_0004498 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004499 (skeletal muscle tissue of tibialis anterior)
-
-SubClassOf(obo:UBERON_0004499 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004500 (skeletal muscle tissue of deltoid)
-
-SubClassOf(obo:UBERON_0004500 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004501 (skeletal muscle tissue of teres major)
-
-SubClassOf(obo:UBERON_0004501 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004502 (skeletal muscle tissue of biceps brachii)
-
-SubClassOf(obo:UBERON_0004502 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004512 (skeletal muscle tissue of supraspinatus)
-
-SubClassOf(obo:UBERON_0004512 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0004535 (cardiovascular system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0004535 "cardiovascular system"^^xsd:string)
-SubClassOf(obo:UBERON_0004535 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0004681 (vestibular system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0004681 "vestibular system"^^xsd:string)
-SubClassOf(obo:UBERON_0004681 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0004857 (skeletal muscle connective tissue)
-
-SubClassOf(obo:UBERON_0004857 obo:UBERON_0001134)
-
-# Class: obo:UBERON_0005396 (carotid artery)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0005396 "carotid artery"^^xsd:string)
-SubClassOf(obo:UBERON_0005396 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0005409 (gastrointestinal tract)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0005409 "gastrointestinal tract"^^xsd:string)
-SubClassOf(obo:UBERON_0005409 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0007798 (vascular system)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0007798 "vascular system"^^xsd:string)
-SubClassOf(obo:UBERON_0007798 obo:UBERON_0000000)
-
-# Class: obo:UBERON_0018707 (bladder)
-
-AnnotationAssertion(rdfs:label obo:UBERON_0018707 "bladder"^^xsd:string)
-SubClassOf(obo:UBERON_0018707 obo:UBERON_0000000)
 
 AnnotationAssertion(oboInOwl:id obo:CL_0000000 "CL:0000000")
 AnnotationAssertion(oboInOwl:id obo:HP_0000001 "HP:0000001")
@@ -1764,5 +1475,7 @@ AnnotationAssertion(owl:deprecated obo:HP_0100882 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0100883 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200058 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200059 "true"^^xsd:boolean)
-AnnotationAssertion(rdfs:comment obo:UBERON_0004832 "UBERON:0000000")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_27317 "NCBITaxon:27317")
+AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomy"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:UBERON_0001130 "spine"^^xsd:string)
 )

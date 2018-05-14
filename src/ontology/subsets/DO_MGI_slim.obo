@@ -248,7 +248,7 @@ subset: TopNodes_DOcancerslim
 synonym: "head and neck neoplasm" EXACT [MTH:NOCODE]
 synonym: "head and neck tumours" EXACT []
 synonym: "head/neck neoplasm" EXACT [CSP2005:2005-4325]
-synonym: "tumor of head and neck (disorder)" EXACT [SNOMEDCT_2005_07_31:255055008]
+synonym: "tumor of head and neck" EXACT [SNOMEDCT_2005_07_31:255055008]
 xref: MESH:D006258
 xref: NCI:C3077
 xref: SNOMEDCT_US_2016_03_01:255055008
@@ -287,7 +287,7 @@ subset: DO_MGI_slim
 synonym: "anhidrotic ectodermal dysplasia 3" EXACT []
 synonym: "Christ-Siemens-Touraine Syndrome" EXACT []
 synonym: "Ectodermal Dysplasia 1, Anhydrotic" EXACT []
-synonym: "Hypohidrotic X-linked ectodermal dysplasia (disorder)" EXACT [SNOMEDCT_2005_07_31:239007005]
+synonym: "Hypohidrotic X-linked ectodermal dysplasia" EXACT [SNOMEDCT_2005_07_31:239007005]
 xref: MESH:D053358
 xref: NCI:C84562
 xref: OMIM:129490
@@ -299,6 +299,7 @@ xref: SNOMEDCT_US_2016_03_01:4826006
 xref: SNOMEDCT_US_2016_03_01:7731005
 xref: UMLS_CUI:C0162359
 is_a: DOID:0050739 ! autosomal genetic disease
+is_a: DOID:17 ! musculoskeletal system disease
 
 [Term]
 id: DOID:15
@@ -388,9 +389,8 @@ synonym: "Endocrine tumor" EXACT [NCI2004_11_17:C3010]
 synonym: "malignant Endocrine tumor" EXACT [NCI2004_11_17:C3575]
 synonym: "malignant neoplasm of endocrine gland" EXACT []
 synonym: "malignant tumour of endocrine gland" EXACT [SNOMEDCT_2005_07_31:93780007]
-synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:127015005]
-synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:387922007]
-synonym: "neoplasm of endocrine system (disorder)" EXACT [SNOMEDCT_2005_07_31:387927001]
+synonym: "neoplasm of endocrine gland" EXACT [SNOMEDCT_2005_07_31:127015005]
+synonym: "neoplasm of endocrine system" EXACT [SNOMEDCT_2005_07_31:387927001]
 xref: ICD10CM:C75.9
 xref: ICD9CM:194.9
 xref: MESH:D004701
@@ -464,6 +464,7 @@ synonym: "malignant reproductive system neoplasm" EXACT []
 synonym: "Reproductive tumor" EXACT [NCI2004_11_17:C3674]
 xref: NCI:C3674
 xref: UMLS_CUI:C0178830
+is_a: DOID:15 ! reproductive system disease
 
 [Term]
 id: DOID:225
@@ -483,7 +484,7 @@ namespace: disease_ontology
 comment: DeObs MGI.
 subset: DO_MGI_slim
 synonym: "Chondrodysplasia calcificans congenita" EXACT [SNOMEDCT_2005_07_31:22932004]
-synonym: "Chondrodysplasia punctata congenita (disorder)" EXACT [SNOMEDCT_2005_07_31:360507004]
+synonym: "Chondrodysplasia punctata congenita" EXACT [SNOMEDCT_2005_07_31:360507004]
 xref: ICD10CM:Q77.3
 xref: MESH:D002806
 xref: NCI:C84632
@@ -548,7 +549,7 @@ alt_id: DOID:4695
 def: "An organ system cancer located_in the nervous system that affects the central or peripheral nervous system." [url:http\://emedicine.medscape.com/oncology, url:http\://en.wikipedia.org/wiki/Nervous_system_disease]
 subset: DO_MGI_slim
 synonym: "malignant neoplasm of nervous system" EXACT []
-synonym: "neoplasm of nervous system (disorder)" EXACT [SNOMEDCT_2005_07_31:126950007]
+synonym: "neoplasm of nervous system" EXACT [SNOMEDCT_2005_07_31:126950007]
 synonym: "nervous system neoplasm" EXACT [CSP2005:2012-5157]
 synonym: "neural neoplasm" EXACT []
 synonym: "neural tumor" EXACT [NCI2004_11_17:C35562]
@@ -561,6 +562,7 @@ xref: SNOMEDCT_US_2016_03_01:188306000
 xref: UMLS_CUI:C0027665
 xref: UMLS_CUI:C0153643
 xref: UMLS_CUI:C1334956
+is_a: DOID:863 ! nervous system disease
 
 [Term]
 id: DOID:3119
@@ -612,9 +614,10 @@ is_a: DOID:0060158 ! acquired metabolic disease
 id: DOID:4501
 name: orofaciodigital syndrome
 namespace: disease_ontology
-def: "A genetic disease that is characterized by malformations of the face, oral cavity, and digits with polycystic kidney disease and variable involvement of the central nervous system and has_material_basis_in X-linked inheritance of an OFD gene." [url:http\://en.wikipedia.org/wiki/Orofaciodigital_syndrome]
+def: "A genetic disease that is characterized by malformations of the face, oral cavity, and digits." [url:http\://en.wikipedia.org/wiki/Orofaciodigital_syndrome, url:https\://ghr.nlm.nih.gov/condition/oral-facial-digital-syndrome#inheritance]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
+synonym: "oral-facial-digital syndrome" EXACT []
 xref: MESH:D009958
 xref: UMLS_CUI:C0029294
 
@@ -639,6 +642,7 @@ xref: SNOMEDCT_US_2016_03_01:188365003
 xref: SNOMEDCT_US_2016_03_01:255058005
 xref: UMLS_CUI:C0039981
 xref: UMLS_CUI:C0153661
+is_a: DOID:0060118 ! thoracic disease
 
 [Term]
 id: DOID:574
@@ -677,17 +681,14 @@ alt_id: DOID:9860
 def: "An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum." [url:http\://en.wikipedia.org/wiki/Retroperitoneal_space]
 subset: DO_MGI_slim
 synonym: "malignant neoplasm of retroperitoneum" RELATED [ICD9CM_2006:158.0]
-synonym: "malignant neoplasm of retroperitoneum and peritoneum" EXACT [ICD9CM_2006:158]
-synonym: "malignant neoplasm of retroperitoneum and peritoneum NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:187817008]
+synonym: "malignant neoplasm of retroperitoneum and peritoneum" EXACT []
 synonym: "malignant retroperitoneal cancer" RELATED []
 synonym: "malignant tumor of peritoneum and retroperitoneum" EXACT []
-synonym: "malignant tumor of peritoneum and retroperitoneum (disorder)" EXACT [SNOMEDCT_2005_07_31:187801002]
+synonym: "malignant tumor of peritoneum and retroperitoneum" EXACT [SNOMEDCT_2005_07_31:187801002]
 synonym: "neoplasm of retroperitoneum" EXACT [SNOMEDCT_2005_07_31:359767009]
-synonym: "neoplasm of the retroperitoneum" EXACT [SNOMEDCT_2005_07_31:359770008]
-synonym: "neoplasm of the retroperitoneum" EXACT [SNOMEDCT_2005_07_31:126872008]
-synonym: "retroperitoneal neoplasm" EXACT [CSP2005:2005-3788]
-synonym: "retroperitoneal neoplasm" EXACT [NCI2004_11_17:C3357]
-synonym: "tumor of retroperitoneum (disorder)" EXACT [SNOMEDCT_2005_07_31:254617008]
+synonym: "neoplasm of the retroperitoneum" EXACT []
+synonym: "retroperitoneal neoplasm" EXACT []
+synonym: "tumor of retroperitoneum" EXACT [SNOMEDCT_2005_07_31:254617008]
 xref: ICD10CM:C48
 xref: ICD10CM:C48.0
 xref: ICD9CM:158
@@ -756,7 +757,7 @@ subset: DO_AGR_slim
 subset: DO_MGI_slim
 synonym: "Blood disease" EXACT [SNOMEDCT_2005_07_31:154785002]
 synonym: "blood disorder" EXACT [CSP2005:0427-3600]
-synonym: "Blood dyscrasia NOS" EXACT [MTHICD9_2006:289.9]
+synonym: "Blood dyscrasia" EXACT [MTHICD9_2006:289.9]
 synonym: "disease of hematopoietic system" EXACT []
 synonym: "DISEASE OF THE BLOOD AND BLOOD-FORMING ORGANS" EXACT [ICD9CM_2006:280-289.99]
 synonym: "Hematological disease" EXACT [MTH:NOCODE]

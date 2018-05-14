@@ -156,7 +156,7 @@ synonym: "Fiebre maculosa" RELATED []
 synonym: "Fiebre manchada" RELATED []
 synonym: "Sao Paulo typhus" RELATED []
 synonym: "So Paulo fever" RELATED []
-synonym: "Tick typhus " RELATED []
+synonym: "Tick typhus" EXACT []
 synonym: "Tobia fever" RELATED []
 is_a: DOID:11104 ! spotted fever
 
@@ -683,7 +683,7 @@ is_obsolete: true
 id: DOID:0050480
 name: epidemic typhus
 namespace: disease_ontology
-def: "A typhus that has_material_basis_in Rickettsia prowazekii, which is transmitted_by human body louse (Pediculus humanus corporis). The infection has_symptom high fever, has_symptom cough, has_symptom rash, has_symptom severe muscle pain, has_symptom chills, has_symptom falling blood pressure, has_symptom stupor, has_symptom sensitivity to light, and has_symptom delirium." [url:http\://en.wikipedia.org/wiki/Epidemic_typhus]
+def: "A typhus that has material basis in Rickettsia prowazekii, which is transmitted by human body louse (Pediculus humanus corporis). The infection has symptom high fever, has symptom cough, has symptom rash, has symptom severe muscle pain, has symptom chills, has symptom falling blood pressure, has symptom stupor, has symptom sensitivity to light, and has symptom delirium." [url:http\://en.wikipedia.org/wiki/Epidemic_typhus]
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "sylvatic typhus" EXACT []
@@ -935,7 +935,7 @@ id: DOID:10242
 name: ehrlichiosis
 namespace: disease_ontology
 alt_id: DOID:0050023
-def: "A primary bacterial infectious disease that results_in infection located_in leukocyte, has_material_basis_in Ehrlichia chaffeensis or Anaplasma phagocytophilum, which are transmitted_by lone start stick and transmitted_by black-legged tick respectively. The infection has_symptom headache, has_symptom muscle aches, has_symptom fatigue and has_symptom rash." [url:http\://emedicine.medscape.com/article/235839-overview, url:http\://en.wikipedia.org/wiki/Ehrlichiosis]
+def: "A primary bacterial infectious disease that results in infection located in leukocyte, has material basis in Ehrlichia chaffeensis or Anaplasma phagocytophilum, which are transmitted by lone start stick and transmitted by black-legged tick respectively. The infection has symptom headache, has symptom muscle aches, has symptom fatigue and has symptom rash." [url:http\://emedicine.medscape.com/article/235839-overview, url:http\://en.wikipedia.org/wiki/Ehrlichiosis]
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 synonym: "human ehrlichiosis" EXACT []
@@ -961,7 +961,7 @@ is_obsolete: true
 id: DOID:10371
 name: yaws
 namespace: disease_ontology
-def: "A primary bacterial infectious disease that results_in infection located_in skin, located_in joint or located_in bone, has_material_basis_in Treponema pallidum subsp pertenue, which is transmitted_by direct skin contact with an infected person. The infection has_symptom skin lesions." [url:http\://en.wikipedia.org/wiki/Yaws, url:http\://www.who.int/mediacentre/factsheets/fs316/en/]
+def: "A primary bacterial infectious disease that results in infection located in skin, located in joint or located in bone, has material basis in Treponema pallidum subsp pertenue, which is transmitted by direct skin contact with an infected person. The infection has symptom skin lesions." [url:http\://en.wikipedia.org/wiki/Yaws, url:http\://www.who.int/mediacentre/factsheets/fs316/en/]
 subset: gram-negative_bacterial_infectious_disease
 synonym: "Bouba" EXACT []
 synonym: "frambesia" EXACT []
@@ -1013,9 +1013,10 @@ name: Legionnaires' disease
 namespace: disease_ontology
 def: "A legionellosis that is characterized by severe form of infection producing pneumonia. Symptoms include fever, chills, and cough." [url:http\://en.wikipedia.org/wiki/Legionellosis]
 subset: gram-negative_bacterial_infectious_disease
-synonym: "(Legionella) or (Legionnaire's disease)" EXACT [SNOMEDCT_2005_07_31:266186009]
-synonym: "Infection by Legionella pneumophilia (disorder)" EXACT [SNOMEDCT_2005_07_31:269574000]
-synonym: "Legionella pneumonia (disorder)" EXACT [SNOMEDCT_2005_07_31:195889001]
+synonym: "Infection by Legionella pneumophilia" EXACT [SNOMEDCT_2005_07_31:269574000]
+synonym: "Legionella" EXACT [SNOMEDCT_2005_07_31:266186009]
+synonym: "Legionella pneumonia" EXACT [SNOMEDCT_2005_07_31:195889001]
+synonym: "Legionnaire's disease" EXACT [SNOMEDCT_2005_07_31:266186009]
 xref: ICD10CM:A48.1
 xref: ICD9CM:482.84
 xref: MESH:D007877
@@ -1034,7 +1035,7 @@ name: legionellosis
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection located_in respiratory tract, has_material_basis_in Legionella pneumophila, which is transmitted_by inhalation of droplets containing bacteria. The symptoms include dry cough, fever, headache and diarrhea." [url:http\://en.wikipedia.org/wiki/Legionellosis, url:http\://www.cdc.gov/mmwr/preview/mmwrhtml/mm4934a1.htm]
 subset: gram-negative_bacterial_infectious_disease
-synonym: "Legionella infection (disorder)" EXACT [SNOMEDCT_2005_07_31:26726000]
+synonym: "Legionella infection" EXACT [SNOMEDCT_2005_07_31:26726000]
 xref: MESH:D007876
 xref: SNOMEDCT_US_2016_03_01:26726000
 xref: UMLS_CUI:C0023240
@@ -1115,10 +1116,9 @@ synonym: "Gummata and ulcers due to yaws" EXACT [ICD9CM_2006:102.4]
 synonym: "Gummata of yaws" EXACT [SNOMEDCT_2005_07_31:22071004]
 synonym: "gummatous frambeside" EXACT []
 synonym: "multiple papillomata due to yaws and wet crab yaws" EXACT []
-synonym: "nodular late yaws" EXACT [MTHICD9_2006:102.4]
-synonym: "nodular late yaws (disorder)" EXACT [SNOMEDCT_2005_07_31:69008006]
+synonym: "nodular late yaws" EXACT []
 synonym: "Ulcers of yaws" EXACT [SNOMEDCT_2005_07_31:57186002]
-synonym: "Yaws gummata and ulcers (disorder)" EXACT [SNOMEDCT_2005_07_31:186968004]
+synonym: "Yaws gummata and ulcers" EXACT [SNOMEDCT_2005_07_31:186968004]
 xref: ICD10CM:A66.1
 xref: ICD10CM:A66.4
 xref: ICD9CM:102.1
@@ -1222,9 +1222,8 @@ def: "A spotted fever that has_material_basis_in Rickettsia australis, which is 
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Australian tick typhus " RELATED []
+synonym: "Australian tick typhus" EXACT []
 synonym: "North Queensland tick typhus" RELATED []
-synonym: "Queensland tick typhus (disorder)" EXACT [SNOMEDCT_2005_07_31:68981009]
 synonym: "Rickettsia australis spotted fever" EXACT []
 is_a: DOID:11104 ! spotted fever
 
@@ -1269,12 +1268,9 @@ subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "manchurian typhus" EXACT []
-synonym: "North Asian tick fever" EXACT [ICD9CM_2006:082.2]
-synonym: "North Asian tick fever (disorder) [Ambiguous]" EXACT [SNOMEDCT_2005_07_31:7692008]
-synonym: "North Asian tick fever NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:186783000]
-synonym: "North Asian tick typhus (disorder)" EXACT [SNOMEDCT_2005_07_31:186781003]
+synonym: "North Asian tick fever" EXACT []
+synonym: "North Asian tick typhus" EXACT [SNOMEDCT_2005_07_31:186781003]
 synonym: "Rickettsia sibirica spotted fever" EXACT []
-synonym: "Siberian tick typhus (disorder)" EXACT [SNOMEDCT_2005_07_31:186782005]
 xref: ICD10CM:A77.2
 xref: ICD9CM:082.2
 xref: SNOMEDCT_US_2016_03_01:186781003
@@ -1420,7 +1416,7 @@ namespace: disease_ontology
 def: "A primary bacterial infectious disease that is a zoonotic infectious disease affecting multiple organs, has_material_basis_in Coxiella burnetii, which is transmitted_by inhalation of air contaminated by barnyard dust containing dried placental material, birth fluids, or excreta of infected herd animals, transmitted_by ingestion of contaminated milk, transmitted_by tick bites and transmitted_by contact with infected person. The infection has_symptom fever, has_symptom headache, has_symptom cough, has_symptom pleuritic chest pain, has_symptom myalgia and has_symptom arthralgia." [url:http\://en.wikipedia.org/wiki/Q_fever, url:http\://www.cdc.gov/qfever/symptoms/index.html, url:http\://www.ncbi.nlm.nih.gov/pubmed/15021054]
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Infection due to Coxiella burnetii (disorder)" EXACT [SNOMEDCT_2005_07_31:260588007]
+synonym: "Infection due to Coxiella burnetii" EXACT [SNOMEDCT_2005_07_31:260588007]
 xref: ICD10CM:A78
 xref: ICD9CM:083.0
 xref: MESH:D011778
@@ -1460,7 +1456,7 @@ subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
 synonym: "Bartonella infectious disease" EXACT []
 synonym: "bartonelliasis" EXACT [CSP2005:2623-6984]
-synonym: "Rochalimaea infection (disorder)" EXACT [SNOMEDCT_2005_07_31:240623002]
+synonym: "Rochalimaea infection" EXACT [SNOMEDCT_2005_07_31:240623002]
 xref: ICD10CM:A44
 xref: ICD10CM:A44.9
 xref: ICD9CM:088.0
@@ -1497,7 +1493,7 @@ name: spotted fever
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection, located_in endothelial cell of artery or located_in endothelial cell of vein, has_material_basis_in Rickettsia, which is transmitted_by ticks and mites. The infection has_symptom fever, has_symptom headache, has_symptom fatigue, has_symptom muscle aches, and has_symptom maculopapular or petechial rash. A distinctive eschar (blackened or crusted skin) may develop at the site of a tick bite." [url:http\://emedicine.medscape.com/article/785659-overview#a0104, url:http\://www.cdc.gov/otherspottedfever/index.html]
 subset: gram-negative_bacterial_infectious_disease
-synonym: "Spotted fever group rickettsial disease (disorder)" EXACT [SNOMEDCT_2005_07_31:186771002]
+synonym: "Spotted fever group rickettsial disease" EXACT [SNOMEDCT_2005_07_31:186771002]
 xref: ICD10CM:A77
 xref: ICD10CM:A77.9
 xref: ICD9CM:082.0
@@ -1551,7 +1547,6 @@ subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Brill Zinsser disease" EXACT [CSP2005:2623-8052]
 synonym: "Brill's disease" EXACT [ICD9CM_2006:081.1]
-synonym: "Brill-Zinsser disease (disorder)" EXACT [SNOMEDCT_2005_07_31:47761007]
 synonym: "Latent typhus" RELATED []
 synonym: "Recrudescent typhus" EXACT [MTHICD9_2006:081.1]
 synonym: "Sporadic typhus" RELATED []
@@ -1571,7 +1566,7 @@ alt_id: DOID:12353
 def: "A primary bacterial infectious disease that refers to a group of diseases, located_in endothelial cells of the small venous, arterial, and capillary vessels, has_material_basis_in Rickettsia bacteria, which are transmitted_by lice, transmitted_by fleas, and transmitted_by mites." [url:http\://emedicine.medscape.com/article/231374-overview#a0104]
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Classical typhus (fever)" RELATED []
+synonym: "Classical typhus" RELATED []
 synonym: "endemic flea-borne typhus" EXACT []
 synonym: "Endemic Typhus fever" EXACT [MTHICD9_2006:081.0]
 synonym: "Epidemic (louse-borne) typhus" RELATED []
@@ -1590,7 +1585,7 @@ synonym: "Louse-borne [epidemic] typhus" EXACT [ICD9CM_2006:080]
 synonym: "Louse-borne rickettsiosis" RELATED []
 synonym: "Louse-borne typhus" RELATED []
 synonym: "Mexican typhus" RELATED []
-synonym: "Moscow typhus " RELATED []
+synonym: "Moscow typhus" EXACT []
 synonym: "Murine [endemic] typhus" EXACT [ICD9CM_2006:081.0]
 synonym: "Murine typhus" RELATED []
 synonym: "Petechial fever" RELATED []
@@ -1812,7 +1807,7 @@ def: "A primary bacterial infectious disease that results_in infection, has_mate
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Bannwarth syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:48982009]
+synonym: "Bannwarth syndrome" EXACT [SNOMEDCT_2005_07_31:48982009]
 synonym: "Bannworth's syndrome" EXACT [SNOMEDCT_2005_07_31:23502006]
 synonym: "Lyme borreliosis" EXACT [CSP2005:0368-3340]
 synonym: "lyme neuroborreliosis" EXACT []
@@ -1918,7 +1913,7 @@ def: "A tularemia that results_in painful regional lymphadenopathy and an ulcera
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Ulceroglandular tularemia (disorder)" EXACT [SNOMEDCT_2005_07_31:37722001]
+synonym: "Ulceroglandular tularemia" EXACT [SNOMEDCT_2005_07_31:37722001]
 xref: ICD10CM:A21.0
 xref: ICD9CM:021.0
 xref: SNOMEDCT_US_2016_03_01:37722001
@@ -2038,7 +2033,7 @@ name: louse-borne relapsing fever
 namespace: disease_ontology
 def: "A relapsing fever that is characterized by relapsing or recurring episodes of fever, has_material basis_in Borrelia recurrentis, which is transmitted_by body louse (Pediculus humanus). The infection has_symptom tachypnea, has_symptom tachycardia, has_symptom hepatosplenomegaly and has_symptom lymphadenopathy." [url:http\://emedicine.medscape.com/article/787000-overview#a0104]
 subset: gram-negative_bacterial_infectious_disease
-synonym: "Louse-borne relapsing fever (disorder)" EXACT [SNOMEDCT_2005_07_31:14683004]
+synonym: "Louse-borne relapsing fever" EXACT [SNOMEDCT_2005_07_31:14683004]
 synonym: "Relapsing fever, louse-borne" EXACT [ICD9CM_2006:087.0]
 xref: ICD10CM:A68.0
 xref: ICD9CM:087.0
@@ -2055,8 +2050,7 @@ subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Relapsing fever, tick-borne" EXACT [ICD9CM_2006:087.1]
-synonym: "Tick-borne relapsing fever (disorder)" EXACT [SNOMEDCT_2005_07_31:10301003]
-synonym: "Tick-borne relapsing fever NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:186821005]
+synonym: "Tick-borne relapsing fever" EXACT [SNOMEDCT_2005_07_31:10301003]
 xref: ICD10CM:A68.1
 xref: ICD9CM:087.1
 xref: NCI:C34976
@@ -2080,7 +2074,7 @@ name: gonococcal spondylitis
 namespace: disease_ontology
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
-synonym: "Gonococcal spondylitis (disorder)" EXACT [SNOMEDCT_2005_07_31:53664003]
+synonym: "Gonococcal spondylitis" EXACT [SNOMEDCT_2005_07_31:53664003]
 xref: ICD9CM:098.53
 xref: SNOMEDCT_US_2016_03_01:186929006
 xref: SNOMEDCT_US_2016_03_01:53664003
@@ -2114,7 +2108,7 @@ def: "A tularemia that results_in inflammation of eye and swelling of lymph glan
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Oculoglandular tularemia (disorder)" EXACT [SNOMEDCT_2005_07_31:73363000]
+synonym: "Oculoglandular tularemia" EXACT [SNOMEDCT_2005_07_31:73363000]
 xref: ICD10CM:A21.1
 xref: ICD9CM:021.3
 xref: SNOMEDCT_US_2016_03_01:73363000
@@ -2267,7 +2261,7 @@ is_a: DOID:11256 ! typhus
 id: DOID:13431
 name: bejel
 namespace: disease_ontology
-def: "A primary bacterial infectious disease that results_in infection located_in mucosa of mouth, located_in skin or located_in bone, has_material_basis_in Treponema pallidum subsp endemicum, which is transmitted_by contact or transmitted_by sharing of domestic utensils. The infection has_symptom moist patches in the mouth, has_symptom lumps in long bones, tissues around the mouth, nose, and roof of the mouth. These lumps destroy tissue, causing bones to be deformed and disfiguring the face." [url:http\://en.wikipedia.org/wiki/Bejel, url:http\://www.merckmanuals.com/home/sec17/ch190/ch190d.html]
+def: "A primary bacterial infectious disease that results in infection located in mucosa of mouth, located in skin or located in bone, has material basis in Treponema pallidum subsp endemicum, which is transmitted by contact or transmitted by sharing of domestic utensils. The infection has symptom moist patches in the mouth, has symptom lumps in long bones, tissues around the mouth, nose, and roof of the mouth. These lumps destroy tissue, causing bones to be deformed and disfiguring the face." [url:http\://en.wikipedia.org/wiki/Bejel, url:http\://www.merckmanuals.com/home/sec17/ch190/ch190d.html]
 subset: gram-negative_bacterial_infectious_disease
 synonym: "Njovera" EXACT [MTHICD9_2006:104.0]
 synonym: "Nonvenereal endemic syphilis" EXACT [ICD9CM_2006:104.0]
@@ -2275,6 +2269,7 @@ xref: MESH:D014211
 xref: SNOMEDCT_US_2016_03_01:186978001
 xref: SNOMEDCT_US_2016_03_01:240686008
 xref: UMLS_CUI:C0004945
+is_a: DOID:13778 ! chancroid
 
 [Term]
 id: DOID:13444
@@ -2299,7 +2294,7 @@ name: gonococcal bursitis
 namespace: disease_ontology
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
-synonym: "Gonococcal bursitis (disorder)" EXACT [SNOMEDCT_2005_07_31:46699001]
+synonym: "Gonococcal bursitis" EXACT [SNOMEDCT_2005_07_31:46699001]
 xref: ICD10CM:A54.49
 xref: ICD9CM:098.52
 xref: SNOMEDCT_US_2016_03_01:186928003
@@ -2314,7 +2309,7 @@ subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
 synonym: "Gonococcal synovitis &/or tenosynovitis" EXACT [SNOMEDCT_2005_07_31:186927008]
 synonym: "Gonococcal synovitis and tenosynovitis" EXACT [ICD9CM_2006:098.51]
-synonym: "Gonococcal synovitis or tenosynovitis (disorder)" EXACT [SNOMEDCT_2005_07_31:266138002]
+synonym: "Gonococcal synovitis or tenosynovitis" EXACT [SNOMEDCT_2005_07_31:266138002]
 xref: ICD9CM:098.51
 xref: SNOMEDCT_US_2016_03_01:186927008
 xref: SNOMEDCT_US_2016_03_01:266138002
@@ -2437,8 +2432,7 @@ namespace: disease_ontology
 alt_id: DOID:13621
 def: "A primary bacterial infectious disease that results_in infection located_in intestine, has_material_basis_in Campylobacter jejuni, which is transmitted_by ingestion of contaminated food or water or transmitted_by contact with infected people or animals. The infection has_symptom diarrhea or has_symptom dysentery, has_symptom abdominal cramps and pain, and has_symptom fever." [url:http\://en.wikipedia.org/wiki/Campylobacteriosis, url:http\://www.health.state.ny.us/diseases/communicable/campylobacteriosis/fact_sheet.htm]
 subset: gram-negative_bacterial_infectious_disease
-synonym: "(Campylobacter GIT infection (& [diarrhea] or [enteritis]) or (helicobacter gastritis)" EXACT [SNOMEDCT_2005_07_31:186143000]
-synonym: "Campylobacteriosis (disorder)" EXACT [SNOMEDCT_2005_07_31:86500004]
+synonym: "Campylobacteriosis" EXACT [SNOMEDCT_2005_07_31:86500004]
 xref: MESH:D002169
 xref: SNOMEDCT_US_2016_03_01:86500004
 xref: UMLS_CUI:C0006818
@@ -2458,7 +2452,6 @@ namespace: disease_ontology
 def: "A primary bacterial infectious disease that is a sexually transmitted infection located_in skin of the genitals, has_material_basis_in Haemophilus ducreyi, which is transmitted_by sexual contact. The infection has_symptom painful and soft ulcers." [url:http\://en.wikipedia.org/wiki/Chancroid, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001659/]
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
-synonym: "(Chancroid [& bubo]) or (Ducrey's chancre)" EXACT [SNOMEDCT_2005_07_31:186945008]
 synonym: "Ulcus molle, skin" EXACT [MTHICD9_2006:099.0]
 xref: ICD10CM:A57
 xref: ICD9CM:099.0
@@ -2477,8 +2470,7 @@ namespace: disease_ontology
 def: "A commensal bacterial infectious disease that results_in inflammation, located_in conjunctiva of the eye, has_material_basis_in Chlamydia trachomatis, which is transmitted_by sexual contact. The infection has_symptom swollen conjunctiva and eyelids and has_symptom discharge of pus and mucus." [url:https\://www.aarphealthcare.com/galecontent/inclusion-conjunctivitis-1]
 subset: gram-negative_bacterial_infectious_disease
 synonym: "adult inclusion conjunctivitis" EXACT []
-synonym: "Chlamydial conjunctivitis" EXACT [SNOMEDCT_2005_07_31:266202002]
-synonym: "Chlamydial conjunctivitis" EXACT [SNOMEDCT_2005_07_31:186733005]
+synonym: "Chlamydial conjunctivitis" EXACT []
 synonym: "Inclusion blennorrhoea" EXACT [SNOMEDCT_2005_07_31:56009001]
 synonym: "inclusion blenorrhea" EXACT [CSP2005:1114-8463]
 synonym: "Paratrachoma" RELATED [MTHICD9_2006:077.0]
@@ -2566,8 +2558,8 @@ def: "A spotted fever that has_material_basis_in Rickettsia conorii subsp conori
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
+synonym: "African tick typhus" EXACT [SNOMEDCT_2005_07_31:266118003]
 synonym: "african tick typhus" EXACT []
-synonym: "African tick typhus (disorder)" EXACT [SNOMEDCT_2005_07_31:266118003]
 synonym: "Boutonneuse disease" RELATED []
 synonym: "Conor and Bruch's disease" RELATED []
 synonym: "Kenya fever" RELATED []
@@ -2577,7 +2569,7 @@ synonym: "marseilles fever" EXACT []
 synonym: "Mediterranean spotted fever" RELATED []
 synonym: "Mediterranean tick fever" RELATED []
 synonym: "Rickettsia conorii spotted fever" EXACT []
-synonym: "South African tick-bite fever (disorder)" EXACT [SNOMEDCT_2005_07_31:415561000]
+synonym: "South African tick-bite fever" EXACT [SNOMEDCT_2005_07_31:415561000]
 xref: ICD10CM:A77.1
 xref: ICD9CM:082.1
 xref: MESH:D001907
@@ -2753,9 +2745,10 @@ def: "A primary bacterial infectious disease that is described as an acute, diar
 subset: DO_FlyBase_slim
 subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
-synonym: "(Cholera) or (Vibrio cholerae)" EXACT [SNOMEDCT_2005_07_31:186087007]
-synonym: "Cholera - Vibrio cholerae (disorder)" EXACT [SNOMEDCT_2005_07_31:186088002]
+synonym: "Cholera" EXACT [SNOMEDCT_2005_07_31:186087007]
+synonym: "Cholera - Vibrio cholerae" EXACT [SNOMEDCT_2005_07_31:186088002]
 synonym: "Cholera due to Vibrio cholerae" EXACT [ICD9CM_2006:001.0]
+synonym: "Vibrio cholerae" EXACT [SNOMEDCT_2005_07_31:186087007]
 xref: ICD10CM:A00
 xref: ICD10CM:A00.0
 xref: ICD10CM:A00.9
@@ -2825,8 +2818,7 @@ subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "bronchopneumonic tularemia" EXACT []
 synonym: "Pneumonic tularaemia" EXACT [SNOMEDCT_2005_07_31:45556008]
-synonym: "pulmonary tularemia" EXACT [ICD9CM_2006:021.2]
-synonym: "pulmonary tularemia [dup] (disorder)" EXACT [SNOMEDCT_2005_07_31:186297007]
+synonym: "pulmonary tularemia" EXACT []
 xref: ICD10CM:A21.2
 xref: ICD9CM:021.2
 xref: SNOMEDCT_US_2016_03_01:186297007
@@ -2883,7 +2875,7 @@ synonym: "Leptospirosis icterohaemorrhagica" EXACT [SNOMEDCT_2005_07_31:18695400
 synonym: "nanukayami fever" EXACT []
 synonym: "Rat Catcher's Yellows" EXACT []
 synonym: "spirochetal jaundice" EXACT [CSP2005:0368-3335]
-synonym: "Weil's disease" EXACT [SNOMEDCT_2005_07_31:154391003, SNOMEDCT_2005_07_31:266213004]
+synonym: "Weil's disease" EXACT []
 xref: ICD10CM:A27
 xref: ICD10CM:A27.0
 xref: ICD10CM:A27.9
@@ -2992,11 +2984,11 @@ def: "A primary bacterial infectious disease that results_in infection located_i
 subset: gram-negative_bacterial_infectious_disease
 synonym: "Paratyphoid" EXACT [SNOMEDCT_2005_07_31:266174006]
 synonym: "paratyphoid a" EXACT []
-synonym: "Paratyphoid A fever (disorder)" EXACT [SNOMEDCT_2005_07_31:76623002]
+synonym: "Paratyphoid A fever" EXACT [SNOMEDCT_2005_07_31:76623002]
 synonym: "paratyphoid b" EXACT []
-synonym: "Paratyphoid B fever (disorder)" EXACT [SNOMEDCT_2005_07_31:71085009]
+synonym: "Paratyphoid B fever" EXACT [SNOMEDCT_2005_07_31:71085009]
 synonym: "paratyphoid c" EXACT []
-synonym: "Paratyphoid C fever (disorder)" EXACT [SNOMEDCT_2005_07_31:51254007]
+synonym: "Paratyphoid C fever" EXACT [SNOMEDCT_2005_07_31:51254007]
 synonym: "Paratyphoid Fever A" EXACT [NCI2004_11_17:C34894]
 synonym: "Paratyphoid fever A" EXACT [ICD9CM_2006:002.1]
 synonym: "Paratyphoid Fever B" EXACT [NCI2004_11_17:C34895]
@@ -3085,7 +3077,7 @@ namespace: disease_ontology
 def: "A plague that results_in infection located_in vasculature where bacterial endotoxins cause coagulation, which leads to formation of tiny clots throughout the body. The infection has_symptom fever, has_symptom chills, has_symptom prostration, has_symptom abdominal pain, has_symptom shock and has_symptom bleeding into skin and other organs." [url:http\://emedicine.medscape.com/article/829233-overview#a0104, url:http\://en.wikipedia.org/wiki/Plague_%28disease%29#Septicemic_plague, url:http\://www.cdc.gov/ncidod/dvbid/plague/facts.htm]
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Septicemic plague (disorder)" EXACT [SNOMEDCT_2005_07_31:9012003]
+synonym: "Septicemic plague" EXACT [SNOMEDCT_2005_07_31:9012003]
 xref: ICD10CM:A20.7
 xref: ICD9CM:020.2
 xref: MESH:D010930
@@ -3202,9 +3194,9 @@ def: "A syphilis that is the first stage of syphilis, marked by the development 
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
 synonym: "early symptomatic syphilis" EXACT []
-synonym: "early symptomatic syphilis (disorder)" EXACT [SNOMEDCT_2005_07_31:186846005]
+synonym: "early symptomatic syphilis" EXACT [SNOMEDCT_2005_07_31:186846005]
 synonym: "early syphilis, symptomatic" EXACT [ICD9CM_2006:091]
-synonym: "Symptomatic early syphilis (disorder)" EXACT [SNOMEDCT_2005_07_31:57334003]
+synonym: "Symptomatic early syphilis" EXACT [SNOMEDCT_2005_07_31:57334003]
 xref: ICD9CM:091
 xref: SNOMEDCT_US_2016_03_01:186846005
 xref: SNOMEDCT_US_2016_03_01:57334003
@@ -3273,7 +3265,7 @@ namespace: disease_ontology
 def: "A commensal bacterial infectious disease that results_in infection, has_material_basis_in Actinobacillus ureae, which is a commensal of the human respiratory tract. The pathogen causes meningitis, endocarditis, bacteremia, atrophic rhinitis, bronchitis, pneumonia, conjunctivitis, peritonitis, and otitis media." [url:http\://www.merckvetmanual.com/mvm/index.jsp?cfile=htm/bc/50100.htm, url:http\://www.sciencedirect.com/science/article/pii/073646799500066J, url:www.jrheum.com/subscribers/04/08/tables/PDF/1663.pdf]
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Actinobacillosis, NOS" EXACT [SNOMEDCT_2005_07_31:16140007]
+synonym: "Actinobacillosis" EXACT [SNOMEDCT_2005_07_31:16140007]
 xref: MESH:D000187
 xref: SNOMEDCT_US_2016_03_01:16140007
 xref: UMLS_CUI:C0001247
@@ -3456,12 +3448,13 @@ namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection located_in skin or located_in mucosa of genital tract, has_material_basis_in Klebsiella granulomatis, transmitted by sexual contact or transmitted_by contact with the open sores. The infection has_symptom painless genital ulcers." [url:http\://emedicine.medscape.com/article/1052617-overview, url:http\://en.wikipedia.org/wiki/Granuloma_inguinale]
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
-synonym: "(Granuloma inguinale) or (donovanosis) or (pudendal ulcer)" EXACT [SNOMEDCT_2005_07_31:186947000]
+synonym: "donovanosis" EXACT [SNOMEDCT_2005_07_31:186947000]
 synonym: "donovanosis" EXACT []
-synonym: "Granuloma Inguinale" EXACT [CSP2005:0368-2705]
-synonym: "Granuloma Inguinale" EXACT [NCI2004_11_17:C3065]
-synonym: "Granuloma inguinale (disorder)" EXACT [SNOMEDCT_2005_07_31:28867007]
+synonym: "Granuloma Inguinale" EXACT []
+synonym: "Granuloma inguinale" EXACT [SNOMEDCT_2005_07_31:28867007]
+synonym: "Granuloma inguinale" EXACT [SNOMEDCT_2005_07_31:186947000]
 synonym: "Pudendal ulcer" EXACT [MTHICD9_2006:099.2]
+synonym: "pudendal ulcer" EXACT [SNOMEDCT_2005_07_31:186947000]
 xref: ICD10CM:A58
 xref: ICD9CM:099.2
 xref: MESH:D006100
@@ -3565,7 +3558,7 @@ namespace: disease_ontology
 alt_id: DOID:10601
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
-synonym: "Gonococcal conjunctivitis (neonatorum)" EXACT [ICD9CM_2006:098.40]
+synonym: "Gonococcal conjunctivitis" EXACT [ICD9CM_2006:098.40]
 synonym: "Gonococcal ophthalmia neonatorum" EXACT [MTHICD9_2006:098.40]
 synonym: "Neonatal conjunctivitis" EXACT [SNOMEDCT_2005_07_31:157120005]
 xref: ICD10CM:P39.1

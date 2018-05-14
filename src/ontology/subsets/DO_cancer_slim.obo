@@ -92,6 +92,7 @@ namespace: disease_ontology
 def: "A B-cell lymphoma that is characterized as an indolent non-Hodgkin's lymphoma and has_material_basis_in follicle center B-cells (centrocytes and centroblasts)." [url:http\://en.wikipedia.org/wiki/Follicular_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=428287]
 subset: DO_cancer_slim
 xref: MESH:D008224
+xref: OMIM:151430
 is_a: DOID:707 ! B-cell lymphoma
 created_by: lschriml
 creation_date: 2014-06-25T05:24:10Z
@@ -166,7 +167,7 @@ subset: DO_cancer_slim
 synonym: "brain medulloblastoma" EXACT []
 synonym: "CNS PNET" EXACT [NCI2004_11_17:C5398]
 synonym: "CPNET" EXACT [SNOMEDCT_2005_07_31:39781001]
-synonym: "infratentorial primitive neuroectodermal tumor " EXACT []
+synonym: "infratentorial primitive neuroectodermal tumor" EXACT []
 synonym: "localized primitive neuroectodermal tumor" EXACT []
 xref: MESH:D008527
 xref: MESH:D018242
@@ -228,6 +229,7 @@ xref: ICD9:238.7
 xref: MESH:D009190
 xref: OMIM:614286
 xref: UMLS_CUI:C2713368
+is_a: DOID:1240 ! leukemia
 created_by: lschriml
 creation_date: 2014-10-13T12:51:33Z
 
@@ -238,6 +240,7 @@ namespace: disease_ontology
 def: "A non-Hodgkin lymphoma that has_material_basis_in mucosal tissue involved in antibody production." [url:http\://www.cancer.gov/dictionary?CdrID=45774]
 subset: DO_cancer_slim
 synonym: "mucosa-associated lymphoid tissue lymphoma" EXACT []
+xref: OMIM:137245
 is_a: DOID:0060058 ! lymphoma
 created_by: lschriml
 creation_date: 2014-10-13T14:17:40Z
@@ -560,7 +563,7 @@ name: nodular malignant melanoma
 namespace: disease_ontology
 def: "A melanoma that is characterized as highly aggressive and manifests as a uniform blue-black, blue-red, or amelanotic nodule." [url:http\://en.wikipedia.org/wiki/Nodular_melanoma, url:http\://www.clevelandclinicmeded.com/medicalpubs/diseasemanagement/dermatology/cutaneous-malignant-melanoma/]
 subset: DO_cancer_slim
-synonym: "nodular melanoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:2142002]
+synonym: "nodular melanoma" EXACT [SNOMEDCT_2005_07_31:2142002]
 xref: NCI:C4225
 xref: SNOMEDCT_US_2016_03_01:2142002
 xref: SNOMEDCT_US_2016_03_01:254731001
@@ -573,11 +576,9 @@ name: prostate carcinoma
 namespace: disease_ontology
 def: "A prostate cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: DO_cancer_slim
-synonym: "cancer of prostate" EXACT [NCI2004_11_17:C4863]
-synonym: "cancer of prostate" EXACT [SNOMEDCT_2005_07_31:363448003]
+synonym: "cancer of prostate" EXACT []
 synonym: "carcinoma OF PROSTATE" EXACT [MTH:612]
-synonym: "carcinoma of prostate" EXACT [SNOMEDCT_2005_07_31:154531004]
-synonym: "carcinoma of prostate (disorder)" EXACT [SNOMEDCT_2005_07_31:254900004]
+synonym: "carcinoma of prostate" EXACT []
 xref: EFO:0001663
 xref: KEGG:05215
 xref: NCI:C4863
@@ -625,14 +626,14 @@ subset: DO_FlyBase_slim
 subset: TopNodes_DOcancerslim
 synonym: "Ca body - stomach" EXACT [SNOMEDCT_2005_07_31:154450001]
 synonym: "ca greater curvature of stomach" EXACT []
-synonym: "Ca lesser curvature - stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269530002]
+synonym: "Ca lesser curvature - stomach" EXACT [SNOMEDCT_2005_07_31:269530002]
 synonym: "gastric cancer" EXACT []
-synonym: "gastric neoplasm" EXACT [CSP2005:2010-1611, NCI2004_11_17:C3387, SNOMEDCT_2005_07_31:187731004]
+synonym: "gastric neoplasm" EXACT []
 synonym: "malignant neoplasm of body of stomach" EXACT []
-synonym: "malignant neoplasm of lesser curve of stomach unspecified (disorder)" EXACT [SNOMEDCT_2005_07_31:187743003]
-synonym: "malignant tumor of body of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:187742008]
-synonym: "malignant tumor of greater curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269460009]
-synonym: "malignant tumor of lesser curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269459004]
+synonym: "malignant neoplasm of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:187743003]
+synonym: "malignant tumor of body of stomach" EXACT [SNOMEDCT_2005_07_31:187742008]
+synonym: "malignant tumor of greater curve of stomach" EXACT [SNOMEDCT_2005_07_31:269460009]
+synonym: "malignant tumor of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:269459004]
 xref: ICD10CM:C16
 xref: ICD10CM:C16.2
 xref: ICD10CM:C16.5
@@ -696,8 +697,7 @@ subset: DO_cancer_slim
 synonym: "cancer of esophagus" EXACT [NCI2004_11_17:C3513]
 synonym: "cancer of oesophagus" EXACT [SNOMEDCT_2005_07_31:93785002]
 synonym: "carcinoma OF ESOPHAGUS" EXACT [MTH:NOCODE]
-synonym: "carcinoma of esophagus (disorder)" EXACT [SNOMEDCT_2005_07_31:372138000]
-synonym: "carcinoma of esophagus (disorder)" EXACT [SNOMEDCT_2005_07_31:255079005]
+synonym: "carcinoma of esophagus" EXACT [SNOMEDCT_2005_07_31:255079005]
 synonym: "carcinoma of oesophagus" EXACT [SNOMEDCT_2005_07_31:154441003]
 xref: EFO:0002916
 xref: NCI:C3513
@@ -773,12 +773,10 @@ synonym: "malignant primary brain neoplasm" EXACT [NCI2004_11_17:C4954]
 synonym: "malignant primary brain tumor" EXACT []
 synonym: "malignant tumor of adult brain" EXACT [NCI2004_11_17:C5115]
 synonym: "malignant tumor of Brain" EXACT [NCI2004_11_17:C3568]
-synonym: "neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:126952004]
-synonym: "neoplasm of unspecified nature of brain" EXACT [ICD9CM_2006:239.6]
-synonym: "neoplasm of unspecified nature of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:189537005]
+synonym: "neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:126952004]
 synonym: "primary brain neoplasm" EXACT [NCI2004_11_17:C4952]
 synonym: "primary brain tumor" EXACT []
-synonym: "primary malignant neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:93727008]
+synonym: "primary malignant neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:93727008]
 synonym: "tumor of the Brain" EXACT [NCI2004_11_17:C2907]
 xref: CSP:2006-2736
 xref: ICD10CM:C71
@@ -818,11 +816,11 @@ namespace: disease_ontology
 alt_id: DOID:5654
 def: "A uterine cancer that is located_in tissues lining the uterus." [url:http\://www.cancer.gov/dictionary?CdrID=444987]
 subset: DO_cancer_slim
-synonym: "endometrial Ca" EXACT [SNOMEDCT_2005_07_31:154526001, SNOMEDCT_2005_07_31:269600001]
+synonym: "endometrial Ca" EXACT []
 synonym: "endometrial neoplasm" EXACT []
 synonym: "malignant endometrial neoplasm" EXACT [NCI2004_11_17:C27815]
 synonym: "malignant neoplasm of endometrium" EXACT []
-synonym: "neoplasm of endometrium (disorder)" EXACT [SNOMEDCT_2005_07_31:123844007]
+synonym: "neoplasm of endometrium" EXACT [SNOMEDCT_2005_07_31:123844007]
 synonym: "primary malignant neoplasm of endometrium" EXACT [SNOMEDCT_2005_07_31:93781006]
 synonym: "tumor of Endometrium" EXACT [NCI2004_11_17:C3012]
 xref: EFO:0004230
@@ -944,8 +942,8 @@ name: pancreatic endocrine carcinoma
 namespace: disease_ontology
 def: "An islet cell tumor that has_material_basis_in epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: DO_cancer_slim
-synonym: "carcinoma of endocrine pancreas (disorder)" EXACT [SNOMEDCT_2005_07_31:254612002]
-synonym: "Islet cell carcinoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:60346004]
+synonym: "carcinoma of endocrine pancreas" EXACT [SNOMEDCT_2005_07_31:254612002]
+synonym: "Islet cell carcinoma" EXACT [SNOMEDCT_2005_07_31:60346004]
 synonym: "malignant neoplasm of islets of Langerhans" EXACT [SNOMEDCT_2005_07_31:93843007]
 synonym: "pancreatic neuroendocrine carcinoma" EXACT [NCI2004_11_17:C3770]
 xref: ICD10CM:C25.4
@@ -976,7 +974,7 @@ xref: UMLS_CUI:C0023269
 id: DOID:1970
 name: fallopian tube carcinosarcoma
 namespace: disease_ontology
-def: "A fallopian tube cancer that is characterized as a mixture of carcinoma and sarcoma and has_material_basis_in epithelial tissue and has_material_basis_in connective tissue." [url:http\://en.wikipedia.org/wiki/Carcinosarcoma]
+def: "A fallopian tube cancer that is characterized as a mixture of carcinoma and sarcoma and has material basis in epithelial tissue and has material basis in connective tissue." [url:http\://en.wikipedia.org/wiki/Carcinosarcoma]
 subset: DO_cancer_slim
 synonym: "fallopian tube malignant mixed mesodermal (mullerian) tumor" EXACT []
 synonym: "fallopian tube malignant mixed Mullerian tumor" EXACT []
@@ -989,8 +987,8 @@ name: rectum adenocarcinoma
 namespace: disease_ontology
 def: "A rectum cancer that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
+synonym: "adenocarcinoma of rectum" EXACT [SNOMEDCT_2005_07_31:254582000]
 synonym: "adenocarcinoma of rectum" RELATED []
-synonym: "adenocarcinoma of rectum (disorder)" EXACT [SNOMEDCT_2005_07_31:254582000]
 synonym: "Rectal adenocarcinoma" EXACT [NCI2004_11_17:C9383]
 xref: NCI:C9383
 xref: SNOMEDCT_US_2016_03_01:254582000
@@ -1019,7 +1017,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 synonym: "AT/RT" RELATED []
-synonym: "Atypical teratoid/rhabdoid tumor (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:128792003]
+synonym: "Atypical teratoid/rhabdoid tumor" EXACT [SNOMEDCT_2005_07_31:128792003]
 synonym: "Rhabdoid tumor of the CNS" EXACT [NCI2004_11_17:C6906]
 synonym: "rhabdoid tumor predisposition syndrome" RELATED []
 xref: NCI:C6906
@@ -1123,7 +1121,7 @@ namespace: disease_ontology
 def: "A laryngeal carcinoma that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
 synonym: "Epidermoid carcinoma of the Larynx" EXACT [NCI2004_11_17:C4044]
-synonym: "squamous cell carcinoma of larynx (disorder)" EXACT [SNOMEDCT_2005_07_31:405822008]
+synonym: "squamous cell carcinoma of larynx" EXACT [SNOMEDCT_2005_07_31:405822008]
 xref: NCI:C4044
 xref: SNOMEDCT_US_2016_03_01:405822008
 xref: SNOMEDCT_US_2016_03_01:707358000
@@ -1139,7 +1137,7 @@ subset: DO_cancer_slim
 synonym: "cancer of cervix" EXACT [SNOMEDCT_2005_07_31:93752005]
 synonym: "carcinoma cervix uteri" EXACT [SNOMEDCT_2005_07_31:269596006]
 synonym: "carcinoma OF CERVIX" EXACT [MTH:166]
-synonym: "carcinoma of cervix (disorder)" EXACT [SNOMEDCT_2005_07_31:285432005]
+synonym: "carcinoma of cervix" EXACT [SNOMEDCT_2005_07_31:285432005]
 synonym: "carcinoma of the Cervix Uteri" EXACT [NCI2004_11_17:C9039]
 xref: NCI:C9039
 xref: SNOMEDCT_US_2016_03_01:154522004
@@ -1158,7 +1156,7 @@ name: breast ductal carcinoma
 namespace: disease_ontology
 def: "A breast carcinoma that derives_from the lining of milk ducts." [url:http\://cancergenome.nih.gov/cancersselected/breastductal, url:http\://www.cancer.gov/dictionary?CdrID=45085]
 subset: DO_cancer_slim
-synonym: "duct carcinoma, NOS" EXACT [SNOMEDCT_2005_07_31:82711006]
+synonym: "duct carcinoma" EXACT [SNOMEDCT_2005_07_31:82711006]
 xref: MESH:D044584
 xref: SNOMEDCT_US_2016_03_01:82711006
 xref: UMLS_CUI:C1176475
@@ -1170,8 +1168,8 @@ name: cecum adenocarcinoma
 namespace: disease_ontology
 def: "A cecum carcinoma that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
+synonym: "adenocarcinoma of cecum" EXACT [SNOMEDCT_2005_07_31:413446001]
 synonym: "adenocarcinoma of cecum" RELATED []
-synonym: "adenocarcinoma of cecum (disorder)" EXACT [SNOMEDCT_2005_07_31:413446001]
 synonym: "Cecal adenocarcinoma" EXACT [NCI2004_11_17:C5543]
 xref: NCI:C5543
 xref: SNOMEDCT_US_2016_03_01:413446001
@@ -1218,7 +1216,7 @@ def: "An astrocytoma characterized by the presence of small areas of necrotizing
 subset: DO_cancer_slim
 synonym: "adult glioblastoma multiforme" EXACT []
 synonym: "GBM" EXACT []
-synonym: "GBM (Glioblastoma)" EXACT [NCI2004_11_17:C3058]
+synonym: "GBM" EXACT [NCI2004_11_17:C3058]
 synonym: "grade IV adult Astrocytic tumor" EXACT [NCI2004_11_17:C9094]
 synonym: "primary glioblastoma multiforme" EXACT []
 synonym: "spongioblastoma multiforme" EXACT [CSP2005:2012-6410]
@@ -1266,7 +1264,7 @@ namespace: disease_ontology
 def: "A brain glioma that has_material_basis_in oligodendrocytes." [url:http\://www.cancer.gov/dictionary?CdrID=46257]
 subset: DO_cancer_slim
 synonym: "brain Oligodendroglioma" EXACT [NCI2004_11_17:C9377]
-synonym: "Oligodendroglioma of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:254940005]
+synonym: "Oligodendroglioma of brain" EXACT [SNOMEDCT_2005_07_31:254940005]
 xref: NCI:C9377
 xref: SNOMEDCT_US_2016_03_01:254940005
 xref: UMLS_CUI:C0346286
@@ -1360,8 +1358,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 synonym: "Ewing's family localized tumor" EXACT []
 synonym: "Ewing's sarcoma/peripheral primitive neuroectodermal tumor" EXACT [NCI2004_11_17:C27291]
-synonym: "Ewing's tumor" EXACT [NCI2004_11_17:C4817]
-synonym: "Ewing's tumor" EXACT [CSP2005:2008-4746]
+synonym: "Ewing's tumor" EXACT []
 synonym: "Ewings sarcoma" EXACT []
 synonym: "Ewings sarcoma-primitive neuroectodermal tumor" EXACT []
 synonym: "localized Ewing sarcoma" EXACT []
@@ -1400,7 +1397,7 @@ id: DOID:3376
 name: bone osteosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
-synonym: "Osteosarcoma of bone (disorder)" EXACT [SNOMEDCT_2005_07_31:307576001]
+synonym: "Osteosarcoma of bone" EXACT [SNOMEDCT_2005_07_31:307576001]
 synonym: "primary Osteosarcoma of bone" EXACT [NCI2004_11_17:C4834]
 xref: NCI:C53707
 xref: SNOMEDCT_US_2016_03_01:307576001
@@ -1439,7 +1436,7 @@ name: penis carcinoma
 namespace: disease_ontology
 def: "A penile cancer that is located_in the skin or tissues of the penis." [url:http\://en.wikipedia.org/wiki/Carcinoma_of_the_penis]
 subset: DO_cancer_slim
-synonym: "carcinoma of penis (disorder)" EXACT [SNOMEDCT_2005_07_31:372106005]
+synonym: "carcinoma of penis" EXACT [SNOMEDCT_2005_07_31:372106005]
 synonym: "Penile carcinoma" EXACT [NCI2004_11_17:C9061]
 xref: NCI:C9061
 xref: SNOMEDCT_US_2016_03_01:372106005
@@ -1481,6 +1478,7 @@ def: "A fibrosarcoma that is located_in the dermis laryer of the skin and that b
 comment: MESH:C538219 added from NeuroDevNet [WAK].
 subset: DO_cancer_slim
 xref: MESH:D018223
+xref: OMIM:607907
 xref: SNOMEDCT_US_2016_03_01:134160009
 xref: SNOMEDCT_US_2016_03_01:276799004
 xref: SNOMEDCT_US_2016_03_01:302844005
@@ -1494,8 +1492,7 @@ namespace: disease_ontology
 def: "An appendix cancer that is characterized by progressive accumulation of mucus-secreting tumor cells within the abdomen and pelvis." [url:http\://en.wikipedia.org/wiki/Pseudomyxoma_peritonei, url:http\://www.cancer.gov/dictionary?CdrID=44256, url:http\://www.ncbi.nlm.nih.gov/pubmed/14567019, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/843/viewAbstract]
 subset: DO_cancer_slim
 synonym: "mucinous Ascites" EXACT [NCI2004_11_17:C3345]
-synonym: "Pseudomyxoma peritonei (disorder)" EXACT [SNOMEDCT_2005_07_31:307601000]
-synonym: "Pseudomyxoma peritonei (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:112679004]
+synonym: "Pseudomyxoma peritonei" EXACT [SNOMEDCT_2005_07_31:307601000]
 xref: ICD10:C78.6
 xref: MESH:D011553
 xref: NCI:C3345
@@ -1585,7 +1582,7 @@ name: gastric adenocarcinoma
 namespace: disease_ontology
 def: "A stomach carcinoma that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
-synonym: "adenocarcinoma of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:408647009]
+synonym: "adenocarcinoma of stomach" EXACT [SNOMEDCT_2005_07_31:408647009]
 synonym: "stomach adenocarcinoma" EXACT [NCI2004_11_17:C4004]
 xref: NCI:C4004
 xref: SNOMEDCT_US_2016_03_01:408647009
@@ -1599,7 +1596,7 @@ name: cervical squamous cell carcinoma
 namespace: disease_ontology
 def: "A cervix carcinoma that has_material_basis_in squamous cells of the cervix." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=752829]
 subset: DO_cancer_slim
-synonym: "squamous cell carcinoma of cervix (disorder)" EXACT [SNOMEDCT_2005_07_31:254886006]
+synonym: "squamous cell carcinoma of cervix" EXACT [SNOMEDCT_2005_07_31:254886006]
 synonym: "squamous cell carcinoma of the Cervix Uteri" EXACT [NCI2004_11_17:C4028]
 xref: NCI:C4028
 xref: SNOMEDCT_US_2016_03_01:254886006
@@ -1614,8 +1611,8 @@ def: "An esophageal carcinoma that derives_from epithelial squamous cells locate
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 synonym: "SCC of esophagus" EXACT [NCI2004_11_17:C4024]
+synonym: "squamous cell carcinoma of esophagus" EXACT [SNOMEDCT_2005_07_31:276804009]
 synonym: "squamous cell carcinoma of esophagus" RELATED []
-synonym: "squamous cell carcinoma of esophagus (disorder)" EXACT [SNOMEDCT_2005_07_31:276804009]
 xref: MESH:C562729
 xref: NCI:C4024
 xref: SNOMEDCT_US_2016_03_01:276804009
@@ -1629,7 +1626,6 @@ namespace: disease_ontology
 def: "A medulloblastoma that is characterized by cells that are larger than would be normally expected." [url:http\://en.wikipedia.org/wiki/Large_cell]
 subset: DO_cancer_slim
 synonym: "large cell Medulloblastoma" EXACT [NCI2004_11_17:C6904]
-synonym: "large cell medulloblastoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:128790006]
 xref: NCI:C6904
 xref: SNOMEDCT_US_2016_03_01:128790006
 xref: UMLS_CUI:C1266180
@@ -1690,8 +1686,7 @@ namespace: disease_ontology
 def: "A lung carcinoma that is characterized as any type of epithelial lung cancer other than small cell lung carcinoma." [url:http\://en.wikipedia.org/wiki/Non-small-cell_lung_carcinoma]
 subset: DO_cancer_slim
 synonym: "Non-small cell lung cancer" EXACT [SNOMEDCT_2005_07_31:254637007]
-synonym: "NSCLC" EXACT [CSP2005:4005-0042]
-synonym: "NSCLC" EXACT [NCI2004_11_17:C2926]
+synonym: "NSCLC" EXACT []
 xref: EFO:0003060
 xref: ICD10CM:C34
 xref: KEGG:05223
@@ -1727,7 +1722,7 @@ name: adrenocortical carcinoma
 namespace: disease_ontology
 def: "An adrenal cortex cancer that forms in the outer layer of tissue of the adrenal gland and that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://cancergenome.nih.gov/cancersselected/AdrenocorticalCarcinoma, url:http\://www.cancer.gov/cancertopics/types/adrenocortical]
 subset: DO_cancer_slim
-synonym: "Adrenal cortical carcinoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:2227007]
+synonym: "Adrenal cortical carcinoma" EXACT [SNOMEDCT_2005_07_31:2227007]
 synonym: "carcinoma of the Adrenal cortex" EXACT [NCI2004_11_17:C9325]
 xref: MESH:D018268
 xref: NCI:C9325
@@ -1772,8 +1767,8 @@ namespace: disease_ontology
 def: "A follicular thyroid carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer]
 subset: DO_cancer_slim
 synonym: "Medullary carcinoma of the Thyroid gland" EXACT [NCI2004_11_17:C3879]
+synonym: "Medullary thyroid carcinoma" EXACT [SNOMEDCT_2005_07_31:255032005]
 synonym: "medullary thyroid carcinoma" EXACT [CSP2005:4003-0036]
-synonym: "Medullary thyroid carcinoma (disorder)" EXACT [SNOMEDCT_2005_07_31:255032005]
 synonym: "Ultimobranchial thyroid tumor" EXACT [SNOMEDCT_2005_07_31:32913002]
 synonym: "Ultimobranchial thyroid tumour" EXACT [SNOMEDCT_2005_07_31:128916007]
 xref: MESH:C536914
@@ -1806,11 +1801,10 @@ name: bladder carcinoma
 namespace: disease_ontology
 def: "A urinary bladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://nci.nih.gov/cancertopics/types/bladder]
 subset: DO_cancer_slim
-synonym: "carcinoma bladder" EXACT [SNOMEDCT_2005_07_31:269607003]
-synonym: "carcinoma bladder" EXACT [SNOMEDCT_2005_07_31:154540000]
+synonym: "carcinoma bladder" EXACT []
 synonym: "carcinoma OF BLADDER" EXACT [MTH:108]
+synonym: "carcinoma of bladder" EXACT [SNOMEDCT_2005_07_31:255108000]
 synonym: "carcinoma of bladder" RELATED []
-synonym: "carcinoma of bladder (disorder)" EXACT [SNOMEDCT_2005_07_31:255108000]
 synonym: "carcinoma of urinary bladder" EXACT [NCI2004_11_17:C4912]
 xref: EFO:0000292
 xref: NCI:C4912
@@ -1873,7 +1867,7 @@ subset: TopNodes_DOcancerslim
 synonym: "cervical neoplasm" EXACT [CSP2005:2016-1746]
 synonym: "cervix cancer" EXACT []
 synonym: "cervix uteri cancer" EXACT []
-synonym: "neoplasm of uterine cervix (disorder)" EXACT [SNOMEDCT_2005_07_31:123841004]
+synonym: "neoplasm of uterine cervix" EXACT [SNOMEDCT_2005_07_31:123841004]
 synonym: "tumor of the Cervix Uteri" EXACT [NCI2004_11_17:C2940]
 synonym: "uterine cervical neoplasm" EXACT []
 xref: ICD10CM:C53
@@ -1999,7 +1993,7 @@ id: DOID:4556
 name: lung large cell carcinoma
 namespace: disease_ontology
 subset: DO_cancer_slim
-synonym: "large cell carcinoma of lung (disorder)" EXACT [SNOMEDCT_2005_07_31:254629004]
+synonym: "large cell carcinoma of lung" EXACT [SNOMEDCT_2005_07_31:254629004]
 synonym: "large cell lung carcinoma" EXACT [NCI2004_11_17:C4450]
 xref: NCI:C4450
 xref: SNOMEDCT_US_2016_03_01:254629004
@@ -2040,9 +2034,8 @@ namespace: disease_ontology
 def: "A salivary gland carcinoma that is characterized by a distinctive pattern in which abnormal nests or cords of epithelial cells surround and/or infiltrate ducts or glandular structures within the affected organ. These structures are typically filled with a mucous-like material or contain abnormal fibrous membranes." [url:http\://www.cigna.com/healthinfo/nord1109.html]
 subset: DO_cancer_slim
 synonym: "adenoid cystic cancer" EXACT [NCI2004_11_17:C2970]
-synonym: "adenoid cystic carcinoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:11671000]
-synonym: "Cylindroma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:302827006]
-synonym: "Cylindroma NOS" EXACT [SNOMEDCT_2005_07_31:189594000]
+synonym: "adenoid cystic carcinoma" EXACT [SNOMEDCT_2005_07_31:11671000]
+synonym: "Cylindroma" EXACT [SNOMEDCT_2005_07_31:302827006]
 xref: MESH:D003528
 xref: NCI:C2970
 xref: SNOMEDCT_US_2016_03_01:11671000
@@ -2069,10 +2062,7 @@ namespace: disease_ontology
 def: "A pancreas cancer that derives_from epithelial cells located_in the pancreas." [url:http\://en.wikipedia.org/wiki/Carcinoma, url:http\://www.cancer.gov/cancertopics/types/pancreatic]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-synonym: "carcinoma of pancreas" EXACT [SNOMEDCT_2005_07_31:93938001]
-synonym: "carcinoma of pancreas" EXACT [SNOMEDCT_2005_07_31:255089009]
-synonym: "carcinoma of pancreas" EXACT [SNOMEDCT_2005_07_31:154475002]
-synonym: "carcinoma of pancreas (disorder)" EXACT [SNOMEDCT_2005_07_31:372142002]
+synonym: "carcinoma of pancreas" EXACT []
 synonym: "exocrine cancer" RELATED []
 synonym: "Exocrine pancreas carcinoma" EXACT [NCI2004_11_17:C3850]
 synonym: "Pancreatic carcinoma, familial" RELATED [MESH:C535837]
@@ -2093,9 +2083,9 @@ name: esophagus adenocarcinoma
 namespace: disease_ontology
 def: "An esophageal carcinoma that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
+synonym: "adenocarcinoma of esophagus" EXACT [SNOMEDCT_2005_07_31:276803003]
 synonym: "adenocarcinoma of esophagus" RELATED []
-synonym: "adenocarcinoma of esophagus (disorder)" EXACT [SNOMEDCT_2005_07_31:276803003]
-synonym: "Oesophageal adenocarcinoma NOS" EXACT [NCI2004_11_17:C4025]
+synonym: "Oesophageal adenocarcinoma" EXACT [NCI2004_11_17:C4025]
 xref: MESH:C562730
 xref: NCI:C4025
 xref: SNOMEDCT_US_2016_03_01:276803003
@@ -2110,7 +2100,7 @@ def: "An ampulla of Vater cancer that has_material_basis_in abnormally prolifera
 subset: DO_cancer_slim
 synonym: "ampulla of vater cancer" EXACT [NCI2004_11_17:C3908]
 synonym: "ampullary carcinoma" EXACT []
-synonym: "carcinoma of ampulla of vater (disorder)" EXACT [SNOMEDCT_2005_07_31:254609000]
+synonym: "carcinoma of ampulla of vater" EXACT [SNOMEDCT_2005_07_31:254609000]
 xref: NCI:C3908
 xref: SNOMEDCT_US_2016_03_01:254609000
 xref: UMLS_CUI:C0262401
@@ -2179,6 +2169,7 @@ xref: SNOMEDCT_US_2016_03_01:52967002
 xref: SNOMEDCT_US_2016_03_01:78956007
 xref: UMLS_CUI:C0001815
 xref: UMLS_CUI:C0026987
+is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:5170
@@ -2197,10 +2188,10 @@ alt_id: DOID:0050875
 def: "A lung carcinoma that has_material_basis_in primitive-appearing cells that are smaller than normal cells." [url:http\://en.wikipedia.org/wiki/Small-cell_carcinoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-synonym: "Oat cell carcinoma of lung (disorder)" EXACT [SNOMEDCT_2005_07_31:254633006]
+synonym: "Oat cell carcinoma of lung" EXACT [SNOMEDCT_2005_07_31:254633006]
 synonym: "SCLC" EXACT [CSP2005:2017-6589]
+synonym: "small cell carcinoma of lung" EXACT [SNOMEDCT_2005_07_31:254632001]
 synonym: "small cell carcinoma of lung" RELATED []
-synonym: "small cell carcinoma of lung (disorder)" EXACT [SNOMEDCT_2005_07_31:254632001]
 synonym: "small cell neuroendocrine carcinoma of lung" EXACT [NCI2004_11_17:C4917]
 xref: KEGG:05222
 xref: MESH:D055752
@@ -2315,11 +2306,11 @@ alt_id: DOID:5647
 def: "A choroid plexus cancer that has_material_basis_in epithelial cells of the choroid plexus." [url:http\://en.wikipedia.org/wiki/Carcinoma, url:http\://en.wikipedia.org/wiki/Choroid_plexus_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=45963]
 subset: DO_cancer_slim
 synonym: "cancer of Choroid Plexus" EXACT [NCI2004_11_17:C4715]
-synonym: "Choroid plexus carcinoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:88252006]
+synonym: "Choroid plexus carcinoma" EXACT [SNOMEDCT_2005_07_31:88252006]
 synonym: "malignant neoplasm of choroid plexus" EXACT [MTHICD9_2006:191.5]
 synonym: "malignant neoplasm of the Choroid Plexus" EXACT [NCI2004_11_17:C4533]
+synonym: "malignant tumor of choroid plexus" EXACT [SNOMEDCT_2005_07_31:188292007]
 synonym: "malignant tumor of choroid plexus" RELATED []
-synonym: "malignant tumor of choroid plexus (disorder)" EXACT [SNOMEDCT_2005_07_31:188292007]
 xref: MESH:C562943
 xref: NCI:C4533
 xref: NCI:C4715
@@ -2370,7 +2361,7 @@ namespace: disease_ontology
 def: "A uterine corpus cancer that is characterized histologically by papillae with fibrovascular cores,  marked nuclear atypia, psammoma bodies and cilia." [url:http\://en.wikipedia.org/wiki/Uterine_serous_carcinoma]
 subset: DO_cancer_slim
 synonym: "uterine papillary serous carcinoma" EXACT []
-synonym: "uterine serous carcinoma " EXACT []
+synonym: "uterine serous carcinoma" EXACT []
 xref: NCI:C27838
 xref: UMLS_CUI:C1336921
 is_a: DOID:305 ! carcinoma
@@ -2444,8 +2435,8 @@ name: CLL/SLL
 namespace: disease_ontology
 def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291]
 subset: DO_cancer_slim
+synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT [SNOMEDCT_2005_07_31:399607007]
 synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
-synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:399607007]
 xref: NCI:C27911
 xref: SNOMEDCT_US_2016_03_01:399607007
 xref: UMLS_CUI:C1302547
@@ -2457,7 +2448,7 @@ name: acral lentiginous melanoma
 namespace: disease_ontology
 def: "A skin melanoma that is characterized by slow growth of a small pigmented spot on the skin with a clearly defined edge, surrounded by normal-appearing skin and occurs on occurs on non hair-bairing surfaces including hands and feet, subungual sites, and fingers or toes." [url:http\://en.wikipedia.org/wiki/Acral_lentiginous_melanoma, url:http\://en.wikipedia.org/wiki/Lentigo, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1352575/]
 subset: DO_cancer_slim
-synonym: "acral lentiginous melanoma, malignant (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:16974005]
+synonym: "acral lentiginous melanoma, malignant" EXACT [SNOMEDCT_2005_07_31:16974005]
 synonym: "malignant acral lentiginous melanoma" EXACT [SNOMEDCT_2005_07_31:189755003]
 is_a: DOID:8923 ! skin melanoma
 
@@ -2468,7 +2459,6 @@ namespace: disease_ontology
 def: "An extraosseous chondrosarcoma that has_material_basis_in cells derived from transformed cells that produce cartilage and is characterized by a marked abundance of extracellular mucoid (myxoid) matrix." [url:http\://en.wikipedia.org/wiki/Chondrosarcoma, url:http\://en.wikipedia.org/wiki/Myxoid_chondrosarcoma, url:http\://en.wikipedia.org/wiki/Myxoid_tumor, url:http\://www.ncbi.nlm.nih.gov/pubmed/10564384]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
-synonym: "extraskeletal myxoid chondrosarcoma (disorder)" EXACT [SNOMEDCT_2005_07_31:404079008]
 synonym: "Myxoid extraosseous chondrosarcoma" EXACT [NCI2004_11_17:C27502]
 xref: MESH:C563195
 xref: NCI:C27502
@@ -2545,6 +2535,7 @@ xref: SNOMEDCT_US_2016_03_01:1929004
 xref: SNOMEDCT_US_2016_03_01:413616009
 xref: UMLS_CUI:C0079731
 is_a: DOID:0060058 ! lymphoma
+is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:7474
@@ -2616,17 +2607,14 @@ def: "A pharynx cancer that is located_in the hypopharynx." [url:http\://en.wiki
 subset: DO_cancer_slim
 synonym: "Hypopharyngeal cancer" EXACT [MTH:NOCODE]
 synonym: "malignant Hypopharyngeal tumor" EXACT [NCI2004_11_17:C7190]
-synonym: "malignant neoplasm of hypopharynx" EXACT [ICD9CM_2006:148]
-synonym: "malignant neoplasm of hypopharynx NOS" EXACT [MTHICD9_2006:148.9]
-synonym: "malignant neoplasm of hypopharynx NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:187712005]
-synonym: "malignant neoplasm of hypopharynx, NOS" EXACT [SNOMEDCT_2005_07_31:93831006]
+synonym: "malignant neoplasm of hypopharynx" EXACT []
 synonym: "malignant neoplasm of ill-defined sites within the lip and oral cavity" EXACT []
-synonym: "malignant neoplasm of other specified hypopharyngeal site (disorder)" EXACT [SNOMEDCT_2005_07_31:187711003]
+synonym: "malignant neoplasm of other specified hypopharyngeal site" EXACT [SNOMEDCT_2005_07_31:187711003]
 synonym: "malignant neoplasm of other specified sites of hypopharynx" EXACT []
 synonym: "malignant neoplasm of posterior hypopharyngeal wall" EXACT []
 synonym: "malignant neoplasm of posterior wall of hypopharynx" EXACT [MTH:U001377]
-synonym: "malignant tumor of hypopharynx (disorder)" EXACT [SNOMEDCT_2005_07_31:363399006]
-synonym: "malignant tumor of posterior wall of hypopharynx (disorder)" EXACT [SNOMEDCT_2005_07_31:303012000]
+synonym: "malignant tumor of hypopharynx" EXACT [SNOMEDCT_2005_07_31:363399006]
+synonym: "malignant tumor of posterior wall of hypopharynx" EXACT [SNOMEDCT_2005_07_31:303012000]
 synonym: "malignant tumour of hypopharynx" EXACT [SNOMEDCT_2005_07_31:187717004]
 xref: ICD10CM:C13
 xref: ICD10CM:C13.2
@@ -2687,9 +2675,9 @@ synonym: "malignant neoplasm of lateral wall of oropharynx" EXACT [MTH:U000704]
 synonym: "malignant neoplasm of oropharynx" EXACT [MTH:NOCODE]
 synonym: "malignant neoplasm of posterior wall of oropharynx" EXACT []
 synonym: "malignant Oropharyngeal tumor" EXACT [NCI2004_11_17:C7398]
-synonym: "malignant tumor of oropharynx (disorder)" EXACT [SNOMEDCT_2005_07_31:363392002]
-synonym: "malignant tumor of posterior wall of oropharynx (disorder)" EXACT [SNOMEDCT_2005_07_31:187688008]
-synonym: "malignant tumour of mesopharynx (disorder)" EXACT [SNOMEDCT_2005_07_31:373653002]
+synonym: "malignant tumor of oropharynx" EXACT [SNOMEDCT_2005_07_31:363392002]
+synonym: "malignant tumor of posterior wall of oropharynx" EXACT [SNOMEDCT_2005_07_31:187688008]
+synonym: "malignant tumour of mesopharynx" EXACT [SNOMEDCT_2005_07_31:373653002]
 synonym: "oropharyngeal cancer" EXACT [CSP2005:2013-1302]
 synonym: "Oropharyngeal carcinoma" EXACT [NCI2004_11_17:C9105]
 synonym: "primary malignant neoplasm of lateral wall of oropharynx" EXACT [SNOMEDCT_2005_07_31:93862005]
@@ -2860,12 +2848,10 @@ subset: DO_rare_slim
 synonym: "carcinoma of nasopharynx" RELATED []
 synonym: "malignant Nasopharyngeal tumor" EXACT [NCI2004_11_17:C9321]
 synonym: "malignant neoplasm of anterior wall of nasopharynx" EXACT []
+synonym: "malignant neoplasm of lateral wall of nasopharynx" EXACT [SNOMEDCT_2005_07_31:187699005]
 synonym: "malignant neoplasm of lateral wall of nasopharynx" EXACT []
-synonym: "malignant neoplasm of lateral wall of nasopharynx NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:187699005]
-synonym: "malignant neoplasm of nasopharyngeal wall (disorder)" EXACT [SNOMEDCT_2005_07_31:240163000]
-synonym: "malignant neoplasm of nasopharyngeal wall NOS" EXACT [MTHICD9_2006:147.9]
-synonym: "malignant neoplasm of nasopharynx" EXACT [ICD9CM_2006:147, MTH:NOCODE]
-synonym: "malignant neoplasm of nasopharynx (disorder) [Ambiguous]" EXACT [SNOMEDCT_2005_07_31:93919005]
+synonym: "malignant neoplasm of nasopharyngeal wall" EXACT [SNOMEDCT_2005_07_31:240163000]
+synonym: "malignant neoplasm of nasopharynx" EXACT []
 synonym: "malignant neoplasm of other specified sites of nasopharynx" EXACT []
 synonym: "malignant neoplasm of posterior wall of nasopharynx" EXACT []
 synonym: "malignant neoplasm of roof of nasopharynx" EXACT [MTHICD9_2006:147.0]
@@ -2934,6 +2920,7 @@ xref: SNOMEDCT_US_2016_03_01:154585004
 xref: SNOMEDCT_US_2016_03_01:55921005
 xref: SNOMEDCT_US_2016_03_01:94705007
 xref: UMLS_CUI:C0026764
+is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:9952

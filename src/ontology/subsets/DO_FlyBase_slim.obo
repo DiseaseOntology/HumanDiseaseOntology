@@ -217,9 +217,9 @@ namespace: disease_ontology
 def: "A congenital disorder of glycosylation that involves malfunctioning trimming/processing of the protein-bound oligosaccharide chain." [url:http\://en.wikipedia.org/wiki/Congenital_disorder_of_glycosylation#Classification]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "B4GALT1-CDG (CDG-2d)" EXACT []
-synonym: "MGAT2-CDG (CDG-2a)" EXACT []
-synonym: "MOGS-CDG (CDG-2b)" EXACT []
+synonym: "B4GALT1-CDG" EXACT []
+synonym: "MGAT2-CDG" EXACT []
+synonym: "MOGS-CDG" EXACT []
 xref: OMIM:212066
 xref: OMIM:266265
 xref: OMIM:300896
@@ -249,7 +249,6 @@ name: congenital generalized lipodystrophy
 namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "Beradinelli-Seip syndrome" EXACT []
 xref: OMIM:PS608594
 
 [Term]
@@ -349,7 +348,7 @@ creation_date: 2012-09-05T11:48:42Z
 id: DOID:0050752
 name: amyotrophic lateral sclerosis type 8
 namespace: disease_ontology
-def: "An amyotrophic lateral sclerosis that has material basis in mutation in the VAPB gene on chromosome 20." [url:http\://omim.org/entry/608627, utl:http\://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis]
+def: "An amyotrophic lateral sclerosis that has material basis in mutation in the VAPB gene on chromosome 20." [url:http\://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis, url:http\://omim.org/entry/608627]
 subset: DO_FlyBase_slim
 synonym: "ALS8" EXACT [OMIM:608627]
 synonym: "amyotrophic lateral sclerosis 8" EXACT [OMIM:608627]
@@ -358,12 +357,10 @@ is_a: DOID:332 ! amyotrophic lateral sclerosis
 
 [Term]
 id: DOID:0050756
-name: Batten disease
+name: CLN3 disease
 namespace: disease_ontology
 subset: DO_FlyBase_slim
-synonym: "juvenile neuronal ceroid lipofuscinosis" EXACT []
-is_a: DOID:14503 ! neuronal ceroid lipofuscinosis
-created_by: lschriml
+is_obsolete: true
 creation_date: 2013-01-16T01:15:03Z
 
 [Term]
@@ -509,7 +506,7 @@ synonym: "familial dystonia" EXACT []
 synonym: "fragments of torsion dystonia" EXACT []
 synonym: "idiopathic familial dystonia" EXACT []
 synonym: "idiopathic non-familial dystonia" EXACT []
-synonym: "Idiopathic torsion dystonia" EXACT [ICD9CM_2006:333.6, SNOMEDCT_2005_07_31:155008004]
+synonym: "Idiopathic torsion dystonia" EXACT []
 synonym: "symptomatic torsion dystonia" EXACT []
 xref: ICD10CM:G24.1
 xref: ICD10CM:G24.2
@@ -642,7 +639,7 @@ synonym: "autosomal recessive spastic paraplegia Troyer type" EXACT []
 synonym: "autosomal recessive spastic paraplegia type 20" EXACT []
 synonym: "childhood-onset spastic paraparesis with distal muscle wasting" EXACT []
 synonym: "hereditary spastic paraplegia 20" EXACT []
-synonym: "spastic paraplegia 20 (Troyer syndrome)" EXACT []
+synonym: "spastic paraplegia 20" EXACT []
 synonym: "spastic paraplegia type 20" EXACT []
 synonym: "SPG20" EXACT []
 xref: ICD10CM:G11.4
@@ -681,8 +678,8 @@ name: synucleinopathy
 namespace: disease_ontology
 def: "A neurodegenerative disease that is characterized by the abnormal accumulation of aggregates of alpha-synuclein protein in neurons, nerve fibres or glial cells." [url:http\://en.wikipedia.org/wiki/Synucleinopathies]
 subset: DO_FlyBase_slim
-synonym: "alpha Synucleinopathies " EXACT []
-synonym: "Synucleinopathies " RELATED []
+synonym: "alpha Synucleinopathies" EXACT []
+synonym: "Synucleinopathies" EXACT []
 is_a: DOID:1289 ! neurodegenerative disease
 created_by: lschriml
 creation_date: 2014-08-14T03:29:17Z
@@ -984,6 +981,20 @@ created_by: lschriml
 creation_date: 2015-11-10T16:59:22Z
 
 [Term]
+id: DOID:0110731
+name: neuronal ceroid lipofuscinosis 3
+alt_id: DOID:0050756
+def: "A neuronal ceroid lipofuscinosis that is characterized by juvenile-onset of progressive dementia, seizures, and progressive visual failure and an ultrastructural pattern of lipopigment with a 'fingerprint' profile and has_material_basis_in homozygous or compound heterozygous mutation in the CLN3 gene on chromosome 16p11." [url:https\://ghr.nlm.nih.gov/condition/cln3-disease, url:https\://www.ncbi.nlm.nih.gov/pubmed/15965709, url:https\://www.ncbi.nlm.nih.gov/pubmed/7553855]
+subset: DO_FlyBase_slim
+synonym: "Batten disease" EXACT []
+synonym: "CLN3" EXACT []
+synonym: "juvenile neuronal ceroid lipofuscinosis" EXACT []
+xref: ICD10CM:E75.4
+xref: OMIM:204200
+xref: ORDO:228346
+is_a: DOID:14503 ! neuronal ceroid lipofuscinosis
+
+[Term]
 id: DOID:10003
 name: sensorineural hearing loss
 namespace: disease_ontology
@@ -1134,14 +1145,14 @@ subset: DO_FlyBase_slim
 subset: TopNodes_DOcancerslim
 synonym: "Ca body - stomach" EXACT [SNOMEDCT_2005_07_31:154450001]
 synonym: "ca greater curvature of stomach" EXACT []
-synonym: "Ca lesser curvature - stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269530002]
+synonym: "Ca lesser curvature - stomach" EXACT [SNOMEDCT_2005_07_31:269530002]
 synonym: "gastric cancer" EXACT []
-synonym: "gastric neoplasm" EXACT [CSP2005:2010-1611, NCI2004_11_17:C3387, SNOMEDCT_2005_07_31:187731004]
+synonym: "gastric neoplasm" EXACT []
 synonym: "malignant neoplasm of body of stomach" EXACT []
-synonym: "malignant neoplasm of lesser curve of stomach unspecified (disorder)" EXACT [SNOMEDCT_2005_07_31:187743003]
-synonym: "malignant tumor of body of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:187742008]
-synonym: "malignant tumor of greater curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269460009]
-synonym: "malignant tumor of lesser curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269459004]
+synonym: "malignant neoplasm of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:187743003]
+synonym: "malignant tumor of body of stomach" EXACT [SNOMEDCT_2005_07_31:187742008]
+synonym: "malignant tumor of greater curve of stomach" EXACT [SNOMEDCT_2005_07_31:269460009]
+synonym: "malignant tumor of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:269459004]
 xref: ICD10CM:C16
 xref: ICD10CM:C16.2
 xref: ICD10CM:C16.5
@@ -1213,7 +1224,7 @@ is_a: DOID:8466 ! retinal degeneration
 id: DOID:1059
 name: intellectual disability
 namespace: disease_ontology
-def: "A specific developmental disorder that involves significant limitations both in mental functioning and in adaptive behavior such as communicating, taking care of him or herself, and social skills." [url:http\://www.aamr.org/content_96.cfm?navID=20, url:http\://www.google.com/url?sa=t&source=web&cd=9&ved=0CGEQFjAI&url=http%3A%2F%2Fwww.nichcy.org%2FDisabilities%2FSpecific%2FPages%2FIntellectualDisability.aspx&rct=j&q=%20Search%20Intellectual%20Disability%3A%20Definition%2C%20Classification%2C%20and%20Systems%20of%20Supports%20&ei=_Y7dTJ-JKoX7lweUy837DA&usg=AFQjCNHf5WD4JW8kvTc901MQ6AUr_mRPpQ&sig2=sV1yzHR9plpkHZMXYtd8iA&cad=rja, url:http\://www.nichcy.org/disabilities/specific/pages/intellectualdisability.aspx#WhatisID.aspx]
+def: "A specific developmental disorder that involves significant limitations both in mental functioning and in adaptive behavior such as communicating, taking care of him or herself, and social skills." [url:http\://aaidd.org/intellectual-disability/definition#.WsPDT2VvqaU, url:https\://en.wikipedia.org/wiki/Intellectual_disability]
 comment: OMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_FlyBase_slim
 synonym: "mental retardation" RELATED []
@@ -1333,7 +1344,7 @@ namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "Muscular dystrophy, oculopharyngeal" EXACT [MTHICD9_2006:359.1]
-synonym: "Oculopharyngeal muscular dystrophy (disorder)" EXACT [SNOMEDCT_2005_07_31:77097004]
+synonym: "Oculopharyngeal muscular dystrophy" EXACT [SNOMEDCT_2005_07_31:77097004]
 xref: ICD10CM:G71.0
 xref: MESH:D039141
 xref: NCI:C84942
@@ -1390,8 +1401,7 @@ namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "Landouzy Dejerine muscular dystrophy" EXACT [CSP2005:1849-6662]
-synonym: "Landouzy-Dejerine muscular dystrophy" EXACT [SNOMEDCT_2005_07_31:399091004]
-synonym: "Landouzy-Dejerine muscular dystrophy" EXACT [SNOMEDCT_2005_07_31:56096001]
+synonym: "Landouzy-Dejerine muscular dystrophy" EXACT []
 synonym: "Muscular dystrophy, Landouzy-Dejerine" EXACT [MTHICD9_2006:359.1]
 xref: ICD10CM:G71.0
 xref: MESH:D020391
@@ -1541,12 +1551,10 @@ synonym: "malignant primary brain neoplasm" EXACT [NCI2004_11_17:C4954]
 synonym: "malignant primary brain tumor" EXACT []
 synonym: "malignant tumor of adult brain" EXACT [NCI2004_11_17:C5115]
 synonym: "malignant tumor of Brain" EXACT [NCI2004_11_17:C3568]
-synonym: "neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:126952004]
-synonym: "neoplasm of unspecified nature of brain" EXACT [ICD9CM_2006:239.6]
-synonym: "neoplasm of unspecified nature of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:189537005]
+synonym: "neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:126952004]
 synonym: "primary brain neoplasm" EXACT [NCI2004_11_17:C4952]
 synonym: "primary brain tumor" EXACT []
-synonym: "primary malignant neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:93727008]
+synonym: "primary malignant neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:93727008]
 synonym: "tumor of the Brain" EXACT [NCI2004_11_17:C2907]
 xref: CSP:2006-2736
 xref: ICD10CM:C71
@@ -1628,11 +1636,9 @@ subset: DO_FlyBase_slim
 synonym: "Bourneville's disease" EXACT [NCI2004_11_17:C3424]
 synonym: "cerebral sclerosis" EXACT [CSP2005:0727-2535]
 synonym: "Epiloia" EXACT [MTHICD9_2006:759.5]
-synonym: "Tuberose sclerosis" EXACT [SNOMEDCT_2005_07_31:268359006]
-synonym: "Tuberose sclerosis" EXACT [SNOMEDCT_2005_07_31:157033002]
-synonym: "Tuberous sclerosis" EXACT [SNOMEDCT_2005_07_31:157027006]
-synonym: "Tuberous sclerosis" EXACT [ICD9CM_2006:759.5]
-synonym: "Tuberous sclerosis syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:7199000]
+synonym: "Tuberose sclerosis" EXACT []
+synonym: "Tuberous sclerosis" EXACT []
+synonym: "Tuberous sclerosis syndrome" EXACT [SNOMEDCT_2005_07_31:7199000]
 xref: ICD10CM:Q85.1
 xref: ICD9CM:759.5
 xref: MESH:D014402
@@ -1690,9 +1696,8 @@ namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_FlyBase_slim
 synonym: "Hippel Lindau syndrome" EXACT [CSP2005:5000-0055]
+synonym: "Von Hippel-Lindau syndrome" EXACT [NCI2004_11_17:C3105]
 synonym: "von Hippel-Lindau syndrome" EXACT [MTHICD9_2006:759.6]
-synonym: "Von Hippel-Lindau syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:46659004]
-synonym: "Von Hippel-Lindau syndrome (VHL)" EXACT [NCI2004_11_17:C3105]
 xref: ICD10CM:Q85.8
 xref: MESH:D006623
 xref: NCI:C3105
@@ -1748,7 +1753,7 @@ namespace: disease_ontology
 def: "A chromosomal disease that is characterized by flat-looking facial features and weak muscle tone (hypotonia) in infancy and is caused by trisomy of all or a critical portion of chromosome 21 and is associated with intellectual disability." [url:http\://en.wikipedia.org/wiki/Down_syndrome, url:http\://ghr.nlm.nih.gov/condition/down-syndrome, url:http\://www.nichd.nih.gov/health/topics/down/Pages/default.aspx, url:http\://www.omim.org/entry/190685?search=down%20syndrome&highlight=down%20syndromic%20syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "Complete trisomy 21 syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:41040004]
+synonym: "Complete trisomy 21 syndrome" EXACT [SNOMEDCT_2005_07_31:41040004]
 synonym: "Down's syndrome" EXACT [SNOMEDCT_2005_07_31:157019002]
 synonym: "Down's syndrome - trisomy 21" EXACT [SNOMEDCT_2005_07_31:205614001]
 synonym: "Downs syndrome" EXACT [NCI2004_11_17:C2993]
@@ -1859,7 +1864,7 @@ namespace: disease_ontology
 alt_id: DOID:2478
 def: "A hereditary ataxia that has_material_basis_in autosomal dominant inheritance." [url:http\://www.ncbi.nlm.nih.gov/books/NBK1138/, url:http\://www.ncbi.nlm.nih.gov/books/NBK22234/]
 subset: DO_FlyBase_slim
-synonym: "spinocerebellar ataxia " EXACT []
+synonym: "spinocerebellar ataxia" EXACT []
 xref: ICD9CM:334.3
 xref: MESH:D020754
 xref: NCI:C82341
@@ -1896,7 +1901,7 @@ alt_id: DOID:14770
 def: "A sphingoliidosis characterized by the accumulation of the lipid sphingomyelin in lysosomes in cells." [url:https\://en.wikipedia.org/wiki/Niemann–Pick_disease, url:https\://rarediseases.info.nih.gov/diseases/13334/niemann-pick-disease]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "lipoid histiocytosis (classical phosphatide)" EXACT [CSP2005:1849-9151]
+synonym: "lipoid histiocytosis" EXACT []
 synonym: "sphingomyelin lipidosis" EXACT []
 synonym: "Sphingomyelinase Deficiency Disease" EXACT []
 xref: ICD10CM:E75.249
@@ -1925,7 +1930,7 @@ subset: DO_FlyBase_slim
 synonym: "Branchio-Oto-renal syndrome" EXACT [MTH:NOCODE]
 synonym: "Branchio-otorenal dysplasia" EXACT [SNOMEDCT_2005_07_31:205806009]
 synonym: "branchiootorenal dysplasia" EXACT []
-synonym: "Melnick-Fraser syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:290006]
+synonym: "Melnick-Fraser syndrome" EXACT [SNOMEDCT_2005_07_31:290006]
 xref: MESH:D019280
 xref: NCI:C98983
 xref: OMIM:113650
@@ -2007,9 +2012,10 @@ def: "A primary bacterial infectious disease that is described as an acute, diar
 subset: DO_FlyBase_slim
 subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
-synonym: "(Cholera) or (Vibrio cholerae)" EXACT [SNOMEDCT_2005_07_31:186087007]
-synonym: "Cholera - Vibrio cholerae (disorder)" EXACT [SNOMEDCT_2005_07_31:186088002]
+synonym: "Cholera" EXACT [SNOMEDCT_2005_07_31:186087007]
+synonym: "Cholera - Vibrio cholerae" EXACT [SNOMEDCT_2005_07_31:186088002]
 synonym: "Cholera due to Vibrio cholerae" EXACT [ICD9CM_2006:001.0]
+synonym: "Vibrio cholerae" EXACT [SNOMEDCT_2005_07_31:186087007]
 xref: ICD10CM:A00
 xref: ICD10CM:A00.0
 xref: ICD10CM:A00.9
@@ -2054,7 +2060,7 @@ comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
 synonym: "malignant neoplasm" EXACT []
-synonym: "malignant tumor " EXACT []
+synonym: "malignant tumor" EXACT []
 synonym: "primary cancer" EXACT []
 xref: ICD10CM:C80
 xref: ICD10CM:C80.1
@@ -2202,7 +2208,7 @@ synonym: "Gaucher disease" EXACT []
 synonym: "glocucerebrosidase deficiency" EXACT []
 synonym: "glucosylceramide beta-glucosidase deficiency" EXACT []
 synonym: "kerasin thesaurismosis" EXACT []
-synonym: "lipoid histiocytosis (kerasin type)" EXACT [CSP2005:1849-8920]
+synonym: "lipoid histiocytosis" EXACT []
 xref: ICD10CM:E75.22
 xref: MESH:D005776
 xref: NCI:C61268
@@ -2273,7 +2279,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 synonym: "AT/RT" RELATED []
-synonym: "Atypical teratoid/rhabdoid tumor (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:128792003]
+synonym: "Atypical teratoid/rhabdoid tumor" EXACT [SNOMEDCT_2005_07_31:128792003]
 synonym: "Rhabdoid tumor of the CNS" EXACT [NCI2004_11_17:C6906]
 synonym: "rhabdoid tumor predisposition syndrome" RELATED []
 xref: NCI:C6906
@@ -2366,15 +2372,14 @@ def: "An immune system cancer located_in the hematological system that is charac
 subset: DO_FlyBase_slim
 subset: TopNodes_DOcancerslim
 synonym: "blood cancer" EXACT [CSP2005:2004-0139]
-synonym: "Hematologic malignancy" EXACT [SNOMEDCT_2005_07_31:269475001]
-synonym: "Hematologic malignancy (disorder)" EXACT [SNOMEDCT_2005_07_31:127221002]
-synonym: "Hematologic neoplasm (disorder)" EXACT [SNOMEDCT_2005_07_31:129154003]
+synonym: "Hematologic malignancy" EXACT []
+synonym: "Hematologic neoplasm" EXACT [SNOMEDCT_2005_07_31:129154003]
 synonym: "Hematological tumors" EXACT [NCI2004_11_17:C27134]
 synonym: "hematopoietic and lymphoid system tumor" EXACT []
 synonym: "hematopoietic cancer" EXACT []
-synonym: "hematopoietic neoplasm (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:414388001]
+synonym: "hematopoietic neoplasm" EXACT [SNOMEDCT_2005_07_31:414388001]
 synonym: "hematopoietic tumors" EXACT [NCI2004_11_17:C27134]
-synonym: "malignant hematopoietic neoplasm (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:414644002]
+synonym: "malignant hematopoietic neoplasm" EXACT [SNOMEDCT_2005_07_31:414644002]
 xref: MESH:D019337
 xref: NCI:C27134
 xref: SNOMEDCT_US_2016_03_01:414388001
@@ -2433,7 +2438,7 @@ subset: DO_FlyBase_slim
 synonym: "long Q-T syndrome" EXACT [SNOMEDCT_2005_07_31:395649008]
 synonym: "LQT" EXACT [CSP2005:4009-0053]
 synonym: "Romano-Ward syndrome" EXACT []
-synonym: "Romano-Ward syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:20852007]
+synonym: "Romano-Ward syndrome" EXACT [SNOMEDCT_2005_07_31:20852007]
 xref: ICD10CM:I45.81
 xref: ICD9CM:426.82
 xref: MESH:D008133
@@ -2627,7 +2632,7 @@ name: lysosomal storage disease
 namespace: disease_ontology
 def: "An inherited metabolic disorder that involve an abnormal accumulation of substances inside the lysosome resulting from defects in lysosomal function." [url:http\://en.wikipedia.org/wiki/Lysosomal_storage_disease]
 subset: DO_FlyBase_slim
-synonym: "disorder of lysosomal enzyme (disorder)" EXACT [SNOMEDCT_2005_07_31:23585005]
+synonym: "disorder of lysosomal enzyme" EXACT [SNOMEDCT_2005_07_31:23585005]
 synonym: "inborn lysosomal enzyme disorder" EXACT [CSP2005:1849-5878]
 synonym: "lysosomal storage metabolism disorder" EXACT []
 xref: MESH:D016464
@@ -2680,7 +2685,7 @@ namespace: disease_ontology
 def: "A myositis that is characterized by slowly progressive weakness and wasting of both distal and proximal muscles, most apparent in the muscles of the arms and legs that can occur in a sporadic or hereditary forms." [url:http\://en.wikipedia.org/wiki/Inclusion_body_myositis, url:http\://www.jewishgeneticdiseases.org/diseases/hereditary-inclusion-body-myopathy-2/, url:http\://www.myositis.org/learn-about-myositis/types-of-myositis/inclusion-body-myositis, url:http\://www.ncbi.nlm.nih.gov/gtr/conditions/C1853926/, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=602]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "Distal Myopathy with Rimmed Vacuoles (DMRV)" EXACT []
+synonym: "Distal Myopathy with Rimmed Vacuoles" EXACT []
 synonym: "Distal myopathy, Nonaka type" EXACT []
 synonym: "Hereditary Inclusion Body Myopathy" EXACT []
 synonym: "HIBM" EXACT []
@@ -2709,7 +2714,7 @@ def: "A syndrome that is characterized by mildly unusual facial features, short 
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
-synonym: "Turner's phenotype, karyotype normal (disorder)" EXACT [SNOMEDCT_2005_07_31:205684007]
+synonym: "Turner's phenotype, karyotype normal" EXACT [SNOMEDCT_2005_07_31:205684007]
 xref: ICD10CM:Q87.1
 xref: MESH:D009634
 xref: NCI:C34854
@@ -2769,7 +2774,7 @@ def: "An autosomal recessive disease characterized by oculocutaneous albinism, b
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
-synonym: "HPS (Hermansky Pudlak syndrome)" EXACT [CSP2005:0446-1413]
+synonym: "HPS" EXACT [CSP2005:0446-1413]
 xref: ICD10CM:E70.331
 xref: MESH:D022861
 xref: NCI:C37261
@@ -2804,7 +2809,6 @@ name: Coffin-Lowry syndrome
 namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "Coffin-Lowry syndrome (disorder)" EXACT [SNOMEDCT_2005_07_31:15182000]
 xref: MESH:D038921
 xref: NCI:C84643
 xref: OMIM:303600
@@ -2835,15 +2839,15 @@ xref: UMLS_CUI:C0033300
 id: DOID:3981
 name: pantothenate kinase-associated neurodegeneration
 namespace: disease_ontology
-def: "A neurodegeneration with brain iron accumulation that has_material_basis_in autosomal recessive inheritance of mutation in the PANK2 gene on chromosome 20p13. " [url:http\://en.wikipedia.org/wiki/Pantothenate_kinase-associated_neurodegeneration, url:https\://www.ncbi.nlm.nih.gov/pubmed/8944032]
+def: "A neurodegeneration with brain iron accumulation that has_material_basis_in autosomal recessive inheritance of mutation in the PANK2 gene on chromosome 20p13." [url:http\://en.wikipedia.org/wiki/Pantothenate_kinase-associated_neurodegeneration]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "brain Iron Accumulation type I syndrome" EXACT [NCI2004_11_17:C8967]
 synonym: "Hallervorden-Spatz disease" EXACT [MTHICD9_2006:333.0]
 synonym: "Hallervorden-Spatz syndrome" EXACT []
 synonym: "NBIA1" EXACT []
-synonym: "neurodegeneration with brain iron accumulation 1 " EXACT []
-synonym: "Pigmentary pallidal degeneration (disorder)" EXACT [SNOMEDCT_2005_07_31:2992000]
+synonym: "neurodegeneration with brain iron accumulation 1" EXACT []
+synonym: "Pigmentary pallidal degeneration" EXACT [SNOMEDCT_2005_07_31:2992000]
 xref: ICD10CM:G23.0
 xref: MESH:D006211
 xref: NCI:C84988
@@ -2863,8 +2867,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "alveolar childhood rhabdomyosarcoma" EXACT []
 synonym: "Alveolar Rhabdomyosarcoma" EXACT [NCI2004_11_17:C3749]
-synonym: "Alveolar rhabdomyosarcoma (disorder)" EXACT [SNOMEDCT_2005_07_31:404053004]
-synonym: "Alveolar rhabdomyosarcoma (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:63449009]
+synonym: "Alveolar rhabdomyosarcoma" EXACT [SNOMEDCT_2005_07_31:404053004]
 synonym: "pediatric Alveolar Rhabdomyosarcoma" EXACT [NCI2004_11_17:C7958]
 xref: MESH:D018232
 xref: NCI:C3749
@@ -2993,10 +2996,10 @@ id: DOID:4627
 name: ideomotor apraxia
 namespace: disease_ontology
 subset: DO_FlyBase_slim
-synonym: "Classic apraxia (finding) [Ambiguous]" EXACT [SNOMEDCT_2005_07_31:39746003]
-synonym: "Ideomotor dyspraxia (disorder)" EXACT [SNOMEDCT_2005_07_31:229706001]
-synonym: "Limb-kinetic apraxia (finding)" EXACT [SNOMEDCT_2005_07_31:334621009]
-synonym: "Transcortical apraxia (finding)" EXACT [SNOMEDCT_2005_07_31:333633007]
+synonym: "Classic apraxia" EXACT [SNOMEDCT_2005_07_31:39746003]
+synonym: "Ideomotor dyspraxia" EXACT [SNOMEDCT_2005_07_31:229706001]
+synonym: "Limb-kinetic apraxia" EXACT [SNOMEDCT_2005_07_31:334621009]
+synonym: "Transcortical apraxia" EXACT [SNOMEDCT_2005_07_31:333633007]
 xref: MESH:D020240
 xref: SNOMEDCT_US_2016_03_01:229706001
 xref: SNOMEDCT_US_2016_03_01:333633007
@@ -3211,7 +3214,7 @@ namespace: disease_ontology
 def: "A myopathy that is characterized by mitochondrial dysfunction." [url:http\://en.wikipedia.org/wiki/Mitochondrial_myopathies, url:http\://www.ninds.nih.gov/disorders/mitochondrial_myopathy/mitochondrial_myopathy.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "mitochondrial cytopathy (disorder)" EXACT [SNOMEDCT_2005_07_31:240096000]
+synonym: "mitochondrial cytopathy" EXACT [SNOMEDCT_2005_07_31:240096000]
 xref: MESH:D017240
 xref: NCI:C101328
 xref: OMIM:251900
@@ -3266,12 +3269,11 @@ namespace: disease_ontology
 def: "A viral infectious disease that results_in inflammation, located_in pharynx, has_material_basis_in Human herpesvirus 4 and has_symptom fever, has_symptom fatigue, has_symptom lymphadenopathy, and has_symptom splenomegaly." [url:http\://en.wikipedia.org/wiki/Infectious_mononucleosis, url:http\://www.cdc.gov/ncidod/diseases/ebv.htm]
 subset: DO_FlyBase_slim
 synonym: "Filatov's disease" EXACT []
-synonym: "Gammaherpesviral mononucleosis (disorder)" EXACT [SNOMEDCT_2005_07_31:186668002]
+synonym: "Gammaherpesviral mononucleosis" EXACT [SNOMEDCT_2005_07_31:186668002]
 synonym: "glandular fever" EXACT []
 synonym: "Monocytic angina" EXACT [MTHICD9_2006:075]
 synonym: "mononucleosis" EXACT [CSP2005:0427-6541]
-synonym: "Pfeiffer's disease" EXACT [SNOMEDCT_2005_07_31:186670006]
-synonym: "Pfeiffer's disease (disorder)" EXACT [SNOMEDCT_2005_07_31:314131007]
+synonym: "Pfeiffer's disease" EXACT []
 xref: ICD10CM:B27
 xref: ICD10CM:B27.0
 xref: ICD10CM:B27.9
@@ -3305,7 +3307,7 @@ synonym: "Neurofibromatosis 1" EXACT [MTH:U003314]
 synonym: "neurofibromatosis type 1" EXACT []
 synonym: "neurofibromatosis type 2" EXACT []
 synonym: "neurofibromatosis type 4" EXACT []
-synonym: "neurofibromatosis type IV " EXACT []
+synonym: "neurofibromatosis type IV" EXACT []
 synonym: "peripheral Neurofibromatosis" EXACT [NCI2004_11_17:C3273]
 synonym: "Recklinghausen's neurofibromatosis" EXACT [CSP2005:2012-7338]
 synonym: "type IV neurofibromatosis of riccardi" EXACT []
@@ -3384,7 +3386,7 @@ def: "A peroxisomal disease that is characterized by the reduction or absence of
 comment: OMIM mapping confirmed by DO. [LS].\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
-synonym: "cerebrohepatorenal syndrome " EXACT []
+synonym: "cerebrohepatorenal syndrome" EXACT []
 synonym: "congenital iron overload" EXACT [CSP2005:1849-1804]
 synonym: "peroxisome biogenesis disorder" EXACT []
 xref: ICD10CM:E71.510

@@ -153,14 +153,14 @@ subset: DO_FlyBase_slim
 subset: TopNodes_DOcancerslim
 synonym: "Ca body - stomach" EXACT [SNOMEDCT_2005_07_31:154450001]
 synonym: "ca greater curvature of stomach" EXACT []
-synonym: "Ca lesser curvature - stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269530002]
+synonym: "Ca lesser curvature - stomach" EXACT [SNOMEDCT_2005_07_31:269530002]
 synonym: "gastric cancer" EXACT []
-synonym: "gastric neoplasm" EXACT [CSP2005:2010-1611, NCI2004_11_17:C3387, SNOMEDCT_2005_07_31:187731004]
+synonym: "gastric neoplasm" EXACT []
 synonym: "malignant neoplasm of body of stomach" EXACT []
-synonym: "malignant neoplasm of lesser curve of stomach unspecified (disorder)" EXACT [SNOMEDCT_2005_07_31:187743003]
-synonym: "malignant tumor of body of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:187742008]
-synonym: "malignant tumor of greater curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269460009]
-synonym: "malignant tumor of lesser curve of stomach (disorder)" EXACT [SNOMEDCT_2005_07_31:269459004]
+synonym: "malignant neoplasm of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:187743003]
+synonym: "malignant tumor of body of stomach" EXACT [SNOMEDCT_2005_07_31:187742008]
+synonym: "malignant tumor of greater curve of stomach" EXACT [SNOMEDCT_2005_07_31:269460009]
+synonym: "malignant tumor of lesser curve of stomach" EXACT [SNOMEDCT_2005_07_31:269459004]
 xref: ICD10CM:C16
 xref: ICD10CM:C16.2
 xref: ICD10CM:C16.5
@@ -288,7 +288,7 @@ def: "A intestinal cancer that is located_in the appendix." [url:http\://en.wiki
 subset: TopNodes_DOcancerslim
 synonym: "cancer of the appendix" EXACT [NCI2004_11_17:C9330]
 synonym: "malignant neoplasm of appendix vermiformis" EXACT [ICD9CM_2006:153.5]
-synonym: "malignant tumor of appendix (disorder)" EXACT [SNOMEDCT_2005_07_31:363411007]
+synonym: "malignant tumor of appendix" EXACT [SNOMEDCT_2005_07_31:363411007]
 synonym: "malignant tumor of the appendix" EXACT [NCI2004_11_17:C9333]
 xref: ICD10CM:C18.1
 xref: ICD9CM:153.5
@@ -354,9 +354,9 @@ alt_id: DOID:1902
 def: "A female reproductive system cancer that is located_in the vagina." [url:http\://www.cancer.gov/dictionary?CdrID=523460]
 subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of vagina" EXACT [ICD9CM_2006:184.0]
-synonym: "malignant tumor of vagina (disorder)" EXACT [SNOMEDCT_2005_07_31:363445000]
+synonym: "malignant tumor of vagina" EXACT [SNOMEDCT_2005_07_31:363445000]
 synonym: "malignant vaginal tumor" EXACT [NCI2004_11_17:C7410]
-synonym: "neoplasm of vagina (disorder)" EXACT [SNOMEDCT_2005_07_31:126921000]
+synonym: "neoplasm of vagina" EXACT [SNOMEDCT_2005_07_31:126921000]
 synonym: "vagina neoplasm" EXACT [CSP2005:2016-2004]
 synonym: "vaginal tumor" EXACT [NCI2004_11_17:C3437]
 xref: ICD10CM:C52
@@ -378,7 +378,7 @@ namespace: disease_ontology
 alt_id: DOID:3194
 def: "A nervous system cancer that is located_in the peripheral nervous system." [url:http\://en.wikipedia.org/wiki/Peripheral_nervous_system]
 subset: TopNodes_DOcancerslim
-synonym: "neoplasm of peripheral nerve (disorder)" EXACT [SNOMEDCT_2005_07_31:126980002]
+synonym: "neoplasm of peripheral nerve" EXACT [SNOMEDCT_2005_07_31:126980002]
 synonym: "nerve sheath neoplasm" EXACT [CSP2005:2012-6947]
 synonym: "nerve sheath tumors" EXACT []
 synonym: "tumor of PNS" EXACT [NCI2004_11_17:C3321]
@@ -403,7 +403,7 @@ subset: TopNodes_DOcancerslim
 synonym: "Ca trachea" EXACT [SNOMEDCT_2005_07_31:269562004]
 synonym: "malignant neoplasm of trachea" EXACT [MTH:NOCODE]
 synonym: "malignant Tracheal tumor" EXACT [NCI2004_11_17:C9346]
-synonym: "malignant tumor of trachea (disorder)" EXACT [SNOMEDCT_2005_07_31:363432004]
+synonym: "malignant tumor of trachea" EXACT [SNOMEDCT_2005_07_31:363432004]
 synonym: "tracheal neoplasm" EXACT []
 xref: ICD10CM:C33
 xref: ICD9CM:162.0
@@ -423,7 +423,7 @@ subset: TopNodes_DOcancerslim
 synonym: "head and neck neoplasm" EXACT [MTH:NOCODE]
 synonym: "head and neck tumours" EXACT []
 synonym: "head/neck neoplasm" EXACT [CSP2005:2005-4325]
-synonym: "tumor of head and neck (disorder)" EXACT [SNOMEDCT_2005_07_31:255055008]
+synonym: "tumor of head and neck" EXACT [SNOMEDCT_2005_07_31:255055008]
 xref: MESH:D006258
 xref: NCI:C3077
 xref: SNOMEDCT_US_2016_03_01:255055008
@@ -435,15 +435,11 @@ name: vulva cancer
 namespace: disease_ontology
 alt_id: DOID:1282
 subset: TopNodes_DOcancerslim
-synonym: "Ca vulva" EXACT [SNOMEDCT_2005_07_31:154535008]
-synonym: "Ca vulva" EXACT [SNOMEDCT_2005_07_31:269604005]
-synonym: "malignant neoplasm of vulva unspecified" EXACT [SNOMEDCT_2005_07_31:188214009]
-synonym: "malignant neoplasm of vulva unspecified (disorder)" EXACT [SNOMEDCT_2005_07_31:269471005]
-synonym: "malignant neoplasm of vulva, NOS" EXACT [SNOMEDCT_2005_07_31:94143002]
-synonym: "malignant neoplasm of vulva, unspecified" EXACT [ICD9CM_2006:184.4]
-synonym: "malignant tumor of vulva (disorder)" EXACT [SNOMEDCT_2005_07_31:363367000]
+synonym: "Ca vulva" EXACT []
+synonym: "malignant neoplasm of vulva" EXACT [SNOMEDCT_2005_07_31:94143002]
+synonym: "malignant tumor of vulva" EXACT [SNOMEDCT_2005_07_31:363367000]
 synonym: "malignant Vulvar tumor" EXACT [NCI2004_11_17:C7502]
-synonym: "neoplasm of vulva (disorder)" EXACT [SNOMEDCT_2005_07_31:126922007]
+synonym: "neoplasm of vulva" EXACT [SNOMEDCT_2005_07_31:126922007]
 synonym: "vulval cancer" EXACT [CSP2005:2016-2183]
 synonym: "vulval neoplasm" EXACT [CSP2005:2016-2183]
 synonym: "vulvar neoplasm" EXACT []
@@ -487,12 +483,10 @@ synonym: "malignant primary brain neoplasm" EXACT [NCI2004_11_17:C4954]
 synonym: "malignant primary brain tumor" EXACT []
 synonym: "malignant tumor of adult brain" EXACT [NCI2004_11_17:C5115]
 synonym: "malignant tumor of Brain" EXACT [NCI2004_11_17:C3568]
-synonym: "neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:126952004]
-synonym: "neoplasm of unspecified nature of brain" EXACT [ICD9CM_2006:239.6]
-synonym: "neoplasm of unspecified nature of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:189537005]
+synonym: "neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:126952004]
 synonym: "primary brain neoplasm" EXACT [NCI2004_11_17:C4952]
 synonym: "primary brain tumor" EXACT []
-synonym: "primary malignant neoplasm of brain (disorder)" EXACT [SNOMEDCT_2005_07_31:93727008]
+synonym: "primary malignant neoplasm of brain" EXACT [SNOMEDCT_2005_07_31:93727008]
 synonym: "tumor of the Brain" EXACT [NCI2004_11_17:C2907]
 xref: CSP:2006-2736
 xref: ICD10CM:C71
@@ -565,10 +559,8 @@ id: DOID:13499
 name: jejunal cancer
 namespace: disease_ontology
 subset: TopNodes_DOcancerslim
-synonym: "malignant neoplasm of jejunum" EXACT [SNOMEDCT_2005_07_31:93846004]
-synonym: "malignant neoplasm of jejunum" EXACT [MTH:U001249]
-synonym: "malignant neoplasm of jejunum" EXACT [ICD9CM_2006:152.1]
-synonym: "malignant tumor of jejunum (disorder)" EXACT [SNOMEDCT_2005_07_31:363404008]
+synonym: "malignant neoplasm of jejunum" EXACT []
+synonym: "malignant tumor of jejunum" EXACT [SNOMEDCT_2005_07_31:363404008]
 xref: ICD10CM:C17.1
 xref: ICD9CM:152.1
 xref: MESH:D007580
@@ -623,9 +615,8 @@ synonym: "Endocrine tumor" EXACT [NCI2004_11_17:C3010]
 synonym: "malignant Endocrine tumor" EXACT [NCI2004_11_17:C3575]
 synonym: "malignant neoplasm of endocrine gland" EXACT []
 synonym: "malignant tumour of endocrine gland" EXACT [SNOMEDCT_2005_07_31:93780007]
-synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:127015005]
-synonym: "neoplasm of endocrine gland (disorder)" EXACT [SNOMEDCT_2005_07_31:387922007]
-synonym: "neoplasm of endocrine system (disorder)" EXACT [SNOMEDCT_2005_07_31:387927001]
+synonym: "neoplasm of endocrine gland" EXACT [SNOMEDCT_2005_07_31:127015005]
+synonym: "neoplasm of endocrine system" EXACT [SNOMEDCT_2005_07_31:387927001]
 xref: ICD10CM:C75.9
 xref: ICD9CM:194.9
 xref: MESH:D004701
@@ -670,8 +661,8 @@ def: "A cardiovascular cancer that is located_in blood vessels." [url:http\://en
 subset: TopNodes_DOcancerslim
 synonym: "Blood Vessel neoplasm" EXACT [NCI2004_11_17:C7387]
 synonym: "blood vessel neoplasm" EXACT [CSP2005:2007-0683]
-synonym: "Blood vessel tumor (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:115235003]
-synonym: "Blood vessel tumors (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:189862000]
+synonym: "Blood vessel tumor" EXACT [SNOMEDCT_2005_07_31:115235003]
+synonym: "Blood vessel tumors" EXACT [SNOMEDCT_2005_07_31:189862000]
 synonym: "Blood vessel tumour disorder" EXACT [SNOMEDCT_2005_07_31:126736007]
 synonym: "Haemangiomatous tumour" EXACT [SNOMEDCT_2005_07_31:189874001]
 synonym: "leiomyosarcoma of the renal Vein" EXACT [NCI2004_11_17:C5388]
@@ -837,9 +828,9 @@ def: "A female reproductive organ cancer that is located_in fallopian tube." [ur
 subset: TopNodes_DOcancerslim
 synonym: "fallopian tube neoplasm" EXACT []
 synonym: "malignant neoplasm of uterine tube" EXACT [MTHICD9_2006:183.2]
-synonym: "malignant tumor of fallopian tube (disorder)" EXACT [SNOMEDCT_2005_07_31:363444001]
+synonym: "malignant tumor of fallopian tube" EXACT [SNOMEDCT_2005_07_31:363444001]
 synonym: "malignant tumour of fallopian tube" EXACT [SNOMEDCT_2005_07_31:93794008]
-synonym: "neoplasm of fallopian tube (disorder)" EXACT [SNOMEDCT_2005_07_31:126916003]
+synonym: "neoplasm of fallopian tube" EXACT [SNOMEDCT_2005_07_31:126916003]
 synonym: "tumor of the fallopian tube" EXACT [NCI2004_11_17:C3032]
 synonym: "tumor, fallopian tube, malignant" EXACT [NCI2004_11_17:C7480]
 xref: ICD10CM:C57.0
@@ -861,13 +852,12 @@ alt_id: DOID:1989
 def: "A colorectal cancer that is located_in the rectum." [url:http\://www.cancer.gov/dictionary?CdrID=529764]
 subset: TopNodes_DOcancerslim
 synonym: "cancer of rectum" RELATED []
-synonym: "carcinoma of rectum" EXACT [SNOMEDCT_2005_07_31:187761007]
-synonym: "carcinoma of rectum" EXACT [SNOMEDCT_2005_07_31:254582000]
+synonym: "carcinoma of rectum" EXACT []
 synonym: "carcinoma of the rectum" EXACT [NCI2004_11_17:C9382]
-synonym: "malignant neoplasm of rectum" EXACT [ICD9CM_2006:154.1, SNOMEDCT_2005_07_31:187761007, SNOMEDCT_2005_07_31:93984006]
+synonym: "malignant neoplasm of rectum" EXACT []
 synonym: "malignant Rectal tumor" EXACT [NCI2004_11_17:C7418]
 synonym: "malignant rectum tumor" EXACT []
-synonym: "malignant tumor of rectum (disorder)" EXACT [SNOMEDCT_2005_07_31:363351006]
+synonym: "malignant tumor of rectum" EXACT [SNOMEDCT_2005_07_31:363351006]
 synonym: "rectal cancer" EXACT []
 xref: ICD10CM:C20
 xref: ICD9CM:154.1
@@ -975,6 +965,7 @@ xref: SNOMEDCT_US_2016_03_01:93934004
 xref: UMLS_CUI:C0919267
 xref: UMLS_CUI:C1140680
 xref: UMLS_CUI:C1299247
+is_a: DOID:170 ! endocrine gland cancer
 
 [Term]
 id: DOID:2531
@@ -986,15 +977,14 @@ def: "An immune system cancer located_in the hematological system that is charac
 subset: DO_FlyBase_slim
 subset: TopNodes_DOcancerslim
 synonym: "blood cancer" EXACT [CSP2005:2004-0139]
-synonym: "Hematologic malignancy" EXACT [SNOMEDCT_2005_07_31:269475001]
-synonym: "Hematologic malignancy (disorder)" EXACT [SNOMEDCT_2005_07_31:127221002]
-synonym: "Hematologic neoplasm (disorder)" EXACT [SNOMEDCT_2005_07_31:129154003]
+synonym: "Hematologic malignancy" EXACT []
+synonym: "Hematologic neoplasm" EXACT [SNOMEDCT_2005_07_31:129154003]
 synonym: "Hematological tumors" EXACT [NCI2004_11_17:C27134]
 synonym: "hematopoietic and lymphoid system tumor" EXACT []
 synonym: "hematopoietic cancer" EXACT []
-synonym: "hematopoietic neoplasm (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:414388001]
+synonym: "hematopoietic neoplasm" EXACT [SNOMEDCT_2005_07_31:414388001]
 synonym: "hematopoietic tumors" EXACT [NCI2004_11_17:C27134]
-synonym: "malignant hematopoietic neoplasm (morphologic abnormality)" EXACT [SNOMEDCT_2005_07_31:414644002]
+synonym: "malignant hematopoietic neoplasm" EXACT [SNOMEDCT_2005_07_31:414644002]
 xref: MESH:D019337
 xref: NCI:C27134
 xref: SNOMEDCT_US_2016_03_01:414388001
@@ -1056,10 +1046,9 @@ def: "A male reproductive system cancer that is located_in the testicles." [url:
 comment: OMIM mapping confirmed by DO. [SN].
 subset: TopNodes_DOcancerslim
 synonym: "childhood neoplasm of the testis" EXACT []
-synonym: "neoplasm of testis (disorder)" EXACT [SNOMEDCT_2005_07_31:126900000]
+synonym: "neoplasm of testis" EXACT [SNOMEDCT_2005_07_31:126900000]
 synonym: "pediatric testicular neoplasm" EXACT [NCI2004_11_17:C5053]
-synonym: "testicular tumor" EXACT [NCI2004_11_17:C3404]
-synonym: "testicular tumor (disorder)" EXACT [SNOMEDCT_2005_07_31:236778008]
+synonym: "testicular tumor" EXACT []
 synonym: "testis cancer" EXACT []
 synonym: "testis neoplasm" EXACT [CSP2005:2016-2999]
 xref: ICD10CM:C62
@@ -1099,12 +1088,7 @@ xref: KEGG:05214
 xref: MESH:D005910
 xref: NCI:C3059
 xref: NCI:C4822
-xref: OMIM:137800
-xref: OMIM:607248
-xref: OMIM:613030
-xref: OMIM:613031
-xref: OMIM:613032
-xref: OMIM:613033
+xref: OMIM:PS137800
 xref: ORDO:182067
 xref: SNOMEDCT_US_2016_03_01:115240006
 xref: SNOMEDCT_US_2016_03_01:189908003
@@ -1161,7 +1145,7 @@ synonym: "gallbladder neoplasm" EXACT [MTH:NOCODE]
 synonym: "localized malignant gallbladder neoplasm" EXACT [NCI2004_11_17:C35676]
 synonym: "malignant neoplasm of gallbladder" EXACT []
 synonym: "malignant tumor of the gallbladder" EXACT [NCI2004_11_17:C7481]
-synonym: "malignant tumour of gallbladder" EXACT [SNOMEDCT_2005_07_31:254602009, SNOMEDCT_2005_07_31:93810008]
+synonym: "malignant tumour of gallbladder" EXACT []
 synonym: "tumor of the gallbladder" EXACT [NCI2004_11_17:C3048]
 xref: ICD10CM:C23
 xref: ICD9CM:156.0
@@ -1188,7 +1172,7 @@ namespace: disease_ontology
 alt_id: DOID:10143
 def: "An immune system cancer located_in the thymus." [url:http\://en.wikipedia.org/wiki/Thymus]
 subset: TopNodes_DOcancerslim
-synonym: "neoplasm of thymus (disorder)" EXACT [SNOMEDCT_2005_07_31:127231009]
+synonym: "neoplasm of thymus" EXACT [SNOMEDCT_2005_07_31:127231009]
 synonym: "thymic neoplasm" EXACT [CSP2005:2004-8826]
 synonym: "Thymic tumor" EXACT [NCI2004_11_17:C3412]
 xref: ICD10CM:C37
@@ -1252,24 +1236,21 @@ alt_id: DOID:915
 alt_id: DOID:919
 def: "A gastrointestinal system cancer that is located_in the liver." [url:http\://en.wikipedia.org/wiki/Liver]
 subset: TopNodes_DOcancerslim
+synonym: "Ca liver - primary" EXACT [SNOMEDCT_2005_07_31:269548006]
 synonym: "ca liver - primary" EXACT []
-synonym: "Ca liver - primary (disorder)" EXACT [SNOMEDCT_2005_07_31:269548006]
 synonym: "hepatic cancer" EXACT [CSP2005:2003-2810]
 synonym: "hepatic neoplasm" EXACT [CSP2005:2003-2810]
 synonym: "malignant hepato-biliary neoplasm" EXACT []
 synonym: "malignant neoplasm of liver" EXACT []
-synonym: "malignant neoplasm of liver (disorder)" EXACT [SNOMEDCT_2005_07_31:93870000]
-synonym: "malignant neoplasm of liver unspecified (disorder)" EXACT [SNOMEDCT_2005_07_31:187779006]
+synonym: "malignant neoplasm of liver" EXACT [SNOMEDCT_2005_07_31:93870000]
 synonym: "malignant neoplasm of liver, not specified as primary or secondary" EXACT [ICD9CM_2006:155.2]
 synonym: "malignant neoplasm of liver, primary" EXACT [ICD9CM_2006:155.0]
-synonym: "malignant tumor of liver (disorder)" EXACT [SNOMEDCT_2005_07_31:363361004]
-synonym: "neoplasm of liver (disorder)" EXACT [SNOMEDCT_2005_07_31:126851005]
+synonym: "malignant tumor of liver" EXACT [SNOMEDCT_2005_07_31:363361004]
+synonym: "neoplasm of liver" EXACT [SNOMEDCT_2005_07_31:126851005]
 synonym: "non-resectable primary hepatic malignant neoplasm" EXACT []
 synonym: "primary liver cancer" EXACT []
 synonym: "primary malignant neoplasm of Liver" EXACT [NCI2004_11_17:C34803]
-synonym: "primary malignant neoplasm of liver" EXACT [SNOMEDCT_2005_07_31:187768001, SNOMEDCT_2005_07_31:93870000]
-synonym: "primary malignant neoplasm of liver (disorder)" EXACT [SNOMEDCT_2005_07_31:95214007]
-synonym: "primary malignant neoplasm of liver NOS (disorder)" EXACT [SNOMEDCT_2005_07_31:187771009]
+synonym: "primary malignant neoplasm of liver" EXACT []
 synonym: "Resectable malignant neoplasm of Liver" EXACT [NCI2004_11_17:C7692]
 synonym: "resectable malignant neoplasm of the liver" EXACT []
 xref: ICD10CM:C22.0
@@ -1292,6 +1273,7 @@ xref: UMLS_CUI:C0023903
 xref: UMLS_CUI:C0024620
 xref: UMLS_CUI:C0345904
 xref: UMLS_CUI:C0854795
+is_a: DOID:170 ! endocrine gland cancer
 is_a: DOID:3119 ! gastrointestinal system cancer
 
 [Term]
@@ -1333,8 +1315,8 @@ subset: TopNodes_DOcancerslim
 synonym: "adrenal cancer" EXACT []
 synonym: "adrenal neoplasm" EXACT [CSP2005:2009-6040]
 synonym: "malignant Adrenal tumor" EXACT [NCI2004_11_17:C9338]
-synonym: "malignant neoplasm of adrenal gland" EXACT [ICD9CM_2006:194.0, SNOMEDCT_2005_07_31:188337000, SNOMEDCT_2005_07_31:93665005]
-synonym: "neoplasm of adrenal gland (disorder)" EXACT [SNOMEDCT_2005_07_31:127021009]
+synonym: "malignant neoplasm of adrenal gland" EXACT []
+synonym: "neoplasm of adrenal gland" EXACT [SNOMEDCT_2005_07_31:127021009]
 synonym: "tumor of the Adrenal gland" EXACT [NCI2004_11_17:C2859]
 xref: ICD10CM:C74
 xref: ICD10CM:C74.9
@@ -1402,7 +1384,7 @@ subset: TopNodes_DOcancerslim
 synonym: "cervical neoplasm" EXACT [CSP2005:2016-1746]
 synonym: "cervix cancer" EXACT []
 synonym: "cervix uteri cancer" EXACT []
-synonym: "neoplasm of uterine cervix (disorder)" EXACT [SNOMEDCT_2005_07_31:123841004]
+synonym: "neoplasm of uterine cervix" EXACT [SNOMEDCT_2005_07_31:123841004]
 synonym: "tumor of the Cervix Uteri" EXACT [NCI2004_11_17:C2940]
 synonym: "uterine cervical neoplasm" EXACT []
 xref: ICD10CM:C53
@@ -1511,7 +1493,7 @@ name: middle ear cancer
 namespace: disease_ontology
 def: "An auditory system cancer that is located_in the middle ear." [url:http\://my.clevelandclinic.org/services/head-neck/diseases-conditions/tumors]
 subset: TopNodes_DOcancerslim
-synonym: "neoplasm of middle ear (disorder)" EXACT [SNOMEDCT_2005_07_31:127006003]
+synonym: "neoplasm of middle ear" EXACT [SNOMEDCT_2005_07_31:127006003]
 synonym: "tumor of the middle ear" EXACT [NCI2004_11_17:C4412]
 xref: NCI:C4412
 xref: SNOMEDCT_US_2016_03_01:127006003
@@ -1526,7 +1508,7 @@ def: "A thoracic cancer that is located_in the mediastinum." [url:http\://en.wik
 subset: TopNodes_DOcancerslim
 synonym: "mediastinal tumor" EXACT [NCI2004_11_17:C3221]
 synonym: "mediastinum cancer" EXACT []
-synonym: "neoplasm of mediastinum (disorder)" EXACT [SNOMEDCT_2005_07_31:126725000]
+synonym: "neoplasm of mediastinum" EXACT [SNOMEDCT_2005_07_31:126725000]
 synonym: "Tumour of mediastinum" EXACT [SNOMEDCT_2005_07_31:94147001]
 xref: ICD10CM:C38.3
 xref: ICD9CM:164.9
@@ -1604,8 +1586,8 @@ synonym: "malignant neoplasm of anterior portion of floor of mouth" EXACT []
 synonym: "malignant neoplasm of floor of mouth" EXACT [MTH:NOCODE]
 synonym: "malignant neoplasm of lateral floor of mouth" EXACT [MTH:U001372]
 synonym: "malignant neoplasm of lateral portion of floor of mouth" EXACT []
-synonym: "malignant tumor of anterior floor of mouth (disorder)" EXACT [SNOMEDCT_2005_07_31:187652003]
-synonym: "malignant tumor of lateral floor of mouth (disorder)" EXACT [SNOMEDCT_2005_07_31:187653008]
+synonym: "malignant tumor of anterior floor of mouth" EXACT [SNOMEDCT_2005_07_31:187652003]
+synonym: "malignant tumor of lateral floor of mouth" EXACT [SNOMEDCT_2005_07_31:187653008]
 synonym: "malignant tumor of the Floor of the Mouth" EXACT [NCI2004_11_17:C9318]
 xref: ICD10CM:C04
 xref: ICD10CM:C04.0

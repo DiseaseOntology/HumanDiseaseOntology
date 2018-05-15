@@ -1,17 +1,5 @@
 format-version: 1.2
-subsetdef: DO_AGR_slim "DO_AGR_slim"
-subsetdef: DO_cancer_slim "DO cancer slim"
-subsetdef: DO_FlyBase_slim "DO_FlyBase_slim"
-subsetdef: DO_MGI_slim "DO_MGI_slim"
-subsetdef: DO_rare_slim "DO_rare_slim"
-subsetdef: GOLD "GOLD"
-subsetdef: gram-negative_bacterial_infectious_disease "gram-negative bacterial infectious disease"
-subsetdef: gram-positive_bacterial_infectious_disease "gram-positive bacterial infectious disease"
-subsetdef: NCIthesaurus "NCIt"
-subsetdef: sexually_transmitted_infectious_disease "sexually transmitted infectious disease"
-subsetdef: tick-borne_infectious_disease "tick-borne infectious disease"
-subsetdef: TopNodes_DOcancerslim "TopNodes_DOcancerslim"
-subsetdef: zoonotic_infectious_disease "zoonotic infectious disease"
+data-version: doid/2018-05-15/subsets/DO_cancer_slim.owl
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -30,7 +18,6 @@ def: "A non-Hodgkin lymphoma that has_material_basis_in mature T lymphocytes and
 subset: DO_cancer_slim
 synonym: "mature T-cell and natural killer cell lymphoma" EXACT []
 synonym: "NK-T cell lymphoma" EXACT []
-is_a: DOID:0060058 ! lymphoma
 created_by: lschriml
 creation_date: 2012-09-18T01:56:52Z
 
@@ -81,7 +68,6 @@ namespace: disease_ontology
 def: "An oral cavity cancer that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
 synonym: "mouth squamous cell carcinoma" EXACT []
-is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-05-12T02:45:04Z
 
@@ -186,7 +172,6 @@ xref: SNOMEDCT_US_2016_03_01:83217000
 xref: UMLS_CUI:C0025149
 xref: UMLS_CUI:C0206663
 xref: UMLS_CUI:C1334410
-is_a: DOID:1319 ! brain cancer
 created_by: lschriml
 creation_date: 2014-10-06T14:36:37Z
 
@@ -196,7 +181,6 @@ name: parietal lobe ependymoma
 namespace: disease_ontology
 def: "A parietal lobe neoplasm that has_material_basis_in cells lining the ventricles of the brain." [url:http\://www.cancer.gov/dictionary?CdrID=46432]
 subset: DO_cancer_slim
-is_a: DOID:1319 ! brain cancer
 created_by: lschriml
 creation_date: 2014-10-08T16:00:54Z
 
@@ -229,7 +213,6 @@ xref: ICD9:238.7
 xref: MESH:D009190
 xref: OMIM:614286
 xref: UMLS_CUI:C2713368
-is_a: DOID:1240 ! leukemia
 created_by: lschriml
 creation_date: 2014-10-13T12:51:33Z
 
@@ -241,7 +224,6 @@ def: "A non-Hodgkin lymphoma that has_material_basis_in mucosal tissue involved 
 subset: DO_cancer_slim
 synonym: "mucosa-associated lymphoid tissue lymphoma" EXACT []
 xref: OMIM:137245
-is_a: DOID:0060058 ! lymphoma
 created_by: lschriml
 creation_date: 2014-10-13T14:17:40Z
 
@@ -261,7 +243,6 @@ name: large intestine adenocarcinoma
 namespace: disease_ontology
 def: "A large intestine cancer that has_material_basis_in epithelial cells of glandular origin." [url:http\://www.cancer.gov/dictionary?CdrID=46216]
 subset: DO_cancer_slim
-is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-13T15:00:10Z
 
@@ -271,7 +252,6 @@ name: bronchus mucoepidermoid carcinoma
 namespace: disease_ontology
 def: "A bronchus cancer that has_material_basis_in squamous cells, mucus-secreting cells, and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma, url:http\://oralcancerfoundation.org/facts/rare/mc/]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
 is_a: DOID:3904 ! bronchus carcinoma
 created_by: lschriml
 creation_date: 2014-10-13T15:13:54Z
@@ -282,7 +262,6 @@ name: lung combined type small cell adenocarcinoma
 namespace: disease_ontology
 def: "A lung combined type small cell carcinoma that has_material_basis_in epithelial tissue of glandular origin." [url:http\://en.wikipedia.org/wiki/Combined_small-cell_lung_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=45327, url:http\://www.cancer.gov/dictionary?CdrID=46216]
 subset: DO_cancer_slim
-is_a: DOID:5409 ! lung small cell carcinoma
 created_by: lschriml
 creation_date: 2014-10-13T15:36:11Z
 
@@ -301,7 +280,6 @@ name: trachea mucoepidermoid carcinoma
 namespace: disease_ontology
 def: "A trachea carcinoma that is characterized by the presence of squamous cells, mucus-secreting cells, and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T11:42:42Z
 
@@ -312,7 +290,6 @@ namespace: disease_ontology
 def: "A tonsil cancer that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
 is_a: DOID:0050921 ! pharynx squamous cell carcinoma
-is_a: DOID:8557 ! oropharynx cancer
 created_by: lschriml
 creation_date: 2014-10-21T11:48:00Z
 
@@ -322,7 +299,6 @@ name: pharynx squamous cell carcinoma
 namespace: disease_ontology
 def: "A pharynx cancer that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T11:54:00Z
 
@@ -415,7 +391,6 @@ name: lung mucoepidermoid carcinoma
 namespace: disease_ontology
 def: "A lung carcinoma that has_material_basis in a combination of squamous cells, mucus secreting cells and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
 is_a: DOID:3905 ! lung carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T15:13:36Z
@@ -491,8 +466,6 @@ name: endocervical adenocarcinoma
 namespace: disease_ontology
 def: "An endocervical carcinoma that derives_from epithelial cells of glandular origin." [url:http\://www.ncbi.nlm.nih.gov/pubmed/12207781]
 subset: DO_cancer_slim
-is_a: DOID:2893 ! cervix carcinoma
-is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-24T15:51:48Z
 
@@ -530,7 +503,6 @@ name: cerebellar medulloblastoma
 namespace: disease_ontology
 def: "A cerebellum cancer that begins in the lower part of the brain on the floor of the skull." [url:http\://en.wikipedia.org/wiki/Medulloblastoma]
 subset: DO_cancer_slim
-is_a: DOID:1319 ! brain cancer
 created_by: lschriml
 creation_date: 2011-07-21T02:28:01Z
 
@@ -1060,7 +1032,6 @@ xref: NCI:C4349
 xref: SNOMEDCT_US_2016_03_01:255082000
 xref: UMLS_CUI:C0338106
 is_a: DOID:0050913 ! large intestine adenocarcinoma
-is_a: DOID:219 ! colon cancer
 
 [Term]
 id: DOID:2431
@@ -1215,7 +1186,6 @@ alt_id: DOID:3080
 def: "An astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes." [url:http\://cancergenome.nih.gov/cancersselected/glioblastomamultiforme, url:http\://en.wikipedia.org/wiki/Glioblastoma_multiforme, url:http\://www.ncbi.nlm.nih.gov/pubmed/20129251, url:http\://www.ncbi.nlm.nih.gov/pubmed/23029035]
 subset: DO_cancer_slim
 synonym: "adult glioblastoma multiforme" EXACT []
-synonym: "GBM" EXACT []
 synonym: "GBM" EXACT [NCI2004_11_17:C3058]
 synonym: "grade IV adult Astrocytic tumor" EXACT [NCI2004_11_17:C9094]
 synonym: "primary glioblastoma multiforme" EXACT []
@@ -1255,7 +1225,6 @@ synonym: "squamous cell carcinoma of skin" RELATED []
 xref: NCI:C4819
 xref: SNOMEDCT_US_2016_03_01:254651007
 xref: UMLS_CUI:C0553723
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:3187
@@ -1587,8 +1556,6 @@ synonym: "stomach adenocarcinoma" EXACT [NCI2004_11_17:C4004]
 xref: NCI:C4004
 xref: SNOMEDCT_US_2016_03_01:408647009
 xref: UMLS_CUI:C0278701
-is_a: DOID:10534 ! stomach cancer
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:3744
@@ -1777,7 +1744,6 @@ xref: SNOMEDCT_US_2016_03_01:128916007
 xref: SNOMEDCT_US_2016_03_01:255032005
 xref: SNOMEDCT_US_2016_03_01:32913002
 xref: UMLS_CUI:C0238462
-is_a: DOID:3963 ! thyroid carcinoma
 
 [Term]
 id: DOID:4006
@@ -1840,7 +1806,6 @@ xref: NCI:C8973
 xref: SNOMEDCT_US_2016_03_01:699356008
 xref: SNOMEDCT_US_2016_03_01:70555003
 xref: UMLS_CUI:C0206630
-is_a: DOID:1380 ! endometrial cancer
 
 [Term]
 id: DOID:4227
@@ -1853,7 +1818,6 @@ xref: NCI:C40217
 xref: NCI:C40219
 xref: UMLS_CUI:C1519848
 xref: UMLS_CUI:C1519849
-is_a: DOID:1115 ! sarcoma
 is_a: DOID:4226 ! endometrial stromal sarcoma
 
 [Term]
@@ -1986,7 +1950,6 @@ subset: DO_cancer_slim
 synonym: "endometrial stromal sarcoma of the cervix" EXACT []
 xref: NCI:C40220
 xref: UMLS_CUI:C3642326
-is_a: DOID:4362 ! cervical cancer
 
 [Term]
 id: DOID:4556
@@ -2009,7 +1972,6 @@ subset: DO_cancer_slim
 synonym: "mixed germ cell tumor of testis" EXACT [NCI2004_11_17:C6347]
 xref: NCI:C6347
 xref: UMLS_CUI:C1336720
-is_a: DOID:5557 ! testicular germ cell cancer
 
 [Term]
 id: DOID:4851
@@ -2053,7 +2015,6 @@ subset: DO_cancer_slim
 xref: NCI:C27813
 xref: SNOMEDCT_US_2016_03_01:70179006
 xref: UMLS_CUI:C1370800
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:4905
@@ -2104,7 +2065,6 @@ synonym: "carcinoma of ampulla of vater" EXACT [SNOMEDCT_2005_07_31:254609000]
 xref: NCI:C3908
 xref: SNOMEDCT_US_2016_03_01:254609000
 xref: UMLS_CUI:C0262401
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:4939
@@ -2169,7 +2129,6 @@ xref: SNOMEDCT_US_2016_03_01:52967002
 xref: SNOMEDCT_US_2016_03_01:78956007
 xref: UMLS_CUI:C0001815
 xref: UMLS_CUI:C0026987
-is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:5170
@@ -2178,7 +2137,6 @@ namespace: disease_ontology
 subset: DO_cancer_slim
 xref: NCI:C40270
 xref: UMLS_CUI:C3642329
-is_a: DOID:1115 ! sarcoma
 
 [Term]
 id: DOID:5409
@@ -2223,7 +2181,6 @@ synonym: "squamous cell carcinoma of nasal cavity" RELATED []
 synonym: "squamous cell carcinoma of the nasal cavity" EXACT [NCI2004_11_17:C8192]
 xref: NCI:C8192
 xref: UMLS_CUI:C0280333
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5518
@@ -2256,7 +2213,6 @@ xref: NCI:C34447
 xref: OMIM:275355
 xref: UMLS_CUI:C1168401
 is_a: DOID:1542 ! head and neck carcinoma
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5526
@@ -2268,7 +2224,6 @@ synonym: "Epidermoid carcinoma of the middle ear" EXACT [NCI2004_11_17:C6086]
 synonym: "squamous cell carcinoma of middle ear" RELATED []
 xref: NCI:C6086
 xref: UMLS_CUI:C1334762
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5557
@@ -2318,7 +2273,6 @@ xref: SNOMEDCT_US_2016_03_01:188292007
 xref: SNOMEDCT_US_2016_03_01:88252006
 xref: UMLS_CUI:C0346289
 xref: UMLS_CUI:C0431109
-is_a: DOID:1319 ! brain cancer
 is_a: DOID:305 ! carcinoma
 
 [Term]
@@ -2352,7 +2306,6 @@ subset: DO_cancer_slim
 synonym: "serous cystadenoma" EXACT []
 xref: NCI:C7978
 xref: UMLS_CUI:C0279663
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5750
@@ -2364,7 +2317,6 @@ synonym: "uterine papillary serous carcinoma" EXACT []
 synonym: "uterine serous carcinoma" EXACT []
 xref: NCI:C27838
 xref: UMLS_CUI:C1336921
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:5974
@@ -2374,7 +2326,6 @@ subset: DO_cancer_slim
 synonym: "Urothelial cell carcinoma of renal Pelvis" EXACT [NCI2004_11_17:C7355]
 xref: NCI:C7355
 xref: UMLS_CUI:C0238410
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:6037
@@ -2436,11 +2387,9 @@ namespace: disease_ontology
 def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291]
 subset: DO_cancer_slim
 synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT [SNOMEDCT_2005_07_31:399607007]
-synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
 xref: NCI:C27911
 xref: SNOMEDCT_US_2016_03_01:399607007
 xref: UMLS_CUI:C1302547
-is_a: DOID:1037 ! lymphoblastic leukemia
 
 [Term]
 id: DOID:6367
@@ -2534,7 +2483,6 @@ xref: SNOMEDCT_US_2016_03_01:109979007
 xref: SNOMEDCT_US_2016_03_01:1929004
 xref: SNOMEDCT_US_2016_03_01:413616009
 xref: UMLS_CUI:C0079731
-is_a: DOID:0060058 ! lymphoma
 is_a: DOID:1240 ! leukemia
 
 [Term]
@@ -2593,8 +2541,6 @@ def: "A nipple carcinoma that is located_in the nipple duct." [url:http\://www.c
 subset: DO_cancer_slim
 xref: NCI:C27234
 xref: UMLS_CUI:C1334967
-is_a: DOID:305 ! carcinoma
-is_a: DOID:3459 ! breast carcinoma
 
 [Term]
 id: DOID:8533
@@ -2658,7 +2604,6 @@ xref: SNOMEDCT_US_2016_03_01:188735005
 xref: SNOMEDCT_US_2016_03_01:63364005
 xref: SNOMEDCT_US_2016_03_01:92818009
 xref: UMLS_CUI:C0023473
-is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:8557
@@ -2829,7 +2774,6 @@ xref: SNOMEDCT_US_2016_03_01:277600006
 xref: SNOMEDCT_US_2016_03_01:413443009
 xref: SNOMEDCT_US_2016_03_01:91861009
 xref: UMLS_CUI:C0023467
-is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:9261
@@ -2849,7 +2793,6 @@ synonym: "carcinoma of nasopharynx" RELATED []
 synonym: "malignant Nasopharyngeal tumor" EXACT [NCI2004_11_17:C9321]
 synonym: "malignant neoplasm of anterior wall of nasopharynx" EXACT []
 synonym: "malignant neoplasm of lateral wall of nasopharynx" EXACT [SNOMEDCT_2005_07_31:187699005]
-synonym: "malignant neoplasm of lateral wall of nasopharynx" EXACT []
 synonym: "malignant neoplasm of nasopharyngeal wall" EXACT [SNOMEDCT_2005_07_31:240163000]
 synonym: "malignant neoplasm of nasopharynx" EXACT []
 synonym: "malignant neoplasm of other specified sites of nasopharynx" EXACT []
@@ -2920,7 +2863,6 @@ xref: SNOMEDCT_US_2016_03_01:154585004
 xref: SNOMEDCT_US_2016_03_01:55921005
 xref: SNOMEDCT_US_2016_03_01:94705007
 xref: UMLS_CUI:C0026764
-is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:9952
@@ -2947,106 +2889,4 @@ xref: SNOMEDCT_US_2016_03_01:90151006
 xref: SNOMEDCT_US_2016_03_01:91857003
 xref: UMLS_CUI:C0023449
 is_a: DOID:1037 ! lymphoblastic leukemia
-
-[Typedef]
-id: IDO:0000664
-name: has material basis in
-
-[Typedef]
-id: RO:0001020
-name: is allergic trigger for
-comment: Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)
-
-[Typedef]
-id: RO:0001025
-name: located in
-
-[Typedef]
-id: RO:0002200
-name: has phenotype
-
-[Typedef]
-id: RO:0002451
-name: transmitted by
-
-[Typedef]
-id: complicated_by
-name: complicated_by
-namespace: disease_ontology
-
-[Typedef]
-id: composed_of
-name: composed_of
-namespace: disease_ontology
-def: "Component parts of anatomy of tissue made up of certain cells or other body area/system or tissue types." [DO:lh]
-
-[Typedef]
-id: derives_from
-name: derives_from
-namespace: disease_ontology
-def: "Type of tissue or cell/the source of the material." [DO:lh]
-
-[Typedef]
-id: has_material_basis_in
-name: has_material_basis_in
-namespace: disease_ontology
-
-[Typedef]
-id: has_symptom
-name: has_symptom
-namespace: disease_ontology
-
-[Typedef]
-id: inheres_in
-name: inheres_in
-namespace: disease_ontology
-
-[Typedef]
-id: is_a
-name: is_a
-namespace: disease_ontology
-
-[Typedef]
-id: located_in
-name: located_in
-namespace: disease_ontology
-def: "Anatomical location." [DO:lh]
-
-[Typedef]
-id: occurs_with
-name: occurs_with
-namespace: disease_ontology
-
-[Typedef]
-id: part_of
-name: part_of
-namespace: disease_ontology
-
-[Typedef]
-id: realized_by
-name: realized_by
-namespace: disease_ontology
-
-[Typedef]
-id: realized_by_supression_with
-name: realized_by_supression_with
-namespace: disease_ontology
-
-[Typedef]
-id: results_in
-name: results_in
-namespace: disease_ontology
-def: "Development process/cause and effect/disease progress,process." [DO:lh]
-
-[Typedef]
-id: results_in_formation_of
-name: results_in_formation_of
-namespace: disease_ontology
-def: "Formation of structure,cancer,etc./cause and effect." [DO:lh]
-
-[Typedef]
-id: transmitted_by
-name: transmitted_by
-namespace: disease_ontology
-def: "Pathogen is transmitted." [DO:lh]
 

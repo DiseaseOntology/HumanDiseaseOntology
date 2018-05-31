@@ -9,9 +9,16 @@ SHELL := bash
 
 DO = doid
 EDIT = doid-edit.owl
+OBO = http://purl.obolibrary.org/obo/
+
+# to make a release, use `make release`
+# to update imports, use `make imports`
+# to add axioms via template, use `make templates`
 
 release: all
-all: | report build merged simple human subsets publish
+all: | report imports build merged simple human subsets publish
+.PHONY: imports
+imports: cl foodon hp ncbitaxon uberon
 
 # ----------------------------------------
 # ROBOT
@@ -28,17 +35,77 @@ ROBOT := robot
 # ROBOT := java -jar build/robot.jar
 
 # ----------------------------------------
+# IMPORTS
+# ----------------------------------------
+
+IMP = imports/
+
+# Either update all import files at once with `make imports`
+# or one at a time with `make <import name>` (e.g. `make cl`)
+
+.PHONY: cl
+cl:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --upper-term obo:CL_0000000\
+	 --lower-terms "$(IMP)$@_terms.txt" \
+	remove --entity GO:0005623 --select "self ancestors" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+.PHONY: foodon
+foodon:
+	$(ROBOT) extract --input "$(OBO)$@_merged.owl"\
+	 --method mireot --upper-term obo:FOODON_00002403\
+	 --lower-terms "$(IMP)$@_terms.txt" \
+	remove --entity obo:FOODON_00002381 --select "self ancestors" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+.PHONY: hp
+hp:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --upper-term HP:0000118\
+	 --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	remove --entity UPHENO:0001002 --entity HP:0000001 \
+	annotate --ontology-iri "$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+# WARNING: NCBITaxon is BIG! This will take time.
+.PHONY: ncbitaxon
+ncbitaxon:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+.PHONY: uberon
+uberon:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+# ----------------------------------------
 # REPORT
 # ----------------------------------------
 
-REP = reports/
+REP = build/reports/
 
-report: $(REP)report.yaml
+report: $(REP)report.tsv
 
-# report will fail on error
-$(REP)report.yaml: $(EDIT)
-	$(ROBOT) report --input $< --profile "reports/profile.txt"\
-	 --output $@ --format yaml
+$(REP)report.tsv: $(EDIT)
+	$(ROBOT) report --input $<\
+	 --output $@ --format tsv
 
 # ----------------------------------------
 # RELEASE
@@ -51,12 +118,20 @@ TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
 $(DO).owl: $(EDIT)
-	$(ROBOT) reason --input $<\
-	 annotate --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/doid.owl"\
-	 --annotation oboInOwl:date "$(TS)" --output $@
-
+	$(ROBOT) merge --collapse-import-closure false --input $< --input $(MODS)module.owl \
+	reason --create-new-ontology false \
+	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
+	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
+	 
+# OWL -> OBO does weird things to the date
+# Do not annotate OWL file until after conversion
 $(DO).obo: $(DO).owl
-	$(ROBOT) convert --input $< --output $@ --check false
+	$(ROBOT) remove --input $< --select imports --trim true \
+	remove --axioms equivalent --trim true \
+	convert --check false \
+	annotate --annotation oboInOwl:date "$(TS)" --output $@ && \
+	$(ROBOT) annotate --input $<\
+	 --annotation oboInOwl:date "$(TS)" --output $<
 
 $(DO).json: $(DO).owl
 	$(ROBOT) convert --input $< --output $@
@@ -70,35 +145,15 @@ DM = doid-merged
 merged: $(DM).owl $(DM).obo $(DM).json
 
 $(DM).owl: $(DO).owl
-	$(ROBOT) merge --input $< --collapse-import-closure true\
-	 annotate --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/doid-merged.owl"\
-	 --ontology-iri "http://purl.obolibrary.org/obo/doid/doid-merged.owl"\
+	$(ROBOT) merge --input $< --collapse-import-closure true \
+	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid-merged.owl"\
+	 --ontology-iri "$(OBO)doid/doid-merged.owl"\
 	 --output $@
 
 $(DM).obo: $(DM).owl
 	$(ROBOT) convert --input $< --output $@ --check false
 
 $(DM).json: $(DM).owl
-	$(ROBOT) convert --input $< --output $@
-
-# ----------------------------------------
-# DOID-SIMPLE
-# ----------------------------------------
-
-DS = doid-simple
-
-simple: $(DS).owl $(DS).obo $(DS).json
-
-$(DS).owl: $(DO).owl
-	$(ROBOT) remove --input $< --select imports --trim true\
-	 annotate --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/doid-simple.owl"\
-	 --ontology-iri --ontology-iri "http://purl.obolibrary.org/obo/doid/doid-simple.owl"\
-	 --output $@
-
-$(DS).obo: $(DS).owl
-	$(ROBOT) convert --input $< --output $@ --check false
-
-$(DS).json: $(DS).owl
 	$(ROBOT) convert --input $< --output $@
 
 # ----------------------------------------
@@ -111,13 +166,14 @@ HD = HumanDO
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
 $(DNC).owl: $(DS).owl
-	$(ROBOT) remove --input $< --axioms logical --trim true\
-	 annotate --ontology-iri "http://purl.obolibrary.org/obo/doid/doid-non-classified.owl"\
-	 --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/doid-non-classified.owl"\
-	 --output $@ &&\
-	 annotate --input $@ --ontology-iri "http://purl.obolibrary.org/obo/doid/HumanDO.owl"\
+	$(ROBOT) remove --input $< --axioms logical --trim true \
+	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl"\
+	 --output $@ && \
+	annotate --input $@ --ontology-iri "http://purl.obolibrary.org/obo/doid/HumanDO.owl"\
 	 --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/HumanDO.owl"\
-	 --output $(HD).owl\
+	 --output $(HD).owl
+
 
 $(DNC).obo: $(DNC).owl
 	$(ROBOT) convert --input $< --output $@ --check false && cp $@ $(HD).obo
@@ -140,28 +196,11 @@ subsets: $(SUBS)
 
 $(SUBS): $(DS).owl
 	$(ROBOT) filter --input $< \
-	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/doid#$(basename $@)>"\
-	 --trim true \
-	 annotate --version-iri "http://purl.obolibrary.org/obo/doid/$(DATE)/subsets/$@.owl"\
-	 --ontology-iri "http://purl.obolibrary.org/obo/doid/subsets/$@.owl"\
-	 --output $(addprefix $(SUB), $(addsuffix .owl, $@))\
-	 && $(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
-	 --output $(addprefix $(SUB), $(addsuffix .obo, $@)) --check false\
-	 && $(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
+	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $@)> annotations" \
+	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$@.owl"\
+	 --ontology-iri "$(OBO)doid/subsets/$@.owl"\
+	 --output $(addprefix $(SUB), $(addsuffix .owl, $@)) && \
+	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
+	 --output $(addprefix $(SUB), $(addsuffix .obo, $@)) --check false && \
+	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
 	 --output $(addprefix $(SUB), $(addsuffix .json, $@))
-
-# ----------------------------------------
-# FOLDER
-# ----------------------------------------
-
-RD = releases/$(DATE)/
-
-publish:
-	mkdir $(RD) \
-	 && cp $(DO).* $(RD)\
-	 && cp $(DM).* $(RD)\
-	 && cp $(DS).* $(RD)\
-	 && cp $(HD).* $(RD)\
-	 && cp $(DNC).* $(RD)\
-	 && mkdir $(RD)/$(SUB)\
-	 && cp -r $(SUB) $(RD)/$(SUB)

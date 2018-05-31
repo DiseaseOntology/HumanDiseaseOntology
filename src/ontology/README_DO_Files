@@ -3,11 +3,23 @@ DO Ontology files in the DiseaseOntology/HumanDiseaseOntology/src/ontology direc
 DO production work, conducted by the University of Maryland team, is done on the 
 doid-edit.owl file.
 
-The DO team will update the other files in this directly on a bi-weekly basis.
-    This is done by running DO's Makefile. 
-    This creates several OWL and OBO version of DO. 
-    The DO's primary representation of a disease classification (HumanDO.obo) is represented as a single is_a hierarchy, 
-    based on disease etiology. 
+The DO team will update the other files in this directly on a bi-weekly basis 
+as part of our DO release. This creates several OWL and OBO version of DO. 
+
+The DO project produces BOTH our traditional single parentage ontology (based on disease etiology) as well as a 
+logically defined multiple parentage ontology (since 2015), which builds on DO's disease etiology classification providing multiple parentage
+defined by the anatomical location of the disease and cell type of origin through extensive logical definitions based on OBO Foundry
+ontologies. 
+
+DO Single Parentage ontology. 
+The DO's disease classification is represented as both a single is_a hierarchy (doid-non-classified.obo). 
+This file is equivalent to DO's HumanDO.obo file. We will continue to produce both files as the HumanDO naming 
+schema was utilized and published for the first decade of the project. 
+
+Multi-parent Disease Classification in DO
+DO's logically inferred multiple parentage classification is produced as our doid.owl file. 
+This file integrates logical definitions defining the anatomical location or cell or origin of a disease. 
+
     
 This README is to document and describe what is found in each file/set of files.
 
@@ -19,18 +31,24 @@ doid-non-classified.obo and doid-non-classified.owl files produced in this GitHu
 DO Production Ontology Files:
 doid-edit.owl           :  DO team editing environment 
                           -- this file is ONLY edited by the DO team. 
-                          -- this file currently includes logical definitions to ontology files in the IMPORTS directory.
-                          -- DO includes logical definition to: Cell Ontology (CL), UBERON and NCBITaxon
+                          -- this file includes logical definitions to ontology files in the IMPORTS directory.
+                          -- DO includes logical definition to: 
+                             Anatomy: UBERON; Cell type of origin: Cell Ontology (CL); Taxonomy: NCBITaxon; 
+                             Symptoms: Symptom Ontology: SYMP; Phenotype: Human Phenotype Ontology (HPO);
+                             Transmission Process: Pathogen Transmission Methods (TRANS);
+                             Sequence features: Sequence Ontology (SO); RO (Relations Ontology)
+                             
+                             And are next adding: 
+                             FoodON: allergic triggers; CHEBI: chemical triggers/environmental triggers/drivers; 
+                             BRENDA tissue/ enzyme source (BTO): allergic triggers 
 
-DO weekly data releases in GitHub: produces a suite of files.
-    
-DO content has been enhanced through the inclusion of logical definitions.
-The DO imports other OBO Foundry ontologies to create the logical definitions, including: 
-NCBI Taxon, Cell Ontology, Uberon, HPO (Human Phenotype Ontology) and the RO (Relations Ontology). 
-    
+DO data releases in GitHub: produces a suite of files.
+
+        
 (contain inferred links)
     doid.obo                : --Disease Ontology, OBO format. This file omits the equivalent axioms
-    doid.owl                : --Disease Ontology, OWL format. This file contains DO's is_a asserted hierarchy plus equivalent axioms to other OBO Foundry ontologies.
+    doid.owl                : --Disease Ontology, OWL format. This reasoned OWL file contains DO's is_a asserted hierarchy plus 
+                                                              equivalent axioms to other OBO Foundry ontologies.
     
 <u>DO merged files</u>: created for the Alliance of Genome Resources (AGR) that includes OMIM to DO associations as xrefs plus defined relationships between OMIM susceptibility IDs and DO terms.
 
@@ -45,15 +63,7 @@ NCBI Taxon, Cell Ontology, Uberon, HPO (Human Phenotype Ontology) and the RO (Re
 
     
 DO files in the OBO Foundry: 
-DO's OBO Foundry release files:
-OBO File: 
-    The DO provides our single is_a hierarchy as a primary release file to the OBO Foundry. 
-    This file was previously named "HumanDO.obo", in the OBO Foundry this file is called doid.obo 
-    which links to the doid-non-classified.obo file in this GitHub repository. 
-OWL File: 
-    The DO provides the reasoned OWL file which includes all of the inferred links. This is eqivalent to the DO's GitHub doid.owl file. 
- 
- 
+
 OBO Foundry products:
 - doid.owl: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid.owl
 - doid.obo: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid.obo

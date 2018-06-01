@@ -13,12 +13,11 @@ OBO = http://purl.obolibrary.org/obo/
 
 # to make a release, use `make release`
 # to update imports, use `make imports`
-# to add axioms via template, use `make templates`
 
 release: all
 all: | report imports build merged simple human subsets publish
 .PHONY: imports
-imports: cl foodon hp ncbitaxon uberon
+imports: bto chebi cl foodon hp ncbitaxon uberon
 
 # ----------------------------------------
 # ROBOT
@@ -43,6 +42,26 @@ IMP = imports/
 # Either update all import files at once with `make imports`
 # or one at a time with `make <import name>` (e.g. `make cl`)
 
+.PHONY: bto
+bto:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+.PHONY: chebi
+chebi:
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
 .PHONY: cl
 cl:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
@@ -51,7 +70,8 @@ cl:
 	remove --entity GO:0005623 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 .PHONY: foodon
@@ -62,7 +82,8 @@ foodon:
 	remove --entity obo:FOODON_00002381 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 .PHONY: hp
@@ -73,7 +94,8 @@ hp:
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
 	remove --entity UPHENO:0001002 --entity HP:0000001 \
-	annotate --ontology-iri "$@_import.owl"\
+	annotate --remove-annotations true\
+	 --ontology-iri "$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 # WARNING: NCBITaxon is BIG! This will take time.
@@ -83,7 +105,8 @@ ncbitaxon:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 .PHONY: uberon
@@ -92,7 +115,8 @@ uberon:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	annotate --remove-annotations true\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 # ----------------------------------------

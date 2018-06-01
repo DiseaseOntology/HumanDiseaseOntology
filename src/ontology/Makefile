@@ -13,11 +13,13 @@ OBO = http://purl.obolibrary.org/obo/
 
 # to make a release, use `make release`
 # to update imports, use `make imports`
+# to do both, use `make all`
 
-release: all
-all: | report imports build merged simple human subsets publish
+release: | report build merged simple human subsets publish
+all: | imports release
 .PHONY: imports
-imports: bto chebi cl foodon hp ncbitaxon uberon
+imports:
+	cd imports && $(MAKE) imports
 
 # ----------------------------------------
 # ROBOT
@@ -37,87 +39,12 @@ ROBOT := robot
 # IMPORTS
 # ----------------------------------------
 
-IMP = imports/
+# You can run `make <import name>` from the `ontology` dir
+# or the `ontology/imports` dir
 
-# Either update all import files at once with `make imports`
-# or one at a time with `make <import name>` (e.g. `make cl`)
-
-.PHONY: bto
-bto:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-.PHONY: chebi
-chebi:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-.PHONY: cl
-cl:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --upper-term obo:CL_0000000\
-	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --entity GO:0005623 --select "self ancestors" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-.PHONY: foodon
-foodon:
-	$(ROBOT) extract --input "$(OBO)$@_merged.owl"\
-	 --method mireot --upper-term obo:FOODON_00002403\
-	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --entity obo:FOODON_00002381 --select "self ancestors" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-.PHONY: hp
-hp:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --upper-term HP:0000118\
-	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	remove --entity UPHENO:0001002 --entity HP:0000001 \
-	annotate --remove-annotations true\
-	 --ontology-iri "$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-# WARNING: NCBITaxon is BIG! This will take time.
-.PHONY: ncbitaxon
-ncbitaxon:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
-
-.PHONY: uberon
-uberon:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
+IMPS = bto chebi cl foodon hp ncbitaxon uberon
+$(IMPS):
+	cd imports && $(MAKE) $@
 
 # ----------------------------------------
 # REPORT

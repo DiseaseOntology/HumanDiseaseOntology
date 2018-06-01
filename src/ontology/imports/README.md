@@ -9,7 +9,7 @@ Open the corresponding `.txt` file and do a text search to ensure the ID has not
 UBERON:0000955	# brain
 ```
 
-Save the file, and then in terminal, navigate to `HumanDiseaseOntology/src/ontology` and `make` the new import module. You can make one at a time with the command `make <import name>`, e.g.:
+Save the file, and then in terminal, run the desired `make` command (see below). This can be run from the `ontology` directory OR the `imports` directory. You can make one at a time with the command `make <import name>`, e.g.:
 ```
 make uberon
 ```
@@ -24,3 +24,12 @@ Keep in mind that NCBITaxon is very large and will take some time to extract the
 ### To remove an import term
 
 Open the corresponding `.txt` file and do a text search to find the line with the ID to remove. Delete the whole line, and then follow the steps above to `make` the import module.
+
+### Current 'makeable' imports
+
+* `chebi` - Chemical Entities of Biological Interest
+* `cl` - Cell Ontology
+* `foodon` - Food Ontology
+* `hp` - Human Phenotype Ontology
+* `ncbitaxon` - NCBI organismal classification
+* `uberon` - Uberon multi-species anatomy ontology

@@ -42,7 +42,7 @@ ROBOT := robot
 # You can run `make <import name>` from the `ontology` dir
 # or the `ontology/imports` dir
 
-IMPS = bto chebi cl foodon hp ncbitaxon uberon
+IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
 $(IMPS):
 	cd imports && $(MAKE) $@
 

@@ -9,7 +9,8 @@ SHELL := bash
 
 OBO = http://purl.obolibrary.org/obo/
 
-imports: chebi cl foodon hp ncbitaxon uberon
+IMP = ./
+imports: chebi cl foodon hp ncbitaxon uberon full
 
 # ----------------------------------------
 # ROBOT
@@ -23,28 +24,32 @@ imports: chebi cl foodon hp ncbitaxon uberon
 #	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := robot
-# ROBOT := java -jar build/robot.jar
+# ROBOT := java -jar ../build/robot.jar
 
 # ----------------------------------------
-# IMPORTS
+# FULL IMPORTS
 # ----------------------------------------
 
-IMP = imports/
+FULL = trans so symp
+
+.PHONY: full
+full: $(FULL)
+$(FULL):
+	$(ROBOT) merge --input-iri "$(OBO)$@.owl" \
+	remove --select "owl:deprecated='true'^^boolean" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+
+# ----------------------------------------
+# IMPORT MODULES
+# ----------------------------------------
 
 # Either update all import files at once with `make imports`
 # or one at a time with `make <import name>` (e.g. `make cl`)
-
-# BTO is not imported yet
-# The purl does not resolve
-.PHONY: bto
-bto:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
 
 .PHONY: chebi
 chebi:
@@ -52,7 +57,7 @@ chebi:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
+	annotate --version-iri ""\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -64,7 +69,7 @@ cl:
 	remove --entity GO:0005623 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
+	annotate --version-iri ""\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -76,7 +81,7 @@ foodon:
 	remove --entity obo:FOODON_00002381 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
+	annotate --version-iri ""\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -88,7 +93,7 @@ hp:
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
 	remove --entity UPHENO:0001002 --entity HP:0000001 \
-	annotate --remove-annotations true\
+	annotate --version-iri ""\
 	 --ontology-iri "$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -96,10 +101,11 @@ hp:
 .PHONY: ncbitaxon
 ncbitaxon:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
+	 --method mireot --upper-term NCBITaxon:10239\
+	 --upper-term NCBITaxon:131567 --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -109,6 +115,6 @@ uberon:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --remove-annotations true\
+	annotate --version-iri ""\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

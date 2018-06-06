@@ -12,22 +12,22 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/doid/obo/ext.owl>
 Import(<http://purl.obolibrary.org/obo/trans.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/symp.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/so.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/relations.owl>)
 
+Declaration(Class(obo:NCBITaxon_1))
 Declaration(Class(obo:SO_0000000))
 Declaration(Class(obo:SO_0000110))
 Declaration(Class(obo:SO_0000400))
 Declaration(Class(obo:SO_0001060))
 Declaration(Class(obo:SO_0001260))
-
 
 
 ############################
@@ -37,6 +37,19 @@ Declaration(Class(obo:SO_0001260))
 # Class: obo:HP_0000118 (Phenotypic abnormality)
 
 SubClassOf(obo:HP_0000118 obo:UPHENO_0001001)
+
+# Class: obo:NCBITaxon_1 (ncbitaxon)
+
+AnnotationAssertion(oboInOwl:id obo:NCBITaxon_1 "NCBITaxon:1")
+AnnotationAssertion(rdfs:label obo:NCBITaxon_1 "ncbitaxon"^^xsd:string)
+
+# Class: obo:NCBITaxon_10239 (Viruses)
+
+SubClassOf(obo:NCBITaxon_10239 obo:NCBITaxon_1)
+
+# Class: obo:NCBITaxon_131567 (cellular organisms)
+
+SubClassOf(obo:NCBITaxon_131567 obo:NCBITaxon_1)
 
 # Class: obo:SO_0000000 (sequence)
 
@@ -222,7 +235,5 @@ AnnotationAssertion(owl:deprecated obo:HP_0100882 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0100883 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200058 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200059 "true"^^xsd:boolean)
-AnnotationAssertion(oboInOwl:id obo:NCBITaxon_1 "NCBITaxon:1")
-AnnotationAssertion(rdfs:label obo:NCBITaxon_1 "ncbitaxon"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomy"^^xsd:string)
 )

@@ -51,13 +51,14 @@ $(FULL):
 # Either update all import files at once with `make imports`
 # or one at a time with `make <import name>` (e.g. `make cl`)
 
+# WARNING: CHEBI is BIG! This will take time.
 .PHONY: chebi
 chebi:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --version-iri ""\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -69,7 +70,7 @@ cl:
 	remove --entity GO:0005623 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --version-iri ""\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -81,7 +82,7 @@ foodon:
 	remove --entity obo:FOODON_00002381 --select "self ancestors" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --version-iri ""\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -93,7 +94,7 @@ hp:
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
 	remove --entity UPHENO:0001002 --entity HP:0000001 \
-	annotate --version-iri ""\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -115,6 +116,6 @@ uberon:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
-	annotate --version-iri ""\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

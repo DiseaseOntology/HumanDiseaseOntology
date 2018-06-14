@@ -17,7 +17,7 @@ DM = src/ontology/doid-merged
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: | report build merged simple human subsets publish report-new
+release: | report build merged human subsets publish report-new
 all: | imports release
 
 # ----------------------------------------
@@ -124,15 +124,15 @@ HD = src/ontology/HumanDO
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(DS).owl
+$(DNC).owl: $(DO).owl
 	$(ROBOT) remove --input $< --axioms logical --trim true \
+	remove --select imports --trim true \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
 	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl"\
 	 --output $@ && \
-	annotate --input $@ --ontology-iri "http://purl.obolibrary.org/obo/doid/HumanDO.owl"\
+	$(ROBOT) annotate --input $@ --ontology-iri "http://purl.obolibrary.org/obo/doid/HumanDO.owl"\
 	 --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/HumanDO.owl"\
 	 --output $(HD).owl
-
 
 $(DNC).obo: $(DNC).owl
 	$(ROBOT) convert --input $< --output $@ --check false && cp $@ $(HD).obo
@@ -165,14 +165,24 @@ $(SUBS): $(DNC).owl
 	 --output $(addprefix $(SUB), $(addsuffix .json, $@))
 
 # ----------------------------------------
+# RELEASE
+# ----------------------------------------
+
+DIR = src/ontology/releases/$(DATE)/
+
+.PHONY: publish
+publish:
+	mkdir $(DIR) && \
+	cp $(DO)* $(DIR) && \
+	cp $(DNC)* $(DIR) && \
+	mkdir $(DIR)subsets && \
+	cp -r $(SUB) $(DIR)subsets
+
+# ----------------------------------------
 # FINAL REPORT
 # ----------------------------------------
 
-# pre-build queries
-QUERIES_2 := $(wildcard src/sparql/*-report.rq)
-
-report-new: $(QUERIES_2)
-.PHONY: $(QUERIES_2)
-$(QUERIES_2):
+.PHONY: report-new
+report-new: $(QUERIES)
 	$(ROBOT) query --input $(DM).owl\
-	 --query $@ $(subst src/sparql,build,$(subst .rq,-new.tsv,$(@)))
+	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))

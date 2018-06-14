@@ -78,7 +78,7 @@ TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
 $(DO).owl: $(EDIT)
-	$(ROBOT) reason --create-new-ontology false \
+	$(ROBOT) reason --input $< --create-new-ontology false \
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
 	 
@@ -86,12 +86,13 @@ $(DO).owl: $(EDIT)
 # Do not annotate OWL file until after conversion
 $(DO).obo: $(DO).owl
 	$(ROBOT) remove --input $< --select imports --trim true \
-	convert --check false \
-	annotate --annotation oboInOwl:date "$(TS)" --output $@ && \
+	convert --check false --output $@ && \
+	$(ROBOT) annotate --input $@\
+	 --annotation oboInOwl:date "$(TS)" --output $(basename $@)-temp.obo && \
 	$(ROBOT) annotate --input $<\
-	 --annotation oboInOwl:date "$(TS)" --output $<.temp \
-	&& grep -v ^owl-axioms $<.temp > $< \
-	&& rm $<.temp
+	 --annotation oboInOwl:date "$(TS)" --output $< && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo
 
 $(DO).json: $(DO).owl
 	$(ROBOT) convert --input $< --output $@

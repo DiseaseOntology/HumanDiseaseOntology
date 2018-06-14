@@ -58,6 +58,7 @@ chebi:
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
+	remove --entity "owl:Thing" \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

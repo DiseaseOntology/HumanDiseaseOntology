@@ -7,8 +7,8 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-DO = doid
-EDIT = doid-edit.owl
+DO = src/ontology/doid
+EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/
 
 # to make a release, use `make release`
@@ -17,9 +17,6 @@ OBO = http://purl.obolibrary.org/obo/
 
 release: | report build merged simple human subsets publish
 all: | imports release
-.PHONY: imports
-imports:
-	cd imports && $(MAKE) imports
 
 # ----------------------------------------
 # ROBOT
@@ -32,8 +29,7 @@ imports:
 # 	curl -L -o build/robot.jar\
 #	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
-ROBOT := robot
-# ROBOT := java -jar build/robot.jar
+ROBOT := java -jar build/robot.jar
 
 # ----------------------------------------
 # IMPORTS
@@ -42,20 +38,22 @@ ROBOT := robot
 # You can run `make <import name>` from the `ontology` dir
 # or the `ontology/imports` dir
 
+.PHONY: imports
+imports:
+	cd src/ontology/imports && $(MAKE) imports
+
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
 $(IMPS):
-	cd imports && $(MAKE) $@
+	cd src/ontology/imports && $(MAKE) $@
 
 # ----------------------------------------
 # REPORT
 # ----------------------------------------
 
-REP = build/reports/
+report: build/report.tsv
 
-report: $(REP)report.tsv
-
-$(REP)report.tsv: $(EDIT)
-	$(ROBOT) report --input $<\
+build/report.tsv: $(EDIT)
+	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
 
 # ----------------------------------------
@@ -91,7 +89,7 @@ $(DO).json: $(DO).owl
 # DOID-MERGED
 # ----------------------------------------
 
-DM = doid-merged
+DM = src/ontology/doid-merged
 
 merged: $(DM).owl $(DM).obo $(DM).json
 
@@ -111,8 +109,8 @@ $(DM).json: $(DM).owl
 # HUMANDO
 # ----------------------------------------
 
-DNC = doid-non-classified
-HD = HumanDO
+DNC = src/ontology/doid-non-classified
+HD = src/ontology/HumanDO
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
@@ -136,7 +134,7 @@ $(DNC).json: $(DNC).owl
 # SUBSETS
 # ----------------------------------------
 
-SUB = subsets/
+SUB = src/ontology/subsets/
 SUBS = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
  NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\

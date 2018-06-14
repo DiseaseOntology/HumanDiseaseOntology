@@ -86,13 +86,12 @@ $(DO).owl: $(EDIT)
 # Do not annotate OWL file until after conversion
 $(DO).obo: $(DO).owl
 	$(ROBOT) remove --input $< --select imports --trim true \
+	remove --select "anonymous parents" --trim true \
 	convert --check false --output $@ && \
 	$(ROBOT) annotate --input $@\
-	 --annotation oboInOwl:date "$(TS)" --output $(basename $@)-temp.obo && \
+	 --annotation oboInOwl:date "$(TS)" --output $@ && \
 	$(ROBOT) annotate --input $<\
-	 --annotation oboInOwl:date "$(TS)" --output $< && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
-	rm $(basename $@)-temp.obo
+	 --annotation oboInOwl:date "$(TS)" --output $<
 
 $(DO).json: $(DO).owl
 	$(ROBOT) convert --input $< --output $@

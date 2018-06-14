@@ -153,7 +153,7 @@ SUBS = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
 .PHONY: subsets
 subsets: $(SUBS)
 
-$(SUBS): $(DS).owl
+$(SUBS): $(DNC).owl
 	$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $@)> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$@.owl"\

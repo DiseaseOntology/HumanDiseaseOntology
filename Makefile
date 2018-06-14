@@ -11,11 +11,13 @@ DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/
 
+DM = src/ontology/doid-merged
+
 # to make a release, use `make release`
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: | report build merged simple human subsets publish
+release: | report build merged simple human subsets publish report-new
 all: | imports release
 
 # ----------------------------------------
@@ -50,11 +52,20 @@ $(IMPS):
 # REPORT
 # ----------------------------------------
 
-report: build/report.tsv
+report: build/report.tsv report-last
 
 build/report.tsv: $(EDIT)
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
+
+# pre-build queries
+QUERIES := $(wildcard src/sparql/*-report.rq)
+
+report-last: $(QUERIES)
+.PHONY: $(QUERIES)
+$(QUERIES):
+	$(ROBOT) query --input $(DM).owl\
+	 --query $@ $(subst src/sparql,build,$(subst .rq,-last.tsv,$(@)))
 
 # ----------------------------------------
 # RELEASE
@@ -88,8 +99,6 @@ $(DO).json: $(DO).owl
 # ----------------------------------------
 # DOID-MERGED
 # ----------------------------------------
-
-DM = src/ontology/doid-merged
 
 merged: $(DM).owl $(DM).obo $(DM).json
 
@@ -153,3 +162,16 @@ $(SUBS): $(DS).owl
 	 --output $(addprefix $(SUB), $(addsuffix .obo, $@)) --check false && \
 	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
 	 --output $(addprefix $(SUB), $(addsuffix .json, $@))
+
+# ----------------------------------------
+# FINAL REPORT
+# ----------------------------------------
+
+# pre-build queries
+QUERIES_2 := $(wildcard src/sparql/*-report.rq)
+
+report-new: $(QUERIES_2)
+.PHONY: $(QUERIES_2)
+$(QUERIES_2):
+	$(ROBOT) query --input $(DM).owl\
+	 --query $@ $(subst src/sparql,build,$(subst .rq,-new.tsv,$(@)))

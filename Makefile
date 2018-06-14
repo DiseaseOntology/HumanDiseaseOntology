@@ -103,7 +103,7 @@ $(DO).json: $(DO).owl
 # DOID-MERGED
 # ----------------------------------------
 
-merged: $(DM).owl $(DM).obo $(DM).json
+merged: $(DM).owl $(DM).obo
 
 $(DM).owl: $(DO).owl
 	$(ROBOT) merge --input $< --collapse-import-closure true \
@@ -113,9 +113,6 @@ $(DM).owl: $(DO).owl
 
 $(DM).obo: $(DM).owl
 	$(ROBOT) convert --input $< --output $@ --check false
-
-$(DM).json: $(DM).owl
-	$(ROBOT) convert --input $< --output $@
 
 # ----------------------------------------
 # HUMANDO
@@ -127,7 +124,8 @@ $(DNC).owl: $(DO).owl
 	$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "anonymous parents" --select "equivalents" \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl" --output $@
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl" --output $@ && \
+	cp $@ $(HD).owl
 
 $(DNC).obo: $(DNC).owl
 	$(ROBOT) convert --input $< --check false\
@@ -169,10 +167,11 @@ $(SUBS): $(DNC).owl
 DIR = src/ontology/releases/$(DATE)/
 
 .PHONY: publish
-publish: $(DO).owl $(DO).obo $(DNC).owl $(DNC).obo
+publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo
 	mkdir $(DIR) && \
-	cp $(DO)* $(DIR) && \
-	cp $(DNC)* $(DIR) && \
+	cp $(DO).* $(DIR) && \
+	cp $(DM).* $(DIR) && \
+	cp $(DNC).* $(DIR) && \
 	mkdir $(DIR)subsets && \
 	cp -r $(SUB) $(DIR)subsets
 

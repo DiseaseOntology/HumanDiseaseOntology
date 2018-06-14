@@ -10,8 +10,10 @@ SHELL := bash
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/
-
+# Other products
 DM = src/ontology/doid-merged
+DNC = src/ontology/doid-non-classified
+HD = src/ontology/HumanDO
 
 # to make a release, use `make release`
 # to update imports, use `make imports`
@@ -61,11 +63,10 @@ build/report.tsv: $(EDIT)
 # pre-build queries
 QUERIES := $(wildcard src/sparql/*-report.rq)
 
+.PHONY: report-last
 report-last: $(QUERIES)
-.PHONY: $(QUERIES)
-$(QUERIES):
 	$(ROBOT) query --input $(DM).owl\
-	 --query $@ $(subst src/sparql,build,$(subst .rq,-last.tsv,$(@)))
+	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
 
 # ----------------------------------------
 # RELEASE
@@ -86,12 +87,14 @@ $(DO).owl: $(EDIT)
 # Do not annotate OWL file until after conversion
 $(DO).obo: $(DO).owl
 	$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "anonymous parents" --trim true \
-	convert --check false --output $@ && \
-	$(ROBOT) annotate --input $@\
-	 --annotation oboInOwl:date "$(TS)" --output $@ && \
+	remove --select "anonymous parents" --select "equivalents" \
+	convert --check false --output $(basename $@)-temp.obo && \
+	$(ROBOT) annotate --input $(basename $@)-temp.obo\
+	 --annotation oboInOwl:date "$(TS)" --output $(basename $@)-temp.obo && \
 	$(ROBOT) annotate --input $<\
-	 --annotation oboInOwl:date "$(TS)" --output $<
+	 --annotation oboInOwl:date "$(TS)" --output $< && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo
 
 $(DO).json: $(DO).owl
 	$(ROBOT) convert --input $< --output $@
@@ -118,23 +121,20 @@ $(DM).json: $(DM).owl
 # HUMANDO
 # ----------------------------------------
 
-DNC = src/ontology/doid-non-classified
-HD = src/ontology/HumanDO
-
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
 $(DNC).owl: $(DO).owl
-	$(ROBOT) remove --input $< --axioms logical --trim true \
-	remove --select imports --trim true \
+	$(ROBOT) remove --input $< --select imports --trim true \
+	remove --select "anonymous parents" --select "equivalents" \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl"\
-	 --output $@ && \
-	$(ROBOT) annotate --input $@ --ontology-iri "http://purl.obolibrary.org/obo/doid/HumanDO.owl"\
-	 --version-iri "http://purl.obolibrary.org/obo/doid/releases/$(DATE)/HumanDO.owl"\
-	 --output $(HD).owl
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl" --output $@
 
 $(DNC).obo: $(DNC).owl
-	$(ROBOT) convert --input $< --output $@ --check false && cp $@ $(HD).obo
+	$(ROBOT) convert --input $< --check false\
+	 --output $(basename $@)-temp.obo && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo && \
+	cp $@ $(HD).obo
 
 $(DNC).json: $(DNC).owl
 	$(ROBOT) convert --input $< --output $@
@@ -149,7 +149,6 @@ SUBS = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
  tick-borne_infectious_disease zoonotic_infectious_disease
 
-.PHONY: subsets
 subsets: $(SUBS)
 
 $(SUBS): $(DNC).owl

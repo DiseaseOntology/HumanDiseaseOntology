@@ -169,7 +169,7 @@ $(SUBS): $(DNC).owl
 DIR = src/ontology/releases/$(DATE)/
 
 .PHONY: publish
-publish:
+publish: $(DO).owl $(DO).obo $(DNC).owl $(DNC).obo
 	mkdir $(DIR) && \
 	cp $(DO)* $(DIR) && \
 	cp $(DNC)* $(DIR) && \

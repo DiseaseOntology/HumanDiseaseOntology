@@ -1,24 +1,7 @@
-language: java
-jdk:
-  - openjdk8
-
-before_script:
-  - mkdir -p bin
-  - export PATH=$PATH:$PWD/bin
-  - wget http://build.berkeleybop.org/userContent/owltools/owltools -O bin/owltools
-  - wget http://build.berkeleybop.org/userContent/owltools/ontology-release-runner -O bin/ontology-release-runner
-  - wget http://build.berkeleybop.org/userContent/owltools/owltools-runner-all.jar -O bin/owltools-runner-all.jar
-  - wget http://build.berkeleybop.org/userContent/owltools/owltools-oort-all.jar -O bin/owltools-oort-all.jar
-  - chmod +x bin/*
-
-# command to run tests
-script: cd src/ontology && make test
-
-#after_success:
-#  coveralls
-
-# whitelist
-branches:
-  only:
-    - master
-
+language: python
+python:
+  - "3.6"
+install:
+  - pip install pronto
+script:
+   - pytest -v

@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/jakelever/HumanDiseaseOntology.svg?branch=master)](https://travis-ci.org/jakelever/HumanDiseaseOntology)
 
 # HumanDiseaseOntology
+
+[![Build Status](https://travis-ci.org/jakelever/HumanDiseaseOntology.svg?branch=master)](https://travis-ci.org/jakelever/HumanDiseaseOntology)
+
 Repository for the Human Disease Ontology (DO).
 
 DO OBO and OWL files are available in our GitHub repository. 

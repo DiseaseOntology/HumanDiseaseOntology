@@ -92,7 +92,7 @@ def checkNoCycles(ont):
 	itemsWithinCycles = sorted([ (item.id,item.name) for item in ont if parentChainContainsCycle(item) ])
 	itemsWithinCyclesTrimmed = itemsWithinCycles[:min(5,len(itemsWithinCycles))]
 	
-	assert len(itemsWithinCycles) == 0, "%d of %d item(s) were found to be within a cycle where the chain of parent terms would come back to itself. The first few are %s" % (len(itemsWithinCycles),len(list(ont)),str(itemsWithinCyclesTrimmed))
+	assert len(itemsWithinCycles) == 0, "%d of %d item(s) were found to contain a parent chain cycle where the chain of parent terms would come back to itself. The first few are %s" % (len(itemsWithinCycles),len(list(ont)),str(itemsWithinCyclesTrimmed))
 
 
 def test_doid_noorphans():

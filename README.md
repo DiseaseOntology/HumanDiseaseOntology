@@ -1,7 +1,7 @@
 
 # HumanDiseaseOntology
 
-[![Build Status](https://travis-ci.org/DiseaseOntology/HumanDiseaseOntology.svg?branch=master)](https://travis-ci.org/DiseaseOntology/HumanDiseaseOntology)
+[![Build Status](https://travis-ci.org/jakelever/HumanDiseaseOntology.svg?branch=master)](https://travis-ci.org/jakelever/HumanDiseaseOntology)
 
 Repository for the Human Disease Ontology (DO).
 

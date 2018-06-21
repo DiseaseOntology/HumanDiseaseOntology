@@ -19,8 +19,9 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: | report build merged human subsets publish report-new
+release: | report build merged human subsets publish post-build
 all: | imports release
+test: verify
 
 # ----------------------------------------
 # ROBOT
@@ -51,7 +52,7 @@ $(IMPS):
 	cd src/ontology/imports && $(MAKE) $@
 
 # ----------------------------------------
-# REPORT
+# PRE-BUILD REPORT
 # ----------------------------------------
 
 report: build/report.tsv report-last
@@ -167,7 +168,7 @@ $(SUBS): $(DNC).owl
 DIR = src/ontology/releases/$(DATE)/
 
 .PHONY: publish
-publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo
+publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 	mkdir $(DIR) && \
 	cp $(DO).* $(DIR) && \
 	cp $(DM).* $(DIR) && \
@@ -176,10 +177,28 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo
 	cp -r $(SUB) $(DIR)subsets
 
 # ----------------------------------------
-# FINAL REPORT
+# POST-BUILD REPORT
 # ----------------------------------------
+
+post-build: report-new #verify
 
 .PHONY: report-new
 report-new: $(QUERIES)
 	$(ROBOT) query --input $(DM).owl\
 	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
+
+V_QUERIES := $(wildcard src/sparql/verify-*.rq)
+DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
+
+.PHONY: verify
+verify: verify-do verify-dnc
+
+.PHONY: verify-do
+verify-do:
+	$(ROBOT) verify --input $(DO).obo\
+	 --queries $(V_QUERIES) --output-dir build
+
+.PHONY: verify-dnc
+verify-dnc:
+	$(ROBOT) verify --input $(DNC).obo\
+	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build

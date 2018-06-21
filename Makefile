@@ -80,7 +80,7 @@ DATE = $(shell date +'%Y-%m-%d')
 
 $(DO).owl: $(EDIT)
 	$(ROBOT) reason --input $< --create-new-ontology false \
-	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
+	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
 	 
 # OWL -> OBO does weird things to the date

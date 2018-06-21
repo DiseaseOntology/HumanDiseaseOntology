@@ -2,9 +2,9 @@ Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: obo: <http://purl.obolibrary.org/obo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
 
@@ -14,10 +14,10 @@ Ontology: <http://purl.obolibrary.org/obo/doid/imports/relations.owl>
 AnnotationProperty: obo:IAO_0000115
 
     
-AnnotationProperty: rdfs:label
+AnnotationProperty: rdfs:comment
 
     
-AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
@@ -26,11 +26,26 @@ Datatype: rdf:PlainLiteral
 Datatype: xsd:string
 
     
+ObjectProperty: obo:IDO_0000664
+
+    Annotations: 
+        rdfs:label "has material basis in"
+    
+    
+ObjectProperty: obo:RO_0000087
+
+    Annotations: 
+        rdfs:label "has role"^^xsd:string
+    
+    
 ObjectProperty: obo:RO_0001020
 
     Annotations: 
         rdfs:comment "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)",
         rdfs:label "is allergic trigger for"
+    
+    SubPropertyOf: 
+        obo:RO_0003302
     
     
 ObjectProperty: obo:RO_0001021
@@ -39,26 +54,44 @@ ObjectProperty: obo:RO_0001021
         rdfs:label "is autoimmune trigger for"
     
     
+ObjectProperty: obo:RO_0001022
+
+    Annotations: 
+        rdfs:label "has allergic trigger"^^xsd:string,
+        obo:IAO_0000115 "A relation between a condition (a phenotype or disease) of a host and a material entity, in which the material entity is not part of the host, and is considered harmless to non-allergic hosts, and the condition results in pathological processes that include an abnormally strong immune response against the material entity."^^xsd:string
+    
+    SubPropertyOf: 
+        obo:RO_0003302
+    
+    
+ObjectProperty: obo:RO_0001025
+
+    Annotations: 
+        rdfs:label "located in"
+    
+    
+ObjectProperty: obo:RO_0002200
+
+    Annotations: 
+        rdfs:label "has phenotype"
+    
+    
+ObjectProperty: obo:RO_0002202
+
+    Annotations: 
+        rdfs:label "develops from"
+    
+    
 ObjectProperty: obo:RO_0002218
 
     Annotations: 
         rdfs:label "has active participant"@en
     
     
-ObjectProperty: obo:IDO_0000664
+ObjectProperty: obo:RO_0002451
 
     Annotations: 
-        rdfs:label "has material basis in"
-    
-    
-ObjectProperty: obo:RO_0003001
-
-    Annotations: 
-        obo:IAO_0000115 "A produced_by b iff some process that occurs_in b has_output a.",
-        rdfs:label "produced by"
-    
-    InverseOf: 
-        obo:RO_0003000
+        rdfs:label "transmitted by"
     
     
 ObjectProperty: obo:RO_0003000
@@ -71,32 +104,46 @@ ObjectProperty: obo:RO_0003000
         obo:RO_0003001
     
     
+ObjectProperty: obo:RO_0003001
+
+    Annotations: 
+        obo:IAO_0000115 "A produced_by b iff some process that occurs_in b has_output a.",
+        rdfs:label "produced by"
+    
+    InverseOf: 
+        obo:RO_0003000
+    
+    
+ObjectProperty: obo:RO_0003302
+
+    Annotations: 
+        rdfs:label "causes or contributes to condition"^^xsd:string,
+        obo:IAO_0000115 "A relationship between an entity (e.g. a genotype, genetic variation, chemical, or environmental exposure) and a condition (a phenotype or disease), where the entity has some causal or contributing role that influences the condition."^^xsd:string
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: obo:RO_0003303
+
+    Annotations: 
+        rdfs:comment "Example: penicillin (CHEBI:17334) is allergic trigger for penicillin allergy (DOID:0060520)"^^xsd:string,
+        rdfs:label "is allergic trigger for"^^xsd:string
+    
+    SubPropertyOf: 
+        obo:RO_0003302
+    
+    
 ObjectProperty: obo:RO_0003304
 
     Annotations: 
-        rdfs:label "contributes to condition"^^xsd:string,
-        obo:IAO_0000115 "A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has some contributing role in the manifestation of the condition."
+        obo:IAO_0000115 "A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has some contributing role in the manifestation of the condition.",
+        rdfs:label "contributes to condition"^^xsd:string
+    
+    SubPropertyOf: 
+        obo:RO_0003302
     
     
-ObjectProperty: obo:RO_0002200
+ObjectProperty: owl:topObjectProperty
 
-    Annotations: 
-        rdfs:label "has phenotype"
-
-ObjectProperty: obo:RO_0002202
-
-   Annotations:
-      rdfs:label "develops from"    
-    
-ObjectProperty: obo:RO_0001025
-
-    Annotations: 
-        rdfs:label "located in"
-    
-    
-ObjectProperty: obo:RO_0002451
-
-    Annotations: 
-        rdfs:label "transmitted by"
-    
     

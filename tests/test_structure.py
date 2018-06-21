@@ -17,48 +17,54 @@ def loadDOFile(filename):
 
 def checkSingleParent(ont):
 	"""
-	Checks that all items in an ontology have exactly one parent
+	Checks that all non-obsolete items in an ontology have exactly one parent
 
 	:param ont: The ontology to test
 	:type ont: pronto.Ontology
 	"""
 
-	allitems = list(ont)
-	notsingleparent = sorted([ (term.id,term.name) for term in ont if len(term.parents) != 1 ])
+	notObsolete = [ term for term in ont if not ('is_obsolete' in term.other and 'true' in term.other['is_obsolete']) ]
+	notObsoleteAndNotRoot = [ term for term in notObsolete if term.id != 'DOID:4' ]
+
+	notsingleparent = sorted([ (term.id,term.name) for term in notObsoleteAndNotRoot if len(term.parents) != 1 ])
 	notsingleparentTrimmed = notsingleparent[:min(5,len(notsingleparent))]
 
-	assert len(notsingleparent) == 0, "%d of %d item(s) were found to have non-singular parents. The first few are %s" % (len(notsingleparent),len(allitems),str(notsingleparentTrimmed))
+	assert len(notsingleparent) == 0, "%d of %d item(s) were found to have non-singular parents. The first few are %s" % (len(notsingleparent),len(notObsoleteAndNotRoot),str(notsingleparentTrimmed))
 
 def checkNoOrphans(ont):
 	"""
-	Checks that all items in an ontology have at least one parents and hence that there are no orphan terms
+	Checks that all non-obsolete items in an ontology have at least one parents and hence that there are no orphan terms
 
 	:param ont: The ontology to test
 	:type ont: pronto.Ontology
 	"""
 
-	allitems = list(ont)
-	orphans = sorted([ (term.id,term.name) for term in ont if len(term.parents) == 0 ])
+	notObsolete = [ term for term in ont if not ('is_obsolete' in term.other and 'true' in term.other['is_obsolete']) ]
+	notObsoleteAndNotRoot = [ term for term in notObsolete if term.id != 'DOID:4' ]
+
+	orphans = sorted([ (term.id,term.name) for term in notObsoleteAndNotRoot if len(term.parents) == 0 ])
 	orphansTrimmed = orphans[:min(5,len(orphans))]
 
-	assert len(orphans) == 0, "%d of %d item(s) were found to have no parents. The first few are %s" % (len(orphans),len(allitems),str(orphansTrimmed))
+	assert len(orphans) == 0, "%d of %d item(s) were found to have no parents. The first few are %s" % (len(orphans),len(notObsoleteAndNotRoot),str(orphansTrimmed))
 
 def checkConnectivity(ont):
 	"""
-	Checks that all items in the ontology are children of the Disease (DOID:4) term and hence the ontology is fully connected
+	Checks that all non-obsolete items in the ontology are children of the Disease (DOID:4) term and hence the ontology is fully connected
 
 	:param ont: The ontology to test
 	:type ont: pronto.Ontology
 	"""
 
 	root = ont.get('DOID:4') # Get the Disease root
-	allitems = list(ont)
-	allfromroot = [root] + list(root.rchildren())
+	allRootChildren = list(root.rchildren())
 
-	unattached = sorted([ (item.id,item.name) for item in allitems if not item in allfromroot ])
+	notObsolete = [ term for term in ont if not ('is_obsolete' in term.other and 'true' in term.other['is_obsolete']) ]
+	notObsoleteAndNotRoot = [ term for term in notObsolete if term.id != 'DOID:4' ]
+
+	unattached = sorted([ (item.id,item.name) for item in notObsoleteAndNotRoot if not item in allRootChildren ])
 	unattachedTrimmed = unattached[:min(5,len(unattached))]
 
-	assert len(unattached) == 0, "%d of %d item(s) were found to be unattached to the main section of the ontology rooted at Disease (DOID:4). The first few are %s" % (len(unattached),len(allitems),str(unattachedTrimmed))
+	assert len(unattached) == 0, "%d of %d item(s) were found to be unattached to the main section of the ontology rooted at Disease (DOID:4). The first few are %s" % (len(unattached),len(notObsoleteAndNotRoot),str(unattachedTrimmed))
 
 def parentChainContainsCycle(term):
 	"""
@@ -83,13 +89,14 @@ def parentChainContainsCycle(term):
 
 def checkNoCycles(ont):
 	"""
-	Checks that no cycles exist in the parent chains for any item. This is used to make sure that the structure is a tree.
+	Checks that no cycles exist in the parent chains for any non-obsolete item. This is used to make sure that the structure is a tree.
 
 	:param ont: The ontology to test
 	:type ont: pronto.Ontology
 	"""
 
-	itemsWithinCycles = sorted([ (item.id,item.name) for item in ont if parentChainContainsCycle(item) ])
+	notObsolete = [ term for term in ont if not ('is_obsolete' in term.other and 'true' in term.other['is_obsolete']) ]
+	itemsWithinCycles = sorted([ (item.id,item.name) for item in notObsolete if parentChainContainsCycle(item) ])
 	itemsWithinCyclesTrimmed = itemsWithinCycles[:min(5,len(itemsWithinCycles))]
 	
 	assert len(itemsWithinCycles) == 0, "%d of %d item(s) were found to contain a parent chain cycle where the chain of parent terms would come back to itself. The first few are %s" % (len(itemsWithinCycles),len(list(ont)),str(itemsWithinCyclesTrimmed))

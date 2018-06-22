@@ -3,7 +3,7 @@
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?s WHERE {
+SELECT DISTINCT ?s WHERE {
 	?s a owl:Class .
 	?s rdfs:subClassOf ?p1 .
 	?s rdfs:subClassOf ?p2 .

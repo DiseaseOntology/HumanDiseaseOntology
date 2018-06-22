@@ -57,9 +57,13 @@ $(IMPS):
 
 report: build/report.tsv report-last
 
+# Report for general issues on doid-edit
+
 build/report.tsv: $(EDIT)
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
+
+# Count classes, imports, and logical defs before building
 
 # pre-build queries
 QUERIES := $(wildcard src/sparql/*-report.rq)
@@ -121,7 +125,9 @@ $(DM).obo: $(DM).owl
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(DO).owl
+# Generate from EDIT file to avoid asserted inferences
+
+$(DNC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "anonymous parents" --select "equivalents" \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
@@ -150,6 +156,8 @@ SUBS = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
 
 subsets: $(SUBS)
 
+# Generate subsets (specified by SUBS)
+
 $(SUBS): $(DNC).owl
 	$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $@)> annotations" \
@@ -167,6 +175,8 @@ $(SUBS): $(DNC).owl
 
 DIR = src/ontology/releases/$(DATE)/
 
+# Move release files to a new dir
+
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 	mkdir $(DIR) && \
@@ -180,24 +190,33 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 # POST-BUILD REPORT
 # ----------------------------------------
 
-post-build: report-new #verify
+post-build: report-new verify
+
+# Count classes, imports, and logical defs after building
 
 .PHONY: report-new
 report-new: $(QUERIES)
 	$(ROBOT) query --input $(DM).owl\
 	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
 
+# Ensure proper OBO structure
+
 V_QUERIES := $(wildcard src/sparql/verify-*.rq)
-DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
+DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
+# We are not reduced to single inheritence in DNC
+# Once this is cleaned up, we can change to all DNC verifications
+#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
 .PHONY: verify
 verify: verify-do verify-dnc
 
+# First, verify doid.obo
 .PHONY: verify-do
 verify-do:
 	$(ROBOT) verify --input $(DO).obo\
 	 --queries $(V_QUERIES) --output-dir build
 
+# Then, verify doid-non-classified.obo
 .PHONY: verify-dnc
 verify-dnc:
 	$(ROBOT) verify --input $(DNC).obo\

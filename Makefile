@@ -190,12 +190,12 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 # POST-BUILD REPORT
 # ----------------------------------------
 
-post-build: report-new verify
+#post-build: report-new verify
 
 # Count classes, imports, and logical defs after building
 
-.PHONY: report-new
-report-new: $(QUERIES)
+#.PHONY: report-new
+#report-new: $(QUERIES)
 	$(ROBOT) query --input $(DM).owl\
 	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
 
@@ -203,8 +203,8 @@ report-new: $(QUERIES)
 
 V_QUERIES := $(wildcard src/sparql/verify-*.rq)
 DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
-# We are not reduced to single inheritence in DNC
-# Once this is cleaned up, we can change to all DNC verifications
+    # We are not reduced to single inheritence in DNC
+    # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
 .PHONY: verify

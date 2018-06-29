@@ -55,13 +55,13 @@ $(IMPS):
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-#report: build/report.tsv report-last
+report: build/report.tsv report-last
 
 # Report for general issues on doid-edit
 
-#build/report.tsv: $(EDIT)
-#	$(ROBOT) report --input $< --fail-on none\
-#	 --output $@ --format tsv
+build/report.tsv: $(EDIT)
+	$(ROBOT) report --input $< --fail-on none\
+	 --output $@ --format tsv
 
 # Count classes, imports, and logical defs before building
 
@@ -190,14 +190,14 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 # POST-BUILD REPORT
 # ----------------------------------------
 
-#post-build: report-new verify
+post-build: report-new verify
 
 # Count classes, imports, and logical defs after building
 
-#.PHONY: report-new
-#report-new: $(QUERIES)
-#	$(ROBOT) query --input $(DM).owl\
-#	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
+.PHONY: report-new
+report-new: $(QUERIES)
+	$(ROBOT) query --input $(DM).owl\
+	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
 
 #-----------------------------
 # Ensure proper OBO structure

@@ -66,12 +66,12 @@ $(IMPS):
 # Count classes, imports, and logical defs before building
 
 # pre-build queries
-#QUERIES := $(wildcard src/sparql/*-report.rq)
+QUERIES := $(wildcard src/sparql/*-report.rq)
 
-#.PHONY: report-last
-#report-last: $(QUERIES)
-#	$(ROBOT) query --input $(DM).owl\
-#	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
+.PHONY: report-last
+report-last: $(QUERIES)
+	$(ROBOT) query --input $(DM).owl\
+	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
 
 # ----------------------------------------
 # RELEASE

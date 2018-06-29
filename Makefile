@@ -196,10 +196,12 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 
 #.PHONY: report-new
 #report-new: $(QUERIES)
-	$(ROBOT) query --input $(DM).owl\
-	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
+#	$(ROBOT) query --input $(DM).owl\
+#	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
 
+#-----------------------------
 # Ensure proper OBO structure
+#-------------------------------
 
 V_QUERIES := $(wildcard src/sparql/verify-*.rq)
 DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq

@@ -32,8 +32,6 @@
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2018_03_01:49601007"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Circulatory_system"
-        }, {
           "val" : "NCI:C2931"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:155263000"
@@ -49,6 +47,10 @@
           "val" : "UMLS_CUI:C0007222"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:195139006"
+        }, {
+          "val" : "MESH:D002318"
+        }, {
+          "val" : "ICD9CM:429.2"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -96,13 +98,15 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:154648001"
         }, {
+          "val" : "ICD9CM:259.9"
+        }, {
+          "val" : "MESH:D004700"
+        }, {
           "val" : "NCI:C3009"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:190594008"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:267489000"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Endocrine_system"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:267475005"
         } ],
@@ -160,7 +164,7 @@
       "meta" : {
         "definition" : {
           "val" : "A genetic disease associated with mutations encoding defective proteins, which result in either abnormal function formation or function of cilia.",
-          "xrefs" : [ "PMID:?term=18178628", "PMID:?term=21210154", "url:http://en.wikipedia.org/wiki/Ciliopathy" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Ciliopathy", "url:https://www.ncbi.nlm.nih.gov/pubmed/?term=18178628", "url:https://www.ncbi.nlm.nih.gov/pubmed/?term=21210154" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "basicPropertyValues" : [ {
@@ -193,6 +197,8 @@
         }, {
           "val" : "NCI:C3406"
         }, {
+          "val" : "ICD9CM:195.1"
+        }, {
           "val" : "UMLS_CUI:C0039981"
         }, {
           "val" : "NCI:C3576"
@@ -201,11 +207,11 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:255058005"
         }, {
-          "val" : "url:http://www.advocatehealth.com/cmc/body.cfm?id=203"
-        }, {
           "val" : "SNOMEDCT_US_2018_03_01:188361007"
         }, {
           "val" : "ICD10CM:C76.1"
+        }, {
+          "val" : "MESH:D013899"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -252,42 +258,6 @@
       "type" : "CLASS",
       "lbl" : "chromosomal deletion syndrome"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_10983",
-      "meta" : {
-        "definition" : {
-          "val" : "A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Alport_syndrome" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
-        "xrefs" : [ {
-          "val" : "url:http://en.wikipedia.org/wiki/Alport_syndrome"
-        }, {
-          "val" : "NCI2004_11_17:C34842"
-        }, {
-          "val" : "UMLS_CUI:C0027706"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:57333009"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:399340005"
-        }, {
-          "val" : "ORDO:63"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Hereditary Nephritis",
-          "xrefs" : [ "NCI2004_11_17:C34842" ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "OMIM mapping confirmed by DO. [SN]."
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "Alport syndrome"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1925",
       "meta" : {
         "definition" : {
@@ -298,17 +268,13 @@
         "xrefs" : [ {
           "val" : "OMIM:135900"
         }, {
-          "val" : "url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=1465"
-        }, {
           "val" : "UMLS_CUI:C0265338"
-        }, {
-          "val" : "url:http://ghr.nlm.nih.gov/condition/coffin-siris-syndrome"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:10007009"
         }, {
           "val" : "NCI:C35321"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Coffin%E2%80%93Siris_syndrome"
+          "val" : "MESH:C536436"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -334,6 +300,42 @@
       "type" : "CLASS",
       "lbl" : "Coffin-Siris syndrome"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_10983",
+      "meta" : {
+        "definition" : {
+          "val" : "A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Alport_syndrome" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI2004_11_17:C34842"
+        }, {
+          "val" : "UMLS_CUI:C0027706"
+        }, {
+          "val" : "MESH:D009394"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:57333009"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:399340005"
+        }, {
+          "val" : "ORDO:63"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Hereditary Nephritis",
+          "xrefs" : [ "NCI2004_11_17:C34842" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "OMIM mapping confirmed by DO. [SN]."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Alport syndrome"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050013",
       "meta" : {
         "definition" : {
@@ -357,6 +359,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
+          "val" : "MESH:D013577"
+        }, {
           "val" : "UMLS_CUI:C0039082"
         }, {
           "val" : "NCI:C28193"
@@ -373,46 +377,6 @@
       "type" : "CLASS",
       "lbl" : "syndrome"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_863",
-      "meta" : {
-        "definition" : {
-          "val" : "A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nervous_system" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
-        "xrefs" : [ {
-          "val" : "url:http://en.wikipedia.org/wiki/Nervous_system"
-        }, {
-          "val" : "ICD10CM:G98.8"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:286946008"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:267679005"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:192641002"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:118940003"
-        }, {
-          "val" : "NCI:C26835"
-        }, {
-          "val" : "UMLS_CUI:C0027765"
-        }, {
-          "val" : "ICD10CM:G98"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:155262005"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:154981003"
-        }, {
-          "val" : "ICD10CM:G00-G99"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "nervous system disease"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1725",
       "meta" : {
         "definition" : {
@@ -421,7 +385,7 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
-          "val" : "url:http://en.wikipedia.org/wiki/Peritoneal_cancer"
+          "val" : "ICD9CM:158.8"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:187808008"
         }, {
@@ -448,6 +412,48 @@
       "type" : "CLASS",
       "lbl" : "peritoneum cancer"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_863",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nervous_system" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:G98.8"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:286946008"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:267679005"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:192641002"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:118940003"
+        }, {
+          "val" : "NCI:C26835"
+        }, {
+          "val" : "MESH:D009422"
+        }, {
+          "val" : "UMLS_CUI:C0027765"
+        }, {
+          "val" : "ICD10CM:G98"
+        }, {
+          "val" : "ICD9CM:349.9"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:155262005"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:154981003"
+        }, {
+          "val" : "ICD10CM:G00-G99"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "nervous system disease"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_74",
       "meta" : {
         "definition" : {
@@ -466,13 +472,15 @@
         }, {
           "val" : "MTH:NOCODE"
         }, {
+          "val" : "MESH:D006402"
+        }, {
           "val" : "SNOMEDCT_US_2018_03_01:191402006"
         }, {
           "val" : "UMLS_CUI:C0018939"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Hematopathology"
-        }, {
           "val" : "NCI:C26323"
+        }, {
+          "val" : "ICD9CM:289.9"
         }, {
           "val" : "ICD9CM_2006:280-289.99"
         }, {
@@ -485,6 +493,8 @@
           "val" : "ICD10CM:D75.9"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:191124002"
+        }, {
+          "val" : "ICD9CM:280-289.99"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:154785002"
         } ],
@@ -571,13 +581,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
-          "val" : "url:http://www.rarediseases.org/rare-disease-information/rare-diseases/byID/30/viewAbstract"
-        }, {
           "val" : "OMIM:122470"
         }, {
           "val" : "UMLS_CUI:C0270972"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Cornelia_de_Lange_Syndrome"
         }, {
           "val" : "ICD10CM:Q87.1"
         }, {
@@ -587,9 +593,9 @@
         }, {
           "val" : "OMIM:610759"
         }, {
-          "val" : "ORDO:199"
+          "val" : "MESH:D003635"
         }, {
-          "val" : "url:http://ghr.nlm.nih.gov/condition/cornelia-de-lange-syndrome"
+          "val" : "ORDO:199"
         }, {
           "val" : "OMIM:614701"
         }, {
@@ -598,8 +604,6 @@
           "val" : "SNOMEDCT_US_2018_03_01:40354009"
         }, {
           "val" : "OMIM:300882"
-        }, {
-          "val" : "url:http://www.omim.org/entry/122470"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -665,11 +669,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
-          "val" : "url:https://ghr.nlm.nih.gov/condition/oral-facial-digital-syndrome#inheritance"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Orofaciodigital_syndrome"
-        }, {
           "val" : "UMLS_CUI:C0029294"
+        }, {
+          "val" : "MESH:D009958"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -703,8 +705,6 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:126872008"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Retroperitoneal_space"
-        }, {
           "val" : "NCI:C3357"
         }, {
           "val" : "UMLS_CUI:C0153465"
@@ -713,7 +713,13 @@
         }, {
           "val" : "UMLS_CUI:C0153464"
         }, {
+          "val" : "ICD9CM:158"
+        }, {
           "val" : "ICD10CM:C48"
+        }, {
+          "val" : "MESH:D012186"
+        }, {
+          "val" : "ICD9CM:158.0"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:187801002"
         }, {
@@ -792,6 +798,8 @@
         }, {
           "val" : "OMIM:600467"
         }, {
+          "val" : "ICD9CM:995.86"
+        }, {
           "val" : "SNOMEDCT_US_2018_03_01:405501007"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:157762007"
@@ -800,13 +808,13 @@
         }, {
           "val" : "OMIM:154275"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Malignant_hyperthermia"
-        }, {
           "val" : "SNOMEDCT_US_2018_03_01:248453001"
         }, {
           "val" : "UMLS_CUI:C0024591"
         }, {
           "val" : "CSP2005:2871-4352"
+        }, {
+          "val" : "MESH:D008305"
         }, {
           "val" : "OMIM:154276"
         }, {
@@ -881,13 +889,15 @@
         }, {
           "val" : "NCI:C35562"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Nervous_system_disease"
+          "val" : "MESH:D009380"
         }, {
           "val" : "UMLS_CUI:C0153643"
         }, {
+          "val" : "ICD9CM:192.9"
+        }, {
           "val" : "UMLS_CUI:C0027665"
         }, {
-          "val" : "url:http://emedicine.medscape.com/oncology"
+          "val" : "ICD9CM:192"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:188306000"
         } ],
@@ -943,13 +953,15 @@
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2018_03_01:197575000"
         }, {
+          "val" : "MESH:D004066"
+        }, {
           "val" : "CSP2005:1248-3545"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:155629009"
         }, {
           "val" : "UMLS_CUI:C0012242"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Human_gastrointestinal_tract"
+          "val" : "ICD9CM:520-579.99"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:266483008"
         }, {
@@ -1026,6 +1038,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
+          "val" : "MESH:D001523"
+        }, {
           "val" : "SNOMEDCT_US_2018_03_01:154843007"
         }, {
           "val" : "ICD10CM:F99-F99"
@@ -1039,8 +1053,6 @@
           "val" : "SNOMEDCT_US_2018_03_01:154972009"
         }, {
           "val" : "ICD10CM:F99"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Mental_disorder"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:192637001"
         }, {
@@ -1092,8 +1104,6 @@
           "val" : "NCI2004_11_17:C3674"
         }, {
           "val" : "UMLS_CUI:C0178830"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Reproductive_system#Examples_of_cancers"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1141,11 +1151,7 @@
         }, {
           "val" : "OMIM:305100"
         }, {
-          "val" : "url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=238468"
-        }, {
-          "val" : "url:http://ghr.nlm.nih.gov/condition/hypohidrotic-ectodermal-dysplasia"
-        }, {
-          "val" : "url:http://www.ncbi.nlm.nih.gov/books/NBK1112/"
+          "val" : "MESH:D053358"
         }, {
           "val" : "OMIM:129490"
         }, {
@@ -1214,11 +1220,7 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
         "xrefs" : [ {
-          "val" : "url:http://en.wikipedia.org/wiki/Head_and_neck_cancer"
-        }, {
           "val" : "SNOMEDCT_US_2018_03_01:255055008"
-        }, {
-          "val" : "url:http://www.cancer.gov/dictionary?CdrID=257519"
         }, {
           "val" : "MTH:NOCODE"
         }, {
@@ -1228,11 +1230,7 @@
         }, {
           "val" : "UMLS_CUI:C0018671"
         }, {
-          "val" : "url:http://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php"
-        }, {
-          "val" : "url:http://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&codlan=1&codcol=70&codcch=9"
-        }, {
-          "val" : "url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck"
+          "val" : "MESH:D006258"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1268,6 +1266,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
         "xrefs" : [ {
           "val" : "UMLS_CUI:C0001485"
+        }, {
+          "val" : "DO:wk"
         }, {
           "val" : "ICD9CM:079.0"
         } ],
@@ -1334,6 +1334,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
+          "val" : "ICD9CM:279"
+        }, {
           "val" : "ICD10CM:D89.9"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:154782004"
@@ -1344,11 +1346,11 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:191019003"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Immune_system"
-        }, {
           "val" : "SNOMEDCT_US_2018_03_01:191035005"
         }, {
           "val" : "UMLS_CUI:C0041806"
+        }, {
+          "val" : "ICD9CM:279.9"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1370,7 +1372,7 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:155603009"
         }, {
-          "val" : "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=respiratory%20system"
+          "val" : "ICD9CM:519"
         }, {
           "val" : "UMLS_CUI:C0029582"
         }, {
@@ -1382,9 +1384,9 @@
         }, {
           "val" : "ICD10CM:J96-J99"
         }, {
-          "val" : "SNOMEDCT_US_2018_03_01:266373008"
+          "val" : "ICD9CM:510-519.99"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/File:Respiratory_system_complete_en.svg"
+          "val" : "SNOMEDCT_US_2018_03_01:266373008"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -1407,6 +1409,8 @@
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2018_03_01:367543008"
         }, {
+          "val" : "MESH:D004067"
+        }, {
           "val" : "SNOMEDCT_US_2018_03_01:128348002"
         }, {
           "val" : "NCI2004_11_17:C3052"
@@ -1421,11 +1425,11 @@
         }, {
           "val" : "ICD10CM:C26.9"
         }, {
+          "val" : "ICD9CM:239.0"
+        }, {
           "val" : "NCI:C3052"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:128415001"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Human_gastrointestinal_tract"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:428905002"
         }, {
@@ -1438,6 +1442,8 @@
           "val" : "SNOMEDCT_US_2018_03_01:189527000"
         }, {
           "val" : "UMLS_CUI:C0017185"
+        }, {
+          "val" : "MESH:D005770"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1495,6 +1501,8 @@
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:42778005"
         }, {
+          "val" : "MESH:D002806"
+        }, {
           "val" : "ICD10CM:Q77.3"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:360507004"
@@ -1537,11 +1545,11 @@
         }, {
           "val" : "NCI:C107377"
         }, {
+          "val" : "MESH:D009140"
+        }, {
           "val" : "SNOMEDCT_US_2018_03_01:928000"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:274149006"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:268047003"
         }, {
@@ -1563,8 +1571,6 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_AGR_slim" ],
         "xrefs" : [ {
-          "val" : "url:http://en.wikipedia.org/wiki/Reproductive_system"
-        }, {
           "val" : "UMLS_CUI:C1335037"
         }, {
           "val" : "NCI:C27613"
@@ -1638,6 +1644,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
         "xrefs" : [ {
+          "val" : "ICD9CM:194.9"
+        }, {
           "val" : "NCI2004_11_17:C3010"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:387922007"
@@ -1649,8 +1657,6 @@
           "val" : "SNOMEDCT_US_2018_03_01:387927001"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:371982006"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Endocrine_system"
         }, {
           "val" : "NCI2004_11_17:C3575"
         }, {
@@ -1665,6 +1671,8 @@
           "val" : "SNOMEDCT_US_2018_03_01:190140005"
         }, {
           "val" : "ICD10CM:C75.9"
+        }, {
+          "val" : "MESH:D004701"
         }, {
           "val" : "UMLS_CUI:C0014132"
         }, {
@@ -1720,8 +1728,6 @@
         "xrefs" : [ {
           "val" : "NCI:C27599"
         }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Urinary_system"
-        }, {
           "val" : "UMLS_CUI:C1335051"
         }, {
           "val" : "NCI2004_11_17:C27599"
@@ -1756,7 +1762,7 @@
         "xrefs" : [ {
           "val" : "NCI:C26836"
         }, {
-          "val" : "url:http://www.who.int/topics/nutrition_disorders/en/"
+          "val" : "MESH:D009748"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:2492009"
         }, {
@@ -1803,9 +1809,11 @@
         }, {
           "val" : "UMLS_CUI:C1335029"
         }, {
-          "val" : "url:http://en.wikipedia.org/w/index.php?title=Peripheral_neuropathy&redirect=no"
+          "val" : "ICD9CM:350-359.99"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:155080009"
+        }, {
+          "val" : "MESH:D010523"
         }, {
           "val" : "MTH:516"
         }, {
@@ -1853,8 +1861,6 @@
         "xrefs" : [ {
           "val" : "SNOMEDCT_US_2018_03_01:191005003"
         }, {
-          "val" : "url:http://www.nichd.nih.gov/publications/pubs/primary_immuno.cfm#PrimaryImmunoDiseases"
-        }, {
           "val" : "NCI2004_11_17:C3131"
         }, {
           "val" : "CSP2005:1560-5885"
@@ -1862,6 +1868,10 @@
           "val" : "SNOMEDCT_US_2018_03_01:234532001"
         }, {
           "val" : "CSP2005:1553-9570"
+        }, {
+          "val" : "MESH:D007153"
+        }, {
+          "val" : "ICD9CM:279.3"
         }, {
           "val" : "UMLS_CUI:C0021051"
         }, {
@@ -1946,15 +1956,13 @@
         }, {
           "val" : "NCI2004_11_17:C34816"
         }, {
-          "val" : "url:http://www.ncbi.nlm.nih.gov/mesh/68008659"
+          "val" : "MESH:D008661"
         }, {
           "val" : "UMLS_CUI:C0025521"
         }, {
           "val" : "CSP2005:1849-0057"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:363205007"
-        }, {
-          "val" : "url:http://en.wikipedia.org/wiki/Inborn_errors_of_metabolism"
         }, {
           "val" : "SNOMEDCT_US_2018_03_01:86095007"
         } ],
@@ -1980,21 +1988,9 @@
       "lbl" : "inherited metabolic disorder"
     } ],
     "edges" : [ {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_170",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_28"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_193",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_15"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_374",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060158"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3093",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_863"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060388",
       "pred" : "is_a",
@@ -2003,10 +1999,6 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060056",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2914"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_1925",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_225"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050013",
       "pred" : "is_a",
@@ -2019,17 +2011,13 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_612",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2914"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_5093",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060118"
     } ],
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.owl",
     "meta" : {
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2018-06-20/subsets/DO_MGI_slim.owl"
+      "version" : "http://purl.obolibrary.org/obo/doid/2018-06-29/subsets/DO_MGI_slim.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

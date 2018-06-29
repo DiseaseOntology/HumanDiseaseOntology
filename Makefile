@@ -55,23 +55,23 @@ $(IMPS):
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-report: build/report.tsv report-last
+#report: build/report.tsv report-last
 
 # Report for general issues on doid-edit
 
-build/report.tsv: $(EDIT)
-	$(ROBOT) report --input $< --fail-on none\
-	 --output $@ --format tsv
+#build/report.tsv: $(EDIT)
+#	$(ROBOT) report --input $< --fail-on none\
+#	 --output $@ --format tsv
 
 # Count classes, imports, and logical defs before building
 
 # pre-build queries
-QUERIES := $(wildcard src/sparql/*-report.rq)
+#QUERIES := $(wildcard src/sparql/*-report.rq)
 
-.PHONY: report-last
-report-last: $(QUERIES)
-	$(ROBOT) query --input $(DM).owl\
-	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
+#.PHONY: report-last
+#report-last: $(QUERIES)
+#	$(ROBOT) query --input $(DM).owl\
+#	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
 
 # ----------------------------------------
 # RELEASE

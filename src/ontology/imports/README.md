@@ -33,3 +33,4 @@ Open the corresponding `.txt` file and do a text search to find the line with th
 * `hp` - Human Phenotype Ontology
 * `ncbitaxon` - NCBI organismal classification
 * `uberon` - Uberon multi-species anatomy ontology
+* `ro` - Relations Ontology (object properties)

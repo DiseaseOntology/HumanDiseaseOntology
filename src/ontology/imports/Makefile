@@ -10,7 +10,7 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 
 IMP = ./
-imports: chebi cl foodon hp ncbitaxon uberon full
+imports: chebi cl foodon hp ncbitaxon ro uberon full
 
 # ----------------------------------------
 # ROBOT
@@ -105,6 +105,16 @@ ncbitaxon:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --upper-term NCBITaxon:10239\
 	 --upper-term NCBITaxon:131567 --lower-terms "$(IMP)$@_terms.txt" \
+	remove --select "complement annotation-properties"\
+	 --entities $(IMP)annotations.txt \
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+.PHONY: ro
+ro:
+	$(ROBOT) extract --input-iri "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.obo"\
+	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\

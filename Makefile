@@ -55,23 +55,16 @@ $(IMPS):
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-report: build/report.tsv report-last
+report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-build/report.tsv: $(EDIT)
+init:
+	mkdir -p build/reports
+
+build/reports/report.tsv: $(EDIT) | init
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
-
-# Count classes, imports, and logical defs before building
-
-# pre-build queries
-QUERIES := $(wildcard src/sparql/*-report.rq)
-
-.PHONY: report-last
-report-last: $(QUERIES)
-	$(ROBOT) query --input $(DM).owl\
-	 --query $< $(subst src/sparql,build,$(subst .rq,-last.tsv,$(<)))
 
 # ----------------------------------------
 # RELEASE
@@ -190,14 +183,26 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 # POST-BUILD REPORT
 # ----------------------------------------
 
-post-build: report-new verify
+post-build: counts verify
 
-# Count classes, imports, and logical defs after building
+# Count classes, imports, and logical defs from old and new
 
-.PHONY: report-new
-report-new: $(QUERIES)
+QUERIES := $(wildcard src/sparql/*-report.rq)
+
+counts: $(QUERIES) diff
+.PHONY: $(QUERIES)
+
+$(QUERIES):: | init
+	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
+	 --collapse-import-closure true \
+	query --query $@ $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
+
+$(QUERIES):: | init
 	$(ROBOT) query --input $(DM).owl\
-	 --query $< $(subst src/sparql,build,$(subst .rq,-new.tsv,$(<)))
+	 --query $@ $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
+
+diff:
+	python build/report-diff.py
 
 #-----------------------------
 # Ensure proper OBO structure
@@ -216,10 +221,10 @@ verify: verify-do verify-dnc
 .PHONY: verify-do
 verify-do:
 	$(ROBOT) verify --input $(DO).obo\
-	 --queries $(V_QUERIES) --output-dir build
+	 --queries $(V_QUERIES) --output-dir build/reports
 
 # Then, verify doid-non-classified.obo
 .PHONY: verify-dnc
 verify-dnc:
 	$(ROBOT) verify --input $(DNC).obo\
-	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build
+	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build/reports

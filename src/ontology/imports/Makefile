@@ -23,8 +23,7 @@ imports: chebi cl foodon hp ncbitaxon ro uberon full
 # 	curl -L -o build/robot.jar\
 #	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
-ROBOT := robot
-# ROBOT := java -jar ../build/robot.jar
+ROBOT := java -jar ../../../build/robot.jar
 
 # ----------------------------------------
 # FULL IMPORTS
@@ -36,7 +35,7 @@ FULL = trans so symp
 full: $(FULL)
 $(FULL):
 	$(ROBOT) merge --input-iri "$(OBO)$@.owl" \
-	remove --select "owl:deprecated='true'^^boolean" \
+	remove --select "owl:deprecated='true'^^xsd:boolean" \
 	remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\

@@ -10,7 +10,7 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 
 IMP = ./
-imports: chebi cl foodon hp ncbitaxon ro uberon full
+imports: chebi cl foodon geno hp ncbitaxon ro uberon full
 
 # ----------------------------------------
 # ROBOT
@@ -86,6 +86,14 @@ foodon:
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
+.PHONY: geno
+geno:
+	$(ROBOT) filter --input-iri "$(OBO)$@.owl"\
+	 --entity obo:GENO_0000141 --select "self descendants annotations" \
+	remove --entity obo:GENO_0000889 \
+	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
 .PHONY: hp
 hp:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
@@ -95,7 +103,7 @@ hp:
 	 --entities $(IMP)annotations.txt \
 	remove --entity UPHENO:0001002 --entity HP:0000001 \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --ontology-iri "$@_import.owl"\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 # WARNING: NCBITaxon is BIG! This will take time.

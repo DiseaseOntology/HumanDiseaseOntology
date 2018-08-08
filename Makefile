@@ -19,9 +19,9 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: | report build merged human subsets publish post-build
-all: | imports release
-test: verify
+release: build/robot.jar | report products publish counts verify
+all: build/robot.jar | imports release
+test: build/robot.jar | verify
 
 # ----------------------------------------
 # ROBOT
@@ -30,9 +30,10 @@ test: verify
 # mk: 
 # 	mkdir -p build
 
-# build/robot.jar: | mk
-# 	curl -L -o build/robot.jar\
-#	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
+.PHONY: build/robot.jar
+build/robot.jar:
+	curl -L -o build/robot.jar\
+	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -44,7 +45,7 @@ ROBOT := java -jar build/robot.jar
 # or the `ontology/imports` dir
 
 .PHONY: imports
-imports:
+imports: build/robot.jar
 	cd src/ontology/imports && $(MAKE) imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
@@ -59,10 +60,7 @@ report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-init:
-	mkdir -p build/reports
-
-build/reports/report.tsv: $(EDIT) | init
+build/reports/report.tsv: $(EDIT)
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
 
@@ -70,7 +68,8 @@ build/reports/report.tsv: $(EDIT) | init
 # RELEASE
 # ----------------------------------------
 
-build: $(DO).owl $(DO).obo $(DO).json
+build: $(DO).owl $(DO).obo $(DO).json | build/robot.jar
+products: | build merged human subsets
 
 # release vars
 TS = $(shell date +'%m:%d:%Y %H:%M')
@@ -79,18 +78,13 @@ DATE = $(shell date +'%Y-%m-%d')
 $(DO).owl: $(EDIT)
 	$(ROBOT) reason --input $< --create-new-ontology false \
 	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
-	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
-	 
-# OWL -> OBO does weird things to the date
-# Do not annotate OWL file until after conversion
+	annotate --annotation oboInOwl:date "$(TS)"\
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
+
 $(DO).obo: $(DO).owl
 	$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "anonymous parents" --select "equivalents" \
+	remove --select "parents equivalents" --select "anonymous" \
 	convert --check false --output $(basename $@)-temp.obo && \
-	$(ROBOT) annotate --input $(basename $@)-temp.obo\
-	 --annotation oboInOwl:date "$(TS)" --output $(basename $@)-temp.obo && \
-	$(ROBOT) annotate --input $<\
-	 --annotation oboInOwl:date "$(TS)" --output $< && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
@@ -122,7 +116,7 @@ human: $(DNC).owl $(DNC).obo $(DNC).json
 
 $(DNC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "anonymous parents" --select "equivalents" \
+	remove --select "parents equivalents" --select anonymous \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
 	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl" --output $@ && \
 	cp $@ $(HD).owl
@@ -183,13 +177,11 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 # POST-BUILD REPORT
 # ----------------------------------------
 
-post-build: counts verify
-
 # Count classes, imports, and logical defs from old and new
 
 QUERIES := $(wildcard src/sparql/*-report.rq)
 
-counts: $(QUERIES) diff
+counts: $(QUERIES) | build/reports/report-diff.txt
 .PHONY: $(QUERIES)
 
 $(QUERIES):: | init
@@ -201,8 +193,9 @@ $(QUERIES):: | init
 	$(ROBOT) query --input $(DM).owl\
 	 --query $@ $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
 
-diff:
-	python build/report-diff.py
+.PHONY: build/reports/report-diff.txt
+build/reports/report-diff.txt:
+	cd build && python report-diff.py
 
 #-----------------------------
 # Ensure proper OBO structure
@@ -214,17 +207,14 @@ DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
-.PHONY: verify
 verify: verify-do verify-dnc
 
 # First, verify doid.obo
-.PHONY: verify-do
-verify-do:
-	$(ROBOT) verify --input $(DO).obo\
+verify-do: $(DO).obo
+	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) --output-dir build/reports
 
 # Then, verify doid-non-classified.obo
-.PHONY: verify-dnc
-verify-dnc:
-	$(ROBOT) verify --input $(DNC).obo\
+verify-dnc: $(DNC).obo
+	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build/reports

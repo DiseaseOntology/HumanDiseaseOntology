@@ -19,9 +19,12 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: build/robot.jar | report products publish counts verify
-all: build/robot.jar | imports release
-test: build/robot.jar | verify
+#release: build/robot.jar | report products publish counts verify
+release: report products publish counts verify
+#all: build/robot.jar | imports release
+all: imports release
+#test: build/robot.jar | verify
+test: verify
 
 # ----------------------------------------
 # ROBOT
@@ -45,7 +48,7 @@ ROBOT := java -jar build/robot.jar
 # or the `ontology/imports` dir
 
 .PHONY: imports
-imports: build/robot.jar
+imports: # build/robot.jar
 	cd src/ontology/imports && $(MAKE) imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
@@ -68,7 +71,7 @@ build/reports/report.tsv: $(EDIT)
 # RELEASE
 # ----------------------------------------
 
-build: $(DO).owl $(DO).obo $(DO).json | build/robot.jar
+build: $(DO).owl $(DO).obo $(DO).json # build/robot.jar
 products: | build merged human subsets
 
 # release vars

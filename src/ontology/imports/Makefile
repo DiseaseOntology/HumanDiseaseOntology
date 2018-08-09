@@ -36,8 +36,8 @@ full: $(FULL)
 $(FULL):
 	$(ROBOT) merge --input-iri "$(OBO)$@.owl" \
 	remove --select "owl:deprecated='true'^^xsd:boolean" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -55,9 +55,9 @@ $(FULL):
 chebi:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	remove --entity "owl:Thing" \
+	remove --select complement --select annotation-properties\
+	 --term $(IMP)annotations.txt --trim true \
+	remove --term "owl:Thing" \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -67,9 +67,9 @@ cl:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --upper-term obo:CL_0000000\
 	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --entity GO:0005623 --select "self ancestors" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --term GO:0005623 --select "self ancestors" --trim true \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -79,9 +79,9 @@ foodon:
 	$(ROBOT) extract --input "$(OBO)$@_merged.owl"\
 	 --method mireot --upper-term obo:FOODON_00002403\
 	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --entity obo:FOODON_00002381 --select "self ancestors" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --term obo:FOODON_00002381 --select "self ancestors" \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -89,8 +89,10 @@ foodon:
 .PHONY: geno
 geno:
 	$(ROBOT) filter --input-iri "$(OBO)$@.owl"\
-	 --entity obo:GENO_0000141 --select "self descendants annotations" \
-	remove --entity obo:GENO_0000889 \
+	 --term obo:GENO_0000141 --select "self descendants annotations" \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
+	remove --term obo:GENO_0000889 \
 	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
@@ -99,9 +101,9 @@ hp:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --upper-term HP:0000118\
 	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
-	remove --entity UPHENO:0001002 --entity HP:0000001 \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
+	remove --term UPHENO:0001002 --term HP:0000001 \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -112,8 +114,8 @@ ncbitaxon:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --upper-term NCBITaxon:10239\
 	 --upper-term NCBITaxon:131567 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -122,8 +124,8 @@ ncbitaxon:
 ro:
 	$(ROBOT) extract --input-iri "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.obo"\
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -132,8 +134,8 @@ ro:
 uberon:
 	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt \
+	remove --select complement --select annotation-properties\
+	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

@@ -7,7 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl"/>
+    </owl:Ontology>
     
 
 
@@ -24,23 +26,13 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <obo:IAO_0000115 xml:lang="en">The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
-        <rdfs:label>definition</rdfs:label>
-        <rdfs:label xml:lang="en">definition</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
-        <rdfs:label>textual definition</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">textual definition</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdfs:label xml:lang="en">label</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
     
 
 
@@ -59,17 +51,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <obo:IAO_0000115 xml:lang="en">This food product type includes food products which are derived from or produced by a plant.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">plant food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001046 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <rdfs:label xml:lang="en">seafood product</rdfs:label>
     </owl:Class>
     
 
@@ -78,7 +59,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
-        <rdfs:label xml:lang="en">plant fruit food product</rdfs:label>
     </owl:Class>
     
 
@@ -87,102 +67,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001092">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A food product which is derived from or produced by an animal.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">vertebrate animal food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001105 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001105">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001251"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001274"/>
-        <rdfs:label xml:lang="en">avian egg food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001107 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001107">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
-        <rdfs:label xml:lang="en">bovine dairy food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001109 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001109">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001107"/>
-        <rdfs:label xml:lang="en">caprine dairy food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001150 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001150">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <rdfs:label xml:lang="en">cucurbit fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001151 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001151">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <obo:IAO_0000115 xml:lang="en">A citrus fruit is botanically classified as a type of berry called a hesperidium that has a thick, leathery rind, with numerous oil glands, and a large flesh portion composed of several wedge-shaped sections. Unlike pome fruit, such as the apple, the citrus fruit is derived from a superior ovary, an ovary completely separate from the calyx.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">citrus fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001158 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001158">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <rdfs:label xml:lang="en">pomaceous fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001163 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001163">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001165"/>
-        <rdfs:label xml:lang="en">solanaceous fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001164 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001163"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002141"/>
-        <rdfs:label xml:lang="en">tomato vegetable food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001165 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
-        <rdfs:label xml:lang="en">solanaceous food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001176 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001176">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <rdfs:label xml:lang="en">invertebrate animal food product</rdfs:label>
     </owl:Class>
     
 
@@ -191,274 +75,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001248">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <rdfs:label xml:lang="en">fish food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001251 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001251">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <rdfs:label xml:lang="en">avian food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001256 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001256">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food made from milk.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">dairy food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001257 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001257">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
-        <rdfs:label xml:lang="en">milk or milk based food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001261 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001261">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
-        <obo:IAO_0000115 xml:lang="en">Any plant food product which, typically, is constituted by intact parts from one or more annual plants cultivated as field and garden crops in the open and under glass, and used almost exclusively for food.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">vegetable food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001274 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001274">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A food consisting of a round or oval body laid by the female of many animals, consisting of an ovum surrounded by layers of membranes and an outer casing, which acts to nourish and protect a developing embryo and its nutrient reserves.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">egg food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001275 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001275">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001105"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An egg produced by a female chicken.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">hen egg food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001293 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001293">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001046"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001176"/>
-        <rdfs:label xml:lang="en">shellfish food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001611 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001611">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001158"/>
-        <rdfs:label xml:lang="en">apple food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001615 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001615">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002277"/>
-        <rdfs:label xml:lang="en">apricot food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001623 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002220"/>
-        <rdfs:label xml:lang="en">atlantic salmon food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001684 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001684">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
-        <rdfs:label xml:lang="en">carp food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001717 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001717">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002277"/>
-        <rdfs:label xml:lang="en">cherry food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001750 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001750">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
-        <rdfs:label xml:lang="en">cod food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001771 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001771">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001257"/>
-        <rdfs:label xml:lang="en">cow milk based food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001785 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001785">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001792"/>
-        <rdfs:label xml:lang="en">crab food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001792 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001792">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001046"/>
-        <rdfs:label xml:lang="en">crustacean food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001150"/>
-        <rdfs:label xml:lang="en">melon food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002044 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001046"/>
-        <rdfs:label xml:lang="en">molluscs food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002071 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002071">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001151"/>
-        <rdfs:label xml:lang="en">orange food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002075 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002220"/>
-        <rdfs:label xml:lang="en">pacific salmon food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002095 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002277"/>
-        <rdfs:label xml:lang="en">peach food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001261"/>
-        <rdfs:label xml:lang="en">plant fruit vegetable food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002161 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002161">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002277"/>
-        <rdfs:label xml:lang="en">plum fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002185 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002185">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002075"/>
-        <rdfs:label xml:lang="en">rainbow trout food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002220 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002220">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
-        <rdfs:label xml:lang="en">salmon food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002239 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002239">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001792"/>
-        <rdfs:label xml:lang="en">shrimp food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002244 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002244">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002044"/>
-        <rdfs:label xml:lang="en">snail food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002277 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002277">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
-        <rdfs:label xml:lang="en">stone fruit food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002319 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002319">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001623"/>
-        <rdfs:label xml:lang="en">trout food product</rdfs:label>
     </owl:Class>
     
 
@@ -468,9 +84,33 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002403">
         <rdfs:label xml:lang="en">food material</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002487 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002487">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+        <obo:IAO_0000115 xml:lang="en">A food product that derives from the jujube fruit, an edible oval drupe.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">jujube fruit (food product)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03400361">
+        <obo:IAO_0000115 xml:lang="en">A food product type is a class of food products that is differentiated by its food composition, processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories.</obo:IAO_0000115>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
 

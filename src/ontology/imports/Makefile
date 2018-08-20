@@ -76,7 +76,9 @@ cl:
 
 .PHONY: foodon
 foodon:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	$(ROBOT) merge --input-iri "$(OBO)$@.owl"\
+	 --input-iri "$(OBO)$@_merged.owl" \
+	extract --input-iri "$(OBO)$@.owl"\
 	 --method mireot --upper-term obo:FOODON_00002403\
 	 --lower-terms "$(IMP)$@_terms.txt" \
 	remove --term obo:FOODON_00002381 --select "self ancestors" \

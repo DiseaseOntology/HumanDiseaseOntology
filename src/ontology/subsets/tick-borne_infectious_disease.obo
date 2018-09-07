@@ -1,5 +1,18 @@
 format-version: 1.2
-data-version: doid/2018-07-05/subsets/tick-borne_infectious_disease.owl
+data-version: doid/2018-09-07/subsets/tick-borne_infectious_disease.owl
+subsetdef: DO_AGR_slim ""
+subsetdef: DO_cancer_slim ""
+subsetdef: DO_FlyBase_slim ""
+subsetdef: DO_MGI_slim ""
+subsetdef: DO_rare_slim ""
+subsetdef: GOLD ""
+subsetdef: gram-negative_bacterial_infectious_disease ""
+subsetdef: gram-positive_bacterial_infectious_disease ""
+subsetdef: NCIthesaurus ""
+subsetdef: sexually_transmitted_infectious_disease ""
+subsetdef: tick-borne_infectious_disease ""
+subsetdef: TopNodes_DOcancerslim ""
+subsetdef: zoonotic_infectious_disease ""
 ontology: doid/subsets/tick-borne_infectious_disease
 
 [Term]
@@ -33,6 +46,7 @@ def: "An ehrlichiosis that results in infection located in monocyte or located i
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 synonym: "Ehrlichiosis chafeensis" RELATED []
+xref: GARD:72
 is_a: DOID:10242 ! ehrlichiosis
 
 [Term]
@@ -80,7 +94,7 @@ synonym: "Israeli spotted fever" RELATED []
 id: DOID:0050046
 name: Far Eastern spotted fever
 namespace: disease_ontology
-def: "A spotted fever that has_material_basis_in Rickettsia heilongjiangensis, which is transmitted_by ticks (Haemaphysalis concinna). The infection has_symptom fever, has_symptom eschar, has_symptom maculopapular rash, and has_symptom regional adenopathy." [url:http\://www.cdc.gov/otherspottedfever/index.html, url:www.cdc.gov/eid/content/16/8/pdfs/1306.pdf]
+def: "A spotted fever that has_material_basis_in Rickettsia heilongjiangensis, which is transmitted_by ticks (Haemaphysalis concinna). The infection has_symptom fever, has_symptom eschar, has_symptom maculopapular rash, and has_symptom regional adenopathy." [url:http\://www.cdc.gov/eid/content/16/8/pdfs/1306.pdf, url:http\://www.cdc.gov/otherspottedfever/index.html]
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
@@ -138,6 +152,7 @@ synonym: "Sao Paulo typhus" RELATED []
 synonym: "So Paulo fever" RELATED []
 synonym: "Tick typhus" EXACT []
 synonym: "Tobia fever" RELATED []
+xref: GARD:7585
 
 [Term]
 id: DOID:0050053
@@ -163,6 +178,7 @@ synonym: "Siberian tick-borne encephalitis" EXACT []
 synonym: "Taiga encephalitis" EXACT [MTHICD9_2006:063.0]
 synonym: "west-Siberian encephalitis" EXACT []
 synonym: "Western European tick-borne encephalitis" EXACT [SNOMEDCT_2005_07_31:16901001]
+xref: GARD:5216
 xref: ICD10CM:A84.1
 xref: ICD9CM:063.2
 xref: MESH:D004675
@@ -182,7 +198,7 @@ is_a: DOID:0050175 ! tick-borne encephalitis
 id: DOID:0050180
 name: Colorado tick fever encephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Colorado tick fever virus which is transmitted_by rocky mountain wood tick, Dermacentor andersoni. The infection has_symptom fever, has_symptom headache, has_symptom nausea, has_symptom stiff neck, has_symptom chills, has_symptom hallucinations, has_symptom disorientation, and has_symptom memory loss." [PMID:13894744, url:http\://www.ncbi.nlm.nih.gov/sites/entrez/2838146]
+def: "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Colorado tick fever virus which is transmitted_by rocky mountain wood tick, Dermacentor andersoni. The infection has_symptom fever, has_symptom headache, has_symptom nausea, has_symptom stiff neck, has_symptom chills, has_symptom hallucinations, has_symptom disorientation, and has_symptom memory loss." [url:http\://www.ncbi.nlm.nih.gov/sites/entrez/2838146, url:https\://www.ncbi.nlm.nih.gov/pubmed/13894744]
 subset: tick-borne_infectious_disease
 is_obsolete: true
 
@@ -190,7 +206,7 @@ is_obsolete: true
 id: DOID:0050308
 name: Alkhurma hemorrhagic fever
 namespace: disease_ontology
-def: "A viral infectious disease that is a hemorrhagic fever, has material basis in Alkhurma hemorrhagic fever virus, which is transmitted by Ornithodoros savignyi tick bite, transmitted by ingestion of unpasteurized camel milk, or transmitted by entry via skin wound. The infection has symptom headache, has symptom joint pain, has symptom muscle pain, has symptom vomiting, has symptom thrombocytopenia, and has symptom hemorrhagic fever." [url:http\://en.wikipedia.org/wiki/Alkhurma_virus, url:www.episouth.org/download.php?&id=7266]
+def: "A viral infectious disease that is a hemorrhagic fever, has material basis in Alkhurma hemorrhagic fever virus, which is transmitted by Ornithodoros savignyi tick bite, transmitted by ingestion of unpasteurized camel milk, or transmitted by entry via skin wound. The infection has symptom headache, has symptom joint pain, has symptom muscle pain, has symptom vomiting, has symptom thrombocytopenia, and has symptom hemorrhagic fever." [url:http\://en.wikipedia.org/wiki/Alkhurma_virus, url:http\://www.episouth.org/download.php?&id=7266]
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 is_a: DOID:11320 ! Kyasanur forest disease
@@ -223,6 +239,7 @@ def: "A primary bacterial infectious disease that results in infection located i
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 synonym: "human ehrlichiosis" EXACT []
+xref: GARD:2092
 xref: ICD10CM:A77.4
 xref: ICD10CM:A77.40
 xref: ICD9CM:082.4
@@ -235,14 +252,13 @@ xref: UMLS_CUI:C0085399
 id: DOID:10250
 name: louping ill
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection in sheep and rarely humans, has material basis in Louping ill virus, which is transmitted by sheep tick, Ixodes ricinus. The infection has symptom lethargy, has symptom muscle pains, has symptom fever, and has symptom focal neurological signs." [PMID:15606630, url:http\://www.defra.gov.uk/foodfarm/farmanimal/diseases/vetsurveillance/profiles/documents/sp-loupingill.pdf]
+def: "A viral infectious disease that results in infection in sheep and rarely humans, has material basis in Louping ill virus, which is transmitted by sheep tick, Ixodes ricinus. The infection has symptom lethargy, has symptom muscle pains, has symptom fever, and has symptom focal neurological signs." [url:http\://www.defra.gov.uk/foodfarm/farmanimal/diseases/vetsurveillance/profiles/documents/sp-loupingill.pdf, url:https\://www.ncbi.nlm.nih.gov/pubmed/15606630]
 subset: tick-borne_infectious_disease
 synonym: "Louping ill" EXACT [ICD9CM_2006:063.1]
 xref: ICD10CM:A84.8
 xref: ICD9CM:063.1
 xref: ICD9CM_2006:063.1
 xref: MESH:D008146
-xref: PMID:15606630
 xref: SNOMEDCT_US_2018_03_01:59350003
 xref: UMLS_CUI:C0024025
 
@@ -288,6 +304,7 @@ name: cat-scratch disease
 namespace: disease_ontology
 def: "A bartonellosis that results_in infection located_in lymph node, has_material_basis_in Bartonella henselae or has_material_basis_in Bartonella clarridgeiae, which are transmitted_by scratch or bite of a kitten, or transmitted_by contact of animal's saliva with an eye or through broken skin. The infection has_symptom regional lymphadenopathy, has_symptom headache, has_symptom chills, has_symptom backache, and has_symptom abdominal pain." [url:http\://en.wikipedia.org/wiki/Cat_scratch_disease, url:http\://kidshealth.org/parent/infections/bacterial_viral/cat_scratch.html#]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "benign lymphoreticulosis" EXACT [MTHICD9_2006:078.3]
@@ -312,6 +329,7 @@ name: Kyasanur forest disease
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, has material basis in Kyasanur forest disease virus, which is transmitted by Haemaphysalis spinigera tick bite. The infection has symptom fever, has symptom headache, has symptom stiffness of the neck, has symptom severe muscle pain, has symptom cough, has symptom dehydration, and has symptom bleeding problems." [url:http\://www.cdc.gov/ncidod/dvrd/Spb/mnpages/dispages/kyasanur.htm]
 subset: tick-borne_infectious_disease
+xref: GARD:8257
 xref: ICD10CM:A98.2
 xref: ICD9CM:065.2
 xref: MESH:D007733
@@ -337,6 +355,7 @@ namespace: disease_ontology
 alt_id: DOID:12233
 def: "A primary bacterial infectious disease that results_in infection, has_material_basis_in Borrelia burgdorferi, which is transmitted_by blacklegged tick (Ixodes scapularis) or transmitted_by western blacklegged tick (Ixodes pacificus). The infection has_symptom fever, has_symptom headache, has_symptom fatigue, and has_symptom skin rash called erythema migrans. If left untreated, infection can spread to joints, the heart, and the nervous system." [url:http\://www.cdc.gov/lyme/transmission/index.html]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Bannwarth syndrome" EXACT [SNOMEDCT_2005_07_31:48982009]
@@ -346,6 +365,7 @@ synonym: "lyme neuroborreliosis" EXACT []
 synonym: "neuroborreliosis" EXACT []
 synonym: "Neurological Lyme disease" EXACT [SNOMEDCT_2005_07_31:240672009]
 xref: CSP2005:0368-3340
+xref: GARD:12073
 xref: ICD10CM:A69.2
 xref: ICD10CM:A69.20
 xref: ICD9CM:088.81
@@ -380,6 +400,7 @@ id: DOID:12287
 name: Crimean-Congo hemorrhagic fever
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, has_material_basis_in Crimean-Congo hemorrhagic fever virus, which is transmitted_by Hyalomma ticks. The infection has_symptom headache, has_symptom high fever, has_symptom back pain, has_symptom joint pain, has_symptom stomach pain, has_symptom vomiting, has_symptom red eyes, has_symptom flushed face, has_symptom red throat, has_symptom petechiae (red spots) on the palate, has_symptom jaundice, has_symptom nosebleeds, and has_symptom blood in the feces and urine." [url:http\://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/cchf.htm, url:http\://www.who.int/mediacentre/factsheets/fs208/en/]
+subset: NCIthesaurus
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "CHF Congo virus" EXACT [MTHICD9_2006:065.0]
@@ -401,6 +422,7 @@ name: tick-borne relapsing fever
 namespace: disease_ontology
 def: "A relapsing fever that is characterized by relapsing or recurring episodes of fever, has_material basis_in Borrelia hermsii, has_material basis_in Borrelia parkeri or has_material basis_in Borrelia duttoni, which are transmitted_by soft ticks (Ornithodoros parkeri and Ornithodoros hermsii). The infection has_symptom tachypnea, has_symptom tachycardia, has_symptom hepatosplenomegaly and has_symptom lymphadenopathy." [url:http\://emedicine.medscape.com/article/787000-overview#a0104, url:http\://en.wikipedia.org/wiki/Relapsing_fever]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Relapsing fever, tick-borne" EXACT [ICD9CM_2006:087.1]
@@ -541,6 +563,7 @@ def: "A primary bacterial infectious disease that has material basis in Francise
 subset: gram-negative_bacterial_infectious_disease
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
+xref: GARD:396
 xref: ICD9CM:021.8
 xref: SNOMEDCT_US_2018_03_01:111834003
 xref: SNOMEDCT_US_2018_03_01:186298002
@@ -598,12 +621,14 @@ id: DOID:9643
 name: babesiosis
 namespace: disease_ontology
 def: "A parasitic protozoa infectious disease that has_symptom mild fevers and has_symptom anemia described as malaria-like symptoms caused by a protozoan of genus Babesia, which reproduce in red blood cells and cause hemolytic anemia. They are transmitted by Ixodid ticks or by blood transfusion. Babesiosis is a zoonotic disease." [url:http\://en.wikipedia.org/wiki/Babesiosis]
+subset: NCIthesaurus
 subset: tick-borne_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Babesiasis" EXACT [MTHICD9_2006:088.82]
 synonym: "Infection by babesia" EXACT [SNOMEDCT_2005_07_31:276204002]
 synonym: "piroplasmosis" EXACT [CSP2005:2214-4957]
 xref: CSP2005:2214-4957
+xref: GARD:5878
 xref: ICD10CM:B60.0
 xref: ICD9CM:088.82
 xref: MESH:D001404
@@ -620,6 +645,7 @@ name: Omsk hemorrhagic fever
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, has_material_basis_in Omsk hemorrhagic fever virus, which is transmitted_by Dermacentor and transmitted_by Ixodes species of ticks. The infection has_symptom fever, has_symptom chills, has_symptom headache, has_symptom pain in lower and upper extremities, has_symptom stiff neck, has_symptom papulovesicular rash on the soft palate, has_symptom cervical lymphadenopathy, has_symptom conjunctival suffusion, has_symptom blood in the urine, and has_symptom blood in the sputum." [url:http\://www.cdc.gov/ncidod/dvrd/Spb/mnpages/dispages/omsk.htm, url:http\://www.phac-aspc.gc.ca/msds-ftss/msds113e-eng.php, url:http\://www.springerlink.com/content/r2120r64x8x4511q/fulltext.pdf]
 subset: tick-borne_infectious_disease
+xref: GARD:8254
 xref: ICD10CM:A98.1
 xref: ICD9CM:065.1
 xref: MESH:D006481

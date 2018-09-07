@@ -1,5 +1,18 @@
 format-version: 1.2
-data-version: doid/2018-07-05/subsets/gram-positive_bacterial_infectious_disease.owl
+data-version: doid/2018-09-07/subsets/gram-positive_bacterial_infectious_disease.owl
+subsetdef: DO_AGR_slim ""
+subsetdef: DO_cancer_slim ""
+subsetdef: DO_FlyBase_slim ""
+subsetdef: DO_MGI_slim ""
+subsetdef: DO_rare_slim ""
+subsetdef: GOLD ""
+subsetdef: gram-negative_bacterial_infectious_disease ""
+subsetdef: gram-positive_bacterial_infectious_disease ""
+subsetdef: NCIthesaurus ""
+subsetdef: sexually_transmitted_infectious_disease ""
+subsetdef: tick-borne_infectious_disease ""
+subsetdef: TopNodes_DOcancerslim ""
+subsetdef: zoonotic_infectious_disease ""
 ontology: doid/subsets/gram-positive_bacterial_infectious_disease
 
 [Term]
@@ -83,7 +96,7 @@ is_obsolete: true
 id: DOID:0050151
 name: tracheobronchial tuberculosis
 namespace: disease_ontology
-def: "A pulmonary tuberculosis involving inflammation of trachea and bronchi. The symptoms include dry cough followed by dyspnea, localized wheezing, hemoptysis, hoarseness, anorexia, weight loss, chest pain and fever." [PMID:9122509]
+def: "A pulmonary tuberculosis involving inflammation of trachea and bronchi. The symptoms include dry cough followed by dyspnea, localized wheezing, hemoptysis, hoarseness, anorexia, weight loss, chest pain and fever." [url:https\://www.ncbi.nlm.nih.gov/pubmed/9122509]
 subset: gram-positive_bacterial_infectious_disease
 is_obsolete: true
 
@@ -91,7 +104,7 @@ is_obsolete: true
 id: DOID:0050160
 name: inhalation anthrax
 namespace: disease_ontology
-def: "An anthrax disease that results in infection located in lung lymph nodes brought on by breathing in the spores of the bacteria Bacillus anthracis. The first symptoms of inhalation anthrax are like cold or flu symptoms and can include a sore throat, mild fever and muscle aches. Later symptoms include cough, chest discomfort, shortness of breath, tiredness and muscle aches." [PMID:11988441, url:http\://chestjournal.chestpubs.org/content/116/5/1369.full, url:http\://www.bt.cdc.gov/agent/anthrax/needtoknow.asp, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000641.htm]
+def: "An anthrax disease that results in infection located in lung lymph nodes brought on by breathing in the spores of the bacteria Bacillus anthracis. The first symptoms of inhalation anthrax are like cold or flu symptoms and can include a sore throat, mild fever and muscle aches. Later symptoms include cough, chest discomfort, shortness of breath, tiredness and muscle aches." [url:http\://chestjournal.chestpubs.org/content/116/5/1369.full, url:http\://www.bt.cdc.gov/agent/anthrax/needtoknow.asp, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000641.htm, url:https\://www.ncbi.nlm.nih.gov/pubmed/11988441]
 subset: gram-positive_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "pulmonary anthrax" EXACT []
@@ -134,7 +147,7 @@ is_obsolete: true
 id: DOID:0050216
 name: Bacillus cereus gastroenteritis
 namespace: disease_ontology
-def: "A primary Bacillaceae infectious disease that is caused by ingestion of food contaminated with Bacillus cereus, which produces enterotoxins in the intestine. The symptoms include vomiting, abdominal cramps, fever and diarrhea." [PMID:8501338, url:http\://www.jstor.org/stable/pdfplus/30112755.pdf]
+def: "A primary Bacillaceae infectious disease that is caused by ingestion of food contaminated with Bacillus cereus, which produces enterotoxins in the intestine. The symptoms include vomiting, abdominal cramps, fever and diarrhea." [url:http\://www.jstor.org/stable/pdfplus/30112755.pdf, url:https\://www.ncbi.nlm.nih.gov/pubmed/8501338]
 subset: gram-positive_bacterial_infectious_disease
 is_obsolete: true
 
@@ -184,7 +197,7 @@ is_obsolete: true
 id: DOID:0050342
 name: commensal Actinomycetales infectious disease
 namespace: disease_ontology
-def: "A commensal bacterial infectious disease that results_in infection, has_material_basis_in Actinomycetales bacteria, which are part of the normal human flora." [url:www.sovegastro.com/pdf/ACTINOMICOSIS%20ABDOMINAL.pdf]
+def: "A commensal bacterial infectious disease that results_in infection, has_material_basis_in Actinomycetales bacteria, which are part of the normal human flora." [url:http\://www.sovegastro.com/pdf/ACTINOMICOSIS%20ABDOMINAL.pdf]
 subset: gram-positive_bacterial_infectious_disease
 is_obsolete: true
 
@@ -379,7 +392,9 @@ def: "A primary bacterial infectious disease that results_in infection located_i
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 xref: EFO:0001054
+xref: GARD:6886
 xref: ICD10CM:A30
 xref: ICD10CM:A30.9
 xref: ICD9CM:030
@@ -427,7 +442,7 @@ is_obsolete: true
 id: DOID:10508
 name: Bacillus anthracis pneumonia
 namespace: disease_ontology
-def: "A primary Bacillaceae infectious disease involving Bacillus anthracis infection resulting in pulmonary infiltrates and necrosis." [PMID:8460135, url:http\://www.cdc.gov/ncidod/EID/vol7no6/jernigan.htm]
+def: "A primary Bacillaceae infectious disease involving Bacillus anthracis infection resulting in pulmonary infiltrates and necrosis." [url:http\://www.cdc.gov/ncidod/EID/vol7no6/jernigan.htm, url:https\://www.ncbi.nlm.nih.gov/pubmed/8460135]
 subset: gram-positive_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
 synonym: "Anthrax pneumonia (disorder)" EXACT [SNOMEDCT_2005_07_31:195902009]
@@ -465,8 +480,9 @@ id: DOID:106
 name: pleural tuberculosis
 namespace: disease_ontology
 alt_id: DOID:12624
-def: "An extrapulmonary tuberculosis that results_in lymphocyte-predominant exudative pleural effusion, located_in pleura. This results from an allergic response to tuberculoprotein causing the permeabiltity of the pleural vasculature to alter leading to a sub-pleural caseous focus rupture into the pleural sac." [PMID:17426219]
+def: "An extrapulmonary tuberculosis that results_in lymphocyte-predominant exudative pleural effusion, located_in pleura. This results from an allergic response to tuberculoprotein causing the permeabiltity of the pleural vasculature to alter leading to a sub-pleural caseous focus rupture into the pleural sac." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17426219]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Pearly disease" EXACT [SNOMEDCT_2005_07_31:170713008]
 synonym: "Tuberculosis of pleura" EXACT [SNOMEDCT_2005_07_31:186183008]
 synonym: "Tuberculous pleurisy" EXACT [ICD9CM_2006:012.0]
@@ -479,7 +495,6 @@ xref: ICD9CM:012.00
 xref: ICD9CM_2006:012.0
 xref: MESH:D014396
 xref: NCI:C26898
-xref: PMID:17426219
 xref: SNOMEDCT_US_2018_03_01:170713008
 xref: SNOMEDCT_US_2018_03_01:171699006
 xref: SNOMEDCT_US_2018_03_01:186172004
@@ -541,6 +556,7 @@ id: DOID:11330
 name: erysipelas
 namespace: disease_ontology
 subset: gram-positive_bacterial_infectious_disease
+xref: GARD:6370
 xref: ICD10CM:A46
 xref: ICD9CM:035
 xref: MESH:D004886
@@ -555,9 +571,11 @@ name: tetanus
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results in prolonged contraction of skeletal muscle fibers, has material basis in Clostridium tetani, which produces tetanospasmin, a neurotoxin, which is carried to the brain and spinal cord, where it binds irreversibly to receptors inhibiting neurotransmission. Damaged upper motor neurons cannot control reflex responses to afferent sensory stimuli." [url:http\://emedicine.medscape.com/article/786414-overview#a0104, url:http\://en.wikipedia.org/wiki/Tetanus]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "clostridial tetanus" EXACT [CSP2005:0368-2622]
 synonym: "Infection due to Clostridium tetani" EXACT [SNOMEDCT_2005_07_31:276202003]
 xref: CSP2005:0368-2622
+xref: GARD:5144
 xref: ICD10CM:A35
 xref: ICD9CM:037
 xref: MESH:D013742
@@ -586,6 +604,7 @@ alt_id: DOID:4132
 def: "A primary bacterial infectious disease that is characterized by sore throat, low fever, and an adherent membrane (a pseudomembrane) on the tonsils, pharynx, and/or nasal cavity. A milder form of diphtheria can be restricted to the skin. It is caused by Corynebacterium diphtheriae, an aerobic Gram-positive bacterium. Diphtheria toxin spreads through the bloodstream and can lead to potentially life-threatening complications that affect other organs of the body, such as the heart and kidneys." [url:http\://en.wikipedia.org/wiki/Diphtheria]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "corynebacterium infection" EXACT []
+xref: GARD:1875
 xref: MESH:D003354
 xref: SNOMEDCT_US_2018_03_01:397434007
 xref: UMLS_CUI:C0010153
@@ -607,6 +626,7 @@ is_obsolete: true
 id: DOID:11572
 name: Listeria meningitis
 namespace: disease_ontology
+def: "A bacterial meningitis that has_material_basis_in Listeria monocytogenes infection." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21877182]
 subset: gram-positive_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
 xref: MESH:D008584
@@ -620,6 +640,7 @@ name: listeriosis
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection, has_material_basis_in Listeria monocytogenes, which is transmitted_by ingestion of contaminated food or raw milk or transmitted_by congenital method. Ingestion of Listeria by pregnant women has_symptom nausea, has_symptom vomiting, has_symptom diarrhea, has_symptom fever, has_symptom malaise, has_symptom back pain, and has_symptom headache. Maternal infection with Listeria can result in chorioamnionitis, premature labor, spontaneous abortion, or stillbirth." [url:http\://emedicine.medscape.com/article/965841-overview#a0104, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001380.htm]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "Infection by Listeria monocytogenes" EXACT [MTHICD9_2006:027.0]
 synonym: "Listeria infection" EXACT [CSP2005:0368-3200]
@@ -706,11 +727,13 @@ name: botulism
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F) located in neuromuscular junction resulting in descending muscle paralysis, has material basis in Clostridium botulinum A, has material basis in Clostridium botulinum B, has material basis in Clostridium botulinum E and has material basis in Clostridium botulinum F." [url:http\://en.wikipedia.org/wiki/Botulism, url:https\://en.wikipedia.org/wiki/Botulism, url:https\://www.cdc.gov/botulism/index.html]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Botulism poisoning" EXACT []
 synonym: "Food poisoning due to Clostridium botulinum" EXACT [MTHICD9_2006:005.1]
 synonym: "Foodborne botulism" EXACT [SNOMEDCT_2005_07_31:398523009]
 synonym: "Infection due to clostridium botulinum" EXACT [SNOMEDCT_2005_07_31:398565003]
 synonym: "Intoxication with Clostridium botulinum toxin" EXACT [SNOMEDCT_2005_07_31:414531002]
+xref: GARD:943
 xref: ICD10CM:A05.1
 xref: MESH:D001906
 xref: MTHICD9_2006:005.1
@@ -729,7 +752,7 @@ xref: UMLS_CUI:C0006057
 id: DOID:12017
 name: group B streptococcal pneumonia
 namespace: disease_ontology
-def: "A commensal streptococcal infectious disease that is caused by group B streptococci (Streptococcus agalactiae) usually infecting neonates and the elderly." [PMID:11462195, url:http\://en.wikipedia.org/wiki/Streptococcus#Group_B]
+def: "A commensal streptococcal infectious disease that is caused by group B streptococci (Streptococcus agalactiae) usually infecting neonates and the elderly." [url:http\://en.wikipedia.org/wiki/Streptococcus#Group_B, url:https\://www.ncbi.nlm.nih.gov/pubmed/11462195]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "Group B" EXACT [ICD9CM_2006:482.32]
 synonym: "Group B streptococcal pneumonia (disorder)" EXACT [SNOMEDCT_2005_07_31:195886008]
@@ -922,6 +945,7 @@ name: tetanus neonatorum
 namespace: disease_ontology
 def: "A tetanus that occurs in newborn babies when the birth cord stump gets dirty through cutting it with an unclean blade or applying substances containing bacteria to it. The infection has symptom stiff body, has symptom muscle spasms, has symptom difficulty in breathing, and has symptom exhaustion." [url:http\://www.doh.gov.za/programmes/polio/nnt.pdf]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "neonatal tetanus" EXACT []
 synonym: "Tetanus neonatorum" EXACT [SNOMEDCT_2005_07_31:43424001]
 xref: ICD10CM:A33
@@ -1007,6 +1031,7 @@ name: toxic shock syndrome
 namespace: disease_ontology
 def: "A commensal bacterial infectious disease that results_in infection, has_material_basis_in Streptococcus pyogenes or has_material_basis_in Staphylococcus aureus , which produce toxins that are absorbed systemically and produce the systemic manifestations. The infection has_symptom fever, has_symptom rash, has_symptom hypotension, has_symptom multiorgan failure, has_symptom desquamation, has_symptom vomiting, has_symptom diarrhea, has_symptom headache, and has_symptom nonfocal neurologic abnormalities." [url:http\://emedicine.medscape.com/article/169177-overview, url:http\://en.wikipedia.org/wiki/Toxic_shock_syndrome]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "toxic shock" EXACT []
 synonym: "Toxic Shock syndrome" EXACT [NCI2004_11_17:C35498]
 synonym: "Toxic shock syndrome" EXACT []
@@ -1034,9 +1059,12 @@ name: rheumatic fever
 namespace: disease_ontology
 alt_id: DOID:1006
 alt_id: DOID:1007
+def: "A connective tissue disease that develops from an antecedent Group A Streptococcal pharyngeal infection and has_symptom carditis, has_symptom polyarthritis, has_symptom chorea, has_symptom erythema marginatum, has_symptom subcutaneous nodules, has_symptom arthralgia, has_symptom prolonged PR interval, and/or has_symptom fever." [url:https\://en.wikipedia.org/wiki/Rheumatic_fever, url:https\://medlineplus.gov/ency/article/003940.htm]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "ACUTE RHEUMATIC FEVER" EXACT [ICD9CM_2006:390-392.99]
 synonym: "RhF - Rheumatic fever" EXACT [SNOMEDCT_2005_07_31:274095001]
+xref: GARD:5699
 xref: ICD10CM:I00
 xref: ICD10CM:I00-I02
 xref: ICD9CM:390
@@ -1076,6 +1104,7 @@ synonym: "tuberculous abscess of brain" EXACT []
 xref: ICD9CM:013.2
 xref: ICD9CM:013.20
 xref: MESH:D016862
+xref: MESH:D020306
 xref: SNOMEDCT_US_2018_03_01:40769007
 xref: SNOMEDCT_US_2018_03_01:416265003
 xref: UMLS_CUI:C0085388
@@ -1152,6 +1181,7 @@ namespace: disease_ontology
 def: "An opportunistic bacterial infectious disease that results_in disseminated infection in immunocompromised hosts, has_material_basis_in Nocardia asteroides. The infection has_symptom pneumonia, has_symptom cellulitis, has_symptom lesions in the brain or meninges, and has_symptom ascending regional lymphadenopathy." [url:http\://emedicine.medscape.com/article/224123-clinical, url:http\://en.wikipedia.org/wiki/Nocardiosis]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "Nocardia infectious disease" EXACT []
+xref: GARD:7210
 xref: ICD10CM:A43
 xref: ICD10CM:A43.9
 xref: MESH:D009617
@@ -1213,11 +1243,13 @@ name: Mycobacterium avium complex disease
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection, has_material_basis_in Mycobacterium avium complex (MAC), which is transmitted_by inhalation or transmitted_by ingestion of via the respiratory or gastrointestinal tract respectively. The bacteria cause disseminated infection in HIV infected people, while pulmonary disease in immunocompetent persons." [url:http\://hivinsite.ucsf.edu/InSite?page=md-agl-mac, url:http\://www.cdc.gov/ncidod/dbmd/diseaseinfo/mycobacteriumavium_t.htm]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Infection due to Mycobacterium intracellulare" EXACT []
 synonym: "MAC disease" EXACT []
 synonym: "Mycobacterium avium Complex" EXACT [CSP2005:0322-0521]
 synonym: "Mycobacterium Avium Infection" EXACT [NCI2004_11_17:C36197]
 xref: CSP2005:0322-0521
+xref: GARD:7123
 xref: MESH:D015270
 xref: NCI2004_11_17:C36197
 xref: NCI:C36197
@@ -1272,6 +1304,7 @@ name: pulmonary tuberculosis
 namespace: disease_ontology
 def: "A tuberculosis that is a contagious disease located_in lungs. The infection has_symptom fever, has_symptom cough, has_symptom difficulty in breathing, has_symptom inflammatory infiltrations, has_symptom formation of tubercles, has_symptom caseation, has_symptom pleural effusion, and has_symptom fibrosis." [url:http\://www.cdc.gov/tb/publications/factsheets/general/tb.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tuberculosis]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 xref: ICD10CM:A15
 xref: ICD10CM:A15.0
 xref: ICD9CM:011
@@ -1291,13 +1324,12 @@ is_a: DOID:399 ! tuberculosis
 id: DOID:3047
 name: Wissler's syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by four typical symptoms: polymorphous exanthemas, recurrent high fever, leucocytosis and arthralgia." [PMID:8150635, url:http\://en.wikipedia.org/wiki/Wissler%27s_syndrome]
+def: "A syndrome that is characterized by four typical symptoms: polymorphous exanthemas, recurrent high fever, leucocytosis and arthralgia." [url:http\://en.wikipedia.org/wiki/Wissler%27s_syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/8150635]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "Wissler syndrome" EXACT []
 synonym: "Wissler's subsepsis allergica" EXACT []
 synonym: "Wissler-Fanconi syndrome" EXACT [SNOMEDCT_2005_07_31:68190001]
 xref: MESH:D014924
-xref: PMID:8150635
 xref: SNOMEDCT_US_2018_03_01:68190001
 xref: UMLS_CUI:C0043195
 
@@ -1338,8 +1370,9 @@ alt_id: DOID:12691
 alt_id: DOID:415
 alt_id: DOID:9901
 alt_id: DOID:9902
-def: "A primary bacterial infectious disease that is located_in lungs, located_in lymph nodes, located_in pericardium, located_in brain, located_in pleura or located_in gastrointestinal tract, has_material_basis_in Mycobacterium tuberculosis, which is transmitted_by droplets released into the air when an infected person coughs or sneezes." [url:http\://www.merckmanuals.com/home/sec17/ch193/ch193a.html, url:www.uphs.upenn.edu/bugdrug/antibiotic_manual/atstbdx99.pdf]
+def: "A primary bacterial infectious disease that is located_in lungs, located_in lymph nodes, located_in pericardium, located_in brain, located_in pleura or located_in gastrointestinal tract, has_material_basis_in Mycobacterium tuberculosis, which is transmitted_by droplets released into the air when an infected person coughs or sneezes." [url:http\://www.merckmanuals.com/home/sec17/ch193/ch193a.html, url:http\://www.uphs.upenn.edu/bugdrug/antibiotic_manual/atstbdx99.pdf]
 subset: gram-positive_bacterial_infectious_disease
+xref: GARD:7827
 xref: MESH:D014375
 xref: SNOMEDCT_US_2018_03_01:15202009
 xref: UMLS_CUI:C0041295
@@ -1350,6 +1383,7 @@ name: multidrug-resistant tuberculosis
 namespace: disease_ontology
 def: "A tuberculosis that is resistant to isoniazid and rifampicin, the two most powerful first-line anti-TB drugs." [url:http\://en.wikipedia.org/wiki/Multidrug-resistant_tuberculosis]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 xref: MESH:D018088
 xref: NCI:C128415
 xref: SNOMEDCT_US_2018_03_01:423092005
@@ -1360,11 +1394,10 @@ is_a: DOID:399 ! tuberculosis
 id: DOID:402
 name: oral tuberculosis
 namespace: disease_ontology
-def: "A gastrointestinal tuberculosis that involves formation of painful ulcerative mucosal lesions located in tongue, located in palate, located in maxilla or located in mandible." [PMID:16900894]
+def: "A gastrointestinal tuberculosis that involves formation of painful ulcerative mucosal lesions located in tongue, located in palate, located in maxilla or located in mandible." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16900894]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "Oral tuberculosis" EXACT [SNOMEDCT_2005_07_31:235067001]
 xref: MESH:D014393
-xref: PMID:16900894
 xref: SNOMEDCT_US_2018_03_01:235067001
 xref: UMLS_CUI:C0041323
 is_a: DOID:404 ! gastrointestinal tuberculosis
@@ -1374,7 +1407,7 @@ id: DOID:404
 name: gastrointestinal tuberculosis
 namespace: disease_ontology
 alt_id: DOID:9802
-def: "An abdominal tuberculosis that results_in infection located_in gastrointestinal tract. The infection has_symptom abdominal pain, has_symptom weight loss, has_symptom fever, has_symptom anorexia, has_symptom change in bowel habits, has_symptom nausea, and has_symptom vomiting." [PMID:12864956, url:http\://emedicine.medscape.com/article/376015-overview, url:http\://smj.sma.org.sg/5006/5006pe1.pdf]
+def: "An abdominal tuberculosis that results_in infection located_in gastrointestinal tract. The infection has_symptom abdominal pain, has_symptom weight loss, has_symptom fever, has_symptom anorexia, has_symptom change in bowel habits, has_symptom nausea, and has_symptom vomiting." [url:http\://emedicine.medscape.com/article/376015-overview, url:http\://smj.sma.org.sg/5006/5006pe1.pdf, url:https\://www.ncbi.nlm.nih.gov/pubmed/12864956]
 subset: gram-positive_bacterial_infectious_disease
 synonym: "Tuberculosis of gastrointestinal tract" EXACT []
 synonym: "Tuberculosis of intestines, peritoneum and mesenteric glands" EXACT [SNOMEDCT_2005_07_31:186225008]
@@ -1382,7 +1415,6 @@ synonym: "tuberculosis of intestines, peritoneum and mesenteric glands" EXACT []
 synonym: "Tuberculosis of intestines, peritoneum, and mesenteric glands" EXACT [ICD9CM_2006:014]
 xref: ICD9CM_2006:014
 xref: MESH:D014385
-xref: PMID:12864956
 xref: SNOMEDCT_US_2018_03_01:154286002
 xref: SNOMEDCT_US_2018_03_01:186228005
 xref: SNOMEDCT_US_2018_03_01:240376003
@@ -1461,6 +1493,7 @@ id: DOID:4562
 name: subacute bacterial endocarditis
 namespace: disease_ontology
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Endocarditis lenta" EXACT [SNOMEDCT_2005_07_31:50194006]
 synonym: "SBE - Subacute bacterial endocarditis" EXACT [SNOMEDCT_2005_07_31:194923008]
 synonym: "Subacute bacterial endocarditis" EXACT []
@@ -1481,6 +1514,7 @@ namespace: disease_ontology
 alt_id: DOID:4888
 def: "An extrapulmonary tuberculosis that is located_in lymph node, and has_symptom lymphadenopathy, has_symptom fever, has_symptom weight loss, has_symptom fatigue, has_symptom night sweats and has_symptom cough." [url:http\://www.pneumonologia.gr/articlefiles/20070307_EXTRAPULMONARY_tbc.pdf]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "king's evil" EXACT []
 synonym: "Lymph Node Tuberculosis" EXACT [NCI2004_11_17:C26896]
 synonym: "scrofula" EXACT []
@@ -1574,6 +1608,7 @@ namespace: disease_ontology
 def: "An anthrax disease that results_in infection located_in skin, has_material_basis_in Bacillus anthracis, which is transmitted_by contact with infected animals or animal products. The infection has_symptom skin lesion that eventually forms an ulcer with a black center." [url:http\://emedicine.medscape.com/article/212127-overview#a0104, url:http\://en.wikipedia.org/wiki/Cutaneous_anthrax#Cutaneous]
 subset: gram-positive_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
+xref: GARD:8158
 xref: ICD10CM:A22.0
 xref: ICD9CM:022.0
 xref: MESH:C531621
@@ -1587,7 +1622,9 @@ name: anthrax disease
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection located_in skin, located_in lung lymph nodes or located_in gastrointestinal tract, has_material_basis_in Bacillus anthracis, transmitted_by contact with infected animals or animal products, transmitted_by airborne spores or transmitted_by ingestion of undercooked meat from infected animals and has_symptom skin ulcer, has_symptom nausea, has_symptom poor appetite, has_symptom bloody diarrhea, has_symptom fever or has_symptom shortness of breath." [url:http\://www.bt.cdc.gov/agent/anthrax/needtoknow.asp]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: zoonotic_infectious_disease
+xref: GARD:8157
 xref: ICD10CM:A22
 xref: ICD10CM:A22.9
 xref: ICD9CM:022
@@ -1642,8 +1679,10 @@ id: DOID:8476
 name: Whipple disease
 namespace: disease_ontology
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "intestinal lipodystrophy" EXACT [MTHICD9_2006:040.2]
 synonym: "Whipple's disease" EXACT []
+xref: GARD:7889
 xref: ICD10CM:K90.81
 xref: ICD9CM:040.2
 xref: MESH:D008061
@@ -1660,6 +1699,7 @@ alt_id: DOID:0050000
 alt_id: DOID:13079
 def: "A commensal bacterial infectious disease that results in infection, which is characterized by contiguous spread, suppurative and granulomatous inflammation, and formation of multiple abscesses and sinus tracts that may discharge sulfur granules, has material basis in Actinomyces israelii, has material basis in Actinomyces gerencseriae, has material basis in Actinomyces naeslundii, has material basis in Actinomyces odontolyticus, has material basis in Actinomyces viscosus, has material basis in Actinomyces meyeri, has material basis in Propionibacterium propionicum, which require a break in the integrity of the mucous membranes and the presence of devitalized tissue to invade deeper body structures." [url:http\://accessmedicine.com/resourceTOC.aspx?resourceID=4, url:http\://emedicine.medscape.com/article/211587-overview, url:http\://en.wikipedia.org/wiki/Actinomycosis]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "actinomycetoma" RELATED []
 synonym: "actinomycotic infection" EXACT []
 synonym: "Actinomycotic madura foot" EXACT [SNOMEDCT_2005_07_31:82684004]
@@ -1667,6 +1707,7 @@ synonym: "Actinomycotic mycetema" EXACT [SNOMEDCT_2005_07_31:187089001]
 synonym: "Actinomycotic mycetoma of foot" EXACT [SNOMEDCT_2005_07_31:186397005]
 synonym: "boil" RELATED []
 synonym: "Madura foot due to Actinomadura" EXACT [SNOMEDCT_2005_07_31:37431000]
+xref: GARD:5728
 xref: ICD10CM:A42
 xref: ICD10CM:A42.9
 xref: ICD9CM:039
@@ -1690,6 +1731,7 @@ namespace: disease_ontology
 alt_id: DOID:14025
 alt_id: DOID:14036
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "active rheumatic fever with myocarditis" EXACT []
 synonym: "acute rheumatic carditis" EXACT []
 synonym: "acute Rheumatic Myocarditis" EXACT [NCI2004_11_17:C35202]
@@ -1738,6 +1780,7 @@ name: impetigo
 namespace: disease_ontology
 def: "A pyoderma consisting of three forms of skin lesions having either a thick, adherent, recurrent, dirty yellow crust with an erythematous margin (common or superficial impetigo) or lessions which are superficial, thin-walled, and bullous as found in bullous impetigo. The lesions in bullous (staphylococcal) impetigo, which are always caused by S aureus, are superficial, thin-walled, and bullous." [url:http\://gsbs.utmb.edu/microbook/ch098.htm]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 xref: ICD10CM:L01
 xref: ICD10CM:L01.0
 xref: ICD10CM:L01.00
@@ -1765,7 +1808,9 @@ id: DOID:876
 name: pyomyositis
 namespace: disease_ontology
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Tropical pyomyositis" EXACT [ICD9CM_2006:040.81]
+xref: GARD:4614
 xref: ICD10CM:M60.0
 xref: ICD9CM:040.81
 xref: ICD9CM_2006:040.81
@@ -1806,6 +1851,7 @@ name: Ritter's disease
 namespace: disease_ontology
 def: "A commensal bacterial infectious disease that is characterized by widespread erythema, peeling, and necrosis of the skin, that is caused by a toxin produced by a bacterium of the genus Staphylococcus (S. aureus). The infection has_symptoms redness of skin, has_symptom fluid-filled blister formation, has_symptom fever and has_symptom irritability." [url:http\://en.wikipedia.org/wiki/Ritter%27s_disease, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=staphylococcal+scalded+skin]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Dermatitis exfoliativa neonatorum" EXACT [MTHICD9_2006:695.81]
 synonym: "Pemphigus neonatorum" EXACT []
 synonym: "Ritter disease" EXACT []
@@ -1859,6 +1905,7 @@ name: lymphangitis
 namespace: disease_ontology
 def: "A lymphatic system disease that is characterized by inflammation of the lymphatic channels which occurs as a result of infection at a site distal to the channel. It is caused by Streptococcus pyogenes (Group A strep) or Staphylococcus aureus. Lymphangitis is also sometimes called blood poisoning." [url:http\://en.wikipedia.org/wiki/Lymphangitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Lymphangitis]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 xref: ICD10CM:I89.1
 xref: ICD9CM:457.2
 xref: MESH:D008205
@@ -1894,6 +1941,7 @@ namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection located_in intestine caused by eating food contaminated with enterotoxins produced by bacteria, has_material_basis_in Staphylococcus aureus. The infection has_symptom diarrhea, has_symptom vomiting, has_symptom nausea, has_symptom cramps, and has_symptom weakness." [url:http\://www.fda.gov/Food/FoodSafety/FoodborneIllness/FoodborneIllnessFoodbornePathogensNaturalToxins/BadBugBook/ucm070015.htm, url:http\://www.in.gov/isdh/22420.htm]
 subset: GOLD
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Staphylococcal food poisoning" EXACT [ICD9CM_2006:005.0]
 synonym: "Staphylococcal toxaemia due to food" EXACT [SNOMEDCT_2005_07_31:84622004]
 synonym: "staphyloenterotoxicosis" EXACT []
@@ -1910,6 +1958,8 @@ id: DOID:9602
 name: necrotizing fasciitis
 namespace: disease_ontology
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
+xref: GARD:6454
 xref: ICD10CM:M72.6
 xref: ICD9CM:728.86
 xref: MESH:D019115
@@ -1935,6 +1985,7 @@ name: renal tuberculosis
 namespace: disease_ontology
 def: "An urogenital tuberculosis that results_in formation of granulomas located_in kidney." [url:http\://emedicine.medscape.com/article/450651-overview]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "Tuberculosis of kidney" EXACT [ICD9CM_2006:016.0]
 xref: ICD9CM:016.0
 xref: ICD9CM:016.00
@@ -2002,20 +2053,13 @@ subset: gram-positive_bacterial_infectious_disease
 is_obsolete: true
 
 [Term]
-id: DOID:9814
-name: rheumatic heart disease
-namespace: disease_ontology
-subset: gram-positive_bacterial_infectious_disease
-synonym: "Rheumatic carditis" EXACT [SNOMEDCT_2005_07_31:201793007]
-is_obsolete: true
-
-[Term]
 id: DOID:9861
 name: miliary tuberculosis
 namespace: disease_ontology
 alt_id: DOID:9862
 def: "An extrapulmonary tuberculosis that results in formation of tiny lesions in all the organs." [url:http\://en.wikipedia.org/wiki/Disseminated_tuberculosis]
 subset: gram-positive_bacterial_infectious_disease
+subset: NCIthesaurus
 synonym: "acute miliary tuberculosis" EXACT [ICD9CM_2006:018.0]
 synonym: "Disseminated tuberculosis" EXACT [SNOMEDCT_2005_07_31:182159002]
 synonym: "generalized tuberculosis" EXACT []

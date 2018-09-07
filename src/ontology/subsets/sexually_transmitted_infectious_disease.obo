@@ -1,5 +1,18 @@
 format-version: 1.2
-data-version: doid/2018-07-05/subsets/sexually_transmitted_infectious_disease.owl
+data-version: doid/2018-09-07/subsets/sexually_transmitted_infectious_disease.owl
+subsetdef: DO_AGR_slim ""
+subsetdef: DO_cancer_slim ""
+subsetdef: DO_FlyBase_slim ""
+subsetdef: DO_MGI_slim ""
+subsetdef: DO_rare_slim ""
+subsetdef: GOLD ""
+subsetdef: gram-negative_bacterial_infectious_disease ""
+subsetdef: gram-positive_bacterial_infectious_disease ""
+subsetdef: NCIthesaurus ""
+subsetdef: sexually_transmitted_infectious_disease ""
+subsetdef: tick-borne_infectious_disease ""
+subsetdef: TopNodes_DOcancerslim ""
+subsetdef: zoonotic_infectious_disease ""
 ontology: doid/subsets/sexually_transmitted_infectious_disease
 
 [Term]
@@ -50,9 +63,11 @@ name: tabes dorsalis
 namespace: disease_ontology
 def: "A tertiary neurosyphilis that results in slow degeneration of the nerve cells and nerve fibers that carry sensory information to the brain. The infection has symptom intense, stabbing pain in the back and legs that recurs irregularly, has symptom gait ataxia, has symptom hyperesthesia, has symptom paresthesia, has symptom loss of bladder sensation leading to urine retention, has symptom erectile dysfunction." [url:http\://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh, url:http\://www.ninds.nih.gov/disorders/tabes_dorsalis/tabes_dorsalis.htm]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "Posterior spinal sclerosis" EXACT [MTHICD9_2006:094.0]
 synonym: "Tabes dorsalis - neurosyphilis" EXACT [SNOMEDCT_2005_07_31:186885003]
+xref: GARD:8730
 xref: ICD10CM:A52.11
 xref: ICD9CM:094.0
 xref: MESH:D013606
@@ -96,8 +111,10 @@ is_obsolete: true
 id: DOID:10073
 name: syphilitic meningitis
 namespace: disease_ontology
+def: "A bacterial meningitis that is characterized by inflammation of the tissues covering the brain and spinal cord." [url:https\://medlineplus.gov/ency/article/000724.htm]
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
+xref: GARD:8731
 xref: ICD9CM:094.2
 xref: MESH:C536775
 xref: SNOMEDCT_US_2018_03_01:14968007
@@ -188,6 +205,7 @@ name: anogenital venereal wart
 namespace: disease_ontology
 alt_id: DOID:7877
 def: "A viral infectious disease that results_in infection located_in skin of vagina, cervix, uterus, anus, penis, scrotum, mouth, and throat, has_material_basis_in human papillomaviruses (types 6 and 11), which are transmitted_by direct contact with the skin during oral, genital, or anal sex with an infected partner. The infection has_symptom anogenital warts." [url:http\://www.merckmanuals.com/professional/sec14/ch194/ch194d.html]
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "Anogenital Human papilloma Virus Infectious Disease" EXACT [NCI2004_11_17:C4820]
 synonym: "Anogenital warts" EXACT [SNOMEDCT_2005_07_31:240542006]
@@ -539,6 +557,7 @@ id: DOID:13760
 name: Pthirus pubis infestation
 namespace: disease_ontology
 def: "A lice infestation that involves parasitic infestation by pubic lice Pthirus pubis, which are found in the pubic hair, less commonly in eyebrows, eyelashes, beard, mustache, armpit, perianal area, groin, trunk and scalp. The symptoms include itching in the pubic and groin area. Intense itching leads to scratching which can cause sores and secondary bacterial infection of the skin." [url:http\://www.cdc.gov/lice/pubic/disease.html]
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "crabs" EXACT []
 synonym: "Infestation by Phthirus pubis" EXACT [SNOMEDCT_2005_07_31:71011005]
@@ -567,6 +586,7 @@ def: "A primary bacterial infectious disease that is a sexually transmitted infe
 subset: gram-negative_bacterial_infectious_disease
 subset: sexually_transmitted_infectious_disease
 synonym: "Ulcus molle, skin" EXACT [MTHICD9_2006:099.0]
+xref: GARD:9522
 xref: ICD10CM:A57
 xref: ICD9CM:099.0
 xref: MESH:D002602
@@ -584,12 +604,14 @@ name: lymphogranuloma venereum
 namespace: disease_ontology
 def: "A commensal bacterial infectious disease that results_in infection located_in lymph nodes, has_material_basis_in Chlamydia trachomatis, which is transmitted_by sexual contact, and transmitted_by fomites. The infection has_symptom inguinal lymphadenitis, has_symptom abscesses in the groin area, and has_symptom lymphangitis." [url:http\://emedicine.medscape.com/article/783971-overview#a0104, url:http\://en.wikipedia.org/wiki/Lymphogranuloma_venereum]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "Climatic or tropical bubo" EXACT [MTHICD9_2006:099.1]
 synonym: "Durand-Nicolas-Favre disease" EXACT []
 synonym: "Lymphogranuloma inguinale" EXACT []
 synonym: "Poradenitis inguinale" EXACT []
 synonym: "Strumous bubo" EXACT []
+xref: GARD:9545
 xref: ICD10CM:A55
 xref: ICD9CM:099.1
 xref: MESH:D008219
@@ -668,6 +690,7 @@ alt_id: DOID:12591
 alt_id: DOID:12592
 alt_id: DOID:2042
 def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus, which is transmitted_by sexual contact, transmitted_by blood transfusions, and transmitted_by fomites like needles or syringes. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://en.wikipedia.org/wiki/Hepatitis_B#Transmission, url:http\://www.cdc.gov/hepatitis/HBV/index.htm, url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf]
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "chronic hepatitis B" EXACT []
 synonym: "hepatitis B infection" EXACT []
@@ -714,6 +737,7 @@ namespace: disease_ontology
 alt_id: DOID:12122
 def: "A syphilis that is characterized as the second stage of syphilis which appears from 2 to 6 months after primary infection, and is marked by lesions especially in the skin but also in organs and tissues, and that lasts from 3 to 12 weeks." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=secondary+syphilis]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "secondary syphilis of viscera or bone" EXACT []
 xref: ICD9CM:091.9
@@ -775,6 +799,7 @@ alt_id: DOID:10409
 alt_id: DOID:13557
 def: "A primary bacterial infectious disease that is a sexually transmitted infection, located_in uterus, located_in fallopian tube, located_in urethra, located_in mouth, located_in throat, located_in eye or located_in anus, has_material_basis_in Neisseria gonorrhoeae, which is transmitted_by contact with the penis, vagina, mouth, or anus or transmitted_by congenitally from mother to baby during delivery. The infection has_symptom burning sensation during urination, has_symptom discharge from the penis, has_symptom increased vaginal discharge, or has_symptom vaginal bleeding between periods." [url:http\://www.cdc.gov/std/gonorrhea/STDFact-gonorrhea.htm]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "chronic gonococcal infectious disease of lower genitourinary tract" EXACT []
 synonym: "chronic gonococcal infectious disease of upper genitourinary tract" EXACT []
@@ -808,6 +833,7 @@ name: tertiary syphilis
 namespace: disease_ontology
 def: "A syphilis that is characterized as the third stage of syphilis that develops after the disappearance of the secondary symptoms and is marked by ulcers and gummas under the skin and commonly by involvement of the skeletal, cardiovascular, and nervous systems." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tertiary+syphilis]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "late syphilis" EXACT []
 xref: ICD10CM:A52
@@ -829,6 +855,7 @@ name: genital herpes
 namespace: disease_ontology
 alt_id: DOID:8982
 def: "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands." [url:http\://www.cdc.gov/std/herpes/stdfact-herpes.htm]
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "Genital herpes simplex" EXACT [SNOMEDCT_2005_07_31:33839006]
 synonym: "HERPES GENITALIA" EXACT [MTH:363]
@@ -869,6 +896,7 @@ name: granuloma inguinale
 namespace: disease_ontology
 def: "A primary bacterial infectious disease that results_in infection located_in skin or located_in mucosa of genital tract, has_material_basis_in Klebsiella granulomatis, transmitted by sexual contact or transmitted_by contact with the open sores. The infection has_symptom painless genital ulcers." [url:http\://emedicine.medscape.com/article/1052617-overview, url:http\://en.wikipedia.org/wiki/Granuloma_inguinale]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "donovanosis" EXACT [SNOMEDCT_2005_07_31:186947000]
 synonym: "Granuloma Inguinale" EXACT []
@@ -876,6 +904,7 @@ synonym: "Granuloma inguinale" EXACT [SNOMEDCT_2005_07_31:28867007]
 synonym: "Granuloma inguinale" EXACT [SNOMEDCT_2005_07_31:186947000]
 synonym: "Pudendal ulcer" EXACT [MTHICD9_2006:099.2]
 synonym: "pudendal ulcer" EXACT [SNOMEDCT_2005_07_31:186947000]
+xref: GARD:9532
 xref: ICD10CM:A58
 xref: ICD9CM:099.2
 xref: MESH:D006100
@@ -923,6 +952,7 @@ alt_id: DOID:12913
 alt_id: DOID:9492
 def: "A syphilis that is characterized as having serologic proof of infection without signs or symptoms of disease." [url:http\://en.wikipedia.org/wiki/Syphilis#Latent_syphilis]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 xref: ICD10CM:A53.0
 xref: ICD9CM:097.1
@@ -962,11 +992,14 @@ id: DOID:9699
 name: ophthalmia neonatorum
 namespace: disease_ontology
 alt_id: DOID:10601
+def: "A bacterial conjuctivitis that is characterized by pain and tenderness in the eyeball and conjuctival discharge." [url:https\://en.wikipedia.org/wiki/Neonatal_conjunctivitis]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "Gonococcal conjunctivitis" EXACT [ICD9CM_2006:098.40]
 synonym: "Gonococcal ophthalmia neonatorum" EXACT [MTHICD9_2006:098.40]
 synonym: "Neonatal conjunctivitis" EXACT [SNOMEDCT_2005_07_31:157120005]
+xref: GARD:2546
 xref: ICD10CM:P39.1
 xref: ICD9CM:771.6
 xref: ICD9CM_2006:098.40
@@ -1017,6 +1050,7 @@ name: tertiary neurosyphilis
 namespace: disease_ontology
 def: "A tertiary syphilis that results in infection located in brain or located in spinal cord." [url:http\://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000703.htm]
 subset: gram-negative_bacterial_infectious_disease
+subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
 synonym: "late neurosyphilis" EXACT []
 xref: ICD10CM:A52.3

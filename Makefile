@@ -187,12 +187,12 @@ QUERIES := $(wildcard src/sparql/*-report.rq)
 counts: $(QUERIES) | build/reports/report-diff.txt
 .PHONY: $(QUERIES)
 
-$(QUERIES):: | init
+$(QUERIES):: 
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
 	 --collapse-import-closure true \
 	query --query $@ $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
 
-$(QUERIES):: | init
+$(QUERIES)::
 	$(ROBOT) query --input $(DM).owl\
 	 --query $@ $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
 

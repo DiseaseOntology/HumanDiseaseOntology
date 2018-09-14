@@ -1,0 +1,9 @@
+# Ensure all classes are a subclass of disease
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?s WHERE {
+	?s rdfs:subClassOf ?p .
+	FILTER NOT EXISTS { ?p rdfs:subClassOf* obo:DOID_4 }
+}

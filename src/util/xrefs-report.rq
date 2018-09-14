@@ -1,0 +1,18 @@
+# Return a count of xrefs on non-obsolete classes
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT (COUNT(?omimXref) as ?omim) (COUNT(?meshXref) as ?mesh) (COUNT(?nciXref) as ?nci) WHERE {
+	{ ?s oboInOwl:hasDbXref ?omimXref .
+	  FILTER regex(?omimXref, "^omim.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+	UNION
+	{ ?s oboInOwl:hasDbXref ?meshXref .
+	  FILTER regex(?meshXref, "^mesh.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+	UNION 
+	{ ?s oboInOwl:hasDbXref ?nciXref .
+	  FILTER regex(?nciXref, "^nci.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+}

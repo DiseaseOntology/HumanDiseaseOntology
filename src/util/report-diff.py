@@ -27,7 +27,7 @@ def get_diff(last, new):
 	return diff
 
 def get_reports():
-	files = listdir('../src/sparql')
+	files = listdir('src/util')
 	reports = []
 	for f in files:
 		if '-report.rq' in f:
@@ -38,8 +38,8 @@ if __name__ == '__main__':
 	reports = get_reports()
 	output = ['RELEASE DIFF REPORT']
 	for r in reports:
-		last = 'reports/' + r + '-last.tsv'
-		new = 'reports/' + r + '-new.tsv'
+		last = 'build/reports/' + r + '-last.tsv'
+		new = 'build/reports/' + r + '-new.tsv'
 		output.append('\n' + r.upper())
 		diff = get_diff(last, new)
 		for h, v in diff.iteritems():
@@ -53,6 +53,6 @@ if __name__ == '__main__':
 				sign = '-'
 			out = '\t' + re.sub('^\?', '', h.strip()) + t + sign + str(v)
 			output.append(out)
-	with open('reports/report-diff.txt', 'w+') as f:
+	with open('build/reports/report-diff.txt', 'w+') as f:
 		for o in output:
 			f.write(o + '\n')

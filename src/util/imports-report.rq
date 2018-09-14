@@ -1,0 +1,32 @@
+# Return a count of each import
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT (COUNT(?chebiClass) as ?chebi) (COUNT(?clClass) as ?cl) (COUNT(?hpClass) as ?hp) (COUNT(?soClass) as ?so) (COUNT(?ncbiClass) as ?ncbi) (COUNT(?sympClass) as ?symp) (COUNT(?transClass) as ?trans) (COUNT(?foodonClass) as ?foodon) (COUNT(?uberonClass) as ?uberon) WHERE {
+	{ ?chebiClass ?p ?o .
+	FILTER STRSTARTS(str(?chebiClass), "http://purl.obolibrary.org/obo/CHEBI_") }
+	UNION
+	{ ?clClass ?p ?o .
+	FILTER STRSTARTS(str(?clClass), "http://purl.obolibrary.org/obo/CL_") }
+	UNION
+	{ ?foodonClass ?p ?o .
+	FILTER STRSTARTS(str(?foodonClass), "http://purl.obolibrary.org/obo/FOODON_") }
+	UNION
+	{ ?hpClass ?p ?o .
+	FILTER STRSTARTS(str(?hpClass), "http://purl.obolibrary.org/obo/HP_") }
+	UNION
+	{ ?soClass ?p ?o .
+	FILTER STRSTARTS(str(?soClass), "http://purl.obolibrary.org/obo/SO_")}
+	UNION
+	{ ?ncbiClass ?p ?o .
+	FILTER STRSTARTS(str(?ncbiClass), "http://purl.obolibrary.org/obo/NCBITaxon_") }
+	UNION
+	{ ?sympClass ?p ?o .
+	FILTER STRSTARTS(str(?sympClass), "http://purl.obolibrary.org/obo/SYMP_") }
+	UNION
+	{ ?transClass ?p ?o .
+	FILTER STRSTARTS(str(?transClass), "http://purl.obolibrary.org/obo/TRANS_") }
+	UNION
+	{ ?uberonClass ?p ?o
+	FILTER STRSTARTS(str(?uberonClass), "http://purl.obolibrary.org/obo/UBERON_") }
+}

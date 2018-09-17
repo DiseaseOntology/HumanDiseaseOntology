@@ -1,0 +1,9 @@
+# Ensure that there are no annotations with a value of empty string
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?s WHERE {
+	?s ?ap ?xref .
+	?ap a owl:AnnotationProperty .
+	FILTER (str(?xref) = "")
+}

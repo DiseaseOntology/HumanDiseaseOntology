@@ -192,7 +192,7 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 
 # Count classes, imports, and logical defs from old and new
 
-QUERIES := $(wildcard src/util/*-report.rq)
+QUERIES := $(wildcard src/sparql/*-report.rq)
 
 counts: build/reports/report-diff.txt
 .PHONY: $(QUERIES)
@@ -204,17 +204,17 @@ build/doid-last.owl: | build/robot.jar
 	 --collapse-import-closure true --output $@
 
 $(QUERIES):: build/doid-last.owl | build/robot.jar
-	@echo "Counting: $(patsubst src/util/%-report.rq,%,$@) (previous)" && \
+	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (previous)" && \
 	$(ROBOT) query --input $< --query $@\
-	 $(subst src/util,build/reports,$(subst .rq,-last.tsv,$(@)))
+	 $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
 
 $(QUERIES):: $(DM).owl | build/robot.jar
-	@echo "Counting: $(patsubst src/util/%-report.rq,%,$@) (current)" && \
+	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (current)" && \
 	$(ROBOT) query --input $< --query $@ \
-	 $(subst src/util,build/reports,$(subst .rq,-new.tsv,$(@)))
+	 $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
 
 build/reports/report-diff.txt: $(QUERIES)
-	@python src/util/report-diff.py && \
+	@python src/sparql/report-diff.py && \
 	cp $@ $(DIR)report-diff.txt && \
 	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
 
@@ -222,12 +222,12 @@ build/reports/report-diff.txt: $(QUERIES)
 # Ensure proper OBO structure
 #-------------------------------
 
-EDIT_V_QUERIES := $(wildcard src/util/edit-verify-*.rq)
-V_QUERIES := $(wildcard src/util/verify-*.rq)
-DNC_V_QUERIES := src/util/dnc-verify-connectivity.rq
+EDIT_V_QUERIES := $(wildcard src/sparql/edit-verify-*.rq)
+V_QUERIES := $(wildcard src/sparql/verify-*.rq)
+DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
     # We are not reduced to single inheritence in DNC
     # Once this is cleaned up, we can change to all DNC verifications
-#DNC_V_QUERIES := $(wildcard src/util/dnc-verify-*.rq)
+#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
 verify: verify-edit verify-do verify-dnc
 

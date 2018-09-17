@@ -19,23 +19,20 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-#release: build/robot.jar | report products publish counts verify
-release: report products publish counts verify
-#all: build/robot.jar | imports release
+release: publish counts
 all: imports release
-#test: build/robot.jar | verify
 test: verify
 
 # ----------------------------------------
 # ROBOT
 # ----------------------------------------
 
-# mk: 
-# 	mkdir -p build
+mk: 
+	@mkdir -p build && mkdir -p build/reports
 
 .PHONY: build/robot.jar
-build/robot.jar:
-	curl -L -o build/robot.jar\
+build/robot.jar: mk
+	@curl -L -o build/robot.jar\
 	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
@@ -48,12 +45,12 @@ ROBOT := java -jar build/robot.jar
 # or the `ontology/imports` dir
 
 .PHONY: imports
-imports: # build/robot.jar
-	cd src/ontology/imports && $(MAKE) imports
+imports: | build/robot.jar
+	@cd src/ontology/imports && $(MAKE) imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
-$(IMPS):
-	cd src/ontology/imports && $(MAKE) $@
+$(IMPS): | build/robot.jar
+	@cd src/ontology/imports && $(MAKE) $@
 
 # ----------------------------------------
 # PRE-BUILD REPORT
@@ -63,36 +60,41 @@ report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-build/reports/report.tsv: $(EDIT)
+build/reports/report.tsv: $(EDIT) verify-edit | build/robot.jar
+	@echo "" && \
 	$(ROBOT) report --input $< --fail-on none\
-	 --output $@ --format tsv
+	 --output $@ --format tsv && \
+	echo "Full DO QC report available at $@"
 
 # ----------------------------------------
 # RELEASE
 # ----------------------------------------
 
-build: $(DO).owl $(DO).obo $(DO).json # build/robot.jar
-products: | build merged human subsets
+build: $(DO).owl $(DO).obo $(DO).json
+products: subsets human merged build
 
 # release vars
 TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
-$(DO).owl: $(EDIT)
-	$(ROBOT) reason --input $< --create-new-ontology false \
+$(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
+	@$(ROBOT) reason --input $< --create-new-ontology false \
 	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
 	annotate --annotation oboInOwl:date "$(TS)"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@ && \
+	echo "Created $@"
 
-$(DO).obo: $(DO).owl
-	$(ROBOT) remove --input $< --select imports --trim true \
+$(DO).obo: $(DO).owl | build/robot.jar
+	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	convert --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
-	rm $(basename $@)-temp.obo
+	rm $(basename $@)-temp.obo && \
+	echo "Created $@"
 
-$(DO).json: $(DO).owl
-	$(ROBOT) convert --input $< --output $@
+$(DO).json: $(DO).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@ \
+	&& echo "Created $@"
 
 # ----------------------------------------
 # DOID-MERGED
@@ -100,14 +102,16 @@ $(DO).json: $(DO).owl
 
 merged: $(DM).owl $(DM).obo
 
-$(DM).owl: $(DO).owl
-	$(ROBOT) merge --input $< --collapse-import-closure true \
+$(DM).owl: $(DO).owl | build/robot.jar
+	@$(ROBOT) merge --input $< --collapse-import-closure true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid-merged.owl"\
 	 --ontology-iri "$(OBO)doid/doid-merged.owl"\
-	 --output $@
+	 --output $@ && \
+	echo "Created $@"
 
-$(DM).obo: $(DM).owl
-	$(ROBOT) convert --input $< --output $@ --check false
+$(DM).obo: $(DM).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@ --check false \
+	&& echo "Created $@"
 
 # ----------------------------------------
 # HUMANDO
@@ -117,22 +121,26 @@ human: $(DNC).owl $(DNC).obo $(DNC).json
 
 # Generate from EDIT file to avoid asserted inferences
 
-$(DNC).owl: $(EDIT)
-	$(ROBOT) remove --input $< --select imports --trim true \
+$(DNC).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
+	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select anonymous \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl" --output $@ && \
-	cp $@ $(HD).owl
+	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl"\
+	 --output $@ && \
+	cp $@ $(HD).owl \
+	&& echo "Created $@"
 
-$(DNC).obo: $(DNC).owl
-	$(ROBOT) convert --input $< --check false\
+$(DNC).obo: $(DNC).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --check false\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
-	cp $@ $(HD).obo
+	cp $@ $(HD).obo \
+	&& echo "Created $@"
 
-$(DNC).json: $(DNC).owl
-	$(ROBOT) convert --input $< --output $@
+$(DNC).json: $(DNC).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@ \
+	&& echo "Created $@"
 
 # ----------------------------------------
 # SUBSETS
@@ -148,8 +156,8 @@ subsets: $(SUBS)
 
 # Generate subsets (specified by SUBS)
 
-$(SUBS): $(DNC).owl
-	$(ROBOT) filter --input $< \
+$(SUBS): $(DNC).owl | build/robot.jar
+	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $@)> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$@.owl"\
 	 --ontology-iri "$(OBO)doid/subsets/$@.owl"\
@@ -157,7 +165,8 @@ $(SUBS): $(DNC).owl
 	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
 	 --output $(addprefix $(SUB), $(addsuffix .obo, $@)) --check false && \
 	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
-	 --output $(addprefix $(SUB), $(addsuffix .json, $@))
+	 --output $(addprefix $(SUB), $(addsuffix .json, $@)) && \
+	echo "Created subset: $@"
 
 # ----------------------------------------
 # RELEASE
@@ -169,12 +178,13 @@ DIR = src/ontology/releases/$(DATE)/
 
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
-	mkdir $(DIR) && \
+	@mkdir -p $(DIR) && \
 	cp $(DO).* $(DIR) && \
 	cp $(DM).* $(DIR) && \
 	cp $(DNC).* $(DIR) && \
-	mkdir $(DIR)subsets && \
-	cp -r $(SUB) $(DIR)subsets
+	mkdir -p $(DIR)subsets && \
+	cp -r $(SUB) $(DIR)subsets && \
+	echo "Published to $(DIR)"
 
 # ----------------------------------------
 # POST-BUILD REPORT
@@ -184,40 +194,55 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 
 QUERIES := $(wildcard src/sparql/*-report.rq)
 
-counts: $(QUERIES) | build/reports/report-diff.txt
+counts: build/reports/report-diff.txt
 .PHONY: $(QUERIES)
 
-$(QUERIES):: 
+# Get the last build of DO from IRI
+.PHONY: build/doid-last.owl
+build/doid-last.owl: | build/robot.jar
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
-	 --collapse-import-closure true \
-	query --query $@ $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
+	 --collapse-import-closure true --output $@
 
-$(QUERIES)::
-	$(ROBOT) query --input $(DM).owl\
-	 --query $@ $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
+$(QUERIES):: build/doid-last.owl | build/robot.jar
+	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (previous)" && \
+	$(ROBOT) query --input $< --query $@\
+	 $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
 
-.PHONY: build/reports/report-diff.txt
-build/reports/report-diff.txt:
-	cd build && python report-diff.py
+$(QUERIES):: $(DM).owl | build/robot.jar
+	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (current)" && \
+	$(ROBOT) query --input $< --query $@ \
+	 $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
+
+build/reports/report-diff.txt: $(QUERIES)
+	@python src/sparql/report-diff.py && \
+	cp $@ $(DIR)report-diff.txt && \
+	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
 
 #-----------------------------
 # Ensure proper OBO structure
 #-------------------------------
 
+EDIT_V_QUERIES := $(wildcard src/sparql/edit-verify-*.rq)
 V_QUERIES := $(wildcard src/sparql/verify-*.rq)
 DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
     # We are not reduced to single inheritence in DNC
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
-verify: verify-do verify-dnc
+verify: verify-edit verify-do verify-dnc
 
-# First, verify doid.obo
-verify-do: $(DO).obo
+# Verify doid-edit.owl
+verify-edit: $(EDIT) | build/robot.jar
+	@echo "Verifying $< (see build/reports on error)" && \
 	$(ROBOT) verify --input $<\
+	 --queries $(EDIT_V_QUERIES) --output-dir build/reports
+
+# Verify doid.obo
+verify-do: $(DO).obo | build/robot.jar
+	@$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) --output-dir build/reports
 
-# Then, verify doid-non-classified.obo
-verify-dnc: $(DNC).obo
-	$(ROBOT) verify --input $<\
+# Verify doid-non-classified.obo
+verify-dnc: $(DNC).obo | build/robot.jar
+	@$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build/reports

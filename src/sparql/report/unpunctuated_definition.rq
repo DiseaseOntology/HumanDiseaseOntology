@@ -1,0 +1,11 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+ VALUES ?property {obo:IAO_0000115}
+ ?entity ?property ?value .
+ FILTER (!regex(?value, "[.?!]$"))
+ FILTER NOT EXISTS { ?entity owl:deprecated "true"^^xsd:boolean }
+}

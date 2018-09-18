@@ -1,0 +1,9 @@
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+ VALUES ?property { oboInOwl:id }
+ FILTER NOT EXISTS { ?entity ?property ?value }
+ FILTER NOT EXISTS { ?entity owl:deprecated ?deprecated }
+}

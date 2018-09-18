@@ -4,6 +4,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT DISTINCT ?entity ?property ?value
 WHERE {
  VALUES ?property { oboInOwl:id }
+ ?entity a owl:Class .
  FILTER NOT EXISTS { ?entity ?property ?value }
- FILTER NOT EXISTS { ?entity owl:deprecated ?deprecated }
+ FILTER (!isBlank(?entity))
 }

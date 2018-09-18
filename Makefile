@@ -55,14 +55,15 @@ $(IMPS): | build/robot.jar
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-report: build/reports/report.tsv
+report: build/reports/report.csv
 
 # Report for general issues on doid-edit
 
-build/reports/report.tsv: $(EDIT) verify-edit | build/robot.jar
+build/reports/report.csv: $(EDIT) verify-edit | build/robot.jar
 	@echo "" && \
-	$(ROBOT) report --input $< --fail-on none\
-	 --output $@ --format tsv && \
+	$(ROBOT) report --input $<\
+	 --profile src/sparql/report/report_profile.txt\
+	 --labels true --output $@ && \
 	echo "Full DO QC report available at $@"
 
 # ----------------------------------------

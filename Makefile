@@ -59,6 +59,7 @@ report: build/reports/report.csv
 
 # Report for general issues on doid-edit
 
+.PRECIOUS: build/reports/report.csv
 build/reports/report.csv: $(EDIT) verify-edit | build/robot.jar
 	@echo "" && \
 	$(ROBOT) report --input $<\

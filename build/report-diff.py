@@ -27,7 +27,7 @@ def get_diff(last, new):
 	return diff
 
 def get_reports():
-	files = listdir('src/util')
+	files = listdir('src/sparql')
 	reports = []
 	for f in files:
 		if '-report.rq' in f:

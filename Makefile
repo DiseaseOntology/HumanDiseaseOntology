@@ -30,7 +30,6 @@ test: verify
 mk: 
 	@mkdir -p build && mkdir -p build/reports
 
-.PHONY: build/robot.jar
 build/robot.jar: mk
 	@curl -L -o build/robot.jar\
 	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
@@ -200,7 +199,7 @@ counts: build/reports/report-diff.txt
 # Get the last build of DO from IRI
 .PHONY: build/doid-last.owl
 build/doid-last.owl: | build/robot.jar
-	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
+	@$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
 	 --collapse-import-closure true --output $@
 
 $(QUERIES):: build/doid-last.owl | build/robot.jar
@@ -214,7 +213,7 @@ $(QUERIES):: $(DM).owl | build/robot.jar
 	 $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
 
 build/reports/report-diff.txt: $(QUERIES)
-	@python src/sparql/report-diff.py && \
+	@python build/report-diff.py && \
 	cp $@ $(DIR)report-diff.txt && \
 	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
 

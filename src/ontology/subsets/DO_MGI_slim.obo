@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2018-09-13/subsets/DO_MGI_slim.owl
+data-version: doid/2018-09-25/subsets/DO_MGI_slim.owl
 subsetdef: DO_AGR_slim ""
 subsetdef: DO_cancer_slim ""
 subsetdef: DO_FlyBase_slim ""
@@ -14,15 +14,6 @@ subsetdef: tick-borne_infectious_disease ""
 subsetdef: TopNodes_DOcancerslim ""
 subsetdef: zoonotic_infectious_disease ""
 ontology: doid/subsets/DO_MGI_slim
-
-[Term]
-id: DOID:0050013
-name: carbohydrate metabolism disease
-namespace: disease_ontology
-def: "An acquired metabolic disease that is characterized by abnormal carbohydrate metabolism." [url:http\://www.nlm.nih.gov/medlineplus/metabolicdisorders.html]
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-is_a: DOID:0060158 ! acquired metabolic disease
 
 [Term]
 id: DOID:0050117
@@ -117,14 +108,6 @@ created_by: lschriml
 creation_date: 2013-06-24T01:18:03Z
 
 [Term]
-id: DOID:0060056
-name: hypersensitivity reaction disease
-namespace: disease_ontology
-def: "An immune system disease that has material basis in abnormal immune responses." [url:http\://en.wikipedia.org/wiki/Hypersensitivity, url:http\://physio.ucsf.edu/GEMS/courses/Immunology/materials/fa13_essential_immunology/090313_hypersensitivity_defranco.pdf, url:http\://www.ncbi.nlm.nih.gov/books/NBK27136/]
-subset: DO_MGI_slim
-is_a: DOID:2914 ! immune system disease
-
-[Term]
 id: DOID:0060071
 name: pre-malignant neoplasm
 namespace: disease_ontology
@@ -171,15 +154,6 @@ def: "A genetic disease associated with mutations encoding defective proteins, w
 subset: DO_MGI_slim
 created_by: emitraka
 creation_date: 2015-05-21T10:41:29Z
-
-[Term]
-id: DOID:0060388
-name: chromosomal deletion syndrome
-namespace: disease_ontology
-subset: DO_MGI_slim
-is_a: DOID:0080014 ! chromosomal disease
-created_by: elvira
-creation_date: 2015-09-28T15:48:41Z
 
 [Term]
 id: DOID:0080014
@@ -292,32 +266,6 @@ xref: SNOMEDCT_US_2018_03_01:49601007
 xref: UMLS_CUI:C0007222
 
 [Term]
-id: DOID:14793
-name: hypohidrotic ectodermal dysplasia
-namespace: disease_ontology
-alt_id: DOID:0050446
-alt_id: DOID:0050447
-def: "A monogenic disease that is characterized by malformation of ectodermal (skin, hair, teeth and sweat glands) structures including hypotrichosis (sparseness of scalp and body hair), hypohidrosis (reduced ability to sweat), and hypodontia (congenital absence of teeth)." [url:http\://ghr.nlm.nih.gov/condition/hypohidrotic-ectodermal-dysplasia, url:http\://www.ncbi.nlm.nih.gov/books/NBK1112/, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=238468]
-comment: OMIM mapping confirmed by DO. [SN].
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "anhidrotic ectodermal dysplasia 3" EXACT []
-synonym: "Christ-Siemens-Touraine Syndrome" EXACT []
-synonym: "Ectodermal Dysplasia 1, Anhydrotic" EXACT []
-synonym: "Hypohidrotic X-linked ectodermal dysplasia" EXACT [SNOMEDCT_2005_07_31:239007005]
-xref: GARD:76
-xref: MESH:D053358
-xref: NCI:C84562
-xref: OMIM:129490
-xref: OMIM:224900
-xref: OMIM:300291
-xref: OMIM:305100
-xref: SNOMEDCT_US_2018_03_01:239007005
-xref: SNOMEDCT_US_2018_03_01:4826006
-xref: SNOMEDCT_US_2018_03_01:7731005
-xref: UMLS_CUI:C0162359
-
-[Term]
 id: DOID:15
 name: reproductive system disease
 namespace: disease_ontology
@@ -396,40 +344,6 @@ xref: SNOMEDCT_US_2018_03_01:928000
 xref: UMLS_CUI:C0026857
 
 [Term]
-id: DOID:170
-name: endocrine gland cancer
-namespace: disease_ontology
-alt_id: DOID:10009
-def: "An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system." [url:http\://en.wikipedia.org/wiki/Endocrine_system]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-subset: TopNodes_DOcancerslim
-synonym: "endocrine neoplasm" EXACT [CSP2005:2009-5861]
-synonym: "Endocrine tumor" EXACT [NCI2004_11_17:C3010]
-synonym: "malignant Endocrine tumor" EXACT [NCI2004_11_17:C3575]
-synonym: "malignant neoplasm of endocrine gland" EXACT []
-synonym: "malignant tumour of endocrine gland" EXACT [SNOMEDCT_2005_07_31:93780007]
-synonym: "neoplasm of endocrine gland" EXACT [SNOMEDCT_2005_07_31:127015005]
-synonym: "neoplasm of endocrine system" EXACT [SNOMEDCT_2005_07_31:387927001]
-xref: CSP2005:2009-5861
-xref: ICD10CM:C75.9
-xref: ICD9CM:194.9
-xref: MESH:D004701
-xref: NCI2004_11_17:C3010
-xref: NCI2004_11_17:C3575
-xref: NCI:C3010
-xref: NCI:C3575
-xref: SNOMEDCT_US_2018_03_01:127015005
-xref: SNOMEDCT_US_2018_03_01:190140005
-xref: SNOMEDCT_US_2018_03_01:363347009
-xref: SNOMEDCT_US_2018_03_01:371982006
-xref: SNOMEDCT_US_2018_03_01:387922007
-xref: SNOMEDCT_US_2018_03_01:387927001
-xref: SNOMEDCT_US_2018_03_01:93780007
-xref: UMLS_CUI:C0014132
-xref: UMLS_CUI:C0153658
-
-[Term]
 id: DOID:1725
 name: peritoneum cancer
 namespace: disease_ontology
@@ -458,39 +372,6 @@ synonym: "urinary tract disease" EXACT []
 xref: NCI2004_11_17:C27599
 xref: NCI:C27599
 xref: UMLS_CUI:C1335051
-
-[Term]
-id: DOID:1925
-name: Coffin-Siris syndrome
-namespace: disease_ontology
-def: "A genetic disease that is characterized by underdevelopment of the tips of fingers or toes, underdevelopment or abscense of finger or toe nails and developmental disability." [url:http\://en.wikipedia.org/wiki/Coffin%E2%80%93Siris_syndrome, url:http\://ghr.nlm.nih.gov/condition/coffin-siris-syndrome, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=1465]
-comment: OMIM mapping confirmed by DO. [SN].
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "Dwarfism-Onychodysplasia" EXACT []
-synonym: "Fifth Digit Syndrome" EXACT []
-synonym: "Short Stature-Onychodysplasia." EXACT []
-xref: GARD:6124
-xref: MESH:C536436
-xref: NCI:C35321
-xref: OMIM:135900
-xref: SNOMEDCT_US_2018_03_01:10007009
-xref: UMLS_CUI:C0265338
-
-[Term]
-id: DOID:193
-name: reproductive organ cancer
-namespace: disease_ontology
-alt_id: DOID:1900
-def: "An organ system cancer that is manifested in the reproductive organs." [url:http\://en.wikipedia.org/wiki/Reproductive_system#Examples_of_cancers]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "cancer of reproductive system" RELATED []
-synonym: "malignant reproductive system neoplasm" EXACT []
-synonym: "Reproductive tumor" EXACT [NCI2004_11_17:C3674]
-xref: NCI2004_11_17:C3674
-xref: NCI:C3674
-xref: UMLS_CUI:C0178830
 
 [Term]
 id: DOID:225
@@ -570,84 +451,6 @@ xref: SNOMEDCT_US_2018_03_01:191035005
 xref: UMLS_CUI:C0041806
 
 [Term]
-id: DOID:3093
-name: nervous system cancer
-namespace: disease_ontology
-alt_id: DOID:1193
-alt_id: DOID:3195
-alt_id: DOID:4695
-def: "An organ system cancer located_in the nervous system that affects the central or peripheral nervous system." [url:http\://emedicine.medscape.com/oncology, url:http\://en.wikipedia.org/wiki/Nervous_system_disease]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "malignant neoplasm of nervous system" EXACT []
-synonym: "neoplasm of nervous system" EXACT [SNOMEDCT_2005_07_31:126950007]
-synonym: "nervous system neoplasm" EXACT [CSP2005:2012-5157]
-synonym: "neural neoplasm" EXACT []
-synonym: "neural tumor" EXACT [NCI2004_11_17:C35562]
-synonym: "tumor of the nervous system" EXACT [NCI2004_11_17:C3268]
-xref: CSP2005:2012-5157
-xref: ICD9CM:192
-xref: ICD9CM:192.9
-xref: MESH:D009380
-xref: NCI2004_11_17:C3268
-xref: NCI2004_11_17:C35562
-xref: NCI:C35562
-xref: SNOMEDCT_US_2018_03_01:188306000
-xref: UMLS_CUI:C0027665
-xref: UMLS_CUI:C0153643
-xref: UMLS_CUI:C1334956
-
-[Term]
-id: DOID:3119
-name: gastrointestinal system cancer
-namespace: disease_ontology
-alt_id: DOID:4945
-alt_id: DOID:8377
-def: "An organ system cancer located_in gastrointestinal tract that is manifested in organs of the gastrointestinal system." [url:http\://en.wikipedia.org/wiki/Human_gastrointestinal_tract]
-subset: DO_FlyBase_slim
-subset: DO_MGI_slim
-subset: NCIthesaurus
-subset: TopNodes_DOcancerslim
-synonym: "digestive system cancer" EXACT []
-synonym: "gastrointestinal tract cancer" EXACT [NCI2004_11_17:C4890]
-synonym: "GI tumor" EXACT [NCI2004_11_17:C3052]
-xref: ICD10CM:C26.9
-xref: ICD9CM:239.0
-xref: MESH:D004067
-xref: MESH:D005770
-xref: NCI2004_11_17:C3052
-xref: NCI2004_11_17:C4890
-xref: NCI:C3052
-xref: NCI:C4890
-xref: SNOMEDCT_US_2018_03_01:126768004
-xref: SNOMEDCT_US_2018_03_01:128348002
-xref: SNOMEDCT_US_2018_03_01:128415001
-xref: SNOMEDCT_US_2018_03_01:189527000
-xref: SNOMEDCT_US_2018_03_01:276806006
-xref: SNOMEDCT_US_2018_03_01:367543008
-xref: SNOMEDCT_US_2018_03_01:428905002
-xref: SNOMEDCT_US_2018_03_01:93811007
-xref: UMLS_CUI:C0012243
-xref: UMLS_CUI:C0017185
-xref: UMLS_CUI:C0685938
-
-[Term]
-id: DOID:374
-name: nutrition disease
-namespace: disease_ontology
-def: "An acquired metabolic disease that is characterized by an insufficient intake of food or of certain nutrients, by an inability of the body to absorb and use nutrients, or by overconsumption of certain foods." [url:http\://www.who.int/topics/nutrition_disorders/en/]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "Nutritional disorder" EXACT [NCI2004_11_17:C26836]
-xref: MESH:D009748
-xref: NCI2004_11_17:C26836
-xref: NCI:C26836
-xref: SNOMEDCT_US_2018_03_01:191077005
-xref: SNOMEDCT_US_2018_03_01:2492009
-xref: UMLS_CUI:C3714509
-is_a: DOID:0060158 ! acquired metabolic disease
-
-[Term]
 id: DOID:4501
 name: orofaciodigital syndrome
 namespace: disease_ontology
@@ -657,62 +460,6 @@ subset: DO_MGI_slim
 synonym: "oral-facial-digital syndrome" EXACT []
 xref: MESH:D009958
 xref: UMLS_CUI:C0029294
-
-[Term]
-id: DOID:5093
-name: thoracic cancer
-namespace: disease_ontology
-alt_id: DOID:3937
-def: "An organ system cancer located_in the thoracic cavity that develops in the different types of cells within the lungs, as well as less common cancers of the esophagus, the trachea, or the chest wall." [url:http\://www.advocatehealth.com/cmc/body.cfm?id=203]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "Thoracic tumor" EXACT [NCI2004_11_17:C3406]
-synonym: "thorax cancer" EXACT []
-synonym: "thorax neoplasm" EXACT [CSP2005:2005-5041]
-synonym: "tumor of thorax" EXACT [SNOMEDCT_2005_07_31:255058005]
-xref: CSP2005:2005-5041
-xref: ICD10CM:C76.1
-xref: ICD9CM:195.1
-xref: MESH:D013899
-xref: NCI2004_11_17:C3406
-xref: NCI:C3406
-xref: NCI:C3576
-xref: SNOMEDCT_US_2018_03_01:188361007
-xref: SNOMEDCT_US_2018_03_01:188365003
-xref: SNOMEDCT_US_2018_03_01:255058005
-xref: UMLS_CUI:C0039981
-xref: UMLS_CUI:C0153661
-
-[Term]
-id: DOID:574
-name: peripheral nervous system disease
-namespace: disease_ontology
-alt_id: DOID:13069
-def: "A nervous system disease that affects the peripheral nervous system." [url:http\://en.wikipedia.org/w/index.php?title=Peripheral_neuropathy&redirect=no]
-subset: DO_MGI_slim
-subset: NCIthesaurus
-synonym: "peripheral nerve disease" RELATED [MTH:516]
-synonym: "peripheral neuropathy" RELATED [CSP2005:2042-6617]
-xref: CSP2005:2042-6617
-xref: ICD10CM:G64
-xref: ICD9CM:350-359.99
-xref: MESH:D010523
-xref: MTH:516
-xref: NCI:C119734
-xref: NCI:C27580
-xref: NCI:C27587
-xref: SNOMEDCT_US_2018_03_01:155064004
-xref: SNOMEDCT_US_2018_03_01:155080009
-xref: SNOMEDCT_US_2018_03_01:155100008
-xref: SNOMEDCT_US_2018_03_01:193088006
-xref: SNOMEDCT_US_2018_03_01:193264002
-xref: SNOMEDCT_US_2018_03_01:264554005
-xref: SNOMEDCT_US_2018_03_01:267706009
-xref: SNOMEDCT_US_2018_03_01:302226006
-xref: SNOMEDCT_US_2018_03_01:42658009
-xref: UMLS_CUI:C0031117
-xref: UMLS_CUI:C1335029
-is_a: DOID:863 ! nervous system disease
 
 [Term]
 id: DOID:5875

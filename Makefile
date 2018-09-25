@@ -55,12 +55,12 @@ $(IMPS): | build/robot.jar
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-report: build/reports/report.csv
+report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-.PRECIOUS: build/reports/report.csv
-build/reports/report.csv: $(EDIT) verify-edit | build/robot.jar
+.PRECIOUS: build/reports/report.tsv
+build/reports/report.tsv: $(EDIT) verify-edit | build/robot.jar
 	@echo "" && \
 	$(ROBOT) report --input $<\
 	 --profile src/sparql/report/report_profile.txt\

@@ -12,7 +12,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2018-09-13/subsets/DO_FlyBase_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2018-09-25/subsets/DO_FlyBase_slim.owl"/>
     </owl:Ontology>
     
 
@@ -153,6 +153,14 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc:date</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
@@ -268,6 +276,7 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -341,7 +350,6 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050013</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbohydrate metabolism disease</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -930,12 +938,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-09-05T11:48:42Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0003829</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG:05034</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D010610</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3325</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:103780</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:126685009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:95001001</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0031347</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:66590003</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alcoholism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050741</oboInOwl:id>
@@ -1312,15 +1316,17 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_0050880 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050880">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by developmental delay, intellectual disability, muscle weakness (hypotonia), epilepsy, distinctive facial features and congenital malformations of the heart, urogenital tract and the central nervous system, and has_physical_basis_in either a chromosome 17 (17q21.31) microdeletion or a mutation in the KANSL1-gene.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by developmental delay, intellectual disability, muscle weakness (hypotonia), epilepsy, distinctive facial features and congenital malformations of the heart, urogenital tract and the central nervous system, and has_material_basis_in either a chromosome 17 (17q21.31) microdeletion or a mutation in the KANSL1-gene.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-06T12:57:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>DOID:0070076</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:10727</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:610443</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORDO:96169</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17q21.31 microdeletion syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KANSL1-related intellectual disability syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KdVS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Koolen-De Vries syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koolen-De Vries syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050880</oboInOwl:id>
@@ -1331,13 +1337,14 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050880"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by developmental delay, intellectual disability, muscle weakness (hypotonia), epilepsy, distinctive facial features and congenital malformations of the heart, urogenital tract and the central nervous system, and has_physical_basis_in either a chromosome 17 (17q21.31) microdeletion or a mutation in the KANSL1-gene.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by developmental delay, intellectual disability, muscle weakness (hypotonia), epilepsy, distinctive facial features and congenital malformations of the heart, urogenital tract and the central nervous system, and has_material_basis_in either a chromosome 17 (17q21.31) microdeletion or a mutation in the KANSL1-gene.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Koolen_De_Vries_syndrome</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/koolen-de-vries-syndrome</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/610443</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.17q21.com/en/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/books/NBK24676/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&amp;Expert=96169</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/19447831</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/22544363</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/22544367</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1347,7 +1354,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_0050881 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050881">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by progressive proximal muscle weakness, steolytic bone lesions consistent with Paget disease, and frontotemporal dementia and has_physical_basis_in mutation in the valosin containing protein (VCP).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by progressive proximal muscle weakness, steolytic bone lesions consistent with Paget disease, and frontotemporal dementia and has_material_basis_in mutation in the valosin containing protein.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-06T02:30:16Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:167320</oboInOwl:hasDbXref>
@@ -1363,9 +1370,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050881"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by progressive proximal muscle weakness, steolytic bone lesions consistent with Paget disease, and frontotemporal dementia and has_physical_basis_in mutation in the valosin containing protein (VCP).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by progressive proximal muscle weakness, steolytic bone lesions consistent with Paget disease, and frontotemporal dementia and has_material_basis_in mutation in the valosin containing protein.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/167320</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.orpha.net/consor/cgi-bin/Disease_Search.php?lng=EN&amp;data_id=10698&amp;Disease_Disease_Search_diseaseGroup=inclusion-body-myopathy-with-Paget&amp;Disease_Disease_Search_diseaseType=Pat&amp;Disease(s)/group%20of%20diseases=Inclusion-body-myopathy-with-Paget-disease-of-bone-and-frontotemporal-dementia&amp;title=Inclusion-body-myopathy-with-Paget-disease-of-bone-and-frontotemporal-dementia&amp;search=Disease_Search_Simple</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/19380227</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/21304887</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/21892620</oboInOwl:hasDbXref>
@@ -1427,7 +1433,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_0050884 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050884">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glucose metabolism disorder that is characterized by chronic haemolytic anaemia, cardiomyopathy, susceptibility to infections and severe neurological dysfunction, and has_physical_basis_in the triosephosphate isomerase enzyme (TPI1) gene inherited as an autosomal recessive trait.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glucose metabolism disorder that is characterized by chronic haemolytic anaemia, cardiomyopathy, susceptibility to infections and severe neurological dysfunction, and has_material_basis_in the triosephosphate isomerase enzyme (TPI1) gene inherited as an autosomal recessive trait.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-07T11:44:31Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:5287</oboInOwl:hasDbXref>
@@ -1441,7 +1447,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050884"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glucose metabolism disorder that is characterized by chronic haemolytic anaemia, cardiomyopathy, susceptibility to infections and severe neurological dysfunction, and has_physical_basis_in the triosephosphate isomerase enzyme (TPI1) gene inherited as an autosomal recessive trait.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glucose metabolism disorder that is characterized by chronic haemolytic anaemia, cardiomyopathy, susceptibility to infections and severe neurological dysfunction, and has_material_basis_in the triosephosphate isomerase enzyme (TPI1) gene inherited as an autosomal recessive trait.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Triosephosphate_isomerase_deficiency</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/615512</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=GB&amp;Expert=868</oboInOwl:hasDbXref>
@@ -1456,7 +1462,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_0050885 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050885">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by intrauterine growth restriction, metaphyseal dysplasia, adrenal hypoplasia congenita, genital abnormalities and has_physical_basis_in heterozygous mutation in the CDKN1C gene.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by intrauterine growth restriction, metaphyseal dysplasia, adrenal hypoplasia congenita, genital abnormalities and has_material_basis_in heterozygous mutation in the CDKN1C gene.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-07T12:04:30Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:12312</oboInOwl:hasDbXref>
@@ -1470,7 +1476,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050885"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by intrauterine growth restriction, metaphyseal dysplasia, adrenal hypoplasia congenita, genital abnormalities and has_physical_basis_in heterozygous mutation in the CDKN1C gene.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A syndrome that is characterized by intrauterine growth restriction, metaphyseal dysplasia, adrenal hypoplasia congenita, genital abnormalities and has_material_basis_in heterozygous mutation in the CDKN1C gene.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/614732</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=GB&amp;Expert=85173</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/14760276</oboInOwl:hasDbXref>
@@ -1613,7 +1619,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_0060050 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060050">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hypersensitivity reaction type II disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060050</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
@@ -1622,7 +1628,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060050"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hypersensitivity reaction type II disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ls:IEDB</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2075,6 +2081,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:702344008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C1970431</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0060488</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
@@ -2860,7 +2867,7 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11722">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_450"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myotonic disease that is characterized by progressive muscle wasting and weakness affecting the distal skeletal and smooth muscles of lower legs, hands, neck, and face along with myotonia and cataracts and has_physical_basis_in the autosomal dominant inheritance of the DMPK gene containing an expansion of a CTG trinucleotide repeat in the non-coding region.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myotonic disease that is characterized by progressive muscle wasting and weakness affecting the distal skeletal and smooth muscles of lower legs, hands, neck, and face along with myotonia and cataracts and has_material_basis_in the autosomal dominant inheritance of the DMPK gene containing an expansion of a CTG trinucleotide repeat in the non-coding region.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:8310</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G71.11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:359.21</oboInOwl:hasDbXref>
@@ -2885,7 +2892,7 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11722"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myotonic disease that is characterized by progressive muscle wasting and weakness affecting the distal skeletal and smooth muscles of lower legs, hands, neck, and face along with myotonia and cataracts and has_physical_basis_in the autosomal dominant inheritance of the DMPK gene containing an expansion of a CTG trinucleotide repeat in the non-coding region.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myotonic disease that is characterized by progressive muscle wasting and weakness affecting the distal skeletal and smooth muscles of lower legs, hands, neck, and face along with myotonia and cataracts and has_material_basis_in the autosomal dominant inheritance of the DMPK gene containing an expansion of a CTG trinucleotide repeat in the non-coding region.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Myotonic_dystrophy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/myotonic-dystrophy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/160900</oboInOwl:hasDbXref>
@@ -3407,7 +3414,7 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_13374 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_13374">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">.A connective tissue disease that is characterized by progressive ossification of skeletal muscle, fascia, tendons, and ligaments and has_material_basis_in heterozygous mutation in the ACVR1 gene.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connective tissue disease that is characterized by progressive ossification of skeletal muscle, fascia, tendons, and ligaments and has_material_basis_in heterozygous mutation in the ACVR1 gene.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSP2005:1982-9828</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:6445</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:M61.1</oboInOwl:hasDbXref>
@@ -3435,7 +3442,7 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_13374"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">.A connective tissue disease that is characterized by progressive ossification of skeletal muscle, fascia, tendons, and ligaments and has_material_basis_in heterozygous mutation in the ACVR1 gene.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connective tissue disease that is characterized by progressive ossification of skeletal muscle, fascia, tendons, and ligaments and has_material_basis_in heterozygous mutation in the ACVR1 gene.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://emedicine.medscape.com/article/1112501-overview</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Fibrodysplasia_ossificans_progressiva</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/fibrodysplasia-ossificans-progressiva</oboInOwl:hasDbXref>
@@ -5338,7 +5345,6 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3119</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrointestinal system cancer</rdfs:label>

@@ -1,0 +1,22 @@
+# Ensure that all logical defs being with a DOID term
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?s ?cls WHERE {
+	{
+		?s a owl:Class .
+		FILTER (STRSTARTS(STR(?s), "http://purl.obolibrary.org/obo/DOID_"))
+		?s rdfs:subClassOf ?cls .
+		FILTER (!isBlank(?cls))
+		FILTER (!STRSTARTS(STR(?cls), "http://purl.obolibrary.org/obo/DOID_"))
+	} UNION {
+		?s a owl:Class .
+		FILTER (STRSTARTS(STR(?s), "http://purl.obolibrary.org/obo/DOID_"))
+		?s owl:equivalentClass ?rest .
+		?rest owl:intersectionOf ?intersection .
+		?intersection rdf:first ?cls .
+		FILTER (!STRSTARTS(STR(?cls), "http://purl.obolibrary.org/obo/DOID_"))
+	}
+}

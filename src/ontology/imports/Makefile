@@ -90,12 +90,13 @@ foodon:
 
 .PHONY: geno
 geno:
-	$(ROBOT) filter --input-iri "$(OBO)$@.owl"\
-	 --term obo:GENO_0000141 --select "self descendants annotations" \
+	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
+	 --method mireot --upper-term obo:GENO_0000141\
+	 --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
-	remove --term obo:GENO_0000889 \
-	annotate --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
 
 .PHONY: hp

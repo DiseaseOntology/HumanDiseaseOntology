@@ -38,6 +38,7 @@ $(FULL):
 	remove --select "owl:deprecated='true'^^xsd:boolean" \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
+	remove --select object-properties --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

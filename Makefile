@@ -57,10 +57,14 @@ $(IMPS): | build/robot.jar
 
 report: build/reports/report.tsv
 
+.PHONY: build/reports
+build/reports:
+	mkdir -p $@
+
 # Report for general issues on doid-edit
 
 .PRECIOUS: build/reports/report.tsv
-build/reports/report.tsv: $(EDIT) verify-edit | build/robot.jar
+build/reports/report.tsv: $(EDIT) verify-edit | build/robot.jar build/reports
 	@echo "" && \
 	$(ROBOT) report --input $<\
 	 --profile src/sparql/report/report_profile.txt\
@@ -204,12 +208,12 @@ build/doid-last.owl: | build/robot.jar
 	@$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
 	 --collapse-import-closure true --output $@
 
-$(QUERIES):: build/doid-last.owl | build/robot.jar
+$(QUERIES):: build/doid-last.owl | build/robot.jar build/reports
 	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (previous)" && \
 	$(ROBOT) query --input $< --query $@\
 	 $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(@)))
 
-$(QUERIES):: $(DM).owl | build/robot.jar
+$(QUERIES):: $(DM).owl | build/robot.jar build/reports
 	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (current)" && \
 	$(ROBOT) query --input $< --query $@ \
 	 $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(@)))
@@ -233,17 +237,17 @@ DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
 verify: verify-edit verify-do verify-dnc
 
 # Verify doid-edit.owl
-verify-edit: $(EDIT) | build/robot.jar
+verify-edit: $(EDIT) | build/robot.jar build/reports
 	@echo "Verifying $< (see build/reports on error)" && \
 	$(ROBOT) verify --input $<\
 	 --queries $(EDIT_V_QUERIES) --output-dir build/reports
 
 # Verify doid.obo
-verify-do: $(DO).obo | build/robot.jar
+verify-do: $(DO).obo | build/robot.jar build/reports
 	@$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) --output-dir build/reports
 
 # Verify doid-non-classified.obo
-verify-dnc: $(DNC).obo | build/robot.jar
+verify-dnc: $(DNC).obo | build/robot.jar build/reports
 	@$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build/reports

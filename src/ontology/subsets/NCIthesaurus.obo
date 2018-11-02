@@ -1,18 +1,19 @@
 format-version: 1.2
-data-version: doid/2018-10-24/subsets/NCIthesaurus.owl
-subsetdef: DO_AGR_slim ""
-subsetdef: DO_cancer_slim ""
-subsetdef: DO_FlyBase_slim ""
-subsetdef: DO_MGI_slim ""
-subsetdef: DO_rare_slim ""
-subsetdef: GOLD ""
-subsetdef: gram-negative_bacterial_infectious_disease ""
-subsetdef: gram-positive_bacterial_infectious_disease ""
-subsetdef: NCIthesaurus ""
-subsetdef: sexually_transmitted_infectious_disease ""
-subsetdef: tick-borne_infectious_disease ""
-subsetdef: TopNodes_DOcancerslim ""
-subsetdef: zoonotic_infectious_disease ""
+data-version: doid/2018-11-02/subsets/NCIthesaurus.owl
+date: 11:02:2018 12:32
+subsetdef: DO_AGR_slim ""DO_AGR_slim""
+subsetdef: DO_cancer_slim ""DO cancer slim""
+subsetdef: DO_FlyBase_slim ""DO_FlyBase_slim""
+subsetdef: DO_MGI_slim ""DO_MGI_slim""
+subsetdef: DO_rare_slim ""DO_rare_slim""
+subsetdef: GOLD ""GOLD""
+subsetdef: gram-negative_bacterial_infectious_disease ""gram-negative bacterial infectious disease""
+subsetdef: gram-positive_bacterial_infectious_disease ""gram-positive bacterial infectious disease""
+subsetdef: NCIthesaurus ""NCIt""
+subsetdef: sexually_transmitted_infectious_disease ""sexually transmitted infectious disease""
+subsetdef: tick-borne_infectious_disease ""tick-borne infectious disease""
+subsetdef: TopNodes_DOcancerslim ""TopNodes_DOcancerslim""
+subsetdef: zoonotic_infectious_disease ""zoonotic infectious disease""
 ontology: doid/subsets/NCIthesaurus
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -22435,7 +22436,6 @@ synonym: "fallopian tube malignant mixed Mullerian tumor" EXACT []
 xref: NCI:C40124
 xref: UMLS_CUI:C1517117
 is_a: DOID:1964 ! fallopian tube cancer
-is_a: DOID:4236 ! carcinosarcoma
 
 [Term]
 id: DOID:1973
@@ -22447,7 +22447,6 @@ synonym: "fallopian tube mullerian adenosarcoma" EXACT []
 xref: NCI:C40125
 xref: UMLS_CUI:C1517121
 is_a: DOID:1970 ! fallopian tube carcinosarcoma
-is_a: DOID:1974 ! adenosarcoma
 
 [Term]
 id: DOID:1974
@@ -25647,6 +25646,7 @@ xref: MESH:D018194
 xref: NCI:C3726
 xref: SNOMEDCT_US_2018_03_01:40293003
 xref: UMLS_CUI:C0206622
+is_a: DOID:4045 ! muscle cancer
 is_a: DOID:4236 ! carcinosarcoma
 
 [Term]
@@ -25691,7 +25691,6 @@ xref: NCI2004_11_17:C4294
 xref: NCI:C4294
 xref: SNOMEDCT_US_2018_03_01:72889001
 xref: UMLS_CUI:C0334530
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:262
@@ -25790,7 +25789,7 @@ is_a: DOID:3112 ! papillary adenocarcinoma
 id: DOID:2634
 name: cystadenoma
 namespace: disease_ontology
-def: "An adenoma that is a cystic." [url:http\://en.wikipedia.org/wiki/Cystadenoma]
+def: "An adenoma that forms a cyst." [url:http\://en.wikipedia.org/wiki/Cystadenoma]
 subset: NCIthesaurus
 synonym: "Cystadenoma" EXACT [SNOMEDCT_2005_07_31:47620003]
 synonym: "Cystoma" EXACT [NCI2004_11_17:C2972]
@@ -26245,7 +26244,6 @@ synonym: "renal cell adenoma" EXACT [SNOMEDCT_2005_07_31:41627005]
 xref: NCI:C8383
 xref: SNOMEDCT_US_2018_03_01:41627005
 xref: UMLS_CUI:C0334684
-is_a: DOID:657 ! adenoma
 is_a: DOID:731 ! urinary system benign neoplasm
 
 [Term]
@@ -27633,7 +27631,6 @@ xref: NCI2004_11_17:C4795
 xref: NCI:C4795
 xref: SNOMEDCT_US_2018_03_01:21173002
 xref: UMLS_CUI:C0520477
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:2885
@@ -27689,7 +27686,6 @@ synonym: "adenoma of thyroid gland" EXACT []
 xref: MESH:D013964
 xref: NCI:C3502
 xref: UMLS_CUI:C0151468
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:2892
@@ -28045,7 +28041,6 @@ xref: NCI2004_11_17:C6090
 xref: NCI2004_11_17:C6804
 xref: NCI:C6804
 xref: UMLS_CUI:C0346342
-is_a: DOID:154 ! mixed cell type cancer
 is_a: DOID:294 ! lacrimal gland cancer
 
 [Term]
@@ -30026,7 +30021,6 @@ synonym: "Embryonal Rhabdomyosarcoma of the prostate" EXACT [NCI2004_11_17:C5525
 xref: NCI2004_11_17:C5525
 xref: NCI:C5525
 xref: UMLS_CUI:C1335508
-is_a: DOID:3246 ! embryonal rhabdomyosarcoma
 is_a: DOID:3252 ! prostate rhabdomyosarcoma
 
 [Term]
@@ -30039,7 +30033,6 @@ synonym: "Rhabdomyosarcoma of the prostate" EXACT [NCI2004_11_17:C5522]
 xref: NCI2004_11_17:C5522
 xref: NCI:C5522
 xref: UMLS_CUI:C1335518
-is_a: DOID:3247 ! rhabdomyosarcoma
 is_a: DOID:4054 ! prostate sarcoma
 
 [Term]
@@ -30545,7 +30538,7 @@ is_a: DOID:3324 ! mood disorder
 id: DOID:3314
 name: angiomyolipoma
 namespace: disease_ontology
-def: "A cell type benign neoplasm that from perivascular epithelioid cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:http\:www.rsroc.org.tw/db/ejournal/article/V33/N4/330405.pdf]
+def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs consisting of perivascular epithelioid (pericyte and macrophage) cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:http\:www.rsroc.org.tw/db/ejournal/article/V33/N4/330405.pdf]
 subset: NCIthesaurus
 synonym: "Angiomyolipoma" EXACT [SNOMEDCT_2005_07_31:19929002]
 xref: MESH:D018207
@@ -30855,7 +30848,7 @@ synonym: "osseous hemangiosarcoma" EXACT [NCI2004_11_17:C6479]
 xref: NCI2004_11_17:C6479
 xref: NCI:C6479
 xref: UMLS_CUI:C1332574
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3352
@@ -30866,8 +30859,6 @@ synonym: "malignant fibrous Histiocytoma of the bone" EXACT [NCI2004_11_17:C8563
 xref: NCI2004_11_17:C8563
 xref: NCI:C8563
 xref: UMLS_CUI:C0740479
-is_a: DOID:1907 ! malignant fibroxanthoma
-is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:3355
@@ -30901,7 +30892,7 @@ synonym: "localized Osteogenic sarcoma" EXACT [NCI2004_11_17:C7780]
 xref: NCI2004_11_17:C7780
 xref: NCI:C7780
 xref: UMLS_CUI:C0278511
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3357
@@ -30913,7 +30904,6 @@ synonym: "extraskeletal osteosarcoma" EXACT []
 xref: NCI2004_11_17:C8810
 xref: NCI:C8810
 xref: UMLS_CUI:C0855052
-is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:3360
@@ -30922,7 +30912,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C6470
 xref: UMLS_CUI:C1334820
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3361
@@ -30931,7 +30921,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C6585
 xref: UMLS_CUI:C1332986
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3367
@@ -30941,7 +30931,6 @@ subset: NCIthesaurus
 xref: NCI:C7154
 xref: UMLS_CUI:C1332579
 is_a: DOID:1967 ! leiomyosarcoma
-is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:3368
@@ -31067,7 +31056,7 @@ xref: NCI2004_11_17:C4021
 xref: NCI:C4021
 xref: SNOMEDCT_US_2018_03_01:76312009
 xref: UMLS_CUI:C0279603
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3373
@@ -31106,7 +31095,7 @@ synonym: "primary Osteosarcoma of bone" EXACT [NCI2004_11_17:C4834]
 xref: NCI2004_11_17:C4834
 xref: NCI:C53707
 xref: UMLS_CUI:C0585442
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3377
@@ -31127,7 +31116,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C38157
 xref: UMLS_CUI:C1334704
-is_a: DOID:3347 ! osteosarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:338
@@ -31152,8 +31141,7 @@ synonym: "Liposarcoma of the bone" EXACT [NCI2004_11_17:C7598]
 xref: NCI2004_11_17:C7598
 xref: NCI:C7598
 xref: UMLS_CUI:C1332581
-is_a: DOID:3347 ! osteosarcoma
-is_a: DOID:3382 ! liposarcoma
+is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3382
@@ -34116,7 +34104,6 @@ xref: MESH:D010911
 xref: NCI2004_11_17:C3329
 xref: NCI:C3329
 xref: UMLS_CUI:C0032000
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:384
@@ -34505,7 +34492,7 @@ xref: SNOMEDCT_US_2018_03_01:25324008
 xref: SNOMEDCT_US_2018_03_01:76345009
 xref: UMLS_CUI:C0021670
 xref: UMLS_CUI:C0022134
-is_a: DOID:657 ! adenoma
+is_a: DOID:3918 ! pancreatic cystadenoma
 
 [Term]
 id: DOID:3893
@@ -34554,7 +34541,6 @@ xref: NCI:C7563
 xref: SNOMEDCT_US_2018_03_01:81393009
 xref: UMLS_CUI:C0019522
 is_a: DOID:2664 ! sweat gland neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:3904
@@ -35502,7 +35488,6 @@ xref: NCI2004_11_17:C5627
 xref: NCI:C5627
 xref: UMLS_CUI:C1335687
 is_a: DOID:1995 ! rectum sarcoma
-is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
 id: DOID:4054
@@ -35585,7 +35570,6 @@ synonym: "Rhabdomyosarcoma of testis" EXACT [NCI2004_11_17:C6378]
 xref: NCI2004_11_17:C6378
 xref: NCI:C6378
 xref: UMLS_CUI:C1336726
-is_a: DOID:3247 ! rhabdomyosarcoma
 is_a: DOID:4062 ! testis sarcoma
 
 [Term]
@@ -35839,7 +35823,6 @@ synonym: "uterine Corpus mullerian adenosarcoma" EXACT [NCI2004_11_17:C6336]
 xref: NCI2004_11_17:C6336
 xref: NCI:C6336
 xref: UMLS_CUI:C1336917
-is_a: DOID:1974 ! adenosarcoma
 is_a: DOID:4114 ! uterine body mixed cancer
 
 [Term]
@@ -36438,7 +36421,6 @@ subset: NCIthesaurus
 synonym: "uterine corpus endometrial stromal tumor" EXACT []
 xref: NCI:C40219
 xref: UMLS_CUI:C1519849
-is_a: DOID:4226 ! endometrial stromal sarcoma
 is_a: DOID:5165 ! uterine corpus sarcoma
 
 [Term]
@@ -38285,7 +38267,6 @@ synonym: "hemangiosarcoma of the Thyroid" EXACT [NCI2004_11_17:C6043]
 xref: NCI2004_11_17:C6043
 xref: NCI:C6043
 xref: UMLS_CUI:C1336748
-is_a: DOID:0001816 ! angiosarcoma
 is_a: DOID:4515 ! thyroid sarcoma
 
 [Term]
@@ -38311,7 +38292,6 @@ synonym: "hemangiosarcoma of the skin" EXACT [NCI2004_11_17:C4489]
 xref: NCI2004_11_17:C4489
 xref: NCI:C4489
 xref: UMLS_CUI:C0346081
-is_a: DOID:0001816 ! angiosarcoma
 is_a: DOID:2687 ! skin sarcoma
 
 [Term]
@@ -38373,7 +38353,6 @@ synonym: "Prostatic hemangiosarcoma" EXACT [NCI2004_11_17:C5528]
 xref: NCI2004_11_17:C5528
 xref: NCI:C5528
 xref: UMLS_CUI:C1335504
-is_a: DOID:0001816 ! angiosarcoma
 is_a: DOID:4054 ! prostate sarcoma
 
 [Term]
@@ -41353,7 +41332,6 @@ synonym: "uterine corpus adenomyoma" EXACT []
 xref: NCI2004_11_17:C6338
 xref: NCI:C6338
 xref: UMLS_CUI:C1336903
-is_a: DOID:2609 ! adenomyoma
 is_a: DOID:9460 ! uterine corpus cancer
 
 [Term]
@@ -41364,7 +41342,7 @@ def: "An adenomyoma that is located_in the cervix." [url:https\://www.ncbi.nlm.n
 subset: NCIthesaurus
 xref: NCI:C40231
 xref: UMLS_CUI:C1516404
-is_a: DOID:2609 ! adenomyoma
+is_a: DOID:4362 ! cervical cancer
 
 [Term]
 id: DOID:4997
@@ -42975,7 +42953,6 @@ synonym: "leiomyosarcoma of the skin" EXACT [NCI2004_11_17:C4484]
 xref: NCI2004_11_17:C4484
 xref: NCI:C4484
 xref: UMLS_CUI:C0346067
-is_a: DOID:1967 ! leiomyosarcoma
 is_a: DOID:2687 ! skin sarcoma
 
 [Term]
@@ -43033,7 +43010,6 @@ synonym: "leiomyosarcoma of the prostate" EXACT [NCI2004_11_17:C5526]
 xref: NCI2004_11_17:C5526
 xref: NCI:C5526
 xref: UMLS_CUI:C1335511
-is_a: DOID:1967 ! leiomyosarcoma
 is_a: DOID:4054 ! prostate sarcoma
 
 [Term]
@@ -43047,7 +43023,6 @@ xref: NCI2004_11_17:C6326
 xref: NCI:C6326
 xref: UMLS_CUI:C1336940
 is_a: DOID:1901 ! vagina sarcoma
-is_a: DOID:1967 ! leiomyosarcoma
 
 [Term]
 id: DOID:5284
@@ -43113,7 +43088,6 @@ synonym: "leiomyosarcoma of Corpus Uteri" EXACT [NCI2004_11_17:C6340]
 xref: NCI2004_11_17:C6340
 xref: NCI:C6340
 xref: UMLS_CUI:C0280631
-is_a: DOID:1967 ! leiomyosarcoma
 is_a: DOID:5165 ! uterine corpus sarcoma
 
 [Term]
@@ -43199,7 +43173,6 @@ synonym: "leiomyosarcoma of rectum" EXACT [NCI2004_11_17:C5549]
 xref: NCI2004_11_17:C5549
 xref: NCI:C5549
 xref: UMLS_CUI:C1335683
-is_a: DOID:1967 ! leiomyosarcoma
 is_a: DOID:1995 ! rectum sarcoma
 
 [Term]
@@ -43717,7 +43690,6 @@ xref: NCI:C2942
 xref: SNOMEDCT_US_2018_03_01:39471001
 xref: UMLS_CUI:C0008309
 is_a: DOID:0050625 ! biliary tract neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5382
@@ -43729,7 +43701,6 @@ synonym: "Bartholin gland adenoma" EXACT []
 xref: NCI:C40299
 xref: UMLS_CUI:C1511048
 is_a: DOID:2068 ! Bartholin's gland benign neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5384
@@ -43743,7 +43714,6 @@ xref: NCI:C4129
 xref: SNOMEDCT_US_2018_03_01:83025009
 xref: UMLS_CUI:C0334285
 is_a: DOID:0050625 ! biliary tract neoplasm
-is_a: DOID:2634 ! cystadenoma
 
 [Term]
 id: DOID:5385
@@ -43768,7 +43738,6 @@ xref: NCI2004_11_17:C4455
 xref: NCI:C4455
 xref: UMLS_CUI:C0345964
 is_a: DOID:3683 ! lung benign neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5387
@@ -43781,7 +43750,6 @@ synonym: "adenoma of the middle ear" EXACT [NCI2004_11_17:C6834]
 xref: NCI2004_11_17:C6834
 xref: NCI:C6834
 xref: UMLS_CUI:C1334759
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5389
@@ -43835,7 +43803,6 @@ synonym: "Bronchial adenoma" EXACT []
 xref: NCI:C3494
 xref: SNOMEDCT_US_2018_03_01:24482001
 xref: UMLS_CUI:C0149845
-is_a: DOID:5386 ! lung adenoma
 
 [Term]
 id: DOID:5392
@@ -43917,7 +43884,7 @@ synonym: "Lipoadenoma" EXACT [SNOMEDCT_2005_07_31:22024005]
 xref: NCI:C4159
 xref: SNOMEDCT_US_2018_03_01:22024005
 xref: UMLS_CUI:C0334325
-is_a: DOID:657 ! adenoma
+is_a: DOID:0060123 ! connective tissue benign neoplasm
 
 [Term]
 id: DOID:5401
@@ -43951,7 +43918,7 @@ xref: MESH:D000236
 xref: NCI:C3685
 xref: SNOMEDCT_US_2018_03_01:79494009
 xref: UMLS_CUI:C0205648
-is_a: DOID:657 ! adenoma
+is_a: DOID:3918 ! pancreatic cystadenoma
 
 [Term]
 id: DOID:5408
@@ -44181,7 +44148,6 @@ xref: NCI2004_11_17:C7126
 xref: NCI:C7126
 xref: UMLS_CUI:C1331535
 is_a: DOID:5381 ! bile duct adenoma
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5438
@@ -44195,7 +44161,6 @@ xref: NCI2004_11_17:C5857
 xref: NCI:C5857
 xref: UMLS_CUI:C1331534
 is_a: DOID:5381 ! bile duct adenoma
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:5439
@@ -46326,7 +46291,6 @@ xref: NCI2004_11_17:C5615
 xref: NCI:C5615
 xref: UMLS_CUI:C1333175
 is_a: DOID:2687 ! skin sarcoma
-is_a: DOID:3382 ! liposarcoma
 
 [Term]
 id: DOID:5713
@@ -46451,7 +46415,6 @@ def: "A cystadenoma that is located_in the seminal vesicle." [url:https\://www.n
 subset: NCIthesaurus
 xref: NCI:C39907
 xref: UMLS_CUI:C1519234
-is_a: DOID:2634 ! cystadenoma
 is_a: DOID:3855 ! seminal vesicle tumor
 
 [Term]
@@ -46462,7 +46425,6 @@ def: "A rete ovarii adenoma that is characterized by the presence of cysts and/o
 subset: NCIthesaurus
 xref: NCI:C40019
 xref: UMLS_CUI:C1514907
-is_a: DOID:2634 ! cystadenoma
 is_a: DOID:6837 ! rete ovarii adenoma
 
 [Term]
@@ -48697,7 +48659,6 @@ def: "A uterus leiomyosarcoma characterized by the presence of round epithelioid
 subset: NCIthesaurus
 xref: NCI:C40174
 xref: UMLS_CUI:C1519851
-is_a: DOID:5264 ! epithelioid leiomyosarcoma
 is_a: DOID:5289 ! uterus leiomyosarcoma
 
 [Term]
@@ -48999,8 +48960,6 @@ synonym: "Osteosarcoma of mediastinum" EXACT [NCI2004_11_17:C6615]
 xref: NCI2004_11_17:C6615
 xref: NCI:C6615
 xref: UMLS_CUI:C1334675
-is_a: DOID:3347 ! osteosarcoma
-is_a: DOID:3357 ! extraosseous osteosarcoma
 is_a: DOID:4050 ! mediastinum sarcoma
 
 [Term]
@@ -49819,8 +49778,7 @@ synonym: "Osteosarcoma of Liver" EXACT [NCI2004_11_17:C5833]
 xref: NCI2004_11_17:C5833
 xref: NCI:C5833
 xref: UMLS_CUI:C1333974
-is_a: DOID:270 ! liver sarcoma
-is_a: DOID:3357 ! extraosseous osteosarcoma
+is_a: DOID:3571 ! liver cancer
 
 [Term]
 id: DOID:6376
@@ -50270,7 +50228,6 @@ subset: NCIthesaurus
 xref: NCI:C39956
 xref: UMLS_CUI:C1514910
 is_a: DOID:5639 ! rete testis neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:6484
@@ -50690,7 +50647,6 @@ def: "A uterine fibroid that is characterized by islands of smooth muscle in myx
 subset: NCIthesaurus
 xref: NCI:C40175
 xref: UMLS_CUI:C1519861
-is_a: DOID:5268 ! myxoid leiomyosarcoma
 is_a: DOID:5289 ! uterus leiomyosarcoma
 
 [Term]
@@ -51839,7 +51795,6 @@ subset: NCIthesaurus
 xref: NCI:C40018
 xref: UMLS_CUI:C1514905
 is_a: DOID:4895 ! rete ovarii neoplasm
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:6838
@@ -51850,7 +51805,6 @@ subset: NCIthesaurus
 xref: NCI:C40020
 xref: UMLS_CUI:C1514906
 is_a: DOID:4895 ! rete ovarii neoplasm
-is_a: DOID:5482 ! cystadenofibroma
 
 [Term]
 id: DOID:6839
@@ -54418,7 +54372,7 @@ is_a: DOID:2870 ! endometrial adenocarcinoma
 id: DOID:7437
 name: uterus perivascular epithelioid cell tumor
 namespace: disease_ontology
-def: "A perivascular epithelioid cell tumor that is located_in the uterus." [url:\nhttp\://www.pathologyoutlines.com/topic/uterusPEComa.html, url:https\://en.wikipedia.org/wiki/Perivascular_epithelioid_cell_tumour, url:https\://www.ncbi.nlm.nih.gov/pubmed/24698426]
+def: "A perivascular epithelioid cell tumor that is located_in the uterus." [url:http\://www.pathologyoutlines.com/topic/uterusPEComa.html, url:https\://en.wikipedia.org/wiki/Perivascular_epithelioid_cell_tumour, url:https\://www.ncbi.nlm.nih.gov/pubmed/24698426]
 subset: NCIthesaurus
 synonym: "uterine corpus PEComa" EXACT []
 xref: NCI:C40180
@@ -55272,7 +55226,6 @@ xref: MESH:D010282
 xref: NCI2004_11_17:C3916
 xref: NCI:C3916
 xref: UMLS_CUI:C0262587
-is_a: DOID:657 ! adenoma
 
 [Term]
 id: DOID:7609
@@ -55326,7 +55279,6 @@ xref: NCI:C4334
 xref: SNOMEDCT_US_2018_03_01:14494009
 xref: UMLS_CUI:C0334612
 is_a: DOID:7614 ! meninges sarcoma
-is_a: DOID:7615 ! sarcomatosis
 
 [Term]
 id: DOID:7614
@@ -56242,7 +56194,6 @@ def: "An atypical polypoid adenomyoma that is located_in the uterine corpus." [u
 subset: NCIthesaurus
 xref: NCI:C40235
 xref: UMLS_CUI:C1519844
-is_a: DOID:4993 ! atypical polypoid adenomyoma
 is_a: DOID:4994 ! adenomyoma of uterine corpus
 
 [Term]
@@ -56600,7 +56551,6 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C7002
 xref: UMLS_CUI:C1335150
-is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:7996
@@ -56679,7 +56629,6 @@ xref: NCI2004_11_17:C4140
 xref: NCI:C4140
 xref: SNOMEDCT_US_2018_03_01:8097004
 xref: UMLS_CUI:C0334303
-is_a: DOID:5386 ! lung adenoma
 
 [Term]
 id: DOID:8006
@@ -57556,7 +57505,6 @@ subset: NCIthesaurus
 xref: NCI:C40114
 xref: UMLS_CUI:C1517111
 is_a: DOID:5478 ! fallopian tube adenofibroma
-is_a: DOID:5482 ! cystadenofibroma
 
 [Term]
 id: DOID:8216

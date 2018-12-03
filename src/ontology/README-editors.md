@@ -22,10 +22,10 @@ The current (2015) ID ranges include
  
  	DOID:$sequence(7,50000,50999)$  Lynn 
  	DOID:$sequence(7,60000,60999)$  James
- 	DOID:$sequence(7,70000,70999)$  Anu
+ 	DOID:$sequence(7,70000,70999)$  Michael
  	DOID:$sequence(7,80000,80999)$  Lynn
  	
- 	DOID:0100000 Stan (RGD) (in reserve)
+ 	DOID:0100000 (in reserve)
  	DOID:0110000 Sue (MGD)
 
 

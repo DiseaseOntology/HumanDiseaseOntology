@@ -199,7 +199,7 @@ publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
 
 QUERIES := $(wildcard src/sparql/*-report.rq)
 
-counts: build/reports/report-diff.txt
+counts: build/reports/report-diff.txt build/reports/branch-count.tsv
 .PHONY: $(QUERIES)
 
 # Get the last build of DO from IRI
@@ -222,6 +222,12 @@ build/reports/report-diff.txt: $(QUERIES)
 	@python build/report-diff.py && \
 	cp $@ $(DIR)report-diff.txt && \
 	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
+
+.PHONY: build/reports/branch-count.tsv
+build/reports/branch-count.tsv: $(DNC).owl | build/reports
+	@echo "Counting all branches..." && \
+	src/sparql/branch_count/branch_count.py $< $@ && \
+	echo "Branch count available at $@"
 
 #-----------------------------
 # Ensure proper OBO structure

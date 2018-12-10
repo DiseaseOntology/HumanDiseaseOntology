@@ -59,7 +59,7 @@ report: build/reports/report.tsv
 
 .PHONY: build/reports
 build/reports:
-	mkdir -p $@
+	@mkdir -p $@
 
 # Report for general issues on doid-edit
 
@@ -92,6 +92,7 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 $(DO).obo: $(DO).owl | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
+	remove --term obo:IAO_0000119 --trim true \
 	convert --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
@@ -115,7 +116,8 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	echo "Created $@"
 
 $(DM).obo: $(DM).owl | build/robot.jar
-	@$(ROBOT) convert --input $< --output $@ --check false \
+	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
+	convert --input $< --output $@ --check false \
 	&& echo "Created $@"
 
 # ----------------------------------------
@@ -124,9 +126,7 @@ $(DM).obo: $(DM).owl | build/robot.jar
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-# Generate from EDIT file to avoid asserted inferences
-
-$(DNC).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
+$(DNC).owl: $(DO).owl build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select anonymous \
 	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
@@ -136,7 +136,8 @@ $(DNC).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	&& echo "Created $@"
 
 $(DNC).obo: $(DNC).owl | build/robot.jar
-	@$(ROBOT) convert --input $< --check false\
+	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
+	convert --input $< --check false\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
@@ -152,26 +153,37 @@ $(DNC).json: $(DNC).owl | build/robot.jar
 # ----------------------------------------
 
 SUB = src/ontology/subsets/
-SUBS = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
+SUB_NAMES = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
  NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
  tick-borne_infectious_disease zoonotic_infectious_disease
+SUBS = $(foreach N,$(SUB_NAMES),$(addprefix $(SUB), $(N)))
+OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
+OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))
+JSON_SUBS = $(foreach N,$(SUBS),$(addsuffix .json, $(N)))
 
-subsets: $(SUBS)
+subsets: $(OWL_SUBS) $(OBO_SUBS) $(JSON_SUBS)
 
-# Generate subsets (specified by SUBS)
-
-$(SUBS): $(DNC).owl | build/robot.jar
+$(OWL_SUBS): $(DNC).owl | build/robot.jar
 	@$(ROBOT) filter --input $< \
-	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $@)> annotations" \
-	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$@.owl"\
-	 --ontology-iri "$(OBO)doid/subsets/$@.owl"\
-	 --output $(addprefix $(SUB), $(addsuffix .owl, $@)) && \
-	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
-	 --output $(addprefix $(SUB), $(addsuffix .obo, $@)) --check false && \
-	$(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
-	 --output $(addprefix $(SUB), $(addsuffix .json, $@)) && \
-	echo "Created subset: $@"
+	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
+	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
+	echo "Created $@"
+
+$(OBO_SUBS): $(DNC).obo | build/robot.jar
+	@$(ROBOT) filter --input $< \
+	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
+	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
+	echo "Created $@"
+
+$(JSON_SUBS): $(DNC).json | build/robot.jar
+	@$(ROBOT) filter --input $< \
+	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
+	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
+	echo "Created $@"
 
 # ----------------------------------------
 # RELEASE
@@ -250,10 +262,12 @@ verify-edit: $(EDIT) | build/robot.jar build/reports
 
 # Verify doid.obo
 verify-do: $(DO).obo | build/robot.jar build/reports
-	@$(ROBOT) verify --input $<\
+	@echo "Verifying $< (see build/reports on error)" && \
+	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) --output-dir build/reports
 
 # Verify doid-non-classified.obo
 verify-dnc: $(DNC).obo | build/robot.jar build/reports
-	@$(ROBOT) verify --input $<\
+	@echo "Verifying $< (see build/reports on error)" && \
+	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir build/reports

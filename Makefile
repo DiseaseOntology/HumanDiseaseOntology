@@ -136,9 +136,8 @@ $(DNC).owl: $(DO).owl build/reports/report.tsv | build/robot.jar
 	&& echo "Created $@"
 
 $(DNC).obo: $(DNC).owl | build/robot.jar
-	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
-	convert --input $< --check false\
-	 --output $(basename $@)-temp.obo && \
+	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
+	convert --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
 	cp $@ $(HD).obo \

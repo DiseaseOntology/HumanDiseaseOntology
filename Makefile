@@ -193,7 +193,7 @@ DIR = src/ontology/releases/$(DATE)/
 # Move release files to a new dir
 
 .PHONY: publish
-publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo $(SUBS)
+publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo subsets
 	@mkdir -p $(DIR) && \
 	cp $(DO).* $(DIR) && \
 	cp $(DM).* $(DIR) && \

@@ -13,7 +13,7 @@ queries = ['anatomical_entity',
 		   'physical_disorder', 
 		   'syndrome']
 robot_cmd = 'java -jar build/robot.jar query \
- --input %s.rdf --tdb true --keep-tdb-mappings true --query %s %s'
+ --input %s.rdf --query %s %s'
 
 def main(args):
 	input_ont = args[1]

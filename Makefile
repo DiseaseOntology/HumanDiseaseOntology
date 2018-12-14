@@ -177,7 +177,7 @@ $(OBO_SUBS): $(DNC).obo | build/robot.jar
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(JSON_SUBS): $(DNC).json | build/robot.jar
+$(JSON_SUBS): $(DNC).owl | build/robot.jar
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\

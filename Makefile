@@ -116,8 +116,8 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	echo "Created $@"
 
 $(DM).obo: $(DM).owl | build/robot.jar
-	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
-	convert --input $< --output $@ --check false \
+	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
+	convert --output $@ --check false \
 	&& echo "Created $@"
 
 # ----------------------------------------

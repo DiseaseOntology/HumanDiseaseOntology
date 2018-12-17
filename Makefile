@@ -170,7 +170,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(OBO_SUBS): $(DNC).obo | build/robot.jar
+$(OBO_SUBS): $(DNC).owl | build/robot.jar
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
@@ -193,7 +193,10 @@ DIR = src/ontology/releases/$(DATE)/
 # Move release files to a new dir
 
 .PHONY: publish
-publish: $(DO).owl $(DO).obo $(DM).owl $(DM).obo $(DNC).owl $(DNC).obo subsets
+publish: $(DO).owl $(DO).obo $(DO).json\
+ $(DM).owl $(DM).obo\
+ $(DNC).owl $(DNC).obo $(DNC).json\
+ subsets
 	@mkdir -p $(DIR) && \
 	cp $(DO).* $(DIR) && \
 	cp $(DM).* $(DIR) && \

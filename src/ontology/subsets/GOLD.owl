@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/GOLD.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2018-12-14/subsets/GOLD.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2018-12-17/subsets/GOLD.owl"/>
     </owl:Ontology>
     
 
@@ -28,12 +28,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
     
 
 
@@ -106,13 +100,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050352">
         <obo:IAO_0000115>A botulism that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F), which are transmitted by ingestion of food contaminated with preformed toxins, has material basis in Clostridium botulinum A, has material basis in Clostridium botulinum B, has material basis in Clostridium botulinum E and has material basis in Clostridium botulinum F. The infection has symptom blurred vision, has symptom diplopia, has symptom dysarthria, has symptom dysphonia, has symptom dysphagia and has symptom descending muscle paralysis.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://www.health.state.nm.us/erd/HealthData/Foodborne/Botulism.pdf</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050352</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#GOLD"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#gram-positive_bacterial_infectious_disease"/>
         <rdfs:label>foodborne botulism</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050352"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A botulism that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F), which are transmitted by ingestion of food contaminated with preformed toxins, has material basis in Clostridium botulinum A, has material basis in Clostridium botulinum B, has material basis in Clostridium botulinum E and has material basis in Clostridium botulinum F. The infection has symptom blurred vision, has symptom diplopia, has symptom dysarthria, has symptom dysphonia, has symptom dysphagia and has symptom descending muscle paralysis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.health.state.nm.us/erd/HealthData/Foodborne/Botulism.pdf</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -133,8 +132,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060344">
         <obo:IAO_0000115>An acrodermatitis characterized by a chronically progressive course, leading to widespread atrophy of the skin. It is a clinical manifestation of Lyme borreliosis.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://en.wikipedia.org/wiki/Acrodermatitis_chronica_atrophicans</obo:IAO_0000119>
-        <obo:IAO_0000119>url:http://www.dermis.net/dermisroot/en/35111/diagnose.htm</obo:IAO_0000119>
         <oboInOwl:created_by>emitraka</oboInOwl:created_by>
         <oboInOwl:creation_date>2015-05-28T14:45:56Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>DERMO:0002165</oboInOwl:hasDbXref>
@@ -147,6 +144,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#GOLD"/>
         <rdfs:label>acrodermatitis chronica atrophicans</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060344"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An acrodermatitis characterized by a chronically progressive course, leading to widespread atrophy of the skin. It is a clinical manifestation of Lyme borreliosis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Acrodermatitis_chronica_atrophicans</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:http://www.dermis.net/dermisroot/en/35111/diagnose.htm</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -155,8 +159,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060345">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_11102"/>
         <obo:IAO_0000115>A bartonellosis that has_material_basis_in Bartonella henselae or has_material_basis_in Bartonella quintana. The disease is characterized by the proliferation of blood vessels, resulting in them forming tumour-like masses in the skin and other organs.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://en.wikipedia.org/wiki/Bacillary_angiomatosis</obo:IAO_0000119>
-        <obo:IAO_0000119>url:https://www.ncbi.nlm.nih.gov/pubmed/9407154</obo:IAO_0000119>
         <oboInOwl:created_by>emitraka</oboInOwl:created_by>
         <oboInOwl:creation_date>2015-05-28T16:26:12Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>MESH:D016917</oboInOwl:hasDbXref>
@@ -169,6 +171,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>bacillary angiomatosis</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060345"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A bartonellosis that has_material_basis_in Bartonella henselae or has_material_basis_in Bartonella quintana. The disease is characterized by the proliferation of blood vessels, resulting in them forming tumour-like masses in the skin and other organs.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Bacillary_angiomatosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/9407154</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -191,7 +200,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11092">
         <obo:IAO_0000115>A Salmonella infectious disease that involves inflammation of the stomach and intestines caused by Salmonella infection. The symptoms include diarrhea, vomiting, abdominal pain, fever and weakness.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://www.ncbi.nlm.nih.gov/sites/entrez/12631900</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>Enteric paratyphosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Salmonella food poisoning</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Salmonella food poisoning (disorder)</oboInOwl:hasExactSynonym>
@@ -208,6 +216,12 @@
         <rdfs:label>Salmonella gastroenteritis</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A Salmonella infectious disease that involves inflammation of the stomach and intestines caused by Salmonella infection. The symptoms include diarrhea, vomiting, abdominal pain, fever and weakness.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/sites/entrez/12631900</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11092"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -233,7 +247,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11102">
         <obo:IAO_0000115>A primary bacterial infectious disease that is caused by the bacteria of the genus Bartonella.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://en.wikipedia/org/wiki/Bartonellosis</obo:IAO_0000119>
         <oboInOwl:hasDbXref>CSP2005:2623-6984</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A44</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A44.9</oboInOwl:hasDbXref>
@@ -252,6 +265,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease"/>
         <rdfs:label>bartonellosis</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11102"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A primary bacterial infectious disease that is caused by the bacteria of the genus Bartonella.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia/org/wiki/Bartonellosis</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11102"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -286,7 +305,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_13250">
         <obo:IAO_0000115>A gastrointestinal system disease described as the condition of having frequent loose or liquid bowel movements. Acute diarrhea is a common cause of death in developing countries and the second most common cause of infant deaths worldwide. The loss of fluids through diarrhea can cause severe dehydration which is one cause of death in diarrhea sufferers. Along with water, sufferers also lose dangerous amounts of important salts, electrolytes, and other nutrients. There are at least four types of diarrhea: secretory diarrhea, osmotic diarrhea, motility-related diarrhea, and inflammatory diarrhea.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://en.wikipedia.org/wiki/Diarrhea#Types_of_diarrhea</obo:IAO_0000119>
         <oboInOwl:hasAlternativeId>DOID:0050006</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD9CM:009.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D003967</oboInOwl:hasDbXref>
@@ -299,6 +317,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#GOLD"/>
         <rdfs:label>diarrhea</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_13250"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A gastrointestinal system disease described as the condition of having frequent loose or liquid bowel movements. Acute diarrhea is a common cause of death in developing countries and the second most common cause of infant deaths worldwide. The loss of fluids through diarrhea can cause severe dehydration which is one cause of death in diarrhea sufferers. Along with water, sufferers also lose dangerous amounts of important salts, electrolytes, and other nutrients. There are at least four types of diarrhea: secretory diarrhea, osmotic diarrhea, motility-related diarrhea, and inflammatory diarrhea.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Diarrhea#Types_of_diarrhea</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -327,8 +351,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1498">
         <obo:IAO_0000115>A primary bacterial infectious disease that is described as an acute, diarrheal illness caused by infection of the intestine with the bacterium Vibrio cholerae, which is characterized by profuse watery diarrhea, vomiting, leg cramps, circulatory collapse and shock.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://www.cdc.gov/nczved/divisions/dfbmd/diseases/cholera/#what</obo:IAO_0000119>
-        <obo:IAO_0000119>url:http://www.cdc.gov/nczved/divisions/dfbmd/diseases/cholera/technical.html</obo:IAO_0000119>
         <oboInOwl:hasDbXref>GARD:6043</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A00</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A00.0</oboInOwl:hasDbXref>
@@ -352,6 +374,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease"/>
         <rdfs:label>cholera</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1498"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A primary bacterial infectious disease that is described as an acute, diarrheal illness caused by infection of the intestine with the bacterium Vibrio cholerae, which is characterized by profuse watery diarrhea, vomiting, leg cramps, circulatory collapse and shock.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.cdc.gov/nczved/divisions/dfbmd/diseases/cholera/#what</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:http://www.cdc.gov/nczved/divisions/dfbmd/diseases/cholera/technical.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1498"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -392,7 +421,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_874">
         <obo:IAO_0000115>A pneumonia involving inflammation of the lungs caused by bacteria.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://en.wikipedia.org/wiki/Bacterial_pneumonia</obo:IAO_0000119>
         <oboInOwl:hasAlternativeId>DOID:13815</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:J15.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:482.9</oboInOwl:hasDbXref>
@@ -411,6 +439,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_874"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pneumonia involving inflammation of the lungs caused by bacteria.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Bacterial_pneumonia</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_874"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Pneumonia due to other gram-negative bacteria</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ICD9CM_2006:482.83</oboInOwl:hasDbXref>
@@ -422,7 +456,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9471">
         <obo:IAO_0000115>A central nervous system disease that is characterized by an inflammation of the pia-arachnoid meninges. It can be caused by growth of bacteria, fungi, or parasites within the subarachnoid space or by the growth of bacteria or viruses within the meningeal or ependymal cells.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=mmed.section.5162</obo:IAO_0000119>
         <oboInOwl:hasAlternativeId>DOID:9712</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:G03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:G03.9</oboInOwl:hasDbXref>
@@ -438,6 +471,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>meningitis</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_9471"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A central nervous system disease that is characterized by an inflammation of the pia-arachnoid meninges. It can be caused by growth of bacteria, fungi, or parasites within the subarachnoid space or by the growth of bacteria or viruses within the meningeal or ependymal cells.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=mmed.section.5162</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -458,8 +497,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_96">
         <obo:IAO_0000115>A primary bacterial infectious disease that results_in infection located_in intestine caused by eating food contaminated with enterotoxins produced by bacteria, has_material_basis_in Staphylococcus aureus. The infection has_symptom diarrhea, has_symptom vomiting, has_symptom nausea, has_symptom cramps, and has_symptom weakness.</obo:IAO_0000115>
-        <obo:IAO_0000119>url:http://www.fda.gov/Food/FoodSafety/FoodborneIllness/FoodborneIllnessFoodbornePathogensNaturalToxins/BadBugBook/ucm070015.htm</obo:IAO_0000119>
-        <obo:IAO_0000119>url:http://www.in.gov/isdh/22420.htm</obo:IAO_0000119>
         <oboInOwl:hasDbXref>ICD10CM:A05.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:005.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM_2006:005.0</oboInOwl:hasDbXref>
@@ -477,6 +514,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#gram-positive_bacterial_infectious_disease"/>
         <rdfs:label>staphyloenterotoxemia</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_96"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A primary bacterial infectious disease that results_in infection located_in intestine caused by eating food contaminated with enterotoxins produced by bacteria, has_material_basis_in Staphylococcus aureus. The infection has_symptom diarrhea, has_symptom vomiting, has_symptom nausea, has_symptom cramps, and has_symptom weakness.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.fda.gov/Food/FoodSafety/FoodborneIllness/FoodborneIllnessFoodbornePathogensNaturalToxins/BadBugBook/ucm070015.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:http://www.in.gov/isdh/22420.htm</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_96"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>

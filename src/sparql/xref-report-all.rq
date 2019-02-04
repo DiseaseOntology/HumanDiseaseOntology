@@ -1,0 +1,70 @@
+# Return a count of xrefs on non-obsolete classes
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT (COUNT(?omimXref) as ?omim) (COUNT(?meshXref) as ?mesh) (COUNT(?nciXref) as ?nci) (COUNT(?ICD10Xref) as ?ICD10) (COUNT(?ICD9Xref) as ?ICD9) (COUNT(?SNOMEDXref) as ?SNOMED) (COUNT(?UMLSXref) as ?umls) (COUNT(?GARDXref) as ?GARD) (COUNT(?EFOXref) as ?efo) (COUNT(?IEDBXref) as ?IEDB) (COUNT(?ORDOXref) as ?ordo) (COUNT(?CSPXref) as ?csp) (COUNT(?dermoXref) as ?dermo) (COUNT(?KEGGXref) as ?kegg) (COUNT(?MEDDRAXref) as ?meddra) (COUNT(?MTHXref) as ?mth)  WHERE {
+	{ ?s oboInOwl:hasDbXref ?omimXref .
+	  FILTER regex(?omimXref, "^omim.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+	UNION
+	{ ?s oboInOwl:hasDbXref ?meshXref .
+	  FILTER regex(?meshXref, "^mesh.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+	UNION 
+	{ ?s oboInOwl:hasDbXref ?nciXref .
+	  FILTER regex(?nciXref, "^nci.*", "i")
+	  FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?ICD10Xref .
+          FILTER regex(?ICD10Xref, "^ICD10CM.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?ICD9Xref .
+          FILTER regex(?ICD9Xref, "^ICD9CM.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?SNOMEDXref .
+          FILTER regex(?SNOMEDXref, "^SNOMEDCT_US_2018.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?UMLSXref .
+          FILTER regex(?UMLSXref, "^UMLS_CUI.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?GARDXref .
+          FILTER regex(?GARDXref, "^GARD.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?EFOXref .
+          FILTER regex(?EFOXref, "^EFO.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?IEDBXref .
+          FILTER regex(?IEDBXref, "^IEDB.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+ UNION
+        { ?s oboInOwl:hasDbXref ?ORDOXref .
+          FILTER regex(?ORDOXref, "^ORDO.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+UNION
+        { ?s oboInOwl:hasDbXref ?CSPXref .
+          FILTER regex(?CSPXref, "^CSP.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+UNION
+        { ?s oboInOwl:hasDbXref ?dermoXref .
+          FILTER regex(?dermoXref, "^DERMO.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+UNION
+        { ?s oboInOwl:hasDbXref ?KEGGXref .
+          FILTER regex(?KEGGXref, "^KEGG.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+UNION
+        { ?s oboInOwl:hasDbXref ?MEDDRAXref .
+          FILTER regex(?MEDDRAXref, "^MEDDRA.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+UNION
+        { ?s oboInOwl:hasDbXref ?MTHXref .
+          FILTER regex(?MTHXref, "^MTH.*", "i")
+          FILTER NOT EXISTS {?s owl:deprecated "true"} }
+}

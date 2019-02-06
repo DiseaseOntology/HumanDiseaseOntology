@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/geno_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/imports/geno_import.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/geno_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/geno_import.owl"/>
     </owl:Ontology>
@@ -50,8 +50,8 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000141 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000141">
-        <obo:IAO_0000115>The disposition of a genetic variant to cause a particular phenotype or disease based on its allelic state (e.g. heterozygous vs homozygous).</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">condition inheritance</rdfs:label>
+        <obo:IAO_0000115>The pattern in which a genetic trait or condition is passed from one generation to the next, as determined by genetic interactions between alleles of the causal gene, and interactions between these alleles and the environment.</obo:IAO_0000115>
+        <rdfs:label>inheritance pattern</rdfs:label>
     </owl:Class>
     
 
@@ -59,9 +59,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000142 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000142">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
-        <obo:IAO_0000115>disposition inhering in a genetic locus variant that is realized in its inheritance by some offspring such that at least a partial variant-associated phenotype is apparent in heterozygotes.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000115>disposition inhering in a genetic locus variant that is realized in its inheritance by some offspring such that at least a partial variant-associated phenotype is apparent in heterozygotes</obo:IAO_0000115>
+        <rdfs:label>obsolete_dominant inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -69,9 +69,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000143 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000143">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000142"/>
-        <obo:IAO_0000115>A mode of inheritance whereby a heterozygous individual expresses distinct traits or conditions associated with both alleles (e.g. an individual with an AB blood type).</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">co-dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000147"/>
+        <obo:IAO_0000115>An autosomal dominant inheritance pattern wherein a heterozygous individual simultaneously expresses the distinct traits associated with each allele in the heterozygous locus.</obo:IAO_0000115>
+        <rdfs:label>co-dominant autosomal inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -79,8 +79,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000144 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000144">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000142"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complete dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000147"/>
+        <obo:IAO_0000115>An autosomal dominant inheritance pattern wherein the trait associated with one allele completely masks the trait associated with a different allele found at that locus.</obo:IAO_0000115>
+        <rdfs:label>complete autosomal dominant inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -88,9 +89,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000145 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000145">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000142"/>
-        <obo:IAO_0000115>disposition inhering in a genetic locus variant that is realized in its inheritance by some offspring such that it&apos;s associated phenotype is partially expressed in heterozygotes (ie the observed phenotype is intermediate between that of the two distinct loci)</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000147"/>
+        <obo:IAO_0000115>An autosomal dominant inheritance pattern wherein the trait expressed in a heterozygous individual is intermediate between the trait expressed in individuals homozygous for either allele in the heterozygous locus.</obo:IAO_0000115>
+        <rdfs:label>incomplete autosomal dominant inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -98,8 +99,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000146 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000146">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000144"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allosomal dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000936"/>
+        <obo:IAO_0000115>An X-linked inheritance pattern wherein the trait manifests in heterozygotes.</obo:IAO_0000115>
+        <rdfs:label>X-linked dominant inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -107,8 +109,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000147">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000144"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autosomal dominant inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000934"/>
+        <obo:IAO_0000115>An inheritance pattern wherein a trait caused by alleles of an autosomal gene manifests to some degree in heterozygotes.</obo:IAO_0000115>
+        <rdfs:label>autosomal dominant inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -116,9 +119,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000148 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000148">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
-        <obo:IAO_0000115>disposition inhering in a genetic locus variant that is realized in its inheritance by some offspring such that no variant-associated phenotype is apparent in heterozygotes</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recessive inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000934"/>
+        <obo:IAO_0000115>An inheritance pattern wherein a trait caused by alleles of an autosomal gene manifests in homozygous but not heterozygote individuals.</obo:IAO_0000115>
+        <rdfs:label>autosomal recessive inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -126,8 +129,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000149 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000149">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000148"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allosomal recessive inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000936"/>
+        <obo:IAO_0000115>An X-linked inheritance pattern wherein a trait caused by alleles of a gene on the X-chromosome manifests in homozygous but not heterozygote individuals.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">X-linked recessive inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -135,8 +139,8 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000150">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000148"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autosomal recessive inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <rdfs:label>obsolete_autosomal recessive inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -144,9 +148,9 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000892 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000892">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
-        <obo:IAO_0000115>A mode of inheritance whereby manifestation of a trait or condition occurs only when both affected and unaffected mitochondria are inherited (i.e. some mitochondria that do and some that do not contain the causative allele).</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heteroplasmic mitochondrial inheritance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000949"/>
+        <obo:IAO_0000115>A mitochondrial inheritance pattern whereby manifestation of a trait is observed when some inherited mitochondria contian the causative allele and some do not.</obo:IAO_0000115>
+        <rdfs:label>heteroplasmic mitochondrial inheritance</rdfs:label>
     </owl:Class>
     
 
@@ -154,13 +158,171 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000893 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000893">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000949"/>
+        <obo:IAO_0000115>A mitochondrial inheritance pattern whereby manifestation of a trait occurs when only mitochondria containing the causative allele are inherited.</obo:IAO_0000115>
+        <rdfs:label>homoplasmic mitochondrial inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000929">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
-        <obo:IAO_0000115>A mode of inheritance whereby manifestation of a trait or condition occurs only when affected mitochondria are inherited (i.e. mitochondria containing the causative allele)</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homoplasmic mitochondrial inheritance</rdfs:label>
+        <obo:IAO_0000115>An inheritance pattern that depends on a mixture of major and minor genetic determinants (i.e. alleles of more than one contributing genes), possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">multifactorial inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000929"/>
+        <obo:IAO_0000115>A multifactorial inheritance pattern that is determined by the simultaneous action of alleles in two genes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">digenic inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000931">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000929"/>
+        <obo:IAO_0000115>A multifactorial inheritance pattern that is determined by the simultaneous action of alleles in few genes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">oligogenic inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000932 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000932">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000929"/>
+        <obo:IAO_0000115>A multifactorial inheritance pattern that is determined by the simultaneous action of alleles a large number of genes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">polygenic inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000933">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by alleles of a single causal gene, possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">monogenic inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000934">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000933"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by alleles of a single causal gene on a non-sex chromosome.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">autosomal inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000935 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000935">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000933"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by alleles of a single causal gene on a sex chromosome.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">allosomal inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000936 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000936">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000935"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by alleles of a single causal gene on an X-chromosome.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">X-linked inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000937 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000937">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000146"/>
+        <obo:IAO_0000115>An X-linked dominant inheritance pattern wherein the trait associated with one allele completely masks the trait associated with a different allele found at that locus.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">complete X-linked dominant inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000938">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000146"/>
+        <obo:IAO_0000115>An X-linked dominant inheritance pattern wherein the trait expressed in a heterozygous individual is intermediate between the trait expressed in individuals homozygous for either allele in the heterozygous locus.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">incomplete X-linked dominant inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000939 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000939">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000146"/>
+        <obo:IAO_0000115>An X-linked dominant inheritance pattern wherein a heterozygous individual simultaneously expresses the distinct traits associated with each allele in the heterozygous locus.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">co-dominant X-linked inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000941 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000941">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000935"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by alleles of a single causal gene on a Y-chromosome.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Y-linked inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000949 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000949">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
+        <obo:IAO_0000115>An inheritance pattern with a genetic component determined by alleles of mitochondrial genes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">mitochondrial inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000952 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000952">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000147"/>
+        <obo:IAO_0000115>An autosomal dominant inheritance pattern wherein the trait manifests in heterozygotes in a sex-specific manner (i.e. only in males or only in females).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">sex-limited autosomal dominant inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000953 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000953">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000148"/>
+        <obo:IAO_0000115>An autosomal recessive inheritance pattern wherein the trait manifests only in homozygotes, and in a sex-specific manner (i.e. only in males or only in females).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">sex-limited autosomal recessive inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
+
+    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 

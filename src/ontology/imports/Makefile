@@ -96,6 +96,8 @@ geno:
 	 --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
+	remove --select "self descendants"\
+	 --term oboInOwl:ObsoleteClass --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"
@@ -120,6 +122,15 @@ ncbitaxon:
 	 --upper-term NCBITaxon:131567 --lower-terms "$(IMP)$@_terms.txt" \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
+	 --output "$(IMP)$@_import.owl"
+
+# WARNING: OMIM is BIG! This will take time.
+.PHONY: omim
+omim:
+	$(ROBOT) extract --prefix "OMIM: http://purl.bioontology.org/ontology/OMIM/"\
+	 --input ../omim.ttl --method mireot --lower-terms "$(IMP)$@_terms.txt" \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2018-12-17/subsets/DO_cancer_slim.obo
+data-version: doid/2019-02-21/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 
 [Term]
@@ -308,7 +308,6 @@ namespace: disease_ontology
 def: "A trachea carcinoma that is characterized by the presence of squamous cells, mucus-secreting cells, and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
 is_a: DOID:0050904 ! salivary gland carcinoma
-is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T11:42:42Z
 
@@ -378,6 +377,7 @@ name: jejunal adenocarcinoma
 namespace: disease_ontology
 def: "A jejunal cancer that is located_in the jejunum and has_material_basis_in epithelial tissue that has glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
+is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T13:00:15Z
 
@@ -423,7 +423,6 @@ name: lung mucoepidermoid carcinoma
 namespace: disease_ontology
 def: "A lung carcinoma that has_material_basis in a combination of squamous cells, mucus secreting cells and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
 is_a: DOID:3905 ! lung carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T15:13:36Z
@@ -616,6 +615,7 @@ def: "A malignant hemangioma characterized by the presence of epithelioid endoth
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C3800
+is_a: DOID:1115 ! sarcoma
 
 [Term]
 id: DOID:0080191
@@ -993,7 +993,7 @@ xref: NCI:C8704
 xref: NCI:C9350
 xref: UMLS_CUI:C0346109
 xref: UMLS_CUI:C0854886
-is_a: DOID:1790 ! malignant mesothelioma
+is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:1790
@@ -1023,7 +1023,6 @@ xref: UMLS_CUI:C0278752
 xref: UMLS_CUI:C0345967
 xref: UMLS_CUI:C0392400
 xref: UMLS_CUI:C1332338
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:1798
@@ -1080,8 +1079,6 @@ namespace: disease_ontology
 def: "A rectum cancer that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adenocarcinoma of rectum" EXACT []
-synonym: "adenocarcinoma of rectum" RELATED []
 synonym: "Rectal adenocarcinoma" EXACT [NCI2004_11_17:C9383]
 xref: NCI2004_11_17:C9383
 xref: NCI:C9383
@@ -1290,8 +1287,6 @@ namespace: disease_ontology
 def: "A cecum carcinoma that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adenocarcinoma of cecum" EXACT []
-synonym: "adenocarcinoma of cecum" RELATED []
 synonym: "Cecal adenocarcinoma" EXACT [NCI2004_11_17:C5543]
 xref: NCI2004_11_17:C5543
 xref: NCI:C5543
@@ -1568,7 +1563,7 @@ is_a: DOID:3347 ! osteosarcoma
 id: DOID:3382
 name: liposarcoma
 namespace: disease_ontology
-def: "A lipomatous cancer that arises in fat cells in deep soft tissue retroperitoneum." [url:http\://en.wikipedia.org/wiki/Liposarcoma]
+def: "A lipomatous cancer that arises in fat cells in deep soft tissue retroperitoneum and the extremities." [url:http\://en.wikipedia.org/wiki/Liposarcoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:6913
@@ -1620,7 +1615,6 @@ xref: NCI2004_11_17:C4872
 xref: NCI:C4872
 xref: UMLS_CUI:C0678222
 is_a: DOID:1612 ! breast cancer
-is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:3498
@@ -1771,8 +1765,6 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "SCC of esophagus" EXACT [NCI2004_11_17:C4024]
-synonym: "squamous cell carcinoma of esophagus" EXACT []
-synonym: "squamous cell carcinoma of esophagus" RELATED []
 xref: MESH:C562729
 xref: NCI2004_11_17:C4024
 xref: NCI:C4024
@@ -1970,10 +1962,6 @@ namespace: disease_ontology
 def: "A urinary bladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://nci.nih.gov/cancertopics/types/bladder]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "carcinoma bladder" EXACT []
-synonym: "carcinoma OF BLADDER" EXACT [MTH:108]
-synonym: "carcinoma of bladder" EXACT []
-synonym: "carcinoma of bladder" RELATED []
 synonym: "carcinoma of urinary bladder" EXACT [NCI2004_11_17:C4912]
 xref: EFO:0000292
 xref: MTH:108
@@ -2128,7 +2116,7 @@ id: DOID:4465
 name: papillary renal cell carcinoma
 namespace: disease_ontology
 alt_id: DOID:8063
-def: "A renal cell carcinoma that is characterized by the development of multiple, bilateral papillary renal tumors." [url:http\://cancergenome.nih.gov/cancersselected/kidneypapillary, url:http\://www.omim.org/entry/605074, URL:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html]
+def: "A renal cell carcinoma that is characterized by the development of multiple, bilateral papillary renal tumors." [url:http\://cancergenome.nih.gov/cancersselected/kidneypapillary, url:http\://www.omim.org/entry/605074]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -2146,14 +2134,13 @@ xref: OMIM:605074
 xref: SNOMEDCT_US_2018_03_01:4797003
 xref: UMLS_CUI:C1306837
 xref: UMLS_CUI:C1336078
-xref: URL:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html
 is_a: DOID:4450 ! renal cell carcinoma
 
 [Term]
 id: DOID:4467
 name: clear cell renal cell carcinoma
 namespace: disease_ontology
-def: "A renal cell carcinoma that has_material_basis_in cells that appear very pale or clear when examined under microscope." [url:http\://cancergenome.nih.gov/cancersselected/kidneyclearcell, url:http\://www.cancer.gov/dictionary?CdrID=45063, URL:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html]
+def: "A renal cell carcinoma that has_material_basis_in cells that appear very pale or clear when examined under microscope." [url:http\://www.cancer.gov/dictionary?CdrID=45063, url:https\://cancergenome.nih.gov/cancersselected/kidneyclearcell]
 comment: MESH:C538445 added from NeuroDevNet [WAK].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -2170,14 +2157,13 @@ xref: NCI2004_11_17:C4033
 xref: NCI:C4033
 xref: SNOMEDCT_US_2018_03_01:41607009
 xref: UMLS_CUI:C0279702
-xref: URL:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html
 is_a: DOID:4450 ! renal cell carcinoma
 
 [Term]
 id: DOID:4471
 name: chromophobe renal cell carcinoma
 namespace: disease_ontology
-def: "A renal cell carcinoma that has_material_basis_in chromophobe cell that appear pale when viewed under microscope, but that are larger and display different features than clear cells." [url:http\://cancergenome.nih.gov/cancersselected/ChromophobeRenalCellCarcinoma, url:http\://www.cancer.org/acs/groups/cid/documents/webcontent/003107-pdf.pdf, url:http\://www.omnimedicalsearch.com/conditions-disease/renal-cell-carcinoma-overview-types.html]
+def: "A renal cell carcinoma that has_material_basis_in chromophobe cell that appear pale when viewed under microscope, but that are larger and display different features than clear cells." [url:http\://cancergenome.nih.gov/cancersselected/ChromophobeRenalCellCarcinoma, url:http\://www.cancer.org/acs/groups/cid/documents/webcontent/003107-pdf.pdf]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "chromophobe adenocarcinoma" EXACT []
@@ -2304,14 +2290,13 @@ namespace: disease_ontology
 def: "An esophageal carcinoma that derives_from epithelial cells of glandular origin." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adenocarcinoma of esophagus" EXACT []
-synonym: "adenocarcinoma of esophagus" RELATED []
 synonym: "Oesophageal adenocarcinoma" EXACT [NCI2004_11_17:C4025]
 xref: MESH:C562730
 xref: NCI2004_11_17:C4025
 xref: NCI:C4025
 xref: UMLS_CUI:C0279628
 is_a: DOID:1107 ! esophageal carcinoma
+is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:4932
@@ -2416,11 +2401,6 @@ def: "A lung carcinoma that has_material_basis_in primitive-appearing cells that
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "SCLC" EXACT [CSP2005:2017-6589]
-synonym: "small cell carcinoma of lung" EXACT []
-synonym: "small cell carcinoma of lung" RELATED []
-synonym: "small cell neuroendocrine carcinoma of lung" EXACT [NCI2004_11_17:C4917]
-xref: CSP2005:2017-6589
 xref: KEGG:05222
 xref: MESH:D055752
 xref: NCI2004_11_17:C4917
@@ -2547,12 +2527,6 @@ alt_id: DOID:5647
 def: "A choroid plexus cancer that has_material_basis_in epithelial cells of the choroid plexus." [url:http\://en.wikipedia.org/wiki/Carcinoma, url:http\://en.wikipedia.org/wiki/Choroid_plexus_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=45963]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "cancer of Choroid Plexus" EXACT [NCI2004_11_17:C4715]
-synonym: "Choroid plexus carcinoma" EXACT [SNOMEDCT_2005_07_31:88252006]
-synonym: "malignant neoplasm of choroid plexus" EXACT [MTHICD9_2006:191.5]
-synonym: "malignant neoplasm of the Choroid Plexus" EXACT [NCI2004_11_17:C4533]
-synonym: "malignant tumor of choroid plexus" EXACT []
-synonym: "malignant tumor of choroid plexus" RELATED []
 xref: GARD:8238
 xref: MESH:C562943
 xref: MTHICD9_2006:191.5
@@ -2815,7 +2789,7 @@ synonym: "malignant mesothelioma of pleura" EXACT []
 xref: ICD10CM:C45.0
 xref: NCI:C7376
 xref: UMLS_CUI:C0812413
-is_a: DOID:1790 ! malignant mesothelioma
+is_a: DOID:305 ! carcinoma
 
 [Term]
 id: DOID:768

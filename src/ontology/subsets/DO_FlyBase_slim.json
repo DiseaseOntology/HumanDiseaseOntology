@@ -512,7 +512,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_905",
       "meta" : {
         "definition" : {
-          "val" : "A peroxisomal disease that is characterized by the reduction or absence of functional peroxisomes in the cells of an individual that has_material_basis_in autosomal recessive inheritance of a mutation in the peroxisome biogenesis factor (PEX) genes.",
+          "val" : "A peroxisomal biogenesis disorder that is characterized by the reduction or absence of functional peroxisomes in the cells of an individual that has_material_basis_in autosomal recessive inheritance of a mutation in the peroxisome biogenesis factor (PEX) genes.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Zellweger_Syndrome", "url:http://www.ninds.nih.gov/disorders/zellweger/zellweger.htm", "url:http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=912" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -770,10 +770,6 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Gaucher disease",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "lipoid histiocytosis",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -2406,7 +2402,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "CLN3 disease"
+      "lbl" : "obsolete CLN3 disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050638",
       "meta" : {
@@ -3349,6 +3345,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050741",
       "meta" : {
+        "definition" : {
+          "val" : "A substance dependence that is characterized by tolerance, withdrawal symptoms, increasing use, persistent desire to decrease consumption, time spent obtaining or recovering from alcohol caused by a physical and psychological dependence on alcohol.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Alcohol_dependence" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "OMIM:103780"
@@ -3754,18 +3754,29 @@
       "meta" : {
         "definition" : {
           "val" : "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35.",
-          "xrefs" : [ "url:https://www.omim.org/entry/601419" ]
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/23687351", "url:https://www.omim.org/entry/601419" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "OMIM:601419"
+        }, {
+          "val" : "ICD10CM:G71.0"
+        }, {
+          "val" : "ORDO:363543"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "autosomal recessive limb-girdle muscular dystrophy type 2R",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "desminopathy",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0110286"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2015-11-10T16:59:22Z"
         }, {
@@ -4331,7 +4342,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_3343",
       "meta" : {
         "definition" : {
-          "val" : "A lysosomal storage disease that is characterized by a deficiency of the enzyme alpha-N -acetyl neuraminidase (sialidase).",
+          "val" : "A mucolipidosis that is characterized by a deficiency of the enzyme alpha-N -acetyl neuraminidase (sialidase).",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Sialidosis", "url:https://en.wikipedia.org/wiki/Glycoproteinosis", "url:https://www.rarediseases.org/rare-disease-information/rare-diseases/byID/302/viewAbstract" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -5191,64 +5202,6 @@
       "type" : "CLASS",
       "lbl" : "myopathy"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0050571",
-      "meta" : {
-        "definition" : {
-          "val" : "A congenital disorder of glycosylation that involves malfunctioning trimming/processing of the protein-bound oligosaccharide chain.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Congenital_disorder_of_glycosylation#Classification" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
-        "xrefs" : [ {
-          "val" : "OMIM:614727"
-        }, {
-          "val" : "OMIM:603585"
-        }, {
-          "val" : "OMIM:212066"
-        }, {
-          "val" : "OMIM:613489"
-        }, {
-          "val" : "OMIM:300896"
-        }, {
-          "val" : "OMIM:266265"
-        }, {
-          "val" : "OMIM:614576"
-        }, {
-          "val" : "OMIM:613612"
-        }, {
-          "val" : "OMIM:611209"
-        }, {
-          "val" : "OMIM:606056"
-        }, {
-          "val" : "OMIM:611182"
-        }, {
-          "val" : "OMIM:607091"
-        }, {
-          "val" : "OMIM:608779"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "MOGS-CDG",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "MGAT2-CDG",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "B4GALT1-CDG",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "OMIM mapping confirmed by DO. [SN]."
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "congenital disorder of glycosylation type II"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_305",
       "meta" : {
         "definition" : {
@@ -5301,6 +5254,27 @@
       },
       "type" : "CLASS",
       "lbl" : "carcinoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0050571",
+      "meta" : {
+        "definition" : {
+          "val" : "A congenital disorder of glycosylation that involves malfunctioning trimming/processing of the protein-bound oligosaccharide chain.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Congenital_disorder_of_glycosylation#Classification" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "xrefs" : [ {
+          "val" : "OMIM:PS212066"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "OMIM mapping confirmed by DO. [SN]."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "congenital disorder of glycosylation type II"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2935",
       "meta" : {
@@ -5674,6 +5648,36 @@
       "type" : "CLASS",
       "lbl" : "retinal degeneration"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080422",
+      "meta" : {
+        "definition" : {
+          "val" : "An early infantile epileptic encephalopathy that has_material_basis_in heterozygous mutation in the SCN1A gene on chromosome 2q24.",
+          "xrefs" : [ "url:http://dravet.org/about-dravet/smei", "url:https://rarediseases.info.nih.gov/diseases/10430/dravet-syndrome", "url:https://www.ncbi.nlm.nih.gov/pubmed/11359211" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "xrefs" : [ {
+          "val" : "GARD:10430"
+        }, {
+          "val" : "OMIM:607208"
+        }, {
+          "val" : "ORDO:33069"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "early infantile epileptic encephalopathy 6",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0060171"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Dravet syndrome"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14791",
       "meta" : {
         "definition" : {
@@ -5976,16 +5980,8 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Charcot Marie Tooth muscular atrophy",
-          "xrefs" : [ "CSP2005:2042-7637" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "CMT - Charcot-Marie-Tooth disease",
           "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Peroneal muscular atrophy",
-          "xrefs" : [ "ICD9CM_2006:356.1" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -6315,30 +6311,6 @@
           "pred" : "hasExactSynonym",
           "val" : "familial dystonia",
           "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "dystonia deformans progressiva",
-          "xrefs" : [ "CSP2005:2057-3370" ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "symptomatic torsion dystonia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Idiopathic torsion dystonia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "dystonia musculorum deformans",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "idiopathic non-familial dystonia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "idiopathic familial dystonia",
-          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -6377,6 +6349,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050676",
       "meta" : {
+        "definition" : {
+          "val" : "An autosomal dominant disease that is characterized by the development of skin papules on the head, face and upper torso, has_material_basis_in heterozygous mutation in the gene encoding folliculin on chromosome 17p11.",
+          "xrefs" : [ "url:https://rarediseases.org/rare-diseases/birt-hogg-dube-syndrome/" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "MESH:D058249"
@@ -7586,11 +7562,6 @@
         }, {
           "val" : "UMLS_CUI:C0079504"
         } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "HPS",
-          "xrefs" : [ "CSP2005:0446-1413" ]
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "Xref MGI.\nOMIM mapping confirmed by DO. [SN]."
@@ -7669,28 +7640,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060171",
       "meta" : {
-        "definition" : {
-          "val" : "An epilepsy that is characterized by frequent febrile seizures with onset before 1 year.",
-          "xrefs" : [ "url:http://dravet.org/about-dravet/smei", "url:http://www.ninds.nih.gov/disorders/dravet_syndrome/dravet_syndrome.htm" ]
-        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
-        "xrefs" : [ {
-          "val" : "OMIM:607208"
-        }, {
-          "val" : "GARD:10430"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "SMEI",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "severe myoclonic epilepsy in infancy",
-          "xrefs" : [ ]
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2011-10-28T03:14:46Z"
+        }, {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "lschriml"
@@ -7700,7 +7656,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "Dravet syndrome"
+      "lbl" : "obsolete Dravet syndrome"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060050",
       "meta" : {
@@ -7764,6 +7720,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9970",
       "meta" : {
+        "definition" : {
+          "val" : "An overnutrition that is characterized by excess body fat, traditionally defined as an elevated ratio of weight to height (specifically 30 kilograms per meter squared), has_material_basis_in a multifactorial etiology related to excess nutrition intake, decreased caloric utilization, and genetic susceptibility, and possibly medications and certain disorders of metabolism, endocrine function, and mental illness.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Obesity" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "ICD10CM:E66.9"
@@ -8375,6 +8335,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_423"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080422",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1826"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4051",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -8403,10 +8367,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0050204",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0110731",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_14503"
@@ -8426,10 +8386,6 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_1319",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_14175",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_14566"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050547",
       "pred" : "is_a",
@@ -8567,10 +8523,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_9884"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0060171",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1826"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050879",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1289"
@@ -8672,7 +8624,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2018-12-17/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2019-02-21/subsets/DO_FlyBase_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2018-12-17/subsets/DO_FlyBase_slim.obo
+data-version: doid/2019-02-21/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -23,7 +23,6 @@ name: Epstein-Barr virus hepatitis
 namespace: disease_ontology
 def: "A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16711324, url:https\://www.ncbi.nlm.nih.gov/pubmed/17602362]
 subset: DO_FlyBase_slim
-is_a: DOID:934 ! viral infectious disease
 
 [Term]
 id: DOID:0050338
@@ -220,22 +219,7 @@ namespace: disease_ontology
 def: "A congenital disorder of glycosylation that involves malfunctioning trimming/processing of the protein-bound oligosaccharide chain." [url:http\://en.wikipedia.org/wiki/Congenital_disorder_of_glycosylation#Classification]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
-synonym: "B4GALT1-CDG" EXACT []
-synonym: "MGAT2-CDG" EXACT []
-synonym: "MOGS-CDG" EXACT []
-xref: OMIM:212066
-xref: OMIM:266265
-xref: OMIM:300896
-xref: OMIM:603585
-xref: OMIM:606056
-xref: OMIM:607091
-xref: OMIM:608779
-xref: OMIM:611182
-xref: OMIM:611209
-xref: OMIM:613489
-xref: OMIM:613612
-xref: OMIM:614576
-xref: OMIM:614727
+xref: OMIM:PS212066
 
 [Term]
 id: DOID:0050575
@@ -293,6 +277,7 @@ is_a: DOID:9120 ! amyloidosis
 id: DOID:0050676
 name: Birt-Hogg-Dube syndrome
 namespace: disease_ontology
+def: "An autosomal dominant disease that is characterized by the development of skin papules on the head, face and upper torso, has_material_basis_in heterozygous mutation in the gene encoding folliculin on chromosome 17p11." [url:https\://rarediseases.org/rare-diseases/birt-hogg-dube-syndrome/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 xref: GARD:2322
@@ -332,6 +317,7 @@ creation_date: 2012-01-03T02:54:11Z
 id: DOID:0050741
 name: alcohol dependence
 namespace: disease_ontology
+def: "A substance dependence that is characterized by tolerance, withdrawal symptoms, increasing use, persistent desire to decrease consumption, time spent obtaining or recovering from alcohol caused by a physical and psychological dependence on alcohol." [url:https\://en.wikipedia.org/wiki/Alcohol_dependence]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "alcoholism" EXACT []
@@ -356,7 +342,7 @@ is_a: DOID:332 ! amyotrophic lateral sclerosis
 
 [Term]
 id: DOID:0050756
-name: CLN3 disease
+name: obsolete CLN3 disease
 namespace: disease_ontology
 subset: DO_FlyBase_slim
 is_obsolete: true
@@ -507,14 +493,8 @@ comment: MESH:C538001 added from NeuroDevNet [WAK].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Dystonia 12" RELATED [MESH:C538001]
-synonym: "dystonia deformans progressiva" EXACT [CSP2005:2057-3370]
-synonym: "dystonia musculorum deformans" EXACT []
 synonym: "familial dystonia" EXACT []
 synonym: "fragments of torsion dystonia" EXACT []
-synonym: "idiopathic familial dystonia" EXACT []
-synonym: "idiopathic non-familial dystonia" EXACT []
-synonym: "Idiopathic torsion dystonia" EXACT []
-synonym: "symptomatic torsion dystonia" EXACT []
 xref: CSP2005:2057-3370
 xref: ICD10CM:G24.1
 xref: ICD10CM:G24.2
@@ -825,15 +805,10 @@ creation_date: 2011-10-28T02:57:50Z
 
 [Term]
 id: DOID:0060171
-name: Dravet syndrome
+name: obsolete Dravet syndrome
 namespace: disease_ontology
-def: "An epilepsy that is characterized by frequent febrile seizures with onset before 1 year." [url:http\://dravet.org/about-dravet/smei, url:http\://www.ninds.nih.gov/disorders/dravet_syndrome/dravet_syndrome.htm]
 subset: DO_FlyBase_slim
-synonym: "severe myoclonic epilepsy in infancy" EXACT []
-synonym: "SMEI" EXACT []
-xref: GARD:10430
-xref: OMIM:607208
-is_a: DOID:1826 ! epilepsy
+is_obsolete: true
 created_by: lschriml
 creation_date: 2011-10-28T03:14:46Z
 
@@ -980,13 +955,30 @@ xref: UMLS_CUI:C1970431
 id: DOID:0080092
 name: myofibrillar myopathy 1
 namespace: disease_ontology
-def: "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35." [url:https\://www.omim.org/entry/601419]
+alt_id: DOID:0110286
+def: "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23687351, url:https\://www.omim.org/entry/601419]
 subset: DO_FlyBase_slim
+synonym: "autosomal recessive limb-girdle muscular dystrophy type 2R" EXACT []
 synonym: "desminopathy" EXACT []
+xref: ICD10CM:G71.0
 xref: OMIM:601419
+xref: ORDO:363543
 is_a: DOID:423 ! myopathy
 created_by: lschriml
 creation_date: 2015-11-10T16:59:22Z
+
+[Term]
+id: DOID:0080422
+name: Dravet syndrome
+namespace: disease_ontology
+alt_id: DOID:0060171
+def: "An early infantile epileptic encephalopathy that has_material_basis_in heterozygous mutation in the SCN1A gene on chromosome 2q24." [url:http\://dravet.org/about-dravet/smei, url:https\://rarediseases.info.nih.gov/diseases/10430/dravet-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/11359211]
+subset: DO_FlyBase_slim
+synonym: "early infantile epileptic encephalopathy 6" EXACT []
+xref: GARD:10430
+xref: OMIM:607208
+xref: ORDO:33069
+is_a: DOID:1826 ! epilepsy
 
 [Term]
 id: DOID:0110731
@@ -1236,9 +1228,7 @@ namespace: disease_ontology
 def: "A neuromuscular disease that is characterized by a slowly progressive degeneration of the muscles of the foot, lower leg, hand and forearm." [url:https\://www.genome.gov/11009201]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
-synonym: "Charcot Marie Tooth muscular atrophy" EXACT [CSP2005:2042-7637]
 synonym: "CMT - Charcot-Marie-Tooth disease" EXACT []
-synonym: "Peroneal muscular atrophy" EXACT [ICD9CM_2006:356.1]
 xref: CSP2005:2042-7637
 xref: GARD:6034
 xref: ICD10CM:G60.0
@@ -1712,7 +1702,6 @@ xref: OMIM:193300
 xref: SNOMEDCT_US_2018_03_01:46659004
 xref: UMLS_CUI:C0019562
 is_a: DOID:0060085 ! organ system benign neoplasm
-is_a: DOID:14566 ! disease of cellular proliferation
 
 [Term]
 id: DOID:14227
@@ -2205,7 +2194,6 @@ synonym: "Gaucher disease" EXACT []
 synonym: "glocucerebrosidase deficiency" EXACT []
 synonym: "glucosylceramide beta-glucosidase deficiency" EXACT []
 synonym: "kerasin thesaurismosis" EXACT []
-synonym: "lipoid histiocytosis" EXACT []
 xref: GARD:8233
 xref: ICD10CM:E75.22
 xref: MESH:D005776
@@ -2653,7 +2641,7 @@ is_a: DOID:231 ! motor neuron disease
 id: DOID:3343
 name: glycoproteinosis
 namespace: disease_ontology
-def: "A lysosomal storage disease that is characterized by a deficiency of the enzyme alpha-N -acetyl neuraminidase (sialidase)." [url:http\://en.wikipedia.org/wiki/Sialidosis, url:https\://en.wikipedia.org/wiki/Glycoproteinosis, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/302/viewAbstract]
+def: "A mucolipidosis that is characterized by a deficiency of the enzyme alpha-N -acetyl neuraminidase (sialidase)." [url:http\://en.wikipedia.org/wiki/Sialidosis, url:https\://en.wikipedia.org/wiki/Glycoproteinosis, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/302/viewAbstract]
 comment: OMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -2770,7 +2758,6 @@ comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "HPS" EXACT [CSP2005:0446-1413]
 xref: CSP2005:0446-1413
 xref: GARD:6643
 xref: ICD10CM:E70.331
@@ -3368,7 +3355,7 @@ xref: UMLS_CUI:C0751265
 id: DOID:905
 name: Zellweger syndrome
 namespace: disease_ontology
-def: "A peroxisomal disease that is characterized by the reduction or absence of functional peroxisomes in the cells of an individual that has_material_basis_in autosomal recessive inheritance of a mutation in the peroxisome biogenesis factor (PEX) genes." [url:http\://en.wikipedia.org/wiki/Zellweger_Syndrome, url:http\://www.ninds.nih.gov/disorders/zellweger/zellweger.htm, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=912]
+def: "A peroxisomal biogenesis disorder that is characterized by the reduction or absence of functional peroxisomes in the cells of an individual that has_material_basis_in autosomal recessive inheritance of a mutation in the peroxisome biogenesis factor (PEX) genes." [url:http\://en.wikipedia.org/wiki/Zellweger_Syndrome, url:http\://www.ninds.nih.gov/disorders/zellweger/zellweger.htm, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=912]
 comment: OMIM mapping confirmed by DO. [LS].\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -3637,6 +3624,7 @@ is_a: DOID:423 ! myopathy
 id: DOID:9970
 name: obesity
 namespace: disease_ontology
+def: "An overnutrition that is characterized by excess body fat, traditionally defined as an elevated ratio of weight to height (specifically 30 kilograms per meter squared), has_material_basis_in a multifactorial etiology related to excess nutrition intake, decreased caloric utilization, and genetic susceptibility, and possibly medications and certain disorders of metabolism, endocrine function, and mental illness." [url:https\://en.wikipedia.org/wiki/Obesity]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus

@@ -45,7 +45,8 @@ ROBOT := java -jar build/robot.jar
 
 .PHONY: imports
 imports: | build/robot.jar
-	@cd src/ontology/imports && $(MAKE) imports
+	@echo "Generating import modules (this may take some time)..." && \
+	cd src/ontology/imports && $(MAKE) imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
 $(IMPS): | build/robot.jar
@@ -86,14 +87,16 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason --input $< --create-new-ontology false \
 	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
 	annotate --annotation oboInOwl:date "$(TS)"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid.owl" --output $@ && \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(DO).obo: $(DO).owl | build/robot.jar
+$(DO).obo: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
-	convert --check false --output $(basename $@)-temp.obo && \
+	annotate --annotation oboInOwl:date "$(TS)"\
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
+	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
 	echo "Created $@"
@@ -110,14 +113,19 @@ merged: $(DM).owl $(DM).obo
 
 $(DM).owl: $(DO).owl | build/robot.jar
 	@$(ROBOT) merge --input $< --collapse-import-closure true \
-	annotate --version-iri "$(OBO)doid/releases/$(DATE)/doid-merged.owl"\
-	 --ontology-iri "$(OBO)doid/doid-merged.owl"\
+	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
+	 --ontology-iri "$(OBO)doid/$(notdir $@)"\
 	 --output $@ && \
 	echo "Created $@"
 
-$(DM).obo: $(DM).owl | build/robot.jar
-	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
-	convert --output $@ --check false \
+$(DM).obo: $(DO).obo | build/robot.jar
+	@$(ROBOT) merge --input $< --collapse-import-closure true \
+	remove --term obo:IAO_0000119 --trim true \
+	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
+	 --ontology-iri "$(OBO)doid/$(notdir $@)"\
+	 --output $(basename $@)-temp.obo && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo \
 	&& echo "Created $@"
 
 # ----------------------------------------
@@ -129,15 +137,18 @@ human: $(DNC).owl $(DNC).obo $(DNC).json
 $(DNC).owl: $(DO).owl build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select anonymous \
-	annotate --ontology-iri "$(OBO)doid/doid-non-classified.owl"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/doid-non-classified.owl"\
+	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --output $@ && \
 	cp $@ $(HD).owl \
 	&& echo "Created $@"
 
-$(DNC).obo: $(DNC).owl | build/robot.jar
-	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
-	convert --check false --output $(basename $@)-temp.obo && \
+$(DNC).obo: $(DO).obo | build/robot.jar
+	@$(ROBOT) remove --input $< --select imports --trim true \
+	remove --term obo:IAO_0000119 --trim true \
+	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo && \
 	cp $@ $(HD).obo \
@@ -170,7 +181,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(OBO_SUBS): $(DNC).owl | build/robot.jar
+$(OBO_SUBS): $(DNC).obo | build/robot.jar
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
@@ -240,7 +251,7 @@ build/reports/report-diff.txt: $(QUERIES)
 .PHONY: build/reports/branch-count.tsv
 build/reports/branch-count.tsv: $(DNC).owl | build/reports
 	@echo "Counting all branches..." && \
-	src/sparql/branch_count/branch_count.py $< $@ && \
+	./src/sparql/branch_count/branch_count.py $< $@ && \
 	echo "Branch count available at $@"
 
 #-----------------------------

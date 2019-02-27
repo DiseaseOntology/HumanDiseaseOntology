@@ -13,14 +13,11 @@ queries = ['anatomical_entity',
 		   'physical_disorder', 
 		   'syndrome']
 robot_cmd = 'java -jar build/robot.jar query \
- --input %s.rdf --query %s %s'
+ --input %s --query %s %s'
 
 def main(args):
 	input_ont = args[1]
 	output = args[2]
-
-	cmd = 'cp %s %s.rdf' % (input_ont, input_ont)
-	subprocess.check_call(cmd, shell=True)
 
 	if not os.path.exists(report_dir):
 		os.makedirs(report_dir)
@@ -46,7 +43,7 @@ def main(args):
 		for c in counts:
 			f.write(c)
 
-	cmd = 'rm %s.rdf && rm -rf %s && rm -rf .tdb' % (input_ont, report_dir)
+	#cmd = 'rm %s.rdf && rm -rf %s && rm -rf .tdb' % (input_ont, report_dir)
 	subprocess.check_call(cmd, shell=True)
 
 if __name__ == '__main__':

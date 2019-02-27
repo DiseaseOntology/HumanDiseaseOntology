@@ -97,7 +97,7 @@ $(DO).obo: $(EDIT) | build/robot.jar
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
+	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@ && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
 
 $(DO).json: $(DO).owl | build/robot.jar
@@ -117,12 +117,13 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@ && \
 	echo "Created $@"
 
-$(DM).obo: $(DO).obo | build/robot.jar
+$(DM).obo: $(EDIT) | build/robot.jar
 	@$(ROBOT) merge --input $< --collapse-import-closure true \
+	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
-	 --ontology-iri "$(OBO)doid/$(notdir $@)"\
-	 --output $(basename $@)-temp.obo && \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	convert --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
@@ -142,15 +143,18 @@ $(DNC).owl: $(DO).owl build/reports/report.tsv | build/robot.jar
 	cp $@ $(HD).owl \
 	&& echo "Created $@"
 
-$(DNC).obo: $(DO).obo | build/robot.jar
+$(DNC).obo: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
+	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
 	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
+	cp $@ $(HD).obo && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
+
 
 $(DNC).json: $(DNC).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@ \
@@ -179,7 +183,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(OBO_SUBS): $(DNC).obo | build/robot.jar
+$(OBO_SUBS): $(DNC).owl| build/robot.jar
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\

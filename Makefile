@@ -94,12 +94,11 @@ $(DO).obo: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
-	annotate --annotation oboInOwl:date "$(TS)"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
+	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
-	rm $(basename $@)-temp.obo && \
-	echo "Created $@"
+	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
+	rm $(basename $@)-temp.obo && echo "Created $@"
 
 $(DO).json: $(DO).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@ \
@@ -124,9 +123,9 @@ $(DM).obo: $(DO).obo | build/robot.jar
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)"\
 	 --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
-	rm $(basename $@)-temp.obo \
-	&& echo "Created $@"
+	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
+	rm $(basename $@)-temp.obo && echo "Created $@"
 
 # ----------------------------------------
 # HUMANDO
@@ -149,10 +148,9 @@ $(DNC).obo: $(DO).obo | build/robot.jar
 	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
-	rm $(basename $@)-temp.obo && \
-	cp $@ $(HD).obo \
-	&& echo "Created $@"
+	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
+	rm $(basename $@)-temp.obo && echo "Created $@"
 
 $(DNC).json: $(DNC).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@ \

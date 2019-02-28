@@ -134,7 +134,7 @@ $(DM).obo: $(EDIT) | build/robot.jar
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(DO).owl build/reports/report.tsv | build/robot.jar
+$(DNC).owl: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select anonymous \
 	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\

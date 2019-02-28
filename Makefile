@@ -117,10 +117,8 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@ && \
 	echo "Created $@"
 
-$(DM).obo: $(EDIT) | build/robot.jar
-	@$(ROBOT) merge --input $< --collapse-import-closure true \
-	remove --select "parents equivalents" --select "anonymous" \
-	remove --term obo:IAO_0000119 --trim true \
+$(DM).obo: $(DO).owl | build/robot.jar
+	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	convert --check false --output $(basename $@)-temp.obo && \

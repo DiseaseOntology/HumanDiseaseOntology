@@ -97,6 +97,7 @@ $(DO).obo: $(DO).owl | build/robot.jar
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	grep -v ^date | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@ && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
 

@@ -90,7 +90,7 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(DO).obo: $(EDIT) | build/robot.jar
+$(DO).obo: $(DO).owl | build/robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
@@ -118,7 +118,7 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	echo "Created $@"
 
 $(DM).obo: $(DO).owl | build/robot.jar
-	@$(ROBOT) remove --term obo:IAO_0000119 --trim true \
+	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	convert --check false --output $(basename $@)-temp.obo && \

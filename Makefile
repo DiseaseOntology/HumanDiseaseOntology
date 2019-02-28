@@ -118,12 +118,13 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@ && \
 	echo "Created $@"
 
-$(DM).obo: $(DO).owl | build/robot.jar
+$(DM).obo: $(DM).owl | build/robot.jar
 	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	convert --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	grep -v ^date | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
 

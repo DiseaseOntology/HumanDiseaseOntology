@@ -21,6 +21,7 @@ def main(args):
 
 	if not os.path.exists(report_dir):
 		os.makedirs(report_dir)
+		os.mkdir(report_dir)
 
 	for q in queries:
 		query = count_dir + q + '.rq'

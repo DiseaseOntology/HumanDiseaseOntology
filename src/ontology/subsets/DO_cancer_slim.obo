@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-03-01/subsets/DO_cancer_slim.obo
+data-version: doid/2019-04-18/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 
 [Term]
@@ -104,7 +104,7 @@ creation_date: 2014-06-25T05:24:10Z
 id: DOID:0050892
 name: adrenal gland pheochromocytoma
 namespace: disease_ontology
-def: "An adrenal medulla cancer that is characterized by overproduction of adrenaline." [url:http\://en.wikipedia.org/wiki/Adrenal_tumor#Pheochromocytoma, url:http\://en.wikipedia.org/wiki/Pheochromocytoma, url:http\://www.cancer.gov/cancertopics/types/pheochromocytoma]
+def: "A malignant pheochromocytoma that is characterized by overproduction of adrenaline." [url:http\://en.wikipedia.org/wiki/Adrenal_tumor#Pheochromocytoma, url:http\://en.wikipedia.org/wiki/Pheochromocytoma, url:http\://www.cancer.gov/cancertopics/types/pheochromocytoma]
 subset: DO_cancer_slim
 created_by: lschriml
 creation_date: 2014-09-11T01:01:57Z
@@ -446,7 +446,7 @@ creation_date: 2014-10-21T16:02:01Z
 id: DOID:0050936
 name: extra-adrenal pheochromocytoma
 namespace: disease_ontology
-def: "An adrenal medulla cancer that originate in the ganglia of the sympathetic nervous system and are named based upon the primary anatomical site of origin." [url:http\://en.wikipedia.org/wiki/Pheochromocytoma]
+def: "A malignant pheochromocytoma that originate in the ganglia of the sympathetic nervous system and are named based upon the primary anatomical site of origin." [url:http\://en.wikipedia.org/wiki/Pheochromocytoma]
 subset: DO_cancer_slim
 created_by: lschriml
 creation_date: 2014-10-22T10:25:45Z
@@ -1027,7 +1027,7 @@ xref: UMLS_CUI:C1328479
 id: DOID:1967
 name: leiomyosarcoma
 namespace: disease_ontology
-def: "A malignant smooth muscle cancer that can arise almost anywhere in the body, but is most common in the uterus, abdomen, or pelvis." [url:http\://www.cancer.gov/dictionary/?CdrID=46027]
+def: "A smooth muscle cancer that can arise almost anywhere in the body, but is most common in the uterus, abdomen, or pelvis." [url:http\://www.cancer.gov/dictionary/?CdrID=46027]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Leiomyosarcomas" EXACT [NCI2004_11_17:C3158]
@@ -1099,7 +1099,7 @@ is_a: DOID:1319 ! brain cancer
 id: DOID:219
 name: colon cancer
 namespace: disease_ontology
-def: "A large intestine cancer that is located_in the colon." [url:http\://www.cancer.gov/dictionary?CdrID=44237]
+def: "A colorectal cancer that is located_in the colon." [url:http\://www.cancer.gov/dictionary?CdrID=44237]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -2362,7 +2362,6 @@ synonym: "Ependymal neoplasm of the Spinal Cord" EXACT [NCI2004_11_17:C3875]
 xref: NCI2004_11_17:C3875
 xref: NCI:C3875
 xref: UMLS_CUI:C0238432
-is_a: DOID:3070 ! malignant glioma
 
 [Term]
 id: DOID:5515
@@ -2668,20 +2667,18 @@ id: DOID:684
 name: hepatocellular carcinoma
 namespace: disease_ontology
 alt_id: DOID:5005
-def: "A liver carcinoma that has_material_basis_in undifferentiated hepatocytes." [url:http\://cancergenome.nih.gov/cancersselected/LiverHepatocellularCarcinoma, url:http\://en.wikipedia.org/wiki/Hepatocellular_carcinoma, url:http\://www.omim.org/entry/114550]
+def: "A liver carcinoma that has_material_basis_in undifferentiated hepatocytes and located_in the liver." [url:http\://cancergenome.nih.gov/cancersselected/LiverHepatocellularCarcinoma, url:http\://en.wikipedia.org/wiki/Hepatocellular_carcinoma, url:http\://www.omim.org/entry/114550]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adult Hepatoma" EXACT [NCI2004_11_17:C7956]
-synonym: "adult primary hepatocellular carcinoma" EXACT []
 synonym: "HCC" EXACT [NCI2004_11_17:C3099]
 synonym: "Hepatoma" EXACT []
 xref: EFO:0000182
-xref: NCI2004_11_17:C3099
-xref: NCI2004_11_17:C7956
-xref: NCI:C7956
+xref: ICD-O:M8170/3
+xref: ICD10CM:C22.0
+xref: NCI:C3099
 xref: OMIM:114550
-xref: UMLS_CUI:C0279607
+xref: SNOMEDCT_US_2019_03_01:109841003
 
 [Term]
 id: DOID:706

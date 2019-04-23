@@ -80,7 +80,7 @@ build: $(DO).owl $(DO).obo $(DO).json
 products: subsets human merged build
 
 # release vars
-TS = $(shell date +'%m:%d:%Y %H:%M')
+TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar

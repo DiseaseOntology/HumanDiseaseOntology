@@ -258,7 +258,7 @@ $(REPORTS)/report-diff.txt: $(QUERIES)
 .PHONY: $(REPORTS)/branch-count.tsv
 $(REPORTS)/branch-count.tsv: $(DNC).owl | $(REPORTS)
 	@echo "Counting all branches..." && \
-	./src/uil/branch_count/branch_count.py $< $@ && \
+	./src/util/branch_count/branch_count.py $< $@ && \
 	echo "Branch count available at $@"
 
 #-----------------------------

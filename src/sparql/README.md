@@ -1,6 +1,6 @@
 # SPARQL Queries
 
-There are currently two types of SPARQL queries utilized for the DO ROBOT queries:
+There are currently two types of SPARQL queries utilized for the DO ROBOT commands:
 1. Verification queries
 2. Reporting queries
 

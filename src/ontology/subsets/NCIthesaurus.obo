@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-05-13/subsets/NCIthesaurus.obo
+data-version: doid/2019-06-28/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -56,11 +56,11 @@ alt_id: DOID:945
 alt_id: DOID:95
 alt_id: DOID:9532
 alt_id: DOID:9696
-def: "A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions." [DO:wk, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C26726]
+def: "A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions." [url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C26726] {comment="DO:wk"}
+comment: DO:wk
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "infectious disease" EXACT []
-xref: DO:wk
 xref: ICD9CM:079.0
 xref: UMLS_CUI:C0001485
 is_a: DOID:4 ! disease
@@ -239,13 +239,14 @@ is_a: DOID:1459 ! hypothyroidism
 id: DOID:0050424
 name: familial adenomatous polyposis
 namespace: disease_ontology
-def: "An autosomal genetic disease that has_material_basis_in mutations in the APC gene and involves formation of numerous polyps in the epithelium of the large intestine which are initially benign and later transform into colon cancer." [DO:ls, url:http\://en.wikipedia.org/wiki/Familial_adenomatous_polyposis, url:http\://www.omim.org/entry/175100?search=adenomatous%20polyposis]
+def: "An autosomal genetic disease that has_material_basis_in mutations in the APC gene and involves formation of numerous polyps in the epithelium of the large intestine which are initially benign and later transform into colon cancer." [url:http\://en.wikipedia.org/wiki/Familial_adenomatous_polyposis, url:http\://www.omim.org/entry/175100?search=adenomatous%20polyposis] {comment="DO:ls"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "adenomatous polyposis of the colon" EXACT []
 xref: GARD:6408
 xref: MESH:D011125
 xref: NCI:C3339
+xref: OMIM:PS175100
 xref: SNOMEDCT_US_2018_03_01:72900001
 xref: UMLS_CUI:C0032580
 is_a: DOID:630 ! genetic disease
@@ -266,13 +267,7 @@ xref: ICD10CM:G25.81
 xref: ICD9CM:333.94
 xref: MESH:D012148
 xref: NCI:C84501
-xref: OMIM:102300
-xref: OMIM:610438
-xref: OMIM:610439
-xref: OMIM:611185
-xref: OMIM:611242
-xref: OMIM:612853
-xref: OMIM:615197
+xref: OMIM:PS102300
 xref: SNOMEDCT_US_2018_03_01:32914008
 xref: UMLS_CUI:C0035258
 is_a: DOID:331 ! central nervous system disease
@@ -543,6 +538,7 @@ xref: GARD:11962
 xref: MESH:D052496
 xref: NCI:C84708
 xref: OMIM:PS151660
+xref: ORDO:98306
 xref: SNOMEDCT_US_2018_03_01:49292002
 xref: UMLS_CUI:C0271694
 xref: UMLS_CUI:C1720859
@@ -636,8 +632,8 @@ synonym: "PACHYONYCHIA CONGENITA, JADASSOHN-LEWANDOWSKY TYPE" EXACT []
 xref: GARD:10753
 xref: MESH:D053549
 xref: NCI:C84986
-xref: OMIM:167200
-xref: OMIM:167210
+xref: OMIM:PS167200
+xref: ORDO:2309
 xref: SNOMEDCT_US_2018_03_01:39427000
 xref: UMLS_CUI:C0265334
 xref: UMLS_CUI:C1706595
@@ -673,6 +669,7 @@ xref: ICD10CM:M04.1
 xref: MESH:D054078
 xref: NCI:C84890
 xref: OMIM:610377
+xref: ORDO:29
 xref: UMLS_CUI:C0342731
 xref: UMLS_CUI:C0398691
 xref: UMLS_CUI:C1959626
@@ -769,6 +766,7 @@ xref: ICD10CM:Q93.3
 xref: MESH:D054877
 xref: NCI:C35528
 xref: OMIM:194190
+xref: ORDO:280
 xref: SNOMEDCT_US_2018_03_01:17122004
 xref: UMLS_CUI:C0796117
 xref: UMLS_CUI:C1956097
@@ -806,6 +804,7 @@ xref: MESH:D055036
 xref: NCI:C120205
 xref: NCI:C84609
 xref: OMIM:114290
+xref: ORDO:140
 xref: SNOMEDCT_US_2018_03_01:74928006
 xref: UMLS_CUI:C1861922
 xref: UMLS_CUI:C1861923
@@ -871,6 +870,7 @@ synonym: "Greither Disease" EXACT []
 xref: MESH:D056266
 xref: NCI:C84696
 xref: OMIM:PS133200
+xref: ORDO:317
 xref: SNOMEDCT_US_2018_03_01:70041004
 xref: UMLS_CUI:C0265961
 xref: UMLS_CUI:C1851480
@@ -993,6 +993,7 @@ xref: GARD:7182
 xref: MESH:D056770
 xref: NCI:C84922
 xref: OMIM:256500
+xref: ORDO:634
 xref: SNOMEDCT_US_2018_03_01:34638006
 xref: SNOMEDCT_US_2018_03_01:54336006
 xref: UMLS_CUI:C0265962
@@ -1227,6 +1228,38 @@ xref: NCI2004_11_17:C4441
 xref: NCI:C4441
 xref: UMLS_CUI:C0345913
 is_a: DOID:3117 ! hepatobiliary benign neoplasm
+
+[Term]
+id: DOID:0050649
+name: atransferrinemia
+namespace: disease_ontology
+def: "A metal metabolism disorder that is characterized by transferrin deficiency, microcytic anemia, and iron loading, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the structural gene for transferrin on chromosome 3q22." [url:https\://en.wikipedia.org/wiki/Atransferrinemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/29969719, url:https\://www.omim.org/entry/209300]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: NCIthesaurus
+synonym: "familial hypotransferrinemia" EXACT []
+xref: GARD:9595
+xref: NCI:C125693
+xref: OMIM:209300
+xref: ORDO:1195
+is_a: DOID:655 ! inherited metabolic disorder
+
+[Term]
+id: DOID:0050657
+name: Bannayan-Riley-Ruvalcaba syndrome
+namespace: disease_ontology
+def: "An autosomal dominant disease that is characterized by macrocephaly, multiple noncancerous tumors and hamartomas, and dark freckles on the penis, and has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://en.wikipedia.org/wiki/Bannayan%E2%80%93Riley%E2%80%93Ruvalcaba_syndrome, url:https\://ghr.nlm.nih.gov/condition/bannayan-riley-ruvalcaba-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/31062505]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: NCIthesaurus
+synonym: "Bannayan-Zonana syndrome" EXACT []
+synonym: "Riley-Smith syndrome" EXACT []
+synonym: "Ruvalcaba-Myhre-Smith syndrome" EXACT []
+xref: GARD:5887
+xref: ICD10CM:Q87.89
+xref: MESH:D006223
+xref: NCI:C3939
+xref: OMIM:158350
+xref: ORDO:109
+is_a: DOID:630 ! genetic disease
 
 [Term]
 id: DOID:0050678
@@ -3562,10 +3595,10 @@ id: DOID:0070322
 name: pediatric hepatocellular carcinoma
 namespace: disease_ontology
 def: "A hepatocellular carcinoma that occurs in children and is characterized by a distinct etiological predisposition, biological behavior, and lower frequency of cirrhosis as compared to adult hepatocellular carcinoma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17714939, url:https\://www.ncbi.nlm.nih.gov/pubmed/28144610, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood hepatocellular carcinoma" EXACT []
 xref: GARD:9331
-xref: ICD-O:M8170/3
 xref: NCI:C7955
 xref: ORDO:33402
 is_a: DOID:684 ! hepatocellular carcinoma
@@ -3575,9 +3608,10 @@ id: DOID:0070323
 name: childhood acute myeloid leukemia
 namespace: disease_ontology
 def: "A childhood leukemia that is characterized by the rapid growth of abnormal white blood cells that accumulate in the bone marrow and interfere with the production of normal blood cells." [url:http\://www.danafarberbostonchildrens.org/conditions/leukemia-and-lymphoma/acute-myelogenous-leukemia.aspx, url:https\://en.wikipedia.org/wiki/Acute_myeloid_leukemia, url:https\://www.cancer.gov/types/leukemia/patient/child-aml-treatment-pdq]
+subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Acute myeloid leukemia [ICD-O:M9861/3]" EXACT []
 synonym: "pediatric acute myeloid leukemia" EXACT []
-xref: ICD-O:M9861/3
 xref: NCI:C9160
 is_a: DOID:7757 ! childhood leukemia
 
@@ -3586,10 +3620,10 @@ id: DOID:0070324
 name: systemic Epstein-Barr virus-positive T-cell lymphoma of childhood
 namespace: disease_ontology
 def: "A pediatric lymphoma that is characterized by monoclonal expansion of Epstein-Barr virus-positive T cells with an activated cytotoxic phenotype in tissues or peripheral blood." [url:https\://en.wikipedia.org/wiki/Epstein-Barr_virus-associated_lymphoproliferative_diseases, url:https\://www.ncbi.nlm.nih.gov/pubmed/30931288]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "EBV-positive T-cell lymphoproliferative disorder of childhood" EXACT []
 synonym: "systemic EBV-positive T-cell lymphoma of childhood" EXACT []
-xref: ICD-O:M9724/3
 xref: ICD10CM:D47.9
 xref: MESH:D008232
 xref: NCI:C80374
@@ -3602,10 +3636,10 @@ id: DOID:0070325
 name: malignant pediatric adrenal gland pheochromocytoma
 namespace: disease_ontology
 def: "An adrenal gland pheochromocytoma that is characterized by rare chromaffin cell tumors which secrete catecholamines, and has a higher prevalence of hereditary factors and metastatis in children than adults." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28324046, url:https\://www.ncbi.nlm.nih.gov/pubmed/28752085]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "malignant childhood adrenal gland pheochromocytoma" EXACT []
 xref: GARD:9368
-xref: ICD-O:M8700/3
 xref: NCI:C118822
 is_a: DOID:5719 ! adrenal medulla cancer
 
@@ -3614,6 +3648,7 @@ id: DOID:0070326
 name: spitzoid melanoma
 namespace: disease_ontology
 def: "A skin melanoma that is characterized by asymmetric shape, diameter greater than 1 cm, a lesion with a deep invasive component, and a high degree of cytologic atypia." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4377413/, url:https\://www.ncbi.nlm.nih.gov/pubmed/25666674, url:https\://www.ncbi.nlm.nih.gov/pubmed/25834363]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "atypical spitz nevus" EXACT []
 xref: NCI:C136825
@@ -3624,10 +3659,12 @@ id: DOID:0070327
 name: melanoma in congenital melanocytic nevus
 namespace: disease_ontology
 def: "A skin melanoma that arises from a congenital melanocytic nevus." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27517357, url:https\://www.ncbi.nlm.nih.gov/pubmed/28078671]
+subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Malignant melanoma in congenital melanocytic nevus" EXACT []
 synonym: "melanocytic nevi" EXACT []
 xref: GARD:2469
-xref: ICD-O:M8761/3
+xref: ICDO:M8761/3
 xref: NCI:C48613
 xref: SNOMEDCT_US_2019_03_01:75931002
 is_a: DOID:8923 ! skin melanoma
@@ -3636,24 +3673,77 @@ is_a: DOID:8923 ! skin melanoma
 id: DOID:0070328
 name: adult hepatocellular carcinoma
 namespace: disease_ontology
-def: "A hepatocellular carcinoma is characterized by hepatic mass, abdominal pain and, in advanced stages, jaundice, cachexia and liver failure and often develops in the setting of chronic necro-inflammation." [url:https\://www.cancer.gov/types/liver/patient/about-adult-liver-cancer-pdq, url:https\://www.ncbi.nlm.nih.gov/pubmed/25979220, url:https\://www.ncbi.nlm.nih.gov/pubmed/28761617, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
+def: "A hepatocellular carcinoma that is characterized by hepatic mass, abdominal pain and, in advanced stages, jaundice, cachexia and liver failure and often develops in the setting of chronic necro-inflammation." [url:https\://www.cancer.gov/types/liver/patient/about-adult-liver-cancer-pdq, url:https\://www.ncbi.nlm.nih.gov/pubmed/25979220, url:https\://www.ncbi.nlm.nih.gov/pubmed/28761617, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
 subset: NCIthesaurus
 synonym: "adult hepatoma" EXACT []
 synonym: "adult primary hepatocellular carcinoma" EXACT []
-synonym: "NCI:C7956" EXACT []
-xref: ICD-O:M8170/3
+xref: NCI:C7956
 xref: ORDO:210159
 xref: UMLS_CUI:C0279607
 is_a: DOID:684 ! hepatocellular carcinoma
+
+[Term]
+id: DOID:0080119
+name: mitochondrial DNA depletion syndrome 1
+namespace: disease_ontology
+def: "A mitochondrial DNA depletion syndrome that is characterized by onset between the second and fifth decades of life of ptosis, progressive external ophthalmoplegia, gastrointestinal dysmotility, cachexia, diffuse leukoencephalopathy, peripheral neuropathy, and mitochondrial dysfunction, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the nuclear-encoded thymidine phosphorylase gene on chromosome 22q13." [url:https\://en.wikipedia.org/wiki/Mitochondrial_neurogastrointestinal_encephalopathy_syndrome, url:https\://ghr.nlm.nih.gov/condition/mitochondrial-neurogastrointestinal-encephalopathy-disease, url:https\://www.ncbi.nlm.nih.gov/pubmed/19056268, url:https\://www.ncbi.nlm.nih.gov/pubmed/20301358, url:https\://www.omim.org/entry/603041]
+subset: NCIthesaurus
+synonym: "mitochondrial DNA depletion syndrome 1 (MNGIE type)" EXACT []
+synonym: "mitochondrial neurogastrointestinal encephalopathy" EXACT []
+synonym: "mitochondrial neurogastrointestinal encephalopathy disease" EXACT []
+synonym: "mitochondrial neurogastrointestinal encephalopathy syndrome" EXACT []
+synonym: "mitochondrial neurogastrointestinal encephalopathy syndrome, TYMP-related" EXACT []
+xref: GARD:9920
+xref: MESH:C536350
+xref: NCI:C11967
+xref: OMIM:603041
+xref: ORDO:298
+is_a: DOID:655 ! inherited metabolic disorder
+
+[Term]
+id: DOID:0080122
+name: mitochondrial DNA depletion syndrome 4a
+namespace: disease_ontology
+alt_id: DOID:1442
+def: "A mitochondrial DNA depletion syndrome that is characterized by a clinical triad of psychomotor retardation, intractable epilepsy, and liver failure in infants and young children, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the nuclear gene encoding mitochondrial DNA polymerase gamma on chromosome 15q26." [url:https\://en.wikipedia.org/wiki/Mitochondrial_DNA_depletion_syndrome, url:https\://ghr.nlm.nih.gov/condition/alpers-huttenlocher-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/30103161, url:https\://www.ncbi.nlm.nih.gov/pubmed/30451971, url:https\://www.omim.org/entry/203700]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Alper's syndrome" EXACT []
+synonym: "Alpers disease" EXACT []
+synonym: "Alpers progressive infantile poliodystrophy" EXACT []
+synonym: "Alpers syndrome" EXACT []
+synonym: "Alpers' disease or gray-matter degeneration" EXACT []
+synonym: "Alpers-Huttenlocher syndrome" EXACT []
+synonym: "progressive sclerosing poliodystrophy" EXACT [SNOMEDCT_2005_07_31:20415001]
+xref: GARD:5783
+xref: ICD10CM:G31.81
+xref: MESH:D002549
+xref: MTHICD9_2006:330.8
+xref: NCI:C35257
+xref: OMIM:203700
+xref: ORDO:726
+xref: SNOMEDCT_US_2018_03_01:20415001
+xref: UMLS_CUI:C0205710
+is_a: DOID:655 ! inherited metabolic disorder
+
+[Term]
+id: DOID:0080130
+name: mitochondrial DNA depletion syndrome 12a
+namespace: disease_ontology
+def: "A mitochondrial DNA depletion syndrome that is characterized by severe hypotonia due to mitochondrial dysfunction apparent at birth and has_material_basis_in autosomal dominant inheritance of heterozygous mutation in the solute carrier family 25 member 4 gene on chromosome 4q35." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27693233, url:https\://www.omim.org/entry/617184]
+subset: NCIthesaurus
+xref: NCI:C129977
+xref: OMIM:617184
+is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:0080144
 name: childhood acute lymphocytic leukemia
 namespace: disease_ontology
 def: "An acute lymphocytic leukemia occuring during childhood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.04d&ns=NCI_Thesaurus&code=C3168&key=736438179&b=1&n=null]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Childhood Acute Lymphoblastic Leukemia" EXACT []
-xref: ICD-O:M9835/3
 xref: NCI:C3168
 is_a: DOID:9952 ! acute lymphocytic leukemia
 
@@ -3662,8 +3752,8 @@ id: DOID:0080145
 name: T-cell childhood acute lymphocytic leukemia
 namespace: disease_ontology
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in T-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C7953]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9831/3
 xref: NCI:C7953
 is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
 
@@ -3672,8 +3762,8 @@ id: DOID:0080146
 name: B-cell childhood acute lymphoblastic leukemia
 namespace: disease_ontology
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in B-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C9140]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9836/3
 xref: NCI:C9140
 is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
 
@@ -3682,9 +3772,9 @@ id: DOID:0080148
 name: T-cell childhood lymphoblastic lymphoma
 namespace: disease_ontology
 def: "A lymphoblastic lymphoma that has_material_basis_in T-cells and that occurs during childhood." [url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Childhood T lymphoblastic lymphoma" EXACT []
-xref: ICD-O:M9729/3
 xref: NCI:C7210
 is_a: DOID:0060058 ! lymphoma
 
@@ -3752,7 +3842,7 @@ is_a: DOID:1036 ! chronic leukemia
 id: DOID:0080188
 name: chronic myelomonocytic leukemia
 namespace: disease_ontology
-def: "A chronic leukemia characterized by monocytosis, increased monocytes in the bone marrow, variable degrees of dysplasia, but an absence of immature granulocytes in the blood." []
+def: "A chronic leukemia characterized by monocytosis, increased monocytes in the bone marrow, variable degrees of dysplasia, but an absence of immature granulocytes in the blood." [url:https\://en.wikipedia.org/wiki/Chronic_myelomonocytic_leukemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/30367269, url:https\://www.ncbi.nlm.nih.gov/pubmed/31093889]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:8225
@@ -3800,6 +3890,38 @@ xref: NCI:C8863
 is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
+id: DOID:0080335
+name: mitochondrial DNA depletion syndrome 12b
+namespace: disease_ontology
+def: "A mitochondrial DNA depletion syndrome that is characterized by childhood onset of slowly progressive hypertrophic cardiomyopathy and generalized skeletal myopathy resulting in exercise intolerance, muscle weakness, and atrophy, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the the solute carrier family 25 member 4 on chromosome 4q35." [url:https\://ghr.nlm.nih.gov/gene/SLC25A4#conditions, url:https\://www.ncbi.nlm.nih.gov/pubmed/22187496, url:https\://www.ncbi.nlm.nih.gov/pubmed/27693233, url:https\://www.omim.org/entry/615418]
+subset: NCIthesaurus
+xref: GARD:1142
+xref: NCI:C129977
+xref: OMIM:615418
+xref: ORDO:1369
+is_a: DOID:655 ! inherited metabolic disorder
+
+[Term]
+id: DOID:0080524
+name: thyroid gland adenocarcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma that derives_from epithelial cells of glandular origin." [url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+xref: NCI:C27380
+is_a: DOID:3963 ! thyroid gland carcinoma
+
+[Term]
+id: DOID:0080525
+name: differentiated thyroid gland carcinoma
+namespace: disease_ontology
+def: "A thyroid gland adenocarcinoma characterized by extensive evidence of follicular cell differentiation." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C7153&ns=ncit]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+xref: NCI:C7153
+is_a: DOID:0080524 ! thyroid gland adenocarcinoma
+
+[Term]
 id: DOID:0090019
 name: sitosterolemia
 namespace: disease_ontology
@@ -3818,7 +3940,7 @@ is_a: DOID:5295 ! intestinal disease
 id: DOID:0090106
 name: Bh4-deficient hyperphenylalaninemia A
 namespace: disease_ontology
-def: "An amino acid metabolic disorder characterized by autosomal recessive inheritance of hyperphenylalaninemia, depletion of the neurotransmitters dopamine and serotonin, and progressive cognitive and motor deficits that has material_basis_in mutation in the PTS gene on chromosome 11q23.1." []
+def: "An amino acid metabolic disorder that is characterized by hyperphenylalaninemia, depletion of the neurotransmitters dopamine and serotonin, and progressive cognitive and motor deficits that has_material_basis_in autosomal recessive inheritance of mutation in the gene encoding 6-pyruvoyl-tetrahydropterin synthase (PTS) on chromosome 11q23.1." [url:https\://ghr.nlm.nih.gov/condition/tetrahydrobiopterin-deficiency, url:https\://www.omim.org/entry/261640]
 subset: NCIthesaurus
 synonym: "6-pyruvoyl-tetrahydropterin synthase deficiency" EXACT []
 synonym: "HPABH4A" EXACT []
@@ -3837,7 +3959,7 @@ is_a: DOID:9252 ! amino acid metabolic disorder
 id: DOID:0090118
 name: congenital amegakaryocytic thrombocytopenia
 namespace: disease_ontology
-def: "A thrombocytopenia characterized by a severe reduction in megakaryocyte and platelet numbers that has_material_basis_in homozygous or compound heterozygous mutation in the MPL gene on chromosome 1p34." []
+def: "A thrombocytopenia that is characterized by a severe reduction in megakaryocyte and platelet numbers, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the myeloproliferative leukemia virus oncogene (MPL) on chromosome 1p34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29191945, url:https\://www.ncbi.nlm.nih.gov/pubmed/29384262, url:https\://www.omim.org/entry/604498]
 subset: NCIthesaurus
 synonym: "CAMT" EXACT []
 synonym: "congenital amegakaryocytic thrombocytopenic purpura" EXACT []
@@ -3853,7 +3975,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:0090140
 name: cortisone reductase deficiency 2
 namespace: disease_ontology
-def: "A cortisone reductase deficiency that has_material_basis_in heterozygous mutation in the HSD11B1 gene on chromosome 1q32." []
+def: "A cortisone reductase deficiency that is characterized by a failure to regenerate cortisol via the enzyme 11-beta-hydroxysteroid dehydrogenase, resulting in ACTH-mediated adrenal hyperandrogenism, and has_material_basis_in autosomal dominant inheritance of heterozygous mutation in the 11-beta-hydroxysteroid dehydrogenase type I (HSD11B1) gene on chromosome 1q32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29843121, url:https\://www.omim.org/entry/614662]
 subset: NCIthesaurus
 synonym: "CORTRD2" EXACT []
 xref: NCI:C131084
@@ -3864,7 +3986,7 @@ is_a: DOID:28 ! endocrine system disease
 id: DOID:0090141
 name: cortisone reductase deficiency 1
 namespace: disease_ontology
-def: "A cortisone reductase deficiency that has_material_basis_in homozygous or compound heterozygous mutation in the H6PD gene on chromosome 1p36." []
+def: "A cortisone reductase deficiency that is characterized by failure to regenerate cortisol via the enzyme 11-beta-hydroxysteroid dehydrogenase which requires NADPH regeneration by hexose-6-phosphate dehydrogenase, resulting in ACTH-mediated adrenal hyperandrogenism. It has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the hexose-6-phosphate dehydrogenase gene (H6PD) on chromosome 1p36." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29843121, url:https\://www.omim.org/entry/604931]
 subset: NCIthesaurus
 synonym: "CORTRD1" EXACT []
 xref: NCI:C131849
@@ -3875,7 +3997,7 @@ is_a: DOID:28 ! endocrine system disease
 id: DOID:0090142
 name: cystathioninuria
 namespace: disease_ontology
-def: "An amino acid metabolic disorder characterized by elevated plasma and urinary cystathionine levels that has_material_basis_in homozygous or compound heterozygous mutation in the CTH gene on chromosome 1p31." []
+def: "An amino acid metabolic disorder that is characterized by elevated plasma and urinary cystathionine levels that has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the gene encoding cystathionine gamma-lyase (CTH) on chromosome 1p31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/20584029, url:https\://www.omim.org/entry/219500]
 subset: NCIthesaurus
 synonym: "cystathionase deficiency" EXACT []
 synonym: "cystathione gamma-lyase deficiency syndrome" EXACT []
@@ -4002,6 +4124,7 @@ xref: ICD10CM:D69.1
 xref: MESH:D055652
 xref: NCI:C84741
 xref: OMIM:139090
+xref: ORDO:721
 xref: SNOMEDCT_US_2018_03_01:51720005
 xref: UMLS_CUI:C0272302
 is_a: DOID:1247 ! blood coagulation disease
@@ -4182,7 +4305,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C5265
 xref: UMLS_CUI:C1336753
-is_a: DOID:1781 ! thyroid cancer
+is_a: DOID:1781 ! thyroid gland cancer
 
 [Term]
 id: DOID:10016
@@ -4576,6 +4699,7 @@ id: DOID:10124
 name: corneal disease
 namespace: disease_ontology
 alt_id: DOID:2284
+def: "An eye disease that affects the cornea, which is the transparent surface of the eye that assists in light refraction." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26731]
 subset: NCIthesaurus
 xref: ICD10CM:H18.9
 xref: ICD9CM:371.9
@@ -5439,17 +5563,16 @@ id: DOID:10325
 name: silicosis
 namespace: disease_ontology
 alt_id: DOID:14007
-def: "A pneumoconiosis that is an inflammation and scarring of the uper lobes of the lungs causing nodular lesions resulting from inhalation of silica, quartz or slate particles." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Silicosis]
+def: "A pneumoconiosis that is an inflammation and scarring of the uper lobes of the lungs causing nodular lesions resulting from inhalation of silica, quartz or slate particles." [url:http\://en.wikipedia.org/wiki/Silicosis] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "Pneumoconiosis due to silicates" EXACT [SNOMEDCT_2005_07_31:83316006]
 synonym: "Silica pneumoconiosis" EXACT []
-synonym: "Silicotic fibrosis of lung" EXACT [MTHICD9_2006:502]
+synonym: "Silicotic fibrosis of lung" EXACT []
 synonym: "silicotuberculosis" EXACT []
 xref: GARD:7647
 xref: ICD10CM:J62
 xref: ICD10CM:J62.8
 xref: ICD9CM:502
-xref: ls:IEDB
 xref: MESH:D012829
 xref: MTHICD9_2006:502
 xref: NCI:C3369
@@ -6834,7 +6957,7 @@ is_a: DOID:150 ! disease of mental health
 id: DOID:10652
 name: Alzheimer's disease
 namespace: disease_ontology
-def: "A tauopathy that is characterized by memory lapses, confusion, emotional instability and progressive loss of mental ability and results in progressive memory loss, impaired thinking, disorientation, and changes in personality and mood starting and leads in advanced cases to a profound decline in cognitive and physical functioning and is marked histologically by the degeneration of brain neurons especially in the cerebral cortex and by the presence of neurofibrillary tangles and plaques containing beta-amyloid." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Alzheimer%27s_disease, url:http\://www.merriam-webster.com/medical/alzheimer%27s%20disease, url:http\://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet]
+def: "A tauopathy that is characterized by memory lapses, confusion, emotional instability and progressive loss of mental ability and results in progressive memory loss, impaired thinking, disorientation, and changes in personality and mood starting and leads in advanced cases to a profound decline in cognitive and physical functioning and is marked histologically by the degeneration of brain neurons especially in the cerebral cortex and by the presence of neurofibrillary tangles and plaques containing beta-amyloid." [url:http\://en.wikipedia.org/wiki/Alzheimer%27s_disease, url:http\://www.merriam-webster.com/medical/alzheimer%27s%20disease, url:http\://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet] {comment="ls:IEDB"}
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Alzheimer disease" EXACT []
@@ -8252,6 +8375,7 @@ is_a: DOID:639 ! acute disseminated encephalomyelitis
 id: DOID:110
 name: lens disease
 namespace: disease_ontology
+def: "An eye disease that affects the lens of the eye, which is the transparent disc that focuses light to the photosensors in the back of the eye." [url:https\://en.wikipedia.org/wiki/Lens_(anatomy)]
 subset: NCIthesaurus
 xref: ICD10CM:H25-H28
 xref: ICD10CM:H27.9
@@ -9020,9 +9144,8 @@ is_a: DOID:11204 ! allergic conjunctivitis
 id: DOID:11204
 name: allergic conjunctivitis
 namespace: disease_ontology
-def: "A chronic conjunctivitis that is an inflammation of the conjunctiva involing red, itchy, and watery eyes a resulting from an exposure to an allergen or an irritant." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Allergic_conjunctivitis]
+def: "A chronic conjunctivitis that is an inflammation of the conjunctiva involing red, itchy, and watery eyes a resulting from an exposure to an allergen or an irritant." [url:http\://en.wikipedia.org/wiki/Allergic_conjunctivitis] {comment="ls:IEDB"}
 subset: NCIthesaurus
-xref: ls:IEDB
 xref: MESH:D003233
 xref: NCI:C34506
 xref: SNOMEDCT_US_2018_03_01:20212001
@@ -9604,6 +9727,7 @@ is_a: DOID:3388 ! periodontal disease
 id: DOID:11343
 name: scleral disease
 namespace: disease_ontology
+def: "An eye disease that affects the sclera, which is the white fibrous outer layer of the eyeball." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C79717]
 subset: NCIthesaurus
 xref: ICD10CM:H15
 xref: ICD10CM:H15.9
@@ -10214,6 +10338,7 @@ subset: NCIthesaurus
 synonym: "calcium pyrophosphate deposition disease" EXACT []
 synonym: "pseudogout" EXACT []
 xref: ICD9CM:712.1
+xref: MESH:D002805
 xref: NCI:C34955
 xref: OMIM:118600
 xref: OMIM:118610
@@ -10721,11 +10846,9 @@ synonym: "Miyoshi muscular dystrophy" EXACT []
 xref: ICD10CM:G71.0
 xref: MESH:D049310
 xref: NCI:C84675
-xref: ORDO:399086
 xref: ORDO:399096
 xref: ORDO:5448
 xref: ORDO:59135
-xref: ORDO:63273
 xref: SNOMEDCT_US_2018_03_01:58795000
 xref: UMLS_CUI:C0751336
 is_a: DOID:9884 ! muscular dystrophy
@@ -10865,8 +10988,6 @@ xref: ICD10CM:G71.0
 xref: MESH:D020391
 xref: MTHICD9_2006:359.1
 xref: NCI:C84704
-xref: OMIM:158900
-xref: OMIM:158901
 xref: SNOMEDCT_US_2018_03_01:56096001
 xref: UMLS_CUI:C0238288
 is_a: DOID:9884 ! muscular dystrophy
@@ -11498,6 +11619,7 @@ xref: ICD9CM:759.81
 xref: MESH:D011218
 xref: NCI:C75463
 xref: OMIM:176270
+xref: ORDO:739
 xref: SNOMEDCT_US_2018_03_01:89392001
 xref: UMLS_CUI:C0032897
 is_a: DOID:630 ! genetic disease
@@ -11739,14 +11861,12 @@ is_a: DOID:2383 ! neonatal jaundice
 id: DOID:1205
 name: allergic hypersensitivity disease
 namespace: disease_ontology
-def: "An immune system disease that is an exaggerated immune response to allergens, such as insect venom, dust mites, pollen, pet dander, drugs or some foods." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Allergy]
+def: "An immune system disease that is an exaggerated immune response to allergens, such as insect venom, dust mites, pollen, pet dander, drugs or some foods." [url:http\://en.wikipedia.org/wiki/Allergy] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "allergic disease" EXACT []
-synonym: "allergy" EXACT []
 synonym: "hypersensitivity" EXACT []
 synonym: "hypersensitivity reaction type I disease" EXACT []
 xref: ICD10CM:T78.40
-xref: ls:IEDB
 xref: MESH:D006967
 xref: NCI:C3114
 xref: SNOMEDCT_US_2018_03_01:21957007
@@ -11828,7 +11948,7 @@ is_a: DOID:15 ! reproductive system disease
 id: DOID:1210
 name: optic neuritis
 namespace: disease_ontology
-def: "An optic nerve disease that results_in inflammation located_in optic nerve which may cause a complete or partial loss of vision." [sn:IEDB]
+def: "An optic nerve disease that results_in inflammation located_in optic nerve which may cause a complete or partial loss of vision." [url:https\://www.mayoclinic.org/diseases-conditions/optic-neuritis/symptoms-causes/syc-20354953] {comment="sn:IEDB"}
 subset: NCIthesaurus
 xref: GARD:7320
 xref: ICD10CM:H46
@@ -11837,7 +11957,6 @@ xref: ICD9CM:377.3
 xref: ICD9CM:377.30
 xref: MESH:D009902
 xref: NCI:C84950
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:66760008
 xref: UMLS_CUI:C0029134
 is_a: DOID:1891 ! optic nerve disease
@@ -11931,12 +12050,12 @@ is_a: DOID:4 ! disease
 id: DOID:12134
 name: factor VIII deficiency
 namespace: disease_ontology
-def: "A X-linked recessive disease that has_material_basis_in Factor VIII deficiency, which results in the formation of fibrin deficient clots which makes coagulation much more prolonged." [sn:IEDB, url:http\://en.wikipedia.org/wiki/Hemophilia_A]
+def: "A X-linked recessive disease that has_material_basis_in Factor VIII deficiency, which results in the formation of fibrin deficient clots which makes coagulation much more prolonged." [url:http\://en.wikipedia.org/wiki/Hemophilia_A] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "Congenital factor VIII disorder" EXACT [ICD9CM_2006:286.0]
-synonym: "Hemophilia A" EXACT [SNOMEDCT_2005_07_31:28293008]
-synonym: "Subhemophilia" EXACT [MTHICD9_2006:286.0]
+synonym: "Congenital factor VIII disorder" EXACT []
+synonym: "Hemophilia A" EXACT []
+synonym: "Subhemophilia" EXACT []
 xref: GARD:6591
 xref: ICD10CM:D66
 xref: ICD9CM:286.0
@@ -11945,7 +12064,6 @@ xref: MESH:D006467
 xref: MTHICD9_2006:286.0
 xref: NCI:C27146
 xref: OMIM:134500
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:28293008
 xref: UMLS_CUI:C0019069
 is_a: DOID:630 ! genetic disease
@@ -12383,7 +12501,7 @@ is_a: DOID:5419 ! schizophrenia
 id: DOID:12297
 name: Vogt-Koyanagi-Harada disease
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is caused by T helper cell mediated autoimmune attack of melanocytes resulting in inflammation of the inside of the eye, whitening of hair, skin pigment loss, and meningitis." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Vogt%E2%80%93Koyanagi%E2%80%93Harada_syndrome]
+def: "An autoimmune hypersensitivity disease that is caused by T helper cell mediated autoimmune attack of melanocytes resulting in inflammation of the inside of the eye, whitening of hair, skin pigment loss, and meningitis." [url:http\://en.wikipedia.org/wiki/Vogt%E2%80%93Koyanagi%E2%80%93Harada_syndrome] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "Harada's disease" EXACT [ICD9CM_2006:363.22]
 synonym: "uveomeningoencephalitic syndrome" EXACT []
@@ -12395,7 +12513,6 @@ xref: ICD9CM:363.22
 xref: ICD9CM:364.24
 xref: ICD9CM_2006:363.22
 xref: ICD9CM_2006:364.24
-xref: ls:IEDB
 xref: MESH:D014607
 xref: NCI:C85218
 xref: SNOMEDCT_US_2018_03_01:44923005
@@ -12423,14 +12540,13 @@ is_a: DOID:37 ! skin disease
 id: DOID:12306
 name: vitiligo
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that causes depigmentation of patches of skin resulting from loss of function or death of melanoctyes." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Vitiligo]
+def: "An autoimmune hypersensitivity disease that causes depigmentation of patches of skin resulting from loss of function or death of melanoctyes." [url:http\://en.wikipedia.org/wiki/Vitiligo] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 xref: EFO:0004208
 xref: GARD:10751
 xref: ICD10CM:L80
 xref: ICD9CM:709.01
-xref: ls:IEDB
 xref: MESH:D014820
 xref: NCI:C26915
 xref: OMIM:193200
@@ -12474,8 +12590,9 @@ is_a: DOID:3663 ! cutaneous mastocytosis
 
 [Term]
 id: DOID:12318
-name: corneal granular dystrophy
+name: granular corneal dystrophy
 namespace: disease_ontology
+def: "An epithelial-stromal TGFBI dystrophy that is characterized by progressive accumulation of deposits within the layers of the cornea." [url:https\://webeye.ophth.uiowa.edu/eyeforum/cases/43-corneal-stromal-dystrophies.htm]
 subset: NCIthesaurus
 synonym: "granular corneal dystrophy" EXACT [ICD9CM_2006:371.53]
 xref: ICD10CM:H18.53
@@ -13164,6 +13281,7 @@ xref: MESH:D004370
 xref: NCI:C84678
 xref: OMIM:126800
 xref: OMIM:604356
+xref: ORDO:233
 xref: SNOMEDCT_US_2018_03_01:60318001
 xref: UMLS_CUI:C0013261
 is_a: DOID:5656 ! cranial nerve disease
@@ -14158,18 +14276,17 @@ id: DOID:12894
 name: Sjogren's syndrome
 namespace: disease_ontology
 alt_id: DOID:416
-def: "An autoimmune hypersensitivity disease that involves attack of immune cells which destroy the exocrine glands that produce tears and saliva." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Sj%C3%B6gren%27s_syndrome]
+def: "An autoimmune hypersensitivity disease that involves attack of immune cells which destroy the exocrine glands that produce tears and saliva." [url:http\://en.wikipedia.org/wiki/Sj%C3%B6gren%27s_syndrome] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Sicca syndrome" EXACT []
 synonym: "Sjogren syndrome" EXACT []
-synonym: "xerodermosteosis" EXACT [CSP2005:0729-8405]
+synonym: "xerodermosteosis" EXACT []
 xref: CSP2005:0729-8405
 xref: GARD:10252
 xref: ICD10CM:M35.0
 xref: ICD10CM:M35.00
 xref: ICD9CM:710.2
-xref: ls:IEDB
 xref: MESH:D012859
 xref: NCI:C26883
 xref: NCI:C70647
@@ -15002,14 +15119,13 @@ is_a: DOID:518 ! scrotum neoplasm
 id: DOID:13166
 name: allergic bronchopulmonary aspergillosis
 namespace: disease_ontology
-def: "An aspergillosis that involves an allergic reaction due to the spores of Aspergillus moulds (A. fumigatus), which colonizes the mucus in the airways causing inflammation. The disease has symptom cough, has symptom wheezing and has symptom fever." [ls:IEDB, url:http\://www.merck.com/mmhe/sec04/ch051/ch051d.html, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000070.htm]
+def: "An aspergillosis that involves an allergic reaction due to the spores of Aspergillus moulds (A. fumigatus), which colonizes the mucus in the airways causing inflammation. The disease has symptom cough, has symptom wheezing and has symptom fever." [url:http\://www.merck.com/mmhe/sec04/ch051/ch051d.html, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000070.htm] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "pulmonary aspergillus disease" EXACT []
 xref: GARD:602
 xref: ICD10CM:B44.81
 xref: ICD9CM:518.6
-xref: ls:IEDB
 xref: MESH:D001229
 xref: NCI:C84547
 xref: OMIM:103920
@@ -15515,7 +15631,7 @@ is_a: DOID:854 ! collagen disease
 id: DOID:13366
 name: Stiff-Person syndrome
 namespace: disease_ontology
-def: "A movement disease that is of unknown etiology characterized by progressive rigidity." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Stiff_person_syndrome]
+def: "A movement disease that is of unknown etiology characterized by progressive rigidity." [url:http\://en.wikipedia.org/wiki/Stiff_person_syndrome] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "stiff man syndrome" EXACT [CSP2005:2057-3403]
 synonym: "Stiff-man syndrome" EXACT []
@@ -15523,7 +15639,6 @@ xref: CSP2005:2057-3403
 xref: GARD:5023
 xref: ICD10CM:G25.82
 xref: ICD9CM:333.91
-xref: ls:IEDB
 xref: MESH:D016750
 xref: NCI:C85170
 xref: OMIM:184850
@@ -15572,6 +15687,7 @@ xref: ICD9CM_2006:728.11
 xref: MESH:D009221
 xref: NCI:C3040
 xref: OMIM:135100
+xref: ORDO:337
 xref: SNOMEDCT_US_2018_03_01:82725007
 xref: UMLS_CUI:C0016037
 is_a: DOID:65 ! connective tissue disease
@@ -17054,6 +17170,7 @@ is_a: DOID:37 ! skin disease
 id: DOID:13822
 name: tetanic cataract
 namespace: disease_ontology
+def: "A cataract resulting from hypocalcemia." [url:http\://nciws-p803.nci.nih.gov\:9080/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35068, url:https\://docs.google.com/spreadsheets/d/1aOWjZMKus9-e7sabkG8YKu79Zxq_GPA-kpQoFznysPU/edit#gid=783202026]
 subset: NCIthesaurus
 synonym: "Hypocalcaemic cataract" EXACT [SNOMEDCT_2005_07_31:68216000]
 xref: ICD9CM:366.42
@@ -17358,6 +17475,7 @@ is_a: DOID:1400 ! lacrimal apparatus disease
 id: DOID:1393
 name: visual pathway disease
 namespace: disease_ontology
+def: "An eye disease that affects the neural pathway from the optic nerve to the visual cortex, through which light is interpreted as an image." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35342]
 subset: NCIthesaurus
 xref: ICD10CM:H47.9
 xref: NCI:C35342
@@ -17589,6 +17707,7 @@ is_a: DOID:10154 ! small intestine cancer
 id: DOID:1400
 name: lacrimal apparatus disease
 namespace: disease_ontology
+def: "An eye disease that affects the lacrimal apparatus (the lacrimal gland and its related structures) which moisten and drain the eye." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26809]
 subset: NCIthesaurus
 xref: ICD10CM:H04
 xref: ICD10CM:H04.9
@@ -17658,7 +17777,7 @@ is_a: DOID:74 ! hematopoietic system disease
 id: DOID:14040
 name: autoimmune polyendocrine syndrome
 namespace: disease_ontology
-def: "An autoimmune disease of endocrine system characterized by abnormal functioning of the immune system that causes auto-reactivity against endocrine organs." [sn:IEDB]
+def: "An autoimmune disease of endocrine system characterized by abnormal functioning of the immune system that causes auto-reactivity against endocrine organs." [url:https\://en.wikipedia.org/wiki/Autoimmune_polyendocrine_syndrome] {comment="sn:IEDB"}
 subset: NCIthesaurus
 synonym: "autoimmune polyendocrinopathy" EXACT []
 synonym: "Autoimmune polyglandular failure" EXACT []
@@ -17666,7 +17785,6 @@ synonym: "Lloyd's syndrome" EXACT []
 xref: ICD10CM:E31.0
 xref: MESH:D016884
 xref: NCI:C84576
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:18947001
 xref: SNOMEDCT_US_2018_03_01:41864002
 xref: UMLS_CUI:C0085409
@@ -18081,6 +18199,7 @@ is_a: DOID:5241 ! hemangioblastoma
 id: DOID:14176
 name: selective IgG deficiency disease
 namespace: disease_ontology
+def: "A dysgammaglobulinemia that is characterized by isolated deficiency of an IgG subclass, normal total IgG levels, and subsequent increased susceptibility to recurrent infections, atopic disease, and autoimmune conditions." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26846287]
 subset: NCIthesaurus
 synonym: "Immunoglobin G subclass deficiency" EXACT []
 synonym: "Selective deficiency of IgG" EXACT [MTHICD9_2006:279.03]
@@ -18345,6 +18464,7 @@ xref: MTHICD9_2006:758.0
 xref: NCI2004_11_17:C2993
 xref: NCI:C2993
 xref: OMIM:190685
+xref: ORDO:870
 xref: SNOMEDCT_US_2018_03_01:41040004
 xref: UMLS_CUI:C0013080
 is_a: DOID:630 ! genetic disease
@@ -18897,31 +19017,6 @@ xref: UMLS_CUI:C0013100
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
 
 [Term]
-id: DOID:1442
-name: Alpers syndrome
-namespace: disease_ontology
-def: "A cerebral degeneration that results in progressive degeneration of grey matter in the cerebrum and has_symptom convulsions." [url:http\://www.ninds.nih.gov/disorders/alpersdisease/alpersdisease.htm]
-comment: OMIM mapping confirmed by DO. [SN].
-subset: DO_rare_slim
-subset: NCIthesaurus
-synonym: "Alper's syndrome" EXACT [NCI2004_11_17:C35257]
-synonym: "ALPERS PROGRESSIVE INFANTILE POLIODYSTROPHY" EXACT []
-synonym: "Alpers' disease or gray-matter degeneration" EXACT [MTHICD9_2006:330.8]
-synonym: "ALPERS-HUTTENLOCHER SYNDROME" EXACT []
-synonym: "MITOCHONDRIAL DNA DEPLETION SYNDROME 4A" EXACT []
-synonym: "progressive sclerosing poliodystrophy" EXACT [SNOMEDCT_2005_07_31:20415001]
-xref: GARD:5783
-xref: ICD10CM:G31.81
-xref: MESH:D002549
-xref: MTHICD9_2006:330.8
-xref: NCI2004_11_17:C35257
-xref: NCI:C35257
-xref: OMIM:203700
-xref: SNOMEDCT_US_2018_03_01:20415001
-xref: UMLS_CUI:C0205710
-is_a: DOID:936 ! brain disease
-
-[Term]
 id: DOID:14422
 name: dipetalonemiasis
 namespace: disease_ontology
@@ -19018,6 +19113,7 @@ xref: ICD10CM:G72.3
 xref: MESH:D020513
 xref: NCI:C123429
 xref: OMIM:170500
+xref: ORDO:682
 xref: SNOMEDCT_US_2018_03_01:15973007
 xref: UMLS_CUI:C0238357
 is_a: DOID:1029 ! familial periodic paralysis
@@ -19044,6 +19140,7 @@ xref: MTHICD9_2006:359.3
 xref: NCI:C84775
 xref: OMIM:170400
 xref: OMIM:613345
+xref: ORDO:681
 xref: SNOMEDCT_US_2018_03_01:82732003
 xref: UMLS_CUI:C0238358
 is_a: DOID:1029 ! familial periodic paralysis
@@ -19261,6 +19358,7 @@ is_a: DOID:3211 ! lysosomal storage disease
 id: DOID:14501
 name: Sjogren-Larsson syndrome
 namespace: disease_ontology
+def: "An autosomal recessive disease that is characterized by ichthyosis, mental retardation, spastic paraparesis, macular dystrophy, and leukoencephalopathy, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the aldehyde dehydrogenase 3 family member A2 (ALDH3A2) gene, which encodes fatty aldehyde dehydrogenase, on chromosome 17p11." [url:https\://ghr.nlm.nih.gov/condition/sjogren-larsson-syndrome, url:https\://www.omim.org/entry/270200]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Sjogren Larsson syndrome" EXACT []
@@ -19637,6 +19735,7 @@ xref: MESH:C536940
 xref: MTHICD9_2006:287.33
 xref: NCI:C99038
 xref: OMIM:274000
+xref: ORDO:3320
 xref: SNOMEDCT_US_2018_03_01:85589009
 xref: UMLS_CUI:C0175703
 is_a: DOID:630 ! genetic disease
@@ -19729,6 +19828,7 @@ xref: GARD:7380
 xref: MESH:D000168
 xref: NCI:C99100
 xref: OMIM:101600
+xref: ORDO:710
 xref: SNOMEDCT_US_2018_03_01:70410008
 xref: UMLS_CUI:C0220658
 is_a: DOID:12960 ! acrocephalosyndactylia
@@ -19747,11 +19847,6 @@ xref: GARD:101
 xref: MESH:D020914
 xref: MTHICD9_2006:359.0
 xref: NCI:C84648
-xref: OMIM:160150
-xref: OMIM:255200
-xref: OMIM:310400
-xref: OMIM:614807
-xref: OMIM:615959
 xref: ORDO:595
 xref: ORDO:596
 xref: ORDO:69186
@@ -19836,7 +19931,7 @@ is_a: DOID:630 ! genetic disease
 id: DOID:1475
 name: lymphangioma
 namespace: disease_ontology
-def: "A benign vascular tumor that is composed of dilated lymphatic channels." []
+def: "A benign vascular tumor that is composed of dilated lymphatic channels." [url:https\://en.wikipedia.org/wiki/Lymphangioma]
 subset: NCIthesaurus
 synonym: "benign lymphangioma" EXACT []
 synonym: "Congenital lymphangioma" EXACT []
@@ -19932,6 +20027,7 @@ synonym: "acrocephalosyndactyly type III" RELATED []
 xref: MESH:D000168
 xref: NCI:C75034
 xref: OMIM:101400
+xref: ORDO:794
 xref: SNOMEDCT_US_2018_03_01:83015004
 xref: UMLS_CUI:C0175699
 is_a: DOID:12960 ! acrocephalosyndactylia
@@ -20672,9 +20768,9 @@ is_a: DOID:5093 ! thoracic cancer
 id: DOID:1616
 name: benign eccrine breast spiradenoma
 namespace: disease_ontology
-def: "A breast benign neoplasm that arises_from cutaneous sweat glands and is characterized microscopically by two-cell populations: small, dark, basaloid cells with hyperchromatic nuclei, which are immunoreactive for P63 and calponin, and larger cells with a pale nucleus, often near the center of the cluster (inner cells), which are immunoreactive for CK7 and CD117 (C-kit)." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4171928/#ref5\, url\:https\://www-ncbi-nlm-nih-gov.proxy-hs.researchport.umd.edu/pmc/articles/PMC4508467/]
+def: "A breast benign neoplasm that arises_from cutaneous sweat glands and is characterized microscopically by two-cell populations: small, dark, basaloid cells with hyperchromatic nuclei, which are immunoreactive for P63 and calponin, and larger cells with a pale nucleus, often near the center of the cluster (inner cells), which are immunoreactive for CK7 and CD117 (C-kit)." [url:https\://www-ncbi-nlm-nih-gov.proxy-hs.researchport.umd.edu/pmc/articles/PMC4508467/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4171928/#ref5]
 subset: NCIthesaurus
-synonym: "benign Eccrine breast Spiradenoma" EXACT [NCI2004_11_17:C5193]
+synonym: "benign Eccrine breast Spiradenoma" EXACT []
 xref: NCI2004_11_17:C5193
 xref: NCI:C5193
 xref: UMLS_CUI:C1332492
@@ -20716,7 +20812,7 @@ is_a: DOID:4 ! disease
 id: DOID:162
 name: cancer
 namespace: disease_ontology
-def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [stedman:rlc, url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
+def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
@@ -20727,6 +20823,7 @@ synonym: "primary cancer" EXACT []
 xref: ICD10CM:C80
 xref: ICD10CM:C80.1
 xref: ICD9CM:199
+xref: ICDO:M8000/3
 xref: MESH:D009369
 xref: NCI:C9305
 xref: SNOMEDCT_US_2018_03_01:38807002
@@ -21626,7 +21723,7 @@ is_a: DOID:1287 ! cardiovascular system disease
 
 [Term]
 id: DOID:1781
-name: thyroid cancer
+name: thyroid gland cancer
 namespace: disease_ontology
 alt_id: DOID:10008
 def: "An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
@@ -22500,6 +22597,7 @@ xref: GARD:6124
 xref: MESH:C536436
 xref: NCI:C35321
 xref: OMIM:PS135900
+xref: ORDO:1465
 xref: SNOMEDCT_US_2018_03_01:10007009
 xref: UMLS_CUI:C0265338
 is_a: DOID:1059 ! intellectual disability
@@ -23151,7 +23249,7 @@ id: DOID:2048
 name: autoimmune hepatitis
 namespace: disease_ontology
 alt_id: DOID:4745
-def: "An autoimmune disease of gastrointestinal tract that results_in inflammation located_in liver caused by the body's immune system attacking the liver cells." [sn:IEDB, url:http\://en.wikipedia.org/wiki/Autoimmune_hepatitis]
+def: "An autoimmune disease of gastrointestinal tract that results_in inflammation located_in liver caused by the body's immune system attacking the liver cells." [url:http\://en.wikipedia.org/wiki/Autoimmune_hepatitis] {comment="sn:IEDB"}
 subset: NCIthesaurus
 synonym: "Autoimmune chronic active hepatitis" EXACT []
 synonym: "Autoimmune Hepatitis" EXACT [NCI2004_11_17:C27029]
@@ -23164,7 +23262,6 @@ xref: MESH:D019693
 xref: NCI2004_11_17:C27029
 xref: NCI:C27029
 xref: NCI:C27778
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:68784009
 xref: UMLS_CUI:C0241910
 xref: UMLS_CUI:C1332355
@@ -23642,6 +23739,7 @@ synonym: "rhabdoid tumor predisposition syndrome" RELATED []
 xref: NCI2004_11_17:C6906
 xref: NCI:C6906
 xref: OMIM:609322
+xref: ORDO:99966
 xref: UMLS_CUI:C1266184
 is_a: DOID:1319 ! brain cancer
 
@@ -23792,13 +23890,10 @@ alt_id: DOID:5180
 def: "A kidney cancer that affects the kidneys and typically located_in children." [url:http\://en.wikipedia.org/wiki/Wilms%27_tumor]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "adult nephroblastoma" EXACT [NCI2004_11_17:C6180]
-synonym: "adult renal Wilms' tumor" EXACT []
-synonym: "childhood renal Wilms tumor" RELATED []
-synonym: "childhood renal Wilms' cancer" EXACT []
-synonym: "renal Wilms tumor" EXACT [NCI2004_11_17:C40407]
-synonym: "Wilms' tumor" RELATED [CSP2005:4001-0143]
+synonym: "adult nephroblastoma" EXACT []
+synonym: "Wilms' tumor" RELATED []
 xref: CSP2005:4001-0143
+xref: ICD-O:M8960/3
 xref: MESH:D009396
 xref: NCI2004_11_17:C40407
 xref: NCI2004_11_17:C6180
@@ -24146,6 +24241,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2229
 name: factor XI deficiency
 namespace: disease_ontology
+def: "An autosomal genetic disease that is characterized by deficiency of factor XI clotting factor and mild prolonged bleeding, especially of mucosal sites following trauma, and has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation of the coagulation factor XI gene of chromosome 4q35.2." [url:https\://ghr.nlm.nih.gov/condition/factor-xi-deficiency, url:https\://www.omim.org/entry/612416]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Congenital factor XI deficiency" EXACT [ICD9CM_2006:286.2]
@@ -24217,6 +24313,7 @@ is_a: DOID:1826 ! epilepsy
 id: DOID:2235
 name: prothrombin deficiency
 namespace: disease_ontology
+def: "An autosomal recessive disease that is characterized by bleeding symptoms due to low levels of circulating prothrombin, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the gene encoding coagulation factor II, also known as prothrombin, on chromosome 11p11." [url:https\://ghr.nlm.nih.gov/condition/prothrombin-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/30306070, url:https\://www.omim.org/entry/613679, url:https\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=325]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Factor II deficiency" RELATED [NCI2004_11_17:C26799]
@@ -24998,6 +25095,7 @@ xref: NCI:C4984
 xref: NCI:C7431
 xref: OMIM:167000
 xref: OMIM:607893
+xref: ORDO:213500
 xref: ORDO:213517
 xref: SNOMEDCT_US_2018_03_01:93934004
 xref: UMLS_CUI:C0919267
@@ -25366,14 +25464,13 @@ id: DOID:2491
 name: sensory peripheral neuropathy
 namespace: disease_ontology
 alt_id: DOID:10596
-def: "A neuropathy that involves damage to nerves of the peripheral nervous system." [ls:IEDB]
+def: "A neuropathy that involves damage to nerves of the peripheral nervous system." [url:https\://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061] {comment="ls:IEDB"}
 subset: NCIthesaurus
-synonym: "peripheral Sensory Neuropathy" EXACT [NCI2004_11_17:C3501]
-synonym: "Sensory neuropathy" EXACT [SNOMEDCT_2005_07_31:95662005]
-synonym: "sensory neuropathy" EXACT [CSP2005:4007-0113]
+synonym: "peripheral Sensory Neuropathy" EXACT []
+synonym: "Sensory neuropathy" EXACT []
+synonym: "sensory neuropathy" EXACT []
 xref: CSP2005:4007-0113
 xref: ICD9CM:356.2
-xref: ls:IEDB
 xref: MESH:D009477
 xref: NCI2004_11_17:C3501
 xref: NCI:C3501
@@ -25648,6 +25745,7 @@ xref: ICD10CM:G40.8
 xref: MESH:D018887
 xref: NCI:C84806
 xref: OMIM:245570
+xref: ORDO:98818
 xref: UMLS_CUI:C0282512
 is_a: DOID:1826 ! epilepsy
 
@@ -26173,15 +26271,8 @@ alt_id: DOID:3661
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "childhood choroid plexus papilloma" EXACT []
-synonym: "childhood papilloma of choroid plexus" RELATED []
-synonym: "Choroid plexus papilloma" EXACT []
-synonym: "Choroid plexus papilloma, no ICD-O subtype" EXACT [SNOMEDCT_2005_07_31:18021007]
-synonym: "papilloma of the Choroid Plexus" EXACT [NCI2004_11_17:C3698]
-synonym: "pediatric papilloma of Choroid Plexus" EXACT [NCI2004_11_17:C5800]
 xref: GARD:4214
 xref: MESH:D020288
-xref: NCI2004_11_17:C3698
-xref: NCI2004_11_17:C5800
 xref: NCI:C3698
 xref: NCI:C5800
 xref: OMIM:260500
@@ -26778,12 +26869,11 @@ is_a: DOID:2703 ! synovitis
 id: DOID:2703
 name: synovitis
 namespace: disease_ontology
-def: "A connective tissue disease that results_in inflammation located_in synovial membrane that lines a synovial joint which causes pain and swelling." [sn:IEDB]
+def: "A connective tissue disease that results_in inflammation located_in synovial membrane that lines a synovial joint which causes pain and swelling." [url:https\://en.wikipedia.org/wiki/Synovitis] {comment="sn:IEDB"}
 subset: NCIthesaurus
 xref: GARD:7722
 xref: MESH:D013585
 xref: NCI:C50766
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:14107000
 xref: UMLS_CUI:C0039103
 is_a: DOID:65 ! connective tissue disease
@@ -27633,6 +27723,7 @@ xref: ICD10CM:J84.114
 xref: ICD9CM:516.33
 xref: NCI2004_11_17:C35806
 xref: NCI:C35806
+xref: ORDO:79126
 xref: SNOMEDCT_US_2018_03_01:35037009
 xref: SNOMEDCT_US_2018_03_01:45157009
 xref: UMLS_CUI:C1279945
@@ -27909,7 +28000,7 @@ is_a: DOID:1596 ! mental depression
 id: DOID:285
 name: hairy cell leukemia
 namespace: disease_ontology
-def: "A chronic lymphocytic leukemia that is characterized by over production of B cells (lymphocytes) by the bone marrow where the B cells appear hairy under a microscope." []
+def: "A chronic lymphocytic leukemia that is characterized by over production of B cells (lymphocytes) by the bone marrow where the B cells appear hairy under a microscope." [url:https\://en.wikipedia.org/wiki/Hairy_cell_leukemia, url:https\://www.mayoclinic.org/diseases-conditions/hairy-cell-leukemia/symptoms-causes/syc-20372956, url:https\://www.ncbi.nlm.nih.gov/pubmed/30723113]
 subset: NCIthesaurus
 xref: GARD:6560
 xref: ICD10CM:C91.4
@@ -28268,13 +28359,12 @@ is_a: DOID:4989 ! pancreatitis
 id: DOID:2917
 name: cryoglobulinemia
 namespace: disease_ontology
-def: "A hypersensitivity reaction type IV disease that involves large amounts of cryoglobulins in the blood which become thick or gel-like in cold temperatures." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Cryoglobulinemia, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000540.htm]
+def: "A hypersensitivity reaction type IV disease that involves large amounts of cryoglobulins in the blood which become thick or gel-like in cold temperatures." [url:http\://en.wikipedia.org/wiki/Cryoglobulinemia, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000540.htm] {comment="ls:IEDB"}
 subset: NCIthesaurus
-synonym: "CRYOGLOBULINEMIA" EXACT [MTH:NOCODE]
-synonym: "Cryoimmunoglobulinaemia" EXACT [SNOMEDCT_2005_07_31:30911005]
+synonym: "CRYOGLOBULINEMIA" EXACT []
+synonym: "Cryoimmunoglobulinaemia" EXACT []
 xref: GARD:6217
 xref: ICD10CM:D89.1
-xref: ls:IEDB
 xref: MESH:D003449
 xref: MTH:NOCODE
 xref: NCI:C26736
@@ -28315,14 +28405,13 @@ is_a: DOID:2921 ! glomerulonephritis
 id: DOID:2921
 name: glomerulonephritis
 namespace: disease_ontology
-def: "A nephritis that causes inflammation of the glomeruli located_in kidney." [sn:IEDB, url:http\://en.wikipedia.org/wiki/Glomerulonephritis]
+def: "A nephritis that causes inflammation of the glomeruli located_in kidney." [url:http\://en.wikipedia.org/wiki/Glomerulonephritis] {comment="sn:IEDB"}
 subset: NCIthesaurus
 xref: GARD:6516
 xref: ICD10CM:N05
 xref: ICD10CM:N08
 xref: MESH:D005921
 xref: NCI:C26784
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:36171008
 xref: UMLS_CUI:C0017658
 is_a: DOID:10952 ! nephritis
@@ -28695,7 +28784,7 @@ is_a: DOID:4 ! disease
 id: DOID:2988
 name: antiphospholipid syndrome
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is characterized by recurrent venous or arterial thrombosis and/or fetal losses associated with characteristic elevated levels of antibodies directed against membrane anionic phospholipids (anticardiolipin)." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Antiphospholipid_syndrome]
+def: "An autoimmune hypersensitivity disease that is characterized by recurrent venous or arterial thrombosis and/or fetal losses associated with characteristic elevated levels of antibodies directed against membrane anionic phospholipids (anticardiolipin)." [url:http\://en.wikipedia.org/wiki/Antiphospholipid_syndrome] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "antiphospholipid antibody syndrome" EXACT [CSP2005:5002-0009]
@@ -28703,7 +28792,6 @@ synonym: "Antiphospholipid syndrome" EXACT []
 xref: CSP2005:5002-0009
 xref: GARD:5824
 xref: ICD10CM:D68.61
-xref: ls:IEDB
 xref: MESH:D016736
 xref: NCI:C61283
 xref: OMIM:107320
@@ -29106,7 +29194,7 @@ is_a: DOID:1519 ! cecum carcinoma
 id: DOID:3042
 name: allergic contact dermatitis
 namespace: disease_ontology
-def: "A contact dermititis that is an allergic skin reaction to foreign chemical or substances leading to red, itchy, weepy reaction where the skin has come into contact with a substance that the immune system recognizes as foreign." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Allergic_contact_dermatitis]
+def: "A contact dermititis that is an allergic skin reaction to foreign chemical or substances leading to red, itchy, weepy reaction where the skin has come into contact with a substance that the immune system recognizes as foreign." [url:http\://en.wikipedia.org/wiki/Allergic_contact_dermatitis] {comment="ls:IEDB"}
 subset: NCIthesaurus
 xref: ICD10CM:L23
 xref: ICD10CM:L23.9
@@ -29246,16 +29334,15 @@ namespace: disease_ontology
 alt_id: DOID:4861
 def: "A malignant glioma that is has material basis in astrocyte cells, a type of star-shaped glial cell, located in the brain and spinal cord." [url:http\://en.wikipedia.org/wiki/Astrocytoma, url:http\://www.cancer.org/Cancer/BrainCNSTumorsinAdults/DetailedGuide/brain-and-spinal-cord-tumors-in-adults-what-are-brain-spinal-tumors]
 subset: NCIthesaurus
-synonym: "Astrocytic tumor" EXACT [NCI2004_11_17:C6958]
+synonym: "Astrocytic tumor" EXACT []
 synonym: "astrocytoma of brain" EXACT []
-synonym: "astrocytoma of Cerebrum" EXACT [NCI2004_11_17:C4951]
-synonym: "astrocytoma, no ICD-O subtype" EXACT [SNOMEDCT_2005_07_31:38713004]
-synonym: "astroglioma" EXACT [CSP2005:2012-6768]
+synonym: "astrocytoma of Cerebrum" EXACT []
+synonym: "Astrocytoma, NOS" EXACT []
+synonym: "astroglioma" EXACT []
 synonym: "cerebral astrocytoma" EXACT []
 xref: CSP2005:2012-6768
+xref: ICDO:M9400/3
 xref: MESH:D001254
-xref: NCI2004_11_17:C4951
-xref: NCI2004_11_17:C6958
 xref: NCI:C4951
 xref: NCI:C60781
 xref: NCI:C6958
@@ -29275,15 +29362,15 @@ subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
-synonym: "glial cell tumor" EXACT [CSP2005:2012-6589]
+synonym: "glial cell tumor" EXACT []
 synonym: "glioma, malignant" EXACT []
-synonym: "malignant Neuroglial tumor" EXACT [NCI2004_11_17:C4822]
-synonym: "Neuroglial tumor" EXACT [NCI2004_11_17:C3059]
+synonym: "malignant Neuroglial tumor" EXACT []
+synonym: "Neuroglial tumor" EXACT []
 xref: CSP2005:2012-6589
+xref: glioma\, malignant
+xref: ICDO:M9380/3
 xref: KEGG:05214
 xref: MESH:D005910
-xref: NCI2004_11_17:C3059
-xref: NCI2004_11_17:C4822
 xref: NCI:C3059
 xref: NCI:C4822
 xref: OMIM:PS137800
@@ -30075,11 +30162,10 @@ is_a: DOID:3070 ! malignant glioma
 id: DOID:3183
 name: childhood oligodendroglioma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Oligodendroglioma" EXACT [NCI2004_11_17:C4045]
-xref: ICD-O:M9450/3
+synonym: "pediatric Oligodendroglioma" EXACT []
 xref: MESH:D009837
-xref: NCI2004_11_17:C4045
 xref: NCI:C4045
 xref: UMLS_CUI:C0280475
 is_a: DOID:3181 ! oligodendroglioma
@@ -30368,6 +30454,7 @@ is_a: DOID:655 ! inherited metabolic disorder
 id: DOID:3213
 name: demyelinating disease
 namespace: disease_ontology
+def: "A neurodegenerative disease that is characterized by damage to the myelin sheath present around nerve axons." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17071802]
 subset: NCIthesaurus
 synonym: "demyelinating disorder" EXACT [NCI2004_11_17:C34527]
 xref: MESH:D003711
@@ -30697,7 +30784,7 @@ namespace: disease_ontology
 def: "An ovarian cystadenoma that is characterized by the presence of mucin." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22476372]
 subset: NCIthesaurus
 synonym: "mucinous cystadenoma of ovary" EXACT []
-synonym: "Ovarian mucinous Cystadenoma" EXACT [NCI2004_11_17:C4512]
+synonym: "Ovarian mucinous Cystadenoma" EXACT []
 xref: NCI2004_11_17:C4512
 xref: NCI:C4512
 xref: UMLS_CUI:C0346172
@@ -30727,6 +30814,7 @@ xref: GARD:7725
 xref: MESH:D013595
 xref: NCI:C85179
 xref: OMIM:186700
+xref: ORDO:3280
 xref: UMLS_CUI:C0039144
 is_a: DOID:319 ! spinal cord disease
 
@@ -31343,6 +31431,7 @@ xref: NCI2004_11_17:C9145
 xref: NCI2004_11_17:C9312
 xref: NCI:C9145
 xref: OMIM:259500
+xref: ORDO:668
 xref: SNOMEDCT_US_2018_03_01:21708004
 xref: UMLS_CUI:C0029463
 xref: UMLS_CUI:C0206639
@@ -31446,8 +31535,8 @@ is_a: DOID:184 ! bone cancer
 id: DOID:3361
 name: pediatric osteosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9180/3
 xref: NCI:C6585
 xref: UMLS_CUI:C1332986
 is_a: DOID:184 ! bone cancer
@@ -31960,6 +32049,7 @@ xref: NCI:C84786
 xref: OMIM:147421
 xref: OMIM:605637
 xref: OMIM:605820
+xref: ORDO:611
 xref: SNOMEDCT_US_2018_03_01:72315009
 xref: UMLS_CUI:C0238190
 is_a: DOID:633 ! myositis
@@ -32226,6 +32316,7 @@ is_a: DOID:2174 ! ocular cancer
 id: DOID:3480
 name: uveal disease
 namespace: disease_ontology
+def: "An eye disease affecting the uvea, which are the pigmented layers of the eye consisting of the iris, ciliary body, and choroid." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26908]
 subset: NCIthesaurus
 xref: GARD:8192
 xref: MESH:D014603
@@ -32542,8 +32633,8 @@ is_a: DOID:3355 ! fibrosarcoma
 id: DOID:3520
 name: pediatric fibrosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M8810/3
 xref: NCI:C8088
 xref: UMLS_CUI:C0279981
 is_a: DOID:3355 ! fibrosarcoma
@@ -32679,9 +32770,9 @@ is_a: DOID:3540 ! choroid plexus cancer
 id: DOID:3545
 name: childhood choroid plexus cancer
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood choroid plexus neoplasm" RELATED []
-xref: ICD-O:M9390/3
 xref: NCI:C42080
 xref: UMLS_CUI:C0280623
 is_a: DOID:3540 ! choroid plexus cancer
@@ -32758,15 +32849,14 @@ subset: TopNodes_DOcancerslim
 synonym: "intracranial meningioma" EXACT []
 synonym: "meningeal neoplasm" EXACT []
 synonym: "meningothelial cell tumor" EXACT []
-synonym: "neoplasm of the meninges" EXACT [NCI2004_11_17:C3229]
-synonym: "primary Meningeal tumor" EXACT [NCI2004_11_17:C6971]
+synonym: "neoplasm of the meninges" EXACT []
+synonym: "primary Meningeal tumor" EXACT []
 synonym: "supratentorial meningioma" EXACT []
 xref: GARD:7015
 xref: ICD10CM:D32.9
+xref: ICDO:M9530/3
 xref: MESH:D008577
 xref: MESH:D008579
-xref: NCI2004_11_17:C3229
-xref: NCI2004_11_17:C6971
 xref: NCI:C3229
 xref: NCI:C3230
 xref: NCI:C4656
@@ -33297,6 +33387,7 @@ is_a: DOID:870 ! neuropathy
 id: DOID:3637
 name: childhood spinal cord tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood Spinal Cord neoplasm" EXACT [NCI2004_11_17:C9234]
 xref: NCI2004_11_17:C9234
@@ -33475,7 +33566,6 @@ xref: ICD10CM:G31.82
 xref: MESH:D007888
 xref: MTHICD9_2006:330.8
 xref: NCI:C84814
-xref: OMIM:220111
 xref: OMIM:256000
 xref: ORDO:506
 xref: SNOMEDCT_US_2018_03_01:29570005
@@ -33607,10 +33697,9 @@ is_a: DOID:3672 ! rhabdoid cancer
 id: DOID:3675
 name: childhood kidney cancer
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric renal tumor" EXACT [NCI2004_11_17:C6563]
-xref: ICD-O:M8000/3
-xref: NCI2004_11_17:C6563
+synonym: "pediatric renal tumor" EXACT []
 xref: NCI:C6563
 xref: UMLS_CUI:C1333003
 is_a: DOID:263 ! kidney cancer
@@ -34252,6 +34341,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:3762
 name: cytochrome-c oxidase deficiency disease
 namespace: disease_ontology
+def: "A mitochondrial metabolism disease that is characterized by deficiency of cytochrome c oxidase, myopathy, hepatomegaly, hypertrophic cardiomyopathy, lactic acidosis, and Leigh syndrome, and is caused by mutations related to oxidative phosphorylation." [url:https\://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders, url:https\://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/26846578]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -34500,6 +34590,7 @@ xref: ICD10CM:E80.5
 xref: MESH:D003414
 xref: NCI:C84656
 xref: OMIM:218800
+xref: ORDO:205
 xref: SNOMEDCT_US_2018_03_01:28259009
 xref: SNOMEDCT_US_2018_03_01:8933000
 xref: UMLS_CUI:C0010324
@@ -34547,21 +34638,21 @@ alt_id: DOID:2317
 alt_id: DOID:2318
 alt_id: DOID:546
 alt_id: DOID:9489
-def: "A bone disease that is located_in the joint." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Arthropathy]
+def: "A bone disease that is located_in the joint." [url:http\://en.wikipedia.org/wiki/Arthropathy] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "ankylosis of ankle and foot joint" EXACT []
 synonym: "ankylosis of forearm joint" EXACT []
 synonym: "ankylosis of hand joint" EXACT []
-synonym: "Ankylosis of joint of ankle and/or foot" EXACT [SNOMEDCT_2005_07_31:57137004]
-synonym: "Ankylosis of joint of forearm" EXACT [SNOMEDCT_2005_07_31:39147002]
-synonym: "Ankylosis of joint of hand" EXACT [SNOMEDCT_2005_07_31:56923001]
-synonym: "Ankylosis of joint of lower leg" EXACT [SNOMEDCT_2005_07_31:43534008]
-synonym: "Ankylosis of joint of multiple sites" EXACT [SNOMEDCT_2005_07_31:90242006]
+synonym: "Ankylosis of joint of ankle and/or foot" EXACT []
+synonym: "Ankylosis of joint of forearm" EXACT []
+synonym: "Ankylosis of joint of hand" EXACT []
+synonym: "Ankylosis of joint of lower leg" EXACT []
+synonym: "Ankylosis of joint of multiple sites" EXACT []
 synonym: "ankylosis of joint of multiple sites" EXACT []
 synonym: "ankylosis of joint of pelvic region and thigh" EXACT []
-synonym: "Ankylosis of joint of shoulder region" EXACT [SNOMEDCT_2005_07_31:2890007]
+synonym: "Ankylosis of joint of shoulder region" EXACT []
 synonym: "ankylosis of joint of shoulder region" EXACT []
-synonym: "Ankylosis of joint of upper arm" EXACT [SNOMEDCT_2005_07_31:9064009]
+synonym: "Ankylosis of joint of upper arm" EXACT []
 synonym: "ankylosis of lower leg joint" EXACT []
 synonym: "Ankylosis of multiple joints" EXACT []
 synonym: "ankylosis of upper arm joint" EXACT []
@@ -34583,7 +34674,6 @@ xref: ICD9CM:716.9
 xref: ICD9CM:716.90
 xref: ICD9CM:719.9
 xref: ICD9CM:719.90
-xref: ls:IEDB
 xref: MESH:D007592
 xref: NCI:C35760
 xref: NCI:C78402
@@ -34806,6 +34896,7 @@ xref: NCI:C3324
 xref: NCI:C4733
 xref: NCI:C7755
 xref: OMIM:175200
+xref: ORDO:2869
 xref: SNOMEDCT_US_2018_03_01:53633000
 xref: SNOMEDCT_US_2018_03_01:54411001
 xref: UMLS_CUI:C0031269
@@ -34935,9 +35026,9 @@ is_a: DOID:0050902 ! medulloblastoma
 id: DOID:3869
 name: childhood medulloblastoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Medulloblastoma" EXACT [NCI2004_11_17:C3997]
-xref: ICD-O:M9470/3
+synonym: "pediatric Medulloblastoma" EXACT []
 xref: MESH:D008527
 xref: NCI2004_11_17:C3997
 xref: NCI:C3997
@@ -34948,10 +35039,9 @@ is_a: DOID:0050902 ! medulloblastoma
 id: DOID:3870
 name: childhood central nervous system primitive neuroectodermal neoplasm
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric CNS PNET" EXACT [NCI2004_11_17:C5961]
-xref: ICD-O:M9473/3
-xref: NCI2004_11_17:C5961
+synonym: "pediatric CNS PNET" EXACT []
 xref: NCI:C5961
 xref: UMLS_CUI:C1332957
 is_a: DOID:3620 ! central nervous system cancer
@@ -35432,16 +35522,15 @@ is_a: DOID:397 ! restrictive cardiomyopathy
 
 [Term]
 id: DOID:3962
-name: follicular thyroid carcinoma
+name: thyroid gland follicular carcinoma
 namespace: disease_ontology
-def: "A thyroid carcinoma that has_material_basis_in follicular cells." [url:http\://en.wikipedia.org/wiki/Follicular_thyroid_cancer]
+def: "A differentiated thyroid gland carcinoma that has_material_basis_in follicular cells." [url:http\://en.wikipedia.org/wiki/Follicular_thyroid_cancer]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Follicular adenocarcinoma" EXACT [SNOMEDCT_2005_07_31:5257006]
 synonym: "Follicular adenocarcinoma, well differentiated" EXACT [SNOMEDCT_2005_07_31:28173006]
 synonym: "Follicular carcinoma" EXACT []
-synonym: "Follicular carcinoma of the Thyroid gland" EXACT [NCI2004_11_17:C8054]
-synonym: "Follicular thyroid carcinoma" EXACT []
+synonym: "follicular thyroid carcinoma" EXACT []
 synonym: "Thyroid adenocarcinoma" EXACT [NCI2004_11_17:C27380]
 xref: MESH:D018263
 xref: NCI2004_11_17:C27380
@@ -35451,13 +35540,13 @@ xref: OMIM:188470
 xref: SNOMEDCT_US_2018_03_01:28173006
 xref: SNOMEDCT_US_2018_03_01:5257006
 xref: UMLS_CUI:C0206682
-is_a: DOID:3963 ! thyroid carcinoma
+is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
 
 [Term]
 id: DOID:3963
-name: thyroid carcinoma
+name: thyroid gland carcinoma
 namespace: disease_ontology
-def: "A thyroid cancer that has_material_basis_in epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
+def: "A thyroid gland cancer that has_material_basis_in epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "head and neck cancer, Thyroid" EXACT [NCI2004_11_17:C4815]
@@ -35467,7 +35556,7 @@ xref: MESH:D013964
 xref: NCI2004_11_17:C4815
 xref: NCI:C4815
 xref: UMLS_CUI:C0549473
-is_a: DOID:1781 ! thyroid cancer
+is_a: DOID:1781 ! thyroid gland cancer
 
 [Term]
 id: DOID:3965
@@ -35491,13 +35580,13 @@ xref: MESH:D018265
 xref: NCI:C7380
 xref: SNOMEDCT_US_2018_03_01:21968007
 xref: UMLS_CUI:C0206683
-is_a: DOID:3969 ! papillary thyroid carcinoma
+is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
 [Term]
 id: DOID:3969
-name: papillary thyroid carcinoma
+name: thyroid gland papillary carcinoma
 namespace: disease_ontology
-def: "A thyroid carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
+def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer abd arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -35509,7 +35598,7 @@ xref: NCI:C4035
 xref: OMIM:188550
 xref: SNOMEDCT_US_2018_03_01:4797003
 xref: UMLS_CUI:C0238463
-is_a: DOID:3963 ! thyroid carcinoma
+is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
 
 [Term]
 id: DOID:397
@@ -35536,9 +35625,9 @@ is_a: DOID:0050700 ! cardiomyopathy
 
 [Term]
 id: DOID:3973
-name: thyroid medullary carcinoma
+name: thyroid gland medullary carcinoma
 namespace: disease_ontology
-def: "A follicular thyroid carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer]
+def: "A thyroid gland carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Medullary carcinoma of the Thyroid gland" EXACT [NCI2004_11_17:C3879]
@@ -35552,7 +35641,7 @@ xref: NCI2004_11_17:C3879
 xref: NCI:C3879
 xref: SNOMEDCT_US_2018_03_01:32913002
 xref: UMLS_CUI:C0238462
-is_a: DOID:3962 ! follicular thyroid carcinoma
+is_a: DOID:3963 ! thyroid gland carcinoma
 
 [Term]
 id: DOID:3981
@@ -36596,6 +36685,7 @@ xref: MESH:D003811
 xref: NCI:C84667
 xref: OMIM:125490
 xref: OMIM:125500
+xref: ORDO:49042
 xref: SNOMEDCT_US_2018_03_01:45742009
 xref: UMLS_CUI:C0011436
 is_a: DOID:403 ! mouth disease
@@ -36688,13 +36778,13 @@ is_a: DOID:74 ! hematopoietic system disease
 id: DOID:418
 name: systemic scleroderma
 namespace: disease_ontology
-def: "A scleroderma that is characterized by fibrosis (or hardening) of the skin and major organs, as well as vascular alterations, and autoantibodies." [sn:IEDB]
+def: "A scleroderma that is characterized by fibrosis (or hardening) of the skin and major organs, as well as vascular alterations, and autoantibodies." [url:https\://ghr.nlm.nih.gov/condition/systemic-scleroderma] {comment="sn:IEDB"}
 subset: NCIthesaurus
 synonym: "progressive systemic sclerosis" EXACT [MTHICD9_2006:710.1]
 synonym: "PSS" EXACT [CSP2005:4008-0097]
 synonym: "Scleroderma" EXACT []
 synonym: "Scleroderma syndrome" EXACT []
-synonym: "systemic sclerosis" EXACT [ICD9CM_2006:710.1]
+synonym: "systemic sclerosis" EXACT []
 xref: CSP2005:4008-0097
 xref: EFO:0000717
 xref: GARD:9748
@@ -36706,7 +36796,6 @@ xref: MESH:D012595
 xref: MTHICD9_2006:710.1
 xref: NCI:C72070
 xref: OMIM:181750
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:89155008
 xref: UMLS_CUI:C0036421
 is_a: DOID:419 ! scleroderma
@@ -36860,21 +36949,14 @@ alt_id: DOID:4208
 subset: NCIthesaurus
 synonym: "malignant neoplasm of brain stem" EXACT []
 synonym: "malignant neoplasm of brainstem" EXACT []
-synonym: "malignant tumor of Brainstem" EXACT [NCI2004_11_17:C3570]
 synonym: "neoplasm of adult brain stem" EXACT []
 synonym: "neoplasm of brain stem" EXACT []
 synonym: "primary brain stem neoplasm" EXACT []
-synonym: "primary brain Stem tumor" EXACT [NCI2004_11_17:C4975]
-synonym: "tumor of adult Brainstem" EXACT [NCI2004_11_17:C5967]
-synonym: "tumor of the Brainstem" EXACT [NCI2004_11_17:C4869]
+synonym: "primary brain Stem tumor" EXACT []
 xref: GARD:8244
 xref: ICD10CM:C71.7
 xref: ICD9CM:191.7
 xref: MESH:D020295
-xref: NCI2004_11_17:C3570
-xref: NCI2004_11_17:C4869
-xref: NCI2004_11_17:C4975
-xref: NCI2004_11_17:C5967
 xref: NCI:C3570
 xref: NCI:C4869
 xref: NCI:C4975
@@ -36909,9 +36991,9 @@ id: DOID:4206
 name: childhood brain stem neoplasm
 namespace: disease_ontology
 def: "A brain stem cancer characterized by mass lesion of the brainstem in childhood, associated cranial nerve nuclei and long tracts, has_material_basis_in abnormally proliferating cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.12d&ns=NCI_Thesaurus&code=C5969]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric tumor of Brainstem" EXACT [NCI2004_11_17:C5969]
-xref: NCI2004_11_17:C5969
+synonym: "pediatric tumor of Brainstem" EXACT []
 xref: NCI:C5969
 xref: UMLS_CUI:C1332951
 is_a: DOID:4203 ! brain stem cancer
@@ -36921,10 +37003,9 @@ id: DOID:4207
 name: childhood infratentorial neoplasm
 namespace: disease_ontology
 def: "A brain stem cancer in the infratentorial region of the brain in childhood, characterized by mass lesion of the brainstem, associated cranial nerve nuclei and long tracts, has_material_basis_in abnormally proliferating cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.12d&ns=NCI_Thesaurus&code=C5802]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Infratentorial tumor" EXACT [NCI2004_11_17:C5802]
-xref: ICD-O:M8000/3
-xref: NCI2004_11_17:C5802
+synonym: "pediatric Infratentorial tumor" EXACT []
 xref: NCI:C5802
 xref: UMLS_CUI:C1332973
 is_a: DOID:4203 ! brain stem cancer
@@ -37221,6 +37302,7 @@ is_a: DOID:649 ! prion disease
 id: DOID:4251
 name: conjunctival disease
 namespace: disease_ontology
+def: "An eye disease affecting the conjunctiva, which is the mucous membrane surrounding the eye and interior of the eyelids." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27605]
 subset: NCIthesaurus
 xref: ICD10CM:H10-H11
 xref: ICD10CM:H11.9
@@ -38467,6 +38549,7 @@ xref: GARD:13215
 xref: MESH:D002292
 xref: NCI:C9385
 xref: OMIM:300854
+xref: ORDO:217071
 xref: SNOMEDCT_US_2018_03_01:41607009
 xref: UMLS_CUI:C0007134
 is_a: DOID:4451 ! renal carcinoma
@@ -38488,10 +38571,9 @@ is_a: DOID:263 ! kidney cancer
 id: DOID:4454
 name: childhood kidney cell carcinoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric renal cell carcinoma" EXACT [NCI2004_11_17:C6568]
-xref: ICD-O:M8312/3
-xref: NCI2004_11_17:C6568
+synonym: "pediatric renal cell carcinoma" EXACT []
 xref: NCI:C6568
 xref: UMLS_CUI:C1333001
 is_a: DOID:4450 ! renal cell carcinoma
@@ -38720,7 +38802,7 @@ alt_id: DOID:12089
 alt_id: DOID:14030
 alt_id: DOID:8241
 alt_id: DOID:8242
-def: "A rhinitis that is an allergic inflammation and irritation of the nasal airways involving sneezing, runny nose, nasal congestion, itching and tearing of the eyes caused by exposure to an allergen such as pollen, dust, mold, animal dander and droppings of cockroaches or house dust mites." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Allergic_rhinitis, url:http\://en.wikipedia.org/wiki/Rhinitis, url:http\://www.aaaai.org/patients/resources/easy_reader/rhinitis.pdf, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=allergic%20rhinitis]
+def: "A rhinitis that is an allergic inflammation and irritation of the nasal airways involving sneezing, runny nose, nasal congestion, itching and tearing of the eyes caused by exposure to an allergen such as pollen, dust, mold, animal dander and droppings of cockroaches or house dust mites." [url:http\://en.wikipedia.org/wiki/Allergic_rhinitis, url:http\://en.wikipedia.org/wiki/Rhinitis, url:http\://www.aaaai.org/patients/resources/easy_reader/rhinitis.pdf, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=allergic%20rhinitis] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "atopic rhinitis" EXACT []
 synonym: "hay fever" EXACT []
@@ -38729,7 +38811,6 @@ synonym: "Perenial allergic rhinitis" EXACT []
 synonym: "pollenosis" EXACT []
 synonym: "seasonal allergic rhinitis" EXACT []
 xref: EFO:0003956
-xref: ls:IEDB
 xref: MESH:D065631
 xref: NCI:C34987
 xref: OMIM:607154
@@ -38829,6 +38910,7 @@ id: DOID:4505
 name: pediatric angiosarcoma
 namespace: disease_ontology
 def: "An angiosarcoma that affects children." [url:http\://findarticles.com/p/articles/mi_qa3725/is_201003/ai_n53080216/]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "pediatric hemangiosarcoma" EXACT [NCI2004_11_17:C9174]
 xref: NCI2004_11_17:C9174
@@ -38898,13 +38980,13 @@ is_a: DOID:4515 ! thyroid sarcoma
 id: DOID:4515
 name: thyroid sarcoma
 namespace: disease_ontology
-def: "A thyroid cancer that is located_in the supporting cells of the thyroid." [url:http\://www.cancer.org/docroot/CRI/content/CRI_2_4_1X_What_is_thyroid_cancer_43.asp]
+def: "A thyroid gland cancer that is located_in the supporting cells of the thyroid." [url:http\://www.cancer.org/docroot/CRI/content/CRI_2_4_1X_What_is_thyroid_cancer_43.asp]
 subset: NCIthesaurus
 synonym: "sarcoma of the Thyroid gland" EXACT [NCI2004_11_17:C6041]
 xref: NCI2004_11_17:C6041
 xref: NCI:C6041
 xref: UMLS_CUI:C1336756
-is_a: DOID:1781 ! thyroid cancer
+is_a: DOID:1781 ! thyroid gland cancer
 
 [Term]
 id: DOID:4517
@@ -39115,8 +39197,8 @@ is_a: DOID:3371 ! chondrosarcoma
 id: DOID:4546
 name: pediatric mesenchymal chondrosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9240/3
 xref: NCI:C27374
 xref: UMLS_CUI:C1332982
 is_a: DOID:4545 ! mesenchymal chondrosarcoma
@@ -39332,6 +39414,7 @@ is_a: DOID:3565 ! meningioma
 id: DOID:4593
 name: pediatric meningioma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C8264
 xref: UMLS_CUI:C0280656
@@ -39572,6 +39655,7 @@ xref: MESH:D016110
 xref: NCI:C84692
 xref: OMIM:601001
 xref: OMIM:615425
+xref: ORDO:304
 xref: SNOMEDCT_US_2018_03_01:67144006
 xref: UMLS_CUI:C0079298
 is_a: DOID:2730 ! epidermolysis bullosa
@@ -39744,6 +39828,7 @@ xref: MESH:D013734
 xref: NCI:C120191
 xref: NCI:C27226
 xref: OMIM:300068
+xref: ORDO:754
 xref: SNOMEDCT_US_2018_03_01:12313004
 xref: SNOMEDCT_US_2018_03_01:52832001
 xref: UMLS_CUI:C0039585
@@ -39888,12 +39973,14 @@ is_a: DOID:1107 ! esophageal carcinoma
 
 [Term]
 id: DOID:4687
-name: mucoepidermoid thyroid carcinoma
+name: thyroid gland mucoepidermoid carcinoma
 namespace: disease_ontology
+def: "A thyroid gland carcinoma that is composed of groups of squamoid and mucous cells, surrounded by fibrous tissue." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38762]
 subset: NCIthesaurus
+synonym: "mucoepidermoid thyroid carcinoma" EXACT []
 xref: NCI:C38762
 xref: UMLS_CUI:C1513721
-is_a: DOID:3963 ! thyroid carcinoma
+is_a: DOID:3963 ! thyroid gland carcinoma
 
 [Term]
 id: DOID:4688
@@ -39919,10 +40006,9 @@ is_a: DOID:255 ! hemangioma
 id: DOID:4690
 name: childhood mediastinal neurogenic tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric neurogenic tumor of mediastinum" EXACT [NCI2004_11_17:C5429]
-xref: ICD-O:M9540/3
-xref: NCI2004_11_17:C5429
+synonym: "pediatric neurogenic tumor of mediastinum" EXACT []
 xref: NCI:C5429
 xref: UMLS_CUI:C1332981
 is_a: DOID:4691 ! malignant mediastinal neurogenic neoplasm
@@ -40861,8 +40947,7 @@ id: DOID:4848
 name: cerebellar astrocytoma
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "astrocytoma of Cerebellum" EXACT [NCI2004_11_17:C9475]
-xref: NCI2004_11_17:C9475
+synonym: "astrocytoma of Cerebellum" EXACT []
 xref: NCI:C9475
 xref: UMLS_CUI:C0740480
 is_a: DOID:4205 ! cerebellum cancer
@@ -41163,6 +41248,7 @@ xref: GARD:6808
 xref: MESH:D020190
 xref: NCI:C84796
 xref: OMIM:254770
+xref: ORDO:307
 xref: ORDO:862
 xref: SNOMEDCT_US_2018_03_01:6204001
 xref: UMLS_CUI:C0270853
@@ -42086,8 +42172,9 @@ id: DOID:5016
 name: hepatocellular clear cell carcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "Clear cell carcinoma of the Liver cells" EXACT [NCI2004_11_17:C5754]
-xref: NCI2004_11_17:C5754
+synonym: "Clear cell carcinoma of the Liver cells" EXACT []
+synonym: "Hepatocellular carcinoma, clear cell type" EXACT []
+xref: ICDO:M8174/3
 xref: NCI:C5754
 xref: UMLS_CUI:C1333067
 is_a: DOID:684 ! hepatocellular carcinoma
@@ -42270,6 +42357,7 @@ is_a: DOID:4159 ! skin cancer
 id: DOID:5043
 name: vulvar granular cell tumor
 namespace: disease_ontology
+def: "A vulvar benign neoplasm of neural origin that is characterized by round to polyhedral cells with indistinct margins and granular cytoplasm due to the accumulation of lysosomes. They occur in ribbons or clumps separated by hyalinised stroma and collaged fibers with uniform, small and dark staining nuclei." [url:https\://en.wikipedia.org/wiki/Granular_cell_tumor, url:https\://www.ncbi.nlm.nih.gov/pubmed/24303488, url:https\://www.ncbi.nlm.nih.gov/pubmed/27510686]
 subset: NCIthesaurus
 xref: NCI:C40328
 xref: UMLS_CUI:C1520083
@@ -42381,10 +42469,9 @@ is_a: DOID:3565 ! meningioma
 id: DOID:5059
 name: childhood cerebellar neoplasm
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric tumor of Cerebellum" EXACT [NCI2004_11_17:C5970]
-xref: ICD-O:M8000/3
-xref: NCI2004_11_17:C5970
+synonym: "pediatric tumor of Cerebellum" EXACT []
 xref: NCI:C5970
 xref: UMLS_CUI:C1332959
 is_a: DOID:4205 ! cerebellum cancer
@@ -42824,6 +42911,7 @@ is_a: DOID:4 ! disease
 id: DOID:5147
 name: dartoic leiomyoma
 namespace: disease_ontology
+def: "A reproductive organ benign neoplasm that has_material_basis_in the dartos muscle located_in the scrotum or labia majora." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4483, url:https\://www.ncbi.nlm.nih.gov/pubmed/27529047]
 subset: NCIthesaurus
 synonym: "Dartoic leiomyoma" EXACT [NCI2004_11_17:C4483]
 synonym: "Dartoic myoma" EXACT []
@@ -42986,10 +43074,10 @@ is_a: DOID:119 ! vaginal cancer
 id: DOID:5176
 name: renal Wilms' tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "Nonanaplastic renal Wilm's tumor" EXACT [NCI2004_11_17:C6951]
+synonym: "Nonanaplastic renal Wilm's tumor" EXACT []
 synonym: "nonanaplastic renal wilms tumor" RELATED []
-xref: NCI2004_11_17:C6951
 xref: NCI:C6951
 xref: UMLS_CUI:C1335062
 is_a: DOID:2154 ! nephroblastoma
@@ -43009,8 +43097,7 @@ id: DOID:5179
 name: mixed cell type kidney Wilms' tumor
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "mixed cell type renal Wilms tumor" EXACT [NCI2004_11_17:C9149]
-xref: NCI2004_11_17:C9149
+synonym: "mixed cell type renal Wilms tumor" EXACT []
 xref: NCI:C9149
 xref: UMLS_CUI:C0279611
 is_a: DOID:2154 ! nephroblastoma
@@ -43996,6 +44083,7 @@ xref: MESH:C535687
 xref: NCI:C126326
 xref: NCI:C4681
 xref: OMIM:268300
+xref: ORDO:3103
 xref: SNOMEDCT_US_2018_03_01:48718006
 xref: UMLS_CUI:C0392475
 is_a: DOID:630 ! genetic disease
@@ -44123,11 +44211,10 @@ id: DOID:5342
 name: childhood endodermal sinus tumor
 namespace: disease_ontology
 def: "An endodermal sinus tumor that occurs in children." [url:http\://en.wikipedia.org/wiki/Endodermal_sinus_tumor]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood endodermal sinus neoplasm" EXACT []
-synonym: "pediatric Yolk Sac tumor" EXACT [NCI2004_11_17:C27364]
-xref: ICD-O:M9071/3
-xref: NCI2004_11_17:C27364
+synonym: "pediatric Yolk Sac tumor" EXACT []
 xref: NCI:C27364
 xref: UMLS_CUI:C1333016
 is_a: DOID:1911 ! endodermal sinus tumor
@@ -44465,6 +44552,7 @@ is_a: DOID:657 ! adenoma
 id: DOID:5391
 name: bronchus adenoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adenoma of the bronchus" RELATED []
 synonym: "Bronchial adenoma" EXACT []
@@ -45269,6 +45357,7 @@ is_a: DOID:4202 ! brain stem glioma
 id: DOID:5509
 name: pediatric ependymoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood ependymoma" EXACT []
 xref: NCI:C8578
@@ -45811,12 +45900,12 @@ namespace: disease_ontology
 alt_id: DOID:6106
 def: "A teratoma that is cancerous." [url:https\://rarediseases.info.nih.gov/diseases/10646/teratoma-with-malignant-transformation]
 subset: NCIthesaurus
-synonym: "Immature teratoma" EXACT [NCI2004_11_17:C4286]
-synonym: "malignant Extragonadal teratoma" EXACT [NCI2004_11_17:C8884]
+synonym: "Immature teratoma" EXACT []
+synonym: "malignant Extragonadal teratoma" EXACT []
 synonym: "primary malignant extragonadal teratoma" EXACT []
+synonym: "Teratoma, malignant, NOS" EXACT []
+xref: ICDO:M9080/3
 xref: MESH:D013724
-xref: NCI2004_11_17:C4286
-xref: NCI2004_11_17:C8884
 xref: NCI:C4286
 xref: NCI:C8884
 xref: SNOMEDCT_US_2018_03_01:19467007
@@ -45849,9 +45938,8 @@ is_a: DOID:3307 ! teratoma
 id: DOID:5566
 name: mature teratoma
 namespace: disease_ontology
-def: "A teratoma that is composed exclusively of mature tissues derived from two or three germ layers (ectoderm, mesoderm and\nendoderm)." [url:http\://drzafariqbal.com/wp-content/uploads/2017/07/WHO-Female.pdf]
+def: "A teratoma that is composed exclusively of mature tissues derived from two or three germ layers." [url:http\://drzafariqbal.com/wp-content/uploads/2017/07/WHO-Female.pdf]
 subset: NCIthesaurus
-synonym: "Mature teratoma" EXACT []
 xref: NCI:C9015
 xref: SNOMEDCT_US_2018_03_01:42717009
 xref: SNOMEDCT_US_2018_03_01:55818009
@@ -46792,8 +46880,8 @@ is_a: DOID:3382 ! liposarcoma
 id: DOID:5695
 name: pediatric liposarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M8850/3
 xref: NCI:C8091
 xref: UMLS_CUI:C0279984
 is_a: DOID:3382 ! liposarcoma
@@ -47663,8 +47751,8 @@ is_a: DOID:1712 ! aortic valve stenosis
 id: DOID:5809
 name: childhood parosteal osteogenic sarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9180/3
 xref: NCI:C6589
 xref: UMLS_CUI:C1332994
 is_a: DOID:3373 ! juxtacortical osteosarcoma
@@ -47688,6 +47776,7 @@ is_a: DOID:627 ! severe combined immunodeficiency
 id: DOID:5812
 name: MHC class II deficiency
 namespace: disease_ontology
+def: "A severe combined immunodeficiency that is characterized by deficiency of MHC class II molecules that causes lack of immune protection against bacteria, viruses, and fungi and thus causes early death in childhood, and has_material_basis_in autosomal recessive inheritance of mutation in the CIITA, RFX5, RFXANK, and RFXAP genes." [url:https\://ghr.nlm.nih.gov/condition/bare-lymphocyte-syndrome-type-ii, url:https\://www.omim.org/entry/209920]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "bare lymphocyte syndrome type II" EXACT [CSP2005:1560-6660]
@@ -47786,8 +47875,8 @@ is_a: DOID:0060058 ! lymphoma
 id: DOID:5823
 name: pediatric lymphoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9590/3
 xref: NCI:C5165
 xref: UMLS_CUI:C1332979
 is_a: DOID:0060058 ! lymphoma
@@ -48154,8 +48243,8 @@ is_a: DOID:5074 ! malignant ependymoma
 id: DOID:5893
 name: childhood malignant mesenchymoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M8990/3
 xref: NCI:C8097
 xref: UMLS_CUI:C0279991
 is_a: DOID:5758 ! malignant mesenchymoma
@@ -48274,7 +48363,7 @@ xref: NCI2004_11_17:C7427
 xref: NCI:C7427
 xref: SNOMEDCT_US_2018_03_01:62681000
 xref: UMLS_CUI:C0334330
-is_a: DOID:3969 ! papillary thyroid carcinoma
+is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
 [Term]
 id: DOID:5916
@@ -48674,8 +48763,7 @@ name: central nervous system mature teratoma
 namespace: disease_ontology
 def: "A mature teratoma that is located_in the central nervous system." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21150046]
 subset: NCIthesaurus
-synonym: "Mature teratoma of the CNS" EXACT [NCI2004_11_17:C7013]
-xref: NCI2004_11_17:C7013
+synonym: "Mature teratoma of the CNS" EXACT []
 xref: NCI:C7013
 xref: UMLS_CUI:C1332886
 is_a: DOID:3640 ! central nervous system teratoma
@@ -48696,8 +48784,7 @@ name: central nervous system immature teratoma
 namespace: disease_ontology
 def: "A malignant teratoma that is located_in the central nervous system." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21150046]
 subset: NCIthesaurus
-synonym: "Immature teratoma of the CNS" EXACT [NCI2004_11_17:C7014]
-xref: NCI2004_11_17:C7014
+synonym: "Immature teratoma of the CNS" EXACT []
 xref: NCI:C7014
 xref: UMLS_CUI:C1332883
 is_a: DOID:3640 ! central nervous system teratoma
@@ -48727,6 +48814,7 @@ is_a: DOID:0050616 ! malignant Leydig cell tumor
 id: DOID:6024
 name: selective IgE deficiency disease
 namespace: disease_ontology
+def: "A dysgammaglobulinemia that is characterized by isolated deficiency of IgE and subsequent mildly increased susceptibility to parasitic infections and allergic or autoimmune-related diseases." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24717782, url:https\://www.ncbi.nlm.nih.gov/pubmed/28778662]
 subset: NCIthesaurus
 synonym: "Selective IgE Immunodeficiency" EXACT [NCI2004_11_17:C27143]
 synonym: "Selective immunoglobulin E deficiency" EXACT []
@@ -48739,6 +48827,7 @@ is_a: DOID:6025 ! selective immunoglobulin deficiency disease
 id: DOID:6025
 name: selective immunoglobulin deficiency disease
 namespace: disease_ontology
+def: "A B cell deficiency that is characterized by deficiency of an immunoglobulin subtype. The clinical course and prognosis is dependent upon the severity of the selective deficiency and associated morbidity." [https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27870, url:https\://www.ncbi.nlm.nih.gov/books/NBK507905/]
 subset: NCIthesaurus
 xref: NCI:C27870
 xref: UMLS_CUI:C1335942
@@ -48895,10 +48984,9 @@ is_a: DOID:4 ! disease
 id: DOID:6052
 name: central nervous system childhood germ cell tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric germ cell neoplasm of CNS" EXACT [NCI2004_11_17:C6205]
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C6205
+synonym: "pediatric germ cell neoplasm of CNS" EXACT []
 xref: NCI:C6205
 xref: UMLS_CUI:C0278754
 is_a: DOID:4439 ! central nervous system germ cell tumor
@@ -48908,11 +48996,10 @@ id: DOID:6053
 name: pediatric germ cell cancer
 namespace: disease_ontology
 def: "A germ cell cancer that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23559398]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric germ cell neoplasm" EXACT [NCI2004_11_17:C7928]
+synonym: "pediatric germ cell neoplasm" EXACT []
 synonym: "pediatric germ cell tumor" RELATED []
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C7928
 xref: NCI:C7928
 xref: UMLS_CUI:C0279014
 is_a: DOID:2994 ! germ cell cancer
@@ -49001,10 +49088,9 @@ is_a: DOID:331 ! central nervous system disease
 id: DOID:6082
 name: pediatric testicular germ cell tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric testicular germ cell neoplasm" EXACT [NCI2004_11_17:C6552]
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C6552
+synonym: "pediatric testicular germ cell neoplasm" EXACT []
 xref: NCI:C6552
 xref: UMLS_CUI:C0796663
 is_a: DOID:5557 ! testicular germ cell cancer
@@ -49014,12 +49100,11 @@ id: DOID:6083
 name: childhood ovarian endodermal sinus tumor
 namespace: disease_ontology
 def: "An ovarian endodermal sinus tumor that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8649322, url:https\://www.ncbi.nlm.nih.gov/pubmed/9949591]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood ovarian endodermal sinus neoplasm" EXACT []
 synonym: "childhood ovarian yolk sac tumor" EXACT []
-synonym: "pediatric Ovarian Yolk Sac tumor" EXACT [NCI2004_11_17:C6551]
-xref: ICD-O:M9071/3
-xref: NCI2004_11_17:C6551
+synonym: "pediatric Ovarian Yolk Sac tumor" EXACT []
 xref: NCI:C6551
 xref: UMLS_CUI:C1332993
 is_a: DOID:5350 ! ovarian endodermal sinus tumor
@@ -49029,10 +49114,9 @@ id: DOID:6084
 name: pediatric ovarian germ cell tumor
 namespace: disease_ontology
 def: "An ovarian germ cell cancer that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24395845]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Ovarian germ cell neoplasm" EXACT [NCI2004_11_17:C8588]
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C8588
+synonym: "pediatric Ovarian germ cell neoplasm" EXACT []
 xref: NCI:C8588
 xref: UMLS_CUI:C0796664
 is_a: DOID:2156 ! ovarian germ cell cancer
@@ -49062,8 +49146,8 @@ is_a: DOID:3565 ! meningioma
 id: DOID:6089
 name: pediatric leptomeningeal melanoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M8720/3
 xref: NCI:C5318
 xref: UMLS_CUI:C1332976
 is_a: DOID:6085 ! meningeal melanoma
@@ -49354,10 +49438,9 @@ id: DOID:6160
 name: childhood choriocarcinoma of the testis
 namespace: disease_ontology
 def: "A choriocarcinoma of the testis that is present during childhood." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4204242/]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric testicular Choriocarcinoma" EXACT [NCI2004_11_17:C6544]
-xref: ICD-O:M9100/3
-xref: NCI2004_11_17:C6544
+synonym: "pediatric testicular Choriocarcinoma" EXACT []
 xref: NCI:C6544
 xref: UMLS_CUI:C1333006
 is_a: DOID:5551 ! choriocarcinoma of the testis
@@ -49366,10 +49449,9 @@ is_a: DOID:5551 ! choriocarcinoma of the testis
 id: DOID:6161
 name: childhood testicular mixed germ cell tumor
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric testicular mixed germ cell tumor" EXACT [NCI2004_11_17:C6542]
-xref: ICD-O:M9085/3
-xref: NCI2004_11_17:C6542
+synonym: "pediatric testicular mixed germ cell tumor" EXACT []
 xref: NCI:C6542
 xref: UMLS_CUI:C1333009
 is_a: DOID:4743 ! mixed testicular germ cell tumor
@@ -49379,11 +49461,10 @@ id: DOID:6162
 name: childhood embryonal testis carcinoma
 namespace: disease_ontology
 def: "An embryonal testis carcinoma that occurs in children." [url:http\://en.wikipedia.org/wiki/Embryonal_carcinoma#Testicular_embryonal_carcinoma]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood embryonal carcinoma of the testis" RELATED []
 synonym: "pediatric testicular Embryonal carcinoma" EXACT [NCI2004_11_17:C6545]
-xref: ICD-O:M9070/3
-xref: NCI2004_11_17:C6545
 xref: NCI:C6545
 xref: UMLS_CUI:C1333007
 is_a: DOID:5680 ! embryonal testis carcinoma
@@ -49768,8 +49849,7 @@ name: childhood mature teratoma of the ovary
 namespace: disease_ontology
 def: "A mature teratoma of the ovary that presents in childhood." [url:http\://drzafariqbal.com/wp-content/uploads/2017/07/WHO-Female.pdf]
 subset: NCIthesaurus
-synonym: "pediatric Mature teratoma of Ovary" EXACT [NCI2004_11_17:C6548]
-xref: NCI2004_11_17:C6548
+synonym: "pediatric Mature teratoma of Ovary" EXACT []
 xref: NCI:C6548
 xref: UMLS_CUI:C1332991
 is_a: DOID:6231 ! mature teratoma of the ovary
@@ -49779,6 +49859,7 @@ id: DOID:6230
 name: childhood teratoma of the ovary
 namespace: disease_ontology
 def: "An ovarian germ cell teratoma that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/682093]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "pediatric teratoma of Ovary" EXACT [NCI2004_11_17:C6554]
 xref: NCI2004_11_17:C6554
@@ -49792,8 +49873,6 @@ name: mature teratoma of the ovary
 namespace: disease_ontology
 def: "An ovarian biphasic or triphasic teratoma that is composed exclusively of mature tissues derived from two or three germ layers (ectoderm, mesoderm and endoderm)." [url:http\://drzafariqbal.com/wp-content/uploads/2017/07/WHO-Female.pdf, url:https\://www.ncbi.nlm.nih.gov/pubmed/20212374]
 subset: NCIthesaurus
-synonym: "Mature teratoma of Ovary" EXACT [NCI2004_11_17:C8112]
-xref: NCI2004_11_17:C8112
 xref: NCI:C8112
 xref: UMLS_CUI:C1334637
 is_a: DOID:6232 ! ovarian biphasic or triphasic teratoma
@@ -50116,9 +50195,9 @@ is_a: DOID:4 ! disease
 id: DOID:6286
 name: childhood cerebellar astrocytic neoplasm
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric astrocytoma of Cerebellum" EXACT [NCI2004_11_17:C6286]
-xref: NCI2004_11_17:C6286
+synonym: "pediatric astrocytoma of Cerebellum" EXACT []
 xref: NCI:C6286
 xref: UMLS_CUI:C0278594
 is_a: DOID:4848 ! cerebellar astrocytoma
@@ -50516,10 +50595,10 @@ is_a: DOID:4708 ! foramen magnum meningioma
 id: DOID:6383
 name: childhood brain stem glioma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric glioma of the Brainstem" EXACT [NCI2004_11_17:C9042]
+synonym: "pediatric glioma of the Brainstem" EXACT []
 xref: GARD:9306
-xref: NCI2004_11_17:C9042
 xref: NCI:C9042
 xref: UMLS_CUI:C0278600
 is_a: DOID:4206 ! childhood brain stem neoplasm
@@ -50528,8 +50607,8 @@ is_a: DOID:4206 ! childhood brain stem neoplasm
 id: DOID:6386
 name: childhood brainstem astrocytoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9400/3
 xref: NCI:C6216
 xref: UMLS_CUI:C1332950
 is_a: DOID:6383 ! childhood brain stem glioma
@@ -50860,10 +50939,9 @@ is_a: DOID:4 ! disease
 id: DOID:6474
 name: childhood teratocarcinoma of the testis
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric testicular Teratocarcinoma" EXACT [NCI2004_11_17:C6539]
-xref: ICD-O:M9081/3
-xref: NCI2004_11_17:C6539
+synonym: "pediatric testicular Teratocarcinoma" EXACT []
 xref: NCI:C6539
 xref: UMLS_CUI:C1333008
 is_a: DOID:6161 ! childhood testicular mixed germ cell tumor
@@ -50997,8 +51075,8 @@ is_a: DOID:476 ! breast hemangioma
 id: DOID:6494
 name: pediatric myxoid chondrosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9231/3
 xref: NCI:C27377
 xref: UMLS_CUI:C1332984
 is_a: DOID:5861 ! myxoid chondrosarcoma
@@ -51374,10 +51452,9 @@ is_a: DOID:4 ! disease
 id: DOID:6575
 name: childhood optic tract astrocytoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric visual pathway astrocytoma" EXACT [NCI2004_11_17:C7534]
-xref: ICD-O:M9400/3
-xref: NCI2004_11_17:C7534
+synonym: "pediatric visual pathway astrocytoma" EXACT []
 xref: NCI:C7534
 xref: UMLS_CUI:C1333014
 is_a: DOID:4991 ! optic nerve astrocytoma
@@ -51386,11 +51463,10 @@ is_a: DOID:4991 ! optic nerve astrocytoma
 id: DOID:6576
 name: childhood optic nerve glioma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "glioma of the pediatric visual pathway" EXACT [NCI2004_11_17:C7535]
-xref: ICD-O:M9380/3
+synonym: "glioma of the pediatric visual pathway" EXACT []
 xref: MESH:D020339
-xref: NCI2004_11_17:C7535
 xref: NCI:C7535
 xref: UMLS_CUI:C0278653
 is_a: DOID:4992 ! optic nerve glioma
@@ -51616,9 +51692,9 @@ id: DOID:6639
 name: pediatric CNS choriocarcinoma
 namespace: disease_ontology
 def: "A choriocarcinoma characterized by extraembryonic differentiation along trophoblastic lines and high serum and CSF levels of HCG/_-HCG, has_material_basis_in abnormally proliferating cells, derives_from germ cells." [url:http\://www.ajnr.org/content/31/10/1994]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Choriocarcinoma of the pediatric central nervous system" EXACT [NCI2004_11_17:C6206]
-xref: ICD-O:M9100/3
 xref: NCI2004_11_17:C6206
 xref: NCI:C6206
 xref: UMLS_CUI:C1377604
@@ -51687,8 +51763,8 @@ is_a: DOID:182 ! calcinosis
 id: DOID:6654
 name: childhood central nervous system immature teratoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9080/3
 xref: NCI:C27405
 xref: UMLS_CUI:C1332954
 is_a: DOID:6019 ! central nervous system immature teratoma
@@ -52311,7 +52387,7 @@ is_a: DOID:2870 ! endometrial adenocarcinoma
 id: DOID:678
 name: progressive supranuclear palsy
 namespace: disease_ontology
-def: "A movement disease characterized by serious and progressive problems with control of gait and balance, along with complex eye movement and thinking problems. It involves gradual deterioration and death of specific volumes of the brain." [url:http\://en.wikipedia.org/wiki/Progressive_supranuclear_palsy, url:http\://www.ninds.nih.gov/disorders/psp/psp.htm]
+def: "A movement disease that is characterized by serious and progressive problems with control of gait and balance, along with complex eye movement and thinking problems. It involves gradual deterioration and death of specific volumes of the brain." [url:http\://en.wikipedia.org/wiki/Progressive_supranuclear_palsy, url:http\://www.ninds.nih.gov/disorders/psp/psp.htm]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -52335,10 +52411,9 @@ id: DOID:6786
 name: childhood botryoid rhabdomyosarcoma
 namespace: disease_ontology
 def: "A botryoid rhabdomyosarcoma that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8088765]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood sarcoma Botryoides" EXACT [NCI2004_11_17:C35574]
-xref: ICD-O:M8910/3
-xref: NCI2004_11_17:C35574
+synonym: "childhood sarcoma Botryoides" EXACT []
 xref: NCI:C35574
 xref: UMLS_CUI:C1332944
 is_a: DOID:3255 ! botryoid rhabdomyosarcoma
@@ -52348,10 +52423,9 @@ id: DOID:6787
 name: childhood vagina botryoid rhabdomyosarcoma
 namespace: disease_ontology
 def: "A vagina botryoid rhabdomyosarcoma that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27870705]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "vaginal childhood sarcoma Botryoides" EXACT [NCI2004_11_17:C35556]
-xref: ICD-O:M8910/3
-xref: NCI2004_11_17:C35556
+synonym: "vaginal childhood sarcoma Botryoides" EXACT []
 xref: NCI:C35556
 xref: UMLS_CUI:C1332945
 is_a: DOID:6788 ! vagina botryoid rhabdomyosarcoma
@@ -52370,10 +52444,9 @@ is_a: DOID:3255 ! botryoid rhabdomyosarcoma
 id: DOID:6789
 name: vulvar childhood botryoid-type embryonal rhabdomyosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood sarcoma Botryoides of the Vulva" EXACT [NCI2004_11_17:C36098]
-xref: ICD-O:M8910/3
-xref: NCI2004_11_17:C36098
+synonym: "childhood sarcoma Botryoides of the Vulva" EXACT []
 xref: NCI:C36098
 xref: UMLS_CUI:C1332946
 is_a: DOID:2096 ! vulvar sarcoma
@@ -52428,10 +52501,9 @@ is_a: DOID:6812 ! childhood pilocytic astrocytoma
 id: DOID:6812
 name: childhood pilocytic astrocytoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Pilocytic astrocytoma" EXACT [NCI2004_11_17:C4048]
-xref: ICD-O:M9421/1
-xref: NCI2004_11_17:C4048
+synonym: "pediatric Pilocytic astrocytoma" EXACT []
 xref: NCI:C4048
 xref: UMLS_CUI:C1332995
 is_a: DOID:4851 ! pilocytic astrocytoma
@@ -52533,11 +52605,10 @@ def: "A liver carcinoma that has_material_basis_in undifferentiated hepatocytes 
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "HCC" EXACT [NCI2004_11_17:C3099]
 synonym: "Hepatoma" EXACT []
 xref: EFO:0000182
-xref: ICD-O:M8170/3
 xref: ICD10CM:C22.0
+xref: ICDO:M8170/3
 xref: NCI:C3099
 xref: OMIM:114550
 xref: SNOMEDCT_US_2019_03_01:109841003
@@ -52705,8 +52776,8 @@ is_a: DOID:6114 ! cerebral convexity meningioma
 id: DOID:687
 name: hepatoblastoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "HBL" EXACT [NCI2004_11_17:C3728]
 xref: GARD:2657
 xref: ICD-O:M8970/3
 xref: ICD10CM:C22.2
@@ -52954,10 +53025,9 @@ id: DOID:6938
 name: pediatric intraocular retinoblastoma
 namespace: disease_ontology
 def: "An intraocular retinoblastoma that effects children." [url:http\://www.answers.com/topic/intraocular-retinoblastoma]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood intraocular retinoblastoma" EXACT [NCI2004_11_17:C9047]
-xref: ICD-O:M9510/3
-xref: NCI2004_11_17:C9047
+synonym: "childhood intraocular retinoblastoma" EXACT []
 xref: NCI:C9047
 xref: UMLS_CUI:C1321869
 is_a: DOID:4653 ! intraocular retinoblastoma
@@ -52967,9 +53037,9 @@ id: DOID:6939
 name: childhood brain meningioma
 namespace: disease_ontology
 def: "A brain meningioma of childhood that is characterized by brain tumor which develops from the membranes that surround the brain and spinal cord, has_material_basis_in abnormally proliferating cells derives_from meningeal cells of embryonic ectoderm origin." [url:https\://en.wikipedia.org/wiki/Meningioma, url:https\://www.ncbi.nlm.nih.gov/pubmed/15886506]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric meningioma of brain" EXACT [NCI2004_11_17:C6253]
-xref: NCI2004_11_17:C6253
+synonym: "pediatric meningioma of brain" EXACT []
 xref: NCI:C6253
 xref: UMLS_CUI:C1332949
 is_a: DOID:1319 ! brain cancer
@@ -53253,11 +53323,10 @@ is_a: DOID:3069 ! astrocytoma
 id: DOID:7007
 name: childhood cerebral astrocytoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric astrocytoma of Cerebrum" EXACT [NCI2004_11_17:C4347]
-xref: ICD-O:M9400/3
+synonym: "pediatric astrocytoma of Cerebrum" EXACT []
 xref: MESH:D001254
-xref: NCI2004_11_17:C4347
 xref: NCI:C4347
 xref: UMLS_CUI:C0338070
 is_a: DOID:368 ! cerebrum cancer
@@ -53389,10 +53458,9 @@ id: DOID:7037
 name: childhood immature teratoma of ovary
 namespace: disease_ontology
 def: "An immature teratoma of overy that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/3983017]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric Immature teratoma of Ovary" EXACT [NCI2004_11_17:C6547]
-xref: ICD-O:M9080/3
-xref: NCI2004_11_17:C6547
+synonym: "pediatric Immature teratoma of Ovary" EXACT []
 xref: NCI:C6547
 xref: UMLS_CUI:C1332990
 is_a: DOID:6331 ! immature teratoma of ovary
@@ -53630,7 +53698,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C37304
 xref: UMLS_CUI:C1334817
-is_a: DOID:3969 ! papillary thyroid carcinoma
+is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
 [Term]
 id: DOID:7088
@@ -53639,7 +53707,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C35830
 xref: UMLS_CUI:C1333120
-is_a: DOID:3969 ! papillary thyroid carcinoma
+is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
 [Term]
 id: DOID:7089
@@ -53648,7 +53716,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C35558
 xref: UMLS_CUI:C1336695
-is_a: DOID:3969 ! papillary thyroid carcinoma
+is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
 [Term]
 id: DOID:709
@@ -53668,8 +53736,8 @@ is_a: DOID:710 ! splenic manifestation of leukemia
 id: DOID:7095
 name: pediatric epithelioid sarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M8804/3
 xref: NCI:C8095
 xref: UMLS_CUI:C0279989
 is_a: DOID:6193 ! epithelioid sarcoma
@@ -53815,6 +53883,7 @@ is_a: DOID:4932 ! ampulla of Vater carcinoma
 id: DOID:7138
 name: cystitis cystica
 namespace: disease_ontology
+def: "A cysititis that is characterized by hyperplasia of bladder submucosa and cyst formation caused by chronic irritation of the bladder." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28466074, url:https\://www.ncbi.nlm.nih.gov/pubmed/29552345]
 subset: NCIthesaurus
 xref: ICD9CM:595.81
 xref: NCI:C96230
@@ -53893,7 +53962,7 @@ is_a: DOID:5621 ! histiocytic and dendritic cell cancer
 id: DOID:7147
 name: ankylosing spondylitis
 namespace: disease_ontology
-def: "A bone inflammation disease that results_in inflammation in the joints of the spine and pelvis. The disease has_symptom pain, has_symptom stiffness in the spine, has_symptom stiffness in the neck, has_symptom stiffness in the hips, has_symptom stiffness in the jaw and has_symptom stiffness in the rib cage." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Ankylosing_spondylitis, url:http\://www.mayoclinic.com/health/ankylosing-spondylitis/DS00483, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000420.htm, url:http\://www.spondylitis.org/about/as.aspx]
+def: "A bone inflammation disease that results_in inflammation in the joints of the spine and pelvis. The disease has_symptom pain, has_symptom stiffness in the spine, has_symptom stiffness in the neck, has_symptom stiffness in the hips, has_symptom stiffness in the jaw and has_symptom stiffness in the rib cage." [url:http\://en.wikipedia.org/wiki/Ankylosing_spondylitis, url:http\://www.mayoclinic.com/health/ankylosing-spondylitis/DS00483, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000420.htm, url:http\://www.spondylitis.org/about/as.aspx] {comment="ls:IEDB"}
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Bekhterev syndrome" EXACT []
@@ -53903,7 +53972,6 @@ xref: EFO:0003898
 xref: GARD:9518
 xref: ICD10CM:M45
 xref: ICD9CM:720.0
-xref: ls:IEDB
 xref: MESH:D013167
 xref: NCI:C84564
 xref: ORDO:825
@@ -54081,7 +54149,7 @@ is_a: DOID:3829 ! pituitary adenoma
 id: DOID:718
 name: autoimmune hemolytic anemia
 namespace: disease_ontology
-def: "An autoimmune disease of blood that is characterized by deficient red blood cells caused by auto-antibodies." [sn:IEDB, url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia]
+def: "An autoimmune disease of blood that is characterized by deficient red blood cells caused by auto-antibodies." [url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Autoimmune haemolytic anaemia" EXACT []
@@ -54091,7 +54159,6 @@ xref: ICD9CM:283.0
 xref: MESH:D000744
 xref: NCI:C34378
 xref: OMIM:205700
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:25121006
 xref: UMLS_CUI:C0002880
 is_a: DOID:4 ! disease
@@ -54123,7 +54190,7 @@ id: DOID:7188
 name: autoimmune thyroiditis
 namespace: disease_ontology
 alt_id: DOID:0050435
-def: "An autoimmune disease of endocrine system that involves inflammation located_in thyroid gland caused by the immune system reacting against its own tissues." [sn:IEDB]
+def: "An autoimmune disease of endocrine system that involves inflammation located_in thyroid gland caused by the immune system reacting against its own tissues." [url:https\://en.wikipedia.org/wiki/Autoimmune_thyroiditis] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Chronic Lymphocytic Thyroiditis" EXACT []
@@ -54131,12 +54198,11 @@ synonym: "Hashimoto thyroiditis" EXACT []
 synonym: "Hashimoto's Disease" EXACT []
 synonym: "Hashimoto's syndrome" EXACT []
 synonym: "Hashimoto's thyroiditis" EXACT []
-synonym: "Lymphocytic Thyroiditis" EXACT [NCI2004_11_17:C38766]
+synonym: "Lymphocytic Thyroiditis" EXACT []
 xref: ICD10CM:E06.3
 xref: MESH:D013967
 xref: NCI2004_11_17:C38766
 xref: NCI:C38766
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:21983002
 xref: SNOMEDCT_US_2018_03_01:66944004
 xref: UMLS_CUI:C0920350
@@ -54178,9 +54244,7 @@ id: DOID:720
 name: normocytic anemia
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "ANEMIA NORMOCYTIC" EXACT [MTH:NOCODE]
-synonym: "Normocytic anemia" EXACT []
-xref: MTH:NOCODE
+synonym: "ANEMIA NORMOCYTIC" EXACT []
 xref: NCI:C35142
 xref: UMLS_CUI:C0085577
 is_a: DOID:2355 ! anemia
@@ -54323,10 +54387,9 @@ id: DOID:7231
 name: pediatric CNS embryonal cell carcinoma
 namespace: disease_ontology
 def: "A central nervous system childhood germ cell tumor characterized by germ cell tumor that develops from embryonic cells that remain in the brain after birth has_material_basis_in abnormally proliferating cells derives_from germ cells." [url:https\://www.cancer.gov/types/brain/patient/child-cns-embryonal-treatment-pdq, url:https\://www.cancer.gov/types/brain/patient/child-cns-germ-cell-treatment-pdq]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "Embryonal carcinoma of pediatric CNS" EXACT [NCI2004_11_17:C6208]
-xref: ICD-O:M9070/3
-xref: NCI2004_11_17:C6208
+synonym: "Embryonal carcinoma of pediatric CNS" EXACT []
 xref: NCI:C6208
 xref: UMLS_CUI:C1377605
 is_a: DOID:6052 ! central nervous system childhood germ cell tumor
@@ -54530,6 +54593,7 @@ is_a: DOID:2870 ! endometrial adenocarcinoma
 id: DOID:7297
 name: childhood extraosseous osteosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "pediatric extraskeletal Osteosarcoma" EXACT [NCI2004_11_17:C27376]
 xref: NCI2004_11_17:C27376
@@ -54732,8 +54796,8 @@ id: DOID:7340
 name: pediatric ovarian dysgerminoma
 namespace: disease_ontology
 def: "A dysgerminoma of ovary that occurs in children." [url:http\://en.wikipedia.org/wiki/Dysgerminoma, url:http\://www.cancer.gov/dictionary?CdrID=672835]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9060/3
 xref: NCI:C6550
 xref: UMLS_CUI:C1332988
 is_a: DOID:6084 ! pediatric ovarian germ cell tumor
@@ -54983,6 +55047,7 @@ is_a: DOID:4148 ! gastrointestinal neuroendocrine benign tumor
 id: DOID:7408
 name: vulvar keratoacanthoma-like carcinoma
 namespace: disease_ontology
+def: "A vulva squamous cell carcinoma that is rapidly growing, self-limited, and characterized by the presence of a central crater that contains squamous cells. The proliferating squamous cells infiltrate the dermis below and produce keratin masses that are pushed towards the surface of the tumor." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C40288, url:https\://www.ncbi.nlm.nih.gov/pubmed/24719870]
 subset: NCIthesaurus
 xref: NCI:C40288
 xref: UMLS_CUI:C1520086
@@ -55041,10 +55106,9 @@ id: DOID:7429
 name: childhood brain germinoma
 namespace: disease_ontology
 def: "A brain germinoma that is characterized by tumor of the germ cell in childhood that has_material_basis_in abnormally proliferating cells derives_from germ cells, located_in pineal area and located_in suprasellar area." [url:https\://en.wikipedia.org/wiki/Germinoma]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "germinoma of the pediatric brain" EXACT [NCI2004_11_17:C6207]
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C6207
+synonym: "germinoma of the pediatric brain" EXACT []
 xref: NCI:C6207
 xref: UMLS_CUI:C1332948
 is_a: DOID:2127 ! brain germinoma
@@ -55071,10 +55135,9 @@ id: DOID:7430
 name: childhood germ cell brain tumor
 namespace: disease_ontology
 def: "A central nervous system childhood germ cell tumor that is characterized by germ cell tumor, that develops from embryonic cells that remain in the brain after birth has_material_basis_in abnormally proliferating cells derives_from germ cells." [url:https\://www.cancer.gov/types/brain/patient/child-cns-germ-cell-treatment-pdq]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "germ cell neoplasm of the pediatric brain" EXACT [NCI2004_11_17:C5795]
-xref: ICD-O:M9064/3
-xref: NCI2004_11_17:C5795
+synonym: "germ cell neoplasm of the pediatric brain" EXACT []
 xref: NCI:C5795
 xref: UMLS_CUI:C1377598
 is_a: DOID:6052 ! central nervous system childhood germ cell tumor
@@ -55215,10 +55278,9 @@ is_a: DOID:5514 ! breast squamous cell carcinoma
 id: DOID:7463
 name: childhood pleomorphic rhabdomyosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood anaplastic Rhabdomyosarcoma" EXACT [NCI2004_11_17:C7959]
-xref: ICD-O:M8901/3
-xref: NCI2004_11_17:C7959
+synonym: "childhood anaplastic Rhabdomyosarcoma" EXACT []
 xref: NCI:C7959
 xref: UMLS_CUI:C0279614
 is_a: DOID:3250 ! pleomorphic rhabdomyosarcoma
@@ -55388,6 +55450,7 @@ is_a: DOID:4 ! disease
 id: DOID:7501
 name: pediatric infratentorial ependymoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C9041
 xref: UMLS_CUI:C0278599
@@ -55397,6 +55460,7 @@ is_a: DOID:4706 ! infratentorial cancer
 id: DOID:7502
 name: pediatric supratentorial ependymoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood supratentorial ependymoma" EXACT []
 synonym: "pediatric Cerebral Ependymoma" EXACT [NCI2004_11_17:C6268]
@@ -55488,8 +55552,8 @@ id: DOID:7516
 name: childhood central nervous system mixed germ cell tumor
 namespace: disease_ontology
 def: "A central nervous system germ cell tumor of childhood that is characterized by mixed germ cell tumor, develops from embryonic cells that remain in the brain after birth has_material_basis_in abnormally proliferating cells derives_from germ cells." [url:https\://www.cancer.gov/types/brain/patient/child-cns-germ-cell-treatment-pdq]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9085/3
 xref: NCI:C27403
 xref: UMLS_CUI:C1332956
 is_a: DOID:6052 ! central nervous system childhood germ cell tumor
@@ -55545,8 +55609,8 @@ is_a: DOID:3004 ! breast myoepithelial neoplasm
 id: DOID:7522
 name: pediatric infratentorial ependymoblastoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9392/3
 xref: NCI:C6773
 xref: UMLS_CUI:C1332972
 is_a: DOID:4207 ! childhood infratentorial neoplasm
@@ -56009,8 +56073,8 @@ is_a: DOID:7608 ! parathyroid adenoma
 id: DOID:7612
 name: childhood intracortical osteosarcoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9195/3
 xref: NCI:C6590
 xref: UMLS_CUI:C1332974
 is_a: DOID:7602 ! intracortical osteogenic sarcoma
@@ -56318,6 +56382,7 @@ name: neuroblastoma
 namespace: disease_ontology
 def: "An autonomic nervous system neoplasm that derives_from immature nerve cells." [url:http\://www.cancer.gov/cancertopics/types/neuroblastoma]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: EFO:0000621
@@ -56447,10 +56512,9 @@ namespace: disease_ontology
 def: "An adolescence-adult electroclinical syndrome starting in adolescence exhibiting generalized tonic-clonic seizures as the only seizure type." [url:http\://www.ilae-epilepsy.org]
 comment: JA:Epilepsy Genetics Kiel
 subset: NCIthesaurus
-synonym: "Epileptic seizures, tonic-clonic" EXACT [MTHICD9_2006:345.1]
-synonym: "Grand Mal epilepsy" EXACT [NCI2004_11_17:C3022]
+synonym: "Epileptic seizures, tonic-clonic" EXACT []
+synonym: "Grand Mal epilepsy" EXACT []
 synonym: "tonic-clonic epilepsy" EXACT []
-xref: JA:Epilepsy Genetics Kiel
 xref: MESH:D004830
 xref: MTHICD9_2006:345.1
 xref: NCI2004_11_17:C3022
@@ -56474,10 +56538,9 @@ is_a: DOID:3111 ! cystadenocarcinoma
 id: DOID:7731
 name: childhood malignant hemangiopericytoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "malignant pediatric hemangiopericytoma" EXACT [NCI2004_11_17:C8090]
-xref: ICD-O:M9150/3
-xref: NCI2004_11_17:C8090
+synonym: "malignant pediatric hemangiopericytoma" EXACT []
 xref: NCI:C8090
 xref: UMLS_CUI:C0279983
 is_a: DOID:264 ! hemangiopericytoma
@@ -56486,10 +56549,9 @@ is_a: DOID:264 ! hemangiopericytoma
 id: DOID:7732
 name: childhood malignant schwannoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric MPNST" EXACT [NCI2004_11_17:C8094]
-xref: ICD-O:M9560/3
-xref: NCI2004_11_17:C8094
+synonym: "pediatric MPNST" EXACT []
 xref: NCI:C8094
 xref: UMLS_CUI:C0279987
 is_a: DOID:5940 ! malignant peripheral nerve sheath tumor
@@ -56531,10 +56593,9 @@ id: DOID:7747
 name: pediatric extraocular retinoblastoma
 namespace: disease_ontology
 def: "An extraocular retinoblastoma that effects children." [url:http\://www.cancer.gov/cancertopics/pdq/treatment/retinoblastoma/HealthProfessional/page7]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood Extraocular Retinoblastoma" EXACT [NCI2004_11_17:C9048]
-xref: ICD-O:M9510/3
-xref: NCI2004_11_17:C9048
+synonym: "childhood Extraocular Retinoblastoma" EXACT []
 xref: NCI:C9048
 xref: UMLS_CUI:C1321870
 is_a: DOID:4656 ! extraocular retinoblastoma
@@ -56586,8 +56647,8 @@ id: DOID:7757
 name: childhood leukemia
 namespace: disease_ontology
 def: "A leukemia that occurs in children." [url:http\://www.nlm.nih.gov/medlineplus/leukemiachildhood.html]
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9800/3
 xref: NCI:C4989
 xref: UMLS_CUI:C1332977
 is_a: DOID:1240 ! leukemia
@@ -56597,12 +56658,11 @@ id: DOID:7762
 name: childhood multilocular cystic kidney neoplasm
 namespace: disease_ontology
 def: "A kidney benign neoplasm that encompasses cystic nephroma and cystic partially differentiated nephroblastoma." [url:http\://radiographics.rsna.org/content/15/3/653.abstract]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "benign Multilocular cystic renal tumor" RELATED []
 synonym: "childhood renal Wilms cancer" EXACT []
-synonym: "pediatric Multilocular cystic renal tumor" EXACT [NCI2004_11_17:C6566]
-xref: ICD-O:M8000/3
-xref: NCI2004_11_17:C6566
+synonym: "pediatric Multilocular cystic renal tumor" EXACT []
 xref: NCI:C6566
 xref: UMLS_CUI:C1332983
 is_a: DOID:3116 ! kidney benign neoplasm
@@ -56846,8 +56906,8 @@ is_a: DOID:7698 ! non-functioning pancreatic endocrine tumor
 id: DOID:7841
 name: pediatric cerebral ependymoblastoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9392/3
 xref: NCI:C6957
 xref: UMLS_CUI:C1332962
 is_a: DOID:4794 ! ependymoblastoma
@@ -57090,11 +57150,11 @@ is_a: DOID:5344 ! testicular yolk sac tumor
 id: DOID:7933
 name: childhood precursor T-lymphoblastic lymphoma/leukemia
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9837/3
 xref: NCI:C5640
 xref: UMLS_CUI:C1332997
-is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
+is_a: DOID:7936 ! precursor T-lymphoblastic lymphoma/leukemia refractory
 
 [Term]
 id: DOID:7936
@@ -57542,11 +57602,10 @@ id: DOID:8036
 name: childhood ovarian embryonal carcinoma
 namespace: disease_ontology
 def: "An ovarian embryonal carcinoma that occurs in childhood." [url:http\://en.wikipedia.org/wiki/Embryonal_carcinoma#Ovarian_embryonal_carcinoma]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood embryonal carcinoma of the ovary" RELATED []
-synonym: "pediatric Embryonal carcinoma of Ovary" EXACT [NCI2004_11_17:C6546]
-xref: ICD-O:M9070/3
-xref: NCI2004_11_17:C6546
+synonym: "pediatric Embryonal carcinoma of Ovary" EXACT []
 xref: NCI:C6546
 xref: UMLS_CUI:C1332989
 is_a: DOID:5681 ! ovarian embryonal carcinoma
@@ -57649,8 +57708,8 @@ is_a: DOID:4928 ! intrahepatic cholangiocarcinoma
 id: DOID:8078
 name: childhood central nervous system germinoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-xref: ICD-O:M9064/3
 xref: NCI:C27406
 xref: UMLS_CUI:C1332953
 is_a: DOID:4438 ! central nervous system germinoma
@@ -58000,10 +58059,9 @@ is_a: DOID:6354 ! CLL/SLL
 id: DOID:8149
 name: malignant childhood germ cell neoplasm
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "malignant pediatric germ cell tumor" EXACT [NCI2004_11_17:C6541]
-xref: ICD-O:M8000/3
-xref: NCI2004_11_17:C6541
+synonym: "malignant pediatric germ cell tumor" EXACT []
 xref: NCI:C6541
 xref: UMLS_CUI:C1334574
 is_a: DOID:6053 ! pediatric germ cell cancer
@@ -58055,8 +58113,9 @@ is_a: DOID:626 ! complement deficiency
 
 [Term]
 id: DOID:8161
-name: thyroid Hurthle cell carcinoma
+name: thyroid gland Hurthle cell carcinoma
 namespace: disease_ontology
+def: "A thyroid gland follicular carcinoma that is characterized by the presence of large cells with eosinophilic granular cytoplasm and pleomorphic nuclei with prominent, eosinophilic nucleoli." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4946]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "oncocytic carcinoma of the thyroid" EXACT [NCI2004_11_17:C4946]
@@ -58065,7 +58124,7 @@ xref: NCI2004_11_17:C4946
 xref: NCI:C4946
 xref: OMIM:607464
 xref: UMLS_CUI:C0749424
-is_a: DOID:3963 ! thyroid carcinoma
+is_a: DOID:3962 ! thyroid gland follicular carcinoma
 
 [Term]
 id: DOID:8162
@@ -58200,6 +58259,7 @@ is_a: DOID:5344 ! testicular yolk sac tumor
 id: DOID:82
 name: myotonic cataract
 namespace: disease_ontology
+def: "A cataract that is characterized by multicolored, iridescent opacification of the lens of the eye, and associated with myotonic dystrophy." [url:https\://www.nature.com/articles/s41433-018-0161-9, url:https\://www.ncbi.nlm.nih.gov/pubmed/25037086]
 subset: NCIthesaurus
 xref: ICD9CM:366.43
 xref: NCI:C34833
@@ -58622,11 +58682,10 @@ id: DOID:8336
 name: childhood choriocarcinoma of the ovary
 namespace: disease_ontology
 def: "A choriocarcinoma of the ovary that is present during childhood." [url:https\://www.sciencedirect.com/science/article/pii/S1875957211000349]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood ovarian choriocarcinoma" EXACT []
-synonym: "pediatric Choriocarcinoma of Ovary" EXACT [NCI2004_11_17:C6549]
-xref: ICD-O:M9100/3
-xref: NCI2004_11_17:C6549
+synonym: "pediatric Choriocarcinoma of Ovary" EXACT []
 xref: NCI:C6549
 xref: UMLS_CUI:C1332987
 is_a: DOID:5550 ! choriocarcinoma of ovary
@@ -58685,6 +58744,7 @@ is_a: DOID:3701 ! cervical mucinous adenocarcinoma
 id: DOID:8352
 name: aortic malignant tumor
 namespace: disease_ontology
+def: "A vascular cancer that is located_in the aorta." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14681654]
 subset: NCIthesaurus
 synonym: "aortic malignant neoplasm" EXACT []
 xref: NCI:C5375
@@ -58708,6 +58768,7 @@ is_a: DOID:5940 ! malignant peripheral nerve sheath tumor
 id: DOID:8354
 name: complement component 3 deficiency
 namespace: disease_ontology
+def: "A complement deficiency that is characterized by deficiency of complement component 3 that increases susceptibility to infection and autoimmune diseases and has_material_basis_in autosomal recessive inheritance of mutation in the C3 gene on chromosome 19p13.3, has_symptom recurrent bacterial infections." [url:https\://www.omim.org/entry/613779]
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -58882,10 +58943,9 @@ is_a: DOID:850 ! lung disease
 id: DOID:8410
 name: childhood kidney angiomyolipoma
 namespace: disease_ontology
+subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "pediatric renal Angiomyolipoma" EXACT [NCI2004_11_17:C6565]
-xref: ICD-O:M8860/0
-xref: NCI2004_11_17:C6565
+synonym: "pediatric renal Angiomyolipoma" EXACT []
 xref: NCI:C6565
 xref: UMLS_CUI:C1333000
 is_a: DOID:8411 ! kidney angiomyolipoma
@@ -59256,11 +59316,10 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:848
 name: arthritis
 namespace: disease_ontology
-def: "A bone inflammation disease that involves a response to irritation or injury, characterized by joint pain, swelling, stiffness located_in joint and/or redness located_in skin over the joint." [ls:IEDB, url:http\://arthritis.webmd.com/, url:http\://en.wikipedia.org/wiki/Arthritis, url:http\://www.arthritis.org/, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001243.htm]
+def: "A bone inflammation disease that involves a response to irritation or injury, characterized by joint pain, swelling, stiffness located_in joint and/or redness located_in skin over the joint." [url:http\://en.wikipedia.org/wiki/Arthritis, url:http\://www.arthritis.org/, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001243.htm, url:https\://www.cdc.gov/arthritis/index.htm] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "Inflammatory disorder of joint" EXACT []
 xref: ICD10CM:M19.90
-xref: ls:IEDB
 xref: MESH:D001168
 xref: NCI:C2883
 xref: SNOMEDCT_US_2018_03_01:3723001
@@ -59440,7 +59499,7 @@ is_a: DOID:4 ! disease
 id: DOID:8506
 name: bullous pemphigoid
 namespace: disease_ontology
-def: "An autoimmune disease of skin and connective tissue characterized by large blisters." [sn:IEDB]
+def: "An autoimmune disease of skin and connective tissue characterized by large blisters." [url:https\://rarediseases.org/rare-diseases/bullous-pemphigoid/] {comment="sn:IEDB"}
 subset: NCIthesaurus
 synonym: "Bullous pemphigoid" EXACT []
 xref: GARD:5972
@@ -59451,7 +59510,6 @@ xref: ICD9CM:694.5
 xref: MESH:D010391
 xref: NCI:C34908
 xref: NCI:C84389
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:77090002
 xref: SNOMEDCT_US_2018_03_01:86142006
 xref: UMLS_CUI:C0030805
@@ -60010,6 +60068,7 @@ xref: NCI2004_11_17:C2912
 xref: NCI:C2912
 xref: NCI:C7400
 xref: OMIM:113970
+xref: ORDO:543
 xref: SNOMEDCT_US_2018_03_01:22197008
 xref: SNOMEDCT_US_2018_03_01:77381001
 xref: UMLS_CUI:C0006413
@@ -60913,9 +60972,6 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Acoustic neurofibromatosis" EXACT [MTHICD9_2006:237.72]
 synonym: "central Neurofibromatosis" EXACT [NCI2004_11_17:C3274]
-synonym: "Neurofibromatosis 1" EXACT [MTH:U003314]
-synonym: "neurofibromatosis type 1" EXACT []
-synonym: "neurofibromatosis type 2" EXACT []
 synonym: "neurofibromatosis type 4" EXACT []
 synonym: "neurofibromatosis type IV" EXACT []
 synonym: "peripheral Neurofibromatosis" EXACT [NCI2004_11_17:C3273]
@@ -60942,8 +60998,6 @@ xref: NCI2004_11_17:C3274
 xref: NCI:C3273
 xref: NCI:C3274
 xref: NCI:C6727
-xref: OMIM:101000
-xref: OMIM:162200
 xref: OMIM:162210
 xref: OMIM:162260
 xref: OMIM:162270
@@ -61708,7 +61762,7 @@ name: autoimmune thrombocytopenic purpura
 namespace: disease_ontology
 alt_id: DOID:0050124
 alt_id: DOID:2220
-def: "A primary thrombocytopenia that involves relatively few platelets in blood as a result of autoantibodies." [sn:IEDB]
+def: "A primary thrombocytopenia that involves relatively few platelets in blood as a result of autoantibodies." [url:https\://rarediseases.org/rare-diseases/immune-thrombocytopenia/] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Autoimmune thrombocytopenic purpura" EXACT [SNOMEDCT_2005_07_31:13172003]
@@ -61723,7 +61777,6 @@ xref: ICD9CM:287.31
 xref: MESH:D016553
 xref: NCI:C3446
 xref: OMIM:188030
-xref: sn:IEDB
 xref: SNOMEDCT_US_2018_03_01:13172003
 xref: SNOMEDCT_US_2018_03_01:32273002
 xref: UMLS_CUI:C0398650
@@ -62291,13 +62344,13 @@ is_a: DOID:4 ! disease
 id: DOID:9074
 name: systemic lupus erythematosus
 namespace: disease_ontology
-def: "A lupus erythematosus that is an inflammation of connective tissue marked by skin rashes, joint pain and swelling, inflammation of the kidneys and inflammation of the tissue surrounding the heart." [ls:IEDB, url:http\://en.wikipedia.org/wiki/Systemic_lupus_erythematosus]
+def: "A lupus erythematosus that is an inflammation of connective tissue marked by skin rashes, joint pain and swelling, inflammation of the kidneys and inflammation of the tissue surrounding the heart." [url:http\://en.wikipedia.org/wiki/Systemic_lupus_erythematosus] {comment="ls:IEDB"}
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "disseminated lupus erythematosus" EXACT [CSP2005:0729-7721]
-synonym: "Lupus Erythematosus, systemic" EXACT [MTH:U002054]
-synonym: "SLE - Lupus Erythematosus, systemic" EXACT [NCI2004_11_17:C3201]
+synonym: "Lupus Erythematosus, systemic" EXACT []
+synonym: "SLE - Lupus Erythematosus, systemic" EXACT []
 xref: CSP2005:0729-7721
 xref: EFO:0002690
 xref: GARD:10253
@@ -62305,7 +62358,6 @@ xref: ICD10CM:M32
 xref: ICD10CM:M32.9
 xref: ICD9CM:710.0
 xref: KEGG:05322
-xref: ls:IEDB
 xref: MESH:D008180
 xref: MTH:U002054
 xref: NCI2004_11_17:C3201
@@ -62884,6 +62936,7 @@ xref: MESH:D016738
 xref: NCI:C35139
 xref: OMIM:118450
 xref: OMIM:610205
+xref: ORDO:52
 xref: SNOMEDCT_US_2018_03_01:31742004
 xref: UMLS_CUI:C0085280
 is_a: DOID:409 ! liver disease
@@ -63101,6 +63154,7 @@ xref: ICD10CM:E72.01
 xref: MESH:D003555
 xref: NCI:C84664
 xref: OMIM:220100
+xref: ORDO:214
 xref: SNOMEDCT_US_2018_03_01:85020001
 xref: UMLS_CUI:C0010691
 is_a: DOID:9252 ! amino acid metabolic disorder
@@ -63327,6 +63381,7 @@ xref: MESH:D017042
 xref: MTHICD9_2006:270.1
 xref: NCI:C81315
 xref: OMIM:261600
+xref: ORDO:716
 xref: UMLS_CUI:C0031485
 xref: UMLS_CUI:C0085547
 is_a: DOID:9252 ! amino acid metabolic disorder
@@ -64314,6 +64369,7 @@ xref: NCI:C84475
 xref: OMIM:211400
 xref: OMIM:613021
 xref: OMIM:613071
+xref: OMIM:PS211400
 xref: ORDO:60033
 xref: SNOMEDCT_US_2018_03_01:12295008
 xref: UMLS_CUI:C0006267
@@ -64692,6 +64748,7 @@ is_a: DOID:780 ! placenta disease
 id: DOID:9669
 name: senile cataract
 namespace: disease_ontology
+def: "A cataract that is characterized by thickening and loss of transparency of the lens with age progression, caused by a multifactorial etiology related to aging." [url:https\://eyewiki.aao.org/Cataract]
 subset: NCIthesaurus
 xref: ICD10CM:H25
 xref: ICD9CM:366.1
@@ -65074,6 +65131,7 @@ xref: MESH:D015794
 xref: NCI2004_11_17:C34469
 xref: NCI:C34469
 xref: OMIM:303100
+xref: ORDO:180
 xref: SNOMEDCT_US_2018_03_01:75241009
 xref: UMLS_CUI:C0008525
 is_a: DOID:1417 ! choroid disease
@@ -65479,6 +65537,7 @@ xref: MESH:D018636
 xref: NCI:C98894
 xref: OMIM:241550
 xref: OMIM:614435
+xref: ORDO:2248
 xref: SNOMEDCT_US_2018_03_01:62067003
 xref: UMLS_CUI:C0152101
 is_a: DOID:1682 ! congenital heart disease

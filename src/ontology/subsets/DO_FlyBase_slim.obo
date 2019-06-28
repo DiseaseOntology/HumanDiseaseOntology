@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-05-13/subsets/DO_FlyBase_slim.obo
+data-version: doid/2019-06-28/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -120,6 +120,7 @@ xref: ICD10CM:Q93.3
 xref: MESH:D054877
 xref: NCI:C35528
 xref: OMIM:194190
+xref: ORDO:280
 xref: SNOMEDCT_US_2018_03_01:17122004
 xref: UMLS_CUI:C0796117
 xref: UMLS_CUI:C1956097
@@ -137,6 +138,7 @@ synonym: "Greither Disease" EXACT []
 xref: MESH:D056266
 xref: NCI:C84696
 xref: OMIM:PS133200
+xref: ORDO:317
 xref: SNOMEDCT_US_2018_03_01:70041004
 xref: UMLS_CUI:C0265961
 xref: UMLS_CUI:C1851480
@@ -178,7 +180,7 @@ is_a: DOID:0060160 ! survival motor neuron spinal muscular atrophy
 id: DOID:0050547
 name: familial medullary thyroid carcinoma
 namespace: disease_ontology
-def: "A thyroid medullary carcinoma that has_material_basis_in autosomal dominant inheritance." []
+def: "A thyroid gland medullary carcinoma that has_material_basis_in autosomal dominant inheritance." [url:https\://ghr.nlm.nih.gov/condition/multiple-endocrine-neoplasia, url:https\://www.omim.org/entry/155240]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "THYROID CARCINOMA, FAMILIAL MEDULLARY" EXACT []
@@ -207,8 +209,6 @@ synonym: "cerebroocular dysplasia-muscular dystrophy syndrome" EXACT []
 synonym: "HARD syndrome" EXACT []
 xref: GARD:2599
 xref: MESH:D058494
-xref: OMIM:236670
-xref: OMIM:253280
 is_a: DOID:9884 ! muscular dystrophy
 
 [Term]
@@ -678,7 +678,7 @@ xref: MESH:D000067877
 id: DOID:0060050
 name: autoimmune disease of blood
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood." [ls:IEDB]
+def: "An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood." [url:https\://www.ncbi.nlm.nih.gov/books/NBK459447/] {comment="ls:IEDB"}
 subset: DO_FlyBase_slim
 is_a: DOID:2914 ! immune system disease
 
@@ -792,7 +792,6 @@ xref: ICD10CM:G40.3
 xref: OMIM:604233
 xref: OMIM:604403
 xref: OMIM:609800
-xref: OMIM:611277
 xref: OMIM:612279
 xref: OMIM:613828
 xref: OMIM:613863
@@ -821,9 +820,6 @@ subset: DO_rare_slim
 xref: GARD:10975
 xref: ICD10CM:G43.8
 xref: ICD9CM:346.8
-xref: OMIM:141500
-xref: OMIM:602481
-xref: OMIM:609634
 xref: ORDO:569
 xref: UMLS_CUI:C0477373
 created_by: lschriml
@@ -1382,8 +1378,6 @@ xref: ICD10CM:G71.0
 xref: MESH:D020391
 xref: MTHICD9_2006:359.1
 xref: NCI:C84704
-xref: OMIM:158900
-xref: OMIM:158901
 xref: SNOMEDCT_US_2018_03_01:56096001
 xref: UMLS_CUI:C0238288
 is_a: DOID:9884 ! muscular dystrophy
@@ -1608,6 +1602,7 @@ xref: ICD9CM_2006:728.11
 xref: MESH:D009221
 xref: NCI:C3040
 xref: OMIM:135100
+xref: ORDO:337
 xref: SNOMEDCT_US_2018_03_01:82725007
 xref: UMLS_CUI:C0016037
 
@@ -1737,6 +1732,7 @@ xref: MTHICD9_2006:758.0
 xref: NCI2004_11_17:C2993
 xref: NCI:C2993
 xref: OMIM:190685
+xref: ORDO:870
 xref: SNOMEDCT_US_2018_03_01:41040004
 xref: UMLS_CUI:C0013080
 
@@ -1923,11 +1919,6 @@ xref: GARD:101
 xref: MESH:D020914
 xref: MTHICD9_2006:359.0
 xref: NCI:C84648
-xref: OMIM:160150
-xref: OMIM:255200
-xref: OMIM:310400
-xref: OMIM:614807
-xref: OMIM:615959
 xref: ORDO:595
 xref: ORDO:596
 xref: ORDO:69186
@@ -2026,7 +2017,7 @@ xref: UMLS_CUI:C0085762
 id: DOID:162
 name: cancer
 namespace: disease_ontology
-def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [stedman:rlc, url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
+def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
@@ -2037,6 +2028,7 @@ synonym: "primary cancer" EXACT []
 xref: ICD10CM:C80
 xref: ICD10CM:C80.1
 xref: ICD9CM:199
+xref: ICDO:M8000/3
 xref: MESH:D009369
 xref: NCI:C9305
 xref: SNOMEDCT_US_2018_03_01:38807002
@@ -2227,6 +2219,7 @@ synonym: "rhabdoid tumor predisposition syndrome" RELATED []
 xref: NCI2004_11_17:C6906
 xref: NCI:C6906
 xref: OMIM:609322
+xref: ORDO:99966
 xref: UMLS_CUI:C1266184
 is_a: DOID:1319 ! brain cancer
 
@@ -2275,6 +2268,7 @@ xref: NCI:C4984
 xref: NCI:C7431
 xref: OMIM:167000
 xref: OMIM:607893
+xref: ORDO:213500
 xref: ORDO:213517
 xref: SNOMEDCT_US_2018_03_01:93934004
 xref: UMLS_CUI:C0919267
@@ -2639,6 +2633,7 @@ xref: NCI:C84786
 xref: OMIM:147421
 xref: OMIM:605637
 xref: OMIM:605820
+xref: ORDO:611
 xref: SNOMEDCT_US_2018_03_01:72315009
 xref: UMLS_CUI:C0238190
 is_a: DOID:423 ! myopathy
@@ -2701,7 +2696,6 @@ xref: ICD10CM:G31.82
 xref: MESH:D007888
 xref: MTHICD9_2006:330.8
 xref: NCI:C84814
-xref: OMIM:220111
 xref: OMIM:256000
 xref: ORDO:506
 xref: SNOMEDCT_US_2018_03_01:29570005
@@ -2734,6 +2728,7 @@ xref: UMLS_CUI:C0079504
 id: DOID:3762
 name: cytochrome-c oxidase deficiency disease
 namespace: disease_ontology
+def: "A mitochondrial metabolism disease that is characterized by deficiency of cytochrome c oxidase, myopathy, hepatomegaly, hypertrophic cardiomyopathy, lactic acidosis, and Leigh syndrome, and is caused by mutations related to oxidative phosphorylation." [url:https\://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders, url:https\://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/26846578]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -3238,9 +3233,6 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Acoustic neurofibromatosis" EXACT [MTHICD9_2006:237.72]
 synonym: "central Neurofibromatosis" EXACT [NCI2004_11_17:C3274]
-synonym: "Neurofibromatosis 1" EXACT [MTH:U003314]
-synonym: "neurofibromatosis type 1" EXACT []
-synonym: "neurofibromatosis type 2" EXACT []
 synonym: "neurofibromatosis type 4" EXACT []
 synonym: "neurofibromatosis type IV" EXACT []
 synonym: "peripheral Neurofibromatosis" EXACT [NCI2004_11_17:C3273]
@@ -3267,8 +3259,6 @@ xref: NCI2004_11_17:C3274
 xref: NCI:C3273
 xref: NCI:C3274
 xref: NCI:C6727
-xref: OMIM:101000
-xref: OMIM:162200
 xref: OMIM:162210
 xref: OMIM:162260
 xref: OMIM:162270
@@ -3414,7 +3404,6 @@ xref: GARD:8436
 xref: MESH:C563003
 xref: MESH:D057180
 xref: OMIM:600274
-xref: OMIM:600795
 xref: ORDO:282
 xref: SNOMEDCT_US_2018_03_01:42369001
 xref: UMLS_CUI:C0520716

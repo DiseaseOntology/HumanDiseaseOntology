@@ -2,7 +2,7 @@
 
 import os, subprocess, sys
 
-count_dir = 'src/sparql/branch_count/'
+count_dir = 'src/util/branch_count/'
 report_dir = 'build/reports/counts/'
 queries = ['anatomical_entity', 
 		   'cellular_proliferation', 

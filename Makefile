@@ -256,7 +256,7 @@ $(REPORTS)/report-diff.txt: $(QUERIES)
 	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
 
 .PHONY: $(REPORTS)/branch-count.tsv
-$(REPORTS)/branch-count.tsv: $(DNC).owl | $(REPORTS)
+$(REPORTS)/branch-count.tsv: $(DNC).owl | $(ROBOT_FILE) $(REPORTS)
 	@echo "Counting all branches..." && \
 	./src/util/branch_count/branch_count.py $< $@ && \
 	echo "Branch count available at $@"

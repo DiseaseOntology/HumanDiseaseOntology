@@ -75,7 +75,7 @@ report: $(REPORTS)/report.tsv
 .PRECIOUS: $(REPORTS)/report.tsv
 $(REPORTS)/report.tsv: $(EDIT) verify-edit | $(BUILD)robot.jar $(REPORTS)
 	@echo "" && \
-	robot report --input $<\
+	$(ROBOT) report --input $<\
 	 --profile src/sparql/report/report_profile.txt\
 	 --labels true --output $@ && \
 	echo "Full DO QC report available at $@"

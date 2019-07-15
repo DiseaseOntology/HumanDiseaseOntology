@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-06-28/subsets/DO_FlyBase_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-07-15/subsets/DO_FlyBase_slim.owl"/>
     </owl:Ontology>
     
 
@@ -122,6 +122,7 @@
         <oboInOwl:id>DOID:0050155</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_GXD_slim"/>
         <rdfs:label>sensory system disease</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3794,6 +3795,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:id>DOID:162</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_GXD_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment>Updating out dated UMLS CUI.</rdfs:comment>
         <rdfs:label>cancer</rdfs:label>
@@ -4043,6 +4045,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1932 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1932">
+        <obo:IAO_0000115>A chromosomal disease that is characterized by delayed development, intellectual disability, severe speech impairment, and problems with movement and balance.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:4008-0043</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:5810</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:Q93.5</oboInOwl:hasDbXref>
@@ -4060,6 +4063,13 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:comment>OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label>Angelman syndrome</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1932"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chromosomal disease that is characterized by delayed development, intellectual disability, severe speech impairment, and problems with movement and balance.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Angelman_syndrome</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://ghr.nlm.nih.gov/condition/angelman-syndrome#genes</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1932"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -4456,6 +4466,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:id>DOID:2914</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_GXD_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <rdfs:label>immune system disease</rdfs:label>
     </owl:Class>
@@ -4933,7 +4944,6 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3534 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3534">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1289"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1826"/>
         <oboInOwl:hasDbXref>CSP2005:0485-7984</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:8214</oboInOwl:hasDbXref>
@@ -5203,18 +5213,14 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasAlternativeId>DOID:4382</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:4701</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018232</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3749</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7958</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3749</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C7958</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:268220</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2018_03_01:63449009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0206655</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0279613</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Alveolar Rhabdomyosarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Alveolar rhabdomyosarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>alveolar childhood rhabdomyosarcoma</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>pediatric Alveolar Rhabdomyosarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:4051</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
@@ -5222,18 +5228,6 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:comment>OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label>alveolar rhabdomyosarcoma</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4051"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Alveolar Rhabdomyosarcoma</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3749</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4051"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pediatric Alveolar Rhabdomyosarcoma</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7958</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 

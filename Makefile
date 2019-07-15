@@ -35,13 +35,16 @@ init: $(BUILD)
 $(BUILD) $(REPORTS):
 	mkdir -p $@
 
-.PHONY: robot
+ROBOT_FILE = $(BUILD)robot.jar
 robot: $(ROBOT_FILE)
 
-ROBOT_FILE = $(BUILD)robot.jar
+# run `make update_robot` to get a new version of ROBOT
+.PHONY: update_robot
+update_robot:
+	rm -rf $(ROBOT_FILE) && make robot
 
 $(ROBOT_FILE): init
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.0/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
 
 ROBOT := java -jar $(BUILD)robot.jar
 
@@ -72,7 +75,7 @@ report: $(REPORTS)/report.tsv
 .PRECIOUS: $(REPORTS)/report.tsv
 $(REPORTS)/report.tsv: $(EDIT) verify-edit | $(BUILD)robot.jar $(REPORTS)
 	@echo "" && \
-	$(ROBOT) report --input $<\
+	robot report --input $<\
 	 --profile src/sparql/report/report_profile.txt\
 	 --labels true --output $@ && \
 	echo "Full DO QC report available at $@"

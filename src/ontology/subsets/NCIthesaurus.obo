@@ -1,7 +1,6 @@
 format-version: 1.2
-data-version: doid/2019-06-28/subsets/NCIthesaurus.obo
+data-version: doid/2019-07-15/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
 [Term]
 id: DOID:0001816
@@ -27,6 +26,7 @@ name: disease of metabolism
 namespace: disease_ontology
 def: "A disease that involving errors in metabolic processes of building or degradation of molecules." [url:http\://www.ncbi.nlm.nih.gov/books/NBK22259/]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "metabolic disease" EXACT [SNOMEDCT_2005_07_31:75934005]
 xref: ICD10CM:E88.9
@@ -58,6 +58,7 @@ alt_id: DOID:9532
 alt_id: DOID:9696
 def: "A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions." [url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C26726] {comment="DO:wk"}
 comment: DO:wk
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "infectious disease" EXACT []
@@ -3690,7 +3691,6 @@ def: "A mitochondrial DNA depletion syndrome that is characterized by onset betw
 subset: NCIthesaurus
 synonym: "mitochondrial DNA depletion syndrome 1 (MNGIE type)" EXACT []
 synonym: "mitochondrial neurogastrointestinal encephalopathy" EXACT []
-synonym: "mitochondrial neurogastrointestinal encephalopathy disease" EXACT []
 synonym: "mitochondrial neurogastrointestinal encephalopathy syndrome" EXACT []
 synonym: "mitochondrial neurogastrointestinal encephalopathy syndrome, TYMP-related" EXACT []
 xref: GARD:9920
@@ -14207,6 +14207,7 @@ namespace: disease_ontology
 alt_id: DOID:73
 def: "A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis." [url:http\://en.wikipedia.org/wiki/Circulatory_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "disease of subdivision of hemolymphoid system" EXACT []
@@ -20209,6 +20210,7 @@ namespace: disease_ontology
 alt_id: DOID:6309
 def: "A disease of anatomical entity that is located_in reproductive system organs." [url:http\://en.wikipedia.org/wiki/Reproductive_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "genital system disease" EXACT []
@@ -20222,6 +20224,7 @@ name: disease of mental health
 namespace: disease_ontology
 def: "A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture." [url:http\://en.wikipedia.org/wiki/Mental_disorder]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: ICD10CM:F99
@@ -20816,6 +20819,7 @@ def: "A disease of cellular proliferation that is malignant and primary, charact
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm" EXACT []
 synonym: "malignant tumor" EXACT []
@@ -21200,6 +21204,7 @@ name: musculoskeletal system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that occurs in the muscular and/or skeletal system." [url:http\://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: MESH:D009140
@@ -22014,6 +22019,7 @@ namespace: disease_ontology
 alt_id: DOID:579
 def: "A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra." [url:http\://en.wikipedia.org/wiki/Urinary_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "Non-neoplastic urinary tract disease" EXACT [NCI2004_11_17:C27599]
@@ -22708,6 +22714,7 @@ is_a: DOID:630 ! genetic disease
 id: DOID:1932
 name: Angelman syndrome
 namespace: disease_ontology
+def: "A chromosomal disease that is characterized by delayed development, intellectual disability, severe speech impairment, and problems with movement and balance." [url:https\://en.wikipedia.org/wiki/Angelman_syndrome, url:https\://ghr.nlm.nih.gov/condition/angelman-syndrome#genes]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -24410,6 +24417,7 @@ name: syndrome
 namespace: disease_ontology
 def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: MESH:D013577
@@ -25358,7 +25366,6 @@ xref: GARD:8445
 xref: MESH:D003233
 xref: NCI:C34507
 xref: UMLS_CUI:C0009769
-is_a: DOID:2456 ! blepharoconjunctivitis
 is_a: DOID:2458 ! papillary conjunctivitis
 
 [Term]
@@ -26490,7 +26497,6 @@ xref: NCI2004_11_17:C4564
 xref: NCI:C4564
 xref: UMLS_CUI:C0346424
 is_a: DOID:0001816 ! angiosarcoma
-is_a: DOID:672 ! spleen cancer
 
 [Term]
 id: DOID:2653
@@ -27696,6 +27702,7 @@ name: endocrine system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body." [url:http\://en.wikipedia.org/wiki/Endocrine_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: ICD10CM:E34.9
@@ -27767,7 +27774,6 @@ synonym: "malignant tumor of the Cranial nerve" EXACT [NCI2004_11_17:C3571]
 xref: ICD10CM:C72.50
 xref: ICD9CM:192.0
 xref: MESH:D003390
-xref: NCI2004_11_17:C3571
 xref: NCI:C3571
 xref: SNOMEDCT_US_2018_03_01:93767009
 xref: UMLS_CUI:C0153644
@@ -28705,7 +28711,6 @@ xref: OMIM:613616
 xref: SNOMEDCT_US_2018_03_01:17901006
 xref: UMLS_CUI:C0020500
 xref: UMLS_CUI:C0020501
-is_a: DOID:557 ! kidney disease
 is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
@@ -29906,7 +29911,6 @@ xref: SNOMEDCT_US_2018_03_01:72967001
 xref: SNOMEDCT_US_2018_03_01:95323007
 xref: UMLS_CUI:C0036413
 is_a: DOID:37 ! skin disease
-is_a: DOID:65 ! connective tissue disease
 
 [Term]
 id: DOID:3144
@@ -30138,7 +30142,6 @@ xref: NCI:C85027
 xref: SNOMEDCT_US_2018_03_01:88923002
 xref: UMLS_CUI:C0917981
 is_a: DOID:1289 ! neurodegenerative disease
-is_a: DOID:319 ! spinal cord disease
 
 [Term]
 id: DOID:3181
@@ -30660,7 +30663,6 @@ xref: NCI2004_11_17:C5860
 xref: NCI:C5860
 xref: UMLS_CUI:C2064434
 is_a: DOID:3247 ! rhabdomyosarcoma
-is_a: DOID:4064 ! bile duct sarcoma
 
 [Term]
 id: DOID:3255
@@ -31091,6 +31093,7 @@ name: central nervous system disease
 namespace: disease_ontology
 def: "A nervous system disease that affects either the spinal cord (myelopathy) or brain (encephalopathy) of the central nervous system." [url:http\://en.wikipedia.org/wiki/Central_nervous_system_disease]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 xref: ICD10CM:G96.9
 xref: MESH:D002493
@@ -31552,7 +31555,7 @@ is_a: DOID:1967 ! leiomyosarcoma
 
 [Term]
 id: DOID:3368
-name: bone Ewing's sarcoma
+name: Ewing sarcoma of bone
 namespace: disease_ontology
 alt_id: DOID:4984
 alt_id: DOID:6392
@@ -31565,10 +31568,7 @@ synonym: "bone localized Ewing sarcoma" EXACT []
 synonym: "bone localized Ewing's sarcoma" EXACT []
 synonym: "Ewing's sarcoma of bone" RELATED []
 synonym: "Ewing's sarcoma/bone peripheral primitive neuroectodermal tumor" EXACT []
-synonym: "localized Skeletal Ewing's sarcoma" EXACT [NCI2004_11_17:C6623]
-synonym: "Skeletal Ewing's tumor" RELATED [NCI2004_11_17:C4835]
-xref: NCI2004_11_17:C4835
-xref: NCI2004_11_17:C6623
+synonym: "localized Skeletal Ewing's sarcoma" EXACT []
 xref: NCI:C35871
 xref: NCI:C4835
 xref: NCI:C6623
@@ -31745,7 +31745,6 @@ namespace: disease_ontology
 def: "A central nervous system cancer develops from schwann cells located_in cranial nerves, has_material_basis_in abnormally proliferating cells." [url:https\://en.wikipedia.org/wiki/Schwannoma, url:https\://link.springer.com/chapter/10.1007/978-3-642-02874-8_15]
 subset: NCIthesaurus
 synonym: "neoplasm of cranial nerve" EXACT []
-synonym: "tumor of the Cranial nerve" EXACT [NCI2004_11_17:C2963]
 xref: MESH:D003390
 xref: NCI2004_11_17:C2963
 xref: NCI:C2963
@@ -31810,18 +31809,19 @@ is_a: DOID:403 ! mouth disease
 id: DOID:3389
 name: Papillon-Lefevre disease
 namespace: disease_ontology
+def: "An ectodermal dysplasia that is characterized by palmoplantar keratoderma associated with early-onset periodontitis and has_material_basis_in homozygous or compound heterozygous mutation in the cathepsin C gene on chromosome 11q14." [url:https\://en.wikipedia.org/wiki/Papillon–Lefèvre_syndrome, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4507741/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Papillon Lefevre syndrome" EXACT []
-synonym: "Papillon-Lefvre syndrome" EXACT [SNOMEDCT_2005_07_31:40158001]
+synonym: "Papillon-Lefvre syndrome" EXACT []
 xref: GARD:3100
 xref: MESH:D010214
 xref: NCI:C84992
 xref: OMIM:245000
+xref: ORDO:678
 xref: SNOMEDCT_US_2018_03_01:40158001
 xref: UMLS_CUI:C0030360
-is_a: DOID:3388 ! periodontal disease
-is_a: DOID:3390 ! palmoplantar keratosis
+is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:339
@@ -32703,7 +32703,6 @@ xref: MESH:D020192
 xref: NCI:C84804
 xref: OMIM:254780
 xref: UMLS_CUI:C0751783
-is_a: DOID:1289 ! neurodegenerative disease
 is_a: DOID:891 ! progressive myoclonus epilepsy
 
 [Term]
@@ -32816,7 +32815,6 @@ xref: NCI:C79548
 xref: SNOMEDCT_US_2018_03_01:95532008
 xref: UMLS_CUI:C0013292
 is_a: DOID:5295 ! intestinal disease
-is_a: DOID:8437 ! intestinal obstruction
 
 [Term]
 id: DOID:3559
@@ -33662,7 +33660,6 @@ xref: NCI:C27210
 xref: SNOMEDCT_US_2018_03_01:68982002
 xref: UMLS_CUI:C0751937
 is_a: DOID:5656 ! cranial nerve disease
-is_a: DOID:936 ! brain disease
 
 [Term]
 id: DOID:3672
@@ -34445,7 +34442,6 @@ subset: NCIthesaurus
 xref: MESH:D008579
 xref: NCI:C5273
 xref: UMLS_CUI:C1334271
-is_a: DOID:3541 ! cerebral ventricle cancer
 is_a: DOID:3565 ! meningioma
 
 [Term]
@@ -34703,7 +34699,6 @@ subset: NCIthesaurus
 xref: NCI:C27335
 xref: UMLS_CUI:C0919940
 is_a: DOID:3817 ! cranial nerve palsy
-is_a: DOID:5656 ! cranial nerve disease
 
 [Term]
 id: DOID:3817
@@ -35085,10 +35080,8 @@ subset: NCIthesaurus
 synonym: "intestinal Pseudo-obstruction" EXACT [NCI2004_11_17:C34733]
 synonym: "intestine pseudoobstruction" EXACT [CSP2005:1248-5896]
 synonym: "Pseudo-obstruction of intestine" EXACT []
-xref: CSP2005:1248-5896
 xref: GARD:6789
 xref: MESH:D007418
-xref: NCI2004_11_17:C34733
 xref: NCI:C34733
 xref: UMLS_CUI:C0021847
 is_a: DOID:8440 ! ileus
@@ -36103,7 +36096,6 @@ synonym: "Rhabdomyosarcoma of the CNS" EXACT [NCI2004_11_17:C5464]
 xref: NCI2004_11_17:C5464
 xref: NCI:C5464
 xref: UMLS_CUI:C1332891
-is_a: DOID:2133 ! central nervous system sarcoma
 is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
@@ -36139,13 +36131,9 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "alveolar childhood rhabdomyosarcoma" EXACT []
-synonym: "Alveolar Rhabdomyosarcoma" EXACT [NCI2004_11_17:C3749]
 synonym: "Alveolar rhabdomyosarcoma" EXACT []
-synonym: "pediatric Alveolar Rhabdomyosarcoma" EXACT [NCI2004_11_17:C7958]
 xref: GARD:4701
 xref: MESH:D018232
-xref: NCI2004_11_17:C3749
-xref: NCI2004_11_17:C7958
 xref: NCI:C3749
 xref: NCI:C7958
 xref: OMIM:268220
@@ -36199,7 +36187,6 @@ xref: NCI2004_11_17:C5839
 xref: NCI:C5839
 xref: UMLS_CUI:C1333756
 is_a: DOID:3247 ! rhabdomyosarcoma
-is_a: DOID:4058 ! gallbladder sarcoma
 
 [Term]
 id: DOID:4058
@@ -36223,7 +36210,6 @@ synonym: "Rhabdomyosarcoma of Ovary" EXACT [NCI2004_11_17:C5236]
 xref: NCI2004_11_17:C5236
 xref: NCI:C5236
 xref: UMLS_CUI:C1335176
-is_a: DOID:2146 ! ovary sarcoma
 is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
@@ -36285,7 +36271,6 @@ xref: NCI2004_11_17:C5610
 xref: NCI:C5610
 xref: UMLS_CUI:C1332276
 is_a: DOID:3247 ! rhabdomyosarcoma
-is_a: DOID:4067 ! anus sarcoma
 
 [Term]
 id: DOID:4067
@@ -36857,7 +36842,6 @@ xref: NCI:C26746
 xref: SNOMEDCT_US_2018_03_01:89155008
 xref: UMLS_CUI:C0011644
 is_a: DOID:4 ! disease
-is_a: DOID:854 ! collagen disease
 
 [Term]
 id: DOID:4194
@@ -37152,12 +37136,15 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:4232
-name: extraosseous Ewing's sarcoma
+name: extraosseous Ewing sarcoma
 namespace: disease_ontology
+def: "A Ewing sarcoma that is morphologically indistinguishable from skeletal Ewing sarcoma but is located in extraosseous locations." []
 subset: NCIthesaurus
-synonym: "extraosseous Ewing sarcoma" EXACT []
+synonym: "extraosseous Ewing's sarcoma" EXACT []
 synonym: "extraosseous Ewing's sarcoma/peripheral primitive neuroectodermal tumor" EXACT []
+synonym: "extraskeletal Ewing sarcom" EXACT []
 xref: NCI:C27293
+xref: ORDO:370334
 xref: UMLS_CUI:C1333514
 is_a: DOID:3369 ! Ewing sarcoma
 
@@ -37236,18 +37223,14 @@ alt_id: DOID:5318
 def: "A soft tissue cancer that is a slow growing tumor of an unknown origin that effects children and effects young adults." [url:http\://en.wikipedia.org/wiki/Alveolar_soft_part_sarcoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "adult alveolar soft part sarcoma" EXACT []
-synonym: "Alveolar Soft Part sarcoma" EXACT [NCI2004_11_17:C3750]
-synonym: "childhood alveolar soft part sarcoma" EXACT []
-synonym: "pediatric Alveolar soft Part sarcoma" EXACT [NCI2004_11_17:C8092]
+synonym: "Alveolar Soft Part sarcoma" EXACT []
 xref: GARD:5654
 xref: MESH:D018234
-xref: NCI2004_11_17:C3750
-xref: NCI2004_11_17:C8092
 xref: NCI:C3750
 xref: NCI:C7943
 xref: NCI:C8092
 xref: OMIM:606243
+xref: ORDO:163699
 xref: SNOMEDCT_US_2018_03_01:88195001
 xref: UMLS_CUI:C0206657
 xref: UMLS_CUI:C0279544
@@ -37260,9 +37243,8 @@ name: kidney sarcoma
 namespace: disease_ontology
 def: "A kidney cancer that is located in the kidney's connective tissue." [url:http\://www.cancer.org/docroot/CRI/content/CRI_2_4_1X_What_is_kidney_cancer_22.asp]
 subset: NCIthesaurus
-synonym: "renal sarcoma" EXACT [NCI2004_11_17:C4525]
+synonym: "renal sarcoma" EXACT []
 synonym: "sarcoma of kidney" EXACT []
-xref: NCI2004_11_17:C4525
 xref: NCI:C4525
 xref: UMLS_CUI:C0346251
 is_a: DOID:263 ! kidney cancer
@@ -37459,7 +37441,6 @@ synonym: "basal cell carcinoma of the scrotum" RELATED []
 xref: NCI2004_11_17:C6386
 xref: NCI:C6386
 xref: UMLS_CUI:C1335934
-is_a: DOID:2513 ! basal cell carcinoma
 is_a: DOID:3445 ! scrotal carcinoma
 
 [Term]
@@ -37515,7 +37496,6 @@ synonym: "Basal cell carcinoma of the External ear" EXACT [NCI2004_11_17:C6082]
 xref: NCI2004_11_17:C6082
 xref: NCI:C6082
 xref: UMLS_CUI:C1333491
-is_a: DOID:2513 ! basal cell carcinoma
 is_a: DOID:4288 ! external ear carcinoma
 
 [Term]
@@ -37635,7 +37615,6 @@ xref: NCI2004_11_17:C6381
 xref: NCI:C6381
 xref: UMLS_CUI:C1336977
 is_a: DOID:1294 ! vulva carcinoma
-is_a: DOID:2513 ! basal cell carcinoma
 
 [Term]
 id: DOID:4303
@@ -38006,7 +37985,7 @@ name: myasthenia gravis
 namespace: disease_ontology
 alt_id: DOID:443
 alt_id: DOID:444
-def: "An autoimmune neuromuscular disease, has_material_basis_in antibodies to acetylcholine receptors at the neuromuscular junction, has_symptom ptosis, has_symptom diplopia, has_symptom dysphagia, has_symptom dysarthria, has_symptom muscle weakness and has_symptom dyspnea." [url:https\://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Myasthenia-Gravis-Fact-Sheet]
+def: "An autoimmune disease of the nervous system that has_material_basis_in antibodies to acetylcholine receptors at the neuromuscular junction, has_symptom ptosis, has_symptom diplopia, has_symptom dysphagia, has_symptom dysarthria, has_symptom muscle weakness and has_symptom dyspnea." [url:https\://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Myasthenia-Gravis-Fact-Sheet]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 xref: GARD:7122
@@ -38021,7 +38000,6 @@ xref: SNOMEDCT_US_2018_03_01:91637004
 xref: UMLS_CUI:C0026896
 xref: UMLS_CUI:C1260409
 is_a: DOID:438 ! autoimmune disease of the nervous system
-is_a: DOID:870 ! neuropathy
 
 [Term]
 id: DOID:438
@@ -38068,7 +38046,7 @@ synonym: "osseous peripheral Neuroepithelioma" EXACT [NCI2004_11_17:C8776]
 xref: NCI2004_11_17:C8776
 xref: NCI:C8776
 xref: UMLS_CUI:C0855009
-is_a: DOID:3368 ! bone Ewing's sarcoma
+is_a: DOID:3368 ! Ewing sarcoma of bone
 
 [Term]
 id: DOID:4389
@@ -38079,7 +38057,7 @@ synonym: "peripheral Neuroectodermal tumor of soft tissues" EXACT [NCI2004_11_17
 xref: NCI2004_11_17:C27471
 xref: NCI:C27471
 xref: UMLS_CUI:C1112437
-is_a: DOID:4232 ! extraosseous Ewing's sarcoma
+is_a: DOID:4232 ! extraosseous Ewing sarcoma
 
 [Term]
 id: DOID:4394
@@ -38203,7 +38181,6 @@ xref: NCI:C94408
 xref: SNOMEDCT_US_2018_03_01:13600006
 xref: UMLS_CUI:C0016436
 is_a: DOID:2723 ! dermatitis
-is_a: DOID:421 ! hair disease
 
 [Term]
 id: DOID:4413
@@ -39086,7 +39063,6 @@ xref: NCI2004_11_17:C5232
 xref: NCI:C5232
 xref: UMLS_CUI:C1335152
 is_a: DOID:0001816 ! angiosarcoma
-is_a: DOID:2146 ! ovary sarcoma
 
 [Term]
 id: DOID:4531
@@ -39780,7 +39756,6 @@ xref: NCI:C9286
 xref: SNOMEDCT_US_2018_03_01:70910003
 xref: UMLS_CUI:C0272203
 is_a: DOID:349 ! systemic mastocytosis
-is_a: DOID:3664 ! mast cell neoplasm
 
 [Term]
 id: DOID:4662
@@ -41202,11 +41177,9 @@ def: "A kidney sarcoma that has_material_basis_in clear cells that are character
 subset: NCIthesaurus
 synonym: "childhood kidney clear cell sarcoma" EXACT []
 synonym: "Clear cell sarcoma of kidney" EXACT []
-synonym: "pediatric renal Clear cell sarcoma" EXACT [NCI2004_11_17:C6564]
-synonym: "renal Clear cell sarcoma" EXACT [NCI2004_11_17:C4264]
-xref: NCI2004_11_17:C4264
-xref: NCI2004_11_17:C6564
+synonym: "renal Clear cell sarcoma" EXACT []
 xref: NCI:C4264
+xref: ORDO:457246
 xref: SNOMEDCT_US_2018_03_01:24007003
 xref: UMLS_CUI:C0334488
 is_a: DOID:4242 ! kidney sarcoma
@@ -42006,7 +41979,7 @@ synonym: "extraosseous Ewing's tumor" EXACT [NCI2004_11_17:C7135]
 xref: NCI2004_11_17:C7135
 xref: NCI:C7135
 xref: UMLS_CUI:C0279980
-is_a: DOID:4232 ! extraosseous Ewing's sarcoma
+is_a: DOID:4232 ! extraosseous Ewing sarcoma
 
 [Term]
 id: DOID:4989
@@ -43351,7 +43324,6 @@ xref: MESH:D020277
 xref: NCI:C84636
 xref: UMLS_CUI:C0393819
 is_a: DOID:1389 ! polyneuropathy
-is_a: DOID:5214 ! demyelinating polyneuropathy
 
 [Term]
 id: DOID:5214
@@ -45776,7 +45748,6 @@ synonym: "Syncytioma of pulmonary artery" EXACT [NCI2004_11_17:C5381]
 xref: NCI2004_11_17:C5381
 xref: NCI:C5381
 xref: UMLS_CUI:C1335571
-is_a: DOID:175 ! vascular cancer
 is_a: DOID:178 ! vascular disease
 
 [Term]
@@ -46823,10 +46794,13 @@ is_a: DOID:630 ! genetic disease
 
 [Term]
 id: DOID:5690
-name: atypical lipomatous tumor
+name: well-differentiated liposarcoma
 namespace: disease_ontology
+def: "A liposarcoma that is characterized as a slow growing, painless tumor usually located in the retroperitoneum or the limbs and derives_from proliferating mature adipocytes." [url:https\://www.mskcc.org/blog/what-s-new-liposarcoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/26645460]
 subset: NCIthesaurus
+synonym: "atypical lipomatous tumor" EXACT []
 xref: NCI:C4250
+xref: ORDO:99971
 xref: SNOMEDCT_US_2018_03_01:28655007
 xref: UMLS_CUI:C1370889
 is_a: DOID:3382 ! liposarcoma
@@ -46908,7 +46882,6 @@ synonym: "Liposarcoma of Ovary" EXACT [NCI2004_11_17:C6419]
 xref: NCI2004_11_17:C6419
 xref: NCI:C6419
 xref: UMLS_CUI:C1335165
-is_a: DOID:2146 ! ovary sarcoma
 is_a: DOID:3382 ! liposarcoma
 
 [Term]
@@ -47021,7 +46994,7 @@ subset: NCIthesaurus
 xref: NCI:C6507
 xref: SNOMEDCT_US_2018_03_01:28655007
 xref: UMLS_CUI:C0334469
-is_a: DOID:5690 ! atypical lipomatous tumor
+is_a: DOID:5690 ! well-differentiated liposarcoma
 
 [Term]
 id: DOID:5705
@@ -47030,7 +47003,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C27489
 xref: UMLS_CUI:C1275275
-is_a: DOID:5690 ! atypical lipomatous tumor
+is_a: DOID:5690 ! well-differentiated liposarcoma
 
 [Term]
 id: DOID:5709
@@ -47047,7 +47020,6 @@ namespace: disease_ontology
 def: "A vulvar sarcoma that has_material_basis in adipocytes." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25469348]
 subset: NCIthesaurus
 xref: NCI:C40321
-is_a: DOID:2096 ! vulvar sarcoma
 is_a: DOID:3382 ! liposarcoma
 
 [Term]
@@ -47316,6 +47288,7 @@ namespace: disease_ontology
 alt_id: DOID:13069
 def: "A nervous system disease that affects the peripheral nervous system." [url:http\://en.wikipedia.org/w/index.php?title=Peripheral_neuropathy&redirect=no]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "peripheral nerve disease" RELATED [MTH:516]
 synonym: "peripheral neuropathy" RELATED [CSP2005:2042-6617]
@@ -48827,7 +48800,7 @@ is_a: DOID:6025 ! selective immunoglobulin deficiency disease
 id: DOID:6025
 name: selective immunoglobulin deficiency disease
 namespace: disease_ontology
-def: "A B cell deficiency that is characterized by deficiency of an immunoglobulin subtype. The clinical course and prognosis is dependent upon the severity of the selective deficiency and associated morbidity." [https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27870, url:https\://www.ncbi.nlm.nih.gov/books/NBK507905/]
+def: "A B cell deficiency that is characterized by deficiency of an immunoglobulin subtype. The clinical course and prognosis is dependent upon the severity of the selective deficiency and associated morbidity." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27870, url:https\://www.ncbi.nlm.nih.gov/books/NBK507905/]
 subset: NCIthesaurus
 xref: NCI:C27870
 xref: UMLS_CUI:C1335942
@@ -53064,7 +53037,6 @@ synonym: "Seborrheic Keratosis of Vulva" EXACT [NCI2004_11_17:C6375]
 xref: NCI2004_11_17:C6375
 xref: NCI:C6375
 xref: UMLS_CUI:C1336981
-is_a: DOID:2072 ! vulvar squamous tumor
 is_a: DOID:6498 ! seborrheic keratosis
 
 [Term]
@@ -54987,6 +54959,7 @@ name: hematopoietic system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that has_material_basis_in hematopoietic cells." [url:http\://en.wikipedia.org/wiki/Hematopathology, url:https\://www.ncbi.nlm.nih.gov/books/NBK1741/]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "Blood disease" EXACT []
@@ -58425,7 +58398,7 @@ synonym: "Inflammatory liposarcoma" EXACT [SNOMEDCT_2005_07_31:28655007]
 xref: NCI:C6508
 xref: SNOMEDCT_US_2018_03_01:28655007
 xref: UMLS_CUI:C1370890
-is_a: DOID:5690 ! atypical lipomatous tumor
+is_a: DOID:5690 ! well-differentiated liposarcoma
 
 [Term]
 id: DOID:8239
@@ -60286,6 +60259,7 @@ id: DOID:863
 name: nervous system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system." [url:http\://en.wikipedia.org/wiki/Nervous_system]
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: ICD10CM:G00-G99
@@ -61684,6 +61658,7 @@ xref: OMIM:310370
 xref: OMIM:611726
 xref: OMIM:612437
 xref: OMIM:614018
+xref: OMIM:PS254800
 xref: SNOMEDCT_US_2018_03_01:89480000
 xref: UMLS_CUI:C0751778
 is_a: DOID:1826 ! epilepsy

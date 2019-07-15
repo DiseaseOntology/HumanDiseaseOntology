@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-06-28/subsets/DO_AGR_slim.obo
+data-version: doid/2019-07-15/subsets/DO_AGR_slim.obo
 ontology: doid/subsets/DO_AGR_slim.obo
 
 [Term]
@@ -8,6 +8,7 @@ name: disease of metabolism
 namespace: disease_ontology
 def: "A disease that involving errors in metabolic processes of building or degradation of molecules." [url:http\://www.ncbi.nlm.nih.gov/books/NBK22259/]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "metabolic disease" EXACT [SNOMEDCT_2005_07_31:75934005]
 xref: ICD10CM:E88.9
@@ -25,6 +26,7 @@ namespace: disease_ontology
 def: "A nervous system disease which is located in a part of the nervous system responsible for processing sensory information that consists of sensory receptors, neural pathways, and parts of the brain involved in sensory perception. Commonly recognized sensory systems are those for vision, hearing, somatic sensation (touch), taste and olfaction (smell)." [url:http\://en.wikipedia.org/wiki/Sensory_system]
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
+subset: DO_GXD_slim
 
 [Term]
 id: DOID:0050177
@@ -32,6 +34,7 @@ name: monogenic disease
 namespace: disease_ontology
 def: "A genetic disease that is the result of one or more abnormal alleles and may be dominant (a single copy of the abnormal allele is sufficient to give rise to the disease), semi-dominant, or recessive (requiring both copies of the gene to have an abnormal allele)." [url:https\://www.genome.gov/For-Patients-and-Families/Genetic-Disorders] {comment="DO:wk,ls"}
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 
 [Term]
 id: DOID:0060071
@@ -39,6 +42,7 @@ name: pre-malignant neoplasm
 namespace: disease_ontology
 def: "A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer." [url:http\://en.wikipedia.org/wiki/Neoplasm]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 created_by: lschriml
 creation_date: 2011-05-11T12:18:41Z
@@ -49,6 +53,7 @@ name: benign neoplasm
 namespace: disease_ontology
 def: "A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize." [url:http\://en.wikipedia.org/wiki/Benign_neoplasm, url:http\://www.nlm.nih.gov/medlineplus/benigntumors.html]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 disjoint_from: DOID:162 ! cancer
 created_by: lschriml
@@ -60,6 +65,7 @@ name: thoracic disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in the thoracic cavity." [url:http\://en.wikipedia.org/wiki/Thoracic_cavity]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 created_by: lschriml
 creation_date: 2011-07-25T02:23:47Z
@@ -70,6 +76,7 @@ name: chromosomal disease
 namespace: disease_ontology
 def: "A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes." [url:http\://en.wikipedia.org/wiki/Chromosome_abnormality, url:http\://www.genome.gov/11508982#al-5, url:http\://www.rarechromo.org/html/chromosomesanddisorders.asp]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 
 [Term]
@@ -78,6 +85,7 @@ name: physical disorder
 namespace: disease_ontology
 def: "A disease that has_material_basis_in a genetic abnormality, error with embryonic development, infection or compromised intrauterine environment." [url:http\://en.wikipedia.org/wiki/Congenital_disorder]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 
 [Term]
@@ -102,6 +110,7 @@ namespace: disease_ontology
 alt_id: DOID:73
 def: "A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis." [url:http\://en.wikipedia.org/wiki/Circulatory_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "disease of subdivision of hemolymphoid system" EXACT []
@@ -146,6 +155,7 @@ namespace: disease_ontology
 alt_id: DOID:6309
 def: "A disease of anatomical entity that is located_in reproductive system organs." [url:http\://en.wikipedia.org/wiki/Reproductive_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "genital system disease" EXACT []
@@ -158,6 +168,7 @@ name: disease of mental health
 namespace: disease_ontology
 def: "A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture." [url:http\://en.wikipedia.org/wiki/Mental_disorder]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: ICD10CM:F99
@@ -191,6 +202,7 @@ namespace: disease_ontology
 alt_id: DOID:3226
 def: "A disease of anatomical entity that located_in the respiratory system which extends from the nasal sinuses to the diaphragm." [url:http\://en.wikipedia.org/wiki/File\:Respiratory_system_complete_en.svg, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=respiratory%20system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 xref: ICD10CM:J96-J99
 xref: ICD10CM:J98
@@ -204,6 +216,7 @@ name: integumentary system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in the integumentary system comprising the skin and its appendages." [url:http\://en.wikipedia.org/wiki/Integumentary_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 
 [Term]
@@ -214,6 +227,7 @@ def: "A disease of cellular proliferation that is malignant and primary, charact
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm" EXACT []
 synonym: "malignant tumor" EXACT []
@@ -234,6 +248,7 @@ name: musculoskeletal system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that occurs in the muscular and/or skeletal system." [url:http\://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: MESH:D009140
@@ -248,6 +263,7 @@ namespace: disease_ontology
 alt_id: DOID:579
 def: "A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra." [url:http\://en.wikipedia.org/wiki/Urinary_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "Non-neoplastic urinary tract disease" EXACT [NCI2004_11_17:C27599]
@@ -262,6 +278,7 @@ name: syndrome
 namespace: disease_ontology
 def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: MESH:D013577
@@ -275,6 +292,7 @@ name: endocrine system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body." [url:http\://en.wikipedia.org/wiki/Endocrine_system]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 xref: ICD10CM:E34.9
@@ -291,6 +309,7 @@ namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in the immune system." [url:http\://en.wikipedia.org/wiki/Immune_system]
 subset: DO_AGR_slim
 subset: DO_FlyBase_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 xref: EFO:0000540
 xref: ICD10CM:D89.9
@@ -304,6 +323,7 @@ name: central nervous system disease
 namespace: disease_ontology
 def: "A nervous system disease that affects either the spinal cord (myelopathy) or brain (encephalopathy) of the central nervous system." [url:http\://en.wikipedia.org/wiki/Central_nervous_system_disease]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 xref: ICD10CM:G96.9
 xref: MESH:D002493
@@ -318,6 +338,7 @@ namespace: disease_ontology
 alt_id: DOID:13069
 def: "A nervous system disease that affects the peripheral nervous system." [url:http\://en.wikipedia.org/w/index.php?title=Peripheral_neuropathy&redirect=no]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "peripheral nerve disease" RELATED [MTH:516]
 synonym: "peripheral neuropathy" RELATED [CSP2005:2042-6617]
@@ -339,6 +360,7 @@ name: hematopoietic system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that has_material_basis_in hematopoietic cells." [url:http\://en.wikipedia.org/wiki/Hematopathology, url:https\://www.ncbi.nlm.nih.gov/books/NBK1741/]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "Blood disease" EXACT []
@@ -367,6 +389,7 @@ alt_id: DOID:27
 alt_id: DOID:944
 def: "A disease of anatomical entity that is located_in the gastrointestinal tract." [url:http\://en.wikipedia.org/wiki/Human_gastrointestinal_tract]
 subset: DO_AGR_slim
+subset: DO_GXD_slim
 subset: DO_MGI_slim
 synonym: "alimentary system disease" EXACT []
 synonym: "digestive system disorder" EXACT []

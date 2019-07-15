@@ -176,7 +176,7 @@ SUB = src/ontology/subsets/
 SUB_NAMES = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
  NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
- tick-borne_infectious_disease zoonotic_infectious_disease
+ tick-borne_infectious_disease zoonotic_infectious_disease DO_GXD_slim
 SUBS = $(foreach N,$(SUB_NAMES),$(addprefix $(SUB), $(N)))
 OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))

@@ -31,20 +31,20 @@ test: verify
 # ROBOT
 # ----------------------------------------
 
-init: $(BUILD)
+init:
+	mkdir -p $(BUILD)
 
-$(BUILD) $(REPORTS):
+$(REPORTS):
 	mkdir -p $@
 
 ROBOT_JAR = $(BUILD)robot.jar
-robot: $(ROBOT_JAR)
 
 # run `make update_robot` to get a new version of ROBOT
 .PHONY: update_robot
 update_robot:
-	rm -rf $(ROBOT_JAR) && make robot
+	rm -rf $(ROBOT_JAR) && make $(ROBOT_JAR)
 
-$(ROBOT_JAR): init
+$(ROBOT_JAR): | init
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
 
 ROBOT := java -jar $(ROBOT_JAR)
@@ -96,13 +96,13 @@ DATE = $(shell date +'%Y-%m-%d')
 # and replaces it with dbXref annotations on the definition
 # this is used to build the OBO files
 
-$(BUILD)dbxrefs.ttl: $(EDIT)
+$(BUILD)dbxrefs.ttl: $(EDIT) | $(ROBOT_JAR)
 	@$(ROBOT) query --input $< --query src/sparql/add-dbxrefs.rq $(basename $@)-temp.ttl && \
 	grep -v ^@prefix $(basename $@)-temp.ttl > $@ && \
 	rm $(basename $@)-temp.ttl && \
 	echo "Created temp OBO build file: $@"
 
-$(EDIT_OBO): $(EDIT) $(BUILD)dbxrefs.ttl
+$(EDIT_OBO): $(EDIT) $(BUILD)dbxrefs.ttl | $(ROBOT_JAR)
 	@$(ROBOT) --add-prefix "obo: http://purl.obolibrary.org/obo/"\
 	 --add-prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
 	remove --input $< --term IAO:0000119 --output $(basename $@)-temp.ttl && \
@@ -194,7 +194,7 @@ $(DNC).obo: $(EDIT_OBO) | $(ROBOT_JAR)
 # DNC_OBO is used for generating the subsets later
 # Otherwise there's an issue with the base prefix
 DNC_OBO = $(BUILD)doid-non-classified-obo.owl
-$(DNC_OBO): $(DNC).obo
+$(DNC_OBO): $(DNC).obo | $(ROBOT_JAR)
 	@$(ROBOT) convert --input $< --output $@ \
 	&& sed -i '' 's|$(OBO)doid/doid-non-classified\.obo#|$(OBO)doid#|g' $@ \
 	&& echo "Created temp OBO build file: $@"

@@ -191,6 +191,13 @@ $(DNC).obo: $(EDIT_OBO) | $(ROBOT_JAR)
 	cp $@ $(HD).obo && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
 
+# DNC_OBO is used for generating the subsets later
+# Otherwise there's an issue with the base prefix
+DNC_OBO = $(BUILD)doid-non-classified-obo.owl
+$(DNC_OBO): $(DNC).obo
+	@$(ROBOT) convert --input $< --output $@ \
+	&& sed -i '' 's|$(OBO)doid/doid-non-classified\.obo#|$(OBO)doid#|g' $@ \
+	&& echo "Created temp OBO build file: $@"
 
 $(DNC).json: $(DNC).owl | $(ROBOT_JAR)
 	@$(ROBOT) convert --input $< --output $@ \
@@ -219,7 +226,7 @@ $(OWL_SUBS): $(DNC).owl | $(ROBOT_JAR)
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(OBO_SUBS): $(DNC).obo | $(ROBOT_JAR)
+$(OBO_SUBS): $(DNC_OBO) | $(ROBOT_JAR)
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\

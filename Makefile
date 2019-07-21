@@ -17,6 +17,7 @@ HD = src/ontology/HumanDO
 
 BUILD = build/
 REPORTS = $(BUILD)reports
+EDIT_OBO = $(BUILD)doid-edit-obo.owl
 
 # to make a release, use `make release`
 # to update imports, use `make imports`
@@ -91,6 +92,27 @@ products: subsets human merged build
 TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
+# EDIT_OBO removes IAO:0000119 (definition source)
+# and replaces it with dbXref annotations on the definition
+# this is used to build the OBO files
+
+$(BUILD)dbxrefs.ttl: $(EDIT)
+	@$(ROBOT) query --input $< --query src/sparql/add-dbxrefs.rq $(basename $@)-temp.ttl && \
+	grep -v ^@prefix $(basename $@)-temp.ttl > $@ && \
+	rm $(basename $@)-temp.ttl && \
+	echo "Created temp OBO build file: $@"
+
+$(EDIT_OBO): $(EDIT) $(BUILD)dbxrefs.ttl
+	@$(ROBOT) --add-prefix "obo: http://purl.obolibrary.org/obo/"\
+	 --add-prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
+	remove --input $< --term IAO:0000119 --output $(basename $@)-temp.ttl && \
+	cat $(basename $@)-temp.ttl $(word 2,$^) > $(basename $@).ttl && \
+	$(ROBOT) repair --input $(basename $@).ttl --merge-axiom-annotations true \
+	convert --format ofn --output $@ && \
+	rm $(basename $@)-temp.ttl $(basename $@).ttl && \
+	echo "Created temp OBO build file: $@"
+
+# Main OWL Release Product
 $(DO).owl: $(EDIT) $(REPORTS)/report.tsv | $(ROBOT_FILE)
 	@$(ROBOT) reason --input $< --create-new-ontology false \
 	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
@@ -98,8 +120,11 @@ $(DO).owl: $(EDIT) $(REPORTS)/report.tsv | $(ROBOT_FILE)
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(DO).obo: $(DO).owl | $(BUILD)robot.jar
-	@$(ROBOT) remove --input $< --select imports --trim true \
+# Main OBO Release Product
+$(DO).obo: $(EDIT_OBO) | $(BUILD)robot.jar
+	@$(ROBOT) reason --input $< --create-new-ontology false \
+	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
+	remove --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
@@ -109,6 +134,7 @@ $(DO).obo: $(DO).owl | $(BUILD)robot.jar
 	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@ && \
 	rm $(basename $@)-temp.obo && echo "Created $@"
 
+# Main JSON Release Product
 $(DO).json: $(DO).owl | $(BUILD)robot.jar
 	@$(ROBOT) convert --input $< --output $@ \
 	&& echo "Created $@"
@@ -126,8 +152,10 @@ $(DM).owl: $(DO).owl | $(ROBOT_FILE)
 	 --output $@ && \
 	echo "Created $@"
 
-$(DM).obo: $(DM).owl | $(ROBOT_FILE)
-	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
+$(DM).obo: $(EDIT_OBO) | $(ROBOT_FILE)
+	@$(ROBOT) reason --input $< --create-new-ontology false \
+	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
+	merge --input $< --collapse-import-closure true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	convert --check false --output $(basename $@)-temp.obo && \
@@ -151,7 +179,7 @@ $(DNC).owl: $(EDIT) | $(ROBOT_FILE)
 	cp $@ $(HD).owl \
 	&& echo "Created $@"
 
-$(DNC).obo: $(EDIT) | $(ROBOT_FILE)
+$(DNC).obo: $(EDIT_OBO) | $(ROBOT_FILE)
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
 	remove --term obo:IAO_0000119 --trim true \
@@ -191,7 +219,7 @@ $(OWL_SUBS): $(DNC).owl | $(ROBOT_FILE)
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
 	echo "Created $@"
 
-$(OBO_SUBS): $(DNC).owl| $(ROBOT_FILE)
+$(OBO_SUBS): $(DNC).obo | $(ROBOT_FILE)
 	@$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\

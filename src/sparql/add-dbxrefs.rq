@@ -1,0 +1,13 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT { _:b0 a owl:Axiom ;
+                 owl:annotatedSource ?s ;
+		         owl:annotatedProperty obo:IAO_0000115 ;
+		         owl:annotatedTarget ?definition ;
+		         oboInOwl:hasDbXref ?dbXref . }
+WHERE { ?s obo:IAO_0000115 ?definition ;
+		   obo:IAO_0000119 ?dbXref . }

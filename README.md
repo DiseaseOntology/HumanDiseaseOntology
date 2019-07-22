@@ -8,7 +8,7 @@ DO OBO and OWL files are available in our GitHub repository. The DO provides bot
 DO website: http://www.disease-ontology.org
 
 DO production has moved to OWL (November 2015).
-DO will maintain our SVN repository, mirroring updates from GitHub on a weekly basis. 
+DO'sSVN repository has been retired. 
 
 A tutorial describing DO's editorial activies is avaiable at: 
 https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md

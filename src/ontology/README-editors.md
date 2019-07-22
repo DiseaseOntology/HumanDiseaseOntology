@@ -22,7 +22,7 @@ The current (2015) ID ranges include
  
  	DOID:$sequence(7,50000,50999)$  Lynn 
  	DOID:$sequence(7,60000,60999)$  James
- 	DOID:$sequence(7,70000,70999)$  Michael
+ 	DOID:$sequence(7,70000,70999)$  Melody
  	DOID:$sequence(7,80000,80999)$  Lynn
  	
  	DOID:0100000 (in reserve)

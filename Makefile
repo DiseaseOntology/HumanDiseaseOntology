@@ -84,7 +84,6 @@ $(REPORTS)/report.tsv: $(EDIT) verify-edit | $(BUILD)robot.jar $(REPORTS)
 # RELEASE
 # ----------------------------------------
 
-build: $(DO).owl $(DO).obo $(DO).json
 products: subsets human merged build
 
 # release vars

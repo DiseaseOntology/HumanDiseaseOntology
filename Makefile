@@ -105,7 +105,8 @@ $(BUILD)dbxrefs.ttl: $(EDIT) | $(ROBOT_JAR)
 $(EDIT_OBO): $(EDIT) $(BUILD)dbxrefs.ttl | $(ROBOT_JAR)
 	@$(ROBOT) --add-prefix "obo: http://purl.obolibrary.org/obo/"\
 	 --add-prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
-	remove --input $< --term IAO:0000119 --output $(basename $@)-temp.ttl && \
+	remove --input $< --term IAO:0000119 --term OBI:9991118\
+	 --output $(basename $@)-temp.ttl && \
 	cat $(basename $@)-temp.ttl $(word 2,$^) > $(basename $@).ttl && \
 	$(ROBOT) repair --input $(basename $@).ttl --merge-axiom-annotations true \
 	convert --format ofn --output $@ && \

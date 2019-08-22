@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-08-06/subsets/NCIthesaurus.obo
+data-version: doid/2019-08-22/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -6905,11 +6905,9 @@ is_a: DOID:10952 ! nephritis
 id: DOID:10632
 name: Wolfram syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by diabetes mellitus, optic atrophy, and deafnessas and that has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the gene encoding wolframin." [url:http\://en.wikipedia.org/wiki/Wolfram_syndrome]
+def: "A syndrome that is characterized by diabetes mellitus, optic atrophy, and deafness." [url:http\://en.wikipedia.org/wiki/Wolfram_syndrome]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
-synonym: "Diabetes mellitus AND insipidus with optic atrophy AND deafness" EXACT [SNOMEDCT_2005_07_31:70694009]
-synonym: "DIDMOAD" EXACT []
 xref: GARD:7898
 xref: MESH:D014929
 xref: NCI:C35133
@@ -18219,9 +18217,9 @@ is_a: DOID:6025 ! selective immunoglobulin deficiency disease
 
 [Term]
 id: DOID:14179
-name: Bruton-type agammaglobulinemia
+name: X-linked agammaglobulinemia
 namespace: disease_ontology
-def: "A B cell deficiency that is that has material basis in a mutation in the Bruton's tyrosine kinase (BTK) gene on the X chromosome resulting in X-linked agammaglobulinemia type 1, which is an immunodeficiency characterized by the failure to produce mature B lymphocytes, and associated with a failure of Ig heavy chain rearrangement." [url:http\://en.wikipedia.org/wiki/X-linked_agammaglobulinemia, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001307.htm]
+def: "An agammaglobulinemia that is that has material basis in a mutation in the Bruton's tyrosine kinase (BTK) gene on the X chromosome resulting in X-linked agammaglobulinemia type 1, which is an immunodeficiency characterized by the failure to produce mature B lymphocytes, and associated with a failure of Ig heavy chain rearrangement." [url:http\://en.wikipedia.org/wiki/X-linked_agammaglobulinemia, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001307.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -18229,13 +18227,12 @@ synonym: "Bruton agammaglobulinemia tyrosine kinase deficiency" EXACT []
 synonym: "Bruton's agammaglobulinaemia" EXACT []
 synonym: "Bruton's Sex-Linked Agammaglobulinemia" EXACT [NCI2004_11_17:C3822]
 synonym: "Bruton's type agammaglobulinemia" EXACT [MTHICD9_2006:279.04]
+synonym: "Bruton-type agammaglobulinemia" EXACT []
 synonym: "BTK deficiency" EXACT []
-synonym: "X-linked agammaglobulinemia" EXACT [SNOMEDCT_2005_07_31:65880007]
 xref: MESH:C537409
 xref: MTHICD9_2006:279.04
 xref: NCI2004_11_17:C3822
 xref: NCI:C3822
-xref: OMIM:300310
 xref: OMIM:300755
 xref: ORDO:47
 xref: SNOMEDCT_US_2018_03_01:65880007
@@ -20828,7 +20825,6 @@ xref: ICDO:M8000/3
 xref: MESH:D009369
 xref: NCI:C9305
 xref: SNOMEDCT_US_2018_03_01:38807002
-xref: stedman:rlc
 xref: UMLS_CUI:C0006826
 is_a: DOID:4 ! disease
 
@@ -23896,8 +23892,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "adult nephroblastoma" EXACT []
 synonym: "Wilms' tumor" RELATED []
-xref: CSP2005:4001-0143
-xref: ICD-O:M8960/3
+xref: ICDO:M8960/3
 xref: MESH:D009396
 xref: NCI2004_11_17:C40407
 xref: NCI2004_11_17:C6180
@@ -25982,7 +25977,7 @@ is_a: DOID:3405 ! histiocytosis
 id: DOID:2580
 name: rhizomelic chondrodysplasia punctata
 namespace: disease_ontology
-def: "A chondrodysplasia punctata that is characterized by systemic shortening of the proximal bones (i.e. rhizomelia), seizures, recurrent respiratory tract infections, and congential cataracts and has_material_basis_in mutations of the alkyldihydroxyacetonephosphate synthase (alkyl-DHAP synthase) gene." [url:http\://en.wikipedia.org/wiki/Rhizomelic_chondrodysplasia_punctata, url:http\://ghr.nlm.nih.gov/condition/rhizomelic-chondrodysplasia-punctata, url:http\://www.healthline.com/galecontent/rhizomelic-chondrodysplasia-punctata]
+def: "A chondrodysplasia punctata that is characterized by disproportionately short stature primarily affecting the proximal parts of the extremities, a typical facial appearance including a broad nasal bridge, epicanthus, high-arched palate, dysplastic external ears, and micrognathia, congenital contractures, characteristic ocular involvement, dwarfism, and severe mental retardation with spasticity." [url:http\://en.wikipedia.org/wiki/Rhizomelic_chondrodysplasia_punctata, url:http\://ghr.nlm.nih.gov/condition/rhizomelic-chondrodysplasia-punctata, url:https\://www.ncbi.nlm.nih.gov/pubmed/15679822]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -26001,14 +25996,16 @@ is_a: DOID:2581 ! chondrodysplasia punctata
 id: DOID:2581
 name: chondrodysplasia punctata
 namespace: disease_ontology
+def: "A syndrome that is characterized by abnormal calcification of the epiphyses, causing stippling in radiography." [url:https\://en.wikipedia.org/wiki/Chondrodysplasia_punctata#cite_note-Fitz2-1, url:https\://www.ncbi.nlm.nih.gov/pubmed/22229330]
 comment: DeObs MGI.
 subset: NCIthesaurus
-synonym: "Chondrodysplasia calcificans congenita" EXACT [SNOMEDCT_2005_07_31:22932004]
 synonym: "Chondrodysplasia punctata congenita" EXACT []
+xref: GARD:8542
 xref: ICD10CM:Q77.3
 xref: MESH:D002806
 xref: NCI:C84632
 xref: OMIM:215105
+xref: ORDO:93442
 xref: SNOMEDCT_US_2018_03_01:22932004
 xref: SNOMEDCT_US_2018_03_01:42778005
 xref: UMLS_CUI:C0008445
@@ -26048,8 +26045,8 @@ xref: OMIM:612692
 xref: OMIM:613500
 xref: OMIM:613501
 xref: OMIM:613502
-xref: OMIM:613506
 xref: OMIM:615214
+xref: OMIM:PS601495
 xref: SNOMEDCT_US_2018_03_01:81282009
 xref: UMLS_CUI:C0001768
 xref: UMLS_CUI:C0086438
@@ -29370,7 +29367,6 @@ synonym: "glioma, malignant" EXACT []
 synonym: "malignant Neuroglial tumor" EXACT []
 synonym: "Neuroglial tumor" EXACT []
 xref: CSP2005:2012-6589
-xref: glioma\, malignant
 xref: ICDO:M9380/3
 xref: KEGG:05214
 xref: MESH:D005910
@@ -31147,7 +31143,7 @@ is_a: DOID:3324 ! mood disorder
 id: DOID:3314
 name: angiomyolipoma
 namespace: disease_ontology
-def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs and is derived from perivascular epithelioid cells." [PMID:9503504, url:http\://en.wikipedia.org/wiki/Angiomyolipoma]
+def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs and is derived from perivascular epithelioid cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/9503504]
 subset: NCIthesaurus
 synonym: "Angiomyolipoma" EXACT [SNOMEDCT_2005_07_31:19929002]
 xref: MESH:D018207
@@ -37138,7 +37134,7 @@ is_a: DOID:162 ! cancer
 id: DOID:4232
 name: extraosseous Ewing sarcoma
 namespace: disease_ontology
-def: "A Ewing sarcoma that is morphologically indistinguishable from skeletal Ewing sarcoma but is located in extraosseous locations." []
+def: "A Ewing sarcoma that is morphologically indistinguishable from skeletal Ewing sarcoma but is located in extraosseous locations." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27293]
 subset: NCIthesaurus
 synonym: "extraosseous Ewing's sarcoma" EXACT []
 synonym: "extraosseous Ewing's sarcoma/peripheral primitive neuroectodermal tumor" EXACT []
@@ -56360,7 +56356,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: EFO:0000621
 xref: GARD:7185
-xref: ICD-O:M9500/3
+xref: ICDO:M9500/3
 xref: MESH:D009447
 xref: NCI:C3270
 xref: ORDO:635
@@ -60828,11 +60824,8 @@ namespace: disease_ontology
 alt_id: DOID:8737
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "MF" EXACT [NCI2004_11_17:C3246]
-synonym: "Mycosis Fungoides" EXACT [MTH:U002093]
 synonym: "Mycosis fungoides" EXACT []
 synonym: "mycosis fungoides lymphoma" EXACT [CSP2005:2004-7126]
-synonym: "Mycosis fungoides of unspecified site" EXACT []
 xref: CSP2005:2004-7126
 xref: GARD:3863
 xref: ICD10CM:C84.0
@@ -60840,7 +60833,6 @@ xref: ICD10CM:C84.00
 xref: ICD9CM:202.1
 xref: MESH:D009182
 xref: MTH:U002093
-xref: NCI2004_11_17:C3246
 xref: NCI:C3246
 xref: OMIM:254400
 xref: SNOMEDCT_US_2018_03_01:90120004

@@ -22,7 +22,7 @@ REPORTS = $(BUILD)reports
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: publish counts
+release: publish post
 all: imports release
 test: verify
 
@@ -233,13 +233,13 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 QUERIES := $(wildcard src/sparql/*-report.rq)
 
-counts: $(REPORTS)/report-diff.txt $(REPORTS)/branch-count.tsv
+post: $(REPORTS)/report-diff.txt $(REPORTS)/branch-count.tsv $(REPORTS)/removed-axioms.html
 .PHONY: $(QUERIES)
 
 # Get the last build of DO from IRI
 .PHONY: build/doid-last.owl
 build/doid-last.owl: | $(ROBOT_FILE)
-	@$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid.owl\
+	@$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl\
 	 --collapse-import-closure true --output $@
 
 $(QUERIES):: build/doid-last.owl | $(ROBOT_FILE) $(REPORTS)
@@ -262,6 +262,26 @@ $(REPORTS)/branch-count.tsv: $(DNC).owl | $(ROBOT_FILE) $(REPORTS)
 	@echo "Counting all branches..." && \
 	./src/util/branch_count/branch_count.py $< $@ && \
 	echo "Branch count available at $@"
+
+# the following targets are used to build a smaller diff with only removed axioms to review
+build/robot.diff: build/doid-last.owl $(DM).owl | $(ROBOT_FILE)
+	@echo "Comparing axioms in previous release to current release" && \
+	$(ROBOT) diff --left $< --right $(word 2,$^) --labels true --output $@
+
+build/missing-axioms-terms.txt: build/robot.diff
+	@python src/util/parse-diff.py $< $@
+
+build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt
+	@$(ROBOT) filter --input $< --term-file $(word 2,$^)\
+	 --select "self parents annotations" --output $@
+
+build/doid-current-changed.owl: $(DM).owl build/missing-axioms-terms.txt
+	@$(ROBOT) filter --input $< --term-file $(word 2,$^)\
+	 --select "self parents annotations" --output $@
+
+$(REPORTS)/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | $(REPORTS)
+	@$(ROBOT) diff --left $< --right $(word 2,$^) --format html --output $@ && \
+	echo "See $@ to review removed axioms"
 
 #-----------------------------
 # Ensure proper OBO structure

@@ -72,8 +72,9 @@ report: $(REPORTS)/report.tsv
 
 # Report for general issues on doid-edit
 
+.PHONY: $(REPORTS)/report.tsv
 .PRECIOUS: $(REPORTS)/report.tsv
-$(REPORTS)/report.tsv: $(EDIT) verify-edit | $(BUILD)robot.jar $(REPORTS)
+$(REPORTS)/report.tsv: $(EDIT) | $(BUILD)robot.jar $(REPORTS)
 	@echo "" && \
 	$(ROBOT) report --input $<\
 	 --profile src/sparql/report/report_profile.txt\
@@ -297,19 +298,19 @@ DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
 verify: verify-edit verify-do verify-dnc
 
 # Verify doid-edit.owl
-verify-edit: $(EDIT) | $(ROBOT_FILE) $(REPORTS)
+verify-edit: $(EDIT) | $(ROBOT_FILE) $(REPORTS)/report.tsv
 	@echo "Verifying $< (see $(REPORTS) on error)" && \
 	$(ROBOT) verify --input $<\
 	 --queries $(EDIT_V_QUERIES) --output-dir $(REPORTS)
 
 # Verify doid.obo
-verify-do: $(DO).obo | $(ROBOT_FILE) $(REPORTS)
+verify-do: $(DO).obo | $(ROBOT_FILE) $(REPORTS)/report.tsv
 	@echo "Verifying $< (see $(REPORTS) on error)" && \
 	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) --output-dir $(REPORTS)
 
 # Verify doid-non-classified.obo
-verify-dnc: $(DNC).obo | $(ROBOT_FILE) $(REPORTS)
+verify-dnc: $(DNC).obo | $(ROBOT_FILE) $(REPORTS)/report.tsv
 	@echo "Verifying $< (see $(REPORTS) on error)" && \
 	$(ROBOT) verify --input $<\
 	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir $(REPORTS)

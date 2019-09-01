@@ -156,20 +156,27 @@ at a high level in the git commit messages. It is a good idea to type
 "git diff" before committing (although the output can be hard to
 decipher, it can sometimes show you egregious errors, sometimes Protege's fault).
 
-**Important: make sure you save in functional syntax, using the same
+**Important**: make sure you save in functional syntax, using the same
   prefixes as in the source file. This SHOULD be automatic (but Protege sometimes gets it wrong - one reason to do the diff).
   
-**Important: there is currently a bug in Protege that is being investigated (well, there are many, but this one concerns editing ext). If protege asks you to name your merged file when you save and gives you no other option, DON'T DO IT. Quit Protege and start over. You will lose your work - another reason to save and commit in small increments. 
+**Important**: there is currently a bug in Protege that is being investigated (well, there are many, but this one concerns editing ext). If protege asks you to name your merged file when you save and gives you no other option, DON'T DO IT. Quit Protege and start over. You will lose your work - another reason to save and commit in small increments. 
+
+Before adding your files to commit, make sure to test that you have not introduced any errors:
+```
+make report
+```
 
 Example session from view of command line:
-
-  git pull
+```
+git pull
   [open Protege, edit, save] 
 
-  git diff doid-edit.owl
-  git commit -m "polished up skull" doid-edit.owl
-  git pull
-  git push
+make report
+git diff doid-edit.owl
+git commit -m "polished up skull" doid-edit.owl
+git pull
+git push
+```
 
 It is always a good idea to git pull immediately after an git
 commit. If there are changes, Protege will ask you to reload. You may wish not to trust the reload and simply reopen Protege.

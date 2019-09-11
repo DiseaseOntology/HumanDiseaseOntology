@@ -44,7 +44,7 @@ update_robot:
 	rm -rf $(ROBOT_FILE) && make robot
 
 $(ROBOT_FILE): init
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.2/robot.jar
 
 ROBOT := java -jar $(BUILD)robot.jar
 

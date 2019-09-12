@@ -46,7 +46,7 @@ update_robot:
 $(ROBOT_FILE): init
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.2/robot.jar
 
-ROBOT := java -jar $(BUILD)robot.jar
+ROBOT := java -Dlog4j.configuration=src/util/logging.properties -jar $(BUILD)robot.jar
 
 # ----------------------------------------
 # IMPORTS
@@ -101,7 +101,7 @@ $(DO).owl: $(EDIT) $(REPORTS)/report.tsv | $(ROBOT_FILE)
 $(DO).obo: $(DO).owl | $(BUILD)robot.jar
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
-	remove --term obo:IAO_0000119 --trim true \
+	remove --term obo:IAO_0000119 --term dc11:type --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo | \
@@ -127,7 +127,8 @@ $(DM).owl: $(DO).owl | $(ROBOT_FILE)
 	echo "Created $@"
 
 $(DM).obo: $(DM).owl | $(ROBOT_FILE)
-	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
+	@$(ROBOT) remove --input $< --term obo:IAO_0000119\
+	 --term dc11:type --trim true \
 	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	convert --check false --output $(basename $@)-temp.obo && \
@@ -154,7 +155,7 @@ $(DNC).owl: $(EDIT) | $(ROBOT_FILE)
 $(DNC).obo: $(EDIT) | $(ROBOT_FILE)
 	@$(ROBOT) remove --input $< --select imports --trim true \
 	remove --select "parents equivalents" --select "anonymous" \
-	remove --term obo:IAO_0000119 --trim true \
+	remove --term obo:IAO_0000119 --term dc11:type --trim true \
 	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo && \

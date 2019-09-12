@@ -4,30 +4,37 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(doid:=<http://purl.obolibrary.org/obo/doid#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/doid/obo/ext.owl>
-Import(<http://purl.obolibrary.org/obo/doid/imports/symp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/geno_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/trans_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/eco_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/geno_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/so_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/symp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/trans_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
 
 Declaration(Class(obo:NCBITaxon_1))
-Declaration(Class(doid:chebi))
-Declaration(Class(doid:sequence))
+Declaration(Class(<http://purl.obolibrary.org/obo/doid#chebi>))
+Declaration(Class(<http://purl.obolibrary.org/obo/doid#sequence>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/doid#has_symptom>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#has_origin>))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
 Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(owl:qualifiedCardinality))
 
 ############################
 #   Object Properties
@@ -45,15 +52,23 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/so#has_origin> "h
 
 # Class: obo:CHEBI_24431 (chemical entity)
 
-SubClassOf(obo:CHEBI_24431 doid:chebi)
+SubClassOf(obo:CHEBI_24431 <http://purl.obolibrary.org/obo/doid#chebi>)
 
 # Class: obo:CHEBI_50906 (role)
 
-SubClassOf(obo:CHEBI_50906 doid:chebi)
+SubClassOf(obo:CHEBI_50906 <http://purl.obolibrary.org/obo/doid#chebi>)
 
 # Class: obo:HP_0000118 (Phenotypic abnormality)
 
 SubClassOf(obo:HP_0000118 obo:UPHENO_0001001)
+
+# Class: obo:HP_0002239 (Gastrointestinal hemorrhage)
+
+SubClassOf(obo:HP_0002239 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/doid#has_symptom> obo:SYMP_0000041))
+
+# Class: obo:HP_0011029 (Internal hemorrhage)
+
+SubClassOf(obo:HP_0011029 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/doid#has_symptom> obo:SYMP_0000041))
 
 # Class: obo:NCBITaxon_1 (ncbitaxon)
 
@@ -70,31 +85,35 @@ SubClassOf(obo:NCBITaxon_131567 obo:NCBITaxon_1)
 
 # Class: obo:SO_0000110 (sequence_feature)
 
-SubClassOf(obo:SO_0000110 doid:sequence)
+SubClassOf(obo:SO_0000110 <http://purl.obolibrary.org/obo/doid#sequence>)
 
 # Class: obo:SO_0000400 (sequence_attribute)
 
-SubClassOf(obo:SO_0000400 doid:sequence)
+SubClassOf(obo:SO_0000400 <http://purl.obolibrary.org/obo/doid#sequence>)
 
 # Class: obo:SO_0001060 (sequence_variant)
 
-SubClassOf(obo:SO_0001060 doid:sequence)
+SubClassOf(obo:SO_0001060 <http://purl.obolibrary.org/obo/doid#sequence>)
 
 # Class: obo:SO_0001260 (sequence_collection)
 
-SubClassOf(obo:SO_0001260 doid:sequence)
+SubClassOf(obo:SO_0001260 <http://purl.obolibrary.org/obo/doid#sequence>)
+
+# Class: obo:SYMP_0000539 (jaundice)
+
+SubClassOf(obo:SYMP_0000539 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/doid#has_symptom> obo:SYMP_0000041))
 
 # Class: obo:UPHENO_0001001 (phenotype)
 
 AnnotationAssertion(rdfs:label obo:UPHENO_0001001 "phenotype"^^xsd:string)
 
-# Class: doid:chebi (chebi)
+# Class: <http://purl.obolibrary.org/obo/doid#chebi> (chebi)
 
-AnnotationAssertion(rdfs:label doid:chebi "chebi"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/doid#chebi> "chebi"^^xsd:string)
 
-# Class: doid:sequence (sequence)
+# Class: <http://purl.obolibrary.org/obo/doid#sequence> (sequence)
 
-AnnotationAssertion(rdfs:label doid:sequence "sequence"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/doid#sequence> "sequence"^^xsd:string)
 
 
 AnnotationAssertion(oboInOwl:id obo:CL_0000000 "CL:0000000")
@@ -263,4 +282,5 @@ AnnotationAssertion(owl:deprecated obo:HP_0100883 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200058 "true"^^xsd:boolean)
 AnnotationAssertion(owl:deprecated obo:HP_0200059 "true"^^xsd:boolean)
 AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomy"^^xsd:string)
+AnnotationAssertion(owl:qualifiedCardinality _:genid2147486190 "1"^^xsd:nonNegativeInteger)
 )

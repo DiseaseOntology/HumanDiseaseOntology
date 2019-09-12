@@ -10,43 +10,45 @@ SHELL := bash
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/
+
 # Other products
 DM = src/ontology/doid-merged
 DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
 
-BUILD = build/
-REPORTS = $(BUILD)reports
-
 # to make a release, use `make release`
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: publish post
-all: imports release
+release:
+	@make publish
+	@make post
+
+all:
+	@make imports
+	@make release
+
 test: verify
 
 # ----------------------------------------
 # ROBOT
 # ----------------------------------------
 
-init: $(BUILD)
+init: build
 
-$(BUILD) $(REPORTS):
+build build/reports:
 	mkdir -p $@
-
-ROBOT_FILE = $(BUILD)robot.jar
-robot: $(ROBOT_FILE)
 
 # run `make update_robot` to get a new version of ROBOT
 .PHONY: update_robot
 update_robot:
-	rm -rf $(ROBOT_FILE) && make robot
+	rm -rf build/robot.jar && make build/robot.jar
 
-$(ROBOT_FILE): init
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.2/robot.jar
+build/robot.jar: init
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.3/robot.jar
 
-ROBOT := java -jar $(BUILD)robot.jar
+# ROBOT with Reason logging suppressed
+ROBOT := java -Dlog4j.configuration=src/util/logging.properties -jar build/robot.jar
 
 # ----------------------------------------
 # IMPORTS
@@ -56,30 +58,33 @@ ROBOT := java -jar $(BUILD)robot.jar
 # or the `ontology/imports` dir
 
 .PHONY: imports
-imports: | $(BUILD)robot.jar
-	@echo "Generating import modules (this may take some time)..." && \
-	cd src/ontology/imports && $(MAKE) imports
+imports: | build/robot.jar
+	@echo "Generating import modules (this may take some time)..."
+	@cd src/ontology/imports
+	@make imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
-$(IMPS): | $(BUILD)robot.jar
-	@cd src/ontology/imports && $(MAKE) $@
+$(IMPS): | build/robot.jar
+	@echo "Generating $@ import module..."
+	@cd src/ontology/imports
+	@make $@
 
 # ----------------------------------------
 # PRE-BUILD REPORT
 # ----------------------------------------
 
-report: $(REPORTS)/report.tsv
+report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-.PHONY: $(REPORTS)/report.tsv
-.PRECIOUS: $(REPORTS)/report.tsv
-$(REPORTS)/report.tsv: $(EDIT) | $(BUILD)robot.jar $(REPORTS)
-	@echo "" && \
-	$(ROBOT) report --input $<\
+.PRECIOUS: build/reports/report.tsv
+build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
+	@echo ""
+	@$(ROBOT) report --input $<\
 	 --profile src/sparql/report/report_profile.txt\
-	 --labels true --output $@ && \
-	echo "Full DO QC report available at $@"
+	 --labels true --output $@
+	@echo "Full DO QC report available at $@"
+	@echo ""
 
 # ----------------------------------------
 # RELEASE
@@ -91,27 +96,42 @@ products: subsets human merged build
 TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
-$(DO).owl: $(EDIT) $(REPORTS)/report.tsv | $(ROBOT_FILE)
-	@$(ROBOT) reason --input $< --create-new-ontology false \
-	 --annotate-inferred-axioms false --exclude-duplicate-axioms true \
-	annotate --annotation oboInOwl:date "$(TS)"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" --output $@ && \
-	echo "Created $@"
+$(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
+	@$(ROBOT) reason \
+	 --input $< \
+	 --create-new-ontology false \
+	 --annotate-inferred-axioms false \
+	 --exclude-duplicate-axioms true \
+	annotate \
+	 --annotation oboInOwl:date "$(TS)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
 
-$(DO).obo: $(DO).owl | $(BUILD)robot.jar
-	@$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "parents equivalents" --select "anonymous" \
-	remove --term obo:IAO_0000119 --trim true \
-	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
-	 --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+$(DO).obo: $(DO).owl | build/robot.jar
+	@$(ROBOT) remove \
+	 --input $< \
+	 --select imports \
+	 --trim true \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
+	remove \
+	 --term obo:IAO_0000119 \
+	 --term dc11:type \
+	 --trim true \
+	annotate \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --output $(basename $@)-temp.obo
+	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	grep -v ^date | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@ && \
-	rm $(basename $@)-temp.obo && echo "Created $@"
+	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@
+	@rm $(basename $@)-temp.obo
+	@echo "Created $@"
 
-$(DO).json: $(DO).owl | $(BUILD)robot.jar
-	@$(ROBOT) convert --input $< --output $@ \
-	&& echo "Created $@"
+$(DO).json: $(DO).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
 
 # ----------------------------------------
 # DOID-MERGED
@@ -119,22 +139,33 @@ $(DO).json: $(DO).owl | $(BUILD)robot.jar
 
 merged: $(DM).owl $(DM).obo
 
-$(DM).owl: $(DO).owl | $(ROBOT_FILE)
-	@$(ROBOT) merge --input $< --collapse-import-closure true \
-	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
-	 --ontology-iri "$(OBO)doid/$(notdir $@)"\
-	 --output $@ && \
-	echo "Created $@"
-
-$(DM).obo: $(DM).owl | $(ROBOT_FILE)
-	@$(ROBOT) remove --input $< --term obo:IAO_0000119 --trim true \
-	annotate --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
+$(DM).owl: $(DO).owl | build/robot.jar
+	@$(ROBOT) merge \
+	 --input $< \
+	 --collapse-import-closure true \
+	annotate \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	convert --check false --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	 --output $@
+	@echo "Created $@"
+
+$(DM).obo: $(DM).owl | build/robot.jar
+	@$(ROBOT) remove \
+	 --input $< \
+	 --term obo:IAO_0000119 \
+	 --term dc11:type \
+	 --trim true \
+	annotate \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	convert \
+	 --check false \
+	 --output $(basename $@)-temp.obo
+	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	grep -v ^date | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
-	rm $(basename $@)-temp.obo && echo "Created $@"
+	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
+	@rm $(basename $@)-temp.obo
+	@echo "Created $@"
 
 # ----------------------------------------
 # HUMANDO
@@ -142,74 +173,91 @@ $(DM).obo: $(DM).owl | $(ROBOT_FILE)
 
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(EDIT) | $(ROBOT_FILE)
-	@$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "parents equivalents" --select anonymous \
-	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)"\
-	 --output $@ && \
-	cp $@ $(HD).owl \
-	&& echo "Created $@"
-
-$(DNC).obo: $(EDIT) | $(ROBOT_FILE)
-	@$(ROBOT) remove --input $< --select imports --trim true \
-	remove --select "parents equivalents" --select "anonymous" \
-	remove --term obo:IAO_0000119 --trim true \
-	annotate --ontology-iri "$(OBO)doid/$(notdir $@)"\
+$(DNC).owl: $(EDIT) | build/robot.jar
+	@$(ROBOT) remove \
+	 --input $< \
+	 --select imports \
+	 --trim true \
+	remove \
+	 --select "parents equivalents" \
+	 --select anonymous \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
-	 --output $(basename $@)-temp.obo && \
-	grep -v ^owl-axioms $(basename $@)-temp.obo | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@ && \
-	cp $@ $(HD).obo && \
-	rm $(basename $@)-temp.obo && echo "Created $@"
+	 --output $@
+	@cp $@ $(HD).owl
+	@echo "Created $@"
+
+$(DNC).obo: $(EDIT) | build/robot.jar
+	@$(ROBOT) remove \
+	 --input $< \
+	 --select imports \
+	 --trim true \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
+	remove \
+	 --term obo:IAO_0000119 \
+	 --term dc11:type \
+	 --trim true \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --output $(basename $@)-temp.obo
+	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
+	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
+	@cp $@ $(HD).obo
+	@rm $(basename $@)-temp.obo
+	@echo "Created $@"
 
 
-$(DNC).json: $(DNC).owl | $(ROBOT_FILE)
-	@$(ROBOT) convert --input $< --output $@ \
-	&& echo "Created $@"
+$(DNC).json: $(DNC).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
 
 # ----------------------------------------
 # SUBSETS
 # ----------------------------------------
 
-SUB = src/ontology/subsets/
 SUB_NAMES = DO_AGR_slim DO_FlyBase_slim DO_MGI_slim DO_cancer_slim DO_rare_slim GOLD\
  NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
  tick-borne_infectious_disease zoonotic_infectious_disease DO_GXD_slim
-SUBS = $(foreach N,$(SUB_NAMES),$(addprefix $(SUB), $(N)))
+SUBS = $(foreach N,$(SUB_NAMES),$(addprefix src/ontology/subsets/, $(N)))
 OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))
 JSON_SUBS = $(foreach N,$(SUBS),$(addsuffix .json, $(N)))
 
 subsets: $(OWL_SUBS) $(OBO_SUBS) $(JSON_SUBS)
 
-$(OWL_SUBS): $(DNC).owl | $(ROBOT_FILE)
-	@$(ROBOT) filter --input $< \
+$(OWL_SUBS): $(DNC).owl | build/robot.jar
+	@$(ROBOT) filter \
+	 --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
-	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
-	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
-	echo "Created $@"
+	annotate \
+	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@
+	@echo "Created $@"
 
-$(OBO_SUBS): $(DNC).owl| $(ROBOT_FILE)
-	@$(ROBOT) filter --input $< \
-	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
-	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
-	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
-	echo "Created $@"
+src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
+	@$(ROBOT) annotate --input $< \
+	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
+	convert --output $@
+	@echo "Created $@"
 
-$(JSON_SUBS): $(DNC).owl | $(ROBOT_FILE)
-	@$(ROBOT) filter --input $< \
-	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
-	annotate --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)"\
-	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@ && \
-	echo "Created $@"
+src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
+	@$(ROBOT) annotate --input $< \
+	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
+	convert --output $@
+	@echo "Created $@"
 
 # ----------------------------------------
 # RELEASE
 # ----------------------------------------
 
-DIR = src/ontology/releases/$(DATE)/
+DIR = src/ontology/releases/$(DATE)
 
 # Move release files to a new dir
 
@@ -218,13 +266,14 @@ publish: $(DO).owl $(DO).obo $(DO).json\
  $(DM).owl $(DM).obo\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
-	@mkdir -p $(DIR) && \
-	cp $(DO).* $(DIR) && \
-	cp $(DM).* $(DIR) && \
-	cp $(DNC).* $(DIR) && \
-	mkdir -p $(DIR)subsets && \
-	cp -r $(SUB) $(DIR)subsets && \
-	echo "Published to $(DIR)"
+	@mkdir -p $(DIR)
+	@cp $(DO).* $(DIR)
+	@cp $(DM).* $(DIR)
+	@cp $(DNC).* $(DIR)
+	@mkdir -p $(DIR)/subsets
+	@cp -r src/ontology/subsets $(DIR)/subsets
+	@echo "Published to $(DIR)"
+	@echo ""
 
 # ----------------------------------------
 # POST-BUILD REPORT
@@ -232,57 +281,80 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 # Count classes, imports, and logical defs from old and new
 
-QUERIES := $(wildcard src/sparql/*-report.rq)
-
-post: $(REPORTS)/report-diff.txt $(REPORTS)/branch-count.tsv $(REPORTS)/removed-axioms.html
-.PHONY: $(QUERIES)
+post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html
 
 # Get the last build of DO from IRI
 .PHONY: build/doid-last.owl
-build/doid-last.owl: | $(ROBOT_FILE)
-	@$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl\
-	 --collapse-import-closure true --output $@
+build/doid-last.owl: | build/robot.jar
+	@$(ROBOT) merge \
+	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
+	 --collapse-import-closure true \
+	 --output $@
 
-$(QUERIES):: build/doid-last.owl | $(ROBOT_FILE) $(REPORTS)
-	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (previous)" && \
-	$(ROBOT) query --input $< --query $@\
-	 $(subst src/sparql,$(REPORTS),$(subst .rq,-last.tsv,$(@)))
+# all report queries
+QUERIES := $(wildcard src/sparql/*-report.rq)
 
-$(QUERIES):: $(DM).owl | $(ROBOT_FILE) $(REPORTS)
-	@echo "Counting: $(patsubst src/sparql/%-report.rq,%,$@) (current)" && \
-	$(ROBOT) query --input $< --query $@ \
-	 $(subst src/sparql,$(REPORTS),$(subst .rq,-new.tsv,$(@)))
+# target names for previous release reports
+LAST_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(Q))))
+.PHONY: $(LAST_REPORTS)
+build/reports/%-last.tsv: src/sparql/%-report.rq build/doid-last.owl | build/reports
+	@echo "Counting: $(notdir $(basename $@))"
+	@$(ROBOT) query \
+	 --input $(word 2,$^) \
+	 --query $< $@
 
-$(REPORTS)/report-diff.txt: $(QUERIES)
-	@python src/util/report-diff.py && \
-	cp $@ $(DIR)report-diff.txt && \
-	rm $@ && echo "Release diff report available at $(DIR)report-diff.txt"
+# target names for current release reports
+NEW_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(Q))))
+.PHONY: $(NEW_REPORTS)
+build/reports/%-new.tsv: src/sparql/%-report.rq $(DM).owl | build/reports
+	@echo "Counting: $(notdir $(basename $@))"
+	@$(ROBOT) query \
+	 --input $(word 2,$^) \
+	 --query $< $@
 
-.PHONY: $(REPORTS)/branch-count.tsv
-$(REPORTS)/branch-count.tsv: $(DNC).owl | $(ROBOT_FILE) $(REPORTS)
-	@echo "Counting all branches..." && \
-	./src/util/branch_count/branch_count.py $< $@ && \
-	echo "Branch count available at $@"
+build/reports/report-diff.txt: $(LAST_REPORTS) $(NEW_REPORTS)
+	@python src/util/report-diff.py
+	@mv $@ $(DIR)/report-diff.txt
+	@echo "Release diff report available at $(DIR)/report-diff.txt"
+
+.PHONY: build/reports/branch-count.tsv
+build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
+	@echo "Counting all branches..."
+	@./src/util/branch_count/branch_count.py $< $@
+	@echo "Branch count available at $@"
 
 # the following targets are used to build a smaller diff with only removed axioms to review
-build/robot.diff: build/doid-last.owl $(DM).owl | $(ROBOT_FILE)
-	@echo "Comparing axioms in previous release to current release" && \
-	$(ROBOT) diff --left $< --right $(word 2,$^) --labels true --output $@
+build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
+	@echo "Comparing axioms in previous release to current release"
+	@$(ROBOT) diff \
+	 --left $< \
+	 --right $(word 2,$^) \
+	 --labels true --output $@
 
 build/missing-axioms-terms.txt: build/robot.diff
 	@python src/util/parse-diff.py $< $@
 
 build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt
-	@$(ROBOT) filter --input $< --term-file $(word 2,$^)\
-	 --select "self parents annotations" --output $@
+	@$(ROBOT) filter \
+	 --input $< \
+	 --term-file $(word 2,$^) \
+	 --select "self parents annotations" \
+	 --output $@
 
 build/doid-current-changed.owl: $(DM).owl build/missing-axioms-terms.txt
-	@$(ROBOT) filter --input $< --term-file $(word 2,$^)\
-	 --select "self parents annotations" --output $@
+	@$(ROBOT) filter \
+	 --input $< \
+	 --term-file $(word 2,$^) \
+	 --select "self parents annotations" \
+	 --output $@
 
-$(REPORTS)/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | $(REPORTS)
-	@$(ROBOT) diff --left $< --right $(word 2,$^) --format html --output $@ && \
-	echo "See $@ to review removed axioms"
+build/reports/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | build/reports
+	@$(ROBOT) diff \
+	 --left $< \
+	 --right $(word 2,$^) \
+	 --format html \
+	 --output $@
+	@echo "See $@ to review removed axioms"
 
 #-----------------------------
 # Ensure proper OBO structure
@@ -298,19 +370,25 @@ DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
 verify: verify-edit verify-do verify-dnc
 
 # Verify doid-edit.owl
-verify-edit: $(EDIT) | $(ROBOT_FILE) $(REPORTS)/report.tsv
-	@echo "Verifying $< (see $(REPORTS) on error)" && \
-	$(ROBOT) verify --input $<\
-	 --queries $(EDIT_V_QUERIES) --output-dir $(REPORTS)
+verify-edit: $(EDIT) | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(EDIT_V_QUERIES) \
+	 --output-dir build/reports
 
 # Verify doid.obo
-verify-do: $(DO).obo | $(ROBOT_FILE) $(REPORTS)/report.tsv
-	@echo "Verifying $< (see $(REPORTS) on error)" && \
-	$(ROBOT) verify --input $<\
-	 --queries $(V_QUERIES) --output-dir $(REPORTS)
+verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(V_QUERIES) \
+	 --output-dir build/reports
 
 # Verify doid-non-classified.obo
-verify-dnc: $(DNC).obo | $(ROBOT_FILE) $(REPORTS)/report.tsv
-	@echo "Verifying $< (see $(REPORTS) on error)" && \
-	$(ROBOT) verify --input $<\
-	 --queries $(V_QUERIES) $(DNC_V_QUERIES) --output-dir $(REPORTS)
+verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(V_QUERIES) $(DNC_V_QUERIES) \
+	 --output-dir build/reports

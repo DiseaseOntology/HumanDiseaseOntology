@@ -1,0 +1,26 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+# NOTE: This will return NO results when querying on doid-edit.owl because the ECO
+#       labels are part of the imports. Either run `robot merge` on doid-edit.owl,
+#       or query doid-merged.owl.
+
+# This query returns all DOID terms that have reference types. 
+# The references types are returned as a comma-separated list. 
+# To return individual reference types, replace the (GROUP_CONCAT ... ) with ?refType.
+
+SELECT ?doidID ?termLabel (GROUP_CONCAT(?refType;separator=', ') AS ?refTypes) WHERE {
+	?s obo:IAO_0000115 ?definition ;
+	   rdfs:label ?termLabel ;
+	   oboInOwl:id ?doidID .
+	?ax owl:annotatedSource ?s ;
+	    owl:annotatedProperty obo:IAO_0000115 ;
+	    owl:annotatedTarget ?definition ;
+	    dc:type ?refTypeIRI .
+	?refTypeIRI rdfs:label ?refType .
+}
+GROUP BY ?doidID ?termLabel
+ORDER BY ?doidID

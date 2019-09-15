@@ -45,7 +45,7 @@ update_robot:
 	rm -rf build/robot.jar && make build/robot.jar
 
 build/robot.jar: init
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.3/robot.jar
+	curl -L -o $@ https://github.com/beckyjackson/doid-robot/releases/download/1.0.0/robot.jar
 
 # ROBOT with Reason logging suppressed
 ROBOT := java -Dlog4j.configuration=src/util/logging.properties -jar build/robot.jar
@@ -80,8 +80,8 @@ report: build/reports/report.tsv
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	@echo ""
-	@$(ROBOT) report --input $<\
-	 --profile src/sparql/report/report_profile.txt\
+	@$(ROBOT) report --input $< \
+	 --profile src/sparql/report/report_profile.txt \
 	 --labels true --output $@
 	@echo "Full DO QC report available at $@"
 	@echo ""
@@ -116,10 +116,8 @@ $(DO).obo: $(DO).owl | build/robot.jar
 	remove \
 	 --select "parents equivalents" \
 	 --select "anonymous" \
-	remove \
-	 --term obo:IAO_0000119 \
-	 --term dc11:type \
-	 --trim true \
+	query \
+	 --update src/sparql/remove-ref-type.ru \
 	annotate \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
@@ -150,11 +148,9 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	@echo "Created $@"
 
 $(DM).obo: $(DM).owl | build/robot.jar
-	@$(ROBOT) remove \
+	@$(ROBOT) query \
 	 --input $< \
-	 --term obo:IAO_0000119 \
-	 --term dc11:type \
-	 --trim true \
+	 --update src/sparql/remove-ref-type.ru \
 	annotate \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
@@ -196,10 +192,8 @@ $(DNC).obo: $(EDIT) | build/robot.jar
 	remove \
 	 --select "parents equivalents" \
 	 --select "anonymous" \
-	remove \
-	 --term obo:IAO_0000119 \
-	 --term dc11:type \
-	 --trim true \
+	query \
+	 --update src/sparql/remove-ref-type.ru \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
@@ -240,7 +234,10 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	@echo "Created $@"
 
 src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
-	@$(ROBOT) annotate --input $< \
+	@$(ROBOT) query \
+	 --input $< \
+	 --update src/sparql/remove-ref-type.ru \
+	annotate \
 	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@

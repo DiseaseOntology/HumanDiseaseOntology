@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-08-22/subsets/DO_MGI_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-09-16/subsets/DO_MGI_slim.owl"/>
     </owl:Ontology>
     
 
@@ -28,6 +29,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
     
 
 
@@ -99,7 +106,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050117">
-        <obo:IAO_0000115>A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10115</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:11078</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:1304</oboInOwl:hasAlternativeId>
@@ -128,9 +135,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050117"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=14.10d&amp;code=C26726</oboInOwl:hasDbXref>
-        <rdfs:comment>DO:wk</rdfs:comment>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=14.10d&amp;code=C26726</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -138,7 +145,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050687 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050687">
-        <obo:IAO_0000115>A cancer that is classified by the type of cell from which it is derived.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cancer that is classified by the type of cell from which it is derived.</obo:IAO_0000115>
         <oboInOwl:created_by>snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-06-13T03:28:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -149,9 +156,10 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050687"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A cancer that is classified by the type of cell from which it is derived.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cancer that is classified by the type of cell from which it is derived.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://cancerguide.org/basic.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Cancer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -171,6 +179,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050735"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A monogenic disease that has_material_basis_in muations in genes on the X chromosome.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Genetic_disorder#X-linked_dominant</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://ghr.nlm.nih.gov/handbook/inheritance/inheritancepatterns</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -180,7 +190,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050738 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050738">
-        <obo:IAO_0000115>A monogenic disease that has_material_basis_in muations on the Y chromosome.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that has_material_basis_in muations on the Y chromosome.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-07-24T12:51:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -191,8 +201,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050738"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A monogenic disease that has_material_basis_in muations on the Y chromosome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Genetic_disorder#Y-linked</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that has_material_basis_in muations on the Y chromosome.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Genetic_disorder#Y-linked</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -200,7 +211,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050739">
-        <obo:IAO_0000115>A monogenic disease that has_material_basis_in a mutation in a single gene on one of the non-sex chromosomes.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that has_material_basis_in a mutation in a single gene on one of the non-sex chromosomes.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-07-24T04:45:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -211,8 +222,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050739"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A monogenic disease that has_material_basis_in a mutation in a single gene on one of the non-sex chromosomes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://ghr.nlm.nih.gov/glossary=autosomaldominant</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that has_material_basis_in a mutation in a single gene on one of the non-sex chromosomes.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/glossary=autosomaldominant</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://ghr.nlm.nih.gov/handbook/inheritance/inheritancepatterns</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -221,7 +233,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050780 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050780">
-        <obo:IAO_0000115>A monogenic disease that is characterized by hypertelorism, hypospadias, and additional midline defects resulting from mutations to the MID1 gene in the X-linked form or from a deletion on chromosome 22q11.2 in the autosomal dominant form.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that is characterized by hypertelorism, hypospadias, and additional midline defects resulting from mutations to the MID1 gene in the X-linked form or from a deletion on chromosome 22q11.2 in the autosomal dominant form.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-06-24T01:18:03Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>GARD:193</oboInOwl:hasDbXref>
@@ -237,11 +249,13 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050780"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A monogenic disease that is characterized by hypertelorism, hypospadias, and additional midline defects resulting from mutations to the MID1 gene in the X-linked form or from a deletion on chromosome 22q11.2 in the autosomal dominant form.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that is characterized by hypertelorism, hypospadias, and additional midline defects resulting from mutations to the MID1 gene in the X-linked form or from a deletion on chromosome 22q11.2 in the autosomal dominant form.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
         <oboInOwl:hasDbXref>url:http://www.genome.jp/dbget-bin/www_bget?ds:H00583</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/books/NBK1327/</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/books/NBK1523/</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.omim.org/entry/145410?search=Opitz-GBBB%20syndrome&amp;highlight=syndromic%20syndrome%20opitzgbbb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/books/NBK1327/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/books/NBK1523/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.omim.org/entry/145410?search=Opitz-GBBB%20syndrome&amp;highlight=syndromic%20syndrome%20opitzgbbb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -249,7 +263,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0060071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060071">
-        <obo:IAO_0000115>A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-05-11T12:18:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -262,8 +276,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060071"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Neoplasm</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of cellular proliferation that results in abnormal growths in the body, which do not invade or destroy the surrounding tissue but, given enough time, will transform into a cancer.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Neoplasm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -271,7 +286,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0060072 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060072">
-        <obo:IAO_0000115>A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-05-11T12:18:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -284,9 +299,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060072"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Benign_neoplasm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/benigntumors.html</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007644"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Benign_neoplasm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.nlm.nih.gov/medlineplus/benigntumors.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -294,7 +311,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0060118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060118">
-        <obo:IAO_0000115>A disease of anatomical entity that is located_in the thoracic cavity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the thoracic cavity.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-07-25T02:23:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -307,8 +324,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060118"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that is located_in the thoracic cavity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Thoracic_cavity</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the thoracic cavity.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Thoracic_cavity</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -316,7 +334,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0060158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060158">
-        <obo:IAO_0000115>A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to an endocrine organ disease, organ malfunction, inadequate intake, dietary deficiency, or malabsorption.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to an endocrine organ disease, organ malfunction, inadequate intake, dietary deficiency, or malabsorption.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-24T02:53:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -327,9 +345,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060158"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to an endocrine organ disease, organ malfunction, inadequate intake, dietary deficiency, or malabsorption.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Inborn_error_of_metabolism</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/mesh/68008659</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of metabolism that has _material_basis_in enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to an endocrine organ disease, organ malfunction, inadequate intake, dietary deficiency, or malabsorption.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Inborn_error_of_metabolism</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/mesh/68008659</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -337,7 +357,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080014">
-        <obo:IAO_0000115>A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080014</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
@@ -348,8 +368,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080014"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Chromosome_abnormality</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A genetic disease that has_material_basis_in extra, missing, or re-arranged chromosomes.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Chromosome_abnormality</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.genome.gov/11508982#al-5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.rarechromo.org/html/chromosomesanddisorders.asp</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -359,7 +380,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080015">
-        <obo:IAO_0000115>A disease that has_material_basis_in a genetic abnormality, error with embryonic development, infection or compromised intrauterine environment.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that has_material_basis_in a genetic abnormality, error with embryonic development, infection or compromised intrauterine environment.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080015</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
@@ -370,8 +391,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080015"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease that has_material_basis_in a genetic abnormality, error with embryonic development, infection or compromised intrauterine environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Congenital_disorder</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that has_material_basis_in a genetic abnormality, error with embryonic development, infection or compromised intrauterine environment.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Congenital_disorder</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -379,7 +401,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080577 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080577">
-        <obo:IAO_0000115>A genetic disease that is characterized by the additive contributions of variants in multiple genes at different loci.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A genetic disease that is characterized by the additive contributions of variants in multiple genes at different loci.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080577</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_AGR_slim"/>
@@ -390,8 +412,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080577"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A genetic disease that is characterized by the additive contributions of variants in multiple genes at different loci.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK5191/#IX-P</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A genetic disease that is characterized by the additive contributions of variants in multiple genes at different loci.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/books/NBK5191/#IX-P</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -399,7 +422,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_10983 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10983">
-        <obo:IAO_0000115>A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:5785</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009394</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI2004_11_17:C34842</oboInOwl:hasDbXref>
@@ -416,14 +439,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10983"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Alport_syndrome</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10983"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Hereditary Nephritis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C34842</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Alport_syndrome</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -431,7 +449,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_11934 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11934">
-        <obo:IAO_0000115>An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:2005-4325</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:12425</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006258</oboInOwl:hasDbXref>
@@ -452,24 +470,16 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:http://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&amp;codlan=1&amp;codcol=70&amp;codcch=9</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Head_and_neck_cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Head_and_neck_cancer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=257519</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>head and neck neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>head/neck neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2005-4325</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -477,7 +487,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_1287 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1287">
-        <obo:IAO_0000115>A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:73</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD9CM:429.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D002318</oboInOwl:hasDbXref>
@@ -496,8 +506,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Circulatory_system</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Circulatory_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -522,6 +533,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_15"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disease of anatomical entity that is located_in reproductive system organs.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Reproductive_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -530,7 +542,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_150">
-        <obo:IAO_0000115>A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:F99</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:F99-F99</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D001523</oboInOwl:hasDbXref>
@@ -548,8 +560,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Mental_disorder</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Mental_disorder</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -575,6 +588,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1579"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disease of anatomical entity that located_in the respiratory system which extends from the nasal sinuses to the diaphragm.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/File:Respiratory_system_complete_en.svg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=respiratory%20system</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -596,6 +611,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_16"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disease of anatomical entity that is located_in the integumentary system comprising the skin and its appendages.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Integumentary_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -604,7 +620,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_17 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_17">
-        <obo:IAO_0000115>A disease of anatomical entity that occurs in the muscular and/or skeletal system.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that occurs in the muscular and/or skeletal system.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MESH:D009140</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C107377</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2018_03_01:928000</oboInOwl:hasDbXref>
@@ -620,8 +636,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_17"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that occurs in the muscular and/or skeletal system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that occurs in the muscular and/or skeletal system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -629,7 +646,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_1725 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1725">
-        <obo:IAO_0000115>An organ system cancer that is located in the peritoneum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that is located in the peritoneum.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C48.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:158.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0153466</oboInOwl:hasDbXref>
@@ -644,8 +661,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1725"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer that is located in the peritoneum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Peritoneal_cancer</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that is located in the peritoneum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Peritoneal_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -653,7 +671,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_18 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_18">
-        <obo:IAO_0000115>A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:579</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NCI2004_11_17:C27599</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C27599</oboInOwl:hasDbXref>
@@ -671,14 +689,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Urinary_system</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Non-neoplastic urinary tract disease</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C27599</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Urinary_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -703,6 +716,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_225"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=syndrome</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -711,7 +725,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_28 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_28">
-        <obo:IAO_0000115>A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:E34.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:259.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D004700</oboInOwl:hasDbXref>
@@ -729,8 +743,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_28"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Endocrine_system</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Endocrine_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -756,6 +771,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2914"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disease of anatomical entity that is located_in the immune system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Immune_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -764,7 +780,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_5875 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5875">
-        <obo:IAO_0000115>An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12340</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9860</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C48</oboInOwl:hasDbXref>
@@ -796,8 +812,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5875"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Retroperitoneal_space</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Retroperitoneal_space</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5875"/>
@@ -811,7 +828,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_655 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_655">
-        <obo:IAO_0000115>A disease of metabolism that is characterized by enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to inherited enzyme abnormality.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of metabolism that is characterized by enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to inherited enzyme abnormality.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:1849-0057</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008661</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI2004_11_17:C34816</oboInOwl:hasDbXref>
@@ -830,21 +847,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_655"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of metabolism that is characterized by enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to inherited enzyme abnormality.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of metabolism that is characterized by enzyme deficiency or accumulation of enzymes or toxins which interfere with normal function due to inherited enzyme abnormality.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Inborn_errors_of_metabolism</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/mesh/68008659</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_655"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Inborn Errors of Metabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C34816</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_655"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>inborn metabolism disorder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:1849-0057</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/mesh/68008659</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -852,7 +859,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_74 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_74">
-        <obo:IAO_0000115>A disease of anatomical entity that has_material_basis_in hematopoietic cells.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that has_material_basis_in hematopoietic cells.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:0427-3600</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:D75.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:280-289.99</oboInOwl:hasDbXref>
@@ -881,33 +888,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_74"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that has_material_basis_in hematopoietic cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Hematopathology</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK1741/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_74"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Blood dyscrasia</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTHICD9_2006:289.9</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_74"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>DISEASE OF THE BLOOD AND BLOOD-FORMING ORGANS</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:280-289.99</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_74"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Hematological disease</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_74"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>blood disorder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:0427-3600</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that has_material_basis_in hematopoietic cells.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Hematopathology</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/books/NBK1741/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -915,7 +900,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_77 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_77">
-        <obo:IAO_0000115>A disease of anatomical entity that is located_in the gastrointestinal tract.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the gastrointestinal tract.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:27</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:944</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:1248-3545</oboInOwl:hasDbXref>
@@ -940,26 +925,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that is located_in the gastrointestinal tract.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the gastrointestinal tract.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Human_gastrointestinal_tract</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>GIT disease</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:53619000</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Gastroenteropathy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:25374005</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>gastrointestinal disorder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:1248-3545</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -967,7 +935,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_863 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_863">
-        <obo:IAO_0000115>A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:G00-G99</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:G98</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:G98.8</oboInOwl:hasDbXref>
@@ -985,8 +953,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_863"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Nervous_system</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Nervous_system</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

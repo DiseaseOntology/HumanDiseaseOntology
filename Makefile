@@ -20,14 +20,8 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release:
-	@make publish
-	@make post
-
-all:
-	@make imports
-	@make release
-
+release: products publish post
+all: imports release
 test: verify
 
 # ----------------------------------------
@@ -60,14 +54,12 @@ ROBOT := java -Dlog4j.configuration=src/util/logging.properties -jar build/robot
 .PHONY: imports
 imports: | build/robot.jar
 	@echo "Generating import modules (this may take some time)..."
-	@cd src/ontology/imports
-	@make imports
+	@cd src/ontology/imports && make imports
 
 IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
-	@cd src/ontology/imports
-	@make $@
+	@cd src/ontology/imports && make $@
 
 # ----------------------------------------
 # PRE-BUILD REPORT

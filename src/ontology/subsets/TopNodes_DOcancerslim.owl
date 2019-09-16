@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/subsets/TopNodes_DOcancerslim.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/subsets/TopNodes_DOcancerslim.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/TopNodes_DOcancerslim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-08-22/subsets/TopNodes_DOcancerslim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-09-16/subsets/TopNodes_DOcancerslim.owl"/>
     </owl:Ontology>
     
 
@@ -28,6 +29,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
     
 
 
@@ -100,7 +107,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A gastrointestinal system cancer that is located_in the pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the pharynx.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-07-27T01:26:34Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>MESH:D010610</oboInOwl:hasDbXref>
@@ -119,8 +126,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060119"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A gastrointestinal system cancer that is located_in the pharynx.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Pharynx</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the pharynx.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Pharynx</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -129,7 +137,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10021">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <obo:IAO_0000115>A small intestine cancer that is located_in the beginning section of the small intestine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A small intestine cancer that is located_in the beginning section of the small intestine.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:6072</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C17.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:152.0</oboInOwl:hasDbXref>
@@ -151,14 +159,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10021"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A small intestine cancer that is located_in the beginning section of the small intestine.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Duodenal_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10021"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>cancer of duodenum</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4803</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A small intestine cancer that is located_in the beginning section of the small intestine.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Duodenal_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -167,7 +170,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10153">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <obo:IAO_0000115>A small intestine cancer that is located_in the ileum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A small intestine cancer that is located_in the ileum.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C17.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:152.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM_2006:152.2</oboInOwl:hasDbXref>
@@ -183,14 +186,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10153"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A small intestine cancer that is located_in the ileum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Ileum</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10153"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of ileum</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:152.2</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A small intestine cancer that is located_in the ileum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Ileum</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -199,7 +197,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A gastrointestinal system cancer that is located_in the intestine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the intestine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C26.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:159.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D007414</oboInOwl:hasDbXref>
@@ -218,20 +216,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A gastrointestinal system cancer that is located_in the intestine.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Intestine</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant intestinal tumors</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4572</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of intestine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93838000</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the intestine.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Intestine</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -239,7 +226,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_10283 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10283">
-        <obo:IAO_0000115>A male reproductive organ cancer that is located_in the prostate.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A male reproductive organ cancer that is located_in the prostate.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:514</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2016-2641</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C61</oboInOwl:hasDbXref>
@@ -290,39 +277,11 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the prostate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7378</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>prostate cancer, familial</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MESH:C537243</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>prostate neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2641</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>prostatic cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2641</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the prostate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3343</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10283"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A male reproductive organ cancer that is located_in the prostate.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=445079</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A male reproductive organ cancer that is located_in the prostate.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=445079</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -384,6 +343,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10534"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A gastrointestinal system cancer that is located_in the stomach.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://cancergenome.nih.gov/cancersselected/stomach-esophagealcancer</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Stomach</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -412,19 +372,13 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedTarget>A lymphatic system cancer that is located_in the lymph node.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www.cancer.org/cancer/cancerbasics/lymph-nodes-and-cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10619"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>lymph node neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C35497</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_10811 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10811">
-        <obo:IAO_0000115>A respiratory system cancer that is located_in the nasal cavity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system cancer that is located_in the nasal cavity.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C30.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:160.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM_2006:160.0</oboInOwl:hasDbXref>
@@ -443,20 +397,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10811"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A respiratory system cancer that is located_in the nasal cavity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Nasal_cavity</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10811"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of nasal cavities</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:160.0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10811"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the nasal cavity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4918</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system cancer that is located_in the nasal cavity.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Nasal_cavity</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -493,13 +436,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11054"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An urinary system cancer that results_in malignant growth located_in the urinary bladder.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Bladder_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11054"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the bladder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2901</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -507,7 +445,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1115">
-        <obo:IAO_0000115>A cell type cancer that has material basis in abnormally proliferating cells derives from embryonic mesoderm.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in abnormally proliferating cells derives from embryonic mesoderm.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3936</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C49</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:171</oboInOwl:hasDbXref>
@@ -526,16 +464,13 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1115"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A cell type cancer that has material basis in abnormally proliferating cells derives from embryonic mesoderm.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in abnormally proliferating cells derives from embryonic mesoderm.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://cancergenome.nih.gov/cancersselected/Sarcoma</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Sarcoma</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=45562</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1115"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of soft tissue and skeleton</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3810</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -544,7 +479,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11239">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <obo:IAO_0000115>A intestinal cancer that is located_in the appendix.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A intestinal cancer that is located_in the appendix.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C18.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:153.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM_2006:153.5</oboInOwl:hasDbXref>
@@ -567,26 +502,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11239"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A intestinal cancer that is located_in the appendix.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Vermiform_appendix</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11239"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>cancer of the appendix</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9330</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11239"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of appendix vermiformis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:153.5</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11239"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the appendix</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9333</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A intestinal cancer that is located_in the appendix.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Vermiform_appendix</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -618,25 +536,13 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
         <rdfs:label>penile cancer</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11615"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Penile Ca</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93954003</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11615"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Penile tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7547</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_11819 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11819">
-        <obo:IAO_0000115>A urinary system cancer that is located_in the ureter.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A urinary system cancer that is located_in the ureter.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C66</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:189.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D014516</oboInOwl:hasDbXref>
@@ -657,14 +563,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11819"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A urinary system cancer that is located_in the ureter.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Ureter_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11819"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant ureteral tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7543</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A urinary system cancer that is located_in the ureter.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Ureter_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -702,31 +603,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_119"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A female reproductive system cancer that is located_in the vagina.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=523460</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of vagina</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:184.0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant vaginal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7410</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>vagina neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2004</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>vaginal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3437</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -734,7 +613,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1192 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1192">
-        <obo:IAO_0000115>A nervous system cancer that is located in the peripheral nervous system.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nervous system cancer that is located in the peripheral nervous system.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3194</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2012-6947</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D010524</oboInOwl:hasDbXref>
@@ -757,20 +636,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1192"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A nervous system cancer that is located in the peripheral nervous system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Peripheral_nervous_system</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1192"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>nerve sheath neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2012-6947</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1192"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of PNS</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3321</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nervous system cancer that is located in the peripheral nervous system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Peripheral_nervous_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -795,6 +663,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11920"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A respiratory system cancer that is located_in the trachea.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Lung_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -803,7 +672,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_11934 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11934">
-        <obo:IAO_0000115>An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:2005-4325</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:12425</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006258</oboInOwl:hasDbXref>
@@ -824,24 +693,16 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:http://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&amp;codlan=1&amp;codcol=70&amp;codcch=9</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Head_and_neck_cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Head_and_neck_cancer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=257519</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>head and neck neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>head/neck neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2005-4325</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -849,7 +710,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1245 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1245">
-        <obo:IAO_0000115>A female reproductive organ cancer that is located_in the vulva.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the vulva.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1282</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2016-2183</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:9349</oboInOwl:hasDbXref>
@@ -882,38 +743,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A female reproductive organ cancer that is located_in the vulva.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Vulvar_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Vulvar tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3443</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Vulvar tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7502</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of vulva</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:94143002</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>vulval cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2183</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>vulval neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2183</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the vulva.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://en.wikipedia.org/wiki/Vulvar_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -980,55 +812,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A central nervous system cancer that is characterized by the growth of abnormal cells in the tissues of the brain.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=387264</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>brain neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2006-2736</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>brain neoplasm, adult</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7710</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant primary brain neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4954</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of Brain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3568</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of adult brain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C5115</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>primary brain neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4952</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>primary malignant neoplasm of brain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93727008</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the Brain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2907</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1066,6 +852,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1324"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A respiratory system cancer that is located_in the lung.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Lung_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1093,7 +880,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1612 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1612">
-        <obo:IAO_0000115>A thoracic cancer that originates in the mammary gland.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic cancer that originates in the mammary gland.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1648</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:4241</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2016-0671</oboInOwl:hasDbXref>
@@ -1124,29 +911,14 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A thoracic cancer that originates in the mammary gland.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Breast_cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Mammary</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/types/breast</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/breastcancer.html</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>breast tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2910</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the breast</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9335</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>mammary tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-0671</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic cancer that originates in the mammary gland.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007644"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Breast_cancer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Mammary</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/cancertopics/types/breast</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.nlm.nih.gov/medlineplus/breastcancer.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1154,7 +926,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_170 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_170">
-        <obo:IAO_0000115>An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10009</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2009-5861</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C75.9</oboInOwl:hasDbXref>
@@ -1183,32 +955,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Endocrine_system</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Endocrine tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3010</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>endocrine neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2009-5861</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Endocrine tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3575</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumour of endocrine gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93780007</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in endocrine system that is characterized by uncontrolled cellular proliferation of the hormone producing glands of the endocrine system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Endocrine_system</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1216,7 +965,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1725 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1725">
-        <obo:IAO_0000115>An organ system cancer that is located in the peritoneum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that is located in the peritoneum.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C48.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:158.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0153466</oboInOwl:hasDbXref>
@@ -1231,8 +980,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1725"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer that is located in the peritoneum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Peritoneal_cancer</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that is located in the peritoneum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Peritoneal_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1297,49 +1047,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cardiovascular cancer that is located_in blood vessels.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Vascular</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Blood Vessel neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7387</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>blood vessel neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2007-0683</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>leiomyosarcoma of the renal Vein</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C5388</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of pulmonary Vein</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C5383</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of pulmonary artery</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C5380</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant vascular tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7390</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_175"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>vascular tumors</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7388</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1348,7 +1057,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1781">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <obo:IAO_0000115>An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10008</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C73</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:193</oboInOwl:hasDbXref>
@@ -1376,26 +1085,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1781"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Thyroid_gland</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1781"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Thyroid gland neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3414</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1781"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of thyroid gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:193</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1781"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>thyroid neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Thyroid_gland</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1404,7 +1096,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1793">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <obo:IAO_0000115>An endocrine gland cancer located_in the pancreas.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located_in the pancreas.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:14356</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:1797</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:3588</oboInOwl:hasAlternativeId>
@@ -1453,26 +1145,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1793"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An endocrine gland cancer located_in the pancreas.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Pancreatic</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1793"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pancreas neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2014-4876</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1793"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pancreatic neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1793"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pancreatic tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3305</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located_in the pancreas.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Pancreatic</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1481,7 +1156,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_184">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_201"/>
-        <obo:IAO_0000115>A connective tissue cancer that is located_in bone and is characterized by uncontrolled cellular proliferation that destroys normal bone tissue.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connective tissue cancer that is located_in bone and is characterized by uncontrolled cellular proliferation that destroys normal bone tissue.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3348</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2019-1041</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D001859</oboInOwl:hasDbXref>
@@ -1507,34 +1182,11 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_184"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A connective tissue cancer that is located_in bone and is characterized by uncontrolled cellular proliferation that destroys normal bone tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/bone</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connective tissue cancer that is located_in bone and is characterized by uncontrolled cellular proliferation that destroys normal bone tissue.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/bone</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/types/bone</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.wrongdiagnosis.com/b/bone_cancer/intro.htm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_184"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>bone neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2019-1041</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_184"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of bone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93725000</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_184"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant osseous tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4016</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_184"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>osseous tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9343</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1542,7 +1194,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1909 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1909">
-        <obo:IAO_0000115>A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from melanocytes which are found in skin, the bowel and the eye.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from melanocytes which are found in skin, the bowel and the eye.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>EFO:0000756</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05218</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008545</oboInOwl:hasDbXref>
@@ -1560,9 +1212,11 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1909"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from melanocytes which are found in skin, the bowel and the eye.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Melanoma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/22123420</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from melanocytes which are found in skin, the bowel and the eye.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Melanoma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/pubmed/22123420</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1570,7 +1224,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1964 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1964">
-        <obo:IAO_0000115>A female reproductive organ cancer that is located_in fallopian tube.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in fallopian tube.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1961</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:9162</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C57.0</oboInOwl:hasDbXref>
@@ -1600,32 +1254,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1964"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A female reproductive organ cancer that is located_in fallopian tube.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Fallopian_tube_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1964"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of uterine tube</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTHICD9_2006:183.2</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1964"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumour of fallopian tube</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93794008</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1964"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the fallopian tube</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3032</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1964"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor, fallopian tube, malignant</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7480</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in fallopian tube.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Fallopian_tube_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1634,7 +1265,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1993">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_5672"/>
-        <obo:IAO_0000115>A colorectal cancer that is located_in the rectum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A colorectal cancer that is located_in the rectum.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1989</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C20</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:154.1</oboInOwl:hasDbXref>
@@ -1662,21 +1293,11 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1993"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Rectal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7418</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1993"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A colorectal cancer that is located_in the rectum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=529764</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1993"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>carcinoma of the rectum</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9382</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A colorectal cancer that is located_in the rectum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=529764</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1684,7 +1305,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_201 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_201">
-        <obo:IAO_0000115>A musculoskeletal system cancer that is located_in connective tissue.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A musculoskeletal system cancer that is located_in connective tissue.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CSP2005:2008-3809</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009372</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0027656</oboInOwl:hasDbXref>
@@ -1699,14 +1320,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_201"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A musculoskeletal system cancer that is located_in connective tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Connective_tissue</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_201"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>connective tissue neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2008-3809</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A musculoskeletal system cancer that is located_in connective tissue.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Connective_tissue</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1714,7 +1330,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2174">
-        <obo:IAO_0000115>A sensory system cancer located_in the eye that is characterized by uncontrolled cellular proliferation in the eye.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensory system cancer located_in the eye that is characterized by uncontrolled cellular proliferation in the eye.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:9985</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2018-3273</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:190.8</oboInOwl:hasDbXref>
@@ -1737,21 +1353,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2174"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A sensory system cancer located_in the eye that is characterized by uncontrolled cellular proliferation in the eye.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Eye</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensory system cancer located_in the eye that is characterized by uncontrolled cellular proliferation in the eye.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Eye</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Eye_neoplasm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2174"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Ocular tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3030</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2174"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>eye neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2018-3273</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1760,7 +1365,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_219">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_5672"/>
-        <obo:IAO_0000115>A colorectal cancer that is located_in the colon.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A colorectal cancer that is located_in the colon.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:C18</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C18.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:153</oboInOwl:hasDbXref>
@@ -1779,8 +1384,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_219"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A colorectal cancer that is located_in the colon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=44237</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A colorectal cancer that is located_in the colon.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=44237</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1788,7 +1395,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2394 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2394">
-        <obo:IAO_0000115>A female reproductive organ cancer that is located_in the ovary.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the ovary.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:0060070</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:2144</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9595</oboInOwl:hasAlternativeId>
@@ -1829,32 +1436,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A female reproductive organ cancer that is located_in the ovary.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=445074</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Ovarian tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7431</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>ovarian neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>ovary neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-1387</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the Ovary</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4984</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the ovary.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=445074</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1862,7 +1447,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2531 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2531">
-        <obo:IAO_0000115>An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1034</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:2532</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2004-0139</oboInOwl:hasDbXref>
@@ -1889,27 +1474,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2531"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Blood_cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary/?CdrID=45708</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Hematological tumors</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C27134</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>blood cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2004-0139</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>hematopoietic tumors</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C27134</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary/?CdrID=45708</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1917,7 +1487,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2596 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2596">
-        <obo:IAO_0000115>A respiratory system cancer that is located_in the larynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system cancer that is located_in the larynx.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:6862</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C32</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C32.9</oboInOwl:hasDbXref>
@@ -1936,8 +1506,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2596"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A respiratory system cancer that is located_in the larynx.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Larynx</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system cancer that is located_in the larynx.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Larynx</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1945,7 +1516,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_263 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_263">
-        <obo:IAO_0000115>A urinary system cancer that is located_in the kidney.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A urinary system cancer that is located_in the kidney.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:11834</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:3676</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C64</oboInOwl:hasDbXref>
@@ -1970,8 +1541,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_263"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A urinary system cancer that is located_in the kidney.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Kidney_cancer</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A urinary system cancer that is located_in the kidney.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Kidney_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2014,19 +1586,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2998"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A male reproductive system cancer that is located_in the testicles.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=445090</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2998"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pediatric testicular neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C5053</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2998"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>testis neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-2999</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2034,7 +1596,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3070">
-        <obo:IAO_0000115>A cell type cancer that has material basis in glial cells and is located in brain or located in spine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in glial cells and is located in brain or located in spine.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:2627</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2012-6589</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:M9380/3</oboInOwl:hasDbXref>
@@ -2064,8 +1626,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3070"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A cell type cancer that has material basis in glial cells and is located in brain or located in spine.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Malignant_glioma</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell type cancer that has_material_basis_in glial cells and is located in brain or located in spine.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Malignant_glioma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2102,19 +1665,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An organ system cancer located_in gastrointestinal tract that is manifested in organs of the gastrointestinal system.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Human_gastrointestinal_tract</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>GI tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3052</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>gastrointestinal tract cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4890</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2158,31 +1710,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3121"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biliary tract cancer that is located_in the gallbladder.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Gallbladder</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3121"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>gallbladder neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3121"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>localized malignant gallbladder neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C35676</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3121"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the gallbladder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7481</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3121"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the gallbladder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3048</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2190,7 +1719,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3277 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3277">
-        <obo:IAO_0000115>An immune system cancer located_in the thymus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An immune system cancer located_in the thymus.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10143</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2004-8826</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C37</oboInOwl:hasDbXref>
@@ -2212,20 +1741,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3277"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An immune system cancer located_in the thymus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Thymus</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3277"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Thymic tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3412</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3277"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>thymic neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2004-8826</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An immune system cancer located_in the thymus.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Thymus</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2233,7 +1751,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3565 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3565">
-        <obo:IAO_0000115>A central nervous system cancer that are manifested in the central nervous system and arise from the arachnoid &quot;cap&quot;cells of the arachnoid villi in the meninges.</obo:IAO_0000115>
+        <obo:IAO_0000115>A central nervous system cancer that are manifested in the central nervous system and arise from the arachnoid cap cells of the arachnoid villi in the meninges.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1137</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:3554</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:3567</oboInOwl:hasAlternativeId>
@@ -2269,7 +1787,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3565"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A central nervous system cancer that are manifested in the central nervous system and arise from the arachnoid &quot;cap&quot;cells of the arachnoid villi in the meninges.</owl:annotatedTarget>
+        <owl:annotatedTarget>A central nervous system cancer that are manifested in the central nervous system and arise from the arachnoid cap cells of the arachnoid villi in the meninges.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Meningioma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2329,49 +1848,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A hepatobiliary system cancer that is located_in the liver.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Liver</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Resectable malignant neoplasm of Liver</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7692</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>hepatic cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2003-2810</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>hepatic neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2003-2810</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of liver</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93870000</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of liver, not specified as primary or secondary</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:155.2</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of liver, primary</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ICD9CM_2006:155.0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3571"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>primary malignant neoplasm of Liver</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C34803</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2379,7 +1857,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_363 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_363">
-        <obo:IAO_0000115>A female reproductive organ cancer that is located_in the uterus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the uterus.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:4363</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2016-1566</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C55</oboInOwl:hasDbXref>
@@ -2409,32 +1887,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_363"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A female reproductive organ cancer that is located_in the uterus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=445094</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_363"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>CA - cancer of uterus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93718007</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_363"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant uterine tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3552</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_363"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>uterine tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3435</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_363"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>uterus neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-1566</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the uterus.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=445094</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2443,7 +1899,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3953">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_170"/>
-        <obo:IAO_0000115>An endocrine gland cancer located_in the adrenal glands which are located above the kidneys.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located_in the adrenal glands which are located above the kidneys.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:11007</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>CSP2005:2009-6040</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:5751</oboInOwl:hasDbXref>
@@ -2473,26 +1929,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3953"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An endocrine gland cancer located_in the adrenal glands which are located above the kidneys.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Adrenal_gland</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3953"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>adrenal neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2009-6040</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3953"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant Adrenal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9338</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3953"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the Adrenal gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2859</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocrine gland cancer located_in the adrenal glands which are located above the kidneys.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Adrenal_gland</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2500,7 +1939,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_4045 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4045">
-        <obo:IAO_0000115>A musculoskeletal system cancer that is located_in muscle.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A musculoskeletal system cancer that is located_in muscle.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:4046</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C49</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009217</oboInOwl:hasDbXref>
@@ -2524,20 +1963,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4045"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A musculoskeletal system cancer that is located_in muscle.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Muscle</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4045"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of muscle</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93913006</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4045"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the Muscle</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4883</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A musculoskeletal system cancer that is located_in muscle.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Muscle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2545,7 +1973,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_4159 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4159">
-        <obo:IAO_0000115>An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:10421</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012878</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
@@ -2566,20 +1994,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4159"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002414/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4159"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of skin</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4159"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>melanoma and Non-melanoma skin cancer</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2920</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002414/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2619,21 +2036,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4362"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A female reproductive organ cancer that is located_in the cervix.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://cancergenome.nih.gov/cancersselected/cervicalcancer</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Cervical_cancer</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=444973</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>cervical neoplasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CSP2005:2016-1746</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the Cervix Uteri</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2940</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2642,7 +2050,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A biliary tract cancer that is located_in the bile duct.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biliary tract cancer that is located_in the bile duct.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10019</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C24.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:156.1</oboInOwl:hasDbXref>
@@ -2666,20 +2074,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4606"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A biliary tract cancer that is located_in the bile duct.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary/?CdrID=527370</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4606"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>bile duct tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C2898</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4606"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of the extrahepatic bile duct</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C7483</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biliary tract cancer that is located_in the bile duct.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary/?CdrID=527370</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2688,7 +2086,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A gastrointestinal system cancer that is located_in the esophagus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the esophagus.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10291</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:10292</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:10448</oboInOwl:hasAlternativeId>
@@ -2747,63 +2145,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A gastrointestinal system cancer that is located_in the esophagus.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the esophagus.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://cancergenome.nih.gov/cancersselected/stomach-esophagealcancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Esophagus</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of distal third of esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTHICD9_2006:150.5</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of lower third of oesophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93877002</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of middle third of oesophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:93895004</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of proximal third of esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTHICD9_2006:150.3</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of upper third esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:94119000</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of Distal Third of esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3535</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of Proximal Third of esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3533</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of abdominal esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4764</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5041"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the middle Third of the esophagus</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3534</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Esophagus</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2829,19 +2174,13 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedTarget>An auditory system cancer that is located_in the middle ear.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://my.clevelandclinic.org/services/head-neck/diseases-conditions/tumors</oboInOwl:hasDbXref>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5099"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the middle ear</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4412</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_5559 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5559">
-        <obo:IAO_0000115>A thoracic cancer that is located_in the mediastinum.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic cancer that is located_in the mediastinum.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:9914</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C38.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:164.9</oboInOwl:hasDbXref>
@@ -2866,20 +2205,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5559"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A thoracic cancer that is located_in the mediastinum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Mediastinal</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5559"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Tumour of mediastinum</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>SNOMEDCT_2005_07_31:94147001</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5559"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>mediastinal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3221</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic cancer that is located_in the mediastinum.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Mediastinal</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2887,7 +2215,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_5612 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5612">
-        <obo:IAO_0000115>A central nervous system cancer that is located_in the spinal cord. It is mostly formed from metastases from primary cancers elsewhere (commonly breast, prostate, and lung cancer).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A central nervous system cancer that is located_in the spinal cord. It is mostly formed from metastases from primary cancers elsewhere (commonly breast, prostate, and lung cancer).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3638</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:7225</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C72.0</oboInOwl:hasDbXref>
@@ -2918,26 +2246,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A central nervous system cancer that is located_in the spinal cord. It is mostly formed from metastases from primary cancers elsewhere (commonly breast, prostate, and lung cancer).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Spinal_tumor</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Intraspinal tumor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3382</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the Spinal Cord</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3572</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5612"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>tumor of the Spinal Cord</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3381</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A central nervous system cancer that is located_in the spinal cord. It is mostly formed from metastases from primary cancers elsewhere (commonly breast, prostate, and lung cancer).</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Spinal_tumor</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2946,7 +2257,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5672">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_10155"/>
-        <obo:IAO_0000115>An intestinal cancer that effects the long, tube-like organ that is connected to the small intestine at one end and the anus at the other.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intestinal cancer that effects the long, tube-like organ that is connected to the small intestine at one end and the anus at the other.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1994</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:1997</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C18.9</oboInOwl:hasDbXref>
@@ -2967,8 +2278,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5672"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An intestinal cancer that effects the long, tube-like organ that is connected to the small intestine at one end and the anus at the other.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Large_intestine</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intestinal cancer that effects the long, tube-like organ that is connected to the small intestine at one end and the anus at the other.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Large_intestine</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2977,7 +2289,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8618">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A gastrointestinal system cancer that is located_in the oral cavity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the oral cavity.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:0050627</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8617</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9049</oboInOwl:hasAlternativeId>
@@ -3017,26 +2329,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8618"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A gastrointestinal system cancer that is located_in the oral cavity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Oral_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8618"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of floor of mouth</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8618"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of lateral floor of mouth</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:U001372</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8618"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the Floor of the Mouth</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C9318</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the oral cavity.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Oral_cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3045,7 +2340,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8850">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_8618"/>
-        <obo:IAO_0000115>An oral cavity cancer that is located_in the salivary gland.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oral cavity cancer that is located_in the salivary gland.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8873</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9148</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:C08</oboInOwl:hasDbXref>
@@ -3068,32 +2363,10 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8850"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An oral cavity cancer that is located_in the salivary gland.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=446528</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8850"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of major salivary gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:U001373</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8850"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant neoplasm of salivary gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8850"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the Major Salivary gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C4762</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8850"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>malignant tumor of the Salivary gland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCI2004_11_17:C3811</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oral cavity cancer that is located_in the salivary gland.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cancer.gov/dictionary?CdrID=446528</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

@@ -195,30 +195,6 @@
       "type" : "CLASS",
       "lbl" : "monogenic disease"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_225",
-      "meta" : {
-        "definition" : {
-          "val" : "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality.",
-          "xrefs" : [ "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "xrefs" : [ {
-          "val" : "NCI:C28193"
-        }, {
-          "val" : "SNOMEDCT_US_2018_03_01:64572001"
-        }, {
-          "val" : "MESH:D013577"
-        }, {
-          "val" : "UMLS_CUI:C0039082"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "syndrome"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_104",
       "meta" : {
         "definition" : {
@@ -246,6 +222,30 @@
       },
       "type" : "CLASS",
       "lbl" : "bacterial infectious disease"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_225",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality.",
+          "xrefs" : [ "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "NCI:C28193"
+        }, {
+          "val" : "SNOMEDCT_US_2018_03_01:64572001"
+        }, {
+          "val" : "MESH:D013577"
+        }, {
+          "val" : "UMLS_CUI:C0039082"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "syndrome"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2914",
       "meta" : {
@@ -306,15 +306,11 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Blood dyscrasia",
-          "xrefs" : [ "MTHICD9_2006:289.9" ]
+          "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "DISEASE OF THE BLOOD AND BLOOD-FORMING ORGANS",
-          "xrefs" : [ "ICD9CM_2006:280-289.99" ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Hematological disease",
-          "xrefs" : [ "MTH:NOCODE" ]
+          "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "disease of hematopoietic system",
@@ -325,8 +321,12 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "Hematological disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "blood disorder",
-          "xrefs" : [ "CSP2005:0427-3600" ]
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -339,7 +339,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_934",
       "meta" : {
         "definition" : {
-          "val" : "A disease by infectious agent that results in infection, has material basis in Viruses.",
+          "val" : "A disease by infectious agent that results in infection, has_material_basis_in Viruses.",
           "xrefs" : [ "url:http://www.merck.com/mmhe/sec17/ch198/ch198a.html" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -376,16 +376,16 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "virus infection",
-          "xrefs" : [ "CSP2005:3099-8150" ]
+          "val" : "Viral Infection",
+          "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Viral disease",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Viral Infection",
-          "xrefs" : [ "NCI2004_11_17:C3439" ]
+          "val" : "virus infection",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -662,12 +662,8 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "GIT disease",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:53619000" ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Gastroenteropathy",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:25374005" ]
+          "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "alimentary system disease",
@@ -678,12 +674,16 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "GIT disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "gastrointestinal disease",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "gastrointestinal disorder",
-          "xrefs" : [ "CSP2005:1248-3545" ]
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -752,7 +752,7 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "metabolic disease",
-          "xrefs" : [ "SNOMEDCT_2005_07_31:75934005" ]
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -761,6 +761,27 @@
       },
       "type" : "CLASS",
       "lbl" : "disease of metabolism"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0060118",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease of anatomical entity that is located_in the thoracic cavity.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Thoracic_cavity" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "lschriml"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2011-07-25T02:23:47Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "thoracic disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_18",
       "meta" : {
@@ -783,7 +804,7 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Non-neoplastic urinary tract disease",
-          "xrefs" : [ "NCI2004_11_17:C27599" ]
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -795,27 +816,6 @@
       },
       "type" : "CLASS",
       "lbl" : "urinary system disease"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0060118",
-      "meta" : {
-        "definition" : {
-          "val" : "A disease of anatomical entity that is located_in the thoracic cavity.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Thoracic_cavity" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "lschriml"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2011-07-25T02:23:47Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "thoracic disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_574",
       "meta" : {
@@ -854,7 +854,7 @@
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "peripheral neuropathy",
-          "xrefs" : [ "CSP2005:2042-6617" ]
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -899,7 +899,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2019-08-22/subsets/DO_AGR_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2019-09-16/subsets/DO_AGR_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

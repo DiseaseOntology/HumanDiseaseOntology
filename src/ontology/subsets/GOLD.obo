@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: doid/2019-08-22/subsets/GOLD.obo
+data-version: doid/2019-09-16/subsets/GOLD.obo
 ontology: doid/subsets/GOLD.obo
 
 [Term]
 id: DOID:0050352
 name: foodborne botulism
 namespace: disease_ontology
-def: "A botulism that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F), which are transmitted by ingestion of food contaminated with preformed toxins, has material basis in Clostridium botulinum A, has material basis in Clostridium botulinum B, has material basis in Clostridium botulinum E and has material basis in Clostridium botulinum F. The infection has symptom blurred vision, has symptom diplopia, has symptom dysarthria, has symptom dysphonia, has symptom dysphagia and has symptom descending muscle paralysis." [url:http\://www.health.state.nm.us/erd/HealthData/Foodborne/Botulism.pdf]
+def: "A botulism that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F), which are transmitted by ingestion of food contaminated with preformed toxins, has_material_basis_in Clostridium botulinum A, has_material_basis_in Clostridium botulinum B, has_material_basis_in Clostridium botulinum E and has_material_basis_in Clostridium botulinum F. The infection has symptom blurred vision, has symptom diplopia, has symptom dysarthria, has symptom dysphonia, has symptom dysphagia and has symptom descending muscle paralysis." [url:http\://www.health.state.nm.us/erd/HealthData/Foodborne/Botulism.pdf]
 subset: GOLD
 subset: gram-positive_bacterial_infectious_disease
 
@@ -68,10 +68,10 @@ subset: zoonotic_infectious_disease
 synonym: "Enteric paratyphosis" EXACT []
 synonym: "Salmonella food poisoning" EXACT []
 synonym: "Salmonella food poisoning (disorder)" EXACT []
-synonym: "Salmonella gastroenteritis" EXACT [ICD9CM_2006:003.0]
-synonym: "Salmonella gastroenteritis (disorder)" EXACT [SNOMEDCT_2005_07_31:42338000]
+synonym: "Salmonella gastroenteritis" EXACT []
+synonym: "Salmonella gastroenteritis (disorder)" EXACT []
 synonym: "Salmonella gastroenteritis [Ambiguous]" EXACT []
-synonym: "Salmonellosis" EXACT [MTHICD9_2006:003.0]
+synonym: "Salmonellosis" EXACT []
 synonym: "Salmonellosis (& [gastroenteritis] or [food poisoning])" EXACT []
 is_obsolete: true
 
@@ -84,7 +84,7 @@ subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
 subset: NCIthesaurus
 synonym: "Bartonella infectious disease" EXACT []
-synonym: "bartonelliasis" EXACT [CSP2005:2623-6984]
+synonym: "bartonelliasis" EXACT []
 synonym: "Rochalimaea infection" EXACT []
 xref: CSP2005:2623-6984
 xref: ICD10CM:A44
@@ -102,7 +102,7 @@ namespace: disease_ontology
 subset: GOLD
 subset: gram-positive_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Anthrax septicemia (disorder)" EXACT [SNOMEDCT_2005_07_31:14972006]
+synonym: "Anthrax septicemia (disorder)" EXACT []
 is_obsolete: true
 
 [Term]
@@ -111,6 +111,7 @@ name: diarrhea
 namespace: disease_ontology
 alt_id: DOID:0050006
 def: "A gastrointestinal system disease described as the condition of having frequent loose or liquid bowel movements. Acute diarrhea is a common cause of death in developing countries and the second most common cause of infant deaths worldwide. The loss of fluids through diarrhea can cause severe dehydration which is one cause of death in diarrhea sufferers. Along with water, sufferers also lose dangerous amounts of important salts, electrolytes, and other nutrients. There are at least four types of diarrhea: secretory diarrhea, osmotic diarrhea, motility-related diarrhea, and inflammatory diarrhea." [url:http\://en.wikipedia.org/wiki/Diarrhea#Types_of_diarrhea]
+comment: diarrhea is both a disease and a symptom [ms]
 subset: GOLD
 synonym: "diarrhea of presumed infectious origin" RELATED []
 synonym: "diarrhoea" RELATED []
@@ -126,7 +127,7 @@ namespace: disease_ontology
 subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
-synonym: "Salmonella septicemia (disorder)" EXACT [SNOMEDCT_2005_07_31:49786009]
+synonym: "Salmonella septicemia (disorder)" EXACT []
 is_obsolete: true
 
 [Term]
@@ -139,7 +140,7 @@ subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
 synonym: "Cholera" EXACT []
 synonym: "Cholera - Vibrio cholerae" EXACT []
-synonym: "Cholera due to Vibrio cholerae" EXACT [ICD9CM_2006:001.0]
+synonym: "Cholera due to Vibrio cholerae" EXACT []
 synonym: "Vibrio cholerae" EXACT []
 xref: GARD:6043
 xref: ICD10CM:A00
@@ -160,8 +161,8 @@ name: obsolete Serratia septicemia
 namespace: disease_ontology
 subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
-synonym: "Septicemia due to serratia" EXACT [ICD9CM_2006:038.44]
-synonym: "Septicemia due to Serratia (disorder)" EXACT [SNOMEDCT_2005_07_31:82091000]
+synonym: "Septicemia due to serratia" EXACT []
+synonym: "Septicemia due to Serratia (disorder)" EXACT []
 is_obsolete: true
 
 [Term]
@@ -173,7 +174,7 @@ def: "A pneumonia involving inflammation of the lungs caused by bacteria." [url:
 subset: GOLD
 subset: NCIthesaurus
 synonym: "gram-negative pneumonia" EXACT []
-synonym: "Pneumonia due to other gram-negative bacteria" EXACT [ICD9CM_2006:482.83]
+synonym: "Pneumonia due to other gram-negative bacteria" EXACT []
 xref: ICD10CM:J15.9
 xref: ICD9CM:482.9
 xref: ICD9CM_2006:482.83
@@ -215,8 +216,8 @@ def: "A primary bacterial infectious disease that results_in infection located_i
 subset: GOLD
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
-synonym: "Staphylococcal food poisoning" EXACT [ICD9CM_2006:005.0]
-synonym: "Staphylococcal toxaemia due to food" EXACT [SNOMEDCT_2005_07_31:84622004]
+synonym: "Staphylococcal food poisoning" EXACT []
+synonym: "Staphylococcal toxaemia due to food" EXACT []
 synonym: "staphyloenterotoxicosis" EXACT []
 xref: ICD10CM:A05.0
 xref: ICD9CM:005.0

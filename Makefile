@@ -273,7 +273,7 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html
 
 # Get the last build of DO from IRI
-.PHONY: build/doid-last.owl
+#.PHONY: build/doid-last.owl
 build/doid-last.owl: | build/robot.jar
 	@$(ROBOT) merge \
 	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
@@ -285,8 +285,9 @@ QUERIES := $(wildcard src/sparql/*-report.rq)
 
 # target names for previous release reports
 LAST_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(Q))))
-.PHONY: $(LAST_REPORTS)
-build/reports/%-last.tsv: src/sparql/%-report.rq build/doid-last.owl | build/reports
+.PHONY: last-reports
+last-reports: $(LAST_REPORTS)
+build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -294,18 +295,21 @@ build/reports/%-last.tsv: src/sparql/%-report.rq build/doid-last.owl | build/rep
 
 # target names for current release reports
 NEW_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(Q))))
-.PHONY: $(NEW_REPORTS)
-build/reports/%-new.tsv: src/sparql/%-report.rq $(DM).owl | build/reports
+.PHONY: new-reports
+new-reports: $(NEW_REPORTS)
+build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
 	 --query $< $@
 
-build/reports/report-diff.txt: $(LAST_REPORTS) $(NEW_REPORTS)
+# create a clean diff between last and current reports
+build/reports/report-diff.txt: last-reports new-reports
 	@python src/util/report-diff.py
 	@mv $@ $(DIR)/report-diff.txt
 	@echo "Release diff report available at $(DIR)/report-diff.txt"
 
+# create a count of the various disease branches
 .PHONY: build/reports/branch-count.tsv
 build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
 	@echo "Counting all branches..."

@@ -9,25 +9,26 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/doid/obo/ext.owl>
-Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/eco_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/geno_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/so_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/symp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/trans_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/geno_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/eco_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/trans_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/doid/imports/so_import.owl>)
 
 Declaration(Class(obo:NCBITaxon_1))
 Declaration(Class(<http://purl.obolibrary.org/obo/doid#chebi>))
 Declaration(Class(<http://purl.obolibrary.org/obo/doid#sequence>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/doid#has_symptom>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#has_origin>))
+Declaration(AnnotationProperty(obo:OBI_9991118))
 Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
 Declaration(AnnotationProperty(oboInOwl:date))
 Declaration(AnnotationProperty(oboInOwl:default-namespace))
@@ -35,6 +36,15 @@ Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
 Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
 Declaration(AnnotationProperty(oboInOwl:saved-by))
 Declaration(AnnotationProperty(owl:qualifiedCardinality))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:OBI_9991118 (IEDB alternative term)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_9991118 "An alternative term used by the IEDB.")
+AnnotationAssertion(rdfs:label obo:OBI_9991118 "IEDB alternative term")
+
 
 ############################
 #   Object Properties
@@ -313,5 +323,5 @@ AnnotationAssertion(rdfs:comment obo:SYMP_0019159 "doid/symp duplicate")
 AnnotationAssertion(rdfs:comment obo:SYMP_0019164 "doid/symp duplicate")
 AnnotationAssertion(rdfs:comment obo:SYMP_0019180 "doid/symp duplicate")
 AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomy"^^xsd:string)
-AnnotationAssertion(owl:qualifiedCardinality _:genid2147488725 "1"^^xsd:nonNegativeInteger)
+AnnotationAssertion(owl:qualifiedCardinality _:genid10426 "1"^^xsd:nonNegativeInteger)
 )

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-09-16/subsets/NCIthesaurus.obo
+data-version: doid/2019-10-30/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -66,6 +66,7 @@ synonym: "infectious disease" EXACT []
 xref: ICD9CM:079.0
 xref: UMLS_CUI:C0001485
 is_a: DOID:4 ! disease
+property_value: OBI:9991118 "infectious disease" xsd:string
 
 [Term]
 id: DOID:0050120
@@ -1106,8 +1107,8 @@ namespace: disease_ontology
 def: "An infancy electroclinical syndrome that is characterized by infantile spasms, hypsarrhythmia on electroencephalogram and intellectual disability." [url:https\://rarediseases.org/rare-diseases/west-syndrome/, url:https\://www.ncbi.nlm.nih.gov/pubmed/24268986]
 subset: NCIthesaurus
 synonym: "Infantile spasms syndrome" RELATED []
-synonym: "MESH:D013036" EXACT []
 xref: GARD:7887
+xref: MESH:D013036
 xref: NCI:C84788
 xref: ORDO:3451
 is_a: DOID:1826 ! epilepsy
@@ -2113,7 +2114,6 @@ xref: MESH:C536275
 xref: NCI:C129973
 xref: OMIM:114100
 xref: OMIM:213600
-xref: OMIM:606656
 xref: OMIM:615007
 xref: OMIM:615483
 xref: UMLS_CUI:C0393590
@@ -11870,6 +11870,7 @@ xref: SNOMEDCT_US_2018_03_01:21957007
 xref: SNOMEDCT_US_2018_03_01:91232002
 xref: UMLS_CUI:C0020517
 is_a: DOID:4 ! disease
+property_value: OBI:9991118 "allergic disease" xsd:string
 
 [Term]
 id: DOID:12053
@@ -13905,6 +13906,7 @@ xref: ICD9CM:277.5
 xref: MESH:D009083
 xref: NCI:C61259
 xref: OMIM:252700
+xref: OMIM:PS607014
 xref: ORDO:79213
 xref: SNOMEDCT_US_2018_03_01:11380006
 xref: UMLS_CUI:C0026703
@@ -13965,19 +13967,9 @@ def: "A mucopolysaccharidosis characterized by a deficiency of the lysosomal enz
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "heparan sulfate sulfatase deficiency" EXACT []
-synonym: "MPS IIIA - Sanfilippo syndrome A" NARROW []
-synonym: "MPS IIIB - Sanfilippo syndrome B" NARROW []
-synonym: "MPS IIIC - Sanfilippo syndrome C" NARROW []
-synonym: "MPS IIID - Sanfilippo syndrome D" NARROW []
-synonym: "mucopolysaccharidosis type IIIA" NARROW []
-synonym: "mucopolysaccharidosis type IIIB" NARROW []
 synonym: "Mucopolysaccharidosis, MPS-III" EXACT []
-synonym: "Mucopolysaccharidosis, MPS-III-B" NARROW [SNOMEDCT_2005_07_31:59990008]
-synonym: "N-acetyl-alpha-D-glucosaminidase deficiency" NARROW []
 synonym: "N-sulphoglucosamine sulphohydrolase deficiency" EXACT []
 synonym: "naglu deficiency" NARROW []
-synonym: "Sanfilippo syndrome A" NARROW []
-synonym: "Sanfilippo syndrome B" NARROW []
 synonym: "Sanfilippo's syndrome" EXACT []
 xref: ICD10CM:E76.22
 xref: MESH:D009084
@@ -13985,17 +13977,10 @@ xref: MTHICD9_2006:277.5
 xref: NCI:C61262
 xref: NCI:C84897
 xref: NCI:C84898
-xref: OMIM:252900
-xref: OMIM:252920
-xref: OMIM:252930
 xref: OMIM:252940
 xref: ORDO:581
-xref: SNOMEDCT_US_2018_03_01:41572006
-xref: SNOMEDCT_US_2018_03_01:59990008
 xref: SNOMEDCT_US_2018_03_01:88393000
 xref: UMLS_CUI:C0026706
-xref: UMLS_CUI:C0086647
-xref: UMLS_CUI:C0086648
 is_a: DOID:12798 ! mucopolysaccharidosis
 
 [Term]
@@ -14017,8 +14002,6 @@ xref: ICD10CM:E76.0
 xref: MESH:D008059
 xref: MTHICD9_2006:277.5
 xref: NCI:C85053
-xref: OMIM:607014
-xref: OMIM:607015
 xref: SNOMEDCT_US_2018_03_01:75610003
 xref: UMLS_CUI:C0023786
 is_a: DOID:12798 ! mucopolysaccharidosis
@@ -14055,14 +14038,7 @@ synonym: "chondroosteodystrophy" NARROW [CSP2005:1849-6163]
 synonym: "deficiency of chondroitinsulphatase" EXACT []
 synonym: "deficiency of N-acetylgalactosamine-6-sulphatase" EXACT []
 synonym: "galactosamine-6-sulfatase deficiency" EXACT []
-synonym: "Morquio A disease" NARROW []
-synonym: "Morquio syndrome A" NARROW []
-synonym: "MPS IV - Morquio syndrome A" NARROW []
-synonym: "MPS IV - Morquio syndrome B" NARROW []
-synonym: "mucopolysaccharidosis type IVA" NARROW []
-synonym: "Mucopolysaccharidosis type IVB" NARROW []
 synonym: "Mucopolysaccharidosis, MPS-IV" EXACT []
-synonym: "Mucopolysaccharidosis, MPS-IV-A" NARROW [SNOMEDCT_2005_07_31:7259005]
 synonym: "Osteochondrodystrophy" NARROW []
 xref: CSP2005:1849-6163
 xref: ICD10CM:E76.210
@@ -14070,13 +14046,9 @@ xref: ICD10CM:E76.219
 xref: MESH:D009085
 xref: NCI:C61263
 xref: NCI:C84901
-xref: OMIM:253000
-xref: OMIM:253010
 xref: SNOMEDCT_US_2018_03_01:378007
-xref: SNOMEDCT_US_2018_03_01:7259005
 xref: SNOMEDCT_US_2018_03_01:78856008
 xref: UMLS_CUI:C0026707
-xref: UMLS_CUI:C0086651
 is_a: DOID:12798 ! mucopolysaccharidosis
 
 [Term]
@@ -15751,11 +15723,7 @@ xref: GARD:1999
 xref: ICD10CM:D64.4
 xref: MESH:D000742
 xref: NCI:C84646
-xref: OMIM:105600
-xref: OMIM:224100
-xref: OMIM:224120
-xref: OMIM:613673
-xref: OMIM:615631
+xref: OMIM:PS224120
 xref: ORDO:85
 xref: SNOMEDCT_US_2018_03_01:52951008
 xref: UMLS_CUI:C0002876
@@ -18023,8 +17991,8 @@ xref: ICD9CM_2006:272.3
 xref: MESH:D008072
 xref: MTHICD9_2006:272.3
 xref: NCI:C84771
-xref: OMIM:118830
 xref: OMIM:238600
+xref: ORDO:309015
 xref: SNOMEDCT_US_2018_03_01:34171006
 xref: UMLS_CUI:C0023817
 is_a: DOID:1168 ! familial hyperlipidemia
@@ -19794,6 +19762,7 @@ is_a: DOID:9252 ! amino acid metabolic disorder
 id: DOID:14702
 name: branchiootorenal syndrome
 namespace: disease_ontology
+def: "An autosomal dominant disease characterized by branchial arch anomalies (branchial fistulas, clefts, or cysts), hearing impairment, structural defects of the outer, middle, and inner ear, and renal abnormalities." [url:https\://www.ncbi.nlm.nih.gov/pubmed/263442]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -19802,11 +19771,10 @@ synonym: "Branchio-otorenal dysplasia" EXACT []
 synonym: "branchiootorenal dysplasia" EXACT []
 synonym: "Melnick-Fraser syndrome" EXACT []
 xref: GARD:10147
+xref: MEDDRA:10071135
 xref: MESH:D019280
 xref: MTH:NOCODE
 xref: NCI:C98983
-xref: OMIM:113650
-xref: OMIM:610896
 xref: SNOMEDCT_US_2018_03_01:290006
 xref: UMLS_CUI:C0265234
 is_a: DOID:630 ! genetic disease
@@ -29025,8 +28993,7 @@ xref: GARD:6902
 xref: MESH:D016864
 xref: NCI2004_11_17:C3476
 xref: NCI:C3476
-xref: OMIM:151623
-xref: OMIM:609265
+xref: OMIM:PS151623
 xref: ORDO:524
 xref: UMLS_CUI:C0085390
 is_a: DOID:630 ! genetic disease
@@ -32687,6 +32654,7 @@ is_a: DOID:422 ! congenital structural myopathy
 id: DOID:3534
 name: Lafora disease
 namespace: disease_ontology
+def: "A progressive myoclonus epilepsy characterized by myoclonus and/or generalized seizures, visual hallucinations, and progressive neurological decline with onset between 8 and 18 years of age that has_material_basis_in homozygous or compound heterozygous mutation in either NHLRC1 on chromosome 6p22.3 or EPM2A on chromosome 6q24.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19267391, url:https\://www.ncbi.nlm.nih.gov/pubmed/19469843]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -35593,6 +35561,7 @@ is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
 id: DOID:397
 name: restrictive cardiomyopathy
 namespace: disease_ontology
+def: "An intrinsic cardiomyopathy characterized by impaired ventricular filling, with normal or decreased diastolic volume of either or both ventricles typically resulting from increased stiffness of the myocardium." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8995091]
 comment: Xref MGI.\nOMIM mappings 115210, 612422 added from NeuroDevNet [WAK].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -35604,9 +35573,7 @@ xref: ICD10CM:I42.5
 xref: MESH:D002313
 xref: MTHICD9_2006:425.4
 xref: NCI:C62798
-xref: OMIM:115210
-xref: OMIM:609578
-xref: OMIM:612422
+xref: OMIM:PS115210
 xref: ORDO:75249
 xref: SNOMEDCT_US_2018_03_01:90828009
 xref: UMLS_CUI:C0007196
@@ -47133,12 +47100,7 @@ xref: ICD9CM:377.1
 xref: ICD9CM:377.10
 xref: MESH:D009896
 xref: NCI:C34863
-xref: OMIM:165300
-xref: OMIM:165500
-xref: OMIM:258500
-xref: OMIM:311050
-xref: OMIM:605293
-xref: OMIM:610708
+xref: OMIM:PS165500
 xref: ORDO:98673
 xref: SNOMEDCT_US_2018_03_01:76976005
 xref: UMLS_CUI:C0029124
@@ -61645,11 +61607,7 @@ xref: GARD:7140
 xref: MESH:D020191
 xref: NCI2004_11_17:C7636
 xref: NCI:C7636
-xref: OMIM:254900
 xref: OMIM:310370
-xref: OMIM:611726
-xref: OMIM:612437
-xref: OMIM:614018
 xref: OMIM:PS254800
 xref: SNOMEDCT_US_2018_03_01:89480000
 xref: UMLS_CUI:C0751778
@@ -65288,8 +65246,6 @@ xref: ICD10CM:E74.21
 xref: ICD9CM:271.1
 xref: MESH:D005693
 xref: NCI:C84723
-xref: OMIM:230350
-xref: OMIM:230400
 xref: SNOMEDCT_US_2018_03_01:38177000
 xref: UMLS_CUI:C0016952
 is_a: DOID:655 ! inherited metabolic disorder

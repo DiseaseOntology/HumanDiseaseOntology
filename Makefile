@@ -259,8 +259,7 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 	@cp $(DO).* $(DIR)
 	@cp $(DM).* $(DIR)
 	@cp $(DNC).* $(DIR)
-	@mkdir -p $(DIR)/subsets
-	@cp -r src/ontology/subsets $(DIR)/subsets
+	@cp -r src/ontology/subsets $(DIR)
 	@echo "Published to $(DIR)"
 	@echo ""
 

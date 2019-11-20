@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-10-30/subsets/DO_FlyBase_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2019-11-20/subsets/DO_FlyBase_slim.owl"/>
     </owl:Ontology>
     
 
@@ -1418,7 +1418,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.ncbi.nlm.nih.gov/books/NBK459447/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK459447/</oboInOwl:hasDbXref>
         <rdfs:comment>ls:IEDB</rdfs:comment>
     </owl:Axiom>
     
@@ -2602,8 +2602,6 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
         <oboInOwl:hasDbXref>ICD9CM_2006:334.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D005621</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84718</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:229300</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:601992</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2018_03_01:10394003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0016719</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Friedreich ataxia 1</oboInOwl:hasExactSynonym>
@@ -2874,10 +2872,8 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://emedicine.medscape.com/article/1112501-overview</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Fibrodysplasia_ossificans_progressiva</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://ghr.nlm.nih.gov/condition/fibrodysplasia-ossificans-progressiva</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://omim.org/entry/135100</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2424023/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.ucsfbenioffchildrens.org/conditions/fibrodysplasia_ossificans_progressiva/</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4067,6 +4063,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2742">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050155"/>
+        <obo:IAO_0000115>A sensory system disease that is characterized by auditory dysfunction located_in the auditory system.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:1490</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:2011</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:H93.9</oboInOwl:hasDbXref>
@@ -4083,6 +4080,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>auditory system disease</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2742"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sensory system disease that is characterized by auditory dysfunction located_in the auditory system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://books.google.com/books?id=r3I0BwAAQBAJ&amp;newbks=1&amp;newbks_redir=0&amp;lpg=PP1&amp;dq=disorders%20of%20auditory%20system&amp;pg=PP1#v=onepage&amp;q=disorders%20of%20auditory%20system&amp;f=false</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -5022,7 +5025,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A muscular dystrophy that is characterized by progressive muscle wasting and weakness.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Myotonic_dystrophy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Myotonic_dystrophy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://ghr.nlm.nih.gov/condition/myotonic-dystrophy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.genome.gov/25521207</oboInOwl:hasDbXref>
     </owl:Axiom>

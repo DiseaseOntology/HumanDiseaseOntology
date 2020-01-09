@@ -69,6 +69,7 @@ report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
+.PHONY: build/reports/report.tsv
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	@echo ""

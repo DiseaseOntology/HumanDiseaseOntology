@@ -77,12 +77,12 @@ cl:
 
 .PHONY: foodon
 foodon:
-	$(ROBOT) merge --input-iri "$(OBO)$@.owl"\
-	 --input-iri "$(OBO)$@_merged.owl" \
-	extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --upper-term obo:FOODON_00002403\
+	$(ROBOT) merge --input-iri "$(OBO)$@.owl" \
+	extract --method mireot --upper-term obo:FOODON_00002403\
 	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --term obo:FOODON_00002381 --select "self ancestors" --trim true \
+	remove --term obo:FOODON_00002381 --term obo:FOODON_00001002\
+	 --term obo:FOODON_03400361 --term obo:FOODON_00001176 --trim true \
+	remove --term BFO:0000040 --select "self ancestors" --trim true \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\

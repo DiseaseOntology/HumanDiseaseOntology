@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2019-12-12/subsets/NCIthesaurus.obo
+data-version: doid/2020-01-15/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -5657,11 +5657,12 @@ is_a: DOID:10350 ! breast cyst
 
 [Term]
 id: DOID:1035
-name: natural killer cell leukemia
+name: aggressive NK-cell leukemia
 namespace: disease_ontology
+def: "A lymphocytic leukemia that is characterized by the systemic proliferation of NK cells closely associated with Epstein-Barr virus and that is located_in the peripheral blood, bone marrow, liver, and spleen." [url:https\://en.wikipedia.org/wiki/Aggressive_NK-cell_leukemia, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C8647, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6191480/]
 subset: NCIthesaurus
-synonym: "Aggressive NK-cell leukemia" EXACT []
 synonym: "large granular Lymphocyte Leukemia, NK-cell type" EXACT []
+synonym: "natural killer cell leukemia" EXACT []
 xref: ICD10CM:C94.8
 xref: NCI2004_11_17:C8647
 xref: NCI:C8647
@@ -5858,7 +5859,7 @@ is_a: DOID:0050117 ! disease by infectious agent
 id: DOID:1040
 name: chronic lymphocytic leukemia
 namespace: disease_ontology
-def: "A lymphoblastic leukemia characterized by over production of B-cells and their accumulation in bone marrow and blood." [url:http\://en.wikipedia.org/wiki/B-cell_chronic_lymphocytic_leukemia, url:http\://www.cancer.gov/dictionary?cdrid=346545]
+def: "A lymphocytic leukemia characterized by over production of B-cells and their accumulation in bone marrow and blood." [url:http\://en.wikipedia.org/wiki/B-cell_chronic_lymphocytic_leukemia, url:http\://www.cancer.gov/dictionary?cdrid=346545]
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -8028,7 +8029,7 @@ id: DOID:10935
 name: dissociative disorder
 namespace: disease_ontology
 alt_id: DOID:4963
-def: "A disease of mental health in which the normally well-integrated functions of memory, identity, perception, or consciousness are separated (dissociated)." [url:http\://www.minddisorders.com/Del-Fi/Dissociative-amnesia.html]
+def: "A disease of mental health in which the normally well-integrated functions of memory, identity, perception, or consciousness are separated (dissociated)." [url:https\://www.mayoclinic.org/diseases-conditions/dissociative-disorders/symptoms-causes/syc-20355215]
 subset: NCIthesaurus
 synonym: "dissociative disease" EXACT []
 synonym: "dissociative reaction" EXACT []
@@ -8214,7 +8215,7 @@ id: DOID:10965
 name: spastic diplegia
 namespace: disease_ontology
 alt_id: DOID:3778
-def: "A spastic cerebral palsy that affects lower extremities resulting in tight leg and hip muscles. The legs cross at the knees, making it difficult to walk." [url:http\://www.cerebralpalsy.org/types-of-cerebral-palsy/#ataxic]
+def: "A spastic cerebral palsy that affects lower extremities resulting in tight leg and hip muscles. The legs cross at the knees, making it difficult to walk." [url:https\://rarediseases.info.nih.gov/diseases/9637/spastic-diplegia-cerebral-palsy]
 subset: NCIthesaurus
 synonym: "cerebral spastic infantile paralysis" EXACT []
 synonym: "Diplegic infantile cerebral palsy" EXACT []
@@ -8391,7 +8392,7 @@ xref: MESH:D059407
 xref: NCI:C129468
 xref: SNOMEDCT_US_2018_03_01:87614000
 xref: UMLS_CUI:C0152255
-is_a: DOID:4251 ! conjunctival disease
+is_a: DOID:5614 ! eye disease
 
 [Term]
 id: DOID:11030
@@ -8424,7 +8425,7 @@ is_a: DOID:11030 ! corneal edema
 id: DOID:11037
 name: dissociative amnesia
 namespace: disease_ontology
-def: "A dissociative disorder where he continuity of the patient's memory is disrupted. Patients with dissociative amnesia have recurrent episodes in which they forget important personal information or events, usually connected with trauma or severe stress." [url:http\://www.minddisorders.com/Del-Fi/Dissociative-amnesia.html]
+def: "A dissociative disorder where he continuity of the patient's memory is disrupted. Patients with dissociative amnesia have recurrent episodes in which they forget important personal information or events, usually connected with trauma or severe stress." [url:https\://www.merckmanuals.com/professional/psychiatric-disorders/dissociative-disorders/dissociative-amnesia]
 subset: NCIthesaurus
 synonym: "psychogenic amnesia" EXACT []
 xref: CSP2005:2483-7018
@@ -8862,7 +8863,7 @@ xref: NCI:C118765
 xref: OMIM:217500
 xref: SNOMEDCT_US_2018_03_01:35055000
 xref: UMLS_CUI:C0155120
-is_a: DOID:10124 ! corneal disease
+is_a: DOID:5614 ! eye disease
 
 [Term]
 id: DOID:11165
@@ -11267,7 +11268,7 @@ is_a: DOID:65 ! connective tissue disease
 id: DOID:11838
 name: penis sarcoma
 namespace: disease_ontology
-def: "A sarcoma and malignant neoplasm of penis that is located_in the penis." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20penis&c=pc&ss=]
+def: "A sarcoma and malignant neoplasm of penis that is located_in the penis." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5020210/]
 subset: NCIthesaurus
 synonym: "sarcoma of penis" EXACT []
 xref: NCI2004_11_17:C7730
@@ -16217,7 +16218,7 @@ is_a: DOID:4 ! disease
 id: DOID:13521
 name: tetanus neonatorum
 namespace: disease_ontology
-def: "A tetanus that occurs in newborn babies when the birth cord stump gets dirty through cutting it with an unclean blade or applying substances containing bacteria to it. The infection has symptom stiff body, has symptom muscle spasms, has symptom difficulty in breathing, and has symptom exhaustion." [url:http\://www.doh.gov.za/programmes/polio/nnt.pdf]
+def: "A tetanus that occurs in newborn babies when the birth cord stump gets dirty through cutting it with an unclean blade or applying substances containing bacteria to it. The infection has symptom stiff body, has symptom muscle spasms, has symptom difficulty in breathing, and has symptom exhaustion." [url:https\://www.malacards.org/card/tetanus_neonatorum]
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
 synonym: "neonatal tetanus" EXACT []
@@ -19002,7 +19003,7 @@ id: DOID:14448
 name: 46 XY gonadal dysgenesis
 namespace: disease_ontology
 def: "A gonadal dysgenesis that is characterized by a normal 46,XY karyotype along with a progressive loss of germ cells on the developing gonads of an embryo." [url:http\://en.wikipedia.org/wiki/XY_gonadal_dysgenesis, url:https\://ghr.nlm.nih.gov/condition/swyer-syndrome#synonyms]
-comment: The term 46,XY DSD has replaced the following terms Male pseudohermaphrodite, Undervirilization of an XY male, Undermasculinization of an XY male, Mixed gonadal dysgenesis, Partial gonadal dysgenesis.\n\nOMIM mapping confirmed by DO. [SN].\nOMIM mapping confirmed by DO. [LS].
+comment: The term 46,XY DSD has replaced the following terms Male pseudohermaphrodite, Undervirilization of an XY male, Undermasculinization of an XY male, Mixed gonadal dysgenesis, Partial gonadal dysgenesis. OMIM mapping confirmed by DO. [SN]. OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "46,XY SEX REVERSAL" EXACT []
 synonym: "Pure gonadal dysgenesis 46,XY" EXACT []
@@ -19843,7 +19844,7 @@ name: trichorhinophalangeal syndrome type I
 namespace: disease_ontology
 alt_id: DOID:0050552
 def: "An autosomal dominant disease that is characterized by short stature, sparse hair, a bulbous nasal tip and cone-shaped epiphyses (the growing ends of bones), as well as severe generalized shortening of all finger and toe bones (brachydactyly)." [url:http\://rarediseases.info.nih.gov/gard/7802/trichorhinophalangeal-syndrome-type-3/resources/1, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=77258, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/732/viewAbstract]
-comment: OMIM mapping confirmed by DO. [LS].\n
+comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Trichorhinophalangeal dysplasia type I" RELATED [MTH:NOCODE]
@@ -21815,7 +21816,7 @@ is_a: DOID:162 ! cancer
 id: DOID:1791
 name: peritoneal carcinoma
 namespace: disease_ontology
-def: "A carcinoma that is located_in the inside of the abdomen." [url:http\://www.cancerhelp.org.uk/about-cancer/cancer-questions/primary-peritoneal-carcinoma]
+def: "A carcinoma that is located_in the inside of the abdomen." [url:https\://www.cedars-sinai.org/health-library/diseases-and-conditions/p/peritoneal-cancer.html]
 subset: NCIthesaurus
 synonym: "primary peritoneal carcinoma" EXACT []
 xref: NCI:C40022
@@ -21902,7 +21903,7 @@ is_a: DOID:1793 ! pancreatic cancer
 id: DOID:1796
 name: pancreas sarcoma
 namespace: disease_ontology
-def: "A pancreatic cancer that is located_in the pancreas and that arises from transformed cells of mesenchymal origin." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20pancreas&c=pc&ss=]
+def: "A pancreatic cancer that is located_in the pancreas and that arises from transformed cells of mesenchymal origin." [url:http\://radioncology.com/en/articles/5126.html]
 subset: NCIthesaurus
 synonym: "sarcoma of pancreas" EXACT []
 xref: NCI2004_11_17:C5715
@@ -21994,7 +21995,7 @@ is_a: DOID:0060123 ! connective tissue benign neoplasm
 id: DOID:1800
 name: neuroendocrine carcinoma
 namespace: disease_ontology
-def: "A carcinoma that derives_from neuroendocrine cells." [url:http\://www.carcinomatype.com/what-is-neuroendocrine-carcinoma.html]
+def: "A carcinoma that derives_from neuroendocrine cells." [url:https\://www.mayoclinic.org/diseases-conditions/neuroendocrine-tumors/symptoms-causes/syc-20354132]
 subset: NCIthesaurus
 xref: MESH:D018278
 xref: NCI:C3773
@@ -23020,7 +23021,7 @@ is_a: DOID:5672 ! large intestine cancer
 id: DOID:1995
 name: rectum sarcoma
 namespace: disease_ontology
-def: "A sarcoma and malignant tumor of rectum that is located_in the rectum." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20rectum&c=pc&ss=]
+def: "A sarcoma and malignant tumor of rectum that is located_in the rectum." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23712252]
 subset: NCIthesaurus
 synonym: "sarcoma of rectum" EXACT []
 xref: NCI2004_11_17:C5548
@@ -24649,7 +24650,7 @@ id: DOID:2338
 name: mandibular cancer
 namespace: disease_ontology
 alt_id: DOID:12408
-def: "A jaw cancer and mandibular disease that affects your lower jawbone." [url:http\://www.ehow.com/facts_5891679_treatment-cancer-mandible.html]
+def: "A jaw cancer and mandibular disease that affects your lower jawbone." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C35178]
 subset: NCIthesaurus
 synonym: "malignant neoplasm of inferior maxilla" EXACT []
 synonym: "malignant neoplasm of lower Jaw bone" EXACT []
@@ -26247,7 +26248,7 @@ id: DOID:2632
 name: papillary serous adenocarcinoma
 namespace: disease_ontology
 alt_id: DOID:5589
-def: "A papillary adenocarcinoma that derives_from epithelial cells originating in glandular tissue, which form complex papillary structures with psammoma bodies." [url:http\://www.uptodate.com/contents/topic.do?topicKey=OBGYN/3192]
+def: "A papillary adenocarcinoma that derives_from epithelial cells originating in glandular tissue, which form complex papillary structures with psammoma bodies." [url:https\://www.ajronline.org/doi/10.2214/ajr.182.6.1821534]
 subset: NCIthesaurus
 synonym: "Micropapillary serous carcinoma" EXACT []
 synonym: "Papillary serous carcinoma" EXACT []
@@ -27548,7 +27549,7 @@ is_a: DOID:219 ! colon cancer
 id: DOID:2784
 name: lung sarcoma
 namespace: disease_ontology
-def: "A lung cancer that is located_in the lung and that arises from transformed cells of mesenchymal origin." [url:http\://www.asco.org/ASCOv2/Meetings/Abstracts?&vmview=abst_detail_view&confID=26&abstractID=4315]
+def: "A lung cancer that is located_in the lung and that arises from transformed cells of mesenchymal origin." [url:https\://www.sciencedirect.com/topics/medicine-and-dentistry/lung-sarcoma]
 subset: NCIthesaurus
 synonym: "pulmonary sarcoma" EXACT []
 xref: NCI2004_11_17:C4860
@@ -28090,7 +28091,7 @@ is_a: DOID:2600 ! laryngeal carcinoma
 id: DOID:2877
 name: larynx sarcoma
 namespace: disease_ontology
-def: "A larynx cancer that has_material_basis_in abnormally proliferating cells derives_from embryonic mesoderm." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20larynx&c=pc&ss=]
+def: "A larynx cancer that has_material_basis_in abnormally proliferating cells derives_from embryonic mesoderm." [url:https\://www.sciencedirect.com/science/article/pii/S1726490109701893]
 subset: NCIthesaurus
 synonym: "sarcoma of larynx" EXACT []
 xref: NCI2004_11_17:C6020
@@ -29070,7 +29071,7 @@ is_a: DOID:234 ! colon adenocarcinoma
 id: DOID:303
 name: substance-related disorder
 namespace: disease_ontology
-def: "A disease of mental health involving the abuse or dependence on a substance that is ingested in order to produce a high, alter one's senses, or otherwise affect functioning." [url:http\://allpsych.com/disorders/substance/index.html]
+def: "A disease of mental health involving the abuse or dependence on a substance that is ingested in order to produce a high, alter one's senses, or otherwise affect functioning." [url:https\://www.psychologytoday.com/us/conditions/substance-related-disorders]
 subset: NCIthesaurus
 xref: MESH:D019966
 xref: NCI:C92203
@@ -30475,7 +30476,7 @@ id: DOID:3234
 name: central nervous system lymphoma
 namespace: disease_ontology
 alt_id: DOID:3233
-def: "A hematologic cancer that has_material_basis_in lymphoma located_in central nervous system." [url:http\://www.braintumor.org/CNSLymphoma/]
+def: "A hematologic cancer that has_material_basis_in lymphoma located_in central nervous system." [url:https\://www.lls.org/lymphoma/non-hodgkin-lymphoma/treatment/treatment-for-aggressive-nhl-subtypes/central-nervous-system-cns-lymphoma]
 subset: NCIthesaurus
 synonym: "Microglioma" EXACT []
 synonym: "primary CNS lymphoma" EXACT []
@@ -33598,7 +33599,7 @@ is_a: DOID:5656 ! cranial nerve disease
 id: DOID:3672
 name: rhabdoid cancer
 namespace: disease_ontology
-def: "A childhood kidney neoplasm that is located_in the kidney, liver, muscle, heart, lung, soft tissues, skin and central nervous system." [url:http\://www.cancer.iu.edu/renaltumors/rhabdoid/facts/]
+def: "A childhood kidney neoplasm that is located_in the kidney, liver, muscle, heart, lung, soft tissues, skin and central nervous system." [url:https\://rarediseases.info.nih.gov/diseases/7572/rhabdoid-tumor]
 subset: NCIthesaurus
 synonym: "malignant rhabdoid tumour" EXACT []
 synonym: "Rhabdoid sarcoma" EXACT []
@@ -35707,7 +35708,7 @@ is_a: DOID:4007 ! bladder carcinoma
 id: DOID:4007
 name: bladder carcinoma
 namespace: disease_ontology
-def: "A urinary bladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://nci.nih.gov/cancertopics/types/bladder]
+def: "A urinary bladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:https\://www.mayoclinic.org/diseases-conditions/bladder-cancer/symptoms-causes/syc-20356104]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "carcinoma of urinary bladder" EXACT []
@@ -35744,7 +35745,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:4012
 name: papillary transitional carcinoma
 namespace: disease_ontology
-def: "A transitional cell carcinoma that has several papillary fronds with central fibrovascular core lined by transitional type epithelium." [url:http\://esynopsis.uchc.edu/eAtlas/GU/908.htm]
+def: "A transitional cell carcinoma that has several papillary fronds with central fibrovascular core lined by transitional type epithelium." [url:https\://www.healthline.com/health/papillary-urothelial-carcinoma]
 subset: NCIthesaurus
 synonym: "Papillary transitional cell carcinoma" EXACT []
 xref: NCI:C4122
@@ -36046,7 +36047,7 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 id: DOID:4050
 name: mediastinum sarcoma
 namespace: disease_ontology
-def: "A sarcoma and malignant mediastinal mesenchymnal tumor that is located_in the mediastinum." [url:http\://www.searchmedica.com/search.html?q=mediastinal%20sarcoma]
+def: "A sarcoma and malignant mediastinal mesenchymnal tumor that is located_in the mediastinum." [url:https\://www.sciencedirect.com/science/article/pii/S1556086415305220]
 subset: NCIthesaurus
 synonym: "sarcoma of mediastinum" EXACT []
 xref: NCI2004_11_17:C6606
@@ -36090,7 +36091,7 @@ is_a: DOID:1995 ! rectum sarcoma
 id: DOID:4054
 name: prostate sarcoma
 namespace: disease_ontology
-def: "A prostate cancer that is located_in the prostate." [url:http\://www.searchmedica.com/search.html?q=prostate%20sarcoma]
+def: "A prostate cancer that is located_in the prostate." [url:https\://radiopaedia.org/articles/prostate-sarcoma]
 subset: NCIthesaurus
 synonym: "sarcoma of the prostate" EXACT []
 xref: NCI2004_11_17:C7731
@@ -36124,7 +36125,7 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 id: DOID:4058
 name: gallbladder sarcoma
 namespace: disease_ontology
-def: "A sarcoma that is located_in the gallbladder." [url:http\://www.searchmedica.com/search.html?q=gallbladder%20sarcoma&c=pc&ss=defLink&fr=true]
+def: "A sarcoma that is located_in the gallbladder." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19194282]
 subset: NCIthesaurus
 synonym: "malignant mesenchymal tumor of gallbladder" EXACT []
 xref: NCI2004_11_17:C5736
@@ -36172,7 +36173,7 @@ is_a: DOID:4062 ! testis sarcoma
 id: DOID:4062
 name: testis sarcoma
 namespace: disease_ontology
-def: "A sarcoma and malignant neoplasm of testis that is located_in the testis." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20testis&c=pc&ss=]
+def: "A sarcoma and malignant neoplasm of testis that is located_in the testis." [url:https\://jamanetwork.com/journals/jama/fullarticle/462919]
 subset: NCIthesaurus
 synonym: "sarcoma of testis" EXACT []
 xref: NCI2004_11_17:C6359
@@ -36560,7 +36561,7 @@ is_a: DOID:4 ! disease
 id: DOID:4151
 name: skull base chordoma
 namespace: disease_ontology
-def: "A chordoma that is located_in the skull base." [url:http\://www.bcm.edu/oto/grand/10192.html]
+def: "A chordoma that is located_in the skull base." [url:https\://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=134&ContentID=85]
 subset: NCIthesaurus
 synonym: "Chordoma of the Skull Base" EXACT []
 xref: NCI2004_11_17:C5453
@@ -36572,7 +36573,7 @@ is_a: DOID:3302 ! chordoma
 id: DOID:4152
 name: chondroid chordoma
 namespace: disease_ontology
-def: "A chordoma that histologically derives_from chordoma, derives_from chondroma, and derives_from chondrosarcoma." [url:http\://www.bcm.edu/oto/grand/10192.html]
+def: "A chordoma that histologically derives_from chordoma, derives_from chondroma, and derives_from chondrosarcoma." [url:http\://www.ajnr.org/ajnr-case-collections-diagnosis/chondroid-chordoma]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chondroid chordoma" EXACT []
@@ -37736,7 +37737,7 @@ id: DOID:4336
 name: tinea favosa
 namespace: disease_ontology
 alt_id: DOID:0050109
-def: "A tinea capitis that results_in fungal infection located_in scalp, located_in glabrous skin or located_in nail, has_material_basis_in Ascomycota fungi that belong to a group called dermatophytes and results_in_formation_of scutula, yellowish cup-shaped crusts of dense masses of mycelium and epithelial debris, which develop at the surface of a hair follicle with the shaft in the center of the raised lesion. Removal of these crusts reveals an oozing, moist, red base. Later, atrophy of the skin occurs leaving a cicatricial alopecia and scarring." [url:http\://www.doctorfungus.org/mycoses/human/other/Tinea_capitis_favosa.htm]
+def: "A tinea capitis that results_in fungal infection located_in scalp, located_in glabrous skin or located_in nail, has_material_basis_in Ascomycota fungi that belong to a group called dermatophytes and results_in_formation_of scutula, yellowish cup-shaped crusts of dense masses of mycelium and epithelial debris, which develop at the surface of a hair follicle with the shaft in the center of the raised lesion. Removal of these crusts reveals an oozing, moist, red base. Later, atrophy of the skin occurs leaving a cicatricial alopecia and scarring." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3885931/]
 subset: NCIthesaurus
 synonym: "favus" EXACT []
 xref: ICD10CM:B35
@@ -38602,7 +38603,7 @@ name: clear cell adenocarcinoma
 namespace: disease_ontology
 alt_id: DOID:2617
 alt_id: DOID:4940
-def: "An adenocarcinoma that derives_from epithelial cells which have clear cytoplasm." [url:http\://www.pathconsultddx.com/pathCon/diagnosis?pii=S1559-8675%2806%2970166-8]
+def: "An adenocarcinoma that derives_from epithelial cells which have clear cytoplasm." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/clear-cell-adenocarcinoma]
 subset: NCIthesaurus
 synonym: "Clear cell adenocarcinoma" EXACT []
 synonym: "malignant Mesonephroma" EXACT []
@@ -38636,7 +38637,7 @@ is_a: DOID:299 ! adenocarcinoma
 id: DOID:4471
 name: chromophobe renal cell carcinoma
 namespace: disease_ontology
-def: "A renal cell carcinoma that has_material_basis_in chromophobe cell that appear pale when viewed under microscope, but that are larger and display different features than clear cells." [url:http\://cancergenome.nih.gov/cancersselected/ChromophobeRenalCellCarcinoma, url:http\://www.cancer.org/acs/groups/cid/documents/webcontent/003107-pdf.pdf]
+def: "A renal cell carcinoma that has_material_basis_in chromophobe cell that appear pale when viewed under microscope, but that are larger and display different features than clear cells." [url:http\://www.cancer.org/acs/groups/cid/documents/webcontent/003107-pdf.pdf, url:https\://rarediseases.info.nih.gov/diseases/6064/chromophobe-renal-cell-carcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "chromophobe adenocarcinoma" EXACT []
@@ -40970,7 +40971,7 @@ is_a: DOID:3185 ! spinal cord glioma
 id: DOID:4866
 name: salivary gland adenoid cystic carcinoma
 namespace: disease_ontology
-def: "A salivary gland carcinoma that is characterized by a distinctive pattern in which abnormal nests or cords of epithelial cells surround and/or infiltrate ducts or glandular structures within the affected organ. These structures are typically filled with a mucous-like material or contain abnormal fibrous membranes." [url:http\://www.cigna.com/healthinfo/nord1109.html]
+def: "A salivary gland carcinoma that is characterized by a distinctive pattern in which abnormal nests or cords of epithelial cells surround and/or infiltrate ducts or glandular structures within the affected organ. These structures are typically filled with a mucous-like material or contain abnormal fibrous membranes." [url:https\://oralcancerfoundation.org/facts/rare/adenoid-cystic-carcinoma/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adenoid cystic cancer" EXACT []
@@ -41670,7 +41671,7 @@ is_a: DOID:4896 ! bile duct adenocarcinoma
 id: DOID:4948
 name: gallbladder carcinoma
 namespace: disease_ontology
-def: "A gallbladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://nci.nih.gov/cancertopics/types/gallbladder/]
+def: "A gallbladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:https\://www.mayoclinic.org/diseases-conditions/gallbladder-cancer/symptoms-causes/syc-20353370]
 subset: NCIthesaurus
 synonym: "cancer of the gallbladder" EXACT []
 synonym: "carcinoma gallbladder" EXACT []
@@ -42522,7 +42523,7 @@ id: DOID:5093
 name: thoracic cancer
 namespace: disease_ontology
 alt_id: DOID:3937
-def: "An organ system cancer located_in the thoracic cavity that develops in the different types of cells within the lungs, as well as less common cancers of the esophagus, the trachea, or the chest wall." [url:http\://www.advocatehealth.com/cmc/body.cfm?id=203]
+def: "An organ system cancer located_in the thoracic cavity that develops in the different types of cells within the lungs, as well as less common cancers of the esophagus, the trachea, or the chest wall." [url:https\://radonc.ucsf.edu/thoracic-cancers]
 subset: NCIthesaurus
 synonym: "Thoracic tumor" EXACT []
 synonym: "thorax cancer" EXACT []
@@ -43499,7 +43500,7 @@ is_a: DOID:5262 ! heart sarcoma
 id: DOID:5262
 name: heart sarcoma
 namespace: disease_ontology
-def: "A sarcoma and malignant neoplasm of heart that is located_in the heart." [url:http\://www.urmc.rochester.edu/encyclopedia/content.cfm?pageid=P06597]
+def: "A sarcoma and malignant neoplasm of heart that is located_in the heart." [url:https\://www.hopkinsmedicine.org/health/conditions-and-diseases/sarcoma/cardiac-sarcoma]
 subset: NCIthesaurus
 synonym: "cardiac sarcoma" EXACT []
 synonym: "sarcoma of Heart" EXACT []
@@ -44337,7 +44338,7 @@ is_a: DOID:2860 ! hemoglobinopathy
 id: DOID:5381
 name: bile duct adenoma
 namespace: disease_ontology
-def: "A biliary tract benign neoplasm that results_in a small firm white nodule with multiple bile ducts that are located_in a fibrous stroma." [url:http\://www.mercksource.com/pp/us/cns/cns_hl_dorlands_split.jsp?pg=/ppdocs/us/common/dorlands/dorland/one/000001598.htm]
+def: "A biliary tract benign neoplasm that results_in a small firm white nodule with multiple bile ducts that are located_in a fibrous stroma." [url:https\://www.sciencedirect.com/topics/medicine-and-dentistry/bile-duct-adenoma]
 subset: NCIthesaurus
 synonym: "Cholangioadenoma" EXACT []
 xref: MESH:D002759
@@ -44444,7 +44445,7 @@ is_a: DOID:5656 ! cranial nerve disease
 id: DOID:5390
 name: clear cell adenoma
 namespace: disease_ontology
-def: "An adenoma that is composed_of cells with a clear cytoplasm located_in ovary." [url:http\://www.pathconsultddx.com/pathCon/diagnosis?pii=S1559-8675%2806%2970166-8]
+def: "An adenoma that is composed_of cells with a clear cytoplasm located_in ovary." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4151]
 subset: NCIthesaurus
 synonym: "Clear cell adenoma" EXACT []
 xref: NCI:C4151
@@ -44550,7 +44551,7 @@ is_a: DOID:657 ! adenoma
 id: DOID:5401
 name: water-clear cell adenoma
 namespace: disease_ontology
-def: "An adenoma that derives_from epithelial cells which have clear cytoplasm." [url:http\://www.pathconsultddx.com/pathCon/diagnosis?pii=S1559-8675%2806%2970166-8]
+def: "An adenoma that derives_from epithelial cells which have clear cytoplasm." [url:https\://www.pathologyoutlines.com/topic/parathyroidwaterclearadenoma.html]
 subset: NCIthesaurus
 synonym: "Water-clear cell adenoma" EXACT []
 xref: NCI:C4155
@@ -46125,7 +46126,7 @@ is_a: DOID:3706 ! fallopian tube adenocarcinoma
 id: DOID:5600
 name: precursor lymphoblastic lymphoma/leukemia
 namespace: disease_ontology
-def: "A lymphoblastic leukemia that has_material_basis_in immature malignant lymphocytes (lymphoblasts) committed to the B-cell or T-cell lineage and located in bone marrow and located in peripheral blood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C7055]
+def: "A lymphocytic leukemia that has_material_basis_in immature malignant lymphocytes (lymphoblasts) committed to the B-cell or T-cell lineage and located in bone marrow and located in peripheral blood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C7055]
 subset: NCIthesaurus
 xref: NCI:C7055
 xref: UMLS_CUI:C1335469
@@ -46524,7 +46525,7 @@ is_a: DOID:3459 ! breast carcinoma
 id: DOID:5660
 name: lymphoepithelioma-like carcinoma
 namespace: disease_ontology
-def: "A carcinoma that is a malignant epithelial neoplasm densely infiltrated by lymphoid cells." [url:http\://www.najms.org/resources/PDF++375-376+Lymphoepithelioma+like+carcinoma.pdf]
+def: "A carcinoma that is a malignant epithelial neoplasm densely infiltrated by lymphoid cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5588446/]
 subset: NCIthesaurus
 synonym: "lymphoepithelial carcinoma" EXACT []
 synonym: "Lymphoepithelioma-like carcinoma" EXACT []
@@ -47522,7 +47523,7 @@ is_a: DOID:3211 ! lysosomal storage disease
 id: DOID:5772
 name: central nervous system hematologic cancer
 namespace: disease_ontology
-def: "A hematologic cancer and central nervous system neoplasm that is located_in the central nervous system." [url:http\://www.oncologystat.com/journals/ew/YSONC/Central_Nervous_System_Disease_in_Hematologic_Malignancies_Historical_Perspective_and_Practical_Applications.html]
+def: "A hematologic cancer and central nervous system neoplasm that is located_in the central nervous system." [url:https\://www.merckmanuals.com/professional/ear\,-nose\,-and-throat-disorders/tumors-of-the-head-and-neck/jaw-tumors]
 subset: NCIthesaurus
 synonym: "CNS hematopoietic tumor" EXACT []
 synonym: "hematopoietic neoplasm of central nervous system" RELATED []
@@ -50743,7 +50744,7 @@ name: Cowden syndrome
 namespace: disease_ontology
 alt_id: DOID:3471
 def: "An autosomal dominant disease characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome, url:http\://rarediseases.info.nih.gov/gard/6202/cowden-syndrome/resources/1]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].\n
+comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Cowden disease" EXACT []
@@ -50986,7 +50987,7 @@ is_a: DOID:5861 ! myxoid chondrosarcoma
 id: DOID:6495
 name: adult myxoid chondrosarcoma
 namespace: disease_ontology
-def: "An adult sarcoma of soft tissue and myxoid chondrosarcoma that is composed_of multiple lobules of chondroblast-like cells, arranged in cords and strands, embedded in a myxoid stroma, and separated by fibrous septa." [url:http\://www.pathconsultddx.com/pathCon/diagnosis?pii=S1559-8675%2806%2970409-0]
+def: "An adult sarcoma of soft tissue and myxoid chondrosarcoma that is composed_of multiple lobules of chondroblast-like cells, arranged in cords and strands, embedded in a myxoid stroma, and separated by fibrous septa." [url:https\://www.sciencedirect.com/topics/veterinary-science-and-veterinary-medicine/myxoid-chondrosarcoma]
 subset: NCIthesaurus
 xref: NCI:C27378
 xref: UMLS_CUI:C1332209
@@ -52017,7 +52018,7 @@ id: DOID:672
 name: spleen cancer
 namespace: disease_ontology
 alt_id: DOID:671
-def: "A lymphatic system cancer that affects white blood cells and involves tumor deposits in the spleen." [url:http\://www.wrongdiagnosis.com/s/spleen_cancer/intro.htm]
+def: "A lymphatic system cancer that affects white blood cells and involves tumor deposits in the spleen." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614769/]
 subset: NCIthesaurus
 synonym: "malignant Splenic tumor" EXACT []
 synonym: "malignant tumour of spleen" EXACT []
@@ -52194,7 +52195,7 @@ is_a: DOID:5093 ! thoracic cancer
 id: DOID:6759
 name: bone lymphoma
 namespace: disease_ontology
-def: "A bone cancer and lymphoma by site that results_in lymphoma starting in the bone." [url:http\://lymphoma.about.com/od/nonhodgkinlymphoma/qt/bonelymphoma.htm, url:http\://www.lymphomainfo.net/nhl/types/bone.html]
+def: "A bone cancer and lymphoma by site that results_in lymphoma starting in the bone." [url:http\://lymphoma.about.com/od/nonhodgkinlymphoma/qt/bonelymphoma.htm, url:https\://orthoinfo.aaos.org/en/diseases--conditions/primary-lymphoma-of-bone]
 subset: NCIthesaurus
 synonym: "lymphoma of bone" EXACT []
 synonym: "Lymphoma of the bone" EXACT []
@@ -53508,11 +53509,11 @@ is_a: DOID:707 ! B-cell lymphoma
 id: DOID:7061
 name: precursor B lymphoblastic lymphoma/leukemia
 namespace: disease_ontology
+def: "A precursor lymphoblastic lymphoma/leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
 subset: NCIthesaurus
 xref: NCI:C8936
 xref: UMLS_CUI:C0862030
 is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
-is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
 id: DOID:707
@@ -53904,7 +53905,7 @@ is_a: DOID:848 ! arthritis
 id: DOID:7152
 name: prostate stromal sarcoma
 namespace: disease_ontology
-def: "A stromal sarcoma and sarcoma of prostate and tumor of specialized prostatic stroma that is located_in the prostate." [url:http\://www.gfmer.ch/selected_images_v2/detail_list.php?cat1=13&cat3=1021&stype=d]
+def: "A stromal sarcoma and sarcoma of prostate and tumor of specialized prostatic stroma that is located_in the prostate." [url:http\://www.pathologyoutlines.com/topic/prostatestromalsarcoma.html]
 subset: NCIthesaurus
 synonym: "Stromal sarcoma of the prostate" EXACT []
 xref: NCI2004_11_17:C5524
@@ -56009,7 +56010,7 @@ is_a: DOID:3565 ! meningioma
 id: DOID:7615
 name: sarcomatosis
 namespace: disease_ontology
-def: "A sarcoma that results_in the formation of numerous sarcomas or located_in various parts of the body." [url:http\://www.searchmedica.com/search.html?q=sarcoma%20of%20the%20testis&c=pc&ss=]
+def: "A sarcoma that results_in the formation of numerous sarcomas or located_in various parts of the body." [url:https\://www.merriam-webster.com/dictionary/sarcomatosis]
 subset: NCIthesaurus
 xref: NCI:C4243
 xref: SNOMEDCT_US_2018_03_01:9395006
@@ -57055,16 +57056,16 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C5640
 xref: UMLS_CUI:C1332997
-is_a: DOID:7936 ! precursor T-lymphoblastic lymphoma/leukemia refractory
+is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
 
 [Term]
 id: DOID:7936
-name: precursor T-lymphoblastic lymphoma/leukemia refractory
+name: refractory T lymphoblastic leukemia/lymphoma
 namespace: disease_ontology
 subset: NCIthesaurus
+synonym: "precursor T-lymphoblastic lymphoma/leukemia refractory" EXACT []
 xref: NCI:C8696
 xref: UMLS_CUI:C0854859
-is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
 is_a: DOID:712 ! refractory hematologic cancer
 
 [Term]
@@ -58531,7 +58532,7 @@ is_a: DOID:3350 ! mesenchymal cell neoplasm
 id: DOID:8307
 name: early invasive cervical adenocarcinoma
 namespace: disease_ontology
-def: "A cervical adenocarcinoma that is characterized by tumor cells that are identical to those in adenocarcinoma in situ (ACIS) and mcroscopic findings that suggest invasion." [url:http\://labmed.ucsf.edu/uploads/237/114_ci_2010_adenocarcinoma_of_the_cervix.pdf]
+def: "A cervical adenocarcinoma that is characterized by tumor cells that are identical to those in adenocarcinoma in situ (ACIS) and mcroscopic findings that suggest invasion." [url:https\://www.uptodate.com/contents/invasive-cervical-adenocarcinoma]
 subset: NCIthesaurus
 xref: NCI:C36096
 xref: UMLS_CUI:C1333369
@@ -59017,15 +59018,19 @@ is_a: DOID:8437 ! intestinal obstruction
 id: DOID:8445
 name: intestinal volvulus
 namespace: disease_ontology
+def: "An intestinal obstruction characterized by abnormal rotation of the intestines." [url:https\://www.ncbi.nlm.nih.gov/pubmed/20549505]
 subset: NCIthesaurus
+synonym: "familial intestinal malrotation" EXACT []
 synonym: "Twist of intestine, bowel, or colon" EXACT []
 synonym: "Volvulus" EXACT []
+synonym: "volvulus of midgut" EXACT []
 xref: ICD10CM:K56.2
 xref: ICD9CM:560.2
 xref: ICD9CM_2006:560.2
 xref: MESH:D045822
 xref: MTHICD9_2006:560.2
 xref: NCI:C98963
+xref: OMIM:193250
 xref: SNOMEDCT_US_2018_03_01:90738007
 xref: SNOMEDCT_US_2018_03_01:9707006
 xref: UMLS_CUI:C0042961
@@ -59126,7 +59131,7 @@ xref: MTH:649
 xref: NCI:C34979
 xref: SNOMEDCT_US_2018_03_01:95695004
 xref: UMLS_CUI:C0035304
-is_a: DOID:5679 ! retinal disease
+is_a: DOID:5614 ! eye disease
 
 [Term]
 id: DOID:8469
@@ -59364,7 +59369,7 @@ is_a: DOID:5614 ! eye disease
 id: DOID:8504
 name: impetigo
 namespace: disease_ontology
-def: "A pyoderma consisting of three forms of skin lesions having either a thick, adherent, recurrent, dirty yellow crust with an erythematous margin (common or superficial impetigo) or lessions which are superficial, thin-walled, and bullous as found in bullous impetigo. The lesions in bullous (staphylococcal) impetigo, which are always caused by S aureus, are superficial, thin-walled, and bullous." [url:http\://gsbs.utmb.edu/microbook/ch098.htm]
+def: "A pyoderma consisting of three forms of skin lesions having either a thick, adherent, recurrent, dirty yellow crust with an erythematous margin (common or superficial impetigo) or lessions which are superficial, thin-walled, and bullous as found in bullous impetigo. The lesions in bullous (staphylococcal) impetigo, which are always caused by S aureus, are superficial, thin-walled, and bullous." [url:https\://www.mayoclinic.org/diseases-conditions/impetigo/symptoms-causes/syc-20352352]
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
 xref: ICD10CM:L01
@@ -62821,7 +62826,7 @@ is_a: DOID:870 ! neuropathy
 id: DOID:9245
 name: Alagille syndrome
 namespace: disease_ontology
-def: "A liver disease that is characterized by an accumulation of bile in the liver resulting from a reducted number of liver small bile ducts." [url:http\://digestive.niddk.nih.gov/DDISEASES/pubs/alagille/]
+def: "A liver disease that is characterized by an accumulation of bile in the liver resulting from a reducted number of liver small bile ducts." [url:https\://www.niddk.nih.gov/health-information/liver-disease/alagille-syndrome/definition-facts]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Alagille-Watson syndrome" EXACT []
@@ -64088,9 +64093,11 @@ is_a: DOID:0050127 ! sinusitis
 
 [Term]
 id: DOID:9513
-name: plasmacytic leukemia
+name: plasma cell leukemia
 namespace: disease_ontology
+def: "A plasma cell neoplasm that is characterized by the presence of a circulating clonal plasma cell count that exceeds 2x10^9/L or is 20% of the leukocyte differential count." [url:https\://en.wikipedia.org/wiki/Plasma_cell_leukemia, url:https\://rarediseases.info.nih.gov/diseases/9373/index, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6349791/]
 subset: NCIthesaurus
+synonym: "plasmacytic leukemia" EXACT []
 xref: GARD:9373
 xref: ICD10CM:C90.1
 xref: ICD10CM:C90.10
@@ -64100,7 +64107,7 @@ xref: NCI:C3180
 xref: SNOMEDCT_US_2018_03_01:39193004
 xref: SNOMEDCT_US_2018_03_01:95210003
 xref: UMLS_CUI:C0023484
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:706 ! mature B-cell neoplasm
 
 [Term]
 id: DOID:9521
@@ -64406,7 +64413,7 @@ is_a: DOID:9598 ! fasciitis
 id: DOID:96
 name: staphyloenterotoxemia
 namespace: disease_ontology
-def: "A primary bacterial infectious disease that results_in infection located_in intestine caused by eating food contaminated with enterotoxins produced by bacteria, has_material_basis_in Staphylococcus aureus. The infection has_symptom diarrhea, has_symptom vomiting, has_symptom nausea, has_symptom cramps, and has_symptom weakness." [url:http\://www.fda.gov/Food/FoodSafety/FoodborneIllness/FoodborneIllnessFoodbornePathogensNaturalToxins/BadBugBook/ucm070015.htm, url:http\://www.in.gov/isdh/22420.htm]
+def: "A primary bacterial infectious disease that results_in infection located_in intestine caused by eating food contaminated with enterotoxins produced by bacteria, has_material_basis_in Staphylococcus aureus. The infection has_symptom diarrhea, has_symptom vomiting, has_symptom nausea, has_symptom cramps, and has_symptom weakness." [url:http\://www.in.gov/isdh/22420.htm, url:https\://www.malacards.org/card/staphyloenterotoxemia]
 subset: GOLD
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -65390,7 +65397,7 @@ is_a: DOID:4 ! disease
 id: DOID:9952
 name: acute lymphocytic leukemia
 namespace: disease_ontology
-def: "A lymphoblastic leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
+def: "A lymphocytic leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
 comment: Xref MGI.
 subset: DO_cancer_slim
 subset: DO_rare_slim

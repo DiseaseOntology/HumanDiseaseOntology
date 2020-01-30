@@ -23,7 +23,7 @@ imports: chebi cl foodon geno hp ncbitaxon ro uberon full
 # 	curl -L -o build/robot.jar\
 #	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
-ROBOT := java -jar ../../../build/robot.jar
+ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 
 # ----------------------------------------
 # FULL IMPORTS

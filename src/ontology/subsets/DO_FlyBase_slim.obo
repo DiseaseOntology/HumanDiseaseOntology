@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-01-15/subsets/DO_FlyBase_slim.obo
+data-version: doid/2020-02-04/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -174,6 +174,10 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "MUSCULAR ATROPHY, SPINAL, INFANTILE CHRONIC FORM" EXACT []
 synonym: "MUSCULAR ATROPHY, SPINAL, INTERMEDIATE TYPE" EXACT []
+synonym: "SMA II" EXACT []
+synonym: "SMA2" EXACT []
+synonym: "spinal muscular atrophy 2" EXACT []
+synonym: "spinal muscular atrophy type II" EXACT []
 xref: OMIM:253550
 is_a: DOID:0060160 ! survival motor neuron spinal muscular atrophy
 
@@ -276,7 +280,7 @@ is_a: DOID:9120 ! amyloidosis
 id: DOID:0050676
 name: Birt-Hogg-Dube syndrome
 namespace: disease_ontology
-def: "An autosomal dominant disease that is characterized by the development of skin papules on the head, face and upper torso, has_material_basis_in heterozygous mutation in the gene encoding folliculin on chromosome 17p11." [url:https\://rarediseases.org/rare-diseases/birt-hogg-dube-syndrome/]
+def: "A skin disease that is characterized by the development of skin papules on the head, face and upper torso, has_material_basis_in heterozygous mutation in the gene encoding folliculin on chromosome 17p11." [url:https\://rarediseases.org/rare-diseases/birt-hogg-dube-syndrome/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 xref: GARD:2322
@@ -432,7 +436,7 @@ creation_date: 2013-06-24T12:50:06Z
 id: DOID:0050787
 name: juvenile polyposis syndrome
 namespace: disease_ontology
-def: "An autosomal dominant disease that is characterized by predisposition to hamartomatous benign polyps in the gastrointestinal tract, specifically in the stomach, small intestine, colon, and rectum." [url:http\://ghr.nlm.nih.gov/condition/juvenile-polyposis-syndrome, url:http\://www.cancer.net/cancer-types/juvenile-polyposis-syndrome, url:http\://www.ncbi.nlm.nih.gov/books/NBK1469/]
+def: "A gastrointestinal system disease that is characterized by predisposition to hamartomatous benign polyps in the gastrointestinal tract, specifically in the stomach, small intestine, colon, and rectum." [url:http\://ghr.nlm.nih.gov/condition/juvenile-polyposis-syndrome, url:http\://www.cancer.net/cancer-types/juvenile-polyposis-syndrome, url:http\://www.ncbi.nlm.nih.gov/books/NBK1469/]
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 xref: GARD:3065
@@ -888,10 +892,10 @@ creation_date: 2015-07-14T16:24:56Z
 
 [Term]
 id: DOID:0060352
-name: Kleefstra syndrome
+name: Kleefstra syndrome 1
 namespace: disease_ontology
 alt_id: DOID:0070075
-def: "A syndrome that is characterized by childhood hypotonia, a distinctive facial appearance, speech impediments, developmental disability, epilepsy, congenital and urogenetic defects, microcephaly, corpulence, and psychiatric disorders and that has_material_basis_in a microdeletion in the chromosome region 9q34.3 or by a point mutation in the EHMT1 gene located in that region." [url:http\://ghr.nlm.nih.gov/condition/kleefstra-syndrome, url:https\://en.wikipedia.org/wiki/9q34_deletion_syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/15264279, url:https\://www.ncbi.nlm.nih.gov/pubmed/16826528, url:https\://www.ncbi.nlm.nih.gov/pubmed/21245904]
+def: "A syndrome that is characterized by severe mental retardation, hypotonia, brachy(micro)cephaly, epileptic seizures, flat face with hypertelorism, synophrys, anteverted nares, everted lower lip, carp mouth with macroglossia, and heart defects and that has_material_basis_in a microdeletion in the chromosome region 9q34.3 or by a point mutation in the EHMT1 gene located in that region." [url:https\://en.wikipedia.org/wiki/9q34_deletion_syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/15264279, url:https\://www.ncbi.nlm.nih.gov/pubmed/16826528, url:https\://www.ncbi.nlm.nih.gov/pubmed/21245904]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -904,6 +908,7 @@ xref: NCI:C129976
 xref: OMIM:610253
 xref: ORDO:261494
 xref: UMLS_CUI:C0795833
+is_a: DOID:0080597 ! Kleefstra syndrome
 created_by: elvira
 creation_date: 2015-07-14T16:49:09Z
 
@@ -963,6 +968,14 @@ xref: GARD:10430
 xref: OMIM:607208
 xref: ORDO:33069
 is_a: DOID:1826 ! epilepsy
+
+[Term]
+id: DOID:0080597
+name: Kleefstra syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by developmental delay and intellectual disability, severely limited or absent speech, and weak muscle tone." [url:url\:http\://ghr.nlm.nih.gov/condition/kleefstra-syndrome]
+subset: DO_FlyBase_slim
+xref: OMIM:PS610253
 
 [Term]
 id: DOID:0110731
@@ -1797,6 +1810,7 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Azorean disease" EXACT []
 synonym: "MJD" EXACT []
+synonym: "SCA3" EXACT []
 synonym: "spinocerebellar ataxia 3" EXACT []
 synonym: "spinocerebellar ataxia type 3" EXACT []
 xref: MESH:D017827
@@ -1817,6 +1831,8 @@ subset: NCIthesaurus
 synonym: "spinocerebellar ataxia" EXACT []
 xref: MESH:D020754
 xref: NCI:C82341
+xref: OMIM:PS164400
+xref: ORDO:94
 xref: UMLS_CUI:C0087012
 is_a: DOID:1289 ! neurodegenerative disease
 
@@ -1878,7 +1894,7 @@ synonym: "neoplasm" EXACT []
 id: DOID:14702
 name: branchiootorenal syndrome
 namespace: disease_ontology
-def: "An autosomal dominant disease characterized by branchial arch anomalies (branchial fistulas, clefts, or cysts), hearing impairment, structural defects of the outer, middle, and inner ear, and renal abnormalities." [url:https\://www.ncbi.nlm.nih.gov/pubmed/263442]
+def: "A syndrome characterized by branchial arch anomalies (branchial fistulas, clefts, or cysts), hearing impairment, structural defects of the outer, middle, and inner ear, and renal abnormalities." [url:https\://www.ncbi.nlm.nih.gov/pubmed/263442]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -2162,7 +2178,7 @@ xref: UMLS_CUI:C0175702
 id: DOID:1932
 name: Angelman syndrome
 namespace: disease_ontology
-def: "A chromosomal disease that is characterized by delayed development, intellectual disability, severe speech impairment, and problems with movement and balance." [url:https\://en.wikipedia.org/wiki/Angelman_syndrome, url:https\://ghr.nlm.nih.gov/condition/angelman-syndrome#genes]
+def: "A syndrome that is characterized by delayed development, intellectual disability, severe speech impairment, and problems with movement and balance." [url:https\://en.wikipedia.org/wiki/Angelman_syndrome, url:https\://ghr.nlm.nih.gov/condition/angelman-syndrome#genes]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus

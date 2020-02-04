@@ -262,7 +262,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_10983",
       "meta" : {
         "definition" : {
-          "val" : "A monogenic disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.",
+          "val" : "A syndrome disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Alport_syndrome" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
@@ -976,13 +976,21 @@
       "type" : "CLASS",
       "lbl" : "inherited metabolic disorder"
     } ],
-    "edges" : [ ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050780",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_225"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_10983",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_225"
+    } ],
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.json",
     "meta" : {
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-01-15/subsets/DO_MGI_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-02-04/subsets/DO_MGI_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

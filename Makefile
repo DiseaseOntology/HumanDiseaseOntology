@@ -144,6 +144,9 @@ $(DM).obo: $(DM).owl | build/robot.jar
 	@$(ROBOT) query \
 	 --input $< \
 	 --update src/sparql/remove-ref-type.ru \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
 	annotate \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \

@@ -80,6 +80,39 @@ build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	@echo ""
 
 # ----------------------------------------
+# BRITISH SYNONYMS
+# ----------------------------------------
+
+# Add British synonyms from DO labels and exact synonyms
+# This script requires `pandas` module: `python3 -m pip install pandas`
+
+# Script and pipeline adapted from https://github.com/obophenotype/human-phenotype-ontology
+
+build/british_english_dictionary.csv: | build
+	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
+
+build/synonyms.csv: $(EDIT) src/sparql/doid_synonyms.rq | build
+	@echo "Retrieving DO synonyms..."
+	@$(ROBOT) query -i $< --query $(word 2,$^) $@
+
+build/labels.csv: $(EDIT) src/sparql/doid_labels.rq | build
+	@echo "Retrieving DO labels..."
+	@$(ROBOT) query -i $< --query $(word 2,$^) $@
+
+build/be_synonyms.csv: src/util/compute_british_synonyms.py build/labels.csv build/synonyms.csv \
+build/british_english_dictionary.csv
+	@echo "Building synonyms template..."
+	@python3 $^ $@
+
+build/british_synonyms.owl: $(EDIT) build/be_synonyms.csv 
+	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
+
+add_british_synonyms: $(EDIT) build/british_synonyms.owl
+	@$(ROBOT) merge --input $< --input $(word 2,$^) --collapse-import-closure false --output doid-edit.ofn \
+	&& mv doid-edit.ofn $(EDIT)
+	@echo "British synonyms added to $(EDIT)!"
+
+# ----------------------------------------
 # RELEASE
 # ----------------------------------------
 
@@ -308,7 +341,7 @@ build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/reports
 
 # create a clean diff between last and current reports
 build/reports/report-diff.txt: last-reports new-reports
-	@python src/util/report-diff.py
+	@python3 src/util/report-diff.py
 	@mv $@ $(DIR)/report-diff.txt
 	@echo "Release diff report available at $(DIR)/report-diff.txt"
 
@@ -328,7 +361,7 @@ build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
 	 --labels true --output $@
 
 build/missing-axioms-terms.txt: build/robot.diff
-	@python src/util/parse-diff.py $< $@
+	@python3 src/util/parse-diff.py $< $@
 
 build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt
 	@$(ROBOT) filter \

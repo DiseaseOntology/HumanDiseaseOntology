@@ -71,7 +71,7 @@ df_be_syns['new synonyms 2'] = df_be_syns['be_x'] + '|' + df_be_syns['new synony
 df_be_syns.drop(['new synonyms', 'be_x'], axis=1, inplace=True)
 
 # Add ROBOT template string and sort by ID
-df_be_syns.loc[-1] = ['ID', '', '', 'A has_exact_synonym SPLIT=|']
+df_be_syns.loc[-1] = ['ID', '', '', 'AL has_exact_synonym@en SPLIT=|']
 df_be_syns.index = df_be_syns.index + 1
 df_be_syns.sort_index(inplace=True) 
 df_be_syns.columns = ['ID', 'Label', 'Synonyms', 'British Synonyms']
@@ -79,4 +79,7 @@ df_be_syns['ID'] = df_be_syns['ID'].apply(
 	lambda x: x.replace('http://purl.obolibrary.org/obo/', '').replace('_', ':'))
 
 # Save template
+if df_be_syns.empty:
+	print('No new synonyms to add!')
+	sys.exit(1)
 df_be_syns.to_csv(template, index=False)

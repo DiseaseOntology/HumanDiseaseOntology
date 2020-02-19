@@ -137,13 +137,13 @@
         }, {
           "val" : "ICD10CM:C80"
         }, {
-          "val" : "ICDO:M8000/3"
-        }, {
           "val" : "MESH:D009369"
+        }, {
+          "val" : "ICDO:M8000/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "malignant neoplasm",
+          "val" : "primary cancer",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -151,7 +151,7 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "primary cancer",
+          "val" : "malignant neoplasm",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -303,7 +303,7 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Blood dyscrasia",
+          "val" : "blood disorder",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -311,11 +311,7 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "disease of hematopoietic system",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Blood disease",
+          "val" : "disease of haematopoietic system",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -323,7 +319,19 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "blood disorder",
+          "val" : "Blood disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "disease of hematopoietic system",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "haematopoietic system disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Blood dyscrasia",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -378,11 +386,11 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Viral disease",
+          "val" : "virus infection",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "virus infection",
+          "val" : "Viral disease",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -559,6 +567,27 @@
       "type" : "CLASS",
       "lbl" : "musculoskeletal system disease"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0060072",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Benign_neoplasm", "url:http://www.nlm.nih.gov/medlineplus/benigntumors.html" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_AGR_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "lschriml"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2011-05-11T12:18:41Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "benign neoplasm"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_15",
       "meta" : {
         "definition" : {
@@ -586,27 +615,6 @@
       },
       "type" : "CLASS",
       "lbl" : "reproductive system disease"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0060072",
-      "meta" : {
-        "definition" : {
-          "val" : "A disease of cellular proliferation that results in abnormal growths in the body which lack the ability to metastasize.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Benign_neoplasm", "url:http://www.nlm.nih.gov/medlineplus/benigntumors.html" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_AGR_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "lschriml"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2011-05-11T12:18:41Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "benign neoplasm"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080015",
       "meta" : {
@@ -664,11 +672,7 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "alimentary system disease",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "digestive system disorder",
+          "val" : "gastrointestinal disorder",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -680,7 +684,11 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "gastrointestinal disorder",
+          "val" : "alimentary system disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "digestive system disorder",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -760,40 +768,6 @@
       "type" : "CLASS",
       "lbl" : "disease of metabolism"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_18",
-      "meta" : {
-        "definition" : {
-          "val" : "A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Urinary_system" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "xrefs" : [ {
-          "val" : "UMLS_CUI:C1335051"
-        }, {
-          "val" : "NCI:C27599"
-        }, {
-          "val" : "NCI2004_11_17:C27599"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "urinary tract disease",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Non-neoplastic urinary tract disease",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "DOID:579"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "urinary system disease"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060118",
       "meta" : {
         "definition" : {
@@ -814,6 +788,40 @@
       },
       "type" : "CLASS",
       "lbl" : "thoracic disease"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_18",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Urinary_system" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_AGR_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C1335051"
+        }, {
+          "val" : "NCI:C27599"
+        }, {
+          "val" : "NCI2004_11_17:C27599"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Non-neoplastic urinary tract disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "urinary tract disease",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:579"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "urinary system disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_574",
       "meta" : {
@@ -846,6 +854,10 @@
           "val" : "MESH:D010523"
         } ],
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "peripheral nerve disease",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "peripheral nerve disease",
           "xrefs" : [ "MTH:516" ]
@@ -897,7 +909,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-02-18/subsets/DO_AGR_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-02-19/subsets/DO_AGR_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

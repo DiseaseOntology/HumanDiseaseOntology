@@ -20,9 +20,9 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: products publish post
+release: verify products publish post
 all: imports release
-test: verify
+test: build/reports/report.tsv verify-edit
 
 # ----------------------------------------
 # ROBOT

@@ -1,0 +1,11 @@
+# Ensure that all entities in the disease_ontology namespace have the correct IRI
+
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?s WHERE {
+	?s a owl:Class ;
+	   oboInOwl:hasOBONamespace ?ns .
+	FILTER(STR(?ns) = "disease_ontology")
+	FILTER(!REGEX(STR(?s), "http://purl\\.obolibrary\\.org/obo/DOID_[0-9]{0,7}"))
+}

@@ -22,7 +22,7 @@ HD = src/ontology/HumanDO
 
 release: verify products publish post
 all: imports release
-test: build/reports/report.tsv verify-edit
+test: reason build/reports/report.tsv verify-edit
 
 # ----------------------------------------
 # ROBOT
@@ -39,10 +39,10 @@ update_robot:
 	rm -rf build/robot.jar && make build/robot.jar
 
 build/robot.jar: init
-	curl -L -o $@ https://github.com/beckyjackson/doid-robot/releases/download/1.0.0/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar
 
 # ROBOT with Reason logging suppressed
-ROBOT := java -Dlog4j.configuration=src/util/logging.properties -jar build/robot.jar
+ROBOT := java -jar build/robot.jar
 
 # ----------------------------------------
 # IMPORTS
@@ -62,7 +62,7 @@ $(IMPS): | build/robot.jar
 	@cd src/ontology/imports && make $@
 
 # ----------------------------------------
-# PRE-BUILD REPORT
+# PRE-BUILD TESTS
 # ----------------------------------------
 
 report: build/reports/report.tsv
@@ -78,6 +78,12 @@ build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	 --labels true --output $@
 	@echo "Full DO QC report available at $@"
 	@echo ""
+
+
+# Simple reasoning test
+reason: $(EDIT)
+	@$(ROBOT) reason --input $<
+	@echo "Reasoning completed successfully!"
 
 # ----------------------------------------
 # BRITISH SYNONYMS

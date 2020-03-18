@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-03-05/subsets/NCIthesaurus.obo
+data-version: doid/2020-03-18/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -127,7 +127,7 @@ is_a: DOID:9562 ! primary ciliary dyskinesia
 id: DOID:0050156
 name: idiopathic pulmonary fibrosis
 namespace: disease_ontology
-def: "An idiopathic interstitial pneumonia which is a distinctive type of chronic fibrosing interstitial pneumonia with thick scarring in the lung creating a honeycomb appearance. The main symptoms start insidiously as shortness of breath on exertion, cough, and diminished stamina. Other common complaints include weight loss and fatigue. The level of oxygen in the blood decreases, and the skin may take on a bluish tinge (called cyanosis) and the ends of the fingers may become thick or club-shape. In most people, symptoms worsen over a period ranging from about 6 months to several years." [url:http\://www.merck.com/mmhe/sec04/ch050/ch050b.html?qt=idiopathic%20interstitial%20pneumonia&alt=sh, url:https\://www.ncbi.nlm.nih.gov/pubmed/11790668]
+def: "A pulmonary fibrosis that is characterized by scarring of the lung." [url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "cryptogenic fibrosing alveolitis" EXACT []
@@ -143,7 +143,7 @@ xref: NCI:C35716
 xref: OMIM:178500
 xref: SNOMEDCT_US_2018_03_01:28168000
 xref: UMLS_CUI:C1800706
-is_a: DOID:552 ! pneumonia
+is_a: DOID:3770 ! pulmonary fibrosis
 
 [Term]
 id: DOID:0050157
@@ -2854,6 +2854,7 @@ creation_date: 2015-09-24T16:23:12Z
 id: DOID:0060406
 name: chromosome 18p deletion syndrome
 namespace: disease_ontology
+def: "A chromosomal deletion syndrome that has_material_basis_in partial or complete deletion of the short arm of chromosome 18." [url:https\://pubmed.ncbi.nlm.nih.gov/16691587]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "18p- syndrome" EXACT []
@@ -3148,6 +3149,7 @@ is_a: DOID:12531 ! von Willebrand's disease
 id: DOID:0060592
 name: B-cell adult acute lymphocytic leukemia
 namespace: disease_ontology
+def: "An adult acute ymphoblastic leukemia occurring in adults and that has_mateiral_basis_in B lymphocytes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C9143]
 subset: NCIthesaurus
 synonym: "adult B acute lymphoblastic leukaemia" EXACT []
 synonym: "adult B acute lymphoblastic leukemia" EXACT []
@@ -5672,17 +5674,16 @@ is_a: DOID:10350 ! breast cyst
 id: DOID:1035
 name: aggressive NK-cell leukemia
 namespace: disease_ontology
-def: "A lymphocytic leukemia that is characterized by the systemic proliferation of NK cells closely associated with Epstein-Barr virus and that is located_in the peripheral blood, bone marrow, liver, and spleen." [url:https\://en.wikipedia.org/wiki/Aggressive_NK-cell_leukemia, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C8647, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6191480/]
+def: "A leukemia that is characterized by the systemic proliferation of NK cells closely associated with Epstein-Barr virus and that is located_in the peripheral blood, bone marrow, liver, and spleen." [url:https\://en.wikipedia.org/wiki/Aggressive_NK-cell_leukemia, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C8647, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6191480/]
 subset: NCIthesaurus
 synonym: "aggressive NK-cell leukaemia" EXACT []
 synonym: "large granular Lymphocyte Leukemia, NK-cell type" EXACT []
 synonym: "natural killer cell leukaemia" EXACT []
 synonym: "natural killer cell leukemia" EXACT []
 xref: ICD10CM:C94.8
-xref: NCI2004_11_17:C8647
 xref: NCI:C8647
 xref: UMLS_CUI:C1292777
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:1240 ! leukemia
 
 [Term]
 id: DOID:10350
@@ -5797,6 +5798,7 @@ subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
 synonym: "lymphoblastic leukemia" EXACT []
 synonym: "lymphocytic leukaemia" EXACT []
+synonym: "lymphoid leukemia" EXACT []
 xref: ICD10CM:C91
 xref: ICD10CM:C91.9
 xref: ICD10CM:C91.90
@@ -9164,6 +9166,7 @@ is_a: DOID:2475 ! chronic conjunctivitis
 id: DOID:11212
 name: hydrophthalmos
 namespace: disease_ontology
+def: "A primary congenital glaucoma characterized by early onset glaucoma in one or both eyes with elevated intraocular pressure and increased corneal diameter and has_symptom early vision loss, increased corneal diameter, and increased corneal thickness. Hydrophthalmus is caused by congenital defects of the trabecular meshwork and anterior chamber angle that block aqueous outflow and raises intraocular pressure, leading to optic nerve atrophy and early vision loss." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1135/]
 subset: NCIthesaurus
 xref: ICD10CM:Q15.0
 xref: ICD9CM:743.2
@@ -13675,6 +13678,7 @@ is_a: DOID:0014667 ! disease of metabolism
 id: DOID:12704
 name: ataxia telangiectasia
 namespace: disease_ontology
+def: "An autosomal recessive cerebellar ataxia that is characterized by cerebellar ataxia, telangiectases, immune defects, and a predisposition to malignancy and that has_material_basis_in homozygous or compound heterozygous mutation in the ATM gene on chromosome 11q22." [url:https\://ghr.nlm.nih.gov/condition/ataxia-telangiectasia]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -15014,7 +15018,7 @@ is_a: DOID:2921 ! glomerulonephritis
 id: DOID:13141
 name: uveitis
 namespace: disease_ontology
-def: "A uveal disease is characterized by inflammation of any of the layers of the uvea of the eye, which includes the iris, ciliary body, and choroid." [url:https\://www.mayoclinic.org/diseases-conditions/uveitis/symptoms-causes/syc-20378734]
+def: "An uveal disease is characterized by inflammation of any of the layers of the uvea of the eye, which includes the iris, ciliary body, and choroid." [url:https\://www.mayoclinic.org/diseases-conditions/uveitis/symptoms-causes/syc-20378734]
 subset: NCIthesaurus
 xref: ICD10CM:H20.9
 xref: MESH:D014605
@@ -16368,6 +16372,7 @@ is_a: DOID:0050619 ! paranasal sinus cancer
 id: DOID:13550
 name: angle-closure glaucoma
 namespace: disease_ontology
+def: "A glaucoma characterized by closure of the anterior chamber angle such that aqueous outflow is blocked and the intraocular pressure becomes inappropriately elevated leading to optic nerve damage and visual field loss. Angle-closure glaucoma has_symptom progressive peripheral vision loss, decreased vision, and pain, redness, and headache in acute cases. Angle closure glaucoma can be caused by anatomically narrow angle, injury to the trabecular meshwork, and injuries to the anterior chamber, such as neovascularization and uveitis." [url:https\://en.wikipedia.org/wiki/Glaucoma, url:https\://eyewiki.aao.org/Primary_vs._Secondary_Angle_Closure_Glaucoma]
 subset: NCIthesaurus
 synonym: "ACG - Angle-closure glaucoma" EXACT []
 synonym: "Angle Closure Glaucoma" EXACT []
@@ -16700,6 +16705,7 @@ is_a: DOID:1350 ! paranasal sinus neoplasm
 id: DOID:13641
 name: exfoliation syndrome
 namespace: disease_ontology
+def: "A phacogenic glaucoma that is characterized by open-angle glaucoma related to deposition of extracellular fibrillar material in anterior segment structures, which blocks aqueous fluid outflow, raises intraocular pressure, and leads to eventual optic nerve atrophy and visual field loss. Exfoliation syndrome has_symptom progressive decreased vision, especially peripheral vision. Exfoliation syndrome is caused by age-related deposition of fibrillar material in anterior segment structures." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157521/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Pseudoexfoliation glaucoma" EXACT []
@@ -16712,7 +16718,7 @@ xref: NCI:C129025
 xref: OMIM:177650
 xref: SNOMEDCT_US_2018_03_01:44219007
 xref: UMLS_CUI:C0206368
-is_a: DOID:240 ! iris disease
+is_a: DOID:1686 ! glaucoma
 
 [Term]
 id: DOID:13677
@@ -22273,11 +22279,14 @@ is_a: DOID:9977 ! hallucinogen dependence
 id: DOID:1852
 name: intrahepatic cholestasis
 namespace: disease_ontology
+def: "A cholestasis characterized by impairment of the bile flow caused by obstruction located_in liver." []
 comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "intrahepatic cholestasis of pregnancy" EXACT []
+synonym: "neonatal intrahepatic cholestasis" EXACT []
+xref: GARD:10214
 xref: MESH:D002780
 xref: NCI:C84400
 xref: ORDO:284385
@@ -22446,7 +22455,6 @@ id: DOID:1907
 name: malignant fibrous histiocytoma
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "fibrous histiocytoma, malignant" EXACT []
 synonym: "Fibroxanthosarcoma" EXACT []
 synonym: "malignant fibroxanthoma" EXACT []
 synonym: "MFH" EXACT []
@@ -32345,6 +32353,7 @@ id: DOID:3479
 name: uveal cancer
 namespace: disease_ontology
 alt_id: DOID:12754
+def: "An ocular cancer that is located_in the uvea, which are the pigmented layers of the eye consisting of the iris, ciliary body, and choroid. The uvea is the most common location of intraocular malignancy in adults and may commonly be caused by a subtype of cancer that arises from melanocytes." [url:https\://www.umkelloggeye.org/conditions-treatments/uveal-melanoma-ocular-melanoma]
 subset: NCIthesaurus
 synonym: "malignant uvea neoplasm" EXACT []
 synonym: "malignant Uveal tumor" EXACT []
@@ -46332,40 +46341,41 @@ is_a: DOID:1037 ! lymphocytic leukemia
 id: DOID:5602
 name: T-cell adult acute lymphocytic leukemia
 namespace: disease_ontology
+def: "An adult acute lymphocytic leukemia occurring in adults and that has_material_basis_in T cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C9142]
 subset: NCIthesaurus
 synonym: "Acute Adult T-cell Leukemia-Lymphoma" EXACT []
 synonym: "adult Precursor T Lymphoblastic Leukemia" EXACT []
 synonym: "ATLL" EXACT []
-xref: NCI2004_11_17:C9142
 xref: NCI:C9142
 xref: UMLS_CUI:C0279592
 is_a: DOID:5604 ! adult acute lymphocytic leukemia
 
 [Term]
 id: DOID:5603
-name: acute T cell leukemia
+name: T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "acute T cell leukaemia" EXACT []
+synonym: "acute T cell leukemia" EXACT []
 synonym: "Precursor T Lymphoblastic Leukemia" EXACT []
+synonym: "T Acute Lymphoblastic Leukemia" EXACT []
 synonym: "T-cell acute lymphoblastic leukaemia" EXACT []
-synonym: "T-cell acute lymphoblastic leukemia" EXACT []
 xref: ICD10CM:C91.5
 xref: ICD10CM:C91.50
 xref: MESH:D015459
-xref: NCI2004_11_17:C3183
-xref: NCI:C3184
+xref: NCI:C3183
 xref: SNOMEDCT_US_2018_03_01:77430005
 xref: UMLS_CUI:C0023493
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:9952 ! acute lymphocytic leukemia
 
 [Term]
 id: DOID:5604
 name: adult acute lymphocytic leukemia
 namespace: disease_ontology
+def: "An acute lymphocytic leukemia occurring during adulthood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4967]
 subset: NCIthesaurus
 synonym: "adult acute lymphoid Leukemia" EXACT []
-xref: NCI2004_11_17:C4967
+synonym: "adult ALL" EXACT []
 xref: NCI:C4967
 xref: UMLS_CUI:C0751606
 is_a: DOID:9952 ! acute lymphocytic leukemia
@@ -47259,6 +47269,7 @@ is_a: DOID:3953 ! adrenal gland cancer
 id: DOID:5723
 name: optic atrophy
 namespace: disease_ontology
+def: "An optic nerve disease that is characterized the death of the retinal ganglion cell axons that comprise the optic nerve." [url:https\://eyewiki.aao.org/Optic_Atrophy]
 comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -48831,6 +48842,7 @@ is_a: DOID:3017 ! breast sarcoma
 id: DOID:6003
 name: aleukemic leukemia cutis
 namespace: disease_ontology
+def: "An aleukemic leukemia that is characterized by the infiltration of the skin and subcutaneous tissue by leukemic cells without evidence of leukemia in the bone marrow and peripheral blood." [url:https\://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=20.02d&code=C4983&ns=ncit&type=properties&key=null&b=1&n=0&vse=null]
 subset: NCIthesaurus
 xref: NCI:C4983
 xref: UMLS_CUI:C0887846
@@ -48840,7 +48852,7 @@ is_a: DOID:6004 ! aleukemic leukemia
 id: DOID:6004
 name: aleukemic leukemia
 namespace: disease_ontology
-def: "A leukemia that arises from changes in the tissues forming white blood cells and characterized by a normal or decreased number of white blood cells in the circulating blood." [url:http\://www.merriam-webster.com/medical/aleukemic%20leukemia]
+def: "A leukemia that arises from changes in the tissues forming white blood cells and characterized by the absence of leukemic cells in the peripheral blood." [url:http\://www.merriam-webster.com/medical/aleukemic%20leukemia, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4982]
 subset: NCIthesaurus
 synonym: "aleukemic myelosis" RELATED []
 xref: NCI:C4982
@@ -53251,6 +53263,7 @@ is_a: DOID:3376 ! bone osteosarcoma
 id: DOID:6958
 name: aleukemic monocytic leukemia cutis
 namespace: disease_ontology
+def: "An aleukemic leukemia cutis that is characterized by infiltration of the skin by neoplastic monocytes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C5630]
 subset: NCIthesaurus
 xref: NCI:C5630
 xref: UMLS_CUI:C1332232
@@ -56785,9 +56798,8 @@ is_a: DOID:5468 ! biliary papillomatosis
 id: DOID:7756
 name: neonatal leukemia
 namespace: disease_ontology
+def: "A childhood leukemia that occurs during the neonatal period." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3845]
 subset: NCIthesaurus
-synonym: "Neonatal Leukemia" EXACT []
-xref: NCI2004_11_17:C3845
 xref: NCI:C3845
 xref: UMLS_CUI:C0235813
 is_a: DOID:7757 ! childhood leukemia
@@ -59565,7 +59577,9 @@ is_a: DOID:780 ! placenta disease
 id: DOID:8499
 name: night blindness
 namespace: disease_ontology
+def: "A retinal disease that is characterized by difficulty or the inability to see in relatively low light." [url:https\://en.wikipedia.org/wiki/Nyctalopia]
 subset: NCIthesaurus
+synonym: "nyctalopia" EXACT []
 xref: ICD10CM:H53.6
 xref: ICD10CM:H53.60
 xref: ICD9CM:368.6
@@ -62131,22 +62145,27 @@ is_a: DOID:8719 ! in situ carcinoma
 id: DOID:8997
 name: polycythemia vera
 namespace: disease_ontology
-def: "A primary polycythemia and a myeloproliferative neoplasm characterized by erythroid hyperplasia,  myeloid leukocytosis, thrombocytosis, and splenomegaly." [url:https\://en.wikipedia.org/wiki/Polycythemia_vera, url:https\://rarediseases.info.nih.gov/diseases/7422/polycythemia-vera, url:https\://www.mayoclinic.org/diseases-conditions/polycythemia-vera/symptoms-causes/syc-20355850]
+alt_id: DOID:11868
+def: "A myeloproliferative neoplasm characterized by erythroid hyperplasia,  myeloid leukocytosis, thrombocytosis, and splenomegaly." [url:https\://en.wikipedia.org/wiki/Polycythemia_vera, url:https\://rarediseases.info.nih.gov/diseases/7422/polycythemia-vera, url:https\://www.mayoclinic.org/diseases-conditions/polycythemia-vera/symptoms-causes/syc-20355850]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "chronic erythremia" EXACT []
 synonym: "Osler-Vaquez syndrome" EXACT []
 synonym: "Polycythaemia rubra vera" EXACT []
 synonym: "Proliferative polycythaemia" EXACT []
 xref: GARD:7422
 xref: ICD10CM:D45
+xref: ICD9CM:207.1
 xref: ICD9CM:238.4
 xref: MESH:D011087
 xref: NCI:C3336
 xref: OMIM:263300
 xref: SNOMEDCT_US_2018_03_01:31569001
+xref: SNOMEDCT_US_2018_03_01:48292007
+xref: SNOMEDCT_US_2018_03_01:92810002
 xref: UMLS_CUI:C0032463
-is_a: DOID:10780 ! primary polycythemia
+xref: UMLS_CUI:C0152272
 is_a: DOID:2226 ! myeloproliferative neoplasm
 
 [Term]
@@ -63375,19 +63394,17 @@ is_a: DOID:9267 ! urea cycle disorder
 id: DOID:9273
 name: citrullinemia
 namespace: disease_ontology
-def: "An urea cycle disorder that involves the accumulation of ammonia in the blood." [url:http\://en.wikipedia.org/wiki/Citrullinemia]
+def: "An inherited urea cycle disorder that involves the accumulation of ammonia and other toxic substances in the blood." [url:http\://en.wikipedia.org/wiki/Citrullinemia]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "ASS deficiency" EXACT []
+synonym: "classic citrullinemia" EXACT []
 synonym: "deficiency of citrulline-aspartate ligase" EXACT []
 xref: CSP2005:1849-9492
 xref: ICD10CM:E72.23
 xref: MESH:D020159
 xref: NCI:C84639
-xref: OMIM:215700
-xref: OMIM:603471
-xref: OMIM:605814
 xref: ORDO:187
 xref: SNOMEDCT_US_2018_03_01:15489004
 xref: UMLS_CUI:C0175683
@@ -65083,7 +65100,7 @@ is_a: DOID:9351 ! diabetes mellitus
 id: DOID:9746
 name: hemorrhoid
 namespace: disease_ontology
-def: "A pelvic varix disease characterized by swollen, inflamed veins around the anus or lower rectum." [url:http\://en.wikipedia.org/wiki/Hemorrhoid, url:http\://www.nlm.nih.gov/medlineplus/hemorrhoids.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/19725283]
+def: "A pelvic varices that is characterized by swollen, inflamed veins around the anus or lower rectum." [url:http\://en.wikipedia.org/wiki/Hemorrhoid, url:http\://www.nlm.nih.gov/medlineplus/hemorrhoids.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/19725283]
 subset: NCIthesaurus
 synonym: "hemorrhoidal disease" EXACT []
 xref: ICD10CM:K64
@@ -65639,14 +65656,17 @@ is_a: DOID:1037 ! lymphocytic leukemia
 
 [Term]
 id: DOID:9953
-name: B- and T-cell mixed leukemia
+name: mixed phenotype acute leukemia
 namespace: disease_ontology
+def: "An acute leukemia that is characterized by the occurrance of more than one type of leukemia at the same time resulting from either the occurance of both acute lymphoblastic leukemia blasts and acute myeloblastic leukemia blasts at the same time or leukemic blasts that have features of both ALL and AML on the same cell." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29021517]
 subset: NCIthesaurus
+synonym: "B- and T-cell mixed leukemia" EXACT []
+synonym: "MPAL" EXACT []
 xref: ICD10CM:C95.0
 xref: MESH:D015456
 xref: NCI:C4673
 xref: UMLS_CUI:C0023464
-is_a: DOID:9952 ! acute lymphocytic leukemia
+is_a: DOID:12603 ! acute leukemia
 
 [Term]
 id: DOID:9955

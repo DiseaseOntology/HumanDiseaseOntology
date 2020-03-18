@@ -43,6 +43,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_5723",
       "meta" : {
+        "definition" : {
+          "val" : "An optic nerve disease that is characterized the death of the retinal ganglion cell axons that comprise the optic nerve.",
+          "xrefs" : [ "url:https://eyewiki.aao.org/Optic_Atrophy" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "xrefs" : [ {
           "val" : "ICD9CM:377.10"
@@ -2400,13 +2404,17 @@
       "meta" : {
         "definition" : {
           "val" : "An amyloidosis that is characterized by a loss of sensation in the extremities, cardiomyopathy, nephropathy, vitreous opacities, and CNS amyloidosis resulting from abnormal deposits of amyloid protein in the body's organs and tissues and has_material_basis_in autosomal dominant inheritance of mutations in the TTR gene.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Transthyretin-related_hereditary_amyloidosis", "url:http://ghr.nlm.nih.gov/condition/transthyretin-amyloidosis", "url:http://www.ncbi.nlm.nih.gov/books/NBK1194/", "url:http://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=85451", "url:https://www.ncbi.nlm.nih.gov/pubmed/19372706" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Transthyretin-related_hereditary_amyloidosis", "url:http://ghr.nlm.nih.gov/condition/transthyretin-amyloidosis", "url:http://www.ncbi.nlm.nih.gov/books/NBK1194/", "url:http://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=85451", "url:http://www.paramiloidose.com/en/paramiloidose.php?a=2&id=25", "url:https://www.ncbi.nlm.nih.gov/pubmed/19372706" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "OMIM:105210"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "paramyloidosis",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "transthyretin-related hereditary amyloidosis",
           "xrefs" : [ ]
@@ -2432,6 +2440,9 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0050761"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         }, {
@@ -2473,6 +2484,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_12704",
       "meta" : {
+        "definition" : {
+          "val" : "An autosomal recessive cerebellar ataxia that is characterized by cerebellar ataxia, telangiectases, immune defects, and a predisposition to malignancy and that has_material_basis_in homozygous or compound heterozygous mutation in the ATM gene on chromosome 11q22.",
+          "xrefs" : [ "url:https://ghr.nlm.nih.gov/condition/ataxia-telangiectasia" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "MESH:D001260"
@@ -7217,6 +7232,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1852",
       "meta" : {
+        "definition" : {
+          "val" : "A cholestasis characterized by impairment of the bile flow caused by obstruction located_in liver.",
+          "xrefs" : [ ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "xrefs" : [ {
           "val" : "MESH:D002780"
@@ -7228,8 +7247,14 @@
           "val" : "NCI:C84400"
         }, {
           "val" : "UMLS_CUI:C0008372"
+        }, {
+          "val" : "GARD:10214"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "neonatal intrahepatic cholestasis",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "intrahepatic cholestasis of pregnancy",
           "xrefs" : [ ]
@@ -8568,7 +8593,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-03-05/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-03-18/subsets/DO_FlyBase_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

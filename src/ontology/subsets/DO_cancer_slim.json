@@ -3469,7 +3469,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "B-cell childhood acute lymphoblastic leukemia"
+      "lbl" : "childhood B-cell acute lymphoblastic leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_6052",
       "meta" : {
@@ -3508,15 +3508,31 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
+          "val" : "NCI:C5640"
+        }, {
+          "val" : "UMLS_CUI:C1332997"
+        }, {
           "val" : "NCI:C7953"
         } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T-cell childhood acute lymphocytic leukemia",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "childhood precursor T-lymphoblastic lymphoma/leukemia",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:7933"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "T-cell childhood acute lymphocytic leukemia"
+      "lbl" : "childhood T-cell acute lymphoblastic leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_6053",
       "meta" : {
@@ -3838,7 +3854,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_1037",
       "meta" : {
         "definition" : {
-          "val" : "A leukemia that has_material_basis_in lymphoblasts (immature white blood cells).",
+          "val" : "A leukemia that has_material_basis_in a B-cell or T-cell lineage involving primarily the bone marrow and the peripheral blood.",
           "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=616067" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -3889,7 +3905,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "lymphocytic leukemia"
+      "lbl" : "lymphoid leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_6726",
       "meta" : {
@@ -4065,22 +4081,6 @@
       },
       "type" : "CLASS",
       "lbl" : "atypical teratoid rhabdoid tumor"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_7933",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "xrefs" : [ {
-          "val" : "UMLS_CUI:C1332997"
-        }, {
-          "val" : "NCI:C5640"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "childhood precursor T-lymphoblastic lymphoma/leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_5750",
       "meta" : {
@@ -8358,7 +8358,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_9952",
       "meta" : {
         "definition" : {
-          "val" : "A lymphocytic leukemia that is characterized by over production of lymphoblasts.",
+          "val" : "A acute leukemia that is characterized by over production of lymphoblasts.",
           "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=46332" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -8383,6 +8383,8 @@
         }, {
           "val" : "ICD10CM:C91.00"
         }, {
+          "val" : "UMLS_CUI:C1335469"
+        }, {
           "val" : "ORDO:513"
         } ],
         "synonyms" : [ {
@@ -8397,17 +8399,28 @@
           "pred" : "hasExactSynonym",
           "val" : "acute lymphocytic leukaemia",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "ALL",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "precursor lymphoblastic lymphoma/leukemia",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "Xref MGI."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:5600"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "acute lymphocytic leukemia"
+      "lbl" : "acute lymphoblastic leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1790",
       "meta" : {
@@ -9864,10 +9877,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060108"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_7933",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1037"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080182",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_684"
@@ -9901,7 +9910,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-03-18/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-03-20/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

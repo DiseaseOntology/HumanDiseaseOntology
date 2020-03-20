@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-03-18/subsets/NCIthesaurus.obo
+data-version: doid/2020-03-20/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -1109,7 +1109,7 @@ xref: MESH:D015459
 xref: NCI:C3184
 xref: SNOMEDCT_US_2018_03_01:77430005
 xref: UMLS_CUI:C0023493
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:5603 ! T-cell acute lymphoblastic leukemia
 
 [Term]
 id: DOID:0050562
@@ -3759,21 +3759,26 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Childhood Acute Lymphoblastic Leukemia" EXACT []
 xref: NCI:C3168
-is_a: DOID:9952 ! acute lymphocytic leukemia
+is_a: DOID:9952 ! acute lymphoblastic leukemia
 
 [Term]
 id: DOID:0080145
-name: T-cell childhood acute lymphocytic leukemia
+name: childhood T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
+alt_id: DOID:7933
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in T-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C7953]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "childhood precursor T-lymphoblastic lymphoma/leukemia" EXACT []
+synonym: "T-cell childhood acute lymphocytic leukemia" EXACT []
+xref: NCI:C5640
 xref: NCI:C7953
+xref: UMLS_CUI:C1332997
 is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
 
 [Term]
 id: DOID:0080146
-name: B-cell childhood acute lymphoblastic leukemia
+name: childhood B-cell acute lymphoblastic leukemia
 namespace: disease_ontology
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in B-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C9140]
 subset: DO_cancer_slim
@@ -3934,6 +3939,18 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C7153
 is_a: DOID:0080524 ! thyroid gland adenocarcinoma
+
+[Term]
+id: DOID:0080630
+name: B-lymphoblastic leukemia/lymphoma
+namespace: disease_ontology
+alt_id: DOID:7061
+def: "A B-cell acute lymphoblastic leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
+subset: NCIthesaurus
+synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
+xref: NCI:C8936
+xref: UMLS_CUI:C0862030
+is_a: DOID:9952 ! acute lymphoblastic leukemia
 
 [Term]
 id: DOID:0090019
@@ -5789,10 +5806,10 @@ is_a: DOID:10366 ! epididymis cancer
 
 [Term]
 id: DOID:1037
-name: lymphocytic leukemia
+name: lymphoid leukemia
 namespace: disease_ontology
 alt_id: DOID:10747
-def: "A leukemia that has_material_basis_in lymphoblasts (immature white blood cells)." [url:http\://www.cancer.gov/dictionary?CdrID=616067]
+def: "A leukemia that has_material_basis_in a B-cell or T-cell lineage involving primarily the bone marrow and the peripheral blood." [url:http\://www.cancer.gov/dictionary?CdrID=616067]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
@@ -5908,7 +5925,7 @@ xref: ORDO:67038
 xref: SNOMEDCT_US_2018_03_01:51092000
 xref: SNOMEDCT_US_2018_03_01:92814006
 xref: UMLS_CUI:C0023434
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:1037 ! lymphoid leukemia
 
 [Term]
 id: DOID:10423
@@ -13382,7 +13399,7 @@ id: DOID:12603
 name: acute leukemia
 namespace: disease_ontology
 alt_id: DOID:12621
-def: "A leukemia that occurs when a hematopoietic stem cell undergoes malignant transformation into a primitive, undifferentiated cell with abnormal longevity. These lymphocytes (acute lymphocytic leukemia [ALL]) or myeloid cells (acute myelocytic leukemia [AML]) proliferate abnormally, replacing normal marrow tissue and hematopoietic cells and inducing anemia, thrombocytopenia, and granulocytopenia." [url:http\://en.wikipedia.org/wiki/Acute_leukemia, url:http\://www.bloodjournal.org/content/bloodjournal/128/3/462.full.pdf, url:http\://www.merck.com/mmpe/sec11/ch142/ch142b.html]
+def: "A lymphoid leukemia that occurs when a hematopoietic stem cell undergoes malignant transformation into a primitive, undifferentiated cell with abnormal longevity producing large numbers of white blood cells to be produced and enter the blood stream." [url:http\://en.wikipedia.org/wiki/Acute_leukemia, url:http\://www.bloodjournal.org/content/bloodjournal/128/3/462.full.pdf, url:http\://www.merck.com/mmpe/sec11/ch142/ch142b.html]
 subset: NCIthesaurus
 synonym: "Stem cell leukaemia" EXACT []
 synonym: "Stem cell Leukemia" EXACT []
@@ -13396,7 +13413,7 @@ xref: SNOMEDCT_US_2018_03_01:24072005
 xref: SNOMEDCT_US_2018_03_01:91855006
 xref: UMLS_CUI:C0085669
 xref: UMLS_CUI:C1378511
-is_a: DOID:1240 ! leukemia
+is_a: DOID:1037 ! lymphoid leukemia
 
 [Term]
 id: DOID:12638
@@ -46328,16 +46345,6 @@ xref: UMLS_CUI:C1517124
 is_a: DOID:3706 ! fallopian tube adenocarcinoma
 
 [Term]
-id: DOID:5600
-name: precursor lymphoblastic lymphoma/leukemia
-namespace: disease_ontology
-def: "A lymphocytic leukemia that has_material_basis_in immature malignant lymphocytes (lymphoblasts) committed to the B-cell or T-cell lineage and located in bone marrow and located in peripheral blood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C7055]
-subset: NCIthesaurus
-xref: NCI:C7055
-xref: UMLS_CUI:C1335469
-is_a: DOID:1037 ! lymphocytic leukemia
-
-[Term]
 id: DOID:5602
 name: T-cell adult acute lymphocytic leukemia
 namespace: disease_ontology
@@ -46354,19 +46361,21 @@ is_a: DOID:5604 ! adult acute lymphocytic leukemia
 id: DOID:5603
 name: T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
+alt_id: DOID:5599
 subset: NCIthesaurus
 synonym: "acute T cell leukaemia" EXACT []
 synonym: "acute T cell leukemia" EXACT []
 synonym: "Precursor T Lymphoblastic Leukemia" EXACT []
+synonym: "precursor T-lymphoblastic lymphoma/leukemia" EXACT []
 synonym: "T Acute Lymphoblastic Leukemia" EXACT []
-synonym: "T-cell acute lymphoblastic leukaemia" EXACT []
+synonym: "T-cell acute lymphocytic leukaemia" EXACT []
 xref: ICD10CM:C91.5
 xref: ICD10CM:C91.50
 xref: MESH:D015459
 xref: NCI:C3183
 xref: SNOMEDCT_US_2018_03_01:77430005
 xref: UMLS_CUI:C0023493
-is_a: DOID:9952 ! acute lymphocytic leukemia
+is_a: DOID:9952 ! acute lymphoblastic leukemia
 
 [Term]
 id: DOID:5604
@@ -46378,7 +46387,7 @@ synonym: "adult acute lymphoid Leukemia" EXACT []
 synonym: "adult ALL" EXACT []
 xref: NCI:C4967
 xref: UMLS_CUI:C0751606
-is_a: DOID:9952 ! acute lymphocytic leukemia
+is_a: DOID:9952 ! acute lymphoblastic leukemia
 
 [Term]
 id: DOID:5605
@@ -53751,13 +53760,11 @@ is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
 id: DOID:7061
-name: precursor B lymphoblastic lymphoma/leukemia
+name: obsolete precursor B lymphoblastic lymphoma/leukemia
 namespace: disease_ontology
 def: "A precursor lymphoblastic lymphoma/leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
 subset: NCIthesaurus
-xref: NCI:C8936
-xref: UMLS_CUI:C0862030
-is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
+is_obsolete: true
 
 [Term]
 id: DOID:707
@@ -57307,16 +57314,6 @@ subset: NCIthesaurus
 xref: NCI:C39926
 xref: UMLS_CUI:C1515305
 is_a: DOID:5344 ! testicular yolk sac tumor
-
-[Term]
-id: DOID:7933
-name: childhood precursor T-lymphoblastic lymphoma/leukemia
-namespace: disease_ontology
-subset: DO_cancer_slim
-subset: NCIthesaurus
-xref: NCI:C5640
-xref: UMLS_CUI:C1332997
-is_a: DOID:5600 ! precursor lymphoblastic lymphoma/leukemia
 
 [Term]
 id: DOID:7936
@@ -62422,8 +62419,8 @@ subset: zoonotic_infectious_disease
 synonym: "Post Kala-Azar Dermal Leishmaniasis" RELATED [NCI2004_11_17:C34936]
 synonym: "Post Kala-Azar Dermal Leishmaniasis" RELATED []
 synonym: "post-kala-azar dermal infectious disease by leishmaniasis" RELATED []
-synonym: "Post-kala-azar dermal leishmaniasis" RELATED []
 synonym: "Post-kala-azar dermal leishmaniasis" RELATED [SNOMEDCT_2005_07_31:67896006]
+synonym: "Post-kala-azar dermal leishmaniasis" RELATED []
 xref: GARD:6881
 xref: ICD10CM:B55
 xref: ICD10CM:B55.9
@@ -65631,9 +65628,10 @@ is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:9952
-name: acute lymphocytic leukemia
+name: acute lymphoblastic leukemia
 namespace: disease_ontology
-def: "A lymphocytic leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
+alt_id: DOID:5600
+def: "A acute leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
 comment: Xref MGI.
 subset: DO_cancer_slim
 subset: DO_rare_slim
@@ -65641,6 +65639,8 @@ subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []
 synonym: "acute lymphoblastic leukemia" EXACT []
 synonym: "acute lymphocytic leukaemia" EXACT []
+synonym: "ALL" EXACT []
+synonym: "precursor lymphoblastic lymphoma/leukemia" EXACT []
 xref: EFO:0000220
 xref: ICD10CM:C91.0
 xref: ICD10CM:C91.00
@@ -65652,7 +65652,8 @@ xref: ORDO:513
 xref: SNOMEDCT_US_2018_03_01:90151006
 xref: SNOMEDCT_US_2018_03_01:91857003
 xref: UMLS_CUI:C0023449
-is_a: DOID:1037 ! lymphocytic leukemia
+xref: UMLS_CUI:C1335469
+is_a: DOID:12603 ! acute leukemia
 
 [Term]
 id: DOID:9953

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-03-18/subsets/DO_cancer_slim.obo
+data-version: doid/2020-03-20/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 
 [Term]
@@ -657,21 +657,26 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Childhood Acute Lymphoblastic Leukemia" EXACT []
 xref: NCI:C3168
-is_a: DOID:9952 ! acute lymphocytic leukemia
+is_a: DOID:9952 ! acute lymphoblastic leukemia
 
 [Term]
 id: DOID:0080145
-name: T-cell childhood acute lymphocytic leukemia
+name: childhood T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
+alt_id: DOID:7933
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in T-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C7953]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "childhood precursor T-lymphoblastic lymphoma/leukemia" EXACT []
+synonym: "T-cell childhood acute lymphocytic leukemia" EXACT []
+xref: NCI:C5640
 xref: NCI:C7953
+xref: UMLS_CUI:C1332997
 is_a: DOID:0080144 ! childhood acute lymphocytic leukemia
 
 [Term]
 id: DOID:0080146
-name: B-cell childhood acute lymphoblastic leukemia
+name: childhood B-cell acute lymphoblastic leukemia
 namespace: disease_ontology
 def: "A childhood acute lymphoblastic leukemia that has_material_basis in B-cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C9140]
 subset: DO_cancer_slim
@@ -828,10 +833,10 @@ xref: UMLS_CUI:C0600139
 
 [Term]
 id: DOID:1037
-name: lymphocytic leukemia
+name: lymphoid leukemia
 namespace: disease_ontology
 alt_id: DOID:10747
-def: "A leukemia that has_material_basis_in lymphoblasts (immature white blood cells)." [url:http\://www.cancer.gov/dictionary?CdrID=616067]
+def: "A leukemia that has_material_basis_in a B-cell or T-cell lineage involving primarily the bone marrow and the peripheral blood." [url:http\://www.cancer.gov/dictionary?CdrID=616067]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
@@ -3169,7 +3174,7 @@ subset: NCIthesaurus
 synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
 xref: NCI:C27911
 xref: UMLS_CUI:C1302547
-is_a: DOID:1037 ! lymphocytic leukemia
+is_a: DOID:1037 ! lymphoid leukemia
 
 [Term]
 id: DOID:6367
@@ -3730,16 +3735,6 @@ xref: NCI:C6957
 xref: UMLS_CUI:C1332962
 
 [Term]
-id: DOID:7933
-name: childhood precursor T-lymphoblastic lymphoma/leukemia
-namespace: disease_ontology
-subset: DO_cancer_slim
-subset: NCIthesaurus
-xref: NCI:C5640
-xref: UMLS_CUI:C1332997
-is_a: DOID:1037 ! lymphocytic leukemia
-
-[Term]
 id: DOID:7953
 name: nipple duct carcinoma
 namespace: disease_ontology
@@ -4110,9 +4105,10 @@ xref: UMLS_CUI:C0026764
 
 [Term]
 id: DOID:9952
-name: acute lymphocytic leukemia
+name: acute lymphoblastic leukemia
 namespace: disease_ontology
-def: "A lymphocytic leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
+alt_id: DOID:5600
+def: "A acute leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
 comment: Xref MGI.
 subset: DO_cancer_slim
 subset: DO_rare_slim
@@ -4120,6 +4116,8 @@ subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []
 synonym: "acute lymphoblastic leukemia" EXACT []
 synonym: "acute lymphocytic leukaemia" EXACT []
+synonym: "ALL" EXACT []
+synonym: "precursor lymphoblastic lymphoma/leukemia" EXACT []
 xref: EFO:0000220
 xref: ICD10CM:C91.0
 xref: ICD10CM:C91.00
@@ -4131,5 +4129,6 @@ xref: ORDO:513
 xref: SNOMEDCT_US_2018_03_01:90151006
 xref: SNOMEDCT_US_2018_03_01:91857003
 xref: UMLS_CUI:C0023449
-is_a: DOID:1037 ! lymphocytic leukemia
+xref: UMLS_CUI:C1335469
+is_a: DOID:1037 ! lymphoid leukemia
 

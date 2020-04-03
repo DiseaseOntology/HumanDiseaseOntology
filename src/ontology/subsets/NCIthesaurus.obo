@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-04-01/subsets/NCIthesaurus.obo
+data-version: doid/2020-04-03/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -1102,6 +1102,7 @@ id: DOID:0050523
 name: adult T-cell leukemia
 namespace: disease_ontology
 def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Adult T-cell leukemia/lymphoma" EXACT []
 xref: GARD:13103
@@ -3954,6 +3955,7 @@ name: B-lymphoblastic leukemia/lymphoma
 namespace: disease_ontology
 alt_id: DOID:7061
 def: "A B-cell acute lymphoblastic leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
 xref: NCI:C8936
@@ -21258,7 +21260,6 @@ comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "intrahepatic cholestasis of pregnancy" EXACT []
 synonym: "neonatal intrahepatic cholestasis" EXACT []
 xref: GARD:10214
 xref: MESH:D002780
@@ -21420,7 +21421,6 @@ name: malignant fibrous histiocytoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Fibroxanthosarcoma" EXACT []
-synonym: "malignant fibroxanthoma" EXACT []
 synonym: "MFH" EXACT []
 xref: MESH:D051677
 xref: NCI:C4247
@@ -21975,7 +21975,7 @@ is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:1984
-name: rectal neoplasm
+name: benign rectal neoplasm
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "neoplasm of rectum" EXACT []
@@ -44333,6 +44333,7 @@ id: DOID:5603
 name: T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
 alt_id: DOID:5599
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "acute T cell leukaemia" EXACT []
 synonym: "acute T cell leukemia" EXACT []
@@ -44353,6 +44354,7 @@ id: DOID:5604
 name: adult acute lymphocytic leukemia
 namespace: disease_ontology
 def: "An acute lymphocytic leukemia occurring during adulthood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4967]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult acute lymphoid Leukemia" EXACT []
 synonym: "adult ALL" EXACT []
@@ -51830,7 +51832,7 @@ subset: NCIthesaurus
 synonym: "leiomyoma of rectum" EXACT []
 xref: NCI:C5552
 xref: UMLS_CUI:C1335682
-is_a: DOID:1984 ! rectal neoplasm
+is_a: DOID:1984 ! benign rectal neoplasm
 
 [Term]
 id: DOID:7165

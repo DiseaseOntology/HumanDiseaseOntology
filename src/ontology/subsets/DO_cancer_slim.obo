@@ -1,6 +1,23 @@
 format-version: 1.2
-data-version: doid/2020-04-01/subsets/DO_cancer_slim.obo
+data-version: doid/2020-04-03/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
+
+[Term]
+id: DOID:0050523
+name: adult T-cell leukemia
+namespace: disease_ontology
+def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "Adult T-cell leukemia/lymphoma" EXACT []
+xref: GARD:13103
+xref: ICD10CM:C91.5
+xref: MESH:D015459
+xref: NCI:C3184
+xref: SNOMEDCT_US_2019_09_01:110007008
+xref: SNOMEDCT_US_2019_09_01:77430005
+xref: UMLS_CUI:C0023493
+is_a: DOID:715 ! T-cell lymphoblastic leukemia/lymphoma
 
 [Term]
 id: DOID:0050626
@@ -56,6 +73,20 @@ xref: GARD:7368
 is_a: DOID:0050743 ! mature T-cell and NK-cell lymphoma
 created_by: lschriml
 creation_date: 2012-09-18T02:01:49Z
+
+[Term]
+id: DOID:0050751
+name: T-cell large granular lymphocyte leukemia
+namespace: disease_ontology
+def: "A T-cell lymphocytic leukemia that exhibits an unexplained, chronic (> 6 months) elevation in large granular lymphocytes (LGLs) in the peripheral blood." [url:http\://en.wikipedia.org/wiki/T-cell_large_granular_lymphocyte_leukemia]
+subset: DO_cancer_slim
+synonym: "Large granular lymphocytic leukaemia" EXACT []
+synonym: "Large granular lymphocytic leukemia" EXACT []
+synonym: "T-cell large granular lymphocyte leukaemia" EXACT []
+xref: NCI:C4664
+is_a: DOID:715 ! T-cell lymphoblastic leukemia/lymphoma
+created_by: lschriml
+creation_date: 2012-09-18T02:05:41Z
 
 [Term]
 id: DOID:0050787
@@ -801,6 +832,117 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C7153
 is_a: DOID:0080524 ! thyroid gland adenocarcinoma
+
+[Term]
+id: DOID:0080630
+name: B-lymphoblastic leukemia/lymphoma
+namespace: disease_ontology
+alt_id: DOID:7061
+def: "A B-cell acute lymphoblastic leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
+xref: NCI:C8936
+xref: UMLS_CUI:C0862030
+is_a: DOID:0080638 ! B-cell acute lymphoblastic leukemia
+
+[Term]
+id: DOID:0080638
+name: B-cell acute lymphoblastic leukemia
+namespace: disease_ontology
+def: "An acute lymphocytic leukemia characterized by too many B-cell lymphoblasts (immature white blood cells) in the bone marrow and blood." []
+subset: DO_cancer_slim
+synonym: "B acute lymphoblastic leukemia" EXACT []
+synonym: "B-cell acute lymphocytic leukemia" EXACT []
+synonym: "NCI:C8644" EXACT []
+is_a: DOID:9952 ! acute lymphoblastic leukemia
+
+[Term]
+id: DOID:0080643
+name: B-lymphoblastic leukemia/lymphoma with BCR-ABL1
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that derives_from B-lymphoblasts and carries a translocation between the BCR gene on chromosome 22 and the ABL1 gene on chromosome 9. It results in the production of the p190 kd or p210 kd fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80331]
+subset: DO_cancer_slim
+synonym: "B-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1" EXACT []
+xref: NCI:C80331
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080644
+name: B-lymphoblastic leukemia/lymphoma KMT2A rearranged
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the KMT2A gene at 11q23.3 and another gene partner resulting in the production of a KMT2A related fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80342]
+subset: DO_cancer_slim
+synonym: "B-lymphoblastic leukemia/lymphoma with t(v;11q23.3);KMT2A rearranged" EXACT []
+xref: NCI:C80342
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080645
+name: B-lymphoblastic leukemia/lymphoma with ETV6-RUNX1
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the TEL gene on chromosome 12 and the AML1 gene on chromosome 21, (p13.2;q22.1). It results in the production of the TEL-AML1 (ETV6-RUNX1) fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80343]
+subset: DO_cancer_slim
+synonym: "B-lymphoblastic leukemia/lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1" EXACT []
+xref: NCI:C80343
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080646
+name: B-lymphoblastic leukemia/lymphoma with hyperdiploidy
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is  composed of B-lymphoblasts which contain more than 50 and usually less than 66 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80335]
+subset: DO_cancer_slim
+xref: NCI:C80335
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080647
+name: B-lymphoblastic leukemia/lymphoma with hypodiploidy
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is composed of B-lymphoblasts which contain less than 46 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80338]
+subset: DO_cancer_slim
+xref: NCI:C80338
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080648
+name: B-lymphoblastic leukemia/lymphoma with IL3-IGH
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the IL3 gene on chromosome 5 and the IGH locus on chromosome 14, (q31.1;q32.3)." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80346]
+subset: DO_cancer_slim
+synonym: "B-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH" EXACT []
+xref: NCI:C80346
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080649
+name: B-lymphoblastic leukemia/lymphoma with TCF3-PBX1
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the E2A gene on chromosome 19 and the PBX1 gene on chromosome 1." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80347]
+subset: DO_cancer_slim
+synonym: "B Acute Lymphoblastic Leukemia with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)" EXACT []
+synonym: "B-lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1" EXACT []
+xref: NCI:C80347
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080650
+name: B-lymphoblastic leukemia/lymphoma, BCR-ABL1–like
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that has a gene expression profile similar to that of B-ALL with t(9;22)(q34.1;q11.2) BCR-ABL1, but lacks that gene fusion." [url:https\://www.ncbi.nlm.nih.gov/pubmed/31069976]
+subset: DO_cancer_slim
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080651
+name: B-lymphoblastic leukemia/lymphoma with iAMP21
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is characterized by amplification of a portion of chromosome 21." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C130039]
+subset: DO_cancer_slim
+synonym: "Intrachromosomal amplification of chromosome 21 (iAMP21)" EXACT []
+xref: NCI:C130039
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
 [Term]
 id: DOID:10047
@@ -2773,6 +2915,40 @@ xref: UMLS_CUI:C1333767
 is_a: DOID:10534 ! stomach cancer
 
 [Term]
+id: DOID:5603
+name: T-cell acute lymphoblastic leukemia
+namespace: disease_ontology
+alt_id: DOID:5599
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "acute T cell leukaemia" EXACT []
+synonym: "acute T cell leukemia" EXACT []
+synonym: "Precursor T Lymphoblastic Leukemia" EXACT []
+synonym: "precursor T-lymphoblastic lymphoma/leukemia" EXACT []
+synonym: "T Acute Lymphoblastic Leukemia" EXACT []
+synonym: "T-cell acute lymphocytic leukaemia" EXACT []
+xref: ICD10CM:C91.5
+xref: MESH:D015459
+xref: NCI:C3184
+xref: SNOMEDCT_US_2019_09_01:110007008
+xref: SNOMEDCT_US_2019_09_01:77430005
+xref: UMLS_CUI:C0023493
+is_a: DOID:9952 ! acute lymphoblastic leukemia
+
+[Term]
+id: DOID:5604
+name: adult acute lymphocytic leukemia
+namespace: disease_ontology
+def: "An acute lymphocytic leukemia occurring during adulthood." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4967]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "adult acute lymphoid Leukemia" EXACT []
+synonym: "adult ALL" EXACT []
+xref: NCI:C4967
+xref: UMLS_CUI:C0751606
+is_a: DOID:9952 ! acute lymphoblastic leukemia
+
+[Term]
 id: DOID:5648
 name: choroid plexus carcinoma
 namespace: disease_ontology
@@ -3389,6 +3565,16 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C8095
 xref: UMLS_CUI:C0279989
+
+[Term]
+id: DOID:715
+name: T-cell lymphoblastic leukemia/lymphoma
+namespace: disease_ontology
+subset: DO_cancer_slim
+synonym: "T-cell leukemia" EXACT []
+xref: MESH:D015458
+xref: UMLS_CUI:C0023492
+is_a: DOID:5603 ! T-cell acute lymphoblastic leukemia
 
 [Term]
 id: DOID:7231

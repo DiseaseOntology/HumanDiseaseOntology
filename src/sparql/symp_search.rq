@@ -1,16 +1,16 @@
-# Return a list of IDs and labels that contain symptom string in definition
-
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-  
-SELECT ?id ?label ?definition WHERE {  
+
+SELECT ?id ?label ?definition WHERE {
 ?s a owl:Class .
-?s obo:InOwl:id ?id .
+?s oboInOwl:id ?id .
+
+
 ?s rdfs:label ?label .
-?s rdfs:IAO_0000115 ?definition .
-FILTER regex(?label, "^diarrhea*", "i")
-FILTER NOT EXISTS {?s owl:deprecated "true"}
+?s obo:IAO_0000115 ?definition .
+
+?s rdfs:subClassOf* obo:DOID_630 . 
 }
 

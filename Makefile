@@ -38,7 +38,7 @@ build build/reports:
 update_robot:
 	rm -rf build/robot.jar && make build/robot.jar
 
-build/robot.jar: init
+build/robot.jar: build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar
 
 # ROBOT with Reason logging suppressed
@@ -69,7 +69,6 @@ report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
 
-.PHONY: build/reports/report.tsv
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	@echo ""
@@ -312,10 +311,10 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 # Count classes, imports, and logical defs from old and new
 
-post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html
+post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html build/reports/hp-do-overlap.csv
 
 # Get the last build of DO from IRI
-#.PHONY: build/doid-last.owl
+.PHONY: build/doid-last.owl
 build/doid-last.owl: | build/robot.jar
 	@$(ROBOT) merge \
 	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
@@ -327,7 +326,6 @@ QUERIES := $(wildcard src/sparql/*-report.rq)
 
 # target names for previous release reports
 LAST_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(Q))))
-.PHONY: last-reports
 last-reports: $(LAST_REPORTS)
 build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/reports
 	@echo "Counting: $(notdir $(basename $@))"
@@ -337,7 +335,6 @@ build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/reports
 
 # target names for current release reports
 NEW_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(Q))))
-.PHONY: new-reports
 new-reports: $(NEW_REPORTS)
 build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/reports
 	@echo "Counting: $(notdir $(basename $@))"
@@ -352,7 +349,6 @@ build/reports/report-diff.txt: last-reports new-reports
 	@echo "Release diff report available at $(DIR)/report-diff.txt"
 
 # create a count of the various disease branches
-.PHONY: build/reports/branch-count.tsv
 build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
 	@echo "Counting all branches..."
 	@./src/util/branch_count/branch_count.py $< $@
@@ -390,6 +386,13 @@ build/reports/removed-axioms.html: build/doid-last-changed.owl build/doid-curren
 	 --format html \
 	 --output $@
 	@echo "See $@ to review removed axioms"
+
+build/hp-do-terms.tsv: $(DM).owl src/sparql/hp-and-do-terms.rq | build/robot.jar
+	@echo "Finding overlap between HP and DO terms..."
+	@$(ROBOT) query --input $< --query $(word 2,$^) $@
+
+build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
+	@python3 $^ $@
 
 #-----------------------------
 # Ensure proper OBO structure

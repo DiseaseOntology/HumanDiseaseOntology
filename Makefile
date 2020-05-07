@@ -80,7 +80,7 @@ build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 
 
 # Simple reasoning test
-reason: $(EDIT)
+reason: $(EDIT) | build/robot.jar
 	@$(ROBOT) reason --input $<
 	@echo "Reasoning completed successfully!"
 
@@ -96,11 +96,11 @@ reason: $(EDIT)
 build/british_english_dictionary.csv: | build
 	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
 
-build/synonyms.csv: $(EDIT) src/sparql/doid_synonyms.rq | build
+build/synonyms.csv: $(EDIT) src/sparql/doid_synonyms.rq | build/robot.jar
 	@echo "Retrieving DO synonyms..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/labels.csv: $(EDIT) src/sparql/doid_labels.rq | build
+build/labels.csv: $(EDIT) src/sparql/doid_labels.rq | build/robot.jar
 	@echo "Retrieving DO labels..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
@@ -109,10 +109,10 @@ build/british_english_dictionary.csv
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
-build/british_synonyms.owl: $(EDIT) build/be_synonyms.csv 
+build/british_synonyms.owl: $(EDIT) build/be_synonyms.csv | build/robot.jar
 	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
 
-add_british_synonyms: $(EDIT) build/british_synonyms.owl
+add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 	@$(ROBOT) merge --input $< --input $(word 2,$^) --collapse-import-closure false --output doid-edit.ofn \
 	&& mv doid-edit.ofn $(EDIT)
 	@echo "British synonyms added to $(EDIT)!"
@@ -327,7 +327,7 @@ QUERIES := $(wildcard src/sparql/*-report.rq)
 # target names for previous release reports
 LAST_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(Q))))
 last-reports: $(LAST_REPORTS)
-build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/reports
+build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/robot.jar build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -336,7 +336,7 @@ build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/reports
 # target names for current release reports
 NEW_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(Q))))
 new-reports: $(NEW_REPORTS)
-build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/reports
+build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/robot.jar build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -365,21 +365,21 @@ build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
 build/missing-axioms-terms.txt: build/robot.diff
 	@python3 src/util/parse-diff.py $< $@
 
-build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt
+build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt | build/robot.jar
 	@$(ROBOT) filter \
 	 --input $< \
 	 --term-file $(word 2,$^) \
 	 --select "self parents annotations" \
 	 --output $@
 
-build/doid-current-changed.owl: $(DM).owl build/missing-axioms-terms.txt
+build/doid-current-changed.owl: $(DM).owl build/missing-axioms-terms.txt | build/robot.jar
 	@$(ROBOT) filter \
 	 --input $< \
 	 --term-file $(word 2,$^) \
 	 --select "self parents annotations" \
 	 --output $@
 
-build/reports/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | build/reports
+build/reports/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | build/robot.jar build/reports
 	@$(ROBOT) diff \
 	 --left $< \
 	 --right $(word 2,$^) \

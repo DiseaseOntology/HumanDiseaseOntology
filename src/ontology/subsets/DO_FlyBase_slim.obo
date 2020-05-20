@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-04-20/subsets/DO_FlyBase_slim.obo
+data-version: doid/2020-05-20/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -136,7 +136,7 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Erythrokeratodermia Figurata Variabilis" EXACT []
 synonym: "Greither Disease" EXACT []
-xref: MESH:D056266
+xref: MESH:D056266 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84696
 xref: OMIM:PS133200
 xref: ORDO:317
@@ -159,7 +159,7 @@ synonym: "MGA Type 2" EXACT []
 synonym: "MGA type II" EXACT []
 xref: GARD:5890
 xref: ICD10CM:E78.71
-xref: MESH:D056889
+xref: MESH:D056889 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84585
 xref: OMIM:302060
 xref: SNOMEDCT_US_2019_09_01:297231002
@@ -170,7 +170,7 @@ is_a: DOID:3146 ! lipid metabolism disorder
 id: DOID:0050530
 name: intermediate spinal muscular atrophy
 namespace: disease_ontology
-def: "A survival motor neuron spinal muscular atrophy that is characterized by progressive muscular weakness and respiratory failure that typically presents in infancy and drastically reduces length of life, has_material_basis_in mutations in the SMN1 or SMN2 genes that are required for the survival of motor neurons." [url:https\://rarediseases.info.nih.gov/diseases/4945/spinal-muscular-atrophy-type-2]
+def: "A childhood spinal muscular atrophy that is characterized by progressive muscular weakness and respiratory failure, develops in children between the ages of 6 and 12 months and drastically reduces length of life, and has_material_basis_in mutations in the SMN1 or SMN2 genes that are required for the survival of motor neurons." [url:https\://rarediseases.info.nih.gov/diseases/4945/spinal-muscular-atrophy-type-2]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "MUSCULAR ATROPHY, SPINAL, INFANTILE CHRONIC FORM" EXACT []
@@ -179,8 +179,10 @@ synonym: "SMA II" EXACT []
 synonym: "SMA2" EXACT []
 synonym: "spinal muscular atrophy 2" EXACT []
 synonym: "spinal muscular atrophy type II" EXACT []
+xref: NCI:C156310
 xref: OMIM:253550
-is_a: DOID:0060160 ! survival motor neuron spinal muscular atrophy
+xref: UMLS_CUI:C0393538
+is_a: DOID:0060160 ! childhood spinal muscular atrophy
 
 [Term]
 id: DOID:0050547
@@ -466,7 +468,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "CHARGE association" EXACT []
 xref: GARD:29
-xref: MESH:D058747
+xref: MESH:D058747 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C75100
 xref: OMIM:214800
 xref: ORDO:138
@@ -707,26 +709,17 @@ creation_date: 2011-07-22T12:42:50Z
 
 [Term]
 id: DOID:0060160
-name: survival motor neuron spinal muscular atrophy
+name: childhood spinal muscular atrophy
 namespace: disease_ontology
-def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
+def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "spinal muscular atrophies of childhood" EXACT []
-xref: ICD10CM:G12.0
-xref: ICD9CM:335.0
-xref: ICD9CM:335.11
+synonym: "survival motor neuron spinal muscular atrophy" EXACT []
+xref: GARD:7674
 xref: MESH:D014897
-xref: NCI:C118847
-xref: NCI:C156310
 xref: NCI:C85076
-xref: NCI:C98670
-xref: SNOMEDCT_US_2019_09_01:128212001
-xref: SNOMEDCT_US_2019_09_01:54280009
-xref: SNOMEDCT_US_2019_09_01:64383006
-xref: UMLS_CUI:C0043116
-xref: UMLS_CUI:C0152109
-xref: UMLS_CUI:C0393538
+xref: ORDO:70
 xref: UMLS_CUI:C0700595
 is_a: DOID:12377 ! spinal muscular atrophy
 created_by: lschriml
@@ -765,20 +758,11 @@ synonym: "DRPLA" EXACT []
 synonym: "Haw River Syndrome" EXACT []
 synonym: "Naito-Oyanagi disease" EXACT []
 xref: GARD:5643
-xref: MESH:D020191
-xref: NCI:C122653
-xref: NCI:C7636
+xref: MESH:D020191 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: NCI:C122653 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: OMIM:125370
-xref: SNOMEDCT_US_2019_09_01:267581004
 xref: SNOMEDCT_US_2019_09_01:68116008
-xref: SNOMEDCT_US_2019_09_01:764453009
-xref: UMLS_CUI:C0751776
-xref: UMLS_CUI:C0751777
-xref: UMLS_CUI:C0751778
-xref: UMLS_CUI:C0751779
-xref: UMLS_CUI:C0751780
-xref: UMLS_CUI:C0751781
-xref: UMLS_CUI:C0751782
+xref: UMLS_CUI:C0751781 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 is_a: DOID:1441 ! autosomal dominant cerebellar ataxia
 created_by: lschriml
 creation_date: 2011-08-29T01:41:48Z
@@ -1239,7 +1223,7 @@ xref: GARD:3603
 xref: GARD:7038
 xref: ICD10CM:Q02
 xref: ICD9CM:742.1
-xref: MESH:D008831
+xref: MESH:D008831 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C85874
 xref: SNOMEDCT_US_2019_09_01:1829003
 xref: UMLS_CUI:C0025958
@@ -1324,7 +1308,7 @@ synonym: "Steinert disease" EXACT []
 xref: GARD:8310
 xref: ICD10CM:G71.11
 xref: ICD9CM:359.21
-xref: MESH:D009223
+xref: MESH:C535686 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84914
 xref: OMIM:160900
 xref: SNOMEDCT_US_2019_09_01:77956009
@@ -1370,7 +1354,7 @@ is_a: DOID:9884 ! muscular dystrophy
 id: DOID:12377
 name: spinal muscular atrophy
 namespace: disease_ontology
-def: "A motor neuron disease that is a degenerative neuromuscular disease characterized by lower motor neuron degeneration associated with progressive muscle weakness and atrophy." [url:http\://en.wikipedia.org/wiki/Spinal_muscular_atrophy, url:https\://www.ncbi.nlm.nih.gov/pubmed/26022173]
+def: "A motor neuron disease that is a degenerative neuromuscular disease characterized by lower motor neuron degeneration associated with progressive muscle weakness and atrophy." [url:http\://en.wikipedia.org/wiki/Spinal_muscular_atrophy, url:https\://ghr.nlm.nih.gov/condition/spinal-muscular-atrophy, url:https\://www.ncbi.nlm.nih.gov/pubmed/26022173]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 xref: GARD:7674
@@ -1393,7 +1377,7 @@ subset: NCIthesaurus
 synonym: "Boder-Sedgwick syndrome" EXACT []
 synonym: "Louis Bar syndrome" EXACT []
 xref: GARD:5862
-xref: MESH:D001260
+xref: MESH:D001260 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2887
 xref: OMIM:208900
 xref: SNOMEDCT_US_2019_09_01:68504005
@@ -1413,7 +1397,7 @@ synonym: "Friedreich's ataxia" EXACT []
 synonym: "Friedreich's tabes" EXACT []
 xref: GARD:6468
 xref: ICD9CM:334.0
-xref: MESH:D005621
+xref: MESH:D005621 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84718
 xref: SNOMEDCT_US_2019_09_01:10394003
 xref: UMLS_CUI:C0016719
@@ -1623,7 +1607,7 @@ xref: UMLS_CUI:C0015625
 id: DOID:1389
 name: polyneuropathy
 namespace: disease_ontology
-def: "A peripheral system disease that is characterized by is damage affecting peripheral nerves (peripheral neuropathy) in roughly the same areas on both sides of the body, featuring weakness, numbness, pins-and-needles, and burning pain." [url:https\://en.wikipedia.org/wiki/Polyneuropathy, url:https\://www.virginiamason.org/polyneuropathy]
+def: "A peripheral system disease that is characterized by damage affecting peripheral nerves (peripheral neuropathy) in roughly the same areas on both sides of the body, featuring weakness, numbness, pins-and-needles, and burning pain." [url:https\://en.wikipedia.org/wiki/Polyneuropathy, url:https\://www.virginiamason.org/polyneuropathy]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 xref: ICD10CM:A69.22
@@ -1767,7 +1751,7 @@ synonym: "MJD" EXACT []
 synonym: "SCA3" EXACT []
 synonym: "spinocerebellar ataxia 3" EXACT []
 synonym: "spinocerebellar ataxia type 3" EXACT []
-xref: MESH:D017827
+xref: MESH:D017827 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84830
 xref: OMIM:109150
 xref: SNOMEDCT_US_2019_09_01:91952008
@@ -1779,7 +1763,7 @@ id: DOID:1441
 name: autosomal dominant cerebellar ataxia
 namespace: disease_ontology
 alt_id: DOID:2478
-def: "A hereditary ataxia that has_material_basis_in autosomal dominant inheritance." [url:http\://www.ncbi.nlm.nih.gov/books/NBK1138/, url:http\://www.ncbi.nlm.nih.gov/books/NBK22234/]
+def: "A cerebellar ataxia that has_material_basis_in autosomal dominant inheritance." [url:http\://www.ncbi.nlm.nih.gov/books/NBK1138/, url:http\://www.ncbi.nlm.nih.gov/books/NBK22234/]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "spinocerebellar ataxia" EXACT []
@@ -1842,6 +1826,7 @@ def: "A disease that is characterized by abnormally rapid cell division." [url:h
 subset: DO_FlyBase_slim
 synonym: "cell process disease" EXACT []
 synonym: "neoplasm" EXACT []
+property_value: OBI:9991118 "neoplasm" xsd:string
 
 [Term]
 id: DOID:14702
@@ -1937,7 +1922,7 @@ synonym: "Vibrio cholerae" EXACT []
 xref: GARD:6043
 xref: ICD10CM:A00
 xref: ICD9CM:001
-xref: MESH:D002771
+xref: MESH:D002771 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: SNOMEDCT_US_2019_09_01:63650001
 xref: UMLS_CUI:C0008354
 is_a: DOID:0050338 ! primary bacterial infectious disease
@@ -2841,7 +2826,8 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 xref: ICD10CM:G71.1
 xref: ICD9CM:359.2
-xref: MESH:D020967
+xref: MESH:D009223 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020967 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84913
 xref: SNOMEDCT_US_2019_09_01:193237003
 xref: UMLS_CUI:C0553604
@@ -2899,8 +2885,8 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "dystonic disease" EXACT []
 xref: ICD10CM:G24
-xref: MESH:D004421
-xref: MESH:D020821
+xref: MESH:D004421 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020821 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34563
 xref: OMIM:PS128100
 xref: SNOMEDCT_US_2019_09_01:15802004
@@ -3249,6 +3235,7 @@ synonym: "pallidopontonigral degeneration" EXACT []
 synonym: "Wilhemsen-Lynch disease" EXACT []
 xref: GARD:8436
 xref: MESH:C563003
+xref: MESH:D057180 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: OMIM:600274
 xref: ORDO:282
 xref: SNOMEDCT_US_2019_09_01:42369001
@@ -3264,9 +3251,10 @@ subset: DO_FlyBase_slim
 xref: KEGG:05210
 xref: MESH:D015179
 xref: NCI:C2956
+xref: NCI:C4978
 xref: OMIM:114500
-xref: SNOMEDCT_US_2019_09_01:126837005
 xref: UMLS_CUI:C0009404
+xref: UMLS_CUI:C0346629
 is_a: DOID:3119 ! gastrointestinal system cancer
 
 [Term]

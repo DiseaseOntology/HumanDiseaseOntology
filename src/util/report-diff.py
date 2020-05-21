@@ -42,7 +42,7 @@ if __name__ == '__main__':
 		new = 'build/reports/' + r + '-new.tsv'
 		output.append('\n' + r.upper())
 		diff = get_diff(last, new)
-		for h, v in diff.iteritems():
+		for h, v in diff.items():
 			t = '\t'
 			if len(h.strip()) < 5:
 				t = '\t\t\t'

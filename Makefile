@@ -345,8 +345,7 @@ build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/robot.jar build/repor
 # create a clean diff between last and current reports
 build/reports/report-diff.txt: last-reports new-reports
 	@python3 src/util/report-diff.py
-	@mv $@ $(DIR)/report-diff.txt
-	@echo "Release diff report available at $(DIR)/report-diff.txt"
+	@echo "Diff report between current release and last release available at $@"
 
 # create a count of the various disease branches
 build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports

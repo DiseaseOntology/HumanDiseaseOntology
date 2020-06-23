@@ -1,9 +1,0 @@
-# Return a count of non-obsolete classes
-
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-
-SELECT (COUNT(?s) AS ?classes) WHERE {
-	?s a owl:Class .
-	FILTER STRSTARTS(str(?s), "http://purl.obolibrary.org/obo/DOID_")
-	FILTER NOT EXISTS {?s owl:deprecated ?any}
-}

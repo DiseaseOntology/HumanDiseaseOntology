@@ -41,7 +41,6 @@ update_robot:
 build/robot.jar: build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar
 
-# ROBOT with Reason logging suppressed
 ROBOT := java -jar build/robot.jar
 
 # ----------------------------------------
@@ -96,11 +95,11 @@ reason: $(EDIT) | build/robot.jar
 build/british_english_dictionary.csv: | build
 	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
 
-build/synonyms.csv: $(EDIT) src/sparql/doid_synonyms.rq | build/robot.jar
+build/synonyms.csv: $(EDIT) src/sparql/build/doid_synonyms.rq | build/robot.jar
 	@echo "Retrieving DO synonyms..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/labels.csv: $(EDIT) src/sparql/doid_labels.rq | build/robot.jar
+build/labels.csv: $(EDIT) src/sparql/build/doid_labels.rq | build/robot.jar
 	@echo "Retrieving DO labels..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
@@ -139,7 +138,7 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DO).obo: $(DO).owl | build/robot.jar
+$(DO).obo: $(DO).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -148,7 +147,7 @@ $(DO).obo: $(DO).owl | build/robot.jar
 	 --select "parents equivalents" \
 	 --select "anonymous" \
 	query \
-	 --update src/sparql/remove-ref-type.ru \
+	 --update $(word 2,$^) \
 	annotate \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
@@ -178,10 +177,10 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DM).obo: $(DM).owl | build/robot.jar
+$(DM).obo: $(DM).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	@$(ROBOT) query \
 	 --input $< \
-	 --update src/sparql/remove-ref-type.ru \
+	 --update $(word 2,$^) \
 	remove \
 	 --select "parents equivalents" \
 	 --select "anonymous" \
@@ -218,7 +217,7 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	@cp $@ $(HD).owl
 	@echo "Created $@"
 
-$(DNC).obo: $(EDIT) | build/robot.jar
+$(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -227,7 +226,7 @@ $(DNC).obo: $(EDIT) | build/robot.jar
 	 --select "parents equivalents" \
 	 --select "anonymous" \
 	query \
-	 --update src/sparql/remove-ref-type.ru \
+	 --update $(word 2,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
@@ -270,7 +269,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
 	@$(ROBOT) query \
 	 --input $< \
-	 --update src/sparql/remove-ref-type.ru \
+	 --update src/sparql/build/remove-ref-type.ru \
 	annotate \
 	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
@@ -314,7 +313,7 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html build/reports/hp-do-overlap.csv
 
 # Get the last build of DO from IRI
-.PHONY: build/doid-last.owl
+# .PHONY: build/doid-last.owl
 build/doid-last.owl: | build/robot.jar
 	@$(ROBOT) merge \
 	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
@@ -322,21 +321,21 @@ build/doid-last.owl: | build/robot.jar
 	 --output $@
 
 # all report queries
-QUERIES := $(wildcard src/sparql/*-report.rq)
+QUERIES := $(wildcard src/sparql/build/*-report.rq)
 
 # target names for previous release reports
-LAST_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-last.tsv,$(Q))))
+LAST_REPORTS := $(foreach Q,$(QUERIES), build/reports/$(basename $(notdir $(Q)))-last.tsv)
 last-reports: $(LAST_REPORTS)
-build/reports/%-last.tsv: src/sparql/%.rq build/doid-last.owl | build/robot.jar build/reports
+build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-last.owl | build/robot.jar build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
 	 --query $< $@
 
 # target names for current release reports
-NEW_REPORTS := $(foreach Q,$(QUERIES), $(subst src/sparql,build/reports,$(subst .rq,-new.tsv,$(Q))))
+NEW_REPORTS := $(foreach Q,$(QUERIES), build/reports/$(basename $(notdir $(Q)))-new.tsv)
 new-reports: $(NEW_REPORTS)
-build/reports/%-new.tsv: src/sparql/%.rq $(DM).owl | build/robot.jar build/reports
+build/reports/%-new.tsv: src/sparql/build/%.rq $(DM).owl | build/robot.jar build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -361,32 +360,10 @@ build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
 	 --right $(word 2,$^) \
 	 --labels true --output $@
 
-build/missing-axioms-terms.txt: build/robot.diff
-	@python3 src/util/parse-diff.py $< $@
+build/reports/missing-axioms.txt: src/util/parse-diff.py build/robot.diff | build/reports
+	@python3 $^ $@
 
-build/doid-last-changed.owl: build/doid-last.owl build/missing-axioms-terms.txt | build/robot.jar
-	@$(ROBOT) filter \
-	 --input $< \
-	 --term-file $(word 2,$^) \
-	 --select "self parents annotations" \
-	 --output $@
-
-build/doid-current-changed.owl: $(DM).owl build/missing-axioms-terms.txt | build/robot.jar
-	@$(ROBOT) filter \
-	 --input $< \
-	 --term-file $(word 2,$^) \
-	 --select "self parents annotations" \
-	 --output $@
-
-build/reports/removed-axioms.html: build/doid-last-changed.owl build/doid-current-changed.owl | build/robot.jar build/reports
-	@$(ROBOT) diff \
-	 --left $< \
-	 --right $(word 2,$^) \
-	 --format html \
-	 --output $@
-	@echo "See $@ to review removed axioms"
-
-build/hp-do-terms.tsv: $(DM).owl src/sparql/hp-and-do-terms.rq | build/robot.jar
+build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | build/robot.jar
 	@echo "Finding overlap between HP and DO terms..."
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 
@@ -397,9 +374,9 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 # Ensure proper OBO structure
 #-------------------------------
 
-EDIT_V_QUERIES := $(wildcard src/sparql/edit-verify-*.rq)
-V_QUERIES := $(wildcard src/sparql/verify-*.rq)
-DNC_V_QUERIES := src/sparql/dnc-verify-connectivity.rq
+EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
+V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
+DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
     # We are not reduced to single inheritence in DNC
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)

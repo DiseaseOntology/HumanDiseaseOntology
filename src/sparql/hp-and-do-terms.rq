@@ -1,7 +1,0 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?id ?label WHERE {
-	?iri rdfs:label ?label .
-	FILTER(STRSTARTS(STR(?iri), "http://purl.obolibrary.org/obo/DOID_") || STRSTARTS(STR(?iri), "http://purl.obolibrary.org/obo/HP_"))
-	BIND(REPLACE(STR(?iri), "http://purl.obolibrary.org/obo/", "") AS ?id)
-}

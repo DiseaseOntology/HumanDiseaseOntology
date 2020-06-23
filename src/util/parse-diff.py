@@ -1,28 +1,33 @@
 import sys
+import os
+
 
 def main(args):
-	diff_file = args[1]
-	out_file = args[2]
+    diff_file = args[1]
+    out_file = args[2]
 
-	removed = []
-	added = []
-	with open(diff_file, 'r') as f:
-		for line in f:
-			if line.startswith('- EquivalentClasses') or line.startswith('- SubClassOf'):
-				curie = line.split('<')[1].split('>')[0]
-				removed.append(curie)
-			elif line.startswith('+ EquivalentClasses') or line.startswith('+ SubClassOf'):
-				curie = line.split('<')[1].split('>')[0]
-				added.append(curie)
+    removed = []
+    curie_to_label = {}
 
-	missing = list(set(removed) - set(added))
+    with open(diff_file, 'r') as f:
+        for line in f:
+            if line.startswith('- EquivalentClasses') or line.startswith('- SubClassOf'):
+                curie = line.split('<')[1].split('>')[0]
+                label = line.split('[')[1].split(']')[0]
+                removed.append(curie)
+                curie_to_label[curie] = label
 
-	if len(missing) > 0:
-		print("%d terms with removed axioms to review" % len(missing))
+    removed = list(set(removed))
+    with open(out_file, 'w') as f2:
+        for m in removed:
+            label = curie_to_label[m]
+            f2.write(f'{m} ({label})\n')
 
-	with open(out_file, 'w+') as f:
-		for m in missing:
-			f.write(m + '\n')
+    if len(removed) > 0:
+        print(f"WARNING: {len(removed)} terms with removed axioms to review - see {out_file}")
+    else:
+        print("No subclass or equivalent axioms removed!")
+
 
 if __name__ == '__main__':
-	main(sys.argv)
+    main(sys.argv)

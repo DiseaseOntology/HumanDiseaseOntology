@@ -1,14 +1,14 @@
+# return DO classes with an NCI xref
+
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?id ?label (GROUP_CONCAT(DISTINCT ?xref; separator=", ") AS ?xrefs) WHERE {
 	?s oboInOwl:id ?id ;
 	   rdfs:label ?label ;
-	   oboInOwl:hasDbXref ?xref ;
-	   oboInOwl:hasDbXref ?xref2 .
-	FILTER(STR(?xref) != STR(?xref2))
+	   oboInOwl:hasDbXref ?xref .
+	
 	FILTER(STRSTARTS(STR(?xref), "NCI:"))
-	FILTER(STRSTARTS(STR(?xref2), "NCI:"))
 }
 GROUP BY ?id ?label
 ORDER BY ?id

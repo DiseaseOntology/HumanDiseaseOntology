@@ -1,0 +1,16 @@
+# return DO terms that do not have a definition
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?id ?label ?parent WHERE {
+	?s a owl:Class .
+	?s oboInOwl:id ?id .
+	?s rdfs:label ?label .
+	?s rdfs:subClassOf ?super .
+	?super rdfs:label ?parent .
+	FILTER (!isBlank(?super))
+	FILTER NOT EXISTS {?s obo:IAO_0000115 ?def}
+}

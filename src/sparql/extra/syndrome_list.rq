@@ -1,16 +1,14 @@
+# return classes that are descendants of DOID:225 (syndrome)
+
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 SELECT ?id ?label ?definition WHERE {
-?s a owl:Class .
-?s oboInOwl:id ?id .
-
-
-?s rdfs:label ?label .
-?s obo:IAO_0000115 ?definition .
-
-?s rdfs:subClassOf* obo:DOID_630 . 
+	?s a owl:Class .
+	?s oboInOwl:id ?id .
+	?s rdfs:label ?label .
+	?s obo:IAO_0000115 ?definition .
+	?s rdfs:subClassOf* obo:DOID_225 . 
 }
-

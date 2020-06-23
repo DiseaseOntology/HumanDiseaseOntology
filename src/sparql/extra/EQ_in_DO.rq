@@ -1,12 +1,11 @@
+# return DO classes that have an equivalent statement
+
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?id ?label 
-  WHERE {
+SELECT ?id ?label WHERE {
 	?s oboInOwl:id ?id ;
-        rdfs:label ?label ;
-        owl:equivalentClass ?eq .
-	
-	
+       rdfs:label ?label ;
+       owl:equivalentClass ?eq .
  }

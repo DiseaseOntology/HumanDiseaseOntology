@@ -310,7 +310,11 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 # Count classes, imports, and logical defs from old and new
 
-post: build/reports/report-diff.txt build/reports/branch-count.tsv build/reports/removed-axioms.html build/reports/hp-do-overlap.csv
+post: build/reports/report-diff.txt \
+      build/reports/branch-count.tsv \
+      build/reports/removed-axioms.html \
+      build/reports/hp-do-overlap.csv \
+      xref_counts
 
 # Get the last build of DO from IRI
 # .PHONY: build/doid-last.owl
@@ -369,6 +373,13 @@ build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | build/rob
 
 build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
 	@python3 $^ $@
+
+# Counts from "extra" *inDO queries
+X_IN_DO := $(foreach Q,$(shell ls src/sparql/extra/*DO.rq),build/reports/$(notdir $(basename $(Q))).csv)
+xref_counts: $(X_IN_DO)
+build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
+	@echo "Querying for $(notdir $(basename $@)) (see $@)..."
+	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 
 #-----------------------------
 # Ensure proper OBO structure

@@ -85,6 +85,7 @@ foodon:
 	remove --term BFO:0000040 --select "self ancestors" --trim true \
 	remove --select complement --select annotation-properties\
 	 --term-file $(IMP)annotations.txt --trim true \
+	query --update ../../sparql/build/remove_non_en_labels.ru \
 	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
 	 --output "$(IMP)$@_import.owl"

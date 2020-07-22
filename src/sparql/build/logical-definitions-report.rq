@@ -1,0 +1,14 @@
+# Return a count of logical definitions
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT (COUNT(?parent) as ?subClassOf) (COUNT(?eq) as ?equivalent) WHERE {
+	{ ?s rdfs:subClassOf ?parent .
+	  FILTER isBlank(?parent)
+	  FILTER(STRSTARTS(STR(?s), "http://purl.obolibrary.org/obo/DOID_")) }
+	UNION
+	{ ?s owl:equivalentClass ?eq .
+	  FILTER isBlank(?eq)
+	  FILTER(STRSTARTS(STR(?s), "http://purl.obolibrary.org/obo/DOID_")) }
+}

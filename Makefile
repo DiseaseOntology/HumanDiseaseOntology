@@ -150,6 +150,8 @@ $(DO).obo: $(DO).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	 --update $(word 2,$^) \
 	annotate \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	convert \
+	 --check false \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	grep -v ^date | \
@@ -230,6 +232,8 @@ $(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	convert \
+	 --check false \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
@@ -273,7 +277,7 @@ src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
 	annotate \
 	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
-	convert --output $@
+	convert --check false --output $@
 	@echo "Created $@"
 
 src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar

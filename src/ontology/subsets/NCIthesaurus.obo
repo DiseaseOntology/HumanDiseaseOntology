@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-06-18/subsets/NCIthesaurus.obo
+data-version: doid/2020-07-23/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -831,6 +831,7 @@ subset: NCIthesaurus
 synonym: "acid ceramidase deficiency" EXACT []
 synonym: "Farber disease" EXACT []
 synonym: "N-laurylsphingosine deacylase deficiency" EXACT []
+xref: GARD:6426
 xref: MESH:D055577
 xref: NCI:C84710
 xref: OMIM:228000
@@ -992,7 +993,7 @@ namespace: disease_ontology
 def: "A syndrome that is characterized by multiorgan dysfunction. The key features are childhood obesity, blindness due to congenital retinal dystrophy, and sensorineural hearing loss with autosomal recessive inheritance and has_material_basis_in mutations in the ALMS1 gene." [url:http\://en.wikipedia.org/wiki/Alstrom_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-xref: MESH:D056769
+xref: MESH:D056769 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84549
 xref: OMIM:203800
 xref: SNOMEDCT_US_2019_09_01:63702009
@@ -1131,7 +1132,7 @@ is_a: DOID:1826 ! epilepsy
 id: DOID:0050589
 name: inflammatory bowel disease
 namespace: disease_ontology
-def: "An intestinal disease characterized by inflammation located_in all parts of digestive tract." [url:http\://en.wikipedia.org/wiki/Inflammatory_bowel_disease, url:http\://www.mayoclinic.org/diseases-conditions/inflammatory-bowel-disease/basics/definition/con-20034908]
+def: "An intestinal disease characterized by inflammation located in all parts of digestive tract." [url:http\://en.wikipedia.org/wiki/Inflammatory_bowel_disease, url:http\://www.mayoclinic.org/diseases-conditions/inflammatory-bowel-disease/basics/definition/con-20034908]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -1639,7 +1640,7 @@ alt_id: DOID:0060105
 alt_id: DOID:168
 alt_id: DOID:3858
 alt_id: DOID:4981
-def: "An infratentorial cancer that is located_in the lower part of the brain and is a type of primitive neuroectodermal tumor." [url:http\://en.wikipedia.org/wiki/Medulloblastoma, url:http\://www.cancer.gov/dictionary?CdrID=45780]
+def: "An infratentorial cancer that is located_in the lower part of the brain and is a type of primitive neuroectodermal tumor." [url:http\://en.wikipedia.org/wiki/Medulloblastoma, url:http\://www.cancer.gov/dictionary?CdrID=45780, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306779/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -1995,25 +1996,21 @@ creation_date: 2014-09-15T12:50:24Z
 id: DOID:0060215
 name: Balo concentric sclerosis
 namespace: disease_ontology
-def: "A demyelinating disease characterized by the fact that the demyelinated tissues form concentric layers." [url:http\://en.wikipedia.org/wiki/Balo_concentric_sclerosis]
+def: "A multiple sclerosis that is characterized by concentric layers of demyelinated tissues, tumor-like lesions larger than two centimeters and symptoms similar to those of a brain tumor." [url:http\://en.wikipedia.org/wiki/Balo_concentric_sclerosis, url:https\://pubmed.ncbi.nlm.nih.gov/32140322/, url:https\://www.cedars-sinai.edu/Patients/Health-Conditions/Tumefactive-Multiple-Sclerosis.aspx, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3110404/]
 comment: Similar to standard multiple sclerosis.
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "Balo disease" EXACT []
 synonym: "Balo's concentric sclerosis" EXACT []
+synonym: "Tumefactive multiple sclerosis" EXACT []
 xref: GARD:5885
-xref: ICD10CM:G31.81
 xref: ICD10CM:G37.0
 xref: ICD9CM:341.1
 xref: MESH:D002549
-xref: NCI:C35257
 xref: NCI:C84670
-xref: SNOMEDCT_US_2019_09_01:20415001
 xref: SNOMEDCT_US_2019_09_01:230380005
-xref: SNOMEDCT_US_2019_09_01:49692006
-xref: UMLS_CUI:C0004712
 xref: UMLS_CUI:C0007795
-xref: UMLS_CUI:C0205710
-is_a: DOID:3213 ! demyelinating disease
+is_a: DOID:2377 ! multiple sclerosis
 created_by: emitraka
 creation_date: 2014-09-18T15:02:17Z
 
@@ -3714,7 +3711,7 @@ is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:0080122
-name: mitochondrial DNA depletion syndrome 4a
+name: Alpers-Huttenlocher syndrome
 namespace: disease_ontology
 alt_id: DOID:1442
 def: "A mitochondrial DNA depletion syndrome that is characterized by a clinical triad of psychomotor retardation, intractable epilepsy, and liver failure in infants and young children, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the nuclear gene encoding mitochondrial DNA polymerase gamma on chromosome 15q26." [url:https\://en.wikipedia.org/wiki/Mitochondrial_DNA_depletion_syndrome, url:https\://ghr.nlm.nih.gov/condition/alpers-huttenlocher-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/30103161, url:https\://www.ncbi.nlm.nih.gov/pubmed/30451971, url:https\://www.omim.org/entry/203700]
@@ -3725,11 +3722,12 @@ synonym: "Alpers disease" EXACT []
 synonym: "Alpers progressive infantile poliodystrophy" EXACT []
 synonym: "Alpers syndrome" EXACT []
 synonym: "Alpers' disease or gray-matter degeneration" EXACT []
-synonym: "Alpers-Huttenlocher syndrome" EXACT []
+synonym: "Diffuse Cerebral Sclerosis of Schilder" EXACT []
+synonym: "mitochondrial DNA depletion syndrome 4a" EXACT []
 synonym: "progressive sclerosing poliodystrophy" EXACT []
 xref: GARD:5783
 xref: ICD10CM:G31.81
-xref: MESH:D002549
+xref: MESH:D002549 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35257
 xref: OMIM:203700
 xref: ORDO:726
@@ -4149,7 +4147,7 @@ is_a: DOID:9258 ! Waardenburg's syndrome
 id: DOID:0111044
 name: gray platelet syndrome
 namespace: disease_ontology
-def: "An inherited blood coagulation disease characterized by selective deficiency in the number and contents of platelet alpha-granules, macrothrombocytopenia, enlarged platelets, myelofibrosis, splenomegaly, and increased bleeding time that has material_basis_in homozygous or compound heterozygous mutation in the NBEAL2 gene on chromosome 3p21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17768118, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765411, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765412, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765413]
+def: "A blood platelet disease characterized by selective deficiency in the number and contents of platelet alpha-granules, macrothrombocytopenia, enlarged platelets, myelofibrosis, splenomegaly, and increased bleeding time that has material_basis_in homozygous or compound heterozygous mutation in the NBEAL2 gene on chromosome 3p21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17768118, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765411, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765412, url:https\://www.ncbi.nlm.nih.gov/pubmed/21765413]
 subset: NCIthesaurus
 synonym: "BDPLT4" EXACT []
 synonym: "GPS" EXACT []
@@ -4169,7 +4167,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:0111049
 name: platelet-type bleeding disorder 17
 namespace: disease_ontology
-def: "An inherited blood coagulation disease characterized by autosomal dominant inheritance of increased bleeding tendency, gray platelets, thrombocytopenia, thrombasthenia, abnormal megakaryocytes, decreased or absent alpha-granules in platelets, and myelofibrosis that has_material_basis_in heterozygous mutation in the GFI1B gene on chromosome 9q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24325358, url:https\://www.ncbi.nlm.nih.gov/pubmed/5681484]
+def: "A blood platelet disease characterized by autosomal dominant inheritance of increased bleeding tendency, gray platelets, thrombocytopenia, thrombasthenia, abnormal megakaryocytes, decreased or absent alpha-granules in platelets, and myelofibrosis that has_material_basis_in heterozygous mutation in the GFI1B gene on chromosome 9q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24325358, url:https\://www.ncbi.nlm.nih.gov/pubmed/5681484]
 subset: NCIthesaurus
 synonym: "BDPLT17" EXACT []
 synonym: "hereditary thrombasthenia-thrombocytopenia" EXACT []
@@ -5777,10 +5775,11 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:10376
 name: amblyopia
 namespace: disease_ontology
+def: "An eye disease that is characterized by poor vision in one eye resulting from the brain failing to process inputs from one eye and over time favors the other eye." [url:https\://en.wikipedia.org/wiki/Amblyopia, url:https\://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/amblyopia-lazy-eye]
 subset: NCIthesaurus
 xref: ICD10CM:H53.00
 xref: ICD9CM:368.00
-xref: MESH:D000550
+xref: MESH:D000550 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C118764
 xref: SNOMEDCT_US_2019_09_01:387742006
 xref: UMLS_CUI:C0002418
@@ -6402,31 +6401,22 @@ id: DOID:10588
 name: adrenoleukodystrophy
 namespace: disease_ontology
 alt_id: DOID:13451
-def: "A leukodystrophy that disrupts the breakdown of very-long-chain fatty acids resulting in progressive brain damage, failure of the adrenal glands and eventually death." [url:http\://en.wikipedia.org/wiki/Adrenoleukodystrophy, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002165/]
+def: "A leukodystrophy that disrupts the breakdown of very-long-chain fatty acids resulting in progressive brain damage, failure of the adrenal glands and eventually death." [url:http\://en.wikipedia.org/wiki/Adrenoleukodystrophy, url:https\://ghr.nlm.nih.gov/condition/x-linked-adrenoleukodystrophy]
 comment: MESH:D000326w added from NeuroDevNet [WAK].
 subset: NCIthesaurus
 synonym: "ALD" EXACT []
 synonym: "Bronze Schilder disease" EXACT []
-synonym: "diffuse cerebral sclerosis of Schilder" RELATED []
 synonym: "diffuse sclerosis" EXACT []
 synonym: "Encephalitis periaxialis concentrica" EXACT []
 synonym: "Encephalitis periaxialis, Schilder's" EXACT []
-synonym: "Schilder disease" EXACT []
-synonym: "Schilder's disease" RELATED []
 synonym: "Siemerling-Creutzfeldt Disease" EXACT []
-synonym: "SUDANOPHILIC CEREBRAL SCLEROSIS" EXACT []
+synonym: "sudanophilic cerebral sclerosis" EXACT []
 synonym: "X-linked adrenoleukodystrophy" EXACT []
 xref: ICD10CM:E71.52
-xref: ICD10CM:G37.0
-xref: ICD9CM:341.1
-xref: MESH:D000326
-xref: MESH:D002549
+xref: MESH:D000326 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C61252
-xref: NCI:C84670
 xref: OMIM:300100
-xref: SNOMEDCT_US_2019_09_01:49692006
 xref: SNOMEDCT_US_2019_09_01:65389002
-xref: UMLS_CUI:C0007795
 xref: UMLS_CUI:C0162309
 is_a: DOID:10579 ! leukodystrophy
 
@@ -7801,7 +7791,7 @@ is_a: DOID:150 ! disease of mental health
 id: DOID:10933
 name: obsessive-compulsive disorder
 namespace: disease_ontology
-def: "An anxiety disorder that involves unwanted and repeated thoughts, feelings, ideas, sensations (obsessions), or behaviors that make them feel driven to do something (compulsions)." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001926/]
+def: "An anxiety disorder that involves unwanted and repeated thoughts, feelings, ideas, sensations (obsessions), or behaviors that make them feel driven to do something (compulsions)." [url:https\://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd/index.shtml]
 subset: NCIthesaurus
 synonym: "Anancastic neurosis" EXACT []
 synonym: "obsessive compulsive disorder" EXACT []
@@ -9301,7 +9291,7 @@ synonym: "Dactylolysis spontanea" EXACT []
 xref: GARD:9512
 xref: ICD10CM:L94.6
 xref: ICD9CM:136.0
-xref: MESH:D000387
+xref: MESH:D000387 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84544
 xref: OMIM:103400
 xref: SNOMEDCT_US_2019_09_01:38528001
@@ -9899,7 +9889,7 @@ synonym: "Adie's pupil syndrome" EXACT []
 synonym: "Adie's syndrome" EXACT []
 synonym: "Holmes-Adie syndrome" EXACT []
 xref: GARD:5749
-xref: MESH:D000270
+xref: MESH:D000270 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34357
 xref: OMIM:103100
 xref: UMLS_CUI:C0001519
@@ -11044,7 +11034,6 @@ subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "neoplasm of peripheral nerve" EXACT []
 synonym: "nerve sheath neoplasm" EXACT []
-synonym: "nerve sheath tumors" EXACT []
 synonym: "tumor of PNS" EXACT []
 xref: MESH:D010524
 xref: MESH:D018317
@@ -11585,7 +11574,7 @@ is_a: DOID:4 ! disease
 id: DOID:12134
 name: factor VIII deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that has_material_basis_in Factor VIII deficiency, which results in the formation of fibrin deficient clots which makes coagulation much more prolonged." [url:http\://en.wikipedia.org/wiki/Hemophilia_A] {comment="sn:IEDB"}
+def: "A blood coagulation disease that has_material_basis_in Factor VIII deficiency, which results in the formation of fibrin deficient clots which makes coagulation much more prolonged." [url:http\://en.wikipedia.org/wiki/Hemophilia_A] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "classic hemophilia A" EXACT []
@@ -11884,7 +11873,7 @@ is_a: DOID:2998 ! testicular cancer
 id: DOID:12259
 name: hemophilia B
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that has_material_basis_in Factor IX deficiency, which makes coagulation much more prolonged. The disease is inherited as an X-linked recessive trait." [url:http\://www.nlm.nih.gov/medlineplus/ency/article/000539.htm]
+def: "A blood coagulation disease that has_material_basis_in Factor IX deficiency, which makes coagulation much more prolonged. The disease is inherited as an X-linked recessive trait." [url:http\://www.nlm.nih.gov/medlineplus/ency/article/000539.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Congenital factor IX deficiency" EXACT []
@@ -12551,8 +12540,12 @@ id: DOID:1247
 name: blood coagulation disease
 namespace: disease_ontology
 alt_id: DOID:13997
+alt_id: DOID:2212
 alt_id: DOID:9474
+def: "A hematopoietic system disease that is characterized by abnormal blood clotting or bleeding." [url:https\://www.cedars-sinai.edu/Patients/Health-Conditions/Coagulation-System-Disorders.aspx]
 subset: NCIthesaurus
+synonym: "coagulation protein disease" EXACT []
+synonym: "inherited blood coagulation disease" NARROW []
 synonym: "postpartum coagulation defect" EXACT []
 synonym: "postpartum coagulation defect with delivery" EXACT []
 xref: ICD10CM:D68.9
@@ -12657,7 +12650,7 @@ is_a: DOID:870 ! neuropathy
 id: DOID:12531
 name: von Willebrand's disease
 namespace: disease_ontology
-def: "A coagulation protein disease that is a hereditary abnormality which slows the blood clotting process. It arises from a qualitative or quantitative deficiency of von Willebrand factor (vWF), a multimeric protein that is required for platelet adhesion." [url:http\://en.wikipedia.org/wiki/Von_Willebrand_disease, url:http\://ghr.nlm.nih.gov/condition/von-willebrand-disease]
+def: "A blood coagulation disease that is a hereditary abnormality which slows the blood clotting process. It arises from a qualitative or quantitative deficiency of von Willebrand factor (vWF), a multimeric protein that is required for platelet adhesion." [url:http\://en.wikipedia.org/wiki/Von_Willebrand_disease, url:http\://ghr.nlm.nih.gov/condition/von-willebrand-disease]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "vascular hemophilia" EXACT []
@@ -13456,7 +13449,7 @@ name: mucopolysaccharidosis IV
 namespace: disease_ontology
 alt_id: DOID:0050808
 alt_id: DOID:14767
-def: "A mucopolysaccharidosis characterized by a deficiency of the lysosomal enzymes galactose 6-sulfate sulfatase (Type A) or beta-galactosidase (Type B) needed to break down the keratan sulfate sugar chain." [url:http\://en.wikipedia.org/wiki/Morquio_syndrome, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002186/]
+def: "A mucopolysaccharidosis characterized by a deficiency of the lysosomal enzymes galactose 6-sulfate sulfatase (Type A) or beta-galactosidase (Type B) needed to break down the keratan sulfate sugar chain." [url:http\://en.wikipedia.org/wiki/Morquio_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "chondroosteodystrophy" NARROW []
@@ -13507,7 +13500,7 @@ def: "A parasitic helminthiasis infectious disease that involves infection of sk
 subset: NCIthesaurus
 xref: GARD:9742
 xref: ICD10CM:B76.0
-xref: MESH:D000724
+xref: MESH:D000724 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35805
 xref: SNOMEDCT_US_2019_09_01:63479002
 xref: UMLS_CUI:C0002831
@@ -13864,7 +13857,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Apert syndrome" EXACT []
 xref: ICD9CM:755.55
-xref: MESH:D000168
+xref: MESH:D000168 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34348
 xref: OMIM:101200
 xref: SNOMEDCT_US_2019_09_01:268262006
@@ -13969,7 +13962,7 @@ synonym: "granulocytopenia" EXACT []
 synonym: "Granulocytopenic disorder" EXACT []
 synonym: "Granulopenia" EXACT []
 xref: ICD10CM:D70
-xref: MESH:D000380
+xref: MESH:D000380 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: SNOMEDCT_US_2019_09_01:17182001
 xref: UMLS_CUI:C0001824
 is_a: DOID:74 ! hematopoietic system disease
@@ -14961,7 +14954,7 @@ synonym: "AAT deficiency" EXACT []
 xref: GARD:5784
 xref: ICD10CM:E88.01
 xref: ICD9CM:273.4
-xref: MESH:D019896
+xref: MESH:D019896 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84397
 xref: OMIM:613490
 xref: SNOMEDCT_US_2019_09_01:30188007
@@ -16417,7 +16410,7 @@ synonym: "familial hypobetalipoproteinemia" EXACT []
 synonym: "microsomal triglyceride transfer protein deficiency disease" EXACT []
 xref: GARD:5
 xref: ICD10CM:E78.6
-xref: MESH:D000012
+xref: MESH:D000012 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84525
 xref: OMIM:200100
 xref: SNOMEDCT_US_2019_09_01:190787008
@@ -16704,7 +16697,7 @@ synonym: "absence of menstruation" EXACT []
 synonym: "amenia" EXACT []
 xref: ICD10CM:N91.2
 xref: ICD9CM:626.0
-xref: MESH:D000568
+xref: MESH:D000568 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C61443
 xref: SNOMEDCT_US_2019_09_01:14302001
 xref: UMLS_CUI:C0002453
@@ -17404,7 +17397,7 @@ synonym: "Alcohol-related polyneuropathy" EXACT []
 synonym: "Alcoholic polyneuropathy" EXACT []
 xref: ICD10CM:G62.1
 xref: ICD9CM:357.5
-xref: MESH:D020269
+xref: MESH:D020269 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26926
 xref: SNOMEDCT_US_2019_09_01:7916009
 xref: UMLS_CUI:C0085677
@@ -17807,6 +17800,7 @@ xref: GARD:1100
 xref: MESH:D044542
 xref: NCI:C84820
 xref: OMIM:PS151100
+xref: ORDO:500
 xref: SNOMEDCT_US_2019_09_01:111306001
 xref: UMLS_CUI:C0175704
 is_a: DOID:225 ! syndrome
@@ -18690,7 +18684,7 @@ id: DOID:1459
 name: hypothyroidism
 namespace: disease_ontology
 alt_id: DOID:11630
-def: "A thyroid gland disease which involves an underproduction of thyroid hormone." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001393/]
+def: "A thyroid gland disease which involves an underproduction of thyroid hormone." [url:https\://medlineplus.gov/hypothyroidism.html]
 subset: NCIthesaurus
 synonym: "Thyroid deficiency" EXACT []
 synonym: "Thyroid insufficiency" EXACT []
@@ -19654,7 +19648,7 @@ def: "A lung disease that involves a vasoocclusive crisis of the pulmonary vascu
 subset: NCIthesaurus
 synonym: "acute chest syndrome in sickle cell disease" EXACT []
 xref: ICD9CM:517.3
-xref: MESH:D056586
+xref: MESH:D056586 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C138179
 xref: SNOMEDCT_US_2019_09_01:372146004
 xref: UMLS_CUI:C0742343
@@ -20492,7 +20486,7 @@ name: acanthoma
 namespace: disease_ontology
 subset: NCIthesaurus
 xref: GARD:8604
-xref: MESH:D049309
+xref: MESH:D049309 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C7419
 xref: UMLS_CUI:C0846967
 is_a: DOID:3168 ! squamous cell neoplasm
@@ -20776,7 +20770,7 @@ name: adrenal rest tumor
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Adrenal Rest neoplasm" EXACT []
-xref: MESH:D000314
+xref: MESH:D000314 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2860
 xref: SNOMEDCT_US_2019_09_01:54292009
 xref: UMLS_CUI:C0001630
@@ -21679,7 +21673,7 @@ synonym: "happy puppet syndrome" EXACT []
 synonym: "puppetlike syndrome" EXACT []
 xref: GARD:5810
 xref: ICD10CM:Q93.51
-xref: MESH:D017204
+xref: MESH:D017204 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C75462
 xref: OMIM:105830
 xref: SNOMEDCT_US_2019_09_01:76880004
@@ -21789,7 +21783,7 @@ namespace: disease_ontology
 alt_id: DOID:1948
 alt_id: DOID:2829
 alt_id: DOID:9438
-def: "A cholangitis that is characterized_by an inflammation that is located_in the gallbladder." [url:http\://en.wikipedia.org/wiki/Cholecystitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm]
+def: "A cholangitis that is characterized by an inflammation that is located in the gallbladder." [url:http\://en.wikipedia.org/wiki/Cholecystitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "acute and chronic cholecystitis" EXACT []
@@ -21930,11 +21924,11 @@ is_a: DOID:1970 ! fallopian tube carcinosarcoma
 id: DOID:1974
 name: adenosarcoma
 namespace: disease_ontology
-def: "A carcinosarcoma that derives_from simultaneously or consecutively in mesodermal tissue and glandular epithelium." [url:http\://en.wikipedia.org/wiki/Adenosarcoma, url:http\://medical-dictionary.thefreedictionary.com/adenosarcoma]
+def: "A carcinosarcoma that derives_from simultaneously or consecutively in mesodermal tissue and glandular epithelium." [url:http\://en.wikipedia.org/wiki/Adenosarcoma]
 subset: NCIthesaurus
 synonym: "Adenosarcoma" EXACT []
 synonym: "mullerian Adenosarcoma" EXACT []
-xref: MESH:D018195
+xref: MESH:D018195 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C9474
 xref: SNOMEDCT_US_2019_09_01:31470003
 xref: UMLS_CUI:C0001442
@@ -22292,7 +22286,7 @@ is_a: DOID:1508 ! candidiasis
 id: DOID:2059
 name: vulvar disease
 namespace: disease_ontology
-def: "A female reproductive system diseaes that is located_in the vulva." [url:https\://en.wikipedia.org/wiki/Vulvar_disease]
+def: "A female reproductive system disease that is located_in the vulva." [url:https\://en.wikipedia.org/wiki/Vulvar_disease]
 subset: NCIthesaurus
 xref: MESH:D014845
 xref: NCI:C27631
@@ -22972,7 +22966,7 @@ is_a: DOID:5672 ! large intestine cancer
 id: DOID:2211
 name: factor XIII deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that is characterized by easy bleeding, has_symptom prolonged umbilical cord bleeding, epistaxis, bleeding of the gums, menorrhagia, recurrent miscarriages, abnormal scar formation and wound healing, and hemarthrosis, and has_material_basis_in autosomal recessive inheritance of mutation of the F13A1 or F13B gene, which encodes Factor XIII, formally known as fibrin stabilizing factor." [url:http\://omim.org/entry/613225, url:http\://omim.org/entry/613235, url:https\://ghr.nlm.nih.gov/condition/factor-xiii-deficiency#inheritance]
+def: "A blood coagulation disease that is characterized by easy bleeding, has_symptom prolonged umbilical cord bleeding, epistaxis, bleeding of the gums, menorrhagia, recurrent miscarriages, abnormal scar formation and wound healing, and hemarthrosis, and has_material_basis_in autosomal recessive inheritance of mutation of the F13A1 or F13B gene, which encodes Factor XIII, formally known as fibrin stabilizing factor." [url:http\://omim.org/entry/613225, url:http\://omim.org/entry/613235, url:https\://ghr.nlm.nih.gov/condition/factor-xiii-deficiency#inheritance]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "deficiency, Laki-Lorand factor" EXACT []
@@ -22991,7 +22985,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2215
 name: factor VII deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that is characterized by easy bleeding, has_symptom epistaxis, bleeding of the gums, menorrhagia, and occasionally hemarthrosis, and has_material_basis_in autosomal recessive inheritance of mutation in the F7 gene, which encodes coagulation factor VII, an important factor in the clotting cascade." [url:http\://omim.org/entry/227500, url:https\://ghr.nlm.nih.gov/condition/factor-vii-deficiency#genes]
+def: "A blood coagulation disease that is characterized by easy bleeding, has_symptom epistaxis, bleeding of the gums, menorrhagia, and occasionally hemarthrosis, and has_material_basis_in autosomal recessive inheritance of mutation in the F7 gene, which encodes coagulation factor VII, an important factor in the clotting cascade." [url:http\://omim.org/entry/227500, url:https\://ghr.nlm.nih.gov/condition/factor-vii-deficiency#genes]
 subset: NCIthesaurus
 synonym: "deficiency, stable" EXACT []
 synonym: "Factor VII deficiency" EXACT []
@@ -23026,7 +23020,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2217
 name: Bernard-Soulier syndrome
 namespace: disease_ontology
-def: "An inherited blood coagulation disease characterized by autosomal recessive inheritance of mucosal bleeding, purpuric skin bleeding, epistaxis, and menorrhagia with prolonged bleeding times, enlarged platelets and absence of platelet aggregation in response to von Willebrand factor that has material_basis_in mutation in the GP1BA gene, the GP1BB gene, or the GP9 gene which are subunits of the platelet membrane von Willebrand factor receptor complex, glycoprotein Ib." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10706630, url:https\://www.ncbi.nlm.nih.gov/pubmed/8481514, url:https\://www.ncbi.nlm.nih.gov/pubmed/8703016, url:https\://www.ncbi.nlm.nih.gov/pubmed/9616133]
+def: "A blood coagulation disease characterized by autosomal recessive inheritance of mucosal bleeding, purpuric skin bleeding, epistaxis, and menorrhagia with prolonged bleeding times, enlarged platelets and absence of platelet aggregation in response to von Willebrand factor that has material_basis_in mutation in the GP1BA gene, the GP1BB gene, or the GP9 gene which are subunits of the platelet membrane von Willebrand factor receptor complex, glycoprotein Ib." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10706630, url:https\://www.ncbi.nlm.nih.gov/pubmed/8481514, url:https\://www.ncbi.nlm.nih.gov/pubmed/8703016, url:https\://www.ncbi.nlm.nih.gov/pubmed/9616133]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Bernard - Soulier thrombopathy" EXACT []
@@ -23046,7 +23040,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2219
 name: Glanzmann's thrombasthenia
 namespace: disease_ontology
-def: "An inherited blood coagulation disease characterized by autosomal recessive inheritance of failure of platelet aggregation and absent or diminished clot retraction that has material_basis_in mutation in the ITGA2B or ITGB3 genes on chromosome 17q21.32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16463284, url:https\://www.ncbi.nlm.nih.gov/pubmed/2014236, url:https\://www.ncbi.nlm.nih.gov/pubmed/9160670]
+def: "A blood coagulation disease characterized by autosomal recessive inheritance of failure of platelet aggregation and absent or diminished clot retraction that has material_basis_in mutation in the ITGA2B or ITGB3 genes on chromosome 17q21.32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16463284, url:https\://www.ncbi.nlm.nih.gov/pubmed/2014236, url:https\://www.ncbi.nlm.nih.gov/pubmed/9160670]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "BDPLT2" EXACT []
@@ -23073,6 +23067,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2222
 name: factor X deficiency
 namespace: disease_ontology
+def: "A blood coagulation disease that is characterized by the partial or complete absence of factor X activity in the blood." [url:https\://rarediseases.org/rare-diseases/factor-x-deficiency/]
 subset: NCIthesaurus
 synonym: "disease, Stuart-Prower" EXACT []
 synonym: "Factor X deficiency" EXACT []
@@ -23156,7 +23151,7 @@ is_a: DOID:1247 ! blood coagulation disease
 id: DOID:2229
 name: factor XI deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that is characterized by deficiency of factor XI clotting factor and mild prolonged bleeding, especially of mucosal sites following trauma, and has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation of the coagulation factor XI gene of chromosome 4q35.2." [url:https\://ghr.nlm.nih.gov/condition/factor-xi-deficiency, url:https\://www.omim.org/entry/612416]
+def: "A blood coagulation disease that is characterized by deficiency of factor XI clotting factor and mild prolonged bleeding, especially of mucosal sites following trauma, and has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation of the coagulation factor XI gene of chromosome 4q35.2." [url:https\://ghr.nlm.nih.gov/condition/factor-xi-deficiency, url:https\://www.omim.org/entry/612416]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Congenital factor XI deficiency" EXACT []
@@ -23191,7 +23186,7 @@ is_a: DOID:224 ! transient cerebral ischemia
 id: DOID:2231
 name: factor XII deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease that is characterized by prolonged PTT time without clinical symptoms, and has_material_basis_in a mutation in the F12 gene on chromosome 5q33." [url:http\://omim.org/entry/234000, url:https\://rarediseases.org/rare-diseases/factor-xii-deficiency/]
+def: "A blood coagulation disease that is characterized by prolonged PTT time without clinical symptoms, and has_material_basis_in a mutation in the F12 gene on chromosome 5q33." [url:http\://omim.org/entry/234000, url:https\://rarediseases.org/rare-diseases/factor-xii-deficiency/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "deficiency, Hageman" EXACT []
@@ -23224,7 +23219,7 @@ is_a: DOID:1826 ! epilepsy
 id: DOID:2235
 name: prothrombin deficiency
 namespace: disease_ontology
-def: "A blood coagulation disease that is characterized by bleeding symptoms due to low levels of circulating prothrombin, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the gene encoding coagulation factor II, also known as prothrombin, on chromosome 11p11." [url:https\://ghr.nlm.nih.gov/condition/prothrombin-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/30306070, url:https\://www.omim.org/entry/613679, url:https\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=325]
+def: "A thrombophilia that is characterized by bleeding symptoms due to low levels of circulating prothrombin, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the gene encoding coagulation factor II, also known as prothrombin, on chromosome 11p11." [url:https\://ghr.nlm.nih.gov/condition/prothrombin-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/30306070, url:https\://www.omim.org/entry/613679, url:https\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=325]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Factor II deficiency" RELATED []
@@ -23232,16 +23227,18 @@ synonym: "hypoprothrombinemia" EXACT []
 xref: OMIM:613679
 xref: ORDO:325
 xref: UMLS_CUI:C0020640
-is_a: DOID:1247 ! blood coagulation disease
+is_a: DOID:2452 ! thrombophilia
 
 [Term]
 id: DOID:2236
 name: congenital afibrinogenemia
 namespace: disease_ontology
+def: "A blood coagulation disease that is characterized by an impaired blood clotting resulting from a lack deficiency of a the fibrinogen protein (coagulation factor I)." [url:https\://ghr.nlm.nih.gov/condition/congenital-afibrinogenemia#synonyms]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Factor I deficiency" EXACT []
 synonym: "Fibrinogen deficiency" EXACT []
+xref: GARD:5761
 xref: MESH:D000347
 xref: NCI:C98130
 xref: OMIM:202400
@@ -23849,7 +23846,7 @@ is_a: DOID:74 ! hematopoietic system disease
 id: DOID:2377
 name: multiple sclerosis
 namespace: disease_ontology
-def: "A demyelinating disease that involves damage to the fatty myelin sheaths around the axons of the brain and spinal cord resulting in demyelination and scarring." [url:http\://en.wikipedia.org/wiki/Multiple_sclerosis]
+def: "A demyelinating disease that involves damage to the fatty myelin sheaths around the axons of the brain and spinal cord resulting in demyelination and scarring." [url:http\://en.wikipedia.org/wiki/Multiple_sclerosis, url:https\://ghr.nlm.nih.gov/condition/multiple-sclerosis]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Generalized multiple sclerosis" EXACT []
@@ -24180,14 +24177,14 @@ is_a: DOID:74 ! hematopoietic system disease
 id: DOID:2452
 name: thrombophilia
 namespace: disease_ontology
+def: "A blood coagulation disease that is characterized by an increased tendency to form clots." [url:https\://en.wikipedia.org/wiki/Thrombophilia, url:https\://www.nhs.uk/conditions/thrombophilia/]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "hypercoagulability state" EXACT []
 xref: ICD10CM:D68.59
 xref: MESH:D019851 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84479
-xref: OMIM:188050
-xref: OMIM:614486
+xref: OMIM:PS188050
 xref: SNOMEDCT_US_2019_09_01:234467004
 xref: UMLS_CUI:C0398623
 is_a: DOID:1247 ! blood coagulation disease
@@ -24863,13 +24860,12 @@ synonym: "IGHM" EXACT []
 synonym: "mu heavy chain deficiency" EXACT []
 xref: ICD10CM:D80.1
 xref: ICD9CM:279.00
-xref: MESH:D000361
+xref: MESH:D000361 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26931
 xref: OMIM:601495
 xref: OMIM:612692
 xref: OMIM:613500
 xref: OMIM:613501
-xref: OMIM:613502
 xref: OMIM:615214
 xref: OMIM:PS601495
 xref: SNOMEDCT_US_2019_09_01:119249001
@@ -25008,7 +25004,7 @@ name: adenomyoma
 namespace: disease_ontology
 def: "A cell type benign neoplasm that has_material_basis_in gland and muscle components." [url:http\://en.wikipedia.org/wiki/Adenomyoma]
 subset: NCIthesaurus
-xref: MESH:D018194
+xref: MESH:D018194 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3726
 xref: SNOMEDCT_US_2019_09_01:40293003
 xref: UMLS_CUI:C0206622
@@ -25763,7 +25759,7 @@ namespace: disease_ontology
 def: "A dermatitis that selectively affects the hands and feet." [url:http\://en.wikipedia.org/wiki/Acrodermatitis]
 subset: NCIthesaurus
 xref: GARD:5722
-xref: MESH:D000169
+xref: MESH:D000169 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84532
 xref: UMLS_CUI:C0001197
 is_a: DOID:2723 ! dermatitis
@@ -26310,8 +26306,9 @@ name: adamantinoma
 namespace: disease_ontology
 def: "A bone cancer that is located_in almost exclusively in the long bones." [url:https\://www.ncbi.nlm.nih.gov/pubmed/30844202]
 subset: NCIthesaurus
-xref: MESH:D050398
+xref: MESH:D050398 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C7644
+xref: OERDO:55881
 xref: UMLS_CUI:C1367554
 is_a: DOID:184 ! bone cancer
 
@@ -26548,7 +26545,7 @@ subset: NCIthesaurus
 synonym: "acute acalculous cholecystitis" EXACT []
 synonym: "acute cholecystitis without calculus" EXACT []
 synonym: "cholecystitis without calculus" EXACT []
-xref: MESH:D042101
+xref: MESH:D042101 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35578
 xref: SNOMEDCT_US_2019_09_01:19968009
 xref: UMLS_CUI:C0267841
@@ -27495,8 +27492,7 @@ name: adenocarcinoma
 namespace: disease_ontology
 def: "A carcinoma that has_material_basis_in abnormally proliferating cells, derives_from epithelial cells, which originate in glandular tissue." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: NCIthesaurus
-synonym: "adenocarcinomas" EXACT []
-xref: MESH:D000230
+xref: MESH:D000230 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2852
 xref: SNOMEDCT_US_2019_09_01:35917007
 xref: UMLS_CUI:C0001418
@@ -28500,7 +28496,7 @@ synonym: "Keratosis nigricans" EXACT []
 synonym: "keratosis nigricans" EXACT []
 xref: GARD:8603
 xref: ICD10CM:L83
-xref: MESH:D000052
+xref: MESH:D000052 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26687
 xref: OMIM:100600
 xref: OMIM:200170
@@ -29746,7 +29742,7 @@ namespace: disease_ontology
 def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs and is derived from perivascular epithelioid cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/9503504]
 subset: NCIthesaurus
 synonym: "Angiomyolipoma" EXACT []
-xref: MESH:D018207
+xref: MESH:D018207 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3734
 xref: SNOMEDCT_US_2019_09_01:19929002
 xref: UMLS_CUI:C0206633
@@ -29848,7 +29844,7 @@ xref: GARD:5786
 xref: ICD10CM:G12.21
 xref: ICD9CM:335.20
 xref: KEGG:05014
-xref: MESH:D000690
+xref: MESH:D000690 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34373
 xref: OMIM:PS105400
 xref: ORDO:803
@@ -30525,7 +30521,7 @@ synonym: "Alpha-D-mannosidosis" EXACT []
 synonym: "alpha-mannosidase deficiency" EXACT []
 synonym: "deficiency of alpha-mannosidase" EXACT []
 xref: GARD:6968
-xref: MESH:D008363
+xref: MESH:D008363 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84548
 xref: OMIM:248500
 xref: SNOMEDCT_US_2019_09_01:124466001
@@ -31728,7 +31724,7 @@ name: angiolipoma
 namespace: disease_ontology
 def: "A lipoma that is a painful subcutaneous nodule, having all other features of a typical lipoma." [url:http\://en.wikipedia.org/wiki/Angiolipoma]
 subset: NCIthesaurus
-xref: MESH:D018206
+xref: MESH:D018206 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3733
 xref: SNOMEDCT_US_2019_09_01:404057003
 xref: SNOMEDCT_US_2019_09_01:73219006
@@ -32781,7 +32777,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:3755
 name: antithrombin III deficiency
 namespace: disease_ontology
-def: "An inherited blood coagulation disease characterized by the tendency to form clots in the veins." [url:http\://en.wikipedia.org/wiki/Antithrombin_III_deficiency, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/99/viewAbstract]
+def: "A thrombophilia that is characterized by the tendency to form clots in the veins." [url:http\://en.wikipedia.org/wiki/Antithrombin_III_deficiency, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/99/viewAbstract]
 comment: Xref MGI.
 subset: NCIthesaurus
 synonym: "AT III deficiency" EXACT []
@@ -32792,12 +32788,13 @@ xref: NCI:C98815
 xref: OMIM:613118
 xref: SNOMEDCT_US_2019_09_01:36351005
 xref: UMLS_CUI:C0272375
-is_a: DOID:1247 ! blood coagulation disease
+is_a: DOID:2452 ! thrombophilia
 
 [Term]
 id: DOID:3756
 name: protein C deficiency
 namespace: disease_ontology
+def: "A thrombophilia that is characterized by recurrent venous thrombosis and that has_material_basis_in heterozygous mutation in the PROC gene on chromosome 2q14." [url:https\://pubmed.ncbi.nlm.nih.gov/10942114/]
 subset: NCIthesaurus
 xref: GARD:4521
 xref: ICD10CM:D68.59
@@ -32806,7 +32803,7 @@ xref: NCI:C99025
 xref: OMIM:176860
 xref: SNOMEDCT_US_2019_09_01:76407009
 xref: UMLS_CUI:C0398625
-is_a: DOID:1247 ! blood coagulation disease
+is_a: DOID:2452 ! thrombophilia
 
 [Term]
 id: DOID:3762
@@ -33042,7 +33039,7 @@ is_a: DOID:1532 ! pleural disease
 id: DOID:3803
 name: Crigler-Najjar syndrome
 namespace: disease_ontology
-def: "A bilirubin metabolic disorder that involves a build up of bilirubin as bilirubin is not being broken down as a result of a lack or deficiency of the enzyme uridine diphosphate glycosyltransferase (UGT)." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002114/]
+def: "A bilirubin metabolic disorder that involves a build up of bilirubin as bilirubin is not being broken down as a result of a lack or deficiency of the enzyme uridine diphosphate glycosyltransferase (UGT)." [url:https\://ghr.nlm.nih.gov/condition/crigler-najjar-syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Bilirubin UDP glucuronyl transferase deficiency" EXACT []
@@ -33563,7 +33560,7 @@ id: DOID:3892
 name: insulinoma
 namespace: disease_ontology
 alt_id: DOID:3903
-def: "A pancreatic cystadenoma that is characterized by the overproduction of insulin." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001424/]
+def: "A pancreatic cystadenoma that is characterized by the overproduction of insulin." [url:https\://en.wikipedia.org/wiki/Insulinoma]
 subset: NCIthesaurus
 synonym: "Insulin-Producing tumor of Islet cells" EXACT []
 synonym: "Islet cell adenoma" EXACT []
@@ -33804,7 +33801,7 @@ subset: NCIthesaurus
 synonym: "Dercum disease" EXACT []
 xref: GARD:5750
 xref: ICD10CM:E88.2
-xref: MESH:D000274
+xref: MESH:D000274 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84540
 xref: OMIM:103200
 xref: SNOMEDCT_US_2019_09_01:71404003
@@ -34819,14 +34816,10 @@ synonym: "Dyspraxia" EXACT []
 synonym: "Dyspraxia syndrome" EXACT []
 xref: GARD:8
 xref: ICD10CM:R48.1
-xref: ICD10CM:R48.2
-xref: MESH:D000377
-xref: MESH:D001072
+xref: MESH:D000377 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84542
 xref: SNOMEDCT_US_2019_09_01:42341009
-xref: SNOMEDCT_US_2019_09_01:68345001
 xref: UMLS_CUI:C0001816
-xref: UMLS_CUI:C0003635
 is_a: DOID:2033 ! communication disorder
 
 [Term]
@@ -35077,7 +35070,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:4159
 name: skin cancer
 namespace: disease_ontology
-def: "An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002414/]
+def: "An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells." [url:https\://medlineplus.gov/skincancer.html]
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "CA - skin cancer" EXACT []
@@ -35667,7 +35660,7 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Alexander's disease" EXACT []
 xref: GARD:5774
-xref: MESH:D038261
+xref: MESH:D038261 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84545
 xref: OMIM:203450
 xref: SNOMEDCT_US_2019_09_01:81854007
@@ -35744,7 +35737,7 @@ def: "A leiomyoma that is located_in the blood vessels." [url:https\://www.ncbi.
 subset: NCIthesaurus
 synonym: "Angiomyoma" EXACT []
 synonym: "vascular leiomyoma" EXACT []
-xref: MESH:D018229
+xref: MESH:D018229 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3747
 xref: SNOMEDCT_US_2019_09_01:86959002
 xref: UMLS_CUI:C0206653
@@ -37088,7 +37081,7 @@ synonym: "Chondrodystrophia" EXACT []
 synonym: "osteosclerosis congenita" EXACT []
 xref: GARD:8173
 xref: ICD10CM:Q77.4
-xref: MESH:D000130
+xref: MESH:D000130 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34345
 xref: OMIM:100800
 xref: SNOMEDCT_US_2019_09_01:86268005
@@ -38076,7 +38069,7 @@ id: DOID:4674
 name: androgen insensitivity syndrome
 namespace: disease_ontology
 alt_id: DOID:4672
-def: "A sex differentiation disease that is characterized by the partial or complete inability of the cell to respond to androgens in individuals with a karyotype of 46,XY resulting in female physical traits but male genetic makeup." [url:http\://en.wikipedia.org/wiki/Androgen_insensitivity_syndrome, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0002163/, url:http\://www.omim.org/entry/300068?search=300068&highlight=300068]
+def: "A sex differentiation disease that is characterized by the partial or complete inability of the cell to respond to androgens in individuals with a karyotype of 46,XY resulting in female physical traits but male genetic makeup." [url:http\://en.wikipedia.org/wiki/Androgen_insensitivity_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Androgen resistance syndrome" EXACT []
@@ -39936,7 +39929,7 @@ name: adenocarcinoma in situ
 namespace: disease_ontology
 def: "An in situ carcinoma that derives_from epithelial cells of glandular origin." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/adenocarcinoma-in-situ]
 subset: NCIthesaurus
-xref: MESH:D065311
+xref: MESH:D065311 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C4123
 xref: SNOMEDCT_US_2019_09_01:51642000
 xref: UMLS_CUI:C0334276
@@ -41593,6 +41586,7 @@ subset: NCIthesaurus
 xref: GARD:6169
 xref: MESH:D017121
 xref: NCI:C84754
+xref: ORDO:95159
 xref: SNOMEDCT_US_2019_09_01:111386004
 xref: UMLS_CUI:C0162569
 is_a: DOID:13268 ! porphyria
@@ -42222,15 +42216,18 @@ is_a: DOID:1964 ! fallopian tube cancer
 id: DOID:5325
 name: Roberts syndrome
 namespace: disease_ontology
+alt_id: DOID:0050536
 def: "A syndrome characterized by tetraphocomelia, craniofacial anomalies, growth retardation, intellectual disability, and cardiac and renal abnormalities that has_material_basis_in homozygous or compound heterozygous mutation in ESCO2 on chromosome 8p21.1." [url:https\://ghr.nlm.nih.gov/condition/roberts-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/20101700]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "LONG BONE DEFICIENCIES ASSOCIATED WITH CLEFT LIP-PALATE" EXACT []
 synonym: "RBS" EXACT []
+synonym: "SC phocomelia syndrome" EXACT []
 xref: GARD:7387
 xref: MESH:C535687
 xref: NCI:C4681
 xref: OMIM:268300
+xref: OMIM:269000
 xref: ORDO:3103
 xref: SNOMEDCT_US_2019_09_01:48718006
 xref: UMLS_CUI:C0392475
@@ -45810,6 +45807,7 @@ xref: ICD10CM:D81.5
 xref: MESH:C562587
 xref: NCI:C3963
 xref: OMIM:613179
+xref: ORDO:760
 xref: SNOMEDCT_US_2019_09_01:60743005
 xref: UMLS_CUI:C0268125
 is_a: DOID:628 ! combined T cell and B cell immunodeficiency
@@ -48393,7 +48391,7 @@ synonym: "acquired immune deficiency syndrome" RELATED []
 synonym: "AIDS" EXACT []
 xref: EFO:0000765
 xref: ICD10CM:B20
-xref: MESH:D000163
+xref: MESH:D000163 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2851
 xref: SNOMEDCT_US_2019_09_01:62479008
 xref: UMLS_CUI:C0001175
@@ -48521,7 +48519,7 @@ is_a: DOID:6383 ! childhood brain stem glioma
 id: DOID:639
 name: acute disseminated encephalomyelitis
 namespace: disease_ontology
-def: "An encephalomyelitis characterized by inflammation locatedin brain and locatedin spinal cord that damages myelin. It usually occurs after viral infection, but also following vaccination, bacterial or parasitic infection." [url:http\://en.wikipedia.org/wiki/Acute_disseminated_encephalomyelitis, url:http\://www.ninds.nih.gov/disorders/acute_encephalomyelitis/acute_encephalomyelitis.htm]
+def: "An encephalomyelitis characterized by inflammation located in brain and located in spinal cord that damages myelin. It usually occurs after viral infection, but also following vaccination, bacterial or parasitic infection." [url:http\://en.wikipedia.org/wiki/Acute_disseminated_encephalomyelitis, url:http\://www.ninds.nih.gov/disorders/acute_encephalomyelitis/acute_encephalomyelitis.htm]
 subset: NCIthesaurus
 synonym: "acute disseminated encephalitis" EXACT []
 synonym: "acute Disseminated Encephalomyelitis" EXACT []
@@ -48582,6 +48580,7 @@ xref: ICD9CM:745.11
 xref: MESH:D004310
 xref: NCI:C98916
 xref: OMIM:217095
+xref: ORDO:3426
 xref: SNOMEDCT_US_2019_09_01:7484005
 xref: UMLS_CUI:C0013069
 is_a: DOID:1657 ! ventricular septal defect
@@ -49310,7 +49309,7 @@ subset: NCIthesaurus
 synonym: "acinar cell adenoma" EXACT []
 synonym: "acinic cell adenoma" EXACT []
 synonym: "adenomas" EXACT []
-xref: MESH:D000236
+xref: MESH:D000236 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2855
 xref: NCI:C4196
 xref: SNOMEDCT_US_2019_09_01:32048006
@@ -49540,7 +49539,7 @@ is_a: DOID:3165 ! skin benign neoplasm
 id: DOID:6634
 name: adult central nervous system choriocarcinoma
 namespace: disease_ontology
-def: "A choriocarcinoma that is located in the central nervous system of an adult." [url:https\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0032627/]
+def: "A choriocarcinoma that is located in the central nervous system of an adult." [url:https\://en.wikipedia.org/wiki/Choriocarcinoma]
 subset: NCIthesaurus
 synonym: "Choriocarcinoma of the adult central nervous system" EXACT []
 xref: NCI:C5793
@@ -51096,7 +51095,7 @@ synonym: "ACTH-Producing Pituitary Adenoma" EXACT []
 synonym: "Corticotroph adenoma" EXACT []
 synonym: "Corticotropinoma" EXACT []
 xref: GARD:12867
-xref: MESH:D049913
+xref: MESH:D049913 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C7462
 xref: OMIM:219090
 xref: SNOMEDCT_US_2019_09_01:254958004
@@ -51236,7 +51235,7 @@ synonym: "Infection by Anisakis larva" EXACT []
 xref: GARD:693
 xref: ICD10CM:B81.0
 xref: ICD9CM:127.1
-xref: MESH:D017129
+xref: MESH:D017129 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C128393
 xref: SNOMEDCT_US_2019_09_01:442652006
 xref: UMLS_CUI:C0162576
@@ -52987,7 +52986,7 @@ synonym: "adenomatoid tumour" EXACT []
 synonym: "benign localised epithelial Mesothelioma" EXACT []
 synonym: "benign localized epithelial Mesothelioma" EXACT []
 xref: ICD10CM:D19.9
-xref: MESH:D018254
+xref: MESH:D018254 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3762
 xref: SNOMEDCT_US_2019_09_01:2348006
 xref: UMLS_CUI:C0206675
@@ -55076,7 +55075,7 @@ is_a: DOID:50 ! thyroid gland disease
 id: DOID:7998
 name: hyperthyroidism
 namespace: disease_ontology
-def: "A thyroid gland disease that involves an over production of thyroid hormone." [url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001396/]
+def: "A thyroid gland disease that involves an over production of thyroid hormone." [url:https\://www.niddk.nih.gov/health-information/endocrine-diseases/hyperthyroidism]
 comment: Xref MGI.
 subset: NCIthesaurus
 synonym: "overactive thyroid" EXACT []
@@ -55132,7 +55131,7 @@ subset: NCIthesaurus
 synonym: "primary meningioma of the skin" EXACT []
 xref: NCI:C5277
 xref: UMLS_CUI:C1335481
-is_a: DOID:3165 ! skin benign neoplasm
+is_a: DOID:3565 ! meningioma
 
 [Term]
 id: DOID:8007
@@ -56911,7 +56910,7 @@ synonym: "Madura foot due to Actinomadura" EXACT []
 xref: GARD:5728
 xref: ICD10CM:A42
 xref: ICD9CM:039.9
-xref: MESH:D000196
+xref: MESH:D000196 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34350
 xref: SNOMEDCT_US_2019_09_01:11817007
 xref: UMLS_CUI:C0001261
@@ -57277,7 +57276,7 @@ is_a: DOID:8567 ! Hodgkin's lymphoma
 id: DOID:8544
 name: chronic fatigue syndrome
 namespace: disease_ontology
-def: "A syndrome that involves prolonged and severe tiredness or weariness that is unrelated to exertion, is not relieved by rest and for a minimum of six months and is not directly caused by other conditions." [url:http\://en.wikipedia.org/wiki/Chronic_fatigue_syndrome, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/?term=Chronic%20fatigue%20syndrome]
+def: "A syndrome that involves prolonged and severe tiredness or weariness that is unrelated to exertion, is not relieved by rest and for a minimum of six months and is not directly caused by other conditions." [url:http\://en.wikipedia.org/wiki/Chronic_fatigue_syndrome]
 comment: No OMIM mapping, confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "CFS" EXACT []
@@ -59233,7 +59232,7 @@ is_a: DOID:4138 ! bile duct disease
 id: DOID:8991
 name: cervix uteri carcinoma in situ
 namespace: disease_ontology
-def: "An in situ carcinoma that is located_in the uterine cervix." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1503328/]
+def: "An uterus carcinoma in situ that is located_in the uterine cervix." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1503328/]
 subset: NCIthesaurus
 synonym: "carcinoma in situ of cervix" EXACT []
 synonym: "carcinoma in situ of uterine cervix" EXACT []
@@ -59722,7 +59721,7 @@ subset: NCIthesaurus
 synonym: "amyloid disease" EXACT []
 xref: ICD10CM:E85
 xref: ICD9CM:277.3
-xref: MESH:D000686
+xref: MESH:D000686 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2868
 xref: SNOMEDCT_US_2019_09_01:17602002
 xref: UMLS_CUI:C0002726
@@ -59922,7 +59921,7 @@ synonym: "entamoebiasis" EXACT []
 xref: GARD:652
 xref: ICD10CM:A06
 xref: ICD9CM:006
-xref: MESH:D000562
+xref: MESH:D000562 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C157785
 xref: NCI:C84551
 xref: SNOMEDCT_US_2019_09_01:111910009
@@ -60093,7 +60092,7 @@ synonym: "Alagille-Watson syndrome" EXACT []
 synonym: "Arteriohepatic dysplasia" EXACT []
 xref: GARD:804
 xref: ICD10CM:Q44.7
-xref: MESH:D016738
+xref: MESH:D016738 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35139
 xref: OMIM:118450
 xref: OMIM:610205
@@ -60128,7 +60127,7 @@ synonym: "ACLS" EXACT []
 synonym: "SCHINZEL ACROCALLOSAL SYNDROME" EXACT []
 synonym: "Schinzel syndrome 1" EXACT []
 xref: GARD:5721
-xref: MESH:D055673
+xref: MESH:D055673 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84531
 xref: OMIM:200990
 xref: SNOMEDCT_US_2019_09_01:715951007
@@ -60371,7 +60370,7 @@ synonym: "deficiency of homogentisicase" RELATED []
 synonym: "Homogentisate 1,2-dioxygenase deficiency" EXACT []
 xref: GARD:5775
 xref: ICD10CM:E70.29
-xref: MESH:D000474
+xref: MESH:D000474 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84546
 xref: OMIM:203500
 xref: ORDO:56
@@ -61574,7 +61573,7 @@ is_a: DOID:2152 ! ovary epithelial cancer
 id: DOID:9598
 name: fasciitis
 namespace: disease_ontology
-def: "A connective tissue disease characterized by inflammation located_in the fascia." [url:https\://en.wikipedia.org/wiki/Fasciitis, url:https\://www.mayoclinic.org/diseases-conditions/plantar-fasciitis/symptoms-causes/syc-20354846]
+def: "A connective tissue disease characterized by inflammation located in the fascia." [url:https\://en.wikipedia.org/wiki/Fasciitis, url:https\://www.mayoclinic.org/diseases-conditions/plantar-fasciitis/symptoms-causes/syc-20354846]
 subset: NCIthesaurus
 xref: ICD10CM:M72.9
 xref: ICD9CM:729.4
@@ -62201,7 +62200,7 @@ id: DOID:9828
 name: neonatal abstinence syndrome
 namespace: disease_ontology
 alt_id: DOID:6679
-def: "A withdrawal disorder that is characterized by a group of problems that occur in a newborn who was exposed to addictive illegal or prescription drugs while in the mother's womb or postnatally following the discontinuance of drug treatment." [url:http\://en.wikipedia.org/wiki/Neonatal_abstinence_syndrome, url:http\://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0004566/]
+def: "A withdrawal disorder that is characterized by a group of problems that occur in a newborn who was exposed to addictive illegal or prescription drugs while in the mother's womb or postnatally following the discontinuance of drug treatment." [url:http\://en.wikipedia.org/wiki/Neonatal_abstinence_syndrome]
 subset: NCIthesaurus
 synonym: "Drug withdrawal syndrome in newborn" EXACT []
 xref: ICD10CM:P96.1
@@ -62342,7 +62341,7 @@ def: "A hypotrichosis that is characterized by a loss of hair from the head or b
 subset: NCIthesaurus
 xref: ICD10CM:L65.9
 xref: ICD9CM:704.0
-xref: MESH:D000505
+xref: MESH:D000505 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C50575
 xref: OMIM:PS203655
 xref: SNOMEDCT_US_2019_09_01:56317004

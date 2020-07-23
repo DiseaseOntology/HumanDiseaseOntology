@@ -20,28 +20,53 @@ HD = src/ontology/HumanDO
 # to update imports, use `make imports`
 # to do both, use `make all`
 
-release: verify products publish post
+# Release process:
+# 1. Build all products (doid, doid-non-classified, doid-merged, all subsets)
+# 2. Validate syntax of OBO-format products with fastobo-validator
+# 3. Verify logical structure of products with SPARQL queries
+# 4. Publish to release directory
+# 5. Generate post-build reports (counts, etc.)
+release: products validate-obo verify publish post
+
+# Only run `make all` if you'd like to refresh imports during the release!
 all: imports release
+
+# `make test` is used for Travis integration
 test: reason build/reports/report.tsv verify-edit
-
-# ----------------------------------------
-# ROBOT
-# ----------------------------------------
-
-init: build
 
 build build/reports:
 	mkdir -p $@
+
+# ----------------------------------------
+# ROBOT & FASTOBO
+# ----------------------------------------
 
 # run `make update_robot` to get a new version of ROBOT
 .PHONY: update_robot
 update_robot:
 	rm -rf build/robot.jar && make build/robot.jar
 
-build/robot.jar: build
+build/robot.jar: | build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar
 
 ROBOT := java -jar build/robot.jar
+
+# fastobo is used to validate OBO structure
+
+FASTOBO := build/fastobo-validator
+
+UNAME := $(shell uname)
+ifeq ($(UNAME), Darwin)
+	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=stable%2Ffastobo_validator-x86_64-apple-darwin.tar.gz
+else
+	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=stable%2Ffastobo_validator-x86_64-linux-musl.tar.gz
+endif
+
+build/fastobo.tar.gz: | build
+	curl -Lk -o $@ $(FASTOBO_URL)
+
+$(FASTOBO): | build/fastobo.tar.gz
+	cd build && tar -xvf $(notdir $<)
 
 # ----------------------------------------
 # IMPORTS
@@ -120,7 +145,7 @@ add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 # RELEASE
 # ----------------------------------------
 
-products: subsets human merged build
+products: subsets human merged
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -379,9 +404,19 @@ build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
 	@echo "Querying for $(notdir $(basename $@)) (see $@)..."
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 
-#-----------------------------
+#-------------------------------
 # Ensure proper OBO structure
 #-------------------------------
+
+validate-obo: validate-$(DO) validate-$(DNC)
+
+.PHONY: validate-$(DO)
+validate-$(DO): $(DO).obo | $(FASTOBO)
+	$(FASTOBO) $< 
+
+.PHONY: validate-$(DNC)
+validate-$(DNC): $(DNC).obo | $(FASTOBO)
+	$(FASTOBO) $<
 
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)

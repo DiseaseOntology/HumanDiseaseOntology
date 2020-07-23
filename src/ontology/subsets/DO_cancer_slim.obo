@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-06-18/subsets/DO_cancer_slim.obo
+data-version: doid/2020-07-23/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 
 [Term]
@@ -200,7 +200,7 @@ alt_id: DOID:0060105
 alt_id: DOID:168
 alt_id: DOID:3858
 alt_id: DOID:4981
-def: "An infratentorial cancer that is located_in the lower part of the brain and is a type of primitive neuroectodermal tumor." [url:http\://en.wikipedia.org/wiki/Medulloblastoma, url:http\://www.cancer.gov/dictionary?CdrID=45780]
+def: "An infratentorial cancer that is located_in the lower part of the brain and is a type of primitive neuroectodermal tumor." [url:http\://en.wikipedia.org/wiki/Medulloblastoma, url:http\://www.cancer.gov/dictionary?CdrID=45780, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306779/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -956,6 +956,70 @@ synonym: "B-ALL with iAMP21" EXACT []
 synonym: "Intrachromosomal amplification of chromosome 21 (iAMP21)" EXACT []
 xref: NCI:C130039
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0080702
+name: medulloblastoma WNT activated
+namespace: disease_ontology
+def: "A medulloblastoma that is characterized as a molecular subtype by activation of the WNT pathway and TP53 mutations may be present or absent." [url:https\://pubmed.ncbi.nlm.nih.gov/29582169/, url:https\://radiopaedia.org/articles/medulloblastoma-wnt-subgroup?lang=us]
+subset: DO_cancer_slim
+xref: NCI:C129440
+is_a: DOID:0050902 ! medulloblastoma
+
+[Term]
+id: DOID:0080703
+name: medulloblastoma SHH activated
+namespace: disease_ontology
+def: "A medulloblastoma that is characterized as a molecular subtype by activation of the sonic hedgehog (SHH) pathway and TP53 mutations that may be present or absent." [url:https\://onlinelibrary.wiley.com/doi/full/10.1002/acn3.762, url:https\://pubmed.ncbi.nlm.nih.gov/29582169/, url:https\://radiopaedia.org/articles/medulloblastoma-shh-subgroup?lang=us]
+subset: DO_cancer_slim
+xref: NCI:C129441
+is_a: DOID:0050902 ! medulloblastoma
+
+[Term]
+id: DOID:0080704
+name: medulloblastoma SHH activated and TP53 mutant
+namespace: disease_ontology
+def: "A medulloblastoma SHH activated that is characterized as a molecular subtype by activation of the sonic hedgehog (SHH) pathway and the presence of TP53 mutations." [url:https\://ascopubs.org/doi/10.1200/JCO.2012.48.5052, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490254/]
+subset: DO_cancer_slim
+xref: NCI:C129442
+is_a: DOID:0080703 ! medulloblastoma SHH activated
+
+[Term]
+id: DOID:0080705
+name: medulloblastoma SHH activated and TP53 wild-type
+namespace: disease_ontology
+def: "A medulloblastoma SHH activated that is characterized as a molecular subtype by activation of the sonic hedgehog (SHH) pathway and the absence of TP53 mutations." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4743072/]
+subset: DO_cancer_slim
+synonym: "Medulloblastoma SHH-Activated TP53-Wildtype" EXACT []
+xref: NCI:C129443
+is_a: DOID:0080703 ! medulloblastoma SHH activated
+
+[Term]
+id: DOID:0080706
+name: medulloblastoma non-WNT/non-SHH
+namespace: disease_ontology
+def: "A medulloblastoma that is characterized as a molecular subtype that is not associated with activation of the WNT pathway or sonic hedgehog (SHH) pathway and TP53 mutations are absent." [url:https\://pubmed.ncbi.nlm.nih.gov/30392813/]
+subset: DO_cancer_slim
+xref: NCI:C129444
+is_a: DOID:0050902 ! medulloblastoma
+
+[Term]
+id: DOID:0080707
+name: medulloblastoma non-WNT/non-SHH group 3
+namespace: disease_ontology
+def: "A medulloblastoma non-WNT/non-SHH that is characterized as a molecular subtype by absent TP53 mutations and MYC amplifications that may be present." [url: https\://pubmed.ncbi.nlm.nih.gov/30876441/, url:https\://pubmed.ncbi.nlm.nih.gov/29427151/]
+subset: DO_cancer_slim
+xref: NCI:C129445
+is_a: DOID:0080706 ! medulloblastoma non-WNT/non-SHH
+
+[Term]
+id: DOID:0080708
+name: medulloblastoma non-WNT/non-SHH group 4
+namespace: disease_ontology
+def: "A medulloblastoma non-WNT/non-SHH that is characterized as a molecular subtype by the absence of MYC amplifications and TP53 mutations and chromosome 17 abnormalities that may be present." [url:https\://pubmed.ncbi.nlm.nih.gov/29427151/]
+subset: DO_cancer_slim
+xref: NCI:C129446
+is_a: DOID:0080706 ! medulloblastoma non-WNT/non-SHH
 
 [Term]
 id: DOID:10047

@@ -65,7 +65,7 @@ endif
 build/fastobo.tar.gz: | build
 	curl -Lk -o $@ $(FASTOBO_URL)
 
-$(FASTOBO): | build/fastobo.tar.gz
+$(FASTOBO): build/fastobo.tar.gz
 	cd build && tar -xvf $(notdir $<)
 
 # ----------------------------------------

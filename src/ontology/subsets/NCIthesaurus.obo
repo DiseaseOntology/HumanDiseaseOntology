@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-07-23/subsets/NCIthesaurus.obo
+data-version: doid/2020-08-21/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -790,12 +790,12 @@ namespace: disease_ontology
 def: "A lysosomal storage disease that is characterized by delayed speech at 2-3 years of age, has_material_basis_in mutations in the AGA gene that result in the absence or shortage of the aspartylglucosaminidase enzyme in lysosomes, preventing the normal breakdown of glycoproteins." [url:https\://ghr.nlm.nih.gov/condition/aspartylglucosaminuria]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "ASPARTYLGLUCOSAMINIDASE DEFICIENCY" EXACT []
+synonym: "aspartylglucosaminidase deficiency" EXACT []
 synonym: "aspartylglycosaminuria" EXACT []
-synonym: "GLYCOSYLASPARAGINASE DEFICIENCY" EXACT []
+synonym: "glycosylasparaginase deficiency" EXACT []
 xref: GARD:5854
 xref: ICD10CM:E77.1
-xref: MESH:D054880
+xref: MESH:D054880 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C61273
 xref: OMIM:208400
 xref: SNOMEDCT_US_2019_09_01:54954004
@@ -1497,7 +1497,7 @@ subset: NCIthesaurus
 synonym: "AV block" EXACT []
 xref: ICD10CM:I44.3
 xref: ICD9CM:426.10
-xref: MESH:D054537
+xref: MESH:D054537 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26703
 xref: SNOMEDCT_US_2019_09_01:233917008
 xref: UMLS_CUI:C0004245
@@ -2057,7 +2057,7 @@ def: "A heart conduction disease that is characterized by uncoordinated electric
 subset: NCIthesaurus
 synonym: "A-fib" EXACT []
 xref: ICD9CM:427.31
-xref: MESH:D001281
+xref: MESH:D001281 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C50466
 xref: SNOMEDCT_US_2019_09_01:49436004
 xref: UMLS_CUI:C0004238
@@ -6116,16 +6116,8 @@ subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
-synonym: "Ca body - stomach" EXACT []
-synonym: "ca greater curvature of stomach" EXACT []
-synonym: "Ca lesser curvature - stomach" EXACT []
 synonym: "gastric cancer" EXACT []
 synonym: "gastric neoplasm" EXACT []
-synonym: "malignant neoplasm of body of stomach" EXACT []
-synonym: "malignant neoplasm of lesser curve of stomach" EXACT []
-synonym: "malignant tumor of body of stomach" EXACT []
-synonym: "malignant tumor of greater curve of stomach" EXACT []
-synonym: "malignant tumor of lesser curve of stomach" EXACT []
 xref: GARD:7704
 xref: ICD10CM:C16
 xref: ICD10CM:C16.2
@@ -6138,7 +6130,6 @@ xref: ICD9CM:151.6
 xref: MESH:D013274
 xref: NCI:C3387
 xref: NCI:C9331
-xref: OMIM:137215
 xref: OMIM:613659
 xref: SNOMEDCT_US_2019_09_01:126824007
 xref: SNOMEDCT_US_2019_09_01:187742008
@@ -6716,13 +6707,11 @@ synonym: "Fanconi-de Toni syndrome" EXACT []
 synonym: "Fanconi-de-Toni syndrome" EXACT []
 synonym: "Infantile nephropathic cystinosis" EXACT []
 synonym: "Lignac-Fanconi syndrome" EXACT []
-xref: GARD:9120
+xref: GARD:9118
 xref: MESH:D005198 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3034
 xref: NCI:C4377
-xref: OMIM:134600
-xref: OMIM:613388
-xref: OMIM:615605
+xref: OMIM:PS134600
 xref: ORDO:3337
 xref: SNOMEDCT_US_2019_09_01:236468006
 xref: SNOMEDCT_US_2019_09_01:40488004
@@ -8225,7 +8214,7 @@ is_a: DOID:10935 ! dissociative disorder
 id: DOID:11042
 name: Felty's syndrome
 namespace: disease_ontology
-def: "A syndrome that results_in rheumatoid arthritis, splenomegaly and neutropenia." [url:http\://en.wikipedia.org/wiki/Felty%27s_syndrome, url:http\://www.medicinenet.com/feltys_syndrome/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000445.htm]
+def: "A syndrome that results_in rheumatoid arthritis, splenomegaly and neutropenia." [url:http\://en.wikipedia.org/wiki/Felty%27s_syndrome, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000445.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Felty syndrome" EXACT []
@@ -9692,7 +9681,7 @@ is_a: DOID:2596 ! larynx cancer
 id: DOID:11476
 name: osteoporosis
 namespace: disease_ontology
-def: "A bone resorption disease characterized by decreased density of normally mineralized bone which results_in the thinning of bone tissue and decreased mechanical strength." [url:http\://en.wikipedia.org/wiki/Osteoporosis, url:http\://orthoinfo.aaos.org/topic.cfm?topic=a00232, url:http\://www.emedicinehealth.com/osteoporosis/article_em.htm, url:http\://www.mayoclinic.com/health/osteoporosis/DS00128, url:http\://www.medicinenet.com/osteoporosis/article.htm, url:http\://www.niams.nih.gov/Health_Info/Bone/default.asp, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000360.htm, url:http\://www.nof.org/]
+def: "A bone resorption disease characterized by decreased density of normally mineralized bone which results_in the thinning of bone tissue and decreased mechanical strength." [url:http\://en.wikipedia.org/wiki/Osteoporosis, url:http\://www.mayoclinic.com/health/osteoporosis/DS00128, url:http\://www.niams.nih.gov/Health_Info/Bone/default.asp, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000360.htm]
 comment: Xref MGI.
 subset: NCIthesaurus
 xref: EFO:0003882
@@ -11396,11 +11385,11 @@ is_a: DOID:2383 ! neonatal jaundice
 
 [Term]
 id: DOID:1205
-name: allergic hypersensitivity disease
+name: allergic disease
 namespace: disease_ontology
 def: "An immune system disease that is an exaggerated immune response to allergens, such as insect venom, dust mites, pollen, pet dander, drugs or some foods." [url:http\://en.wikipedia.org/wiki/Allergy] {comment="ls:IEDB"}
 subset: NCIthesaurus
-synonym: "allergic disease" EXACT []
+synonym: "allergic hypersensitivity disease" EXACT []
 synonym: "hypersensitivity" EXACT []
 synonym: "hypersensitivity reaction type I disease" EXACT []
 xref: ICD10CM:T78.40
@@ -11556,7 +11545,7 @@ is_a: DOID:8670 ! eating disorder
 id: DOID:12132
 name: granulomatosis with polyangiitis
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is characterized by necrotizing granulomatous inflammation of the upper and lower respiratory tract, glomerulonephritis, vasculitis, and the presence of antineutrophil cytoplasmatic autoantibodies (ANCAs) in patient sera, and is located_in lung, located_in kidney, located_in skin resulting from an autoimmune attack by antineutrophil cytoplasmic antibodies against small and medium-size blood vessels." [url:https\://en.wikipedia.org/wiki/Granulomatosis_with_polyangiitis]
+def: "An autoimmune disease that is characterized by necrotizing granulomatous inflammation of the upper and lower respiratory tract, glomerulonephritis, vasculitis, and the presence of antineutrophil cytoplasmatic autoantibodies (ANCAs) in patient sera, and is located_in lung, located_in kidney, located_in skin resulting from an autoimmune attack by antineutrophil cytoplasmic antibodies against small and medium-size blood vessels." [url:https\://en.wikipedia.org/wiki/Granulomatosis_with_polyangiitis]
 subset: NCIthesaurus
 synonym: "Necrotizing respiratory granulomatosis" EXACT []
 synonym: "Wegener granulomatosis, formerly" EXACT []
@@ -11793,16 +11782,17 @@ is_a: DOID:1561 ! cognitive disorder
 
 [Term]
 id: DOID:12236
-name: primary biliary cirrhosis
+name: primary biliary cholangitis
 namespace: disease_ontology
 alt_id: DOID:1851
-def: "A liver cirrhosis characterized by chronic and slow progressive destruction of intrahepatic bile ducts." [url:http\://en.wikipedia.org/wiki/Primary_biliary_cirrhosis, url:http\://www.merckmanuals.com/professional/hepatic_and_biliary_disorders/fibrosis_and_cirrhosis/primary_biliary_cirrhosis_pbc.html?qt=primary%20biliary%20cirrhosis&alt=sh]
+def: "A liver cirrhosis characterized by chronic and slow progressive destruction of intrahepatic bile ducts." [url:http\://en.wikipedia.org/wiki/Primary_biliary_cirrhosis, url:http\://www.merckmanuals.com/professional/hepatic_and_biliary_disorders/fibrosis_and_cirrhosis/primary_biliary_cirrhosis_pbc.html?qt=primary%20biliary%20cirrhosis&alt=sh, url:https\://www.mayoclinic.org/diseases-conditions/primary-biliary-cholangitis-pbc/symptoms-causes/syc-20376874]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "biliary liver cirrhosis" EXACT []
 synonym: "cholestatic cirrhosis" EXACT []
 synonym: "chronic nonsuppurative destructive cholangitis" EXACT []
+synonym: "primary biliary cirrhosis" EXACT []
 xref: EFO:0004267
 xref: GARD:7459
 xref: ICD10CM:K74.3
@@ -12003,7 +11993,7 @@ is_a: DOID:5419 ! schizophrenia
 id: DOID:12297
 name: Vogt-Koyanagi-Harada disease
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is caused by T helper cell mediated autoimmune attack of melanocytes resulting in inflammation of the inside of the eye, whitening of hair, skin pigment loss, and meningitis." [url:http\://en.wikipedia.org/wiki/Vogt%E2%80%93Koyanagi%E2%80%93Harada_syndrome] {comment="ls:IEDB"}
+def: "An autoimmune disease that is caused by T helper cell mediated autoimmune attack of melanocytes resulting in inflammation of the inside of the eye, whitening of hair, skin pigment loss, and meningitis." [url:http\://en.wikipedia.org/wiki/Vogt%E2%80%93Koyanagi%E2%80%93Harada_syndrome] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "Harada's disease" EXACT []
 synonym: "uveomeningoencephalitic syndrome" EXACT []
@@ -12037,7 +12027,7 @@ is_a: DOID:37 ! skin disease
 id: DOID:12306
 name: vitiligo
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that causes depigmentation of patches of skin resulting from loss of function or death of melanoctyes." [url:http\://en.wikipedia.org/wiki/Vitiligo] {comment="ls:IEDB"}
+def: "An autoimmune disease that causes depigmentation of patches of skin resulting from loss of function or death of melanoctyes." [url:http\://en.wikipedia.org/wiki/Vitiligo] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 xref: EFO:0004208
@@ -12317,7 +12307,7 @@ subset: NCIthesaurus
 xref: GARD:809
 xref: ICD10CM:A07.0
 xref: ICD9CM:007.0
-xref: MESH:D001447
+xref: MESH:D001447 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84583
 xref: SNOMEDCT_US_2019_09_01:57725006
 xref: UMLS_CUI:C0004692
@@ -13647,7 +13637,7 @@ id: DOID:12894
 name: Sjogren's syndrome
 namespace: disease_ontology
 alt_id: DOID:416
-def: "An autoimmune hypersensitivity disease that involves attack of immune cells which destroy the exocrine glands that produce tears and saliva." [url:http\://en.wikipedia.org/wiki/Sj%C3%B6gren%27s_syndrome] {comment="ls:IEDB"}
+def: "An autoimmune disease that involves attack of immune cells which destroy the exocrine glands that produce tears and saliva." [url:http\://en.wikipedia.org/wiki/Sj%C3%B6gren%27s_syndrome] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Sicca syndrome" EXACT []
@@ -13682,7 +13672,7 @@ is_a: DOID:403 ! mouth disease
 id: DOID:12900
 name: Mikulicz disease
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is characterized by chronic enlargement of the glands of the head and neck, has_symptom lumps of the face and neck, dry eyes, dry mouth, and intermittent fever, and is often associated with an underlying autoimmune disorder, hematologic malignancy, tuberculosis infection, or syphilis infection." [url:https\://rarediseases.org/rare-diseases/mikulicz-syndrome/]
+def: "An autoimmune disease that is characterized by chronic enlargement of the glands of the head and neck, has_symptom lumps of the face and neck, dry eyes, dry mouth, and intermittent fever, and is often associated with an underlying autoimmune disorder, hematologic malignancy, tuberculosis infection, or syphilis infection." [url:https\://rarediseases.org/rare-diseases/mikulicz-syndrome/]
 subset: NCIthesaurus
 synonym: "IgG4-related dacryoadenitis and sialadenitis" EXACT []
 synonym: "Mikulicz's disease" EXACT []
@@ -14499,7 +14489,7 @@ id: DOID:13189
 name: gout
 namespace: disease_ontology
 alt_id: DOID:14144
-def: "An arthritis that has_material_basis_in uric acid crystal deposits located_in joint." [url:http\://en.wikipedia.org/wiki/Gout, url:http\://www.mayoclinic.com/health/gout/DS00090, url:http\://www.medicinenet.com/gout/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000422.htm]
+def: "An arthritis that has_material_basis_in uric acid crystal deposits located_in joint." [url:http\://en.wikipedia.org/wiki/Gout, url:http\://www.mayoclinic.com/health/gout/DS00090, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000422.htm]
 subset: NCIthesaurus
 synonym: "Articular gout" EXACT []
 synonym: "gouty arthritis" EXACT []
@@ -14909,7 +14899,7 @@ id: DOID:13359
 name: Ehlers-Danlos syndrome
 namespace: disease_ontology
 alt_id: DOID:14696
-def: "A collagen disease that is characterized by extremely flexible joints, elastic skin, and excessive bruising caused by a heritable defect in collagen synthesis, which leads to marked healing difficulties. EDS has five cardinal signs, which may be present to some degree in all of the subtypes. These five cardinal signs are skin fragility, blood vessel fragility, skin hyperelasticity, joint hypermobility, and characteristic subcutaneous nodules." [url:http\://en.wikipedia.org/wiki/Ehlers%E2%80%93Danlos_syndrome, url:http\://ghr.nlm.nih.gov/condition/ehlers-danlos-syndrome, url:http\://www.ednf.org/, url:http\://www.mayoclinic.com/health/ehlers-danlos-syndrome/DS00706, url:http\://www.medicinenet.com/ehlers-danlos_syndrome/article.htm, url:http\://www.merriam-webster.com/medlineplus/ehlers-Danlos, url:http\://www.nlm.nih.gov/medlineplus/ehlersdanlossyndrome.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/23711271]
+def: "A collagen disease that is characterized by extremely flexible joints, elastic skin, and excessive bruising caused by a heritable defect in collagen synthesis, which leads to marked healing difficulties. EDS has five cardinal signs, which may be present to some degree in all of the subtypes. These five cardinal signs are skin fragility, blood vessel fragility, skin hyperelasticity, joint hypermobility, and characteristic subcutaneous nodules." [url:http\://en.wikipedia.org/wiki/Ehlers%E2%80%93Danlos_syndrome, url:http\://ghr.nlm.nih.gov/condition/ehlers-danlos-syndrome, url:http\://www.ednf.org/, url:http\://www.mayoclinic.com/health/ehlers-danlos-syndrome/DS00706, url:http\://www.merriam-webster.com/medlineplus/ehlers-Danlos, url:http\://www.nlm.nih.gov/medlineplus/ehlersdanlossyndrome.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/23711271]
 comment: OMIM mapping confirmed by DO. [LS].\nOMIM mapping by NeuroDevNet. [LS].
 subset: NCIthesaurus
 synonym: "Cutis hyperelastica" EXACT []
@@ -14988,6 +14978,7 @@ is_a: DOID:65 ! connective tissue disease
 id: DOID:13375
 name: temporal arteritis
 namespace: disease_ontology
+def: "A central nervous system vasculitis that is characterized by inflammation of the lining of arteries, often arteries in the head." [url:https\://www.mayoclinic.org/diseases-conditions/giant-cell-arteritis/symptoms-causes/syc-20372758]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Giant cell Arteritis" EXACT []
@@ -14998,6 +14989,7 @@ synonym: "Temporal arteritis" EXACT []
 xref: ICD9CM:446.5
 xref: MESH:D013700
 xref: OMIM:187360
+xref: ORDO:397
 xref: SNOMEDCT_US_2019_09_01:414341000
 xref: UMLS_CUI:C0039483
 is_a: DOID:525 ! central nervous system vasculitis
@@ -15349,6 +15341,7 @@ def: "A balantitis characterized by white plaques or patches on genitals." [url:
 subset: NCIthesaurus
 synonym: "Penile Lichen Sclerosus" EXACT []
 xref: ICD9CM:607.81
+xref: MESH:D052798 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3523
 xref: SNOMEDCT_US_2019_09_01:198033005
 xref: UMLS_CUI:C0152460
@@ -15397,7 +15390,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:13487
 name: childhood disintegrative disease
 namespace: disease_ontology
-def: "A pervasive developmental disorder that is a rare condition characterized by late onset (>3 years of age) of developmental delays in language, social function, and motor skills where children who have had previously normal development who then appear to regress." [url:http\://en.wikipedia.org/wiki/Heller%27s_syndrome, url:http\://www.patient.co.uk/doctor/Heller%27s-Syndrome.htm]
+def: "A pervasive developmental disorder that is a rare condition characterized by late onset (greater than 3 years of age) of developmental delays in language, social function, and motor skills where children who have had previously normal development who then appear to regress." [url:http\://en.wikipedia.org/wiki/Heller%27s_syndrome, url:http\://www.patient.co.uk/doctor/Heller%27s-Syndrome.htm]
 subset: NCIthesaurus
 synonym: "Disintegrative psychosis" EXACT []
 synonym: "Heller's syndrome" EXACT []
@@ -15650,7 +15643,7 @@ synonym: "Infection due to Aspergillus" EXACT []
 xref: GARD:5856
 xref: ICD10CM:B44
 xref: ICD9CM:117.3
-xref: MESH:D001228
+xref: MESH:D001228 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C2886
 xref: SNOMEDCT_US_2019_09_01:65553006
 xref: UMLS_CUI:C0004030
@@ -17535,7 +17528,7 @@ synonym: "spermatogenic failure" EXACT []
 xref: EFO:0000279
 xref: ICD10CM:N46.0
 xref: ICD9CM:606.0
-xref: MESH:D053713
+xref: MESH:D053713 {EXACT="exactMatch"}
 xref: NCI:C80076
 xref: ORDO:217034
 xref: SNOMEDCT_US_2019_09_01:425558002
@@ -18801,7 +18794,7 @@ is_a: DOID:9870 ! galactosemia
 id: DOID:14699
 name: thrombocytopenia-absent radius syndrome
 namespace: disease_ontology
-def: "A chromosomal deletion syndrome that is characterized by absence of the radius bone and platelet deficiency and bilateral absence of the radii with the presence of both thumbs and generally transient thrombocytopenia (<50 platelets/nL) and that has_material_basis_in compound heterozygosity for a rare null mutation involving the RBM8A gene on chromosome 1q12 on 1 allele and 1 of 2 low-frequency noncoding single-nucleotide polymorphisms in RBM8A on the other." [url:https\://ghr.nlm.nih.gov/condition/thrombocytopenia-absent-radius-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK23758/]
+def: "A chromosomal deletion syndrome that is characterized by absence of the radius bone and platelet deficiency and bilateral absence of the radii with the presence of both thumbs and generally transient thrombocytopenia (less than 50 platelets/nL) and that has_material_basis_in compound heterozygosity for a rare null mutation involving the RBM8A gene on chromosome 1q12 on 1 allele and 1 of 2 low-frequency noncoding single-nucleotide polymorphisms in RBM8A on the other." [url:https\://ghr.nlm.nih.gov/condition/thrombocytopenia-absent-radius-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK23758/]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "chromosome 1q21.1 deletion syndrome" EXACT []
@@ -18925,11 +18918,13 @@ is_a: DOID:423 ! myopathy
 
 [Term]
 id: DOID:14720
-name: type I Ehlers-Danlos syndrome
+name: Ehlers-Danlos syndrome classic type 1
 namespace: disease_ontology
+def: "An Ehlers-Danlos syndrome that is characterized by loose-jointedness and fragile, bruisable skin that heals with peculiar 'cigarette-paper' scars and that has_material_basis_in heterozygous mutation in the collagen alpha-1(V) gene (COL5A1) on chromosome 9q34." [url:https\://pubmed.ncbi.nlm.nih.gov/28306229/]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Ehlers-Danlos syndrome, type 1" EXACT []
+synonym: "type I Ehlers-Danlos syndrome" EXACT []
 xref: MESH:C536194
 xref: NCI:C125696
 xref: OMIM:130000
@@ -19052,11 +19047,13 @@ is_a: DOID:9252 ! amino acid metabolic disorder
 
 [Term]
 id: DOID:14757
-name: type III Ehlers-Danlos syndrome
+name: Ehlers-Danlos syndrome hypermobility type
 namespace: disease_ontology
+def: "An Ehlers-Danlos syndrome that is characterized by joint hyperextensibility without skeletal deformity." [url:https\://pubmed.ncbi.nlm.nih.gov/28306229/]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Ehlers-Danlos syndrome, type 3" EXACT []
+synonym: "type III Ehlers-Danlos syndrome" EXACT []
 xref: GARD:2081
 xref: ICD10CM:Q79.62
 xref: MESH:C536196
@@ -19121,18 +19118,16 @@ is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:14775
-name: brittle cornea syndrome
+name: brittle cornea syndrome 1
 namespace: disease_ontology
+def: "An Ehlers-Danlos syndrome that is characterized by blue sclerae, corneal rupture after minor trauma, keratoconus or keratoglobus, hyperelasticity of the skin, and hypermobility of the joints and has_material_basis_in homozygous mutation in the ZNF469 gene on chromosome 16q24." [url:https\://pubmed.ncbi.nlm.nih.gov/28306229/]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
-synonym: "brittle cornea syndrome 2" EXACT []
-synonym: "Kyphoscoliosis type" EXACT []
 synonym: "type VIB Ehlers-Danlos syndrome" EXACT []
 xref: GARD:1019
 xref: MESH:C536198
 xref: NCI:C125700
 xref: OMIM:229200
-xref: OMIM:614170
 xref: SNOMEDCT_US_2019_09_01:25606004
 xref: UMLS_CUI:C0268342
 is_a: DOID:13359 ! Ehlers-Danlos syndrome
@@ -19424,6 +19419,7 @@ is_a: DOID:219 ! colon cancer
 id: DOID:1526
 name: panniculitis
 namespace: disease_ontology
+def: "A skin disease that is characterized by inflammation of subcutaneous adipose tissue." [url:https\://en.wikipedia.org/wiki/Panniculitis]
 subset: NCIthesaurus
 xref: ICD10CM:M79.3
 xref: ICD9CM:729.30
@@ -20316,7 +20312,7 @@ xref: ICD10CM:Q23.0
 xref: ICD10CM:Q25.1
 xref: ICD9CM:395.0
 xref: ICD9CM:746.3
-xref: MESH:D001024
+xref: MESH:D001024 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C50462
 xref: SNOMEDCT_US_2019_09_01:18546004
 xref: SNOMEDCT_US_2019_09_01:60573004
@@ -20511,7 +20507,7 @@ id: DOID:1749
 name: squamous cell carcinoma
 namespace: disease_ontology
 alt_id: DOID:5512
-def: "A carcinoma that derives_from squamous epithelial cells." [url:http\://en.wikipedia.org/wiki/Squamous_cell_carcinoma, url:http\://www.medicinenet.com/skin_cancer/page2.htm]
+def: "A carcinoma that derives_from squamous epithelial cells." [url:http\://en.wikipedia.org/wiki/Squamous_cell_carcinoma]
 subset: NCIthesaurus
 synonym: "epidermoid carcinoma" EXACT []
 synonym: "malignant squamous cell tumor" EXACT []
@@ -21741,7 +21737,7 @@ subset: NCIthesaurus
 xref: EFO:0003914
 xref: ICD10CM:I70
 xref: ICD9CM:440
-xref: MESH:D050197
+xref: MESH:D050197 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35768
 xref: SNOMEDCT_US_2019_09_01:38716007
 xref: UMLS_CUI:C0004153
@@ -22272,7 +22268,6 @@ xref: OMIM:114580
 xref: OMIM:212050
 xref: OMIM:607644
 xref: OMIM:613108
-xref: OMIM:613953
 xref: OMIM:613956
 xref: OMIM:614162
 xref: OMIM:615527
@@ -26638,7 +26633,7 @@ xref: GARD:10246
 xref: ICD10CM:J45
 xref: ICD9CM:493
 xref: KEGG:05310
-xref: MESH:D001249
+xref: MESH:D001249 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C28397
 xref: OMIM:600807
 xref: SNOMEDCT_US_2019_09_01:195967001
@@ -27451,7 +27446,7 @@ is_a: DOID:2921 ! glomerulonephritis
 id: DOID:2987
 name: familial Mediterranean fever
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease characterized by recurrent episodes of fever and acute inflammation of the membranes lining the abdomen, joints and lungs; that has_material_basis_in mutations in the MEFV gene, which encodes the protein pyrin." [url:http\://en.wikipedia.org/wiki/Familial_Mediterranean_fever, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/127/viewAbstract]
+def: "An autoimmune disease characterized by recurrent episodes of fever and acute inflammation of the membranes lining the abdomen, joints and lungs; that has_material_basis_in mutations in the MEFV gene, which encodes the protein pyrin." [url:http\://en.wikipedia.org/wiki/Familial_Mediterranean_fever, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/127/viewAbstract]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -27472,14 +27467,14 @@ is_a: DOID:4 ! disease
 id: DOID:2988
 name: antiphospholipid syndrome
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is characterized by recurrent venous or arterial thrombosis and/or fetal losses associated with characteristic elevated levels of antibodies directed against membrane anionic phospholipids (anticardiolipin)." [url:http\://en.wikipedia.org/wiki/Antiphospholipid_syndrome] {comment="ls:IEDB"}
+def: "An autoimmune disease that is characterized by recurrent venous or arterial thrombosis and/or fetal losses associated with characteristic elevated levels of antibodies directed against membrane anionic phospholipids (anticardiolipin)." [url:http\://en.wikipedia.org/wiki/Antiphospholipid_syndrome] {comment="ls:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "antiphospholipid antibody syndrome" EXACT []
 synonym: "Antiphospholipid syndrome" EXACT []
 xref: GARD:5824
 xref: ICD10CM:D68.61
-xref: MESH:D016736
+xref: MESH:D016736 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C61283
 xref: OMIM:107320
 xref: SNOMEDCT_US_2019_09_01:26843008
@@ -27863,14 +27858,14 @@ is_a: DOID:1519 ! cecum carcinoma
 id: DOID:3042
 name: allergic contact dermatitis
 namespace: disease_ontology
-def: "A contact dermititis that is an allergic skin reaction to foreign chemical or substances leading to red, itchy, weepy reaction where the skin has come into contact with a substance that the immune system recognizes as foreign." [url:http\://en.wikipedia.org/wiki/Allergic_contact_dermatitis] {comment="ls:IEDB"}
+def: "A contact dermatitis that is an allergic skin reaction to foreign chemical or substances leading to red, itchy, weepy reaction where the skin has come into contact with a substance that the immune system recognizes as foreign." [url:http\://en.wikipedia.org/wiki/Allergic_contact_dermatitis] {comment="ls:IEDB"}
 subset: NCIthesaurus
 xref: ICD10CM:L23
 xref: MESH:D017449
 xref: NCI:C26998
 xref: SNOMEDCT_US_2019_09_01:238575004
 xref: UMLS_CUI:C0162820
-is_a: DOID:1205 ! allergic hypersensitivity disease
+is_a: DOID:2773 ! contact dermatitis
 
 [Term]
 id: DOID:3049
@@ -27998,7 +27993,7 @@ synonym: "Astrocytoma, NOS" EXACT []
 synonym: "astroglioma" EXACT []
 synonym: "cerebral astrocytoma" EXACT []
 xref: ICDO:M9400/3
-xref: MESH:D001254
+xref: MESH:D001254 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C4951
 xref: NCI:C60781
 xref: SNOMEDCT_US_2019_09_01:38713004
@@ -30165,7 +30160,7 @@ alt_id: DOID:4390
 alt_id: DOID:4391
 alt_id: DOID:4392
 alt_id: DOID:4980
-def: "A bone sarcoma that has_material_basis in neural crest cells derives_from undeveloped, undifferentiated neuroectoderm." [url:http\://en.wikipedia.org/wiki/Primitive_neuroectodermal_tumor, url:http\://www.cancer.gov/dictionary?cdrid=383924]
+def: "A connective tissue cancer that has_material_basis in neural crest cells derives_from undeveloped, undifferentiated neuroectoderm." [url:http\://en.wikipedia.org/wiki/Primitive_neuroectodermal_tumor, url:http\://www.cancer.gov/dictionary?cdrid=383924]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -30201,7 +30196,7 @@ xref: UMLS_CUI:C0796547
 xref: UMLS_CUI:C0863029
 xref: UMLS_CUI:C0877849
 xref: UMLS_CUI:C1334408
-is_a: DOID:184 ! bone cancer
+is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:337
@@ -30580,27 +30575,15 @@ is_a: DOID:633 ! myositis
 id: DOID:3429
 name: inclusion body myositis
 namespace: disease_ontology
-def: "A myositis that is characterized by slowly progressive weakness and wasting of both distal and proximal muscles, most apparent in the muscles of the arms and legs that can occur in a sporadic or hereditary forms." [url:http\://en.wikipedia.org/wiki/Inclusion_body_myositis, url:http\://www.jewishgeneticdiseases.org/diseases/hereditary-inclusion-body-myopathy-2/, url:http\://www.myositis.org/learn-about-myositis/types-of-myositis/inclusion-body-myositis, url:http\://www.ncbi.nlm.nih.gov/gtr/conditions/C1853926/, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=602]
+def: "A myositis that is characterized by late onset of skeletal muscle inflammation, weakness, and atrophy with cytoplasmic granules and vacuoles in the muscle." [url:http\://en.wikipedia.org/wiki/Inclusion_body_myositis, url:https\://ghr.nlm.nih.gov/condition/idiopathic-inflammatory-myopathy]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
-synonym: "Distal Myopathy with Rimmed Vacuoles" EXACT []
-synonym: "Distal myopathy, Nonaka type" EXACT []
-synonym: "Hereditary Inclusion Body Myopathy" EXACT []
-synonym: "HIBM" EXACT []
-synonym: "IBM-3" EXACT []
-synonym: "IBM2" EXACT []
-synonym: "inclusion body myopathy 2" EXACT []
-synonym: "inclusion body myopathy 3" EXACT []
-synonym: "Nonaka Myopathy" EXACT []
-synonym: "Nonaka myopathy" EXACT []
+xref: GARD:3896
 xref: ICD10CM:G72.41
-xref: ICD9CM:359.71
-xref: MESH:D018979
+xref: MESH:D018979 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84786
 xref: OMIM:147421
-xref: OMIM:605637
-xref: OMIM:605820
 xref: ORDO:611
 xref: SNOMEDCT_US_2019_09_01:72315009
 xref: UMLS_CUI:C0238190
@@ -31787,20 +31770,7 @@ alt_id: DOID:7692
 alt_id: DOID:7703
 def: "An aortic disease that is characterized by an enlargement (dilation) of the aorta to greater than 1.5 times normal size." [url:http\://en.wikipedia.org/wiki/Aortic_aneurysm]
 subset: NCIthesaurus
-synonym: "abdominal aortic aneurysm, ruptured" EXACT []
-synonym: "Ruptured abdominal Aortic Aneurysm" EXACT []
-synonym: "Ruptured abdominal aortic aneurysm" EXACT []
-synonym: "ruptured abdominal aortic aneurysm" EXACT []
-synonym: "Ruptured Aortic Aneurysm" EXACT []
-synonym: "Ruptured aortic aneurysm" EXACT []
 synonym: "ruptured aortic aneurysm" EXACT []
-synonym: "Ruptured Thoracic Aneurysm" EXACT []
-synonym: "Ruptured thoracic aortic aneurysm" EXACT []
-synonym: "ruptured thoracic aortic aneurysm" EXACT []
-synonym: "ruptured thoracoabdominal aortic aneurysm" EXACT []
-synonym: "Thoracic aortic aneurysm which has ruptured" EXACT []
-synonym: "Thoracic aortic aneurysm, ruptured" EXACT []
-synonym: "Thoracoabdominal aortic aneurysm, ruptured" EXACT []
 xref: ICD10CM:I71.1
 xref: ICD10CM:I71.3
 xref: ICD10CM:I71.5
@@ -31810,8 +31780,8 @@ xref: ICD9CM:441.1
 xref: ICD9CM:441.3
 xref: ICD9CM:441.5
 xref: ICD9CM:441.6
-xref: MESH:D001014
-xref: MESH:D001019
+xref: MESH:D001014 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001019 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26697
 xref: NCI:C27046
 xref: NCI:C27198
@@ -32800,7 +32770,7 @@ xref: GARD:4521
 xref: ICD10CM:D68.59
 xref: MESH:D020151
 xref: NCI:C99025
-xref: OMIM:176860
+xref: ORDO:745
 xref: SNOMEDCT_US_2019_09_01:76407009
 xref: UMLS_CUI:C0398625
 is_a: DOID:2452 ! thrombophilia
@@ -33209,6 +33179,7 @@ subset: NCIthesaurus
 synonym: "adenoma of the Pituitary gland" EXACT []
 xref: MESH:D010911
 xref: NCI:C3329
+xref: OMIM:PS102200
 xref: SNOMEDCT_US_2019_09_01:128664001
 xref: SNOMEDCT_US_2019_09_01:254956000
 xref: UMLS_CUI:C0032000
@@ -36353,7 +36324,7 @@ is_a: DOID:438 ! autoimmune disease of the nervous system
 id: DOID:438
 name: autoimmune disease of the nervous system
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease affecting the nervous system." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1003353/, url:https\://www.ncbi.nlm.nih.gov/pubmed/21619947]
+def: "An autoimmune disease affecting the nervous system." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1003353/, url:https\://www.ncbi.nlm.nih.gov/pubmed/21619947]
 subset: NCIthesaurus
 synonym: "autoimmune nervous system disorder" RELATED []
 xref: MESH:D020274
@@ -37073,7 +37044,7 @@ is_a: DOID:557 ! kidney disease
 id: DOID:4480
 name: achondroplasia
 namespace: disease_ontology
-def: "An osteochondrodysplasia that results_in dwarfism which has_material_basis_in abnormal ossification of cartilage in located_in long bone." [url:http\://en.wikipedia.org/wiki/Achondroplasia, url:http\://ghr.nlm.nih.gov/condition/achondroplasia, url:http\://www.mayoclinic.com/health/dwarfism/DS01012/DSECTION%3Dsymptoms, url:http\://www.medicinenet.com/achondroplasia/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001577.htm]
+def: "An osteochondrodysplasia that results_in dwarfism which has_material_basis_in abnormal ossification of cartilage in located_in long bone." [url:http\://en.wikipedia.org/wiki/Achondroplasia, url:http\://ghr.nlm.nih.gov/condition/achondroplasia, url:http\://www.mayoclinic.com/health/dwarfism/DS01012/DSECTION%3Dsymptoms, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001577.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Achondroplastic physique" EXACT []
@@ -41174,10 +41145,11 @@ is_a: DOID:162 ! cancer
 id: DOID:5162
 name: arteriolosclerosis
 namespace: disease_ontology
+def: "An arteriosclerosis that is characterized by thickening of the wall of the small arteries and arterioles, caused by deposition of hyaline material in the wall or concentric smooth muscle wall hypertrophy, and results in lumen narrowing and tissue ischemia." [url:https\://en.wikipedia.org/wiki/Arteriolosclerosis]
 subset: NCIthesaurus
 synonym: "Arteriolosclerosis" EXACT []
 xref: ICD10CM:I70
-xref: MESH:D050379
+xref: MESH:D050379 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C35543
 xref: SNOMEDCT_US_2019_09_01:17941002
 xref: UMLS_CUI:C0878486
@@ -44085,7 +44057,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:3343
 xref: ICD10CM:Q87.3
-xref: MESH:D001506
+xref: MESH:D001506 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34415
 xref: OMIM:130650
 xref: ORDO:116
@@ -44300,6 +44272,7 @@ id: DOID:5603
 name: T-cell acute lymphoblastic leukemia
 namespace: disease_ontology
 alt_id: DOID:5599
+def: "An acute lymphoblastic leukemia that is characterized by too many T-cell lymphoblasts found in the bone marrow and blood." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/expand/T]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "acute T cell leukaemia" EXACT []
@@ -47293,6 +47266,7 @@ xref: KEGG:05340
 xref: MESH:D007153
 xref: NCI:C3131
 xref: OMIM:242850
+xref: OMIM:PS300755
 xref: SNOMEDCT_US_2019_09_01:234532001
 xref: UMLS_CUI:C0021051
 is_a: DOID:4 ! disease
@@ -47745,11 +47719,8 @@ id: DOID:6217
 name: gastric diffuse adenocarcinoma
 namespace: disease_ontology
 alt_id: DOID:4946
+def: "A gastric adenocarcinoma that is characterized by the presence of a diffuse infiltrate, composed of individual adenocarcinoma cells or groups of adenocarcinoma cells in a fibrous or mucoid stroma." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C9159]
 subset: NCIthesaurus
-synonym: "adenocarcinoma of Linitis Plastica type" EXACT []
-synonym: "carcinoma, diffuse type" EXACT []
-synonym: "Diffuse type adenocarcinoma" EXACT []
-synonym: "diffuse type carcinoma" EXACT []
 xref: NCI:C4127
 xref: NCI:C9159
 xref: SNOMEDCT_US_2019_09_01:24505004
@@ -47906,7 +47877,6 @@ synonym: "growth hormone secreting adenoma of pituitary" EXACT []
 synonym: "Somatotroph adenoma" EXACT []
 xref: MESH:D049912
 xref: NCI:C7461
-xref: OMIM:102200
 xref: SNOMEDCT_US_2019_09_01:254957009
 xref: UMLS_CUI:C0346302
 is_a: DOID:5395 ! functioning pituitary adenoma
@@ -48006,7 +47976,7 @@ xref: MESH:D016511
 xref: NCI:C3472
 xref: SNOMEDCT_US_2019_09_01:31323000
 xref: UMLS_CUI:C0085110
-is_a: DOID:628 ! combined T cell and B cell immunodeficiency
+is_a: DOID:612 ! primary immunodeficiency disease
 
 [Term]
 id: DOID:6270
@@ -48078,7 +48048,7 @@ is_a: DOID:6067 ! ovarian mucinous neoplasm
 id: DOID:628
 name: combined T cell and B cell immunodeficiency
 namespace: disease_ontology
-def: "A primary immunodeficiency disease that involves multiple components of the immune system, including both humoral immunity and cell-mediated immunity." [url:http\://en.wikipedia.org/wiki/Combined_immunodeficiencies, url:http\://rarediseases.info.nih.gov/gard/7628/severe-combined-immunodeficiency/resources/1]
+def: "A primary immunodeficiency disease characterized by impaired T cell-mediated immunity and impaired B cell mediated humoral immunity." [url:http\://en.wikipedia.org/wiki/Combined_immunodeficiencies, url:http\://rarediseases.info.nih.gov/gard/7628/severe-combined-immunodeficiency/resources/1, url:https\://link.springer.com/chapter/10.1007/978-3-662-52909-6_2]
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -49739,7 +49709,7 @@ is_a: DOID:778 ! delusional disorder
 id: DOID:6682
 name: spondylolisthesis
 namespace: disease_ontology
-def: "A bone structure disease that has_material_basis_in displacement located_in set of vertebrae." [url:http\://en.wikipedia.org/wiki/Spondylolisthesis, url:http\://orthoinfo.aaos.org/topic.cfm?topic=a00053, url:http\://www.medicinenet.com/spondylolisthesis/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001260.htm, url:http\://www.umm.edu/spinecenter/education/spondylolysis_spondylolisthesis.htm]
+def: "A bone structure disease that has_material_basis_in displacement located_in set of vertebrae." [url:http\://en.wikipedia.org/wiki/Spondylolisthesis, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001260.htm, url:http\://www.umm.edu/spinecenter/education/spondylolysis_spondylolisthesis.htm]
 subset: NCIthesaurus
 xref: ICD10CM:M43.1
 xref: MESH:D013168
@@ -49806,7 +49776,7 @@ synonym: "Canale-Smith syndrome" EXACT []
 xref: GARD:8686
 xref: ICD10CM:D89.82
 xref: ICD9CM:279.41
-xref: MESH:D056735
+xref: MESH:D056735 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C37864
 xref: OMIM:601859
 xref: ORDO:3261
@@ -51759,7 +51729,7 @@ is_a: DOID:65 ! connective tissue disease
 id: DOID:7148
 name: rheumatoid arthritis
 namespace: disease_ontology
-def: "An arthritis that is an autoimmune disease which attacks healthy cells and tissue located_in joint." [url:http\://en.wikipedia.org/wiki/Rheumatoid_arthritis, url:http\://www.arthritis.org/disease-center.php?disease_id=31, url:http\://www.mayoclinic.org/diseases-conditions/rheumatoid-arthritis/home/ovc-20197388, url:http\://www.medicinenet.com/rheumatoid_arthritis/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000431.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=rheumatoid%20arthritis]
+def: "An arthritis that is an autoimmune disease which attacks healthy cells and tissue located_in joint." [url:http\://en.wikipedia.org/wiki/Rheumatoid_arthritis, url:http\://www.arthritis.org/disease-center.php?disease_id=31, url:http\://www.mayoclinic.org/diseases-conditions/rheumatoid-arthritis/home/ovc-20197388, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000431.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=rheumatoid%20arthritis]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Arthritis or polyarthritis, rheumatic" EXACT []
@@ -52856,7 +52826,7 @@ is_a: DOID:2127 ! brain germinoma
 id: DOID:743
 name: dermatographia
 namespace: disease_ontology
-def: "An urticaria induced by stroking of the skin." [url:http\://en.wikipedia.org/wiki/Dermatographic_urticaria, url:http\://www.dermnetnz.org/reactions/urticaria.html]
+def: "A physical urticaria induced by stroking of the skin." [url:http\://en.wikipedia.org/wiki/Dermatographic_urticaria, url:http\://www.dermnetnz.org/reactions/urticaria.html]
 subset: NCIthesaurus
 synonym: "dermatographic urticaria" EXACT []
 synonym: "dermographism" EXACT []
@@ -53008,7 +52978,6 @@ name: large cell keratinizing variant squamous cell breast carcinoma
 namespace: disease_ontology
 def: "A breast squamous cell carcinoma characterized by large epithelial cells that contain keratin." [url:https\://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C1519486]
 subset: NCIthesaurus
-xref: https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C1519486
 xref: NCI:C40357
 xref: UMLS_CUI:C1519486
 is_a: DOID:5514 ! breast squamous cell carcinoma
@@ -56483,7 +56452,7 @@ id: DOID:84
 name: osteochondritis dissecans
 namespace: disease_ontology
 alt_id: DOID:87
-def: "An ischemic bone disease that results_in necrosis located_in epiphysis." [url:http\://en.wikipedia.org/wiki/Osteochondritis_dissecans, url:http\://www.mayoclinic.com/health/osteochondritis-dissecans/DS00741, url:http\://www.medicinenet.com/osteochondritis_dissecans/article.htm]
+def: "An ischemic bone disease that results_in necrosis located_in epiphysis." [url:http\://en.wikipedia.org/wiki/Osteochondritis_dissecans, url:http\://www.mayoclinic.com/health/osteochondritis-dissecans/DS00741]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "OCD" EXACT []
@@ -57125,6 +57094,7 @@ is_a: DOID:15 ! reproductive system disease
 id: DOID:853
 name: polymyalgia rheumatica
 namespace: disease_ontology
+def: "A collagen disease that is characterized by pain, stiffness, and tenderness of the proximal muscle groups including the shoulder, pelvic girdle and the neck." [url:https\://medlineplus.gov/polymyalgiarheumatica.html]
 subset: NCIthesaurus
 synonym: "Polymyalgia rheumatica" EXACT []
 xref: ICD10CM:M35.3
@@ -57133,7 +57103,6 @@ xref: MESH:D011111
 xref: NCI:C85018
 xref: SNOMEDCT_US_2019_09_01:65323003
 xref: UMLS_CUI:C0032533
-is_a: DOID:423 ! myopathy
 is_a: DOID:854 ! collagen disease
 
 [Term]
@@ -58742,7 +58711,7 @@ is_a: DOID:883 ! parasitic helminthiasis infectious disease
 id: DOID:8857
 name: lupus erythematosus
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is characterized by a constellation of findings that include elevated antibodies to nuclear antigens, antiphospholipids, low complement levels, ulcers, non-scarring alopecia, renal or neurologic damage, and low white blood cell and platelet counts, has_symptom rashes, fatigue, arthritis, hair loss, seizures, and symptoms related to affected organs, and has_material_basis_in autoimmune disorder." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29366725]
+def: "An autoimmune disease that is characterized by a constellation of findings that include elevated antibodies to nuclear antigens, antiphospholipids, low complement levels, ulcers, non-scarring alopecia, renal or neurologic damage, and low white blood cell and platelet counts, has_symptom rashes, fatigue, arthritis, hair loss, seizures, and symptoms related to affected organs." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29366725]
 subset: NCIthesaurus
 synonym: "lupus" EXACT []
 xref: ICD10CM:L93
@@ -59282,7 +59251,7 @@ id: DOID:90
 name: degenerative disc disease
 namespace: disease_ontology
 alt_id: DOID:7943
-def: "A bone deterioration disease that has_material_basis_in gradual dehydration and tears located_in intervertebral disc." [url:http\://en.wikipedia.org/wiki/Degenerative_disc_disease, url:http\://www.cedars-sinai.edu/Patients/Health-Conditions/Degenerative-Disc-Disease.aspx, url:http\://www.medicinenet.com/degenerative_disc/article.htm, url:http\://www.spine-health.com/conditions/degenerative-disc-disease/what-degenerative-disc-disease]
+def: "A bone deterioration disease that has_material_basis_in gradual dehydration and tears located_in intervertebral disc." [url:http\://en.wikipedia.org/wiki/Degenerative_disc_disease, url:http\://www.cedars-sinai.edu/Patients/Health-Conditions/Degenerative-Disc-Disease.aspx]
 subset: NCIthesaurus
 synonym: "cervical disc degenerative disease" EXACT []
 synonym: "intervertebral disc degeneration" EXACT []
@@ -59317,7 +59286,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:9008
 name: psoriatic arthritis
 namespace: disease_ontology
-def: "A syndrome that occurs in humans with psoriasis who also experience symptoms similar to arthritis." [url:http\://en.wikipedia.org/wiki/Psoriatic_arthropathy, url:http\://psoriasis.org/netcommunity/psoriatic_arthritis, url:http\://www.mayoclinic.com/health/psoriatic-arthritis/DS00476, url:http\://www.medicinenet.com/psoriatic_arthritis/article.htm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000413.htm]
+def: "An arthritis that is characterized by joint inflammation that usually occurs in combination with psoriasis." [url:http\://en.wikipedia.org/wiki/Psoriatic_arthropathy, url:http\://www.mayoclinic.com/health/psoriatic-arthritis/DS00476, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000413.htm, url:https\://ghr.nlm.nih.gov/condition/psoriatic-arthritis]
 subset: NCIthesaurus
 synonym: "arthritis psoriatica" EXACT []
 synonym: "arthropathic psoriasis" EXACT []
@@ -59329,7 +59298,7 @@ xref: MESH:D015535
 xref: NCI:C61277
 xref: SNOMEDCT_US_2019_09_01:156370009
 xref: UMLS_CUI:C0003872
-is_a: DOID:225 ! syndrome
+is_a: DOID:848 ! arthritis
 
 [Term]
 id: DOID:901
@@ -59932,6 +59901,7 @@ is_a: DOID:2789 ! parasitic protozoa infectious disease
 id: DOID:9182
 name: pemphigus
 namespace: disease_ontology
+def: "A bullous skin disease that is characterized by blistering of the skin and mucous membranes (mouth, nose, throat, eyes, and genitals)." [url:https\://en.wikipedia.org/wiki/Pemphigus, url:https\://medlineplus.gov/pemphigus.html]
 subset: NCIthesaurus
 xref: GARD:7352
 xref: ICD10CM:L10
@@ -61261,7 +61231,6 @@ xref: NCI:C35301
 xref: SNOMEDCT_US_2019_09_01:64936001
 xref: UMLS_CUI:C0242459
 is_a: DOID:5870 ! eosinophilic pneumonia
-is_a: DOID:74 ! hematopoietic system disease
 
 [Term]
 id: DOID:9507
@@ -62132,7 +62101,7 @@ id: DOID:9808
 name: Goodpasture syndrome
 namespace: disease_ontology
 alt_id: DOID:9812
-def: "An autoimmune hypersensitivity disease that is characterized by antibody attack of the basement membrane in lungs and kidneys, leading to bleeding from the lungs and kidney failure." [url:http\://en.wikipedia.org/wiki/Goodpasteure%27s_syndrome]
+def: "An autoimmune disease that is characterized by antibody attack of the basement membrane in lungs and kidneys, leading to bleeding from the lungs and kidney failure." [url:http\://en.wikipedia.org/wiki/Goodpasteure%27s_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "anti-GBM disease" EXACT []

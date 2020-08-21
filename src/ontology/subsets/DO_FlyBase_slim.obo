@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-07-23/subsets/DO_FlyBase_slim.obo
+data-version: doid/2020-08-21/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -681,7 +681,7 @@ xref: MESH:D000067877
 id: DOID:0060050
 name: autoimmune disease of blood
 namespace: disease_ontology
-def: "An autoimmune hypersensitivity disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood." [url:https\://www.ncbi.nlm.nih.gov/books/NBK459447/] {comment="ls:IEDB"}
+def: "An autoimmune disease that is the abnormal functioning of the immune system that causes your immune system to produce antibodies or T cells against cells and/or tissues in the blood." [url:https\://www.ncbi.nlm.nih.gov/books/NBK459447/] {comment="ls:IEDB"}
 subset: DO_FlyBase_slim
 is_a: DOID:2914 ! immune system disease
 
@@ -964,7 +964,7 @@ is_a: DOID:1826 ! epilepsy
 id: DOID:0080597
 name: Kleefstra syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by developmental delay and intellectual disability, severely limited or absent speech, and weak muscle tone." [url:url\:http\://ghr.nlm.nih.gov/condition/kleefstra-syndrome]
+def: "A syndrome that is characterized by developmental delay and intellectual disability, severely limited or absent speech, and weak muscle tone." [url:http\://ghr.nlm.nih.gov/condition/kleefstra-syndrome]
 subset: DO_FlyBase_slim
 xref: OMIM:PS610253
 
@@ -1122,16 +1122,8 @@ subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
-synonym: "Ca body - stomach" EXACT []
-synonym: "ca greater curvature of stomach" EXACT []
-synonym: "Ca lesser curvature - stomach" EXACT []
 synonym: "gastric cancer" EXACT []
 synonym: "gastric neoplasm" EXACT []
-synonym: "malignant neoplasm of body of stomach" EXACT []
-synonym: "malignant neoplasm of lesser curve of stomach" EXACT []
-synonym: "malignant tumor of body of stomach" EXACT []
-synonym: "malignant tumor of greater curve of stomach" EXACT []
-synonym: "malignant tumor of lesser curve of stomach" EXACT []
 xref: GARD:7704
 xref: ICD10CM:C16
 xref: ICD10CM:C16.2
@@ -1144,7 +1136,6 @@ xref: ICD9CM:151.6
 xref: MESH:D013274
 xref: NCI:C3387
 xref: NCI:C9331
-xref: OMIM:137215
 xref: OMIM:613659
 xref: SNOMEDCT_US_2019_09_01:126824007
 xref: SNOMEDCT_US_2019_09_01:187742008
@@ -1649,7 +1640,7 @@ synonym: "spermatogenic failure" EXACT []
 xref: EFO:0000279
 xref: ICD10CM:N46.0
 xref: ICD9CM:606.0
-xref: MESH:D053713
+xref: MESH:D053713 {EXACT="exactMatch"}
 xref: NCI:C80076
 xref: ORDO:217034
 xref: SNOMEDCT_US_2019_09_01:425558002
@@ -2520,27 +2511,15 @@ is_a: DOID:3211 ! lysosomal storage disease
 id: DOID:3429
 name: inclusion body myositis
 namespace: disease_ontology
-def: "A myositis that is characterized by slowly progressive weakness and wasting of both distal and proximal muscles, most apparent in the muscles of the arms and legs that can occur in a sporadic or hereditary forms." [url:http\://en.wikipedia.org/wiki/Inclusion_body_myositis, url:http\://www.jewishgeneticdiseases.org/diseases/hereditary-inclusion-body-myopathy-2/, url:http\://www.myositis.org/learn-about-myositis/types-of-myositis/inclusion-body-myositis, url:http\://www.ncbi.nlm.nih.gov/gtr/conditions/C1853926/, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=602]
+def: "A myositis that is characterized by late onset of skeletal muscle inflammation, weakness, and atrophy with cytoplasmic granules and vacuoles in the muscle." [url:http\://en.wikipedia.org/wiki/Inclusion_body_myositis, url:https\://ghr.nlm.nih.gov/condition/idiopathic-inflammatory-myopathy]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
-synonym: "Distal Myopathy with Rimmed Vacuoles" EXACT []
-synonym: "Distal myopathy, Nonaka type" EXACT []
-synonym: "Hereditary Inclusion Body Myopathy" EXACT []
-synonym: "HIBM" EXACT []
-synonym: "IBM-3" EXACT []
-synonym: "IBM2" EXACT []
-synonym: "inclusion body myopathy 2" EXACT []
-synonym: "inclusion body myopathy 3" EXACT []
-synonym: "Nonaka Myopathy" EXACT []
-synonym: "Nonaka myopathy" EXACT []
+xref: GARD:3896
 xref: ICD10CM:G72.41
-xref: ICD9CM:359.71
-xref: MESH:D018979
+xref: MESH:D018979 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C84786
 xref: OMIM:147421
-xref: OMIM:605637
-xref: OMIM:605820
 xref: ORDO:611
 xref: SNOMEDCT_US_2019_09_01:72315009
 xref: UMLS_CUI:C0238190
@@ -2982,6 +2961,7 @@ xref: KEGG:05340
 xref: MESH:D007153
 xref: NCI:C3131
 xref: OMIM:242850
+xref: OMIM:PS300755
 xref: SNOMEDCT_US_2019_09_01:234532001
 xref: UMLS_CUI:C0021051
 is_a: DOID:2914 ! immune system disease

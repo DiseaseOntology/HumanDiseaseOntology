@@ -104,16 +104,16 @@ geno:
 	 --output "$(IMP)$@_import.owl"
 
 .PHONY: hp
-hp:
-	$(ROBOT) extract --input-iri "$(OBO)$@.owl"\
-	 --method mireot --upper-term HP:0000118\
-	 --lower-terms "$(IMP)$@_terms.txt" \
-	remove --select complement --select annotation-properties\
-	 --term-file $(IMP)annotations.txt --trim true \
-	remove --term UPHENO:0001002 --term HP:0000001 \
-	annotate --version-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
+hp: hp_terms.txt exclude-hp.txt | annotations.txt
+	$(ROBOT) extract --input-iri "$(OBO)hp.owl" \
+	 --method mireot --upper-term HP:0000118 \
+	 --lower-terms $< \
+	remove --select complement --select annotation-properties \
+	 --term-file annotations.txt --trim true \
+	remove --term-file $(word 2,$^) \
+	annotate --version-iri "$(OBO)doid/imports/$@_import.owl" \
+	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
+	 --output $@_import.owl
 
 # WARNING: NCBITaxon is BIG! This will take time.
 .PHONY: ncbitaxon

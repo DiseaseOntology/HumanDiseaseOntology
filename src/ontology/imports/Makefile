@@ -199,7 +199,6 @@ so:
 	 --input-iri "$(OBO)$@.owl" \
 	 --term SO:0000400 \
 	 --term SO:0001260 \
-	 --term SO:0000110 \
 	 --select "self descendants" \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \

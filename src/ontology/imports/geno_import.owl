@@ -26,13 +26,22 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#deprecated -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
     
 
 
@@ -52,6 +61,17 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000141">
         <obo:IAO_0000115>The pattern in which a genetic trait or condition is passed from one generation to the next, as determined by genetic interactions between alleles of the causal gene, and interactions between these alleles and the environment.</obo:IAO_0000115>
         <rdfs:label>inheritance pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000142">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115>disposition inhering in a genetic locus variant that is realized in its inheritance by some offspring such that at least a partial variant-associated phenotype is apparent in heterozygotes</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete dominant inheritance</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -100,7 +120,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000934"/>
-        <obo:IAO_0000115>An inheritance pattern wherein a trait caused by alleles of an autosomal gene manifests to some degree in heterozygotes.</obo:IAO_0000115>
+        <obo:IAO_0000115>An inheritance pattern wherein a trait caused by alleles of an autosomal gene manifests in heterozygotes.</obo:IAO_0000115>
         <rdfs:label>autosomal dominant inheritance</rdfs:label>
     </owl:Class>
     
@@ -122,6 +142,16 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000936"/>
         <obo:IAO_0000115>An X-linked inheritance pattern wherein a trait caused by alleles of a gene on the X-chromosome manifests in homozygous but not heterozygote individuals.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">X-linked recessive inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000150 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000150">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete autosomal recessive inheritance</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -270,7 +300,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000949">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
-        <obo:IAO_0000115>An inheritance pattern with a genetic component determined by alleles of mitochondrial genes.</obo:IAO_0000115>
+        <obo:IAO_0000115>An inheritance pattern observed for traits related to a gene encoded on the mitochondrial genome.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">mitochondrial inheritance</rdfs:label>
     </owl:Class>
     
@@ -292,6 +322,46 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000148"/>
         <obo:IAO_0000115>An autosomal recessive inheritance pattern wherein the trait manifests only in homozygotes, and in a sex-specific manner (i.e. only in males or only in females).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">sex-limited autosomal recessive inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000969">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000141"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by inheritance of extra, missing, or re-arranged chromosomes possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chromosomal inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000970">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000969"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by inheritance of missing sections of one or more chromosomes, encompassing either 0 or multiple genes, possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chromosomal deletion inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000971 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000971">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000969"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by inheritance of duplicated sections of one or more chromosomes, encompassing either 0 or multiple genes, possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chromosomal duplication inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000972 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000972">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000969"/>
+        <obo:IAO_0000115>An inheritance pattern wherein the trait is determined by inheritance of translocation or inversion of sections of one or more chromosomes, possibly together with environmental factors.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chromosomal rearrangement inheritance</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

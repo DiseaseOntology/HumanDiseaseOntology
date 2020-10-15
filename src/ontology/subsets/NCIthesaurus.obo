@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-09-28/subsets/NCIthesaurus.obo
+data-version: doid/2020-10-15/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -4284,7 +4284,6 @@ namespace: disease_ontology
 alt_id: DOID:11053
 alt_id: DOID:12112
 alt_id: DOID:12114
-comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "central hearing loss" EXACT []
@@ -4296,24 +4295,13 @@ synonym: "Perceptive hearing loss" EXACT []
 synonym: "Perceptive hearing loss or deafness" EXACT []
 synonym: "Sensorineural Deafness" EXACT []
 synonym: "Sensory hearing loss" EXACT []
-xref: ICD10CM:H90.5
-xref: ICD10CM:H91.9
 xref: ICD9CM:389.1
-xref: ICD9CM:389.14
-xref: MESH:D006313
-xref: MESH:D006316
 xref: MESH:D006319
 xref: NCI:C26739
-xref: NCI:C34662
-xref: NCI:C34663
-xref: OMIM:304400
-xref: SNOMEDCT_US_2020_03_01:48758008
 xref: SNOMEDCT_US_2020_03_01:60700002
-xref: SNOMEDCT_US_2020_03_01:68467004
-xref: UMLS_CUI:C0018776
-xref: UMLS_CUI:C0018780
 xref: UMLS_CUI:C0018784
 is_a: DOID:2952 ! inner ear disease
+property_value: exactMatch MESH:D006319 xsd:string
 
 [Term]
 id: DOID:10011
@@ -5100,6 +5088,7 @@ is_a: DOID:10207 ! paratesticular lipoma
 id: DOID:10207
 name: paratesticular lipoma
 namespace: disease_ontology
+def: "A reproductive organ benign neoplasm that derives_from fat cells located_in the paratesticular region." [url:https\://pubmed.ncbi.nlm.nih.gov/11103506/]
 subset: NCIthesaurus
 xref: NCI:C6384
 xref: UMLS_CUI:C1335348
@@ -20921,21 +20910,16 @@ is_a: DOID:170 ! endocrine gland cancer
 
 [Term]
 id: DOID:1795
-name: tumor of exocrine pancreas
+name: malignant exocrine pancreas neoplasm
 namespace: disease_ontology
 alt_id: DOID:1794
+def: "A pancreatic cancer that arises from the epithelial cells of the exocrine pancreatic tissue." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C7430]
 subset: NCIthesaurus
 synonym: "malignant neoplasm of the Exocrine pancreas" EXACT []
 synonym: "malignant tumor of exocrine pancreas" EXACT []
 synonym: "malignant tumour of exocrine pancreas" EXACT []
-synonym: "pancreatic Exocrine tumor" EXACT []
-synonym: "pancreatic Exocrine tumour" EXACT []
-synonym: "tumour of exocrine pancreas" EXACT []
-xref: NCI:C4445
 xref: NCI:C7430
-xref: SNOMEDCT_US_2020_03_01:254604005
 xref: SNOMEDCT_US_2020_03_01:255088001
-xref: UMLS_CUI:C0345920
 xref: UMLS_CUI:C0346648
 is_a: DOID:1793 ! pancreatic cancer
 
@@ -26624,7 +26608,7 @@ alt_id: DOID:13829
 alt_id: DOID:13830
 alt_id: DOID:2840
 alt_id: DOID:5783
-def: "A bronchial disease that is characterized by chronic inflammation and narrowing of the airways, which is caused by a combination of environmental and genetic factors. The disease has_symptom recurring periods of wheezing (a whistling sound while breathing), has_symptom chest tightness, has_symptom shortness of breath, has_symptom mucus production and has_symptom coughing. The symptoms appear due to a variety of triggers such as allergens, irritants, respiratory infections, weather changes, exercise, stress, reflux disease, medications, foods and emotional anxiety." [url:http\://www.nhlbi.nih.gov/health/dci/Diseases/Asthma/Asthma_WhatIs.html]
+def: "A bronchial disease that is characterized by chronic inflammation and narrowing of the airways, which is caused by a combination of environmental and genetic factors. The disease has_symptom recurring periods of wheezing (a whistling sound while breathing), has_symptom chest tightness, has_symptom shortness of breath, has_symptom mucus production and has_symptom coughing." [url:http\://www.nhlbi.nih.gov/health/dci/Diseases/Asthma/Asthma_WhatIs.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK430901/, url:https\://www.ncbi.nlm.nih.gov/books/NBK7223/]
 comment: Xref MGI.
 subset: NCIthesaurus
 synonym: "bronchial hyperreactivity" EXACT []
@@ -27031,6 +27015,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:2908
 name: Treacher Collins syndrome
 namespace: disease_ontology
+def: "A syndrome that is characterized by bilateral and symmetric downslanting palpebral fissures, malar hypoplasia, micrognathia, and external ear abnormalities." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1532/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Franceschetti syndrome" EXACT []
@@ -27040,12 +27025,11 @@ xref: GARD:9124
 xref: ICD10CM:Q75.4
 xref: MESH:D008342
 xref: NCI:C75018
-xref: OMIM:154500
-xref: OMIM:248390
-xref: OMIM:613717
+xref: OMIM:PS154500
 xref: SNOMEDCT_US_2020_03_01:205416009
 xref: UMLS_CUI:C0242387
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D008342 xsd:string
 
 [Term]
 id: DOID:2913
@@ -27332,6 +27316,7 @@ synonym: "trichothiodystrophy with congenital ichthyosis" EXACT []
 synonym: "TTD-P" EXACT []
 xref: MESH:D054463
 xref: NCI:C4924
+xref: OMIM:PS601675
 xref: SNOMEDCT_US_2020_03_01:723551003
 is_a: DOID:225 ! syndrome
 
@@ -27965,7 +27950,7 @@ is_a: DOID:104 ! bacterial infectious disease
 
 [Term]
 id: DOID:3068
-name: glioblastoma multiforme
+name: glioblastoma
 namespace: disease_ontology
 alt_id: DOID:3075
 alt_id: DOID:3080
@@ -27974,6 +27959,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult glioblastoma multiforme" EXACT []
 synonym: "GBM" EXACT []
+synonym: "glioblastoma multiforme" EXACT []
 synonym: "grade IV adult Astrocytic tumor" EXACT []
 synonym: "primary glioblastoma multiforme" EXACT []
 synonym: "spongioblastoma multiforme" EXACT []
@@ -28029,7 +28015,6 @@ synonym: "Neuroglial tumor" EXACT []
 xref: ICDO:M9380/3
 xref: KEGG:05214
 xref: MESH:D005910
-xref: NCI:C3059
 xref: NCI:C4822
 xref: OMIM:PS137800
 xref: ORDO:182067
@@ -28043,6 +28028,7 @@ is_a: DOID:162 ! cancer
 id: DOID:3071
 name: gliosarcoma
 namespace: disease_ontology
+def: "A gliomablastoma that is characterized by a biphasic tissue pattern with alternating areas displaying glial and mesenchymal differentiation." [url:https\://en.wikipedia.org/wiki/Gliosarcoma, url:https\://www.cancer.gov/rare-brain-spine-tumor/tumors/gliosarcoma]
 subset: NCIthesaurus
 synonym: "Glioblastoma with sarcomatous component" EXACT []
 xref: GARD:5653
@@ -28050,7 +28036,7 @@ xref: MESH:D018316
 xref: NCI:C3796
 xref: SNOMEDCT_US_2020_03_01:35262004
 xref: UMLS_CUI:C0206726
-is_a: DOID:3068 ! glioblastoma multiforme
+is_a: DOID:3068 ! glioblastoma
 
 [Term]
 id: DOID:3073
@@ -28069,14 +28055,14 @@ is_a: DOID:1319 ! brain cancer
 id: DOID:3074
 name: giant cell glioblastoma
 namespace: disease_ontology
-def: "A glioblastoma multiforme that is characterized by a prevalence of bizarre, multinucleated giant cells." [url:http\://en.wikipedia.org/wiki/Giant-cell_glioblastoma, url:http\://neuro-oncology.oxfordjournals.org/content/11/6/833.full]
+def: "A glioblastoma that is characterized by a prevalence of bizarre, multinucleated giant cells." [url:http\://en.wikipedia.org/wiki/Giant-cell_glioblastoma, url:http\://neuro-oncology.oxfordjournals.org/content/11/6/833.full]
 subset: NCIthesaurus
 synonym: "Monstrocellular sarcoma" EXACT []
 xref: MESH:D005909
 xref: NCI:C4325
 xref: SNOMEDCT_US_2020_03_01:44529004
 xref: UMLS_CUI:C0334588
-is_a: DOID:3068 ! glioblastoma multiforme
+is_a: DOID:3068 ! glioblastoma
 
 [Term]
 id: DOID:3076
@@ -29280,6 +29266,7 @@ is_a: DOID:3246 ! embryonal rhabdomyosarcoma
 id: DOID:3258
 name: orbit embryonal rhabdomyosarcoma
 namespace: disease_ontology
+def: "An orbit rhabdomyosarcoma that is characterized by elongated to round spindle cells with features of skeletal muscle in different stages of embryogenesis with a highly eosiniphilic cytoplasm and hyperchromatic nuclei." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3770217/]
 subset: NCIthesaurus
 synonym: "Embryonal Rhabdomyosarcoma of the orbit" EXACT []
 xref: NCI:C6246
@@ -29290,6 +29277,7 @@ is_a: DOID:3259 ! orbit rhabdomyosarcoma
 id: DOID:3259
 name: orbit rhabdomyosarcoma
 namespace: disease_ontology
+def: "An orbit sarcoma that is that arises from primitive pleuripotential mesenchymal cells that possess the ability to differentiate into striated muscle, most often in young children." [url:https\://eyewiki.aao.org/Orbital_Rhabdomyosarcoma, url:https\://link.springer.com/chapter/10.1007/978-1-4613-2029-6_14, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3770217/]
 subset: NCIthesaurus
 synonym: "Rhabdomyosarcoma of orbit" EXACT []
 synonym: "Rhabdomyosarcoma of the orbit" EXACT []
@@ -33723,7 +33711,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C41248
 xref: UMLS_CUI:C1518875
-is_a: DOID:1795 ! tumor of exocrine pancreas
+is_a: DOID:1795 ! malignant exocrine pancreas neoplasm
 
 [Term]
 id: DOID:3923
@@ -36101,6 +36089,7 @@ is_a: DOID:3405 ! histiocytosis
 id: DOID:4331
 name: burning mouth syndrome
 namespace: disease_ontology
+def: "A mouth disease that is characterized by long-lasting burning sensations of the mouth." [url:https\://pubmed.ncbi.nlm.nih.gov/30189984/]
 subset: NCIthesaurus
 synonym: "Orodynia" EXACT []
 synonym: "Stomatopyrosis" EXACT []
@@ -36333,6 +36322,7 @@ is_a: DOID:4 ! disease
 id: DOID:4384
 name: orbit alveolar rhabdomyosarcoma
 namespace: disease_ontology
+def: "An orbit rhabdomyosarcoma that is characterized by ill-defined aggregates of poorly differentiated malignant cells that are loosely arranged and separated into irregular ovoid spaces by thin fibrovascular septa in an alveolar pattern which is absent in the solid form." []
 subset: NCIthesaurus
 synonym: "Alveolar Rhabdomyosarcoma of the orbit" EXACT []
 xref: NCI:C6247
@@ -45586,6 +45576,7 @@ id: DOID:5773
 name: oral submucous fibrosis
 namespace: disease_ontology
 alt_id: DOID:9679
+def: "A mouth disease that is characterized by juxta-epithelial inflammatory reaction and progressive fibrosis of the submucosal tissues." [url:https\://en.wikipedia.org/wiki/Oral_submucous_fibrosis, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6627879/]
 subset: NCIthesaurus
 synonym: "Oral cavity Submucous Fibrosis" EXACT []
 synonym: "Oral submucosal fibrosis" EXACT []
@@ -52130,7 +52121,7 @@ is_a: DOID:5349 ! central nervous system adult germ cell tumor
 
 [Term]
 id: DOID:7234
-name: mucinous cystadenocarcinomas of the pancreas
+name: mucinous cystadenocarcinoma of the pancreas
 namespace: disease_ontology
 def: "A pancreatic cystadenocarinoma that is characterized by histological characteristics of columnar, mucin-producing epithelium associated with ovarian-type subepithelial stroma, which does not communicate with the pancreatic ductal system, most frequently localized to the body or tail of the pancreas." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3959310/]
 subset: NCIthesaurus
@@ -52157,7 +52148,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C41246
 xref: UMLS_CUI:C1518870
-is_a: DOID:7234 ! mucinous cystadenocarcinomas of the pancreas
+is_a: DOID:7234 ! mucinous cystadenocarcinoma of the pancreas
 
 [Term]
 id: DOID:7237
@@ -52166,7 +52157,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C41245
 xref: UMLS_CUI:C1518874
-is_a: DOID:7234 ! mucinous cystadenocarcinomas of the pancreas
+is_a: DOID:7234 ! mucinous cystadenocarcinoma of the pancreas
 
 [Term]
 id: DOID:724
@@ -53503,7 +53494,7 @@ xref: MESH:D000077779
 xref: NCI:C38342
 xref: SNOMEDCT_US_2020_03_01:690771000119106
 xref: UMLS_CUI:C1266071
-is_a: DOID:1795 ! tumor of exocrine pancreas
+is_a: DOID:1795 ! malignant exocrine pancreas neoplasm
 
 [Term]
 id: DOID:7577
@@ -58501,15 +58492,11 @@ is_a: DOID:633 ! myositis
 
 [Term]
 id: DOID:8761
-name: megakaryocytic leukemia
+name: acute megakaryocytic leukemia
 namespace: disease_ontology
 alt_id: DOID:9009
-def: "A leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers." [url:http\://medical-dictionary.thefreedictionary.com/megakaryocytic+leukemia]
+def: "An acute myeloid leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers." [url:https\://en.wikipedia.org/wiki/Acute_megakaryoblastic_leukemia, url:https\://pubmed.ncbi.nlm.nih.gov/26228843/, url:https\://www.orpha.net/data/patho/GB/uk-AMLM7.pdf]
 subset: NCIthesaurus
-synonym: "acute megakaryoblastic leukaemia, FAB M7" EXACT []
-synonym: "acute Megakaryoblastic Leukemia" EXACT []
-synonym: "acute megakaryoblastic leukemia, FAB M7" EXACT []
-synonym: "acute Megakaryocytic Leukemias" EXACT []
 synonym: "Megakaryocytic myelosis" EXACT []
 synonym: "Thrombocytic leukaemia" EXACT []
 xref: GARD:524
@@ -58519,7 +58506,7 @@ xref: MESH:D007947
 xref: NCI:C3170
 xref: SNOMEDCT_US_2020_03_01:52220008
 xref: UMLS_CUI:C0023462
-is_a: DOID:1240 ! leukemia
+is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
 id: DOID:8778
@@ -58858,17 +58845,16 @@ is_a: DOID:5614 ! eye disease
 id: DOID:8892
 name: pityriasis rosea
 namespace: disease_ontology
+def: "A dermatitis that is characterized by an initial large round spot on the chest, abdomen, or back, often referred to as a herald patch, that is usually followed within a week by a distinctive pattern of similar but smaller papules on the torso, arms, and legs." [url:https\://www.mayoclinic.org/diseases-conditions/pityriasis-rosea/symptoms-causes/syc-20376405]
 subset: NCIthesaurus
 synonym: "Pityriasis circinata" EXACT []
-synonym: "Pityriasis Rosea" EXACT []
-synonym: "Pityriasis rosea" EXACT []
 xref: ICD10CM:L42
 xref: ICD9CM:696.3
 xref: MESH:D017515
 xref: NCI:C26855
 xref: SNOMEDCT_US_2020_03_01:156373006
 xref: UMLS_CUI:C0032026
-is_a: DOID:8893 ! psoriasis
+is_a: DOID:2723 ! dermatitis
 
 [Term]
 id: DOID:8893
@@ -59990,10 +59976,12 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:9212
 name: pityriasis rubra pilaris
 namespace: disease_ontology
+def: "A skin disease that is characterized by hyperkeratotic follicular papules coalescing into orange-red scaly plaques, islands of sparing, and palmoplantar keratoderma." [url:https\://pubmed.ncbi.nlm.nih.gov/29302927/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Devergie's disease" EXACT []
 synonym: "Pityriasis rubra pilaris" EXACT []
+xref: GARD:7401
 xref: ICD10CM:L44.0
 xref: ICD9CM:696.4
 xref: MESH:D010916
@@ -60001,7 +59989,7 @@ xref: NCI:C85014
 xref: OMIM:173200
 xref: SNOMEDCT_US_2020_03_01:3755001
 xref: UMLS_CUI:C0032027
-is_a: DOID:8893 ! psoriasis
+is_a: DOID:37 ! skin disease
 
 [Term]
 id: DOID:9220
@@ -60548,6 +60536,7 @@ is_a: DOID:4 ! disease
 id: DOID:9297
 name: lip disease
 namespace: disease_ontology
+def: "A mouth disease located_in the lip." [url:https\://www.merckmanuals.com/home/mouth-and-dental-disorders/lip-and-tongue-disorders/lip-sores-lip-inflammation-and-other-changes]
 subset: NCIthesaurus
 synonym: "disease of lips" EXACT []
 xref: ICD10CM:K13.0
@@ -60770,7 +60759,7 @@ is_a: DOID:331 ! central nervous system disease
 id: DOID:9362
 name: status asthmaticus
 namespace: disease_ontology
-def: "An asthma that is a life threatening condition with progressive respiratory failure, which does not respond to standard treatment." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11399724]
+def: "An acute asthma that is characterized by an acute episode with a progressive severity that is poorly responsive to standard therapeutic measures, regardless of disease severity or phenotypic variant." [url:https\://www.ncbi.nlm.nih.gov/books/NBK526070/, url:https\://www.ncbi.nlm.nih.gov/pubmed/11399724]
 subset: NCIthesaurus
 synonym: "Asthma with status asthmaticus" EXACT []
 synonym: "Severe asthma attack" EXACT []
@@ -61709,6 +61698,7 @@ is_a: DOID:74 ! hematopoietic system disease
 id: DOID:9637
 name: stomatitis
 namespace: disease_ontology
+def: "A mouth disease that is characterized by inflammation of the mouth and lips." [url:https\://en.wikipedia.org/wiki/Stomatitis]
 subset: NCIthesaurus
 xref: ICD10CM:K12.1
 xref: MESH:D013280
@@ -62523,10 +62513,8 @@ is_a: DOID:12603 ! acute leukemia
 id: DOID:9953
 name: mixed phenotype acute leukemia
 namespace: disease_ontology
-def: "An acute leukemia that is characterized by the occurrance of more than one type of leukemia at the same time resulting from either the occurance of both acute lymphoblastic leukemia blasts and acute myeloblastic leukemia blasts at the same time or leukemic blasts that have features of both ALL and AML on the same cell." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29021517]
+def: "An acute leukemia that is characterized by the occurrence of more than one type of leukemia at the same time resulting from either the occurrence of blasts which coexpress myeloid and T or B lineage antigens or concurrent B and T lineage antigens." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29021517]
 subset: NCIthesaurus
-synonym: "B- and T-cell mixed leukemia" EXACT []
-synonym: "MPAL" EXACT []
 xref: ICD10CM:C95.0
 xref: MESH:D015456
 xref: NCI:C4673
@@ -62658,6 +62646,7 @@ is_a: DOID:9973 ! substance dependence
 id: DOID:9986
 name: orbit lymphoma
 namespace: disease_ontology
+def: "An orbital cancer that has _material_basis_in some lymphocyte." [url:https\://en.wikipedia.org/wiki/Orbital_lymphoma]
 subset: NCIthesaurus
 synonym: "Lymphoma of the orbit" EXACT []
 xref: GARD:9719
@@ -62671,6 +62660,7 @@ is_a: DOID:4143 ! orbital cancer
 id: DOID:9987
 name: orbit sarcoma
 namespace: disease_ontology
+def: "An orbital cancer that has_material_basis_in abnormally proliferating cells derived from embryonic mesoderm." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6095]
 subset: NCIthesaurus
 synonym: "orbital sarcoma" EXACT []
 xref: NCI:C6095

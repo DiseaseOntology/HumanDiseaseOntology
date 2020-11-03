@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2020-10-15/subsets/NCIthesaurus.obo
+data-version: doid/2020-11-03/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -281,12 +281,12 @@ xref: EFO:0004276
 xref: GARD:7700
 xref: ICD10CM:L51.1
 xref: ICD9CM:695.13
-xref: MESH:D013262 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C79484
 xref: NCI:C79777
 xref: SNOMEDCT_US_2020_03_01:73442001
 xref: UMLS_CUI:C0038325
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D013262 xsd:string
 
 [Term]
 id: DOID:0050427
@@ -784,12 +784,13 @@ synonym: "aspartylglycosaminuria" EXACT []
 synonym: "glycosylasparaginase deficiency" EXACT []
 xref: GARD:5854
 xref: ICD10CM:E77.1
-xref: MESH:D054880 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D054880
 xref: NCI:C61273
 xref: OMIM:208400
 xref: SNOMEDCT_US_2020_03_01:54954004
 xref: UMLS_CUI:C0268225
 is_a: DOID:3211 ! lysosomal storage disease
+property_value: exactMatch MESH:D054880 xsd:string
 
 [Term]
 id: DOID:0050463
@@ -870,7 +871,7 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Erythrokeratodermia Figurata Variabilis" EXACT []
 synonym: "Greither Disease" EXACT []
-xref: MESH:D056266 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D056266
 xref: NCI:C84696
 xref: OMIM:PS133200
 xref: ORDO:317
@@ -878,6 +879,7 @@ xref: SNOMEDCT_US_2020_03_01:70041004
 xref: UMLS_CUI:C0265961
 xref: UMLS_CUI:C1851480
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D056266 xsd:string
 
 [Term]
 id: DOID:0050468
@@ -982,12 +984,13 @@ namespace: disease_ontology
 def: "A syndrome that is characterized by multiorgan dysfunction. The key features are childhood obesity, blindness due to congenital retinal dystrophy, and sensorineural hearing loss with autosomal recessive inheritance and has_material_basis_in mutations in the ALMS1 gene." [url:http\://en.wikipedia.org/wiki/Alstrom_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-xref: MESH:D056769 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D056769
 xref: NCI:C84549
 xref: OMIM:203800
 xref: SNOMEDCT_US_2020_03_01:63702009
 xref: UMLS_CUI:C0268425
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D056769 xsd:string
 
 [Term]
 id: DOID:0050474
@@ -1047,12 +1050,13 @@ synonym: "MGA Type 2" EXACT []
 synonym: "MGA type II" EXACT []
 xref: GARD:5890
 xref: ICD10CM:E78.71
-xref: MESH:D056889 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D056889
 xref: NCI:C84585
 xref: OMIM:302060
 xref: SNOMEDCT_US_2020_03_01:297231002
 xref: UMLS_CUI:C0574083
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D056889 xsd:string
 
 [Term]
 id: DOID:0050477
@@ -1386,7 +1390,6 @@ xref: GARD:9728
 xref: ICD10CM:G71.1
 xref: ICD10CM:G71.19
 xref: ICD9CM:359.2
-xref: MESH:C535686 {http://www.w3.org/2004/02/skos/core#narrowMatch="narrowMatch"}
 xref: MESH:D020967
 xref: NCI:C122789
 xref: NCI:C122790
@@ -1399,6 +1402,7 @@ xref: UMLS_CUI:C0221055
 xref: UMLS_CUI:C0553604
 xref: UMLS_CUI:C0752355
 is_a: DOID:450 ! myotonic disease
+property_value: narrowMatch MESH:C535686 xsd:string
 created_by: lschriml
 creation_date: 2013-01-16T01:27:31Z
 
@@ -1486,11 +1490,12 @@ subset: NCIthesaurus
 synonym: "AV block" EXACT []
 xref: ICD10CM:I44.3
 xref: ICD9CM:426.10
-xref: MESH:D054537 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D054537
 xref: NCI:C26703
 xref: SNOMEDCT_US_2020_03_01:58547007
 xref: UMLS_CUI:C0004245
 is_a: DOID:114 ! heart disease
+property_value: exactMatch MESH:D054537 xsd:string
 created_by: lschriml
 creation_date: 2014-02-12T01:35:05Z
 
@@ -1504,7 +1509,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "CHARGE association" EXACT []
 xref: GARD:29
-xref: MESH:D058747 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D058747
 xref: NCI:C75100
 xref: OMIM:214800
 xref: ORDO:138
@@ -1512,6 +1517,7 @@ xref: SNOMEDCT_US_2020_03_01:47535005
 xref: UMLS_CUI:C0265354
 xref: UMLS_CUI:C2936502
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D058747 xsd:string
 created_by: lschriml
 creation_date: 2014-03-18T11:58:38Z
 
@@ -1780,7 +1786,7 @@ namespace: disease_ontology
 def: "A hypersensitivity reaction type IV disease that results from a proliferation of cells producing immunoglobulin heavy chains." [url:http\://en.wikipedia.org/wiki/Heavy_chain_disease]
 subset: NCIthesaurus
 xref: ICD10CM:C88.2
-xref: MESH:D006362 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006362
 xref: NCI:C3082
 xref: NCI:C3083
 xref: NCI:C3892
@@ -1791,6 +1797,7 @@ xref: UMLS_CUI:C0018852
 xref: UMLS_CUI:C0018854
 xref: UMLS_CUI:C0242310
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D006362 xsd:string
 created_by: lschriml
 creation_date: 2011-08-22T11:23:09Z
 
@@ -1846,12 +1853,15 @@ synonym: "DRPLA" EXACT []
 synonym: "Haw River Syndrome" EXACT []
 synonym: "Naito-Oyanagi disease" EXACT []
 xref: GARD:5643
-xref: MESH:D020191 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
-xref: NCI:C122653 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020191
+xref: NCI:C122653
 xref: OMIM:125370
 xref: SNOMEDCT_US_2020_03_01:702422004
-xref: UMLS_CUI:C0751781 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: UMLS_CUI:C0751781
 is_a: DOID:1441 ! autosomal dominant cerebellar ataxia
+property_value: exactMatch MESH:D020191 xsd:string
+property_value: exactMatch NCI:C122653 xsd:string
+property_value: exactMatch UMLS_CUI:C0751781 xsd:string
 created_by: lschriml
 creation_date: 2011-08-29T01:41:48Z
 
@@ -2047,11 +2057,12 @@ def: "A heart conduction disease that is characterized by uncoordinated electric
 subset: NCIthesaurus
 synonym: "A-fib" EXACT []
 xref: ICD9CM:427.31
-xref: MESH:D001281 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001281
 xref: NCI:C50466
 xref: SNOMEDCT_US_2020_03_01:266306001
 xref: UMLS_CUI:C0004238
 is_a: DOID:114 ! heart disease
+property_value: exactMatch MESH:D001281 xsd:string
 created_by: emitraka
 creation_date: 2015-01-16T14:55:21Z
 
@@ -2253,11 +2264,12 @@ def: "A bone structure disease characterized by an appreciable lateral deviation
 comment: NT MGI add.
 subset: NCIthesaurus
 xref: ICD10CM:M41.9
-xref: MESH:D012600 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012600
 xref: NCI:C78603
 xref: SNOMEDCT_US_2020_03_01:36773001
 xref: UMLS_CUI:C0036439
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D012600 xsd:string
 created_by: emitraka
 creation_date: 2015-01-29T15:44:16Z
 
@@ -3514,7 +3526,7 @@ synonym: "Waldenstrom Macroglobulinemia" EXACT []
 xref: GARD:7872
 xref: ICD10CM:C88.0
 xref: ICD9CM:273.3
-xref: MESH:D008258 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008258
 xref: NCI:C115212
 xref: NCI:C80307
 xref: OMIM:153600
@@ -3524,6 +3536,7 @@ xref: SNOMEDCT_US_2020_03_01:35562000
 xref: UMLS_CUI:C0024419
 xref: UMLS_CUI:C2936755
 is_a: DOID:0050747 ! lymphoplasmacytic lymphoma
+property_value: exactMatch MESH:D008258 xsd:string
 
 [Term]
 id: DOID:0070145
@@ -3719,13 +3732,14 @@ synonym: "mitochondrial DNA depletion syndrome 4a" EXACT []
 synonym: "progressive sclerosing poliodystrophy" EXACT []
 xref: GARD:5783
 xref: ICD10CM:G31.81
-xref: MESH:D002549 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D002549
 xref: NCI:C35257
 xref: OMIM:203700
 xref: ORDO:726
 xref: SNOMEDCT_US_2020_03_01:20415001
 xref: UMLS_CUI:C0205710
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D002549 xsd:string
 
 [Term]
 id: DOID:0080130
@@ -4597,11 +4611,12 @@ synonym: "fish tapeworm" EXACT []
 xref: GARD:942
 xref: ICD10CM:B70.0
 xref: ICD9CM:123.4
-xref: MESH:D004169 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004169
 xref: NCI:C128391
 xref: SNOMEDCT_US_2020_03_01:187151009
 xref: UMLS_CUI:C0012561
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
+property_value: exactMatch MESH:D004169 xsd:string
 
 [Term]
 id: DOID:10079
@@ -4636,11 +4651,12 @@ synonym: "Infection by Sparganum" EXACT []
 synonym: "Sparganosis" EXACT []
 xref: ICD10CM:B70.1
 xref: ICD9CM:123.5
-xref: MESH:D013031 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D013031
 xref: NCI:C35030
 xref: SNOMEDCT_US_2020_03_01:187152002
 xref: UMLS_CUI:C0037753
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
+property_value: exactMatch MESH:D013031 xsd:string
 
 [Term]
 id: DOID:10087
@@ -4772,7 +4788,9 @@ is_a: DOID:10140 ! dry eye syndrome
 id: DOID:10140
 name: dry eye syndrome
 namespace: disease_ontology
+def: "A lacrimal apparatus disease that is characterized by persistent irritation or burning of the coreneal surface." [url:https\://pubmed.ncbi.nlm.nih.gov/29498987/]
 subset: NCIthesaurus
+synonym: "dry eye disease" EXACT []
 synonym: "Tear film insufficiency" EXACT []
 xref: ICD10CM:H04.12
 xref: MESH:D015352
@@ -4780,6 +4798,7 @@ xref: NCI:C34553
 xref: SNOMEDCT_US_2020_03_01:193980001
 xref: UMLS_CUI:C0013238
 is_a: DOID:1400 ! lacrimal apparatus disease
+property_value: exactMatch MESH:D015352 xsd:string
 
 [Term]
 id: DOID:10146
@@ -5374,11 +5393,12 @@ namespace: disease_ontology
 def: "A parotid disease characterized by the inflammation of one or both parotid glands." [url:http\://en.wikipedia.org/wiki/Parotitis]
 subset: NCIthesaurus
 xref: ICD10CM:K11.2
-xref: MESH:D010309 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D010309
 xref: NCI:C114281
 xref: SNOMEDCT_US_2020_03_01:196481002
 xref: UMLS_CUI:C0030583
 is_a: DOID:403 ! mouth disease
+property_value: exactMatch MESH:D010309 xsd:string
 
 [Term]
 id: DOID:10303
@@ -5755,11 +5775,12 @@ def: "An eye disease that is characterized by poor vision in one eye resulting f
 subset: NCIthesaurus
 xref: ICD10CM:H53.00
 xref: ICD9CM:368.00
-xref: MESH:D000550 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000550
 xref: NCI:C118764
 xref: SNOMEDCT_US_2020_03_01:155145007
 xref: UMLS_CUI:C0002418
 is_a: DOID:5614 ! eye disease
+property_value: exactMatch MESH:D000550 xsd:string
 
 [Term]
 id: DOID:1039
@@ -6254,11 +6275,11 @@ def: "A bone remodeling disease that has_material_basis_in a vitamin D deficienc
 subset: NCIthesaurus
 xref: GARD:7285
 xref: ICD9CM:268.2
-xref: MESH:D010018 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C26838
 xref: SNOMEDCT_US_2020_03_01:190639009
 xref: UMLS_CUI:C0029442
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D010018 xsd:string
 
 [Term]
 id: DOID:10579
@@ -6380,12 +6401,13 @@ synonym: "Siemerling-Creutzfeldt Disease" EXACT []
 synonym: "sudanophilic cerebral sclerosis" EXACT []
 synonym: "X-linked adrenoleukodystrophy" EXACT []
 xref: ICD10CM:E71.52
-xref: MESH:D000326 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000326
 xref: NCI:C61252
 xref: OMIM:300100
 xref: SNOMEDCT_US_2020_03_01:65389002
 xref: UMLS_CUI:C0162309
 is_a: DOID:10579 ! leukodystrophy
+property_value: exactMatch MESH:D000326 xsd:string
 
 [Term]
 id: DOID:1059
@@ -6532,12 +6554,13 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "LM - Lactose malabsorption" EXACT []
 xref: ICD10CM:E73
-xref: MESH:D007787 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D007787
 xref: NCI:C3154
 xref: OMIM:223100
 xref: SNOMEDCT_US_2020_03_01:267497007
 xref: UMLS_CUI:C0022951
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D007787 xsd:string
 
 [Term]
 id: DOID:10605
@@ -6629,7 +6652,7 @@ synonym: "vitamin D-dependent rickets" EXACT []
 xref: GARD:5700
 xref: ICD10CM:E55.0
 xref: ICD9CM:268.0
-xref: MESH:D012279 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012279
 xref: NCI:C26878
 xref: OMIM:264700
 xref: OMIM:277440
@@ -6641,6 +6664,7 @@ xref: SNOMEDCT_US_2020_03_01:68295002
 xref: UMLS_CUI:C0035579
 xref: UMLS_CUI:C0221468
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D012279 xsd:string
 
 [Term]
 id: DOID:10616
@@ -6687,7 +6711,7 @@ synonym: "Fanconi-de-Toni syndrome" EXACT []
 synonym: "Infantile nephropathic cystinosis" EXACT []
 synonym: "Lignac-Fanconi syndrome" EXACT []
 xref: GARD:9118
-xref: MESH:D005198 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D005198
 xref: NCI:C3034
 xref: NCI:C4377
 xref: OMIM:PS134600
@@ -6697,6 +6721,7 @@ xref: SNOMEDCT_US_2020_03_01:40488004
 xref: UMLS_CUI:C0015624
 xref: UMLS_CUI:C0341703
 is_a: DOID:557 ! kidney disease
+property_value: exactMatch MESH:D005198 xsd:string
 
 [Term]
 id: DOID:10629
@@ -7219,11 +7244,12 @@ subset: NCIthesaurus
 synonym: "disease due to superfamily Filarioidea" EXACT []
 xref: ICD10CM:B74
 xref: ICD9CM:125.9
-xref: MESH:D005368 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D005368
 xref: NCI:C34611
 xref: SNOMEDCT_US_2020_03_01:50342004
 xref: UMLS_CUI:C0016085
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
+property_value: exactMatch MESH:D005368 xsd:string
 
 [Term]
 id: DOID:10808
@@ -7554,10 +7580,10 @@ comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "spinal dysraphism" EXACT []
 xref: GARD:4018
-xref: NCI:C99080 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: SNOMEDCT_US_2020_03_01:282784007
 xref: UMLS_CUI:C0560648
 is_a: DOID:319 ! spinal cord disease
+property_value: exactMatch NCI:C99080 xsd:string
 
 [Term]
 id: DOID:10892
@@ -7594,11 +7620,12 @@ xref: GARD:3603
 xref: GARD:7038
 xref: ICD10CM:Q02
 xref: ICD9CM:742.1
-xref: MESH:D008831 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008831
 xref: NCI:C85874
 xref: SNOMEDCT_US_2020_03_01:156893009
 xref: UMLS_CUI:C0025958
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D008831 xsd:string
 
 [Term]
 id: DOID:10908
@@ -8513,11 +8540,12 @@ subset: NCIthesaurus
 synonym: "Hypohidrosis" EXACT []
 synonym: "Oligohidrosis" EXACT []
 xref: ICD10CM:L74.4
-xref: MESH:D007007 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D007007
 xref: NCI:C34718
 xref: SNOMEDCT_US_2020_03_01:201189007
 xref: UMLS_CUI:C0020620
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D007007 xsd:string
 
 [Term]
 id: DOID:11156
@@ -8665,7 +8693,7 @@ synonym: "webbing of digits" EXACT []
 xref: GARD:13181
 xref: ICD10CM:Q70
 xref: ICD9CM:755.1
-xref: MESH:D013576 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D013576
 xref: NCI:C87125
 xref: ORDO:295012
 xref: ORDO:90025
@@ -8673,6 +8701,7 @@ xref: ORDO:93403
 xref: SNOMEDCT_US_2020_03_01:156989004
 xref: UMLS_CUI:C0039075
 is_a: DOID:1934 ! dysostosis
+property_value: exactMatch MESH:D013576 xsd:string
 
 [Term]
 id: DOID:11198
@@ -8706,7 +8735,7 @@ subset: NCIthesaurus
 xref: GARD:6733
 xref: ICD10CM:E20
 xref: ICD9CM:252.1
-xref: MESH:D007011 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D007011
 xref: NCI:C78350
 xref: OMIM:146200
 xref: OMIM:307700
@@ -8714,6 +8743,7 @@ xref: ORDO:2238
 xref: SNOMEDCT_US_2020_03_01:154697005
 xref: UMLS_CUI:C0020626
 is_a: DOID:11201 ! parathyroid gland disease
+property_value: exactMatch MESH:D007011 xsd:string
 
 [Term]
 id: DOID:112
@@ -9267,12 +9297,13 @@ synonym: "Dactylolysis spontanea" EXACT []
 xref: GARD:9512
 xref: ICD10CM:L94.6
 xref: ICD9CM:136.0
-xref: MESH:D000387 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000387
 xref: NCI:C84544
 xref: OMIM:103400
 xref: SNOMEDCT_US_2020_03_01:51404004
 xref: UMLS_CUI:C0001860
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D000387 xsd:string
 
 [Term]
 id: DOID:11335
@@ -9285,12 +9316,13 @@ synonym: "lymphogranulomatosis" EXACT []
 xref: GARD:7607
 xref: ICD10CM:D86
 xref: ICD9CM:135
-xref: MESH:D012507 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012507
 xref: NCI:C34995
 xref: ORDO:797
 xref: SNOMEDCT_US_2020_03_01:154425004
 xref: UMLS_CUI:C0036202
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D012507 xsd:string
 
 [Term]
 id: DOID:11338
@@ -9379,11 +9411,12 @@ subset: NCIthesaurus
 synonym: "Subluxation of lens" EXACT []
 xref: ICD10CM:H27.11
 xref: ICD9CM:379.32
-xref: MESH:D007906 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D007906
 xref: NCI:C34772
 xref: SNOMEDCT_US_2020_03_01:155203002
 xref: UMLS_CUI:C0023316
 is_a: DOID:110 ! lens disease
+property_value: exactMatch MESH:D007906 xsd:string
 
 [Term]
 id: DOID:11367
@@ -9867,12 +9900,13 @@ synonym: "Adie's pupil syndrome" EXACT []
 synonym: "Adie's syndrome" EXACT []
 synonym: "Holmes-Adie syndrome" EXACT []
 xref: GARD:5749
-xref: MESH:D000270 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000270
 xref: NCI:C34357
 xref: OMIM:103100
 xref: SNOMEDCT_US_2020_03_01:123051004
 xref: UMLS_CUI:C0001519
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D000270 xsd:string
 
 [Term]
 id: DOID:11550
@@ -10467,13 +10501,13 @@ synonym: "Steinert disease" EXACT []
 xref: GARD:8310
 xref: ICD10CM:G71.11
 xref: ICD9CM:359.21
-xref: MESH:C535686 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: MESH:D009223
 xref: NCI:C84914
 xref: OMIM:160900
 xref: SNOMEDCT_US_2020_03_01:77956009
 xref: UMLS_CUI:C0027126
 is_a: DOID:450 ! myotonic disease
+property_value: exactMatch MESH:C535686 xsd:string
 
 [Term]
 id: DOID:11723
@@ -10766,7 +10800,7 @@ synonym: "short-sightedness" EXACT []
 xref: EFO:0003927
 xref: ICD10CM:H52.1
 xref: ICD9CM:367.1
-xref: MESH:D009216 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D009216
 xref: NCI:C102533
 xref: OMIM:160700
 xref: OMIM:255500
@@ -10795,6 +10829,7 @@ xref: OMIM:615946
 xref: SNOMEDCT_US_2020_03_01:155133003
 xref: UMLS_CUI:C0027092
 is_a: DOID:9835 ! refractive error
+property_value: exactMatch MESH:D009216 xsd:string
 
 [Term]
 id: DOID:11831
@@ -10894,12 +10929,13 @@ synonym: "PICK DISEASE OF BRAIN" EXACT []
 xref: GARD:7392
 xref: ICD10CM:G31.01
 xref: ICD9CM:331.11
-xref: MESH:D020774 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020774
 xref: NCI:C85008
 xref: OMIM:172700
 xref: SNOMEDCT_US_2020_03_01:154998003
 xref: UMLS_CUI:C0236642
 is_a: DOID:1289 ! neurodegenerative disease
+property_value: exactMatch MESH:D020774 xsd:string
 
 [Term]
 id: DOID:11885
@@ -11411,11 +11447,12 @@ synonym: "torulosis" EXACT []
 xref: GARD:6218
 xref: ICD10CM:B45
 xref: ICD9CM:117.5
-xref: MESH:D003453 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D003453
 xref: NCI:C2967
 xref: SNOMEDCT_US_2020_03_01:42386007
 xref: UMLS_CUI:C0010414
 is_a: DOID:1564 ! fungal infectious disease
+property_value: exactMatch MESH:D003453 xsd:string
 
 [Term]
 id: DOID:1206
@@ -11570,13 +11607,14 @@ synonym: "Subhemophilia" EXACT []
 xref: GARD:6591
 xref: ICD10CM:D66
 xref: ICD9CM:286.0
-xref: MESH:D006467 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006467
 xref: NCI:C27146
 xref: OMIM:306700
 xref: ORDO:98878
 xref: SNOMEDCT_US_2020_03_01:28293008
 xref: UMLS_CUI:C0019069
 is_a: DOID:1247 ! blood coagulation disease
+property_value: exactMatch MESH:D006467 xsd:string
 
 [Term]
 id: DOID:12139
@@ -11676,11 +11714,12 @@ subset: NCIthesaurus
 synonym: "goitre" EXACT []
 xref: ICD10CM:E04.9
 xref: ICD9CM:240.9
-xref: MESH:D006042 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006042
 xref: NCI:C26785
 xref: SNOMEDCT_US_2020_03_01:237568003
 xref: UMLS_CUI:C0018021
 is_a: DOID:50 ! thyroid gland disease
+property_value: exactMatch MESH:D006042 xsd:string
 
 [Term]
 id: DOID:12205
@@ -11832,13 +11871,13 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:871
 xref: ICD10CM:D56.1
-xref: MESH:D017086 {http://www.w3.org/2004/02/skos/core#narrowMatch="narrowMatch"}
 xref: NCI:C34375
 xref: OMIM:613985
 xref: ORDO:848
 xref: SNOMEDCT_US_2020_03_01:65959000
 xref: UMLS_CUI:C0005283
 is_a: DOID:10241 ! thalassemia
+property_value: narrowMatch MESH:D017086 xsd:string
 
 [Term]
 id: DOID:12253
@@ -12061,11 +12100,12 @@ comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "UP/MPCM" EXACT []
 xref: ICD10CM:D47.01
-xref: MESH:D014582 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D014582
 xref: NCI:C3433
 xref: SNOMEDCT_US_2020_03_01:205566001
 xref: UMLS_CUI:C0042111
 is_a: DOID:3663 ! cutaneous mastocytosis
+property_value: exactMatch MESH:D014582 xsd:string
 
 [Term]
 id: DOID:12318
@@ -12298,11 +12338,12 @@ subset: NCIthesaurus
 xref: GARD:809
 xref: ICD10CM:A07.0
 xref: ICD9CM:007.0
-xref: MESH:D001447 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001447
 xref: NCI:C84583
 xref: SNOMEDCT_US_2020_03_01:57725006
 xref: UMLS_CUI:C0004692
 is_a: DOID:2789 ! parasitic protozoa infectious disease
+property_value: exactMatch MESH:D001447 xsd:string
 
 [Term]
 id: DOID:12387
@@ -12498,11 +12539,12 @@ def: "An anemia that is characterized by a reduction in the number of red blood 
 subset: NCIthesaurus
 xref: ICD10CM:D61.81
 xref: ICD9CM:284.1
-xref: MESH:D010198 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D010198
 xref: NCI:C34889
 xref: SNOMEDCT_US_2020_03_01:127034005
 xref: UMLS_CUI:C0030312
 is_a: DOID:2355 ! anemia
+property_value: exactMatch MESH:D010198 xsd:string
 
 [Term]
 id: DOID:12466
@@ -13086,12 +13128,13 @@ subset: NCIthesaurus
 synonym: "Boder-Sedgwick syndrome" EXACT []
 synonym: "Louis Bar syndrome" EXACT []
 xref: GARD:5862
-xref: MESH:D001260 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001260
 xref: NCI:C2887
 xref: OMIM:208900
 xref: SNOMEDCT_US_2020_03_01:68504005
 xref: UMLS_CUI:C0004135
 is_a: DOID:1289 ! neurodegenerative disease
+property_value: exactMatch MESH:D001260 xsd:string
 
 [Term]
 id: DOID:12705
@@ -13106,11 +13149,12 @@ synonym: "Friedreich's ataxia" EXACT []
 synonym: "Friedreich's tabes" EXACT []
 xref: GARD:6468
 xref: ICD9CM:334.0
-xref: MESH:D005621 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D005621
 xref: NCI:C84718
 xref: SNOMEDCT_US_2020_03_01:155011003
 xref: UMLS_CUI:C0016719
 is_a: DOID:1289 ! neurodegenerative disease
+property_value: exactMatch MESH:D005621 xsd:string
 
 [Term]
 id: DOID:12712
@@ -13479,11 +13523,12 @@ def: "A parasitic helminthiasis infectious disease that involves infection of sk
 subset: NCIthesaurus
 xref: GARD:9742
 xref: ICD10CM:B76.0
-xref: MESH:D000724 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000724
 xref: NCI:C35805
 xref: SNOMEDCT_US_2020_03_01:85807000
 xref: UMLS_CUI:C0002831
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
+property_value: exactMatch MESH:D000724 xsd:string
 
 [Term]
 id: DOID:12842
@@ -13720,12 +13765,13 @@ xref: GARD:2121
 xref: GARD:6336
 xref: ICD10CM:I42.4
 xref: ICD9CM:425.3
-xref: MESH:D004695 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004695
 xref: NCI:C98922
 xref: OMIM:226000
 xref: SNOMEDCT_US_2020_03_01:65457005
 xref: UMLS_CUI:C0014117
 is_a: DOID:114 ! heart disease
+property_value: exactMatch MESH:D004695 xsd:string
 
 [Term]
 id: DOID:1293
@@ -13837,12 +13883,13 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Apert syndrome" EXACT []
 xref: ICD9CM:755.55
-xref: MESH:D000168 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000168
 xref: NCI:C34348
 xref: OMIM:101200
 xref: SNOMEDCT_US_2020_03_01:63661009
 xref: UMLS_CUI:C1510455
 is_a: DOID:1934 ! dysostosis
+property_value: exactMatch MESH:D000168 xsd:string
 
 [Term]
 id: DOID:12961
@@ -13942,10 +13989,11 @@ synonym: "granulocytopenia" EXACT []
 synonym: "Granulocytopenic disorder" EXACT []
 synonym: "Granulopenia" EXACT []
 xref: ICD10CM:D70
-xref: MESH:D000380 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000380
 xref: SNOMEDCT_US_2020_03_01:154830007
 xref: UMLS_CUI:C0001824
 is_a: DOID:74 ! hematopoietic system disease
+property_value: exactMatch MESH:D000380 xsd:string
 
 [Term]
 id: DOID:12995
@@ -14221,7 +14269,7 @@ synonym: "progressive intracranial arterial occlusion" EXACT []
 xref: GARD:7064
 xref: ICD10CM:I67.5
 xref: ICD9CM:437.5
-xref: MESH:D009072 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D009072
 xref: NCI:C84895
 xref: OMIM:252350
 xref: OMIM:300845
@@ -14235,6 +14283,7 @@ xref: ORDO:401945
 xref: SNOMEDCT_US_2020_03_01:69116000
 xref: UMLS_CUI:C0026654
 is_a: DOID:6713 ! cerebrovascular disease
+property_value: exactMatch MESH:D009072 xsd:string
 
 [Term]
 id: DOID:13109
@@ -14934,12 +14983,13 @@ synonym: "AAT deficiency" EXACT []
 xref: GARD:5784
 xref: ICD10CM:E88.01
 xref: ICD9CM:273.4
-xref: MESH:D019896 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D019896
 xref: NCI:C84397
 xref: OMIM:613490
 xref: SNOMEDCT_US_2020_03_01:30188007
 xref: UMLS_CUI:C0221757
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D019896 xsd:string
 
 [Term]
 id: DOID:13374
@@ -15332,11 +15382,11 @@ def: "A balantitis characterized by white plaques or patches on genitals." [url:
 subset: NCIthesaurus
 synonym: "Penile Lichen Sclerosus" EXACT []
 xref: ICD9CM:607.81
-xref: MESH:D052798 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C3523
 xref: SNOMEDCT_US_2020_03_01:198028006
 xref: UMLS_CUI:C0152460
 is_a: DOID:13033 ! balanitis
+property_value: exactMatch MESH:D052798 xsd:string
 
 [Term]
 id: DOID:13481
@@ -15348,7 +15398,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:85
 xref: ICD10CM:Q77.1
-xref: MESH:D013796 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D013796
 xref: NCI:C85187
 xref: OMIM:187600
 xref: OMIM:187601
@@ -15360,6 +15410,7 @@ xref: ORDO:93275
 xref: SNOMEDCT_US_2020_03_01:29352008
 xref: UMLS_CUI:C0039743
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: exactMatch MESH:D013796 xsd:string
 
 [Term]
 id: DOID:13482
@@ -15634,11 +15685,12 @@ synonym: "Infection due to Aspergillus" EXACT []
 xref: GARD:5856
 xref: ICD10CM:B44
 xref: ICD9CM:117.3
-xref: MESH:D001228 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001228
 xref: NCI:C2886
 xref: SNOMEDCT_US_2020_03_01:266218008
 xref: UMLS_CUI:C0004030
 is_a: DOID:1564 ! fungal infectious disease
+property_value: exactMatch MESH:D001228 xsd:string
 
 [Term]
 id: DOID:1357
@@ -15931,12 +15983,13 @@ synonym: "Pseudoexfoliation glaucoma" EXACT []
 synonym: "Pseudoexfoliation syndrome" EXACT []
 xref: EFO:0004235
 xref: ICD9CM:365.52
-xref: MESH:D017889 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D017889
 xref: NCI:C129025
 xref: OMIM:177650
 xref: SNOMEDCT_US_2020_03_01:111514006
 xref: UMLS_CUI:C0206368
 is_a: DOID:1686 ! glaucoma
+property_value: exactMatch MESH:D017889 xsd:string
 
 [Term]
 id: DOID:13677
@@ -16058,11 +16111,12 @@ subset: NCIthesaurus
 xref: GARD:9948
 xref: ICD10CM:E51.1
 xref: ICD9CM:265.0
-xref: MESH:D001602 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001602
 xref: NCI:C34418
 xref: SNOMEDCT_US_2020_03_01:267491008
 xref: UMLS_CUI:C0005122
 is_a: DOID:0070313 ! thiamine deficiency disease
+property_value: exactMatch MESH:D001602 xsd:string
 
 [Term]
 id: DOID:1373
@@ -16176,13 +16230,14 @@ def: "A primary immunodeficiency disease that results_in skin squamous cell carc
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 xref: GARD:6357
-xref: MESH:D004819 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004819
 xref: NCI:C126877
 xref: OMIM:PS226400
 xref: ORDO:302
 xref: SNOMEDCT_US_2020_03_01:19138001
 xref: UMLS_CUI:C0014522
 is_a: DOID:612 ! primary immunodeficiency disease
+property_value: exactMatch MESH:D004819 xsd:string
 
 [Term]
 id: DOID:138
@@ -16395,12 +16450,13 @@ synonym: "familial hypobetalipoproteinemia" EXACT []
 synonym: "microsomal triglyceride transfer protein deficiency disease" EXACT []
 xref: GARD:5
 xref: ICD10CM:E78.6
-xref: MESH:D000012 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000012
 xref: NCI:C84525
 xref: OMIM:200100
 xref: SNOMEDCT_US_2020_03_01:83123000
 xref: UMLS_CUI:C0000744
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D000012 xsd:string
 
 [Term]
 id: DOID:13864
@@ -16446,12 +16502,13 @@ synonym: "familial high density lipoprotein deficiency" EXACT []
 synonym: "familial hypoalphalipoproteinemia" EXACT []
 xref: GARD:7731
 xref: ICD10CM:E78.6
-xref: MESH:D013631 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D013631
 xref: NCI:C85182
 xref: OMIM:205400
 xref: SNOMEDCT_US_2020_03_01:190783007
 xref: UMLS_CUI:C0039292
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D013631 xsd:string
 
 [Term]
 id: DOID:13884
@@ -16462,7 +16519,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "sinus node infection" EXACT []
 xref: ICD10CM:I49.5
-xref: MESH:D012804 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012804
 xref: NCI:C62244
 xref: OMIM:163800
 xref: OMIM:608567
@@ -16470,6 +16527,7 @@ xref: ORDO:166282
 xref: SNOMEDCT_US_2020_03_01:266307005
 xref: UMLS_CUI:C0037052
 is_a: DOID:114 ! heart disease
+property_value: exactMatch MESH:D012804 xsd:string
 
 [Term]
 id: DOID:1389
@@ -16682,11 +16740,12 @@ synonym: "absence of menstruation" EXACT []
 synonym: "amenia" EXACT []
 xref: ICD10CM:N91.2
 xref: ICD9CM:626.0
-xref: MESH:D000568 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000568
 xref: NCI:C61443
 xref: SNOMEDCT_US_2020_03_01:156034000
 xref: UMLS_CUI:C0002453
 is_a: DOID:15 ! reproductive system disease
+property_value: exactMatch MESH:D000568 xsd:string
 
 [Term]
 id: DOID:1394
@@ -17386,11 +17445,12 @@ synonym: "Alcohol-related polyneuropathy" EXACT []
 synonym: "Alcoholic polyneuropathy" EXACT []
 xref: ICD10CM:G62.1
 xref: ICD9CM:357.5
-xref: MESH:D020269 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020269
 xref: NCI:C26926
 xref: SNOMEDCT_US_2020_03_01:7916009
 xref: UMLS_CUI:C0085677
 is_a: DOID:870 ! neuropathy
+property_value: exactMatch MESH:D020269 xsd:string
 
 [Term]
 id: DOID:14203
@@ -17525,12 +17585,13 @@ synonym: "spermatogenic failure" EXACT []
 xref: EFO:0000279
 xref: ICD10CM:N46.0
 xref: ICD9CM:606.0
-xref: MESH:D053713 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D053713
 xref: NCI:C80076
 xref: ORDO:217034
 xref: SNOMEDCT_US_2020_03_01:425558002
 xref: UMLS_CUI:C0004509
 is_a: DOID:15 ! reproductive system disease
+property_value: exactMatch MESH:D053713 xsd:string
 
 [Term]
 id: DOID:14228
@@ -17680,11 +17741,12 @@ synonym: "pulmonary regurg." EXACT []
 synonym: "pulmonary regurgitation" EXACT []
 synonym: "Pulmonic insufficiency" EXACT []
 synonym: "Pulmonic valve regurgitation" EXACT []
-xref: MESH:D011665 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D011665
 xref: NCI:C51447
 xref: SNOMEDCT_US_2020_03_01:91434003
 xref: UMLS_CUI:C0034088
 is_a: DOID:5749 ! pulmonary valve disease
+property_value: exactMatch MESH:D011665 xsd:string
 
 [Term]
 id: DOID:14269
@@ -17858,12 +17920,13 @@ synonym: "Marfan's syndrome" EXACT []
 xref: GARD:6975
 xref: ICD10CM:Q87.4
 xref: ICD9CM:759.82
-xref: MESH:D008382 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008382
 xref: NCI:C34807
 xref: OMIM:154700
 xref: SNOMEDCT_US_2020_03_01:19346006
 xref: UMLS_CUI:C0024796
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D008382 xsd:string
 
 [Term]
 id: DOID:14324
@@ -18037,12 +18100,13 @@ synonym: "MJD" EXACT []
 synonym: "SCA3" EXACT []
 synonym: "spinocerebellar ataxia 3" EXACT []
 synonym: "spinocerebellar ataxia type 3" EXACT []
-xref: MESH:D017827 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D017827
 xref: NCI:C84830
 xref: OMIM:109150
 xref: SNOMEDCT_US_2020_03_01:91952008
 xref: UMLS_CUI:C0024408
 is_a: DOID:1441 ! autosomal dominant cerebellar ataxia
+property_value: exactMatch MESH:D017827 xsd:string
 
 [Term]
 id: DOID:14400
@@ -18050,11 +18114,12 @@ name: capillary leak syndrome
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Capillary leak syndrome" EXACT []
-xref: MESH:D019559 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D019559
 xref: NCI:C62578
 xref: SNOMEDCT_US_2020_03_01:87730004
 xref: UMLS_CUI:C0343084
 is_a: DOID:178 ! vascular disease
+property_value: exactMatch MESH:D019559 xsd:string
 
 [Term]
 id: DOID:1441
@@ -18982,8 +19047,7 @@ xref: GARD:10091
 xref: ICD10CM:Q87.3
 xref: MESH:D058495
 xref: NCI:C75019
-xref: OMIM:117550
-xref: OMIM:614753
+xref: OMIM:PS117550
 xref: ORDO:821
 xref: SNOMEDCT_US_2020_03_01:75968004
 xref: UMLS_CUI:C0175695
@@ -19230,13 +19294,14 @@ synonym: "mucoviscidosis" EXACT []
 xref: GARD:6233
 xref: ICD10CM:E84
 xref: ICD9CM:277.0
-xref: MESH:D003550 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D003550
 xref: NCI:C2975
 xref: OMIM:219700
 xref: ORDO:586
 xref: SNOMEDCT_US_2020_03_01:85809002
 xref: UMLS_CUI:C0010674
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D003550 xsd:string
 
 [Term]
 id: DOID:1496
@@ -19642,11 +19707,12 @@ def: "A lung disease that involves a vasoocclusive crisis of the pulmonary vascu
 subset: NCIthesaurus
 synonym: "acute chest syndrome in sickle cell disease" EXACT []
 xref: ICD9CM:517.3
-xref: MESH:D056586 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D056586
 xref: NCI:C138179
 xref: SNOMEDCT_US_2020_03_01:372146004
 xref: UMLS_CUI:C0742343
 is_a: DOID:850 ! lung disease
+property_value: exactMatch MESH:D056586 xsd:string
 
 [Term]
 id: DOID:1586
@@ -19664,13 +19730,14 @@ xref: ICD10CM:I00
 xref: ICD10CM:I00-I02
 xref: ICD9CM:390
 xref: ICD9CM:390-392.99
-xref: MESH:D012213 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012213
 xref: NCI:C34984
 xref: SNOMEDCT_US_2020_03_01:155265007
 xref: SNOMEDCT_US_2020_03_01:274095001
 xref: UMLS_CUI:C0035436
 xref: UMLS_CUI:C0264743
 is_a: DOID:104 ! bacterial infectious disease
+property_value: exactMatch MESH:D012213 xsd:string
 
 [Term]
 id: DOID:1587
@@ -20312,7 +20379,7 @@ xref: ICD10CM:Q23.0
 xref: ICD10CM:Q25.1
 xref: ICD9CM:395.0
 xref: ICD9CM:746.3
-xref: MESH:D001024 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001024
 xref: NCI:C50462
 xref: SNOMEDCT_US_2020_03_01:155282009
 xref: SNOMEDCT_US_2020_03_01:18546004
@@ -20321,6 +20388,7 @@ xref: UMLS_CUI:C0003507
 xref: UMLS_CUI:C0152417
 xref: UMLS_CUI:C0155567
 is_a: DOID:62 ! aortic valve disease
+property_value: exactMatch MESH:D001024 xsd:string
 
 [Term]
 id: DOID:172
@@ -20482,10 +20550,11 @@ name: acanthoma
 namespace: disease_ontology
 subset: NCIthesaurus
 xref: GARD:8604
-xref: MESH:D049309 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D049309
 xref: NCI:C7419
 xref: UMLS_CUI:C0846967
 is_a: DOID:3168 ! squamous cell neoplasm
+property_value: exactMatch MESH:D049309 xsd:string
 
 [Term]
 id: DOID:1748
@@ -20673,11 +20742,12 @@ namespace: disease_ontology
 def: "A lip disease characterized by the inflammation of the lips; which may include the perioral skin, the vermilion border and the labial mucosa." [url:http\://en.wikipedia.org/wiki/Cheilitis]
 subset: NCIthesaurus
 xref: ICD10CM:K13.0
-xref: MESH:D002613 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D002613
 xref: NCI:C79545
 xref: SNOMEDCT_US_2020_03_01:155664000
 xref: UMLS_CUI:C0007971
 is_a: DOID:9297 ! lip disease
+property_value: exactMatch MESH:D002613 xsd:string
 
 [Term]
 id: DOID:178
@@ -20764,11 +20834,12 @@ name: adrenal rest tumor
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Adrenal Rest neoplasm" EXACT []
-xref: MESH:D000314 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000314
 xref: NCI:C2860
 xref: SNOMEDCT_US_2020_03_01:54292009
 xref: UMLS_CUI:C0001630
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D000314 xsd:string
 
 [Term]
 id: DOID:1787
@@ -21259,12 +21330,12 @@ synonym: "polyostotic fibrous dysplasia" EXACT []
 xref: GARD:6995
 xref: ICD10CM:Q78.1
 xref: ICD9CM:756.54
-xref: MESH:D005359 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34610
 xref: OMIM:174800
 xref: SNOMEDCT_US_2020_03_01:726029005
 xref: UMLS_CUI:C0016065
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D005359 xsd:string
 
 [Term]
 id: DOID:1863
@@ -21396,11 +21467,12 @@ synonym: "malignant melanoma" EXACT []
 synonym: "Naevocarcinoma" EXACT []
 xref: EFO:0000756
 xref: KEGG:05218
-xref: MESH:D008545 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008545
 xref: NCI:C3224
 xref: SNOMEDCT_US_2020_03_01:2092003
 xref: UMLS_CUI:C0025202
 is_a: DOID:162 ! cancer
+property_value: exactMatch MESH:D008545 xsd:string
 
 [Term]
 id: DOID:1910
@@ -21658,12 +21730,13 @@ synonym: "happy puppet syndrome" EXACT []
 synonym: "puppetlike syndrome" EXACT []
 xref: GARD:5810
 xref: ICD10CM:Q93.51
-xref: MESH:D017204 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D017204
 xref: NCI:C75462
 xref: OMIM:105830
 xref: SNOMEDCT_US_2020_03_01:76880004
 xref: UMLS_CUI:C0162635
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D017204 xsd:string
 
 [Term]
 id: DOID:1933
@@ -21726,11 +21799,12 @@ subset: NCIthesaurus
 xref: EFO:0003914
 xref: ICD10CM:I70
 xref: ICD9CM:440
-xref: MESH:D050197 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D050197
 xref: NCI:C35768
 xref: SNOMEDCT_US_2020_03_01:155414001
 xref: UMLS_CUI:C0004153
 is_a: DOID:2348 ! arteriosclerotic cardiovascular disease
+property_value: exactMatch MESH:D050197 xsd:string
 
 [Term]
 id: DOID:1943
@@ -21912,11 +21986,12 @@ def: "A carcinosarcoma that derives_from simultaneously or consecutively in meso
 subset: NCIthesaurus
 synonym: "Adenosarcoma" EXACT []
 synonym: "mullerian Adenosarcoma" EXACT []
-xref: MESH:D018195 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018195
 xref: NCI:C9474
 xref: SNOMEDCT_US_2020_03_01:189804002
 xref: UMLS_CUI:C0001442
 is_a: DOID:4236 ! carcinosarcoma
+property_value: exactMatch MESH:D018195 xsd:string
 
 [Term]
 id: DOID:1975
@@ -23554,11 +23629,12 @@ subset: NCIthesaurus
 synonym: "cholera morbus" EXACT []
 synonym: "infectious colitis, enteritis and gastroenteritis" EXACT []
 xref: ICD10CM:K52.9
-xref: MESH:D005759 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D005759
 xref: NCI:C34632
 xref: SNOMEDCT_US_2020_03_01:154278002
 xref: UMLS_CUI:C0017160
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D005759 xsd:string
 
 [Term]
 id: DOID:2327
@@ -23788,11 +23864,12 @@ synonym: "anaemia" EXACT []
 xref: EFO:0004272
 xref: ICD10CM:D64.9
 xref: ICD9CM:285.9
-xref: MESH:D000740 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000740
 xref: NCI:C2869
 xref: SNOMEDCT_US_2020_03_01:64593003
 xref: UMLS_CUI:C0002871
 is_a: DOID:74 ! hematopoietic system disease
+property_value: exactMatch MESH:D000740 xsd:string
 
 [Term]
 id: DOID:2361
@@ -23842,7 +23919,7 @@ xref: EFO:0003885
 xref: GARD:10255
 xref: ICD10CM:G35
 xref: ICD9CM:340
-xref: MESH:D009103 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D009103
 xref: NCI:C3243
 xref: OMIM:612594
 xref: OMIM:612595
@@ -23851,6 +23928,7 @@ xref: SNOMEDCT_US_2020_03_01:155023009
 xref: UMLS_CUI:C0026769
 is_a: DOID:3213 ! demyelinating disease
 is_a: DOID:438 ! autoimmune disease of the nervous system
+property_value: exactMatch MESH:D009103 xsd:string
 
 [Term]
 id: DOID:2382
@@ -24168,12 +24246,13 @@ comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "hypercoagulability state" EXACT []
 xref: ICD10CM:D68.59
-xref: MESH:D019851 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D019851
 xref: NCI:C84479
 xref: OMIM:PS188050
 xref: SNOMEDCT_US_2020_03_01:191302007
 xref: UMLS_CUI:C0398623
 is_a: DOID:1247 ! blood coagulation disease
+property_value: exactMatch MESH:D019851 xsd:string
 
 [Term]
 id: DOID:2456
@@ -24813,13 +24892,14 @@ subset: NCIthesaurus
 synonym: "Chondrodysplasia punctata congenita" EXACT []
 xref: GARD:8542
 xref: ICD10CM:Q77.3
-xref: MESH:D002806 {http://www.w3.org/2004/02/skos/core#narrowMatch="narrowMatch"}
+xref: MESH:D002806
 xref: NCI:C84632
 xref: OMIM:215105
 xref: ORDO:93442
 xref: SNOMEDCT_US_2020_03_01:205486004
 xref: UMLS_CUI:C0008445
 is_a: DOID:225 ! syndrome
+property_value: narrowMatch MESH:D002806 xsd:string
 
 [Term]
 id: DOID:2582
@@ -24848,7 +24928,7 @@ synonym: "IGHM" EXACT []
 synonym: "mu heavy chain deficiency" EXACT []
 xref: ICD10CM:D80.1
 xref: ICD9CM:279.00
-xref: MESH:D000361 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000361
 xref: NCI:C26931
 xref: OMIM:601495
 xref: OMIM:612692
@@ -24861,6 +24941,7 @@ xref: SNOMEDCT_US_2020_03_01:267512002
 xref: UMLS_CUI:C0001768
 xref: UMLS_CUI:C0086438
 is_a: DOID:612 ! primary immunodeficiency disease
+property_value: exactMatch MESH:D000361 xsd:string
 
 [Term]
 id: DOID:2590
@@ -24992,11 +25073,12 @@ name: adenomyoma
 namespace: disease_ontology
 def: "A cell type benign neoplasm that has_material_basis_in gland and muscle components." [url:http\://en.wikipedia.org/wiki/Adenomyoma]
 subset: NCIthesaurus
-xref: MESH:D018194 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018194
 xref: NCI:C3726
 xref: SNOMEDCT_US_2020_03_01:40293003
 xref: UMLS_CUI:C0206622
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D018194 xsd:string
 
 [Term]
 id: DOID:2614
@@ -25741,11 +25823,12 @@ namespace: disease_ontology
 def: "A dermatitis that selectively affects the hands and feet." [url:http\://en.wikipedia.org/wiki/Acrodermatitis]
 subset: NCIthesaurus
 xref: GARD:5722
-xref: MESH:D000169 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000169
 xref: NCI:C84532
 xref: SNOMEDCT_US_2020_03_01:8197001
 xref: UMLS_CUI:C0001197
 is_a: DOID:2723 ! dermatitis
+property_value: exactMatch MESH:D000169 xsd:string
 
 [Term]
 id: DOID:2723
@@ -25828,12 +25911,13 @@ synonym: "Congenital poikiloderma" EXACT []
 synonym: "RTS" EXACT []
 xref: GARD:4392
 xref: ICD10CM:Q82.8
-xref: MESH:D011038 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D011038
 xref: NCI:C3335
 xref: OMIM:268400
 xref: SNOMEDCT_US_2020_03_01:205572001
 xref: UMLS_CUI:C0032339
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D011038 xsd:string
 
 [Term]
 id: DOID:2733
@@ -26157,11 +26241,12 @@ synonym: "MAC disease" EXACT []
 synonym: "Mycobacterium avium Complex" EXACT []
 synonym: "Mycobacterium Avium Infection" EXACT []
 xref: GARD:7123
-xref: MESH:D015270 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D015270
 xref: NCI:C36197
 xref: SNOMEDCT_US_2020_03_01:14009004
 xref: UMLS_CUI:C0026916
 is_a: DOID:104 ! bacterial infectious disease
+property_value: exactMatch MESH:D015270 xsd:string
 
 [Term]
 id: DOID:2762
@@ -26290,11 +26375,12 @@ name: adamantinoma
 namespace: disease_ontology
 def: "A bone cancer that is located_in almost exclusively in the long bones." [url:https\://www.ncbi.nlm.nih.gov/pubmed/30844202]
 subset: NCIthesaurus
-xref: MESH:D050398 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D050398
 xref: NCI:C7644
 xref: ORDO:55881
 xref: UMLS_CUI:C1367554
 is_a: DOID:184 ! bone cancer
+property_value: exactMatch MESH:D050398 xsd:string
 
 [Term]
 id: DOID:2780
@@ -26529,11 +26615,12 @@ subset: NCIthesaurus
 synonym: "acute acalculous cholecystitis" EXACT []
 synonym: "acute cholecystitis without calculus" EXACT []
 synonym: "cholecystitis without calculus" EXACT []
-xref: MESH:D042101 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D042101
 xref: NCI:C35578
 xref: SNOMEDCT_US_2020_03_01:19968009
 xref: UMLS_CUI:C0267841
 is_a: DOID:1949 ! cholecystitis
+property_value: exactMatch MESH:D042101 xsd:string
 
 [Term]
 id: DOID:2833
@@ -26622,12 +26709,13 @@ xref: GARD:10246
 xref: ICD10CM:J45
 xref: ICD9CM:493
 xref: KEGG:05310
-xref: MESH:D001249 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001249
 xref: NCI:C28397
 xref: OMIM:600807
 xref: SNOMEDCT_US_2020_03_01:187687003
 xref: UMLS_CUI:C0004096
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D001249 xsd:string
 
 [Term]
 id: DOID:2842
@@ -26726,10 +26814,11 @@ name: hyperthyroxinemia
 namespace: disease_ontology
 def: "A thyroid gland disease that is characterized by elevated thyroxine levels in the blood." [url:https\://en.wikipedia.org/wiki/Hyperthyroxinemia]
 subset: NCIthesaurus
-xref: MESH:D006981 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006981
 xref: NCI:C131850
 xref: UMLS_CUI:C0020551
 is_a: DOID:50 ! thyroid gland disease
+property_value: exactMatch MESH:D006981 xsd:string
 
 [Term]
 id: DOID:2856
@@ -27468,12 +27557,13 @@ synonym: "antiphospholipid antibody syndrome" EXACT []
 synonym: "Antiphospholipid syndrome" EXACT []
 xref: GARD:5824
 xref: ICD10CM:D68.61
-xref: MESH:D016736 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D016736
 xref: NCI:C61283
 xref: OMIM:107320
 xref: SNOMEDCT_US_2020_03_01:201450008
 xref: UMLS_CUI:C0085278
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D016736 xsd:string
 
 [Term]
 id: DOID:299
@@ -27481,11 +27571,12 @@ name: adenocarcinoma
 namespace: disease_ontology
 def: "A carcinoma that has_material_basis_in abnormally proliferating cells, derives_from epithelial cells, which originate in glandular tissue." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: NCIthesaurus
-xref: MESH:D000230 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000230
 xref: NCI:C2852
 xref: SNOMEDCT_US_2020_03_01:443961001
 xref: UMLS_CUI:C0001418
 is_a: DOID:305 ! carcinoma
+property_value: exactMatch MESH:D000230 xsd:string
 
 [Term]
 id: DOID:2992
@@ -27988,7 +28079,7 @@ synonym: "Astrocytoma, NOS" EXACT []
 synonym: "astroglioma" EXACT []
 synonym: "cerebral astrocytoma" EXACT []
 xref: ICDO:M9400/3
-xref: MESH:D001254 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001254
 xref: NCI:C4951
 xref: NCI:C60781
 xref: SNOMEDCT_US_2020_03_01:189914005
@@ -27996,6 +28087,7 @@ xref: SNOMEDCT_US_2020_03_01:99131000119108
 xref: UMLS_CUI:C0004114
 xref: UMLS_CUI:C0750935
 is_a: DOID:3620 ! central nervous system cancer
+property_value: exactMatch MESH:D001254 xsd:string
 
 [Term]
 id: DOID:3070
@@ -28485,13 +28577,14 @@ synonym: "Keratosis nigricans" EXACT []
 synonym: "keratosis nigricans" EXACT []
 xref: GARD:8603
 xref: ICD10CM:L83
-xref: MESH:D000052 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000052
 xref: NCI:C26687
 xref: OMIM:100600
 xref: OMIM:200170
 xref: SNOMEDCT_US_2020_03_01:72129000
 xref: UMLS_CUI:C0000889
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D000052 xsd:string
 
 [Term]
 id: DOID:314
@@ -29127,11 +29220,12 @@ name: tracheal stenosis
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Stenosis of trachea" EXACT []
-xref: MESH:D014135 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D014135
 xref: NCI:C78646
 xref: SNOMEDCT_US_2020_03_01:11296007
 xref: UMLS_CUI:C0040583
 is_a: DOID:3225 ! tracheal disease
+property_value: exactMatch MESH:D014135 xsd:string
 
 [Term]
 id: DOID:3234
@@ -29725,11 +29819,12 @@ namespace: disease_ontology
 def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs and is derived from perivascular epithelioid cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/9503504]
 subset: NCIthesaurus
 synonym: "Angiomyolipoma" EXACT []
-xref: MESH:D018207 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018207
 xref: NCI:C3734
 xref: SNOMEDCT_US_2020_03_01:19929002
 xref: UMLS_CUI:C0206633
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D018207 xsd:string
 
 [Term]
 id: DOID:3315
@@ -29805,12 +29900,12 @@ synonym: "lung lymphangioleiomyomatosis" EXACT []
 synonym: "lymphangiomyomatosis" EXACT []
 synonym: "pulmonary lymphangioleiomyomatosis" EXACT []
 xref: GARD:3319
-xref: MESH:D018192 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C38153
 xref: OMIM:606690
 xref: SNOMEDCT_US_2020_03_01:277844007
 xref: UMLS_CUI:C0349649
 is_a: DOID:850 ! lung disease
+property_value: exactMatch MESH:D018192 xsd:string
 
 [Term]
 id: DOID:332
@@ -29827,13 +29922,14 @@ xref: GARD:5786
 xref: ICD10CM:G12.21
 xref: ICD9CM:335.20
 xref: KEGG:05014
-xref: MESH:D000690 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000690
 xref: NCI:C34373
 xref: OMIM:PS105400
 xref: ORDO:803
 xref: SNOMEDCT_US_2020_03_01:86044005
 xref: UMLS_CUI:C0002736
 is_a: DOID:1289 ! neurodegenerative disease
+property_value: exactMatch MESH:D000690 xsd:string
 
 [Term]
 id: DOID:3320
@@ -29881,12 +29977,13 @@ subset: NCIthesaurus
 synonym: "Sandhoff Jatzkewitz disease" EXACT []
 xref: GARD:7604
 xref: ICD10CM:E75.01
-xref: MESH:D012497 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012497
 xref: NCI:C85052
 xref: OMIM:268800
 xref: SNOMEDCT_US_2020_03_01:23849003
 xref: UMLS_CUI:C0036161
 is_a: DOID:1927 ! sphingolipidosis
+property_value: exactMatch MESH:D012497 xsd:string
 
 [Term]
 id: DOID:3324
@@ -29911,11 +30008,12 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Purpuric disorder" EXACT []
 xref: ICD10CM:D69.2
-xref: MESH:D011693 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D011693
 xref: NCI:C78787
 xref: SNOMEDCT_US_2020_03_01:423902002
 xref: UMLS_CUI:C0034150
 is_a: DOID:1247 ! blood coagulation disease
+property_value: exactMatch MESH:D011693 xsd:string
 
 [Term]
 id: DOID:3327
@@ -30460,11 +30558,12 @@ synonym: "syndrome of inappropriate secretion of ADH" EXACT []
 synonym: "syndrome of inappropriate secretion of antidiuretic hormone" EXACT []
 synonym: "syndrome of inappropriate vasopressin secretion" EXACT []
 xref: ICD10CM:E22.2
-xref: MESH:D007177 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D007177
 xref: NCI:C3988
 xref: SNOMEDCT_US_2020_03_01:55004003
 xref: UMLS_CUI:C0021141
 is_a: DOID:28 ! endocrine system disease
+property_value: exactMatch MESH:D007177 xsd:string
 
 [Term]
 id: DOID:3405
@@ -30504,12 +30603,13 @@ synonym: "Alpha-D-mannosidosis" EXACT []
 synonym: "alpha-mannosidase deficiency" EXACT []
 synonym: "deficiency of alpha-mannosidase" EXACT []
 xref: GARD:6968
-xref: MESH:D008363 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008363
 xref: NCI:C84548
 xref: OMIM:248500
 xref: SNOMEDCT_US_2020_03_01:65524005
 xref: UMLS_CUI:C0024748
 is_a: DOID:3211 ! lysosomal storage disease
+property_value: exactMatch MESH:D008363 xsd:string
 
 [Term]
 id: DOID:3417
@@ -30570,13 +30670,14 @@ subset: NCIthesaurus
 xref: GARD:3896
 xref: ICD10CM:G72.41
 xref: ICD9CM:359.71
-xref: MESH:D018979 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018979
 xref: NCI:C84786
 xref: OMIM:147421
 xref: ORDO:611
 xref: SNOMEDCT_US_2020_03_01:72315009
 xref: UMLS_CUI:C0238190
 is_a: DOID:633 ! myositis
+property_value: exactMatch MESH:D018979 xsd:string
 
 [Term]
 id: DOID:3431
@@ -31695,11 +31796,12 @@ name: angiolipoma
 namespace: disease_ontology
 def: "A lipoma that is a painful subcutaneous nodule, having all other features of a typical lipoma." [url:http\://en.wikipedia.org/wiki/Angiolipoma]
 subset: NCIthesaurus
-xref: MESH:D018206 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018206
 xref: NCI:C3733
 xref: SNOMEDCT_US_2020_03_01:404057003
 xref: UMLS_CUI:C0206632
 is_a: DOID:3315 ! lipoma
+property_value: exactMatch MESH:D018206 xsd:string
 
 [Term]
 id: DOID:3617
@@ -31767,8 +31869,8 @@ xref: ICD9CM:441.1
 xref: ICD9CM:441.3
 xref: ICD9CM:441.5
 xref: ICD9CM:441.6
-xref: MESH:D001014 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
-xref: MESH:D001019 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001014
+xref: MESH:D001019
 xref: NCI:C26697
 xref: NCI:C27046
 xref: NCI:C27198
@@ -31784,6 +31886,8 @@ xref: UMLS_CUI:C0265012
 xref: UMLS_CUI:C0741160
 xref: UMLS_CUI:C1305122
 is_a: DOID:520 ! aortic disease
+property_value: exactMatch MESH:D001014 xsd:string
+property_value: exactMatch MESH:D001019 xsd:string
 
 [Term]
 id: DOID:363
@@ -31894,11 +31998,12 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Empty sella syndrome" EXACT []
 xref: GARD:6331
-xref: MESH:D004652 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004652
 xref: NCI:C84686
 xref: SNOMEDCT_US_2020_03_01:393569006
 xref: UMLS_CUI:C0014008
 is_a: DOID:28 ! endocrine system disease
+property_value: exactMatch MESH:D004652 xsd:string
 
 [Term]
 id: DOID:3643
@@ -32126,11 +32231,12 @@ synonym: "malignant rhabdoid tumour" EXACT []
 synonym: "Rhabdoid sarcoma" EXACT []
 synonym: "rhabdoid tumor" RELATED []
 xref: GARD:7572
-xref: MESH:D018335 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018335
 xref: NCI:C3808
 xref: SNOMEDCT_US_2020_03_01:83118000
 xref: UMLS_CUI:C0206743
 is_a: DOID:3675 ! childhood kidney cancer
+property_value: exactMatch MESH:D018335 xsd:string
 
 [Term]
 id: DOID:3674
@@ -33004,13 +33110,14 @@ synonym: "Bilirubin UDP glucuronyl transferase deficiency" EXACT []
 synonym: "Crigler Najjar syndrome" EXACT []
 synonym: "Crigler-Najjar syndrome, type I" EXACT []
 xref: ICD10CM:E80.5
-xref: MESH:D003414 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D003414
 xref: NCI:C84656
 xref: OMIM:218800
 xref: ORDO:205
 xref: SNOMEDCT_US_2020_03_01:8933000
 xref: UMLS_CUI:C0010324
 is_a: DOID:2741 ! bilirubin metabolic disorder
+property_value: exactMatch MESH:D003414 xsd:string
 
 [Term]
 id: DOID:3805
@@ -33137,7 +33244,6 @@ subset: NCIthesaurus
 synonym: "Diaphragmatic Hernia" EXACT []
 xref: GARD:1481
 xref: ICD10CM:K44
-xref: ICD10CM:Q79.0 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: MESH:D006548
 xref: NCI:C34687
 xref: OMIM:142340
@@ -33147,6 +33253,7 @@ xref: ORDO:2140
 xref: SNOMEDCT_US_2020_03_01:155748004
 xref: UMLS_CUI:C0019284
 is_a: DOID:17 ! musculoskeletal system disease
+property_value: exactMatch ICD10CM:Q79.0 xsd:string
 
 [Term]
 id: DOID:3828
@@ -33545,11 +33652,12 @@ synonym: "Apocrine cystadenoma" EXACT []
 synonym: "Eccrine Cystadenoma" EXACT []
 synonym: "Eccrine hidrocystoma of skin" EXACT []
 synonym: "Hidrocystoma" EXACT []
-xref: MESH:D018251 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018251
 xref: NCI:C3760
 xref: SNOMEDCT_US_2020_03_01:80549000
 xref: UMLS_CUI:C0206672
 is_a: DOID:5876 ! apocrine sweat gland neoplasm
+property_value: exactMatch MESH:D018251 xsd:string
 
 [Term]
 id: DOID:3895
@@ -33761,12 +33869,13 @@ subset: NCIthesaurus
 synonym: "Dercum disease" EXACT []
 xref: GARD:5750
 xref: ICD10CM:E88.2
-xref: MESH:D000274 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000274
 xref: NCI:C84540
 xref: OMIM:103200
 xref: SNOMEDCT_US_2020_03_01:71404003
 xref: UMLS_CUI:C0001529
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D000274 xsd:string
 
 [Term]
 id: DOID:3930
@@ -33829,12 +33938,13 @@ subset: NCIthesaurus
 synonym: "Adrenal cortical carcinoma" EXACT []
 synonym: "carcinoma of the Adrenal cortex" EXACT []
 xref: GARD:558
-xref: MESH:D018268 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018268
 xref: NCI:C9325
 xref: OMIM:202300
 xref: SNOMEDCT_US_2020_03_01:255035007
 xref: UMLS_CUI:C0206686
 is_a: DOID:660 ! adrenal cortex cancer
+property_value: exactMatch MESH:D018268 xsd:string
 
 [Term]
 id: DOID:3951
@@ -34773,11 +34883,12 @@ synonym: "Dyspraxia" EXACT []
 synonym: "Dyspraxia syndrome" EXACT []
 xref: GARD:8
 xref: ICD10CM:R48.1
-xref: MESH:D000377 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000377
 xref: NCI:C84542
 xref: SNOMEDCT_US_2020_03_01:42341009
 xref: UMLS_CUI:C0001816
 is_a: DOID:2033 ! communication disorder
+property_value: exactMatch MESH:D000377 xsd:string
 
 [Term]
 id: DOID:4111
@@ -35133,12 +35244,13 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 xref: GARD:10758
 xref: ICD10CM:E20.1
-xref: MESH:D011547 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D011547
 xref: NCI:C99027
 xref: OMIM:612462
 xref: SNOMEDCT_US_2020_03_01:190867002
 xref: UMLS_CUI:C0033806
 is_a: DOID:655 ! inherited metabolic disorder
+property_value: exactMatch MESH:D011547 xsd:string
 
 [Term]
 id: DOID:4188
@@ -35617,12 +35729,13 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "Alexander's disease" EXACT []
 xref: GARD:5774
-xref: MESH:D038261 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D038261
 xref: NCI:C84545
 xref: OMIM:203450
 xref: SNOMEDCT_US_2020_03_01:81854007
 xref: UMLS_CUI:C0270726
 is_a: DOID:10579 ! leukodystrophy
+property_value: exactMatch MESH:D038261 xsd:string
 
 [Term]
 id: DOID:4253
@@ -35632,12 +35745,13 @@ def: "An osteosclerosis that has_material_basis_in a mutation of the LEMD3 gene 
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 xref: GARD:9474
-xref: MESH:D008557 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008557
 xref: NCI:C84887
 xref: OMIM:155950
 xref: SNOMEDCT_US_2020_03_01:240173003
 xref: UMLS_CUI:C0025239
 is_a: DOID:4254 ! osteosclerosis
+property_value: exactMatch MESH:D008557 xsd:string
 
 [Term]
 id: DOID:4254
@@ -35694,11 +35808,12 @@ def: "A leiomyoma that is located_in the blood vessels." [url:https\://www.ncbi.
 subset: NCIthesaurus
 synonym: "Angiomyoma" EXACT []
 synonym: "vascular leiomyoma" EXACT []
-xref: MESH:D018229 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018229
 xref: NCI:C3747
 xref: SNOMEDCT_US_2020_03_01:86959002
 xref: UMLS_CUI:C0206653
 is_a: DOID:178 ! vascular disease
+property_value: exactMatch MESH:D018229 xsd:string
 
 [Term]
 id: DOID:4266
@@ -37035,12 +37150,13 @@ synonym: "Chondrodystrophia" EXACT []
 synonym: "osteosclerosis congenita" EXACT []
 xref: GARD:8173
 xref: ICD10CM:Q77.4
-xref: MESH:D000130 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000130
 xref: NCI:C34345
 xref: OMIM:100800
 xref: SNOMEDCT_US_2020_03_01:268273004
 xref: UMLS_CUI:C0001080
 is_a: DOID:2256 ! osteochondrodysplasia
+property_value: exactMatch MESH:D000130 xsd:string
 
 [Term]
 id: DOID:4481
@@ -37059,12 +37175,12 @@ synonym: "Perenial allergic rhinitis" EXACT []
 synonym: "pollenosis" EXACT []
 synonym: "seasonal allergic rhinitis" EXACT []
 xref: EFO:0003956
-xref: MESH:D065631 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
 xref: NCI:C34987
 xref: OMIM:607154
 xref: SNOMEDCT_US_2020_03_01:38103000
 xref: UMLS_CUI:C0002103
 is_a: DOID:4483 ! rhinitis
+property_value: exactMatch MESH:D065631 xsd:string
 
 [Term]
 id: DOID:4483
@@ -37123,12 +37239,13 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 xref: ICD10CM:G71.1
 xref: ICD9CM:359.2
-xref: MESH:D009223 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
-xref: MESH:D020967 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D020967
 xref: NCI:C84913
 xref: SNOMEDCT_US_2020_03_01:155096007
 xref: UMLS_CUI:C0553604
 is_a: DOID:9884 ! muscular dystrophy
+property_value: exactMatch MESH:D009223 xsd:string
+property_value: exactMatch MESH:D020967 xsd:string
 
 [Term]
 id: DOID:4500
@@ -38033,13 +38150,13 @@ synonym: "testicular Feminization syndrome" EXACT []
 xref: GARD:5803
 xref: ICD10CM:E34.5
 xref: ICD9CM:259.51
-xref: MESH:D013734 {http://www.w3.org/2004/02/skos/core#narrowMatch="narrowMatch"}
 xref: NCI:C27226
 xref: OMIM:300068
 xref: ORDO:754
 xref: SNOMEDCT_US_2020_03_01:12313004
 xref: UMLS_CUI:C0039585
 is_a: DOID:2277 ! gonadal disease
+property_value: narrowMatch MESH:D013734 xsd:string
 
 [Term]
 id: DOID:4675
@@ -39869,11 +39986,12 @@ name: adenocarcinoma in situ
 namespace: disease_ontology
 def: "An in situ carcinoma that derives_from epithelial cells of glandular origin." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/adenocarcinoma-in-situ]
 subset: NCIthesaurus
-xref: MESH:D065311 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D065311
 xref: NCI:C4123
 xref: SNOMEDCT_US_2020_03_01:51642000
 xref: UMLS_CUI:C0334276
 is_a: DOID:8719 ! in situ carcinoma
+property_value: exactMatch MESH:D065311 xsd:string
 
 [Term]
 id: DOID:4944
@@ -41115,11 +41233,12 @@ def: "An arteriosclerosis that is characterized by thickening of the wall of the
 subset: NCIthesaurus
 synonym: "Arteriolosclerosis" EXACT []
 xref: ICD10CM:I70
-xref: MESH:D050379 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D050379
 xref: NCI:C35543
 xref: SNOMEDCT_US_2020_03_01:17941002
 xref: UMLS_CUI:C0878486
 is_a: DOID:2349 ! arteriosclerosis
+property_value: exactMatch MESH:D050379 xsd:string
 
 [Term]
 id: DOID:5165
@@ -41934,11 +42053,12 @@ subset: NCIthesaurus
 xref: GARD:5909
 xref: ICD10CM:G24.5
 xref: ICD9CM:333.81
-xref: MESH:D001764 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001764
 xref: NCI:C118723
 xref: SNOMEDCT_US_2020_03_01:155009007
 xref: UMLS_CUI:C0005747
 is_a: DOID:543 ! dystonia
+property_value: exactMatch MESH:D001764 xsd:string
 
 [Term]
 id: DOID:5292
@@ -42443,12 +42563,13 @@ subset: NCIthesaurus
 synonym: "benign pilomatricoma" EXACT []
 synonym: "Pilomatricoma" EXACT []
 xref: GARD:9452
-xref: MESH:D018296 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018296
 xref: NCI:C7368
 xref: OMIM:132600
 xref: SNOMEDCT_US_2020_03_01:274901004
 xref: UMLS_CUI:C0206711
 is_a: DOID:5375 ! hair follicle neoplasm
+property_value: exactMatch MESH:D018296 xsd:string
 
 [Term]
 id: DOID:5375
@@ -42912,8 +43033,8 @@ subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "dystonic disease" EXACT []
 xref: ICD10CM:G24
-xref: MESH:D004421 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
-xref: MESH:D020821 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004421
+xref: MESH:D020821
 xref: NCI:C34563
 xref: OMIM:PS128100
 xref: SNOMEDCT_US_2020_03_01:15802004
@@ -42921,6 +43042,8 @@ xref: SNOMEDCT_US_2020_03_01:250068003
 xref: UMLS_CUI:C0013421
 xref: UMLS_CUI:C0393593
 is_a: DOID:480 ! movement disease
+property_value: exactMatch MESH:D004421 xsd:string
+property_value: exactMatch MESH:D020821 xsd:string
 
 [Term]
 id: DOID:5432
@@ -44026,13 +44149,14 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:3343
 xref: ICD10CM:Q87.3
-xref: MESH:D001506 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001506
 xref: NCI:C34415
 xref: OMIM:130650
 xref: ORDO:116
 xref: SNOMEDCT_US_2020_03_01:81780002
 xref: UMLS_CUI:C0004903
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D001506 xsd:string
 
 [Term]
 id: DOID:5574
@@ -48333,11 +48457,12 @@ synonym: "acquired immune deficiency syndrome" RELATED []
 synonym: "AIDS" EXACT []
 xref: EFO:0000765
 xref: ICD10CM:B20
-xref: MESH:D000163 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000163
 xref: NCI:C2851
 xref: SNOMEDCT_US_2020_03_01:62479008
 xref: UMLS_CUI:C0001175
 is_a: DOID:526 ! human immunodeficiency virus infectious disease
+property_value: exactMatch MESH:D000163 xsd:string
 
 [Term]
 id: DOID:6354
@@ -48480,11 +48605,12 @@ name: encephalomyelitis
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Encephalitis &/or myelitis" EXACT []
-xref: MESH:D004679 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D004679
 xref: NCI:C34580
 xref: SNOMEDCT_US_2020_03_01:154991009
 xref: UMLS_CUI:C0014070
 is_a: DOID:331 ! central nervous system disease
+property_value: exactMatch MESH:D004679 xsd:string
 
 [Term]
 id: DOID:6404
@@ -49252,7 +49378,7 @@ subset: NCIthesaurus
 synonym: "acinar cell adenoma" EXACT []
 synonym: "acinic cell adenoma" EXACT []
 synonym: "adenomas" EXACT []
-xref: MESH:D000236 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000236
 xref: NCI:C2855
 xref: NCI:C4196
 xref: SNOMEDCT_US_2020_03_01:443416007
@@ -49260,6 +49386,7 @@ xref: SNOMEDCT_US_2020_03_01:79041005
 xref: UMLS_CUI:C0001430
 xref: UMLS_CUI:C0334389
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D000236 xsd:string
 
 [Term]
 id: DOID:6575
@@ -49750,13 +49877,14 @@ synonym: "Canale-Smith syndrome" EXACT []
 xref: GARD:8686
 xref: ICD10CM:D89.82
 xref: ICD9CM:279.41
-xref: MESH:D056735 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D056735
 xref: NCI:C37864
 xref: OMIM:601859
 xref: ORDO:3261
 xref: SNOMEDCT_US_2020_03_01:702444009
 xref: UMLS_CUI:C1328840
 is_a: DOID:4 ! disease
+property_value: exactMatch MESH:D056735 xsd:string
 
 [Term]
 id: DOID:6691
@@ -51043,12 +51171,13 @@ synonym: "ACTH-Producing Pituitary Adenoma" EXACT []
 synonym: "Corticotroph adenoma" EXACT []
 synonym: "Corticotropinoma" EXACT []
 xref: GARD:12867
-xref: MESH:D049913 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D049913
 xref: NCI:C7462
 xref: OMIM:219090
 xref: SNOMEDCT_US_2020_03_01:254958004
 xref: UMLS_CUI:C1306214
 is_a: DOID:5395 ! functioning pituitary adenoma
+property_value: exactMatch MESH:D049913 xsd:string
 
 [Term]
 id: DOID:7005
@@ -51183,11 +51312,12 @@ synonym: "Infection by Anisakis larva" EXACT []
 xref: GARD:693
 xref: ICD10CM:B81.0
 xref: ICD9CM:127.1
-xref: MESH:D017129 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D017129
 xref: NCI:C128393
 xref: SNOMEDCT_US_2020_03_01:442652006
 xref: UMLS_CUI:C0162576
 is_a: DOID:883 ! parasitic helminthiasis infectious disease
+property_value: exactMatch MESH:D017129 xsd:string
 
 [Term]
 id: DOID:7037
@@ -51675,11 +51805,12 @@ namespace: disease_ontology
 def: "A histiocytic and dendritic cell cancer that derives from the lymph nodes, derives from the skin, derives from the liver, derives from the spleen and derives from bones." [url:http\://en.wikipedia.org/wiki/Langerhans_cell_sarcoma, url:http\://www.wrongdiagnosis.com/l/langerhans_cell_sarcoma/intro.htm]
 subset: NCIthesaurus
 xref: ICD10CM:C96.4
-xref: MESH:D054752 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D054752
 xref: NCI:C6921
 xref: SNOMEDCT_US_2020_03_01:724649000
 xref: UMLS_CUI:C1260327
 is_a: DOID:5621 ! histiocytic and dendritic cell cancer
+property_value: exactMatch MESH:D054752 xsd:string
 
 [Term]
 id: DOID:7147
@@ -52936,11 +53067,12 @@ synonym: "adenomatoid tumour" EXACT []
 synonym: "benign localised epithelial Mesothelioma" EXACT []
 synonym: "benign localized epithelial Mesothelioma" EXACT []
 xref: ICD10CM:D19.9
-xref: MESH:D018254 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D018254
 xref: NCI:C3762
 xref: SNOMEDCT_US_2020_03_01:2348006
 xref: UMLS_CUI:C0206675
 is_a: DOID:2645 ! benign mesothelioma
+property_value: exactMatch MESH:D018254 xsd:string
 
 [Term]
 id: DOID:7460
@@ -55029,7 +55161,7 @@ comment: Xref MGI.
 subset: NCIthesaurus
 synonym: "overactive thyroid" EXACT []
 xref: ICD10CM:E05.9
-xref: MESH:D006980 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006980
 xref: NCI:C3123
 xref: OMIM:603373
 xref: OMIM:609152
@@ -55037,6 +55169,7 @@ xref: ORDO:99819
 xref: SNOMEDCT_US_2020_03_01:190239004
 xref: UMLS_CUI:C0020550
 is_a: DOID:50 ! thyroid gland disease
+property_value: exactMatch MESH:D006980 xsd:string
 
 [Term]
 id: DOID:8000
@@ -55870,11 +56003,12 @@ xref: GARD:7137
 xref: ICD10CM:I51.4
 xref: ICD9CM:429.0
 xref: KEGG:05416
-xref: MESH:D009205 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D009205
 xref: NCI:C34831
 xref: SNOMEDCT_US_2020_03_01:50920009
 xref: UMLS_CUI:C0027059
 is_a: DOID:0050700 ! cardiomyopathy
+property_value: exactMatch MESH:D009205 xsd:string
 
 [Term]
 id: DOID:8200
@@ -56166,11 +56300,12 @@ synonym: "Infestation by Sarcoptes scabiei var hominis" EXACT []
 synonym: "Sarcoptic itch" EXACT []
 xref: ICD10CM:B86
 xref: ICD9CM:133.0
-xref: MESH:D012532 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D012532
 xref: NCI:C34998
 xref: SNOMEDCT_US_2020_03_01:266224002
 xref: UMLS_CUI:C0036262
 is_a: DOID:1398 ! parasitic infectious disease
+property_value: exactMatch MESH:D012532 xsd:string
 
 [Term]
 id: DOID:8302
@@ -56744,13 +56879,14 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:5764
-xref: MESH:D058540 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D058540
 xref: NCI:C35256
 xref: OMIM:304050
 xref: ORDO:50
 xref: SNOMEDCT_US_2020_03_01:80651009
 xref: UMLS_CUI:C0175713
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D058540 xsd:string
 
 [Term]
 id: DOID:8463
@@ -56869,11 +57005,12 @@ synonym: "Madura foot due to Actinomadura" EXACT []
 xref: GARD:5728
 xref: ICD10CM:A42
 xref: ICD9CM:039.9
-xref: MESH:D000196 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000196
 xref: NCI:C34350
 xref: SNOMEDCT_US_2020_03_01:50508009
 xref: UMLS_CUI:C0001261
 is_a: DOID:104 ! bacterial infectious disease
+property_value: exactMatch MESH:D000196 xsd:string
 
 [Term]
 id: DOID:848
@@ -56883,11 +57020,12 @@ def: "A bone inflammation disease that involves a response to irritation or inju
 subset: NCIthesaurus
 synonym: "Inflammatory disorder of joint" EXACT []
 xref: ICD10CM:M19.90
-xref: MESH:D001168 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D001168
 xref: NCI:C2883
 xref: SNOMEDCT_US_2020_03_01:372091005
 xref: UMLS_CUI:C0003864
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch MESH:D001168 xsd:string
 
 [Term]
 id: DOID:8481
@@ -57431,8 +57569,8 @@ xref: EFO:0000183
 xref: GARD:2714
 xref: ICD10CM:C81
 xref: ICD9CM:201
-xref: MESH:D006689 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
-xref: NCI:C9357 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D006689
+xref: NCI:C9357
 xref: OMIM:236000
 xref: OMIM:300221
 xref: OMIM:400021
@@ -57440,6 +57578,8 @@ xref: ORDO:98293
 xref: SNOMEDCT_US_2020_03_01:118599009
 xref: UMLS_CUI:C0019829
 is_a: DOID:0060058 ! lymphoma
+property_value: exactMatch MESH:D006689 xsd:string
+property_value: exactMatch NCI:C9357 xsd:string
 
 [Term]
 id: DOID:8568
@@ -58001,11 +58141,12 @@ subset: NCIthesaurus
 synonym: "varicella" EXACT []
 xref: ICD10CM:B01.9
 xref: ICD9CM:052
-xref: MESH:D002644 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D002644
 xref: NCI:C97132
 xref: SNOMEDCT_US_2020_03_01:186508005
 xref: UMLS_CUI:C0008049
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch MESH:D002644 xsd:string
 
 [Term]
 id: DOID:8660
@@ -58885,12 +59026,13 @@ synonym: "progressive myoclonic epilepsy" EXACT []
 synonym: "progressive Myoclonus epilepsy" EXACT []
 xref: GARD:7140
 xref: MESH:D020191
-xref: NCI:C7636 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: NCI:C7636
 xref: OMIM:310370
 xref: OMIM:PS254800
 xref: SNOMEDCT_US_2020_03_01:192844008
 xref: UMLS_CUI:C0751778
 is_a: DOID:1826 ! epilepsy
+property_value: exactMatch NCI:C7636 xsd:string
 
 [Term]
 id: DOID:8913
@@ -59677,11 +59819,12 @@ subset: NCIthesaurus
 synonym: "amyloid disease" EXACT []
 xref: ICD10CM:E85
 xref: ICD9CM:277.3
-xref: MESH:D000686 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000686
 xref: NCI:C2868
 xref: SNOMEDCT_US_2020_03_01:154769007
 xref: UMLS_CUI:C0002726
 is_a: DOID:0014667 ! disease of metabolism
+property_value: exactMatch MESH:D000686 xsd:string
 
 [Term]
 id: DOID:9123
@@ -59877,11 +60020,12 @@ synonym: "entamoebiasis" EXACT []
 xref: GARD:652
 xref: ICD10CM:A06
 xref: ICD9CM:006
-xref: MESH:D000562 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000562
 xref: NCI:C84551
 xref: SNOMEDCT_US_2020_03_01:387754006
 xref: UMLS_CUI:C0002438
 is_a: DOID:2789 ! parasitic protozoa infectious disease
+property_value: exactMatch MESH:D000562 xsd:string
 
 [Term]
 id: DOID:9182
@@ -59920,11 +60064,12 @@ synonym: "Lichen, ruber planus" EXACT []
 xref: GARD:12344
 xref: ICD10CM:L43
 xref: ICD9CM:697.0
-xref: MESH:D008010 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D008010
 xref: NCI:C3189
 xref: SNOMEDCT_US_2020_03_01:156377007
 xref: UMLS_CUI:C0023646
 is_a: DOID:37 ! skin disease
+property_value: exactMatch MESH:D008010 xsd:string
 
 [Term]
 id: DOID:9206
@@ -60050,7 +60195,7 @@ synonym: "Alagille-Watson syndrome" EXACT []
 synonym: "Arteriohepatic dysplasia" EXACT []
 xref: GARD:804
 xref: ICD10CM:Q44.7
-xref: MESH:D016738 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D016738
 xref: NCI:C35139
 xref: OMIM:118450
 xref: OMIM:610205
@@ -60058,6 +60203,7 @@ xref: ORDO:52
 xref: SNOMEDCT_US_2020_03_01:31742004
 xref: UMLS_CUI:C0085280
 is_a: DOID:409 ! liver disease
+property_value: exactMatch MESH:D016738 xsd:string
 
 [Term]
 id: DOID:9248
@@ -60085,12 +60231,13 @@ synonym: "ACLS" EXACT []
 synonym: "SCHINZEL ACROCALLOSAL SYNDROME" EXACT []
 synonym: "Schinzel syndrome 1" EXACT []
 xref: GARD:5721
-xref: MESH:D055673 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D055673
 xref: NCI:C84531
 xref: OMIM:200990
 xref: SNOMEDCT_US_2020_03_01:715951007
 xref: UMLS_CUI:C0796147
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D055673 xsd:string
 
 [Term]
 id: DOID:9252
@@ -60329,13 +60476,14 @@ synonym: "deficiency of homogentisicase" RELATED []
 synonym: "Homogentisate 1,2-dioxygenase deficiency" EXACT []
 xref: GARD:5775
 xref: ICD10CM:E70.29
-xref: MESH:D000474 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000474
 xref: NCI:C84546
 xref: OMIM:203500
 xref: ORDO:56
 xref: SNOMEDCT_US_2020_03_01:24250001
 xref: UMLS_CUI:C0002066
 is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch MESH:D000474 xsd:string
 
 [Term]
 id: DOID:9271
@@ -60811,13 +60959,14 @@ synonym: "acute tracheitis" EXACT []
 synonym: "chronic tracheitis" EXACT []
 xref: ICD10CM:J04.1
 xref: ICD9CM:464.1
-xref: MESH:D014136 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D014136
 xref: NCI:C78643
 xref: SNOMEDCT_US_2020_03_01:155507000
 xref: SNOMEDCT_US_2020_03_01:62994001
 xref: UMLS_CUI:C0040584
 xref: UMLS_CUI:C0149513
 is_a: DOID:3225 ! tracheal disease
+property_value: exactMatch MESH:D014136 xsd:string
 
 [Term]
 id: DOID:9395
@@ -62146,13 +62295,14 @@ synonym: "progressive Choroidal Atrophy" EXACT []
 xref: GARD:6061
 xref: ICD10CM:H31.21
 xref: ICD9CM:363.55
-xref: MESH:D015794 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D015794
 xref: NCI:C34469
 xref: OMIM:303100
 xref: ORDO:180
 xref: SNOMEDCT_US_2020_03_01:75241009
 xref: UMLS_CUI:C0008525
 is_a: DOID:1417 ! choroid disease
+property_value: exactMatch MESH:D015794 xsd:string
 
 [Term]
 id: DOID:9828
@@ -62300,12 +62450,13 @@ def: "A hypotrichosis that is characterized by a loss of hair from the head or b
 subset: NCIthesaurus
 xref: ICD10CM:L65.9
 xref: ICD9CM:704.0
-xref: MESH:D000505 {http://www.w3.org/2004/02/skos/core#exactMatch="exactMatch"}
+xref: MESH:D000505
 xref: NCI:C50575
 xref: OMIM:PS203655
 xref: SNOMEDCT_US_2020_03_01:270504008
 xref: UMLS_CUI:C0002170
 is_a: DOID:4535 ! hypotrichosis
+property_value: exactMatch MESH:D000505 xsd:string
 
 [Term]
 id: DOID:9870

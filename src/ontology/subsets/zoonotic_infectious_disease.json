@@ -816,9 +816,9 @@
         "xrefs" : [ {
           "val" : "UMLS_CUI:C0006023"
         }, {
-          "val" : "MESH:D001890"
-        }, {
           "val" : "SNOMEDCT_US_2020_03_01:76851008"
+        }, {
+          "val" : "MESH:D001890"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -826,6 +826,9 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D001890"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
@@ -1188,13 +1191,13 @@
         "xrefs" : [ {
           "val" : "NCI:C2851"
         }, {
+          "val" : "MESH:D000163"
+        }, {
           "val" : "SNOMEDCT_US_2020_03_01:62479008"
         }, {
           "val" : "EFO:0000765"
         }, {
           "val" : "UMLS_CUI:C0001175"
-        }, {
-          "val" : "MESH:D000163"
         }, {
           "val" : "ICD10CM:B20"
         } ],
@@ -1214,6 +1217,9 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D000163"
         } ]
       },
       "type" : "CLASS",
@@ -3112,6 +3118,36 @@
       "type" : "CLASS",
       "lbl" : "Rift Valley fever"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_2934",
+      "meta" : {
+        "definition" : {
+          "val" : "A viral infectious disease that results_in inflammatory destruction located_in blood vessels of minks and rarely in humans, which has_material_basis_in Aleutian mink disease virus. The infection has_symptom weight loss, has_symptom hepatomegaly, has_symptom enlarged spleen, and has_symptom anemia.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Aleutian_Disease", "url:http://www.cdc.gov/eid/content/15/12/2040.htm" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C0002016"
+        }, {
+          "val" : "MESH:D000453"
+        }, {
+          "val" : "SNOMEDCT_US_2020_03_01:62251004"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Aleutian disease",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D000453"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "aleutian mink disease"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050051",
       "meta" : {
         "definition" : {
@@ -3131,33 +3167,6 @@
       },
       "type" : "CLASS",
       "lbl" : "Rickettsia parkeri spotted fever"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_2934",
-      "meta" : {
-        "definition" : {
-          "val" : "A viral infectious disease that results_in inflammatory destruction located_in blood vessels of minks and rarely in humans, which has_material_basis_in Aleutian mink disease virus. The infection has_symptom weight loss, has_symptom hepatomegaly, has_symptom enlarged spleen, and has_symptom anemia.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Aleutian_Disease", "url:http://www.cdc.gov/eid/content/15/12/2040.htm" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
-        "xrefs" : [ {
-          "val" : "MESH:D000453"
-        }, {
-          "val" : "UMLS_CUI:C0002016"
-        }, {
-          "val" : "SNOMEDCT_US_2020_03_01:62251004"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Aleutian disease",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "aleutian mink disease"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050172",
       "meta" : {
@@ -4148,6 +4157,9 @@
           "val" : "UMLS_CUI:C0001247"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D000187"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
@@ -5670,7 +5682,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-10-15/subsets/zoonotic_infectious_disease.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-11-03/subsets/zoonotic_infectious_disease.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

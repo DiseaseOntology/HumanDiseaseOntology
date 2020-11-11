@@ -3480,6 +3480,21 @@
       "type" : "CLASS",
       "lbl" : "childhood acute lymphocytic leukemia"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080830",
+      "meta" : {
+        "definition" : {
+          "val" : "A low-grade glioma that occurs in children and encompasses tumors of astrocytic, oligodendroglial, and mixed glial-neuronal histology.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/23583981/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917804/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5786244/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066826/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "pediatric low-grade glioma"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3905",
       "meta" : {
         "definition" : {
@@ -4300,6 +4315,24 @@
       },
       "type" : "CLASS",
       "lbl" : "medulloblastoma non-WNT/non-SHH group 4"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080829",
+      "meta" : {
+        "definition" : {
+          "val" : "A malignant glioma that originate from two types of glial cells, astrocytes and oligodendrocytes.",
+          "xrefs" : [ "url:http://www.danafarberbostonchildrens.org/conditions/brain-tumor/low-grade-glioma.aspx", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361022/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C132067"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "low-grade glioma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3369",
       "meta" : {
@@ -5491,6 +5524,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_6812",
       "meta" : {
+        "definition" : {
+          "val" : "A pilocytic astrocytoma that occurs during childhood.",
+          "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4048" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "NCI:C4048"
@@ -9231,7 +9268,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_4851",
       "meta" : {
         "definition" : {
-          "val" : "An astrocytoma that is characterized by cells that look like fibers when viewed under a microscope and is located_in the brain.",
+          "val" : "A pediatric low-grade glioma that is characterized by cells that look like fibers when viewed under a microscope and is located_in the brain.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Pilocytic_astrocytoma", "url:http://www.cancer.gov/dictionary?CdrID=44341" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -9898,6 +9935,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050904"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4851",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080830"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080829",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3070"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7522",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060103"
@@ -10049,6 +10094,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050748",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_707"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080830",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080829"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7501",
       "pred" : "is_a",
@@ -10238,10 +10287,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_4851",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4866",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050904"
@@ -10346,13 +10391,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3963"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3376",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3347"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050743",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060058"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3376",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3347"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5509",
       "pred" : "is_a",
@@ -10495,7 +10540,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-11-03/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2020-11-11/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

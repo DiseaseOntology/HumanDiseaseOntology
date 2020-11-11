@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2020-11-03/subsets/DO_FlyBase_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2020-11-11/subsets/DO_FlyBase_slim.owl"/>
     </owl:Ontology>
     
 
@@ -2373,18 +2373,26 @@ OMIM mapping confirmed by DO. [LS].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11717">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050013"/>
+        <obo:IAO_0000115>A diabetes mellitus that is characterized by hyperglycemia occuring within the first 6 months of life.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:P70.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:775.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C99248</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2020_03_01:49817004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0158981</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">diabetes mellitus syndrome in newborn infant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>neonatal diabetes mellitus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11717</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neonatal diabetes mellitus</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neonatal diabetes</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11717"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A diabetes mellitus that is characterized by hyperglycemia occuring within the first 6 months of life.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5928785/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -5736,7 +5744,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9352">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050013"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diabetes mellitus that involves high blood glucose resulting from cells fail to use insulin properly.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diabetes mellitus that is characterized by high blood sugar, insulin resistance, and relative lack of insulin.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0001360</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:E11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG:04930</oboInOwl:hasDbXref>
@@ -5750,6 +5758,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2020_03_01:44054006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0011860</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">NIDDM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>insulin resistance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">non-insulin-dependent diabetes mellitus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">type 2 diabetes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">type II diabetes mellitus</oboInOwl:hasExactSynonym>
@@ -5764,7 +5773,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_9352"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diabetes mellitus that involves high blood glucose resulting from cells fail to use insulin properly.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diabetes mellitus that is characterized by high blood sugar, insulin resistance, and relative lack of insulin.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Diabetes</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Diabetes_mellitus_type_2</oboInOwl:hasDbXref>

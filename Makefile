@@ -57,7 +57,7 @@ FASTOBO := build/fastobo-validator
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
-	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=stable%2Ffastobo_validator-x86_64-apple-darwin.tar.gz
+	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=v0.4.0%2Ffastobo_validator-x86_64-apple-darwin.tar.gz
 else
 	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=stable%2Ffastobo_validator-x86_64-linux-musl.tar.gz
 endif
@@ -335,7 +335,7 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
-      build/reports/removed-axioms.html \
+      build/reports/missing-axiom.txt \
       build/reports/hp-do-overlap.csv \
       xref_counts
 

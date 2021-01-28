@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2020-12-22/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/2021-01-28/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -3111,19 +3111,21 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080829 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080829">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3070"/>
-        <obo:IAO_0000115>A malignant glioma that originate from two types of glial cells, astrocytes and oligodendrocytes.</obo:IAO_0000115>
+        <obo:IAO_0000115>A cell type benign neoplasm that has_material_basis_in glial cells (astrocytes, oligodendrocytes or ependymocytes).</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>DOID:0060101</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NCI:C132067</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>benign glioma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080829</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">low-grade glioma</rdfs:label>
+        <rdfs:label>low grade glioma</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080829"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A malignant glioma that originate from two types of glial cells, astrocytes and oligodendrocytes.</owl:annotatedTarget>
+        <owl:annotatedTarget>A cell type benign neoplasm that has_material_basis_in glial cells (astrocytes, oligodendrocytes or ependymocytes).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www.danafarberbostonchildrens.org/conditions/brain-tumor/low-grade-glioma.aspx</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.gov/publications/dictionaries/cancer-terms/def/glioma</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361022/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3147,6 +3149,26 @@
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917804/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5786244/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066826/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0080854 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080854">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3069"/>
+        <obo:IAO_0000115>A malignant astrocytoma that is characterized by the presence of five or more mitoses per 10 high-power fields.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C129327</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0080854</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">anaplastic pleomorphic xanthoastrocytoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080854"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A malignant astrocytoma that is characterized by the presence of five or more mitoses per 10 high-power fields.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.hindawi.com/journals/crinm/2018/6428492/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5665,7 +5687,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3069"/>
-        <obo:IAO_0000115>An astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.</obo:IAO_0000115>
+        <obo:IAO_0000115>A malignant astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3075</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:3080</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:2491</oboInOwl:hasDbXref>
@@ -5692,7 +5714,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3068"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.</owl:annotatedTarget>
+        <owl:annotatedTarget>A malignant astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:http://cancergenome.nih.gov/cancersselected/glioblastomamultiforme</oboInOwl:hasDbXref>
@@ -5706,7 +5728,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3069 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3069">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3070"/>
         <obo:IAO_0000115>A malignant glioma that is has_material_basis_in astrocyte cells, a type of star-shaped glial cell, located in the brain and spinal cord.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:4861</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICDO:M9400/3</oboInOwl:hasDbXref>
@@ -5726,7 +5748,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:id>DOID:3069</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <rdfs:label>astrocytoma</rdfs:label>
+        <rdfs:label>malignant astrocytoma</rdfs:label>
         <skos:exactMatch>MESH:D001254</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
@@ -5760,6 +5782,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasExactSynonym xml:lang="en">glial cell tumor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">glioma, malignant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">malignant Neuroglial tumor</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>malignant glioma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3070</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
@@ -5768,7 +5791,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
         <rdfs:comment>Xref MGI.
 OMIM mapping confirmed by DO. [SN].</rdfs:comment>
-        <rdfs:label>malignant glioma</rdfs:label>
+        <rdfs:label>high grade glioma</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3070"/>
@@ -5810,24 +5833,24 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3078">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3069"/>
-        <obo:IAO_0000115>An astrocytoma that is characterized by cells with regular, round to oval nuclei.</obo:IAO_0000115>
+        <obo:IAO_0000115>A malignant astrocytoma that is characterized by cells with regular, round to oval nuclei.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:5860</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D001254</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C9477</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:55353007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0334579</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">anaplastic astrocytoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">grade III Astrocytic tumor</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>grade III astrocytoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3078</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <rdfs:label>grade III astrocytoma</rdfs:label>
+        <rdfs:label>anaplastic astrocytoma</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3078"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An astrocytoma that is characterized by cells with regular, round to oval nuclei.</owl:annotatedTarget>
+        <owl:annotatedTarget>A malignant astrocytoma that is characterized by cells with regular, round to oval nuclei.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
@@ -5934,11 +5957,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasAlternativeId>DOID:3182</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:9953</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009837</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI:C129319</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI:C6960</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:73348003</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0028945</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C1335110</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C3288</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:443936004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0751396</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">oligodendroglial neoplasm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">oligodendroglial tumor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -5946,6 +5967,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>oligodendroglioma</rdfs:label>
+        <skos:exactMatch>MESH:D009837</skos:exactMatch>
     </owl:Class>
     
 
@@ -8383,6 +8405,30 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_4845 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4845">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4851"/>
+        <obo:IAO_0000115>A pilocytic astrocytoma that is characterized by a monomorphic architectural pattern, usually associated with the absence of Rosenthal fibers and eosinophilic granular bodies.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C40315</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:388600004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C1519086</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:4845</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:label>pilomyxoid astrocytoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4845"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pilocytic astrocytoma that is characterized by a monomorphic architectural pattern, usually associated with the absence of Rosenthal fibers and eosinophilic granular bodies.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/30945015/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://radiopaedia.org/articles/pilomyxoid-astrocytoma?lang=us</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_4851 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4851">
@@ -8417,7 +8463,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_4852 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4852">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3069"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080829"/>
+        <obo:IAO_0000115>A low grade glioma that is characterized by pleomorphic and lipidized cells expressing GFAP often surrounded by a reticulin network and eosinophilic granular bodies.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NCI:C4323</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:189924002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0334586</oboInOwl:hasDbXref>
@@ -8428,6 +8475,34 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>pleomorphic xanthoastrocytoma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4852"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A low grade glioma that is characterized by pleomorphic and lipidized cells expressing GFAP often surrounded by a reticulin network and eosinophilic granular bodies.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.cancer.gov/rare-brain-spine-tumor/tumors/pleomorphic-xanthroastrocytoma</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4857 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4857">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080829"/>
+        <obo:IAO_0000115>A low grade glioma that is characterized by diffuse infiltration of neighboring central nervous system structures.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C7173</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">Diffuse astrocytoma, low grade</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">WHO grade II astrocytoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:4857</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label>diffuse astrocytoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4857"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A low grade glioma that is characterized by diffuse infiltration of neighboring central nervous system structures.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://braintumorcenter.ucsf.edu/condition/diffuse-astrocytoma-grade-ii</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -8929,6 +9004,33 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_5074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
+        <obo:IAO_0000115>A malignant glioma that is derived from ependymal cells, a type of glial cell, located_in ventricle lining within the central part of the brain.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>DOID:0060107</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>NCI:C6770</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C1333407</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">Ependymal neoplasm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">ependymal tumors</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>malignant ependymoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:5074</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:label>high grade ependymoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5074"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A malignant glioma that is derived from ependymal cells, a type of glial cell, located_in ventricle lining within the central part of the brain.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <oboInOwl:hasDbXref>url:http://www.cancer.org/Cancer/BrainCNSTumorsinAdults/DetailedGuide/brain-and-spinal-cord-tumors-in-adults-what-are-brain-spinal-tumors</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_5078 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5078">
@@ -9184,7 +9286,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_5509 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5509">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1319"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_5074"/>
         <oboInOwl:hasDbXref>NCI:C8578</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">childhood ependymoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -10498,7 +10600,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6726">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3069"/>
-        <obo:IAO_0000115>An astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.</obo:IAO_0000115>
+        <obo:IAO_0000115>A malignant astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MESH:D001254</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4322</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2020_03_01:71314006</oboInOwl:hasDbXref>
@@ -10514,7 +10616,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_6726"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.</owl:annotatedTarget>
+        <owl:annotatedTarget>A malignant astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
@@ -10937,6 +11039,28 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <rdfs:label>T-cell lymphoblastic leukemia/lymphoma</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_7154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_7154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3181"/>
+        <obo:IAO_0000115>An oligodendroglioma that is characterized by focal or diffuse malignant morphologic features (prominent nuclear pleomorphism, mitoses, and increased cellularity).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C4326</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:7154</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label>anaplastic oligodendroglioma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_7154"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An oligodendroglioma that is characterized by focal or diffuse malignant morphologic features (prominent nuclear pleomorphism, mitoses, and increased cellularity).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Anaplastic_oligodendroglioma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://my.clevelandclinic.org/health/diseases/21191-oligodendroglioma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.gov/rare-brain-spine-tumor/tumors/oligodendroglioma</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 

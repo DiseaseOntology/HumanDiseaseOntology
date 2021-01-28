@@ -2519,7 +2519,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_6726",
       "meta" : {
         "definition" : {
-          "val" : "An astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.",
+          "val" : "A malignant astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Fibrillary_astrocytoma", "url:http://www.braintumour.ca/4877/diffuse-astrocytoma-/-fibrillary-astrocytoma", "url:http://www.cancer.gov/dictionary?CdrID=45602" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -3302,20 +3302,28 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0080829",
       "meta" : {
         "definition" : {
-          "val" : "A malignant glioma that originate from two types of glial cells, astrocytes and oligodendrocytes.",
-          "xrefs" : [ "url:http://www.danafarberbostonchildrens.org/conditions/brain-tumor/low-grade-glioma.aspx", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361022/" ]
+          "val" : "A cell type benign neoplasm that has_material_basis_in glial cells (astrocytes, oligodendrocytes or ependymocytes).",
+          "xrefs" : [ "url:http://www.danafarberbostonchildrens.org/conditions/brain-tumor/low-grade-glioma.aspx", "url:https://www.cancer.gov/publications/dictionaries/cancer-terms/def/glioma", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361022/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C132067"
         } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "benign glioma",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0060101"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "low-grade glioma"
+      "lbl" : "low grade glioma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080708",
       "meta" : {
@@ -4013,6 +4021,24 @@
       },
       "type" : "CLASS",
       "lbl" : "childhood mediastinal neurogenic tumor"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080854",
+      "meta" : {
+        "definition" : {
+          "val" : "A malignant astrocytoma that is characterized by the presence of five or more mitoses per 10 high-power fields.",
+          "xrefs" : [ "url:https://www.hindawi.com/journals/crinm/2018/6428492/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C129327"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "anaplastic pleomorphic xanthoastrocytoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_684",
       "meta" : {
@@ -6595,7 +6621,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_3068",
       "meta" : {
         "definition" : {
-          "val" : "An astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.",
+          "val" : "A malignant astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes.",
           "xrefs" : [ "url:http://cancergenome.nih.gov/cancersselected/glioblastomamultiforme", "url:http://en.wikipedia.org/wiki/Glioblastoma_multiforme", "url:https://www.ncbi.nlm.nih.gov/pubmed/20129251", "url:https://www.ncbi.nlm.nih.gov/pubmed/23029035" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -6714,7 +6740,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "astrocytoma"
+      "lbl" : "malignant astrocytoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_706",
       "meta" : {
@@ -7035,17 +7061,13 @@
         "xrefs" : [ {
           "val" : "MESH:D009837"
         }, {
-          "val" : "NCI:C6960"
+          "val" : "SNOMEDCT_US_2020_03_01:443936004"
         }, {
-          "val" : "SNOMEDCT_US_2020_03_01:73348003"
-        }, {
-          "val" : "NCI:C129319"
-        }, {
-          "val" : "UMLS_CUI:C0028945"
+          "val" : "UMLS_CUI:C0751396"
         }, {
           "val" : "GARD:9953"
         }, {
-          "val" : "UMLS_CUI:C1335110"
+          "val" : "NCI:C3288"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -7057,6 +7079,9 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D009837"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         }, {
@@ -7175,6 +7200,10 @@
           "pred" : "hasExactSynonym",
           "val" : "glioma, malignant",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "malignant glioma",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -7188,7 +7217,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "malignant glioma"
+      "lbl" : "high grade glioma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080796",
       "meta" : {
@@ -7848,7 +7877,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_3078",
       "meta" : {
         "definition" : {
-          "val" : "An astrocytoma that is characterized by cells with regular, round to oval nuclei.",
+          "val" : "A malignant astrocytoma that is characterized by cells with regular, round to oval nuclei.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Anaplastic_astrocytoma", "url:http://www.abta.org/brain-tumor-information/types-of-tumors/astrocytoma.html", "url:http://www.cancer.gov/dictionary?CdrID=45591" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -7865,7 +7894,7 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "anaplastic astrocytoma",
+          "val" : "grade III astrocytoma",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -7878,7 +7907,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "grade III astrocytoma"
+      "lbl" : "anaplastic astrocytoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_7430",
       "meta" : {
@@ -11267,6 +11296,42 @@
       "type" : "CLASS",
       "lbl" : "ganglioglioma"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_5074",
+      "meta" : {
+        "definition" : {
+          "val" : "A malignant glioma that is derived from ependymal cells, a type of glial cell, located_in ventricle lining within the central part of the brain.",
+          "xrefs" : [ "url:http://www.cancer.org/Cancer/BrainCNSTumorsinAdults/DetailedGuide/brain-and-spinal-cord-tumors-in-adults-what-are-brain-spinal-tumors" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C1333407"
+        }, {
+          "val" : "NCI:C6770"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "ependymal tumors",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "malignant ependymoma",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Ependymal neoplasm",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:0060107"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "high grade ependymoma"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8584",
       "meta" : {
         "definition" : {
@@ -12024,6 +12089,24 @@
       },
       "type" : "CLASS",
       "lbl" : "childhood immature teratoma of ovary"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_7154",
+      "meta" : {
+        "definition" : {
+          "val" : "An oligodendroglioma that is characterized by focal or diffuse malignant morphologic features (prominent nuclear pleomorphism, mitoses, and increased cellularity).",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Anaplastic_oligodendroglioma", "url:https://my.clevelandclinic.org/health/diseases/21191-oligodendroglioma", "url:https://www.cancer.gov/rare-brain-spine-tumor/tumors/oligodendroglioma" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C4326"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "anaplastic oligodendroglioma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060219",
       "meta" : {
@@ -14857,6 +14940,33 @@
       "type" : "CLASS",
       "lbl" : "pediatric lymphoma"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_4857",
+      "meta" : {
+        "definition" : {
+          "val" : "A low grade glioma that is characterized by diffuse infiltration of neighboring central nervous system structures.",
+          "xrefs" : [ "url:https://braintumorcenter.ucsf.edu/condition/diffuse-astrocytoma-grade-ii" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C7173"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "WHO grade II astrocytoma",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Diffuse astrocytoma, low grade",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "diffuse astrocytoma"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_5940",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -15043,6 +15153,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_4852",
       "meta" : {
+        "definition" : {
+          "val" : "A low grade glioma that is characterized by pleomorphic and lipidized cells expressing GFAP often surrounded by a reticulin network and eosinophilic granular bodies.",
+          "xrefs" : [ "url:https://www.cancer.gov/rare-brain-spine-tumor/tumors/pleomorphic-xanthroastrocytoma" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "NCI:C4323"
@@ -15269,6 +15383,28 @@
       },
       "type" : "CLASS",
       "lbl" : "esophageal carcinoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_4845",
+      "meta" : {
+        "definition" : {
+          "val" : "A pilocytic astrocytoma that is characterized by a monomorphic architectural pattern, usually associated with the absence of Rosenthal fibers and eosinophilic granular bodies.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/30945015/", "url:https://radiopaedia.org/articles/pilomyxoid-astrocytoma?lang=us" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2020_03_01:388600004"
+        }, {
+          "val" : "UMLS_CUI:C1519086"
+        }, {
+          "val" : "NCI:C40315"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "pilomyxoid astrocytoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_4960",
       "meta" : {
@@ -15507,13 +15643,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_5074",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050919",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050904"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080829",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_771",
       "pred" : "is_a",
@@ -15647,6 +15783,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_707"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_7154",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3181"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6039",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -15731,6 +15871,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_684"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080854",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3069"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1324",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -15770,6 +15914,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_3717",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5517"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4857",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080829"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2394",
       "pred" : "is_a",
@@ -15887,13 +16035,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3368",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3369"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080684",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3368",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3369"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4206",
       "pred" : "is_a",
@@ -15966,6 +16114,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_4007",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_11054"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_5509",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5074"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4896",
       "pred" : "is_a",
@@ -16327,6 +16479,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4362"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4852",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080829"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_169",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -16422,6 +16578,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080164",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0070004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4845",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_4851"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3070",
       "pred" : "is_a",
@@ -16881,7 +17041,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3069",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050749",
       "pred" : "is_a",
@@ -16987,10 +17147,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060058"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_5509",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7463",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3247"
@@ -17035,13 +17191,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_234",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1520"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7788",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5503"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_234",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1520"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4233",
       "pred" : "is_a",
@@ -17062,10 +17218,6 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050905",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_4852",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3069"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3973",
       "pred" : "is_a",
@@ -17184,7 +17336,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/2020-12-22/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/2021-01-28/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

@@ -25,7 +25,7 @@ SELECT (COUNT(?omimXref) as ?omim) (COUNT(?meshXref) as ?mesh) (COUNT(?nciXref) 
           FILTER NOT EXISTS {?s owl:deprecated "true"} }
  UNION
         { ?s oboInOwl:hasDbXref ?SNOMEDXref .
-          FILTER regex(?SNOMEDXref, "^SNOMEDCT_US_2018.*", "i")
+          FILTER regex(?SNOMEDXref, "^SNOMEDCT*.*", "i")
           FILTER NOT EXISTS {?s owl:deprecated "true"} }
  UNION
         { ?s oboInOwl:hasDbXref ?UMLSXref .
@@ -40,8 +40,8 @@ SELECT (COUNT(?omimXref) as ?omim) (COUNT(?meshXref) as ?mesh) (COUNT(?nciXref) 
           FILTER regex(?EFOXref, "^EFO.*", "i")
           FILTER NOT EXISTS {?s owl:deprecated "true"} }
  UNION
-        { ?s oboInOwl:hasDbXref ?IEDBXref .
-          FILTER regex(?IEDBXref, "^IEDB.*", "i")
+        { ?s oboInOwl:hasDbXref ?ICDOXref .
+          FILTER regex(?ICDOXref, "^ICDO.*", "i")
           FILTER NOT EXISTS {?s owl:deprecated "true"} }
  UNION
         { ?s oboInOwl:hasDbXref ?ORDOXref .

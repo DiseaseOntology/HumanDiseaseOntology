@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DiseaseOntology/HumanDiseaseOntology.svg?branch=main)](https://travis-ci.org/DiseaseOntology/HumanDiseaseOntology)
+[![Build Status](https://github.com/DiseaseOntology/HumanDiseaseOntology/workflows/DOID%20CI/badge.svg)](https://github.com/DiseaseOntology/HumanDiseaseOntology/actions)
 
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO).

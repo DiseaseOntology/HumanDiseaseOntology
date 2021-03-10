@@ -1,5 +1,7 @@
 name: Update Releases
-on: [push, workflow_dispatch]
+on:
+  release:
+    types: [published]
 jobs:
   resources:
     name: Update Releases

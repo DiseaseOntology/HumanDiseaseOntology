@@ -11,6 +11,8 @@ jobs:
           python-version: '3.6'
       - name: Install GH CLI
         run: brew install gh
+      - name: Login to GH
+        run: echo ${{ secrets.GH_TOKEN }} > .token.txt && gh auth login --with-token < .token.txt && rm .token.txt
       - name: Update Releases
         run: python3 src/util/update-releases.py RELEASES.md
       - name: Commit Changes

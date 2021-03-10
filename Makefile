@@ -317,7 +317,6 @@ publish: $(DO).owl $(DO).obo $(DO).json\
  $(DM).owl $(DM).obo\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
-	@mkdir -p $(DIR)
 	@cp $(DO).* src/ontology/releases
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases

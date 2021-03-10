@@ -1,0 +1,21 @@
+name: Update Releases
+on: [push, workflow_dispatch]
+jobs:
+  resources:
+    name: Update Releases
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+      - name: Install GH CLI
+        run: brew install gh
+      - name: Update Releases
+        run: python3 src/util/update-releases.py RELEASES.md
+      - name: Commit Changes
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: RELEASES.md
+          commit-msg: Update RELEASES.md
+          github-token: ${{ secrets.GH_TOKEN }}

@@ -1,7 +1,4 @@
 import subprocess
-import logging
-import http.client
-import requests
 
 from argparse import ArgumentParser
 from datetime import date

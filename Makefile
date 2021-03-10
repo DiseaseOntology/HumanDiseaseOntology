@@ -159,7 +159,7 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --exclude-duplicate-axioms true \
 	annotate \
 	 --annotation oboInOwl:date "$(TS)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -174,7 +174,7 @@ $(DO).obo: $(DO).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	query \
 	 --update $(word 2,$^) \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	grep -v ^date | \
@@ -197,7 +197,7 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --input $< \
 	 --collapse-import-closure true \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
@@ -210,7 +210,7 @@ $(DM).obo: $(DM).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	 --select "parents equivalents" \
 	 --select "anonymous" \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
@@ -235,7 +235,7 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	 --select anonymous \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --output $@
 	@cp $@ $(HD).owl
 	@echo "Created $@"
@@ -252,7 +252,7 @@ $(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
 	 --update $(word 2,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/$(DATE)/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
@@ -310,9 +310,7 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 # RELEASE
 # ----------------------------------------
 
-DIR = src/ontology/releases/$(DATE)
-
-# Move release files to a new dir
+# Copy the latest release to the releases directory
 
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DO).json\
@@ -320,11 +318,11 @@ publish: $(DO).owl $(DO).obo $(DO).json\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
 	@mkdir -p $(DIR)
-	@cp $(DO).* $(DIR)
-	@cp $(DM).* $(DIR)
-	@cp $(DNC).* $(DIR)
-	@cp -r src/ontology/subsets $(DIR)
-	@echo "Published to $(DIR)"
+	@cp $(DO).* src/ontology/releases
+	@cp $(DM).* src/ontology/releases
+	@cp $(DNC).* src/ontology/releases
+	@cp -r src/ontology/subsets src/ontology/releases
+	@echo "Published to src/ontology/releases"
 	@echo ""
 
 # ----------------------------------------

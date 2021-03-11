@@ -285,7 +285,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate \
-	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@
 	@echo "Created $@"
 
@@ -294,14 +294,14 @@ src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
 	 --input $< \
 	 --update src/sparql/build/remove-ref-type.ru \
 	annotate \
-	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@
 	@echo "Created $@"
 
 src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 	@$(ROBOT) annotate --input $< \
-	 --version-iri "$(OBO)doid/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@
 	@echo "Created $@"
@@ -310,21 +310,18 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 # RELEASE
 # ----------------------------------------
 
-DIR = src/ontology/releases/$(DATE)
-
-# Move release files to a new dir
+# Copy the latest release to the releases directory
 
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DO).json\
  $(DM).owl $(DM).obo\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
-	@mkdir -p $(DIR)
-	@cp $(DO).* $(DIR)
-	@cp $(DM).* $(DIR)
-	@cp $(DNC).* $(DIR)
-	@cp -r src/ontology/subsets $(DIR)
-	@echo "Published to $(DIR)"
+	@cp $(DO).* src/ontology/releases
+	@cp $(DM).* src/ontology/releases
+	@cp $(DNC).* src/ontology/releases
+	@cp -r src/ontology/subsets src/ontology/releases
+	@echo "Published to src/ontology/releases"
 	@echo ""
 
 # ----------------------------------------

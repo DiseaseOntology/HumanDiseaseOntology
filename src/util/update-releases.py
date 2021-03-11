@@ -48,7 +48,7 @@ for line in lines:
         md.append(f"| Disease Ontology | [doid.owl]({BASE}/{tag}/{PATH}/doid.owl) | [doid.obo]({BASE}/{tag}/{PATH}/doid.obo) | [doid.json]({BASE}/{tag}/{PATH}/doid.json) |")
         md.append(f"| Human DO | [HumanDO.owl]({BASE}/{tag}/{PATH}/HumanDO.owl) | [HumanDO.obo]({BASE}/{tag}/{PATH}/HumanDO.obo) | |")
         md.append(f"| DO Non-Classified | [doid-non-classified.owl]({BASE}/{tag}/{PATH}/doid-non-classified.owl) | [doid-non-classified.obo]({BASE}/{tag}/{PATH}/doid-non-classified.obo) | [doid-non-classified.json]({BASE}/{tag}/{PATH}/doid-non-classified.json) |")
-        md.append(f"| DO Merged | [doid-merged.owl]({BASE}/{tag}/{PATH}/doid-merged.owl) | [doid-merged.obo]({BASE}/{tag}/{PATH}/doid-merged.obo) | [doid-merged.json]({BASE}/{tag}/{PATH}/doid-merged.json) |")
+        md.append(f"| DO Merged | [doid-merged.owl]({BASE}/{tag}/{PATH}/doid-merged.owl) | [doid-merged.obo]({BASE}/{tag}/{PATH}/doid-merged.obo) | |")
         if new_year:
             md.append("")
             md.append(line)

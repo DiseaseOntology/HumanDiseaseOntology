@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl"/>
     </owl:Ontology>
@@ -27,7 +27,9 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -142,7 +144,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012575"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031263"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000095</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of renal glomerulus morphology</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal renal glomerulus morphology</rdfs:label>
     </owl:Class>
     
 
@@ -553,6 +555,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000750 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002167"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002463"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012758"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000750</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delayed speech and language development</rdfs:label>
@@ -575,7 +579,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000765">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009121"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000765</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the thorax</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal thorax morphology</rdfs:label>
     </owl:Class>
     
 
@@ -585,7 +589,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000766">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000765"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000766</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the sternum</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal sternum morphology</rdfs:label>
     </owl:Class>
     
 
@@ -674,7 +678,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000924 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000924">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000924</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the skeletal system</rdfs:label>
     </owl:Class>
@@ -872,7 +876,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001252">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003808"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001252</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muscular hypotonia</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypotonia</rdfs:label>
     </owl:Class>
     
 
@@ -1196,7 +1200,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001966">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000095"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001966</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mesangial abnormality</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal glomerular mesangium morphology</rdfs:label>
     </owl:Class>
     
 
@@ -1331,6 +1335,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002167">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002167</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurological speech impairment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002209 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002209">
@@ -1358,6 +1372,16 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001268"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002344</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Progressive neurologic deterioration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0002463 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002463">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002463</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language impairment</rdfs:label>
     </owl:Class>
     
 
@@ -1405,9 +1429,9 @@
     <!-- http://purl.obolibrary.org/obo/HP_0002617 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002617">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025015"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033353"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002617</oboInOwl:id>
-        <rdfs:label>Dilatation</rdfs:label>
+        <rdfs:label>Vascular dilatation</rdfs:label>
     </owl:Class>
     
 
@@ -1467,7 +1491,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002795">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002795</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional respiratory abnormality</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal respiratory system physiology</rdfs:label>
     </owl:Class>
     
 
@@ -1598,7 +1622,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003011</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the musculature</rdfs:label>
     </owl:Class>
@@ -1631,7 +1655,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003112">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004354"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003112</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of serum amino acid level</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal circulating amino acid concentration</rdfs:label>
     </owl:Class>
     
 
@@ -1741,7 +1765,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003355 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003355">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012072"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033354"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003355</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aminoaciduria</rdfs:label>
     </owl:Class>
@@ -1753,7 +1777,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003366">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002823"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003366</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the femoral neck or head region</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal femoral neck/head morphology</rdfs:label>
     </owl:Class>
     
 
@@ -1763,7 +1787,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003367">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003366"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003367</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the femoral neck</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal femoral neck morphology</rdfs:label>
     </owl:Class>
     
 
@@ -1822,7 +1846,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003549 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003549">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003549</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of connective tissue</rdfs:label>
     </owl:Class>
@@ -1944,7 +1968,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0004338 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004338">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003112"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033107"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004338</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal circulating aromatic amino acid concentration</rdfs:label>
     </owl:Class>
@@ -1981,17 +2005,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0004352 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004352">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010932"/>
-        <obo:IAO_0000115>Any deviation from the normal concentration of a purine in the blood circulation.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004352</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal circulating purine concentration</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0004354 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004354">
@@ -2018,16 +2031,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032180"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004364</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal circulating nitrogen compound concentration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0004368 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004368">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004352"/>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004368</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased purine level</rdfs:label>
     </owl:Class>
     
 
@@ -2158,7 +2161,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006530">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002088"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006530</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interstitial pulmonary abnormality</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal pulmonary Interstitial morphology</rdfs:label>
     </owl:Class>
     
 
@@ -2521,6 +2524,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010932">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004364"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010932</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal circulating nucleobase concentration</rdfs:label>
     </owl:Class>
@@ -2933,8 +2937,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011843">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0011843</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of skeletal physiology</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of musculoskeletal physiology</rdfs:label>
     </owl:Class>
     
 
@@ -2975,16 +2980,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001881"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0011893</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal leukocyte count</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0012072 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012072">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032943"/>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0012072</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aciduria</rdfs:label>
     </owl:Class>
     
 
@@ -3215,15 +3210,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0020219 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020219">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012638"/>
-        <rdfs:label>Motor seizure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0025015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025015">
@@ -3346,6 +3332,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031263">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011035"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012575"/>
         <obo:IAO_0000115>Any anomolous structure of the renal corpuscle, which is the initial component of the nephron that filters blood. The renal corpuscle consists of a knot of capillaries (glomerulus) that is surrounded by a double-walled capsule (Bowman capsule) that opens into a renal tubule.</obo:IAO_0000115>
         <rdfs:label>Abnormal renal corpuscle morphology</rdfs:label>
     </owl:Class>
@@ -3500,12 +3487,70 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0032943 -->
+    <!-- http://purl.obolibrary.org/obo/HP_0033095 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032943">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033100"/>
+        <rdfs:label>Increased sulfur amino acid level in urine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003355"/>
+        <obo:IAO_0000115>An elevated level of a proteinogenic amino acid in the urine. These are the 23 alpha-amino acids that are precursors to proteins, and are incorporated into proteins during translation. The group includes the 20 amino acids encoded by the nuclear genes of eukaryotes together with selenocysteine, pyrrolysine, and N-formylmethionine.</obo:IAO_0000115>
+        <rdfs:label>Increased proteinogenic amino acid level in urine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003112"/>
+        <obo:IAO_0000115>An elevated level of a proteinogenic amino acid in the blood circulation. These are the 23 alpha-amino acids that are precursors to proteins, and are incorporated into proteins during translation. The group includes the 20 amino acids encoded by the nuclear genes of eukaryotes together with selenocysteine, pyrrolysine, and N-formylmethionine.</obo:IAO_0000115>
+        <rdfs:label>Abnormal circulating proteinogenic amino acid concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <obo:IAO_0000115>An anomaly of the musculoskeletal system, which consists of the bones of the skeleton, muscles, cartilage, tendons, ligaments, joints, and other connective tissue. The musculoskeletal system supports the weight of the body, maintains body position and produces movements of the body or of parts of the body.</obo:IAO_0000115>
+        <rdfs:label>Abnormality of the musculoskeletal system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033259">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012638"/>
+        <rdfs:label>Non-motor seizure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033353 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033353">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025015"/>
+        <obo:IAO_0000115>Any structural anomaly of a blood vessel (artery, arteriole, capillary, venule, or vein).</obo:IAO_0000115>
+        <rdfs:label>Abnormal blood vessel morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033354 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033354">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003110"/>
-        <obo:IAO_0000115>A deviation of urine pH from the normal range of 4.5 to 7.8.</obo:IAO_0000115>
-        <rdfs:label>Abnormal urine pH</rdfs:label>
+        <obo:IAO_0000115>Any deviation from the normal concentration of a metabolite in urine.</obo:IAO_0000115>
+        <rdfs:label>Abnormal urine metabolite level</rdfs:label>
     </owl:Class>
     
 
@@ -3752,5 +3797,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 

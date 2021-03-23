@@ -8,100 +8,126 @@ SHELL := bash
 .SECONDARY:
 
 OBO = http://purl.obolibrary.org/obo/
-
-IMP = ./
-imports: chebi cl foodon geno hp ncbitaxon ro uberon full
-
-# ----------------------------------------
-# ROBOT
-# ----------------------------------------
-
-# mk: 
-# 	mkdir -p build
-
-# build/robot.jar: | mk
-# 	curl -L -o build/robot.jar\
-#	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
-
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
+IMPORTS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+SOURCES := $(foreach I,$(filter-out ro,$(IMPORTS)), build/$(I).owl) build/ro.obo
+
+# Either update all import files at once with `make imports`
+# or one at a time with `make <import name>` (e.g. `make cl`)
+# Refresh the source ontologies with `make clean_imports`
+
+imports: $(IMPORTS)
+sources: $(SOURCES)
+
+clean:
+	rm -rf build
+
+clean_imports: 
+	make clean
+	make sources
+	make imports
+
+build:
+	mkdir $@
+
+build/ro.obo: | build
+	curl -Lk "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.obo" > $@
+
+# Download compressed ChEBI to save some time
+build/chebi.owl.gz: | build
+	curl -Lk $(OBO)$(notdir $@) > $@
+
+build/%.owl: | build
+	curl -Lk $(OBO)$(notdir $@) > $@
+
 
 # ----------------------------------------
 # FULL IMPORTS
 # ----------------------------------------
 
-FULL = trans symp
-
-.PHONY: full
-full: $(FULL)
-$(FULL):
+symp: symp_import.owl
+symp_import.owl: build/symp.owl | annotations.txt
 	$(ROBOT) merge \
-	 --input-iri "$(OBO)$@.owl" \
+	 --input $< \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	remove \
 	 --select object-properties \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
+
+trans: trans_import.owl
+trans_import.owl: build/trans.owl | annotations.txt
+	$(ROBOT) merge \
+	 --input $< \
+	remove \
+	 --select "owl:deprecated='true'^^xsd:boolean" \
+	remove \
+	 --select complement \
+	 --select annotation-properties \
+	 --term-file annotations.txt \
+	remove \
+	 --select object-properties \
+	annotate \
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
 
 # ----------------------------------------
 # IMPORT MODULES
 # ----------------------------------------
 
-# Either update all import files at once with `make imports`
-# or one at a time with `make <import name>` (e.g. `make cl`)
-
-# WARNING: CHEBI is BIG! This will take time.
-.PHONY: chebi
-chebi:
+chebi: chebi_import.owl
+chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "$(OBO)$@.owl" \
+	 --input $< \
 	 --method mireot \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
-	 --term $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	remove \
 	 --term "owl:Thing" \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
-.PHONY: cl
-cl:
+cl: cl_import.owl
+cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "$(OBO)$@.owl" \
+	 --input $< \
 	 --method mireot \
 	 --upper-term obo:CL_0000000 \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --term GO:0005623 \
 	 --select "self ancestors" \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
-.PHONY: foodon
-foodon:
+foodon: foodon_import.owl
+foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt
 	$(ROBOT) merge \
-	 --input-iri "$(OBO)$@.owl" \
+	 --input $< \
 	extract \
 	 --method mireot \
 	 --upper-term obo:FOODON_00002403\
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --term obo:FOODON_00002381 \
 	 --term obo:FOODON_00001002 \
@@ -113,111 +139,132 @@ foodon:
 	remove \
 	 --select complement \
 	 --select annotation-properties \
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	query \
 	 --update ../../sparql/build/remove_non_en_labels.ru \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@"\
+	 --ontology-iri "$(OBO)doid/imports/$@"\
+	 --output $@
 
-.PHONY: geno
-geno:
+geno: geno_import.owl
+geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "$(OBO)$@.owl"\
+	 --input $< \
 	 --method mireot \
 	 --upper-term obo:GENO_0000141 \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties\
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	remove \
 	 --term oboInOwl:ObsoleteClass \
 	 --select "self descendants" \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
 # The HP module is a subset of the Phenotypic abnormality branch
-.PHONY: hp
-hp: hp_terms.txt exclude-hp.txt | annotations.txt
+hp: hp_import.owl
+hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "$(OBO)hp.owl" \
+	 --input $< \
 	 --method mireot \
 	 --upper-term HP:0000118 \
-	 --lower-terms $< \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
 	remove \
-	 --term-file $(word 2,$^) \
+	 --term-file $(word 3,$^) \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output $@_import.owl
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
 # WARNING: NCBITaxon is BIG! This will take time.
-.PHONY: ncbitaxon
-ncbitaxon:
+ncbitaxon: ncbitaxon_import.owl
+ncbitaxon_import.owl: build/ncbitaxon.owl ncbitaxon_terms.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "$(OBO)$@.owl" \
+	 --input $< \
 	 --method mireot \
 	 --upper-term NCBITaxon:10239 \
 	 --upper-term NCBITaxon:131567 \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties\
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
-.PHONY: ro
-ro:
+ro: ro_import.owl
+ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt
 	$(ROBOT) extract \
-	 --input-iri "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.obo"\
+	 --input $< \
 	 --method mireot \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties\
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
 
-# The SO import contains only the sequence_variant branch
-.PHONY: so
-so:
-	$(ROBOT) remove \
-	 --input-iri "$(OBO)$@.owl" \
-	 --term SO:0000400 \
-	 --term SO:0001260 \
-	 --select "self descendants" \
+# The SO import contains only the sequence_variant branch plus a few terms from sequence_feature
+.INTERMEDIATE: build/so_feature.owl
+build/so_feature.owl: build/so.owl so_terms.txt
+	$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --term owl:Thing \
+	collapse \
+	 --output $@
+
+.INTERMEDIATE: build/so_variant.owl
+build/so_variant.owl: build/so.owl
+	$(ROBOT) filter \
+	 --input $< \
+	 --term SO:0001060 \
+	 --select "self descendants annotations" \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl" \
-	 --output "$(IMP)$@_import.owl"
+	 --output $@
 
-.PHONY: uberon
-uberon:
-	$(ROBOT) extract \
-	 --input-iri "$(OBO)$@.owl" \
-	 --method mireot \
-	 --lower-terms "$(IMP)$@_terms.txt" \
+so: so_import.owl
+so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt
+	$(ROBOT) merge \
+	 --input $< \
+	 --input $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
-	 --term-file $(IMP)annotations.txt \
+	 --term-file annotations.txt \
 	annotate \
-	 --version-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --ontology-iri "$(OBO)doid/imports/$@_import.owl"\
-	 --output "$(IMP)$@_import.owl"
+	 --version-iri "$(OBO)doid/imports/$@" \
+	 --ontology-iri "$(OBO)doid/imports/$@" \
+	 --output $@
+
+uberon: uberon_import.owl
+uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
+	$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --select complement \
+	 --select annotation-properties \
+	 --term-file annotations.txt \
+	annotate \
+	 --version-iri "$(OBO)doid/imports/$@"\
+	 --ontology-iri "$(OBO)doid/imports/$@"\
+	 --output $@

@@ -21,15 +21,17 @@ HD = src/ontology/HumanDO
 # to do both, use `make all`
 
 # Release process:
-# 1. Build all products (doid, doid-non-classified, doid-merged, all subsets)
-# 2. Validate syntax of OBO-format products with fastobo-validator
-# 3. Verify logical structure of products with SPARQL queries
-# 4. Publish to release directory
-# 5. Generate post-build reports (counts, etc.)
-release: products verify publish post
+# 1. Build import modules (if anything has changed)
+# 2. Build all products (doid, doid-non-classified, doid-merged, all subsets)
+# 3. Validate syntax of OBO-format products with fastobo-validator
+# 4. Verify logical structure of products with SPARQL queries
+# 5. Publish to release directory
+# 6. Generate post-build reports (counts, etc.)
+release: imports products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
-all: imports release
+# This will download all new sources for the imports and may take some time
+all: clean_imports release
 
 # `make test` is used for Travis integration
 test: reason build/reports/report.tsv verify-edit
@@ -77,10 +79,15 @@ $(FASTOBO): build/fastobo.tar.gz
 
 .PHONY: imports
 imports: | build/robot.jar
-	@echo "Generating import modules (this may take some time)..."
+	@echo "Checking import modules..."
 	@cd src/ontology/imports && make imports
 
-IMPS = bto chebi cl foodon hp ncbitaxon uberon trans so symp full
+.PHONY: clean_imports
+clean_imports: | build/robot.jar
+	@echo "Refreshing import modules (this may take some time)..."
+	@cd src/ontology/imports && make clean_imports
+
+IMPS = chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && make $@

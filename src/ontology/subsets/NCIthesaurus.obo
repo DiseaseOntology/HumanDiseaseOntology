@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/2021-02-24/subsets/NCIthesaurus.obo
+data-version: doid/releases/2021-03-29/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -690,12 +690,7 @@ xref: GARD:12291
 xref: ICD10CM:Q04.3
 xref: MESH:D054082
 xref: NCI:C103921
-xref: OMIM:300067
-xref: OMIM:300215
-xref: OMIM:607432
-xref: OMIM:611603
-xref: OMIM:614019
-xref: OMIM:615191
+xref: OMIM:PS607432
 xref: ORDO:102009
 xref: SNOMEDCT_US_2020_09_01:204036008
 xref: SNOMEDCT_US_2020_09_01:23024003
@@ -1320,6 +1315,7 @@ namespace: disease_ontology
 def: "A heart disease and a myopathy that is characterized by deterioration of the function of the heart muscle." [url:http\://en.wikipedia.org/wiki/Cardiomyopathy, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/cm/]
 comment: MESH:D009202 added from NeuroDevNet [WAK].
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Cardiomyopathies" EXACT []
 xref: ICD10CM:I42
@@ -1635,6 +1631,7 @@ alt_id: DOID:4981
 def: "An infratentorial cancer that is located_in the lower part of the brain and is a type of primitive neuroectodermal tumor." [url:http\://en.wikipedia.org/wiki/Medulloblastoma, url:http\://www.cancer.gov/dictionary?CdrID=45780, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306779/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "brain medulloblastoma" EXACT []
 synonym: "CNS PNET" EXACT []
@@ -1727,6 +1724,7 @@ alt_id: DOID:1033
 alt_id: DOID:353
 def: "A hematologic cancer that affects lymphocytes that reside in the lymphatic system and in blood-forming organs." [url:http\://en.wikipedia.org/wiki/Lymphoma, url:http\://www.lymphoma.org/site/pp.asp?c=bkLTKaOQLmK8E&b=6300161, url:http\://www.nlm.nih.gov/medlineplus/lymphoma.html]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "lymphoid cancer" EXACT []
 xref: ICD10CM:C85.9
@@ -4496,8 +4494,9 @@ is_a: DOID:15 ! reproductive system disease
 
 [Term]
 id: DOID:10030
-name: interstitial emphysema
+name: pulmonary interstitial emphysema
 namespace: disease_ontology
+def: "A pulmonary emphysema that is characterized by the abnormal location of gas within the pulmonary interstitium and lymphatics usually due to positive pressure ventilation." [url:https\://radiopaedia.org/articles/pulmonary-interstitial-emphysema?lang=us, url:https\://www.cedars-sinai.org/health-library/diseases-and-conditions---pediatrics/p/pulmonary-interstitial-emphysema.html]
 subset: NCIthesaurus
 xref: ICD10CM:J98.2
 xref: ICD9CM:518.1
@@ -4678,6 +4677,7 @@ property_value: exactMatch MESH:D013031 xsd:string
 id: DOID:10087
 name: gastric leiomyoma
 namespace: disease_ontology
+def: "A gastrointestinal system benign neoplasm that is characterized by the presence of spindle cells with cigar-shaped nuclei, interlacing fascicles, and a whorled pattern." [url:https\://radiopaedia.org/articles/gastric-leiomyoma?lang=us]
 subset: NCIthesaurus
 synonym: "leiomyoma of the stomach" EXACT []
 xref: NCI:C3876
@@ -4721,6 +4721,7 @@ name: corneal disease
 namespace: disease_ontology
 alt_id: DOID:2284
 def: "An eye disease that affects the cornea, which is the transparent surface of the eye that assists in light refraction." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26731]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:H18.9
 xref: ICD9CM:371.9
@@ -4775,6 +4776,7 @@ is_a: DOID:178 ! vascular disease
 id: DOID:10131
 name: psychologic vaginismus
 namespace: disease_ontology
+def: "A psychosexual disorder that is characterized by involuntary spasm of the outer muscles of the vagina during penetration that results from a psychological cause." [url:https\://my.clevelandclinic.org/health/diseases/15723-vaginismus, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35113]
 subset: NCIthesaurus
 synonym: "Functional vaginismus" EXACT []
 synonym: "Non-organic vaginismus" EXACT []
@@ -4790,6 +4792,7 @@ is_a: DOID:150 ! disease of mental health
 id: DOID:10138
 name: xerophthalmia
 namespace: disease_ontology
+def: "A dry eye syndrome that is characterized by conjunctival and corneal xerosis, Bitot's spots, keratomalacia, nyctalopia, and retinopathy resulting from vitamin A deficiency." [url:https\://www.nature.com/articles/eye201417, url:https\://www.ncbi.nlm.nih.gov/books/NBK431094/]
 subset: NCIthesaurus
 synonym: "Conjunctival xerosis" EXACT []
 xref: ICD10CM:E50.7
@@ -4942,6 +4945,7 @@ is_a: DOID:1210 ! optic neuritis
 id: DOID:10183
 name: endobronchial lipoma
 namespace: disease_ontology
+def: "A lipoma that is located within the lumen of a bronchus." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5563533/]
 subset: NCIthesaurus
 xref: NCI:C5063
 xref: UMLS_CUI:C0852937
@@ -4963,6 +4967,7 @@ is_a: DOID:3315 ! lipoma
 id: DOID:10187
 name: esophageal lipoma
 namespace: disease_ontology
+def: "A lipoma located in the esophagus." [url:https\://radiopaedia.org/articles/oesophageal-lipoma?lang=us, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5043252/]
 subset: NCIthesaurus
 synonym: "Lipoma of esophagus" EXACT []
 xref: NCI:C5701
@@ -4995,7 +5000,9 @@ is_a: DOID:3165 ! skin benign neoplasm
 id: DOID:10190
 name: liver lipoma
 namespace: disease_ontology
+def: "A lipoma located in the liver." [url:https\://radiopaedia.org/articles/hepatic-lipoma-2?lang=us]
 subset: NCIthesaurus
+synonym: "hepatic lipoma" EXACT []
 synonym: "Lipoma of the Liver" EXACT []
 xref: NCI:C5750
 xref: UMLS_CUI:C1333970
@@ -5017,9 +5024,11 @@ is_a: DOID:3315 ! lipoma
 
 [Term]
 id: DOID:10193
-name: classic type lipoma
+name: conventional lipoma
 namespace: disease_ontology
+def: "A lipoma that is characterized as a benign well-circumscribed tumor, composed of lobules of mature adipocytes, that arises within subcutaneous tissue, deep soft tissues or on the surface of bones." [url:https\://pubmed.ncbi.nlm.nih.gov/26857660/]
 subset: NCIthesaurus
+synonym: "classic type lipoma" EXACT []
 xref: NCI:C27530
 xref: UMLS_CUI:C1333059
 is_a: DOID:3315 ! lipoma
@@ -5028,6 +5037,7 @@ is_a: DOID:3315 ! lipoma
 id: DOID:10194
 name: kidney lipoma
 namespace: disease_ontology
+def: "A lipoma that is located in the kidney." [url:https\://www.mayoclinic.org/diseases-conditions/lipoma/symptoms-causes/syc-20374470]
 subset: NCIthesaurus
 synonym: "Lipoma of kidney" EXACT []
 xref: NCI:C5101
@@ -5347,6 +5357,7 @@ name: prostate carcinoma
 namespace: disease_ontology
 def: "A prostate cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "cancer of prostate" EXACT []
 synonym: "carcinoma of prostate" EXACT []
@@ -5750,6 +5761,7 @@ namespace: disease_ontology
 alt_id: DOID:10747
 def: "A leukemia that has_material_basis_in a B-cell or T-cell lineage involving primarily the bone marrow and the peripheral blood." [url:http\://www.cancer.gov/dictionary?CdrID=616067]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
 synonym: "lymphoblastic leukemia" EXACT []
@@ -5834,6 +5846,7 @@ namespace: disease_ontology
 def: "A lymphocytic leukemia characterized by over production of B-cells and their accumulation in bone marrow and blood." [url:http\://en.wikipedia.org/wiki/B-cell_chronic_lymphocytic_leukemia, url:http\://www.cancer.gov/dictionary?cdrid=346545]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-cell chronic lymphocytic leukaemia" EXACT []
@@ -6131,6 +6144,7 @@ def: "A gastrointestinal system cancer that is located_in the stomach." [url:htt
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "gastric cancer" EXACT []
@@ -6570,6 +6584,7 @@ is_a: DOID:4195 ! hyperglycemia
 id: DOID:10604
 name: lactose intolerance
 namespace: disease_ontology
+def: "A carbohydrate metabolic disorder that is characterized by the impaired ability to digest lactose." [url:https\://medlineplus.gov/genetics/condition/lactose-intolerance/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "LM - Lactose malabsorption" EXACT []
@@ -6820,6 +6835,7 @@ name: Alzheimer's disease
 namespace: disease_ontology
 def: "A tauopathy that is characterized by memory lapses, confusion, emotional instability and progressive loss of mental ability and results in progressive memory loss, impaired thinking, disorientation, and changes in personality and mood starting and leads in advanced cases to a profound decline in cognitive and physical functioning and is marked histologically by the degeneration of brain neurons especially in the cerebral cortex and by the presence of neurofibrillary tangles and plaques containing beta-amyloid." [url:http\://en.wikipedia.org/wiki/Alzheimer%27s_disease, url:http\://www.merriam-webster.com/medical/alzheimer%27s%20disease, url:http\://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet] {comment="ls:IEDB"}
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Alzheimer disease" EXACT []
 synonym: "Alzheimers dementia" EXACT []
@@ -8288,6 +8304,7 @@ alt_id: DOID:5428
 def: "An urinary system cancer that results_in malignant growth located_in the urinary bladder." [url:http\://en.wikipedia.org/wiki/Bladder_cancer]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "bladder cancer" EXACT []
@@ -9565,6 +9582,7 @@ name: heart disease
 namespace: disease_ontology
 def: "A cardiovascular system disease that involves the heart." [url:http\://en.wikipedia.org/wiki/Heart_disease]
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:I51.9
 xref: ICD9CM:429.9
@@ -12436,6 +12454,7 @@ namespace: disease_ontology
 alt_id: DOID:9145
 def: "A cancer that affects the blood or bone marrow characterized by an abnormal proliferation of blood cells." [url:http\://en.wikipedia.org/wiki/Leukemia, url:http\://www.cancer.gov/dictionary?CdrID=45343]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:C95.90
 xref: ICD9CM:208
@@ -12592,6 +12611,7 @@ alt_id: DOID:13997
 alt_id: DOID:2212
 alt_id: DOID:9474
 def: "A hematopoietic system disease that is characterized by abnormal blood clotting or bleeding." [url:https\://www.cedars-sinai.edu/Patients/Health-Conditions/Coagulation-System-Disorders.aspx]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "coagulation protein disease" EXACT []
 synonym: "inherited blood coagulation disease" NARROW []
@@ -13636,6 +13656,7 @@ def: "A disease of anatomical entity which occurs in the blood, heart, blood ves
 subset: DO_AGR_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "disease of subdivision of hemolymphoid system" EXACT []
 xref: ICD9CM:429.2
@@ -14589,6 +14610,7 @@ alt_id: DOID:911
 def: "A central nervous system cancer that is characterized by the growth of abnormal cells in the tissues of the brain." [url:http\://www.cancer.gov/dictionary?CdrID=387264]
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "adult brain tumor" EXACT []
@@ -19382,6 +19404,7 @@ def: "A disease that involves a psychological or behavioral pattern generally as
 subset: DO_AGR_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:F99
 xref: MESH:D001523
@@ -19533,6 +19556,7 @@ name: pleural disease
 namespace: disease_ontology
 alt_id: DOID:1531
 def: "A thoracic disease which may involve inflammation of pleura, collection of air within the pleural cavity, abnormal collection of pleural fluid, abnormal growths on the pleura (pleural tumor) and pleural plaques. The main causes of pleural diseases including pleural effusions are congestive heart failure, malignancy, parapneumonic infections and pulmonary embolism." [url:http\://en.wikipedia.org/wiki/Pleural_disease]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "disorder of pleura" EXACT []
 synonym: "non-neoplastic pleural disease" EXACT []
@@ -19649,6 +19673,7 @@ id: DOID:1561
 name: cognitive disorder
 namespace: disease_ontology
 def: "A disease of mental health that affects cognitive functions including memory processing, perception and problem solving." [url:http\://en.wikipedia.org/wiki/Cognitive_disorder]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "cognitive disease" EXACT []
 synonym: "Organic Mental disorder" RELATED []
@@ -19882,6 +19907,7 @@ alt_id: DOID:4241
 def: "A thoracic cancer that originates in the mammary gland." [url:http\://en.wikipedia.org/wiki/Breast_cancer, url:http\://en.wikipedia.org/wiki/Mammary, url:http\://www.cancer.gov/cancertopics/types/breast, url:http\://www.nlm.nih.gov/medlineplus/breastcancer.html]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "breast tumor" EXACT []
@@ -19950,6 +19976,7 @@ subset: DO_AGR_slim
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: DO_GXD_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm" EXACT []
 synonym: "malignant tumor" EXACT []
@@ -20798,6 +20825,7 @@ alt_id: DOID:324
 alt_id: DOID:325
 alt_id: DOID:45
 def: "A cardiovascular system disease that primarily affects the blood vessels which includes the arteries, veins and capillaries that carry blood to and from the heart." [url:http\://en.wikipedia.org/wiki/Vascular_disease]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "vascular tissue disease" EXACT []
 xref: ICD10CM:I72.9
@@ -20885,6 +20913,7 @@ id: DOID:1787
 name: pericarditis
 namespace: disease_ontology
 def: "A pericardium disease that is characterized by an inflammation of the pericardium and has_symptom chest pain." [url:http\://en.wikipedia.org/wiki/Pericarditis]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D010493
 xref: NCI:C34915
@@ -21506,6 +21535,7 @@ name: melanoma
 namespace: disease_ontology
 def: "A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from melanocytes which are found in skin, the bowel and the eye." [url:http\://en.wikipedia.org/wiki/Melanoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/22123420]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "malignant melanoma" EXACT []
@@ -21840,6 +21870,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:1936
 name: atherosclerosis
 namespace: disease_ontology
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: EFO:0003914
 xref: ICD10CM:I70
@@ -22232,6 +22263,7 @@ name: anxiety disorder
 namespace: disease_ontology
 alt_id: DOID:12884
 def: "A cognitive disorder that involves an excessive, irrational dread of everyday situations." [url:http\://www.nimh.nih.gov/health/topics/anxiety-disorders/index.shtml]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "anxiety" EXACT []
 synonym: "anxiety state" EXACT []
@@ -24045,6 +24077,7 @@ def: "A female reproductive organ cancer that is located_in the ovary." [url:htt
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -24076,6 +24109,7 @@ is_a: DOID:120 ! female reproductive organ cancer
 id: DOID:240
 name: iris disease
 namespace: disease_ontology
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D007499
 xref: NCI:C34737
@@ -24538,6 +24572,7 @@ alt_id: DOID:4276
 def: "A skin carcinoma affecting basal cells." [url:http\://en.wikipedia.org/wiki/Basal-cell_carcinoma]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Basal cell cancer" EXACT []
 synonym: "Basal cell carcinoma of skin" EXACT []
@@ -24662,6 +24697,7 @@ alt_id: DOID:2532
 def: "An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes." [url:http\://en.wikipedia.org/wiki/Blood_cancer, url:http\://www.cancer.gov/dictionary/?CdrID=45708]
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "blood cancer" EXACT []
@@ -26568,6 +26604,7 @@ def: "A disease of anatomical entity that is located_in endocrine glands which s
 subset: DO_AGR_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:E34.9
 xref: ICD9CM:259.9
@@ -27249,6 +27286,7 @@ id: DOID:2921
 name: glomerulonephritis
 namespace: disease_ontology
 def: "A nephritis that causes inflammation of the glomeruli located_in kidney." [url:http\://en.wikipedia.org/wiki/Glomerulonephritis] {comment="sn:IEDB"}
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: GARD:6516
 xref: ICD10CM:N08
@@ -27281,7 +27319,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:2929
 name: Newcastle disease
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection in birds and humans, has_material_basis_in Newcastle disease virus, which is transmitted_by contact with feces and urine of an infected bird, or transmitted_by fomites. The infection has_symptom conjunctivitis, has_symptom headache, and has_symptom lacrimation in humans, and has_symptom gasping, has_symptom coughing, has_symptom twisting of head and neck, has_symptom circling, has_symptom complete paralysis, has_symptom watery diarrhea, and has_symptom reduced egg production in birds." [url:http\://en.wikipedia.org/wiki/Newcastle_disease, url:http\://www.daff.gov.au/animal-plant-health/pests-diseases-weeds/animal/newcastle, url:http\://www.inspection.gc.ca/english/sci/bio/anima/disemala/newcaste.shtml]
+def: "A viral infectious disease that results_in infection in birds and humans, has_material_basis_in Avian orthoavulavirus 1, which is transmitted_by contact with feces and urine of an infected bird, or transmitted_by fomites. The infection has_symptom conjunctivitis, has_symptom headache, and has_symptom lacrimation in humans, and has_symptom gasping, has_symptom coughing, has_symptom twisting of head and neck, has_symptom circling, has_symptom complete paralysis, has_symptom watery diarrhea, and has_symptom reduced egg production in birds." [url:http\://en.wikipedia.org/wiki/Newcastle_disease, url:http\://www.daff.gov.au/animal-plant-health/pests-diseases-weeds/animal/newcastle, url:http\://www.inspection.gc.ca/english/sci/bio/anima/disemala/newcaste.shtml]
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "Newcastle's disease" EXACT []
@@ -27658,6 +27696,7 @@ name: germ cell cancer
 namespace: disease_ontology
 alt_id: DOID:2157
 def: "A cell type cancer that has_material_basis_in abnormally proliferating cells derives_from germ cells." [url:http\://en.wikipedia.org/wiki/Germ_cell_tumor]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "germ cell neoplasm" RELATED []
 synonym: "germ cell tumour" RELATED []
@@ -27955,6 +27994,7 @@ id: DOID:303
 name: substance-related disorder
 namespace: disease_ontology
 def: "A disease of mental health involving the abuse or dependence on a substance that is ingested in order to produce a high, alter one's senses, or otherwise affect functioning." [url:https\://www.psychologytoday.com/us/conditions/substance-related-disorders]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D019966
 xref: NCI:C92203
@@ -28285,6 +28325,7 @@ namespace: disease_ontology
 alt_id: DOID:11500
 alt_id: DOID:6144
 def: "An obstructive lung disease that is characterized by irreversible airflow obstruction due to chronic bronchitis, emphysema, and/or small airways disease." [url:https\://pubmed.ncbi.nlm.nih.gov/28513453/, url:https\://www.nhlbi.nih.gov/health-topics/copd]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "chronic obstructive airway disease" EXACT []
 synonym: "chronic obstructive lung disease" EXACT []
@@ -30596,6 +30637,7 @@ alt_id: DOID:3394
 alt_id: DOID:9420
 def: "An artery disease that is characterized by plaque building up along the inner walls of the arteries of the heart resulting in a narrowing of the arteries and a reduced blood supply to the cardiac muscles." [url:http\://en.wikipedia.org/wiki/Coronary_heart_disease]
 comment: Xref MGI.
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "CHD" EXACT []
 synonym: "coronary arteriosclerosis" EXACT []
@@ -30916,6 +30958,7 @@ id: DOID:3451
 name: skin carcinoma
 namespace: disease_ontology
 def: "A skin cancer that is located_in tissues of the skin and develops from epithelial cells." [url:http\://www.cancer.gov/cancertopics/types/skin]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "carcinoma of skin" EXACT []
 xref: NCI:C4914
@@ -31553,6 +31596,7 @@ alt_id: DOID:915
 alt_id: DOID:919
 def: "A hepatobiliary system cancer that is located_in the liver." [url:http\://en.wikipedia.org/wiki/Liver]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "Ca liver - primary" EXACT []
@@ -32507,6 +32551,7 @@ alt_id: DOID:187
 alt_id: DOID:6486
 alt_id: DOID:8948
 def: "An integumentary system disease that is located_in skin." [url:http\://en.wikipedia.org/wiki/Skin_disease]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Genodermatosis" EXACT []
 synonym: "skin and subcutaneous tissue disease" EXACT []
@@ -34256,6 +34301,7 @@ id: DOID:4
 name: disease
 namespace: disease_ontology
 def: "A disease is a disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism." [url:http\://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D004194
 xref: NCI:C2991
@@ -34503,6 +34549,7 @@ id: DOID:403
 name: mouth disease
 namespace: disease_ontology
 def: "A gastrointestinal system disease that is located_in the mouth." [url:http\://en.wikipedia.org/wiki/Oral_and_maxillofacial_pathology]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D009059
 xref: NCI:C27641
@@ -34879,6 +34926,7 @@ name: heart valve disease
 namespace: disease_ontology
 alt_id: DOID:989
 def: "A heart disease involving one or more of the four valves of the heart (the aortic and mitral valves on the left and the pulmonary and tricuspid valves on the right)." [url:http\://en.wikipedia.org/wiki/Heart_valve_disease]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Valvular heart disease" EXACT []
 xref: MESH:D006349
@@ -34953,6 +35001,7 @@ namespace: disease_ontology
 alt_id: DOID:2164
 alt_id: DOID:2165
 alt_id: DOID:46
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "disorder of liver" EXACT []
 synonym: "hepatic disorder" EXACT []
@@ -37545,6 +37594,7 @@ def: "A salivary gland carcinoma that is characterized by squamous cells, mucus-
 subset: NCIthesaurus
 synonym: "MEC" EXACT []
 synonym: "Mucoepidermoid carcinoma" EXACT []
+synonym: "salivary gland mucoepidermoid carcinoma" EXACT []
 xref: GARD:10671
 xref: MESH:D018277
 xref: NCI:C3772
@@ -38692,6 +38742,7 @@ namespace: disease_ontology
 alt_id: DOID:10133
 alt_id: DOID:144
 def: "A disease of mental health that involves physical symptoms suggesting a physical illness where the biological or medical cause of the symptoms is indeterminate." [url:http\://allpsych.com/disorders/somatoform/index.html, url:http\://en.wikipedia.org/wiki/Somatoform_disorder]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "physiological malfunction arising from mental factor" EXACT []
 synonym: "psychophysiologic disorder" EXACT []
@@ -40221,6 +40272,7 @@ is_a: DOID:255 ! hemangioma
 id: DOID:4961
 name: bone marrow disease
 namespace: disease_ontology
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "bone marrow disorder" EXACT []
 xref: MESH:D001855
@@ -40644,6 +40696,7 @@ alt_id: DOID:1102
 alt_id: DOID:1104
 def: "A gastrointestinal system cancer that is located_in the esophagus." [url:http\://cancergenome.nih.gov/cancersselected/stomach-esophagealcancer, url:http\://en.wikipedia.org/wiki/Esophagus]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "Ca lower third oesophagus" EXACT []
@@ -42396,12 +42449,12 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "LONG BONE DEFICIENCIES ASSOCIATED WITH CLEFT LIP-PALATE" EXACT []
 synonym: "RBS" EXACT []
+synonym: "Roberts-Sc Phocomelia Syndrome" EXACT []
 synonym: "SC phocomelia syndrome" EXACT []
 xref: GARD:7387
 xref: MESH:C535687
 xref: NCI:C4681
 xref: OMIM:268300
-xref: OMIM:269000
 xref: ORDO:3103
 xref: SNOMEDCT_US_2020_09_01:48718006
 xref: UMLS_CUI:C0392475
@@ -44225,6 +44278,7 @@ namespace: disease_ontology
 alt_id: DOID:11705
 def: "A urinary system disease that is located_in the kidney." [url:http\://www.nlm.nih.gov/medlineplus/kidneydiseases.html]
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "impaired renal function disease" EXACT []
 synonym: "nephropathy" EXACT []
@@ -44553,6 +44607,7 @@ namespace: disease_ontology
 alt_id: DOID:2933
 def: "An eye and adnexa disease that is located_in the eye." [url:http\://en.wikipedia.org/wiki/Eye_disease]
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:H44
 xref: ICD9CM:379.90
@@ -44591,6 +44646,7 @@ name: histiocytic and dendritic cell cancer
 namespace: disease_ontology
 def: "A sarcoma and hematologic cancer that derives_from follicular lymphoma." [url:http\://www.springerlink.com/content/h9wrn7p72x26q035/]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "histiocytic and dendritic cell" EXACT []
 xref: NCI:C9294
@@ -47793,6 +47849,7 @@ id: DOID:6199
 name: cornea cancer
 namespace: disease_ontology
 alt_id: DOID:12757
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Corneal tumor" EXACT []
 synonym: "malignant Corneal tumor" EXACT []
@@ -48358,6 +48415,7 @@ id: DOID:630
 name: genetic disease
 namespace: disease_ontology
 def: "A disease that has_material_basis_in genetic variations in the human genome." [url:http\://ghr.nlm.nih.gov/]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D030342
 xref: NCI:C3101
@@ -49501,6 +49559,7 @@ name: adenoma
 namespace: disease_ontology
 alt_id: DOID:2655
 def: "A cell type benign neoplasm that is composed_of epithelial tissue in which tumor cells form glands or glandlike structures." [url:http\://coloncancer.about.com/od/glossaries/g/Adenoma.htm, url:http\://en.wikipedia.org/wiki/Adenoma]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "acinar cell adenoma" EXACT []
 synonym: "acinic cell adenoma" EXACT []
@@ -52596,6 +52655,7 @@ is_a: DOID:5344 ! testicular yolk sac tumor
 id: DOID:7305
 name: astroblastoma
 namespace: disease_ontology
+def: "A malignant astrocytoma that is characterized by tumor cells with characteristics suggestive of an astrocytic origin (positive for GFAP), arranged perivascularly." [url:https\://www.futuremedicine.com/doi/full/10.2217/cns-2018-0012, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5910607/]
 subset: NCIthesaurus
 synonym: "Astroblastoma" EXACT []
 xref: GARD:10635
@@ -54566,6 +54626,7 @@ name: childhood leukemia
 namespace: disease_ontology
 def: "A leukemia that occurs in children." [url:http\://www.nlm.nih.gov/medlineplus/leukemiachildhood.html]
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: NCI:C4989
 xref: UMLS_CUI:C1332977
@@ -57266,6 +57327,7 @@ alt_id: DOID:29
 alt_id: DOID:766
 def: "A lower respiratory tract disease in which the function of the lungs is adversely affected by narrowing or blockage of the airways resulting in poor air flow, a loss of elasticity in the lungs that produces a decrease in the total volume of air that the lungs are able to hold, and clotting, scarring, or inflammation of the blood vessels that affect the ability of the lungs to take up oxygen and to release carbon dioxide." [url:http\://www.niehs.nih.gov/health/topics/conditions/lung-disease/index.cfm, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000066.htm]
 comment: Updating out dated CUI and removing lung abscess as a synonym.
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:J98.4
 xref: MESH:D008171
@@ -57565,6 +57627,7 @@ alt_id: DOID:8606
 def: "A myeloid leukemia that is characterized by over production of white blood cells." [url:http\://www.cancer.gov/dictionary?CdrID=46755]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "chronic granulocytic leukaemia" EXACT []
 synonym: "chronic granulocytic leukemia" EXACT []
@@ -58488,6 +58551,7 @@ alt_id: DOID:8910
 alt_id: DOID:9066
 alt_id: DOID:9126
 def: "A leukemia that is located_in myeloid tissue." [url:http\://en.wikipedia.org/wiki/Myeloid_leukemia]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "leukaemia myelogenous" EXACT []
 synonym: "leukemia myelogenous" EXACT []
@@ -58608,6 +58672,7 @@ namespace: disease_ontology
 alt_id: DOID:8793
 alt_id: DOID:8821
 def: "A carcinoma that is an early development defined by the absence of invasion of surrounding tissues." [url:http\://en.wikipedia.org/wiki/Carcinoma_in_situ]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:D09.9
 xref: ICD9CM:230-234.99
@@ -58782,6 +58847,7 @@ name: acute megakaryocytic leukemia
 namespace: disease_ontology
 alt_id: DOID:9009
 def: "An acute myeloid leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers." [url:https\://en.wikipedia.org/wiki/Acute_megakaryoblastic_leukemia, url:https\://pubmed.ncbi.nlm.nih.gov/26228843/, url:https\://www.orpha.net/data/patho/GB/uk-AMLM7.pdf]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "Megakaryocytic myelosis" EXACT []
 synonym: "Thrombocytic leukaemia" EXACT []
@@ -59936,6 +60002,7 @@ def: "A myeloid leukemia that is characterized by the rapid growth of abnormal w
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "acute myeloblastic leukaemia" EXACT []
 synonym: "acute myeloblastic leukemia" EXACT []
@@ -61998,6 +62065,7 @@ id: DOID:9637
 name: stomatitis
 namespace: disease_ontology
 def: "A mouth disease that is characterized by inflammation of the mouth and lips." [url:https\://en.wikipedia.org/wiki/Stomatitis]
+subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:K12.1
 xref: MESH:D013280
@@ -62788,6 +62856,7 @@ alt_id: DOID:5600
 def: "A acute leukemia that is characterized by over production of lymphoblasts." [url:http\://www.cancer.gov/dictionary?CdrID=46332]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []

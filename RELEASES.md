@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-03-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-03-29)
+
+This release includes 10,727 DO disease terms: an increase of 56 diseases; 74 definitions; 76% of DO terms defined; new glioma molecular subtypes; additional cross references and a new DO_RAD_slim.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-03-29/src/ontology/doid-merged.obo) | |
+
 ### [v2021-02-24](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-02-24)
 
 This release includes 10,671 disease terms, the addition of 23 new diseases, 41 definitions and 211 SubClassOf statements in this release. New terms include glioma molecular subtypes and Bainbridge-Ropers syndrome, axioms defining transmission methods for bacterial infectious diseases and DO's Spring 2021 UMLS update.

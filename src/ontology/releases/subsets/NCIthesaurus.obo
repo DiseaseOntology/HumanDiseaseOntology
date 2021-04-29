@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-03-29/subsets/NCIthesaurus.obo
+data-version: doid/releases/2021-04-29/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -13,6 +13,7 @@ def: "A vascular cancer that derives_from the cells that line the walls of blood
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "hemangiosarcoma" EXACT []
+xref: ICDO:9120/3
 xref: MESH:D006394
 xref: NCI:C3088
 xref: NCI:C9275
@@ -1639,6 +1640,7 @@ synonym: "CPNET" EXACT []
 synonym: "infratentorial primitive neuroectodermal tumor" EXACT []
 synonym: "localized primitive neuroectodermal tumor" EXACT []
 xref: GARD:7005
+xref: ICDO:9470/3
 xref: MESH:D008527
 xref: MESH:D018242
 xref: NCI:C27294
@@ -1728,6 +1730,7 @@ subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "lymphoid cancer" EXACT []
 xref: ICD10CM:C85.9
+xref: ICDO:9590/3
 xref: MESH:D008223
 xref: NCI:C3208
 xref: NCI:C7065
@@ -3588,12 +3591,13 @@ is_a: DOID:374 ! nutrition disease
 
 [Term]
 id: DOID:0070322
-name: pediatric hepatocellular carcinoma
+name: childhood hepatocellular carcinoma
 namespace: disease_ontology
 def: "A hepatocellular carcinoma that occurs in children and is characterized by a distinct etiological predisposition, biological behavior, and lower frequency of cirrhosis as compared to adult hepatocellular carcinoma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17714939, url:https\://www.ncbi.nlm.nih.gov/pubmed/28144610, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood hepatocellular carcinoma" EXACT []
+synonym: "pediatric hepatocellular carcinoma" EXACT []
 xref: GARD:9331
 xref: NCI:C7955
 xref: ORDO:33402
@@ -3617,26 +3621,27 @@ is_a: DOID:7757 ! childhood leukemia
 id: DOID:0070324
 name: systemic Epstein-Barr virus-positive T-cell lymphoma of childhood
 namespace: disease_ontology
-def: "A pediatric lymphoma that is characterized by monoclonal expansion of Epstein-Barr virus-positive T cells with an activated cytotoxic phenotype in tissues or peripheral blood." [url:https\://en.wikipedia.org/wiki/Epstein-Barr_virus-associated_lymphoproliferative_diseases, url:https\://www.ncbi.nlm.nih.gov/pubmed/30931288]
+def: "A childhood lymphoma that is characterized by monoclonal expansion of Epstein-Barr virus-positive T cells with an activated cytotoxic phenotype in tissues or peripheral blood." [url:https\://en.wikipedia.org/wiki/Epstein-Barr_virus-associated_lymphoproliferative_diseases, url:https\://www.ncbi.nlm.nih.gov/pubmed/30931288]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "EBV-positive T-cell lymphoproliferative disorder of childhood" EXACT []
 synonym: "systemic EBV-positive T-cell lymphoma of childhood" EXACT []
 xref: ICD10CM:D47.9
+xref: ICDO:9724/3
 xref: MESH:D008232
 xref: NCI:C80374
 xref: ORDO:364033
 xref: SNOMEDCT_US_2019_09_01:450906003
-is_a: DOID:5823 ! pediatric lymphoma
+is_a: DOID:5823 ! childhood lymphoma
 
 [Term]
 id: DOID:0070325
-name: malignant pediatric adrenal gland pheochromocytoma
+name: malignant childhood adrenal gland pheochromocytoma
 namespace: disease_ontology
 def: "An adrenal gland pheochromocytoma that is characterized by rare chromaffin cell tumors which secrete catecholamines, and has a higher prevalence of hereditary factors and metastatis in children than adults." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28324046, url:https\://www.ncbi.nlm.nih.gov/pubmed/28752085]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "malignant childhood adrenal gland pheochromocytoma" EXACT []
+synonym: "malignant pediatric adrenal gland pheochromocytoma" EXACT []
 xref: GARD:9368
 xref: NCI:C118822
 is_a: DOID:5719 ! adrenal medulla cancer
@@ -3954,6 +3959,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "B-ALL" EXACT []
 synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
+xref: ICDO:9836/3
 xref: NCI:C8936
 xref: UMLS_CUI:C0862030
 is_a: DOID:9952 ! acute lymphoblastic leukemia
@@ -12458,6 +12464,7 @@ subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: ICD10CM:C95.90
 xref: ICD9CM:208
+xref: ICDO:9800/3
 xref: MESH:D007938
 xref: NCI:C3161
 xref: SNOMEDCT_US_2020_09_01:255049003
@@ -21541,6 +21548,7 @@ subset: TopNodes_DOcancerslim
 synonym: "malignant melanoma" EXACT []
 synonym: "Naevocarcinoma" EXACT []
 xref: EFO:0000756
+xref: ICDO:8720/3
 xref: KEGG:05218
 xref: MESH:D008545
 xref: NCI:C3224
@@ -21572,7 +21580,9 @@ synonym: "Hepatoid yolk sac tumour" EXACT []
 synonym: "infantile embryonal carcinoma" EXACT []
 synonym: "Yolk Sac neoplasm" EXACT []
 synonym: "Yolk sac tumor" EXACT []
+synonym: "yolk sac tumor" EXACT []
 synonym: "Yolk sac tumour" EXACT []
+xref: ICDO:9071/3
 xref: MESH:D018240
 xref: NCI:C3011
 xref: SNOMEDCT_US_2020_09_01:74409009
@@ -25247,6 +25257,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "childhood choroid plexus papilloma" EXACT []
 xref: GARD:4214
+xref: ICDO:9390/3
 xref: MESH:D020288
 xref: NCI:C3698
 xref: NCI:C5800
@@ -25350,6 +25361,7 @@ synonym: "Haemangiopericytic meningioma" EXACT []
 synonym: "hemangiopericytoma, malignant" EXACT []
 synonym: "malignant hemangiopericytoma" EXACT []
 xref: GARD:2627
+xref: ICDO:9150/3
 xref: MESH:D006393
 xref: NCI:C3087
 xref: SNOMEDCT_US_2020_09_01:134335004
@@ -25548,6 +25560,7 @@ id: DOID:2668
 name: mesenchymoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8990/3
 xref: MESH:D008637
 xref: NCI:C3233
 xref: SNOMEDCT_US_2020_09_01:44524009
@@ -27515,7 +27528,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:2962
 name: Cockayne syndrome
 namespace: disease_ontology
-def: "A syndrome that has_material_basis_in rare mutations in two DNA excision repair proteins, ERCC-8 and ERCC-6, and characterized by growth failure, impaired development of the nervous system, abnormal sensitivity to sunlight (photosensitivity), and premature aging." [url:http\://en.wikipedia.org/wiki/Cockayne_syndrome, url:http\://en.wikipedia.org/wiki/ERCC6, url:http\://en.wikipedia.org/wiki/ERCC8, url:http\://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=216411]
+def: "A syndrome that is characterized by an abnormally small head size (microcephaly), a failure to gain weight and grow at the expected rate (failure to thrive) leading to very short stature, and delayed development." [url:http\://en.wikipedia.org/wiki/Cockayne_syndrome, url:https\://medlineplus.gov/genetics/condition/cockayne-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1342/]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -27526,15 +27539,11 @@ xref: GARD:6122
 xref: ICD10CM:Q87.19
 xref: MESH:D003057
 xref: NCI:C9460
-xref: OMIM:133540
-xref: OMIM:216400
 xref: ORDO:191
-xref: ORDO:90321
-xref: ORDO:90322
-xref: ORDO:90324
 xref: SNOMEDCT_US_2020_09_01:205832003
 xref: UMLS_CUI:C0009207
 is_a: DOID:225 ! syndrome
+property_value: exactMatch MESH:D003057 xsd:string
 
 [Term]
 id: DOID:2965
@@ -28294,10 +28303,10 @@ is_a: DOID:3069 ! malignant astrocytoma
 
 [Term]
 id: DOID:3079
-name: juvenile astrocytoma
+name: childhood astrocytic tumor
 namespace: disease_ontology
 subset: NCIthesaurus
-synonym: "Juvenile astrocytoma" EXACT []
+synonym: "juvenile astrocytoma" EXACT []
 synonym: "pediatric astrocytoma" EXACT []
 xref: NCI:C9022
 xref: SNOMEDCT_US_2020_09_01:128854008
@@ -28966,6 +28975,7 @@ subset: NCIthesaurus
 synonym: "oligodendroglial neoplasm" EXACT []
 synonym: "oligodendroglial tumor" EXACT []
 xref: GARD:9953
+xref: ICDO:9450/3
 xref: MESH:D009837
 xref: NCI:C3288
 xref: SNOMEDCT_US_2020_09_01:443936004
@@ -29062,6 +29072,7 @@ comment: A neuroma that is characterized as a benign nerve sheath tumor that is 
 subset: NCIthesaurus
 synonym: "Psammomatous schwannoma" EXACT []
 synonym: "schwannoma" EXACT []
+xref: ICDO:9560/3
 xref: MESH:D009442
 xref: NCI:C3269
 xref: SNOMEDCT_US_2020_09_01:985004
@@ -29383,6 +29394,7 @@ comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:4702
+xref: ICDO:8910/3
 xref: MESH:D018233
 xref: NCI:C8971
 xref: OMIM:268210
@@ -29398,6 +29410,7 @@ namespace: disease_ontology
 def: "A skeletal muscle cancer that arise from skeletal muscle progenitors." [url:http\://en.wikipedia.org/wiki/Rhabdomyosarcoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:8900/3
 xref: MESH:D012208
 xref: NCI:C3359
 xref: SNOMEDCT_US_2020_09_01:302847003
@@ -29804,6 +29817,7 @@ name: germinoma
 namespace: disease_ontology
 def: "A germ cell cancer that lacks histologic differentiation. It usually refers to a tumor in the brain." [url:http\://en.wikipedia.org/wiki/Germinoma, url:https\://en.wikipedia.org/wiki/Germinoma]
 subset: NCIthesaurus
+xref: ICDO:9064/3
 xref: MESH:D018237
 xref: NCI:C3753
 xref: SNOMEDCT_US_2020_09_01:154603000
@@ -29818,6 +29832,7 @@ def: "A mixed germ cell tumor that is a mixture of teratoma with embryonal carci
 subset: NCIthesaurus
 synonym: "mixed Embryonal carcinoma and teratoma" EXACT []
 synonym: "Teratocarcinoma" EXACT []
+xref: ICDO:9081/3
 xref: MESH:D018243
 xref: NCI:C3756
 xref: SNOMEDCT_US_2020_09_01:67830002
@@ -29831,9 +29846,11 @@ namespace: disease_ontology
 def: "A germ cell cancer that occurs in many forms." [url:http\://en.wikipedia.org/wiki/Germ_cell_tumor#Mixed]
 subset: NCIthesaurus
 synonym: "mixed germ cell neoplasm" EXACT []
+synonym: "mixed germ cell tumor" EXACT []
 synonym: "mixed germ cell tumour" EXACT []
 synonym: "mixed teratoma and Seminoma" EXACT []
 synonym: "mixed teratoma and seminoma" EXACT []
+xref: ICDO:9085/3
 xref: NCI:C4290
 xref: SNOMEDCT_US_2020_09_01:189853002
 xref: UMLS_CUI:C0334524
@@ -29845,6 +29862,7 @@ name: teratoma
 namespace: disease_ontology
 def: "A germ cell and embryonal cancer that is an encapsulated tumor with tissue or organ components resembling normal derivatives of all three germ layers." [url:http\://en.wikipedia.org/wiki/Teratoma]
 subset: NCIthesaurus
+xref: ICDO:9080/3
 xref: MESH:D013724
 xref: NCI:C3403
 xref: SNOMEDCT_US_2020_09_01:36591000119102
@@ -29860,6 +29878,7 @@ def: "An embryonal cancer that is a type of germ cell tumour that is located_in 
 subset: NCIthesaurus
 synonym: "primary extragonadal embryonal carcinoma" EXACT []
 xref: GARD:5140
+xref: ICDO:9070/3
 xref: MESH:D018236
 xref: NCI:C3752
 xref: NCI:C8880
@@ -30057,9 +30076,9 @@ property_value: exactMatch MESH:D000690 xsd:string
 id: DOID:3320
 name: Tay-Sachs disease
 namespace: disease_ontology
+def: "A GM2 gangliosidosis that is characterized the onset in infancy of developmental retardation, followed by paralysis, dementia and blindness, with death in the second or third year of life and has_material_basis_in homozygous or compound heterozygous mutation in the alpha subunit of the hexosaminidase A gene (HEXA) on chromosome 15q23." []
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "A GM2 gangliosidosis that is characterized the onset in infancy of developmental retardation, followed by paralysis, dementia and blindness, with death in the second or third year of life and has_material_basis_in homozygous or compound heterozygous mutation in the alpha subunit of the hexosaminidase A gene (HEXA) on chromosome 15q23." EXACT []
 synonym: "GM2 gangliosidosis, type 1" EXACT []
 synonym: "hexosaminidase A deficiency" EXACT []
 xref: GARD:7737
@@ -30211,6 +30230,7 @@ synonym: "Osteogenic sarcoma" EXACT []
 synonym: "osteoid sarcoma" EXACT []
 synonym: "Skeletal sarcoma" EXACT []
 xref: GARD:7284
+xref: ICDO:9180/3
 xref: MESH:D012516
 xref: MESH:D018213
 xref: NCI:C9145
@@ -30268,6 +30288,7 @@ synonym: "Fibrocytic tumor" EXACT []
 synonym: "fibrosarcoma of soft tissue" EXACT []
 synonym: "fibrous tissue neoplasm" EXACT []
 xref: GARD:2327
+xref: ICDO:8810/3
 xref: MESH:D005354
 xref: MESH:D018218
 xref: NCI:C3043
@@ -30315,10 +30336,11 @@ is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:3361
-name: pediatric osteosarcoma
+name: childhood osteosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric osteosarcoma" EXACT []
 xref: NCI:C6585
 xref: UMLS_CUI:C1332986
 is_a: DOID:3347 ! osteosarcoma
@@ -30455,11 +30477,12 @@ is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:3373
-name: juxtacortical osteosarcoma
+name: parosteal osteosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+synonym: "juxtacortical osteosarcoma" EXACT []
 synonym: "Parosteal Osteogenic sarcoma" EXACT []
-synonym: "Parosteal Osteosarcoma" EXACT []
+xref: ICDO:9192/3
 xref: MESH:D018217
 xref: NCI:C8969
 xref: SNOMEDCT_US_2020_09_01:91242000
@@ -30544,6 +30567,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "lipomatous cancer" EXACT []
 xref: GARD:6913
+xref: ICDO:8850/3
 xref: MESH:D008080
 xref: NCI:C3194
 xref: SNOMEDCT_US_2020_09_01:254829001
@@ -31359,10 +31383,11 @@ is_a: DOID:3355 ! fibrosarcoma
 
 [Term]
 id: DOID:3520
-name: pediatric fibrosarcoma
+name: childhood fibrosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric fibrosarcoma" EXACT []
 xref: NCI:C8088
 xref: UMLS_CUI:C0279981
 is_a: DOID:3355 ! fibrosarcoma
@@ -31710,6 +31735,7 @@ subset: NCIthesaurus
 synonym: "Chorioepithelioma" EXACT []
 xref: GARD:6059
 xref: ICD10CM:C58
+xref: ICDO:9100/3
 xref: MESH:D002822
 xref: NCI:C2948
 xref: SNOMEDCT_US_2020_09_01:189444004
@@ -33354,10 +33380,10 @@ is_a: DOID:3817 ! cranial nerve palsy
 id: DOID:3817
 name: cranial nerve palsy
 namespace: disease_ontology
+def: "A cranial nerve disease that is characterized by complete or partial weakness or paralysis of the areas served by the affected nerve." [url:https\://aapos.org/glossary/cranial-nerve-palsy]
 subset: NCIthesaurus
 synonym: "Cranial nerve palsy" EXACT []
 synonym: "Cranial nerve Paralysis" EXACT []
-xref: MESH:D003389
 xref: NCI:C26941
 xref: SNOMEDCT_US_2020_09_01:73013002
 xref: UMLS_CUI:C0151311
@@ -36975,6 +37001,7 @@ name: dysgerminoma
 namespace: disease_ontology
 def: "A germ cell cancer that derives_from cells that give rise to egg cells." [url:http\://en.wikipedia.org/wiki/Dysgerminoma, url:http\://www.cancer.gov/dictionary?CdrID=672835]
 subset: NCIthesaurus
+xref: ICDO:9060/3
 xref: MESH:D004407
 xref: NCI:C2996
 xref: SNOMEDCT_US_2020_09_01:60718004
@@ -37065,6 +37092,7 @@ synonym: "hypernephroma" EXACT []
 synonym: "RCC" EXACT []
 xref: EFO:0000681
 xref: GARD:13215
+xref: ICDO:8312/3
 xref: MESH:D002292
 xref: NCI:C9385
 xref: OMIM:300854
@@ -37415,13 +37443,14 @@ is_a: DOID:2133 ! central nervous system sarcoma
 
 [Term]
 id: DOID:4505
-name: pediatric angiosarcoma
+name: childhood angiosarcoma
 namespace: disease_ontology
 def: "An angiosarcoma that affects children." [url:http\://findarticles.com/p/articles/mi_qa3725/is_201003/ai_n53080216/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "paediatric angiosarcoma" EXACT []
 synonym: "paediatric hemangiosarcoma" EXACT []
+synonym: "pediatric angiosarcoma" EXACT []
 synonym: "pediatric hemangiosarcoma" EXACT []
 xref: NCI:C9174
 xref: UMLS_CUI:C0279988
@@ -37682,6 +37711,7 @@ name: mesenchymal chondrosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:9240/3
 xref: MESH:D018211
 xref: NCI:C3737
 xref: SNOMEDCT_US_2020_09_01:56565002
@@ -37690,10 +37720,11 @@ is_a: DOID:3371 ! chondrosarcoma
 
 [Term]
 id: DOID:4546
-name: pediatric mesenchymal chondrosarcoma
+name: childhood mesenchymal chondrosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric mesenchymal chondrosarcoma" EXACT []
 xref: NCI:C27374
 xref: UMLS_CUI:C1332982
 is_a: DOID:4545 ! mesenchymal chondrosarcoma
@@ -37903,10 +37934,11 @@ is_a: DOID:3565 ! meningioma
 
 [Term]
 id: DOID:4593
-name: pediatric meningioma
+name: childhood meningioma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric meningioma" EXACT []
 xref: NCI:C8264
 xref: UMLS_CUI:C0280656
 is_a: DOID:3565 ! meningioma
@@ -39401,12 +39433,13 @@ is_a: DOID:4205 ! cerebellum cancer
 id: DOID:4851
 name: pilocytic astrocytoma
 namespace: disease_ontology
-def: "A pediatric low-grade glioma that is characterized by cells that look like fibers when viewed under a microscope and is located_in the brain." [url:http\://en.wikipedia.org/wiki/Pilocytic_astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=44341]
+def: "A childhood low-grade glioma that is characterized by cells that look like fibers when viewed under a microscope and is located_in the brain." [url:http\://en.wikipedia.org/wiki/Pilocytic_astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=44341]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "grade I Astrocytic tumor" EXACT []
 synonym: "Piloid astrocytoma" EXACT []
 xref: GARD:9808
+xref: ICDO:9421/1
 xref: MESH:D001254
 xref: NCI:C4047
 xref: SNOMEDCT_US_2020_09_01:67859002
@@ -40897,6 +40930,7 @@ subset: NCIthesaurus
 synonym: "Ependymal neoplasm" EXACT []
 synonym: "ependymal tumors" EXACT []
 synonym: "malignant ependymoma" EXACT []
+xref: ICDO:9391/3
 xref: NCI:C6770
 xref: UMLS_CUI:C1333407
 is_a: DOID:3070 ! high grade glioma
@@ -43676,7 +43710,7 @@ is_a: DOID:5074 ! high grade ependymoma
 
 [Term]
 id: DOID:5509
-name: pediatric ependymoma
+name: childhood ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -45148,10 +45182,11 @@ is_a: DOID:3382 ! liposarcoma
 
 [Term]
 id: DOID:5695
-name: pediatric liposarcoma
+name: childhood liposarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric liposarcoma" EXACT []
 xref: NCI:C8091
 xref: UMLS_CUI:C0279984
 is_a: DOID:3382 ! liposarcoma
@@ -45990,7 +46025,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C6589
 xref: UMLS_CUI:C1332994
-is_a: DOID:3373 ! juxtacortical osteosarcoma
+is_a: DOID:3373 ! parosteal osteosarcoma
 
 [Term]
 id: DOID:5810
@@ -46109,10 +46144,11 @@ is_a: DOID:0060058 ! lymphoma
 
 [Term]
 id: DOID:5823
-name: pediatric lymphoma
+name: childhood lymphoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric lymphoma" EXACT []
 xref: NCI:C5165
 xref: UMLS_CUI:C1332979
 is_a: DOID:0060058 ! lymphoma
@@ -46310,6 +46346,7 @@ id: DOID:5861
 name: myxoid chondrosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:9231/3
 xref: NCI:C4303
 xref: SNOMEDCT_US_2020_09_01:75622000
 xref: UMLS_CUI:C0334551
@@ -46688,6 +46725,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm of the peripheral nerve Sheath" EXACT []
 xref: GARD:10872
+xref: ICDO:9540/3
 xref: MESH:D018319
 xref: NCI:C3798
 xref: SNOMEDCT_US_2020_09_01:134324009
@@ -47191,13 +47229,14 @@ is_a: DOID:4439 ! central nervous system germ cell tumor
 
 [Term]
 id: DOID:6053
-name: pediatric germ cell cancer
+name: childhood germ cell cancer
 namespace: disease_ontology
 def: "A germ cell cancer that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23559398]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "paediatric germ cell cancer" EXACT []
 synonym: "paediatric germ cell neoplasm" EXACT []
+synonym: "pediatric germ cell cancer" EXACT []
 synonym: "pediatric germ cell neoplasm" EXACT []
 synonym: "pediatric germ cell tumor" RELATED []
 xref: NCI:C7928
@@ -47283,13 +47322,14 @@ is_a: DOID:331 ! central nervous system disease
 
 [Term]
 id: DOID:6082
-name: pediatric testicular germ cell tumor
+name: childhood testicular germ cell tumor
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "paediatric testicular germ cell neoplasm" EXACT []
 synonym: "paediatric testicular germ cell tumour" EXACT []
 synonym: "pediatric testicular germ cell neoplasm" EXACT []
+synonym: "pediatric testicular germ cell tumor" EXACT []
 xref: NCI:C6552
 xref: UMLS_CUI:C0796663
 is_a: DOID:5557 ! testicular germ cell cancer
@@ -47313,7 +47353,7 @@ is_a: DOID:5350 ! ovarian endodermal sinus tumor
 
 [Term]
 id: DOID:6084
-name: pediatric ovarian germ cell tumor
+name: childhood ovarian germ cell tumor
 namespace: disease_ontology
 def: "An ovarian germ cell cancer that presents in childhood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24395845]
 subset: DO_cancer_slim
@@ -47321,6 +47361,7 @@ subset: NCIthesaurus
 synonym: "paediatric Ovarian germ cell neoplasm" EXACT []
 synonym: "paediatric ovarian germ cell tumour" EXACT []
 synonym: "pediatric Ovarian germ cell neoplasm" EXACT []
+synonym: "pediatric ovarian germ cell tumor" EXACT []
 xref: NCI:C8588
 xref: UMLS_CUI:C0796664
 is_a: DOID:2156 ! ovarian germ cell cancer
@@ -47350,10 +47391,11 @@ is_a: DOID:3565 ! meningioma
 
 [Term]
 id: DOID:6089
-name: pediatric leptomeningeal melanoma
+name: childhood leptomeningeal melanoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric leptomeningeal melanoma" EXACT []
 xref: NCI:C5318
 xref: UMLS_CUI:C1332976
 is_a: DOID:6085 ! meningeal melanoma
@@ -47769,6 +47811,7 @@ def: "A connective tissue cancer that is characterized by the presence of epithe
 subset: NCIthesaurus
 synonym: "epithelioid cell sarcoma" EXACT []
 xref: GARD:10181
+xref: ICDO:8804/3
 xref: MESH:D012509
 xref: NCI:C3714
 xref: SNOMEDCT_US_2020_09_01:782827000
@@ -49211,10 +49254,11 @@ is_a: DOID:476 ! breast hemangioma
 
 [Term]
 id: DOID:6494
-name: pediatric myxoid chondrosarcoma
+name: childhood myxoid chondrosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric myxoid chondrosarcoma" EXACT []
 xref: NCI:C27377
 xref: UMLS_CUI:C1332984
 is_a: DOID:5861 ! myxoid chondrosarcoma
@@ -49807,7 +49851,7 @@ is_a: DOID:3594 ! choriocarcinoma
 
 [Term]
 id: DOID:6639
-name: pediatric CNS choriocarcinoma
+name: childhood CNS choriocarcinoma
 namespace: disease_ontology
 def: "A choriocarcinoma characterized by extraembryonic differentiation along trophoblastic lines and high serum and CSF levels of HCG/_-HCG, has_material_basis_in abnormally proliferating cells, derives_from germ cells." [url:http\://www.ajnr.org/content/31/10/1994]
 subset: DO_cancer_slim
@@ -49815,6 +49859,7 @@ subset: NCIthesaurus
 synonym: "Choriocarcinoma of the paediatric central nervous system" EXACT []
 synonym: "Choriocarcinoma of the pediatric central nervous system" EXACT []
 synonym: "paediatric CNS choriocarcinoma" EXACT []
+synonym: "pediatric CNS choriocarcinoma" EXACT []
 xref: NCI:C6206
 xref: UMLS_CUI:C1377604
 is_a: DOID:3594 ! choriocarcinoma
@@ -51098,12 +51143,12 @@ is_a: DOID:11885 ! ureteral benign neoplasm
 
 [Term]
 id: DOID:6938
-name: pediatric intraocular retinoblastoma
+name: childhood intraocular retinoblastoma
 namespace: disease_ontology
 def: "An intraocular retinoblastoma that effects children." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29737052]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood intraocular retinoblastoma" EXACT []
+synonym: "pediatric intraocular retinoblastoma" EXACT []
 xref: NCI:C9047
 xref: UMLS_CUI:C1321869
 is_a: DOID:4653 ! intraocular retinoblastoma
@@ -51785,10 +51830,11 @@ is_a: DOID:710 ! splenic manifestation of leukemia
 
 [Term]
 id: DOID:7095
-name: pediatric epithelioid sarcoma
+name: childhood epithelioid sarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric epithelioid sarcoma" EXACT []
 xref: NCI:C8095
 xref: UMLS_CUI:C0279989
 is_a: DOID:6193 ! epithelioid sarcoma
@@ -52412,7 +52458,7 @@ is_a: DOID:6354 ! CLL/SLL
 
 [Term]
 id: DOID:7231
-name: pediatric CNS embryonal cell carcinoma
+name: childhood CNS embryonal cell carcinoma
 namespace: disease_ontology
 def: "A central nervous system childhood germ cell tumor characterized by germ cell tumor that develops from embryonic cells that remain in the brain after birth has_material_basis_in abnormally proliferating cells derives_from germ cells." [url:https\://www.cancer.gov/types/brain/patient/child-cns-embryonal-treatment-pdq, url:https\://www.cancer.gov/types/brain/patient/child-cns-germ-cell-treatment-pdq]
 subset: DO_cancer_slim
@@ -52420,6 +52466,7 @@ subset: NCIthesaurus
 synonym: "Embryonal carcinoma of paediatric CNS" EXACT []
 synonym: "Embryonal carcinoma of pediatric CNS" EXACT []
 synonym: "paediatric CNS embryonal cell carcinoma" EXACT []
+synonym: "pediatric CNS embryonal cell carcinoma" EXACT []
 xref: NCI:C6208
 xref: UMLS_CUI:C1377605
 is_a: DOID:6052 ! central nervous system childhood germ cell tumor
@@ -52815,14 +52862,15 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:7340
-name: pediatric ovarian dysgerminoma
+name: childhood ovarian dysgerminoma
 namespace: disease_ontology
-def: "A dysgerminoma of ovary that occurs in children." [url:http\://en.wikipedia.org/wiki/Dysgerminoma, url:http\://www.cancer.gov/dictionary?CdrID=672835]
+def: "A childhood ovarian germ cell tumor that derives_from cells that give rise to egg cells." [url:http\://en.wikipedia.org/wiki/Dysgerminoma, url:http\://www.cancer.gov/dictionary?CdrID=672835]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric ovarian dysgerminoma" EXACT []
 xref: NCI:C6550
 xref: UMLS_CUI:C1332988
-is_a: DOID:6084 ! pediatric ovarian germ cell tumor
+is_a: DOID:6084 ! childhood ovarian germ cell tumor
 
 [Term]
 id: DOID:7347
@@ -53466,26 +53514,27 @@ is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:7501
-name: pediatric infratentorial ependymoma
+name: childhood infratentorial ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric infratentorial ependymoma" EXACT []
 xref: NCI:C9041
 xref: UMLS_CUI:C0278599
 is_a: DOID:4706 ! infratentorial cancer
 
 [Term]
 id: DOID:7502
-name: pediatric supratentorial ependymoma
+name: childhood supratentorial ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood supratentorial ependymoma" EXACT []
 synonym: "paediatric Cerebral Ependymoma" EXACT []
 synonym: "paediatric Supratentorial Ependymoblastoma" EXACT []
 synonym: "paediatric supratentorial ependymoma" EXACT []
 synonym: "pediatric Cerebral Ependymoma" EXACT []
 synonym: "pediatric Supratentorial Ependymoblastoma" EXACT []
+synonym: "pediatric supratentorial ependymoma" EXACT []
 xref: NCI:C9043
 xref: UMLS_CUI:C0278650
 is_a: DOID:1659 ! supratentorial cancer
@@ -53612,10 +53661,11 @@ is_a: DOID:3004 ! breast myoepithelial neoplasm
 
 [Term]
 id: DOID:7522
-name: pediatric infratentorial ependymoblastoma
+name: childhood infratentorial ependymoblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric infratentorial ependymoblastoma" EXACT []
 xref: NCI:C6773
 xref: UMLS_CUI:C1332972
 is_a: DOID:4207 ! childhood infratentorial neoplasm
@@ -53987,10 +54037,12 @@ is_a: DOID:6477 ! invasive bladder transitional cell carcinoma
 
 [Term]
 id: DOID:7602
-name: intracortical osteogenic sarcoma
+name: conventional osteosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+synonym: "intracortical osteogenic sarcoma" EXACT []
 synonym: "Intracortical osteosarcoma" EXACT []
+xref: ICDO:9195/3
 xref: NCI:C35870
 xref: SNOMEDCT_US_2020_09_01:128774006
 xref: UMLS_CUI:C1266166
@@ -54070,7 +54122,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C6590
 xref: UMLS_CUI:C1332974
-is_a: DOID:7602 ! intracortical osteogenic sarcoma
+is_a: DOID:7602 ! conventional osteosarcoma
 
 [Term]
 id: DOID:7613
@@ -54320,6 +54372,7 @@ synonym: "neuroblastoma of Retina" EXACT []
 synonym: "RB" EXACT []
 synonym: "RB - Retinoblastoma" EXACT []
 xref: GARD:7563
+xref: ICDO:9510/3
 xref: MESH:D012175
 xref: NCI:C7541
 xref: OMIM:180200
@@ -54569,12 +54622,13 @@ is_a: DOID:4645 ! retinal cancer
 
 [Term]
 id: DOID:7747
-name: pediatric extraocular retinoblastoma
+name: childhood extraocular retinoblastoma
 namespace: disease_ontology
 def: "An extraocular retinoblastoma that effects children." [url:http\://www.cancer.gov/cancertopics/pdq/treatment/retinoblastoma/HealthProfessional/page7]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood Extraocular Retinoblastoma" EXACT []
+synonym: "pediatric extraocular retinoblastoma" EXACT []
 xref: NCI:C9048
 xref: UMLS_CUI:C1321870
 is_a: DOID:4656 ! extraocular retinoblastoma
@@ -54878,10 +54932,11 @@ is_a: DOID:7698 ! non-functioning pancreatic endocrine tumor
 
 [Term]
 id: DOID:7841
-name: pediatric cerebral ependymoblastoma
+name: childhood cerebral ependymoblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "pediatric cerebral ependymoblastoma" EXACT []
 xref: NCI:C6957
 xref: UMLS_CUI:C1332962
 is_a: DOID:4794 ! ependymoblastoma
@@ -54919,7 +54974,6 @@ namespace: disease_ontology
 def: "A histiocytic and dendritic cell cancer that is mainly located_in lymph nodes." [url:http\://findarticles.com/p/articles/mi_m0BUM/is_12_83/ai_n8704912/]
 subset: NCIthesaurus
 synonym: "Dendritic cell sarcoma" EXACT []
-synonym: "Dendritic cell sarcoma, not otherwise specified" EXACT []
 synonym: "follicular dendritic cell sarcoma" RELATED []
 xref: NCI:C27260
 xref: SNOMEDCT_US_2020_09_01:397355008
@@ -55995,7 +56049,7 @@ subset: NCIthesaurus
 synonym: "malignant pediatric germ cell tumor" EXACT []
 xref: NCI:C6541
 xref: UMLS_CUI:C1334574
-is_a: DOID:6053 ! pediatric germ cell cancer
+is_a: DOID:6053 ! childhood germ cell cancer
 
 [Term]
 id: DOID:8150
@@ -56393,6 +56447,7 @@ id: DOID:8251
 name: adult pleomorphic rhabdomyosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8901/3
 xref: NCI:C27369
 xref: SNOMEDCT_US_2020_09_01:77455004
 xref: UMLS_CUI:C1332211
@@ -56895,7 +56950,7 @@ synonym: "Infantile fibrosarcoma" EXACT []
 xref: NCI:C4244
 xref: SNOMEDCT_US_2020_09_01:403996004
 xref: UMLS_CUI:C0334459
-is_a: DOID:3520 ! pediatric fibrosarcoma
+is_a: DOID:3520 ! childhood fibrosarcoma
 
 [Term]
 id: DOID:8419
@@ -60014,6 +60069,7 @@ synonym: "Leukemia, Myelocytic, acute" EXACT []
 xref: GARD:12757
 xref: ICD10CM:C92.0
 xref: ICD9CM:205.0
+xref: ICDO:9861/3
 xref: KEGG:05221
 xref: MESH:D015470
 xref: NCI:C3171
@@ -60026,7 +60082,7 @@ is_a: DOID:8692 ! myeloid leukemia
 id: DOID:9120
 name: amyloidosis
 namespace: disease_ontology
-def: "An acquired metabolic disease that has_material_basis_in extracellular tissue deposition of mis-folded proteins called fibrils composed of low molecular weight subunits of a variety of proteins. These deposits may result in a wide range of clinical manifestations depending upon their type, location, and the amount of deposition." [url:https\://en.wikipedia.org/wiki/Amyloidosis]
+def: "A disease of metabolsism that is characterized by extracellular tissue deposition of mis-folded amyloid fibrils built up by twisted protofilaments, deposited in the spaces between the cells of vital organs, causing disruption of organ tissue structure and function. These deposits may result in a wide range of clinical manifestations depending upon their type, location, and the amount of deposition." [url:https\://en.wikipedia.org/wiki/Amyloidosis, url:https\://pubmed.ncbi.nlm.nih.gov/33100054/, url:https\://pubmed.ncbi.nlm.nih.gov/33787033/, url:https\://www.tandfonline.com/doi/pdf/10.1080/13506129.2020.1835263?needAccess=true]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "amyloid disease" EXACT []
@@ -60034,7 +60090,7 @@ xref: ICD10CM:E85
 xref: ICD9CM:277.3
 xref: MESH:D000686
 xref: NCI:C2868
-xref: SNOMEDCT_US_2020_09_01:154769007
+xref: SNOMEDCT_US_2020_09_01:17602002
 xref: UMLS_CUI:C0002726
 is_a: DOID:0014667 ! disease of metabolism
 property_value: exactMatch MESH:D000686 xsd:string
@@ -62868,6 +62924,7 @@ xref: EFO:0000220
 xref: GARD:522
 xref: ICD10CM:C91.00
 xref: ICD9CM:204.0
+xref: MESH:D054198
 xref: NCI:C3167
 xref: NCI:C7055
 xref: OMIM:247640

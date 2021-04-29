@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-03-29/subsets/DO_FlyBase_slim.obo
+data-version: doid/releases/2021-04-29/subsets/DO_FlyBase_slim.obo
 ontology: doid/subsets/DO_FlyBase_slim.obo
 
 [Term]
@@ -267,17 +267,22 @@ id: DOID:0050638
 name: transthyretin amyloidosis
 namespace: disease_ontology
 alt_id: DOID:0050761
-def: "An amyloidosis that is characterized by a loss of sensation in the extremities, cardiomyopathy, nephropathy, vitreous opacities, and CNS amyloidosis resulting from abnormal deposits of amyloid protein in the body's organs and tissues and has_material_basis_in autosomal dominant inheritance of mutations in the TTR gene." [url:http\://en.wikipedia.org/wiki/Transthyretin-related_hereditary_amyloidosis, url:http\://ghr.nlm.nih.gov/condition/transthyretin-amyloidosis, url:http\://www.ncbi.nlm.nih.gov/books/NBK1194/, url:http\://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=85451, url:http\://www.paramiloidose.com/en/paramiloidose.php?a=2&id=25, url:https\://www.ncbi.nlm.nih.gov/pubmed/19372706]
+def: "An amyloidosis that is characterized by a loss of sensation in the extremities, cardiomyopathy, nephropathy, vitreous opacities, and CNS amyloidosis resulting from abnormal deposits of amyloid protein in the body's organs and tissues and has_material_basis_in autosomal dominant inheritance of mutations in the TTR gene." [url:http\://en.wikipedia.org/wiki/Transthyretin-related_hereditary_amyloidosis, url:http\://ghr.nlm.nih.gov/condition/transthyretin-amyloidosis, url:http\://www.ncbi.nlm.nih.gov/books/NBK1194/, url:http\://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=85451, url:http\://www.paramiloidose.com/en/paramiloidose.php?a=2&id=25, url:https\://www.ncbi.nlm.nih.gov/books/NBK1194/, url:https\://www.ncbi.nlm.nih.gov/pubmed/19372706]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 synonym: "Amyloidosis, hereditary, transthyretin-related" EXACT []
+synonym: "ATTR amyloidosis" EXACT []
+synonym: "ATTRm amyloidosis" EXACT []
 synonym: "Corino de Andrade's disease" EXACT []
 synonym: "familial amyloid polyneuropathy" EXACT []
 synonym: "Familial transthyretin amyloidosis" EXACT []
 synonym: "paramyloidosis" EXACT []
 synonym: "transthyretin-related hereditary amyloidosis" EXACT []
 synonym: "TTR amyloidosis" EXACT []
+xref: GARD:656
+xref: ICD10CM:E85.82
 xref: OMIM:105210
+xref: ORDO:85447
 is_a: DOID:9120 ! amyloidosis
 
 [Term]
@@ -2345,7 +2350,7 @@ xref: SNOMEDCT_US_2020_03_01:723551003
 id: DOID:2962
 name: Cockayne syndrome
 namespace: disease_ontology
-def: "A syndrome that has_material_basis_in rare mutations in two DNA excision repair proteins, ERCC-8 and ERCC-6, and characterized by growth failure, impaired development of the nervous system, abnormal sensitivity to sunlight (photosensitivity), and premature aging." [url:http\://en.wikipedia.org/wiki/Cockayne_syndrome, url:http\://en.wikipedia.org/wiki/ERCC6, url:http\://en.wikipedia.org/wiki/ERCC8, url:http\://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=216411]
+def: "A syndrome that is characterized by an abnormally small head size (microcephaly), a failure to gain weight and grow at the expected rate (failure to thrive) leading to very short stature, and delayed development." [url:http\://en.wikipedia.org/wiki/Cockayne_syndrome, url:https\://medlineplus.gov/genetics/condition/cockayne-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1342/]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -2356,14 +2361,10 @@ xref: GARD:6122
 xref: ICD10CM:Q87.19
 xref: MESH:D003057
 xref: NCI:C9460
-xref: OMIM:133540
-xref: OMIM:216400
 xref: ORDO:191
-xref: ORDO:90321
-xref: ORDO:90322
-xref: ORDO:90324
 xref: SNOMEDCT_US_2020_09_01:205832003
 xref: UMLS_CUI:C0009207
+property_value: exactMatch MESH:D003057 xsd:string
 
 [Term]
 id: DOID:305
@@ -3189,6 +3190,7 @@ synonym: "Leukemia, Myelocytic, acute" EXACT []
 xref: GARD:12757
 xref: ICD10CM:C92.0
 xref: ICD9CM:205.0
+xref: ICDO:9861/3
 xref: KEGG:05221
 xref: MESH:D015470
 xref: NCI:C3171
@@ -3201,7 +3203,7 @@ is_a: DOID:2531 ! hematologic cancer
 id: DOID:9120
 name: amyloidosis
 namespace: disease_ontology
-def: "An acquired metabolic disease that has_material_basis_in extracellular tissue deposition of mis-folded proteins called fibrils composed of low molecular weight subunits of a variety of proteins. These deposits may result in a wide range of clinical manifestations depending upon their type, location, and the amount of deposition." [url:https\://en.wikipedia.org/wiki/Amyloidosis]
+def: "A disease of metabolsism that is characterized by extracellular tissue deposition of mis-folded amyloid fibrils built up by twisted protofilaments, deposited in the spaces between the cells of vital organs, causing disruption of organ tissue structure and function. These deposits may result in a wide range of clinical manifestations depending upon their type, location, and the amount of deposition." [url:https\://en.wikipedia.org/wiki/Amyloidosis, url:https\://pubmed.ncbi.nlm.nih.gov/33100054/, url:https\://pubmed.ncbi.nlm.nih.gov/33787033/, url:https\://www.tandfonline.com/doi/pdf/10.1080/13506129.2020.1835263?needAccess=true]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "amyloid disease" EXACT []
@@ -3209,7 +3211,7 @@ xref: ICD10CM:E85
 xref: ICD9CM:277.3
 xref: MESH:D000686
 xref: NCI:C2868
-xref: SNOMEDCT_US_2020_09_01:154769007
+xref: SNOMEDCT_US_2020_09_01:17602002
 xref: UMLS_CUI:C0002726
 property_value: exactMatch MESH:D000686 xsd:string
 

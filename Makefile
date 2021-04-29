@@ -110,6 +110,9 @@ build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
 	@echo ""
 
 
+.PRECIOUS: build/reports/diff.
+
+
 # Simple reasoning test
 reason: $(EDIT) | build/robot.jar
 	@$(ROBOT) reason --input $<
@@ -350,6 +353,10 @@ build/doid-last.owl: | build/robot.jar
 	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
 	 --collapse-import-closure true \
 	 --output $@
+
+build/reports/doid-diff.html: build/doid-last.owl $(DM).owl | build/robot.jar build/reports
+	@$(ROBOT) diff --left $< --right $(word 2, $^) --format html --output $@
+	@echo "Generated DOID diff report at $@"
 
 # all report queries
 QUERIES := $(wildcard src/sparql/build/*-report.rq)

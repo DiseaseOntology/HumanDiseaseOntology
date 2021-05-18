@@ -65,6 +65,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000135</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternally_imprinted</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0000159 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000159">
@@ -76,22 +86,21 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SO_0000199 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000199">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000199</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translocation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SO_0000340 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000340">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000340</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000400 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000400">
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000400</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_attribute</rdfs:label>
     </owl:Class>
     
 
@@ -131,6 +140,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001060">
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001060</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001260">
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001260</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_collection</rdfs:label>
     </owl:Class>
     
 
@@ -438,6 +456,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0001565 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001565">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001882"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001565</oboInOwl:id>
@@ -1127,6 +1146,46 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0001744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001744">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001744</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UPD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001745">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001744"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001745</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal_uniparental_disomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001746 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001746">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001744"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001746</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paternal_uniparental_disomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001762 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001762">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001762</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variant_origin</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0001773 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001773">
@@ -1134,6 +1193,50 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant where the mutated gene product does not allow for one or more basic functions necessary for survival.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001773</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001775 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001775">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant in the genetic material inherited from the mother.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001775</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001776 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001776">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant in the genetic material inherited from the father.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001776</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paternal_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001777 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001777">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant that has arisen after splitting of the embryo, resulting in the variant being found in only some of the tissues or cells of the body.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001777</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">somatic_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001778 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001778">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant present in the embryo that is carried by every cell in the body.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001778</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">germline_variant</rdfs:label>
     </owl:Class>
     
 
@@ -1828,6 +1931,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0002060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000183"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002060</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interchromosomal_translocation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0002074 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002074">
@@ -2132,6 +2246,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0002218 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001536"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant in which the function of a gene product is altered with respect to a reference.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002218</oboInOwl:id>
@@ -2354,6 +2469,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_1000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000183"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000028</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intrachromosomal_mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000028"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000029</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal_deletion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000028"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000030</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal_inversion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_1000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000035">
@@ -2361,6 +2506,27 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000035</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000183"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000037</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal_duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000183 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000183">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001260"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alteration of the genome that leads to a change in the structure or number of one or more chromosomes.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000183</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome_structure_variation</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

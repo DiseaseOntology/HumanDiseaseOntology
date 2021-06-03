@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-06-03](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-06-03)
+
+DO's May 2021 release. This release includes updates to 115 files, the addition of 23 new DO disease terms, 58 textual definitions and 198 SubClassOf axioms, additional OMIM cross references, defining environmental exposures for alcohol and age of onset.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-06-03/src/ontology/doid-merged.obo) | |
+
 ### [v2021-04-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-04-29)
 
 This release includes 10,791 disease terms with 76% of terms defined - including the addition of 64 new disease terms, 67 textual definitions. and new cross references (OMIM, MeSH, GARD, Orphanet). Updates include: amyloidosis reclassification based on 2020 nomenclature update, polymicrogyria subtypes, sporadic amyotrophic lateral sclerosis, cytochrome P450 oxidoreductase deficiency and chromosomal 7q11.23 microduplication syndrome along with reorganization of the skeletal dysplasias, updated pediatric cancer nomenclature, and additional  ICDO codes.

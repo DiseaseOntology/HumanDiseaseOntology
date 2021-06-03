@@ -1193,6 +1193,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_7522",
       "meta" : {
+        "definition" : {
+          "val" : "An embryonal tumor with multilayered rosettes, C19MC-altered that arises from the infratentorial region and occurs in children.",
+          "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6773" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "UMLS_CUI:C1332972"
@@ -1200,6 +1204,10 @@
           "val" : "NCI:C6773"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "childhood infratentorial ependymoblastoma",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "pediatric infratentorial ependymoblastoma",
           "xrefs" : [ ]
@@ -1210,7 +1218,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "childhood infratentorial ependymoblastoma"
+      "lbl" : "childhood infratentorial embryonal tumor with multilayered rosettes, C19MC-altered"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8850",
       "meta" : {
@@ -3968,6 +3976,33 @@
       "type" : "CLASS",
       "lbl" : "ovarian cancer"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_7841",
+      "meta" : {
+        "definition" : {
+          "val" : "An embryonal tumor with multilayered rosettes, C19MC-altered that occurs during childhood.",
+          "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C115203" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C115203"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "childhood cerebral ependymoblastoma",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "pediatric cerebral ependymoblastoma",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "childhood embryonal tumor with multilayered rosettes, C19MC-altered"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2152",
       "meta" : {
         "definition" : {
@@ -3994,27 +4029,6 @@
       },
       "type" : "CLASS",
       "lbl" : "ovary epithelial cancer"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_7841",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
-        "xrefs" : [ {
-          "val" : "NCI:C6957"
-        }, {
-          "val" : "UMLS_CUI:C1332962"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "pediatric cerebral ependymoblastoma",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "childhood cerebral ependymoblastoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2154",
       "meta" : {
@@ -16609,6 +16623,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2226"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_7522",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_7841"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_684",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3571"
@@ -17077,10 +17095,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_305"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_7522",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060103"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1107",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5041"
@@ -17265,13 +17279,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3119",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7732",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5940"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3119",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3908",
       "pred" : "is_a",
@@ -17369,13 +17383,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4851"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_6789",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_120"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5526",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_6789",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_120"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5409",
       "pred" : "is_a",
@@ -17457,13 +17471,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_5530",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3284"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6386",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_6383"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_5530",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3284"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080647",
       "pred" : "is_a",
@@ -17885,13 +17899,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0050905",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080644",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050905",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3973",
       "pred" : "is_a",
@@ -18018,7 +18032,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2021-04-29/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2021-06-03/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

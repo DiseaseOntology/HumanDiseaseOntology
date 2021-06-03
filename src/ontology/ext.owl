@@ -4,6 +4,7 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(doid:=<http://purl.obolibrary.org/obo/doid#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
@@ -90,9 +91,19 @@ SubClassOf(obo:NCBITaxon_131567 obo:NCBITaxon_1)
 
 SubClassOf(obo:SO_0000110 <http://purl.obolibrary.org/obo/doid#sequence>)
 
+# Class: obo:SO_0000400 (sequence attribute)
+
+AnnotationAssertion(rdfs:label obo:SO_0000400 "sequence attribute")
+SubClassOf(obo:SO_0000400 doid:sequence)
+
 # Class: obo:SO_0001060 (sequence_variant)
 
 SubClassOf(obo:SO_0001060 <http://purl.obolibrary.org/obo/doid#sequence>)
+
+# Class: obo:SO_0001260 (sequence collection)
+
+AnnotationAssertion(rdfs:label obo:SO_0001260 "sequence collection")
+SubClassOf(obo:SO_0001260 doid:sequence)
 
 # Class: obo:SYMP_0000539 (jaundice)
 

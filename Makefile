@@ -342,7 +342,7 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
-      build/reports/missing-axiom.txt \
+      build/reports/missing-axioms.txt \
       build/reports/hp-do-overlap.csv \
       xref_counts
 

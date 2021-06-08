@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/doid/obo/ext.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/doid/obo/ext.owl/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -26,9 +26,9 @@ Import(<http://purl.obolibrary.org/obo/doid/imports/so_import.owl>)
 
 Declaration(Class(obo:NCBITaxon_1))
 Declaration(Class(obo:UPHENO_0001001))
-Declaration(Class(<http://purl.obolibrary.org/obo/doid#chebi>))
-Declaration(Class(<http://purl.obolibrary.org/obo/doid#sequence>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/doid#has_symptom>))
+Declaration(Class(doid:chebi))
+Declaration(Class(doid:sequence))
+Declaration(ObjectProperty(doid:has_symptom))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#has_origin>))
 Declaration(AnnotationProperty(obo:OBI_9991118))
 Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
@@ -64,11 +64,11 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/so#has_origin> "h
 
 # Class: obo:CHEBI_24431 (chemical entity)
 
-SubClassOf(obo:CHEBI_24431 <http://purl.obolibrary.org/obo/doid#chebi>)
+SubClassOf(obo:CHEBI_24431 doid:chebi)
 
 # Class: obo:CHEBI_50906 (role)
 
-SubClassOf(obo:CHEBI_50906 <http://purl.obolibrary.org/obo/doid#chebi>)
+SubClassOf(obo:CHEBI_50906 doid:chebi)
 
 # Class: obo:HP_0000118 (Phenotypic abnormality)
 
@@ -89,7 +89,7 @@ SubClassOf(obo:NCBITaxon_131567 obo:NCBITaxon_1)
 
 # Class: obo:SO_0000110 (sequence_feature)
 
-SubClassOf(obo:SO_0000110 <http://purl.obolibrary.org/obo/doid#sequence>)
+SubClassOf(obo:SO_0000110 doid:sequence)
 
 # Class: obo:SO_0000400 (sequence attribute)
 
@@ -98,7 +98,7 @@ SubClassOf(obo:SO_0000400 doid:sequence)
 
 # Class: obo:SO_0001060 (sequence_variant)
 
-SubClassOf(obo:SO_0001060 <http://purl.obolibrary.org/obo/doid#sequence>)
+SubClassOf(obo:SO_0001060 doid:sequence)
 
 # Class: obo:SO_0001260 (sequence collection)
 
@@ -107,19 +107,20 @@ SubClassOf(obo:SO_0001260 doid:sequence)
 
 # Class: obo:SYMP_0000539 (jaundice)
 
-SubClassOf(obo:SYMP_0000539 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/doid#has_symptom> obo:SYMP_0000041))
+SubClassOf(obo:SYMP_0000539 ObjectSomeValuesFrom(doid:has_symptom obo:SYMP_0000041))
 
 # Class: obo:UPHENO_0001001 (phenotype)
 
 AnnotationAssertion(rdfs:label obo:UPHENO_0001001 "phenotype"^^xsd:string)
 
-# Class: <http://purl.obolibrary.org/obo/doid#chebi> (chebi)
+# Class: doid:chebi (chebi)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/doid#chebi> "chebi"^^xsd:string)
+AnnotationAssertion(rdfs:label doid:chebi "chebi"^^xsd:string)
 
-# Class: <http://purl.obolibrary.org/obo/doid#sequence> (sequence)
+# Class: doid:sequence (sequence)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/doid#sequence> "sequence"^^xsd:string)
+AnnotationAssertion(rdfs:label doid:sequence "sequence"^^xsd:string)
+SubClassOf(doid:sequence owl:Thing)
 
 
 AnnotationAssertion(oboInOwl:id obo:CL_0000000 "CL:0000000")

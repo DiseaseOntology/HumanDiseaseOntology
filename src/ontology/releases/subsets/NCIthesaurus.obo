@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-06-03/subsets/NCIthesaurus.obo
+data-version: doid/releases/2021-06-08/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -2663,7 +2663,7 @@ creation_date: 2015-06-19T20:05:16Z
 id: DOID:0060350
 name: adenine phosphoribosyltransferase deficiency
 namespace: disease_ontology
-def: "An amino acid metabolic disorder characterized by the formation 2,8-dihydroxyadenine stones and renal failure secondary to intratubular crystalline precipitation. It has an autosomal recessive inheritance pattern." [url:http\://ghr.nlm.nih.gov/condition/adenine-phosphoribosyltransferase-deficiency, url:https\://en.wikipedia.org/wiki/Adenine_phosphoribosyltransferase_deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/20150536]
+def: "A purine-pyrimidine metaobolic disorder characterized by the formation 2,8-dihydroxyadenine stones and renal failure secondary to intratubular crystalline precipitation and has_material_basis_in homozygous or compound heterozygous mutation in the gene encoding adenine phosphoribosyltransferase (APRT) on chromosome 16q24." [url:http\://ghr.nlm.nih.gov/condition/adenine-phosphoribosyltransferase-deficiency, url:https\://en.wikipedia.org/wiki/Adenine_phosphoribosyltransferase_deficiency, url:https\://pubmed.ncbi.nlm.nih.gov/22700886/, url:https\://pubmed.ncbi.nlm.nih.gov/8864750/, url:https\://www.ncbi.nlm.nih.gov/pubmed/20150536]
 subset: NCIthesaurus
 synonym: "2,8-dihydroxyadenine urolithiasis" EXACT []
 synonym: "APRT deficiency" EXACT []
@@ -2675,7 +2675,7 @@ xref: OMIM:614723
 xref: SNOMEDCT_US_2020_09_01:11852004
 xref: UMLS_CUI:C0268120
 xref: UMLS_CUI:C3665382
-is_a: DOID:9252 ! amino acid metabolic disorder
+is_a: DOID:655 ! inherited metabolic disorder
 created_by: elvira
 creation_date: 2015-07-02T16:06:22Z
 
@@ -15317,6 +15317,7 @@ def: "A sarcoidosis that is characterized by noncaseating granulomatous infiltra
 subset: NCIthesaurus
 synonym: "lung Sarcoidosis" EXACT []
 xref: ICD10CM:D86.0
+xref: MEDDRA:10037430
 xref: MESH:D017565
 xref: NCI:C34997
 xref: SNOMEDCT_US_2020_09_01:187230004
@@ -21929,6 +21930,7 @@ subset: NCIthesaurus
 synonym: "trichomonas infection" RELATED []
 xref: ICD10CM:A59
 xref: ICD9CM:131
+xref: MEDDRA:10044620
 xref: MESH:D014245
 xref: NCI:C35720
 xref: SNOMEDCT_US_2020_09_01:56335008
@@ -31442,15 +31444,18 @@ is_a: DOID:6713 ! cerebrovascular disease
 
 [Term]
 id: DOID:3529
-name: central core myopathy
+name: central core disease
 namespace: disease_ontology
+def: "A congenital structural myopathy that is characterized by motor developmental delay and signs of mild proximal weakness most pronounced in the hip girdle musculature and that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the ryanodine receptor-1 gene (RYR1) on chromosome 19q13." [url:https\://medlineplus.gov/genetics/condition/central-core-disease/, url:https\://pubmed.ncbi.nlm.nih.gov/23553484/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "central core disease" EXACT []
+synonym: "central core myopathy" EXACT []
+xref: GARD:6014
 xref: ICD10CM:G71.29
 xref: MESH:D020512
 xref: NCI:C83010
 xref: OMIM:117000
+xref: ORDO:597
 xref: SNOMEDCT_US_2020_09_01:43152001
 xref: UMLS_CUI:C0751951
 is_a: DOID:422 ! congenital structural myopathy
@@ -53789,6 +53794,7 @@ synonym: "chronic gonococcal infectious disease of lower genitourinary tract" EX
 synonym: "chronic gonococcal infectious disease of upper genitourinary tract" EXACT []
 xref: ICD10CM:A54
 xref: ICD9CM:098
+xref: MEDDRA:10018604
 xref: MESH:D006069
 xref: NCI:C92950
 xref: SNOMEDCT_US_2020_09_01:186943001
@@ -57665,7 +57671,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:8545
 name: malignant hyperthermia
 namespace: disease_ontology
-def: "A muscle tissue disease that is characterized by a drastic and uncontrolled increase in skeletal muscle oxidative metabolism, which overwhelms the body's capacity to supply oxygen, remove carbon dioxide, and regulate body temperature." [url:http\://en.wikipedia.org/wiki/Malignant_hyperthermia]
+def: "A muscle tissue disease that is characterized by a drastic and uncontrolled increase in skeletal muscle oxidative metabolism, which overwhelms the body's capacity to supply oxygen, remove carbon dioxide, and regulate body temperature and that has_material_basis_in heterozygous mutation in the ryanodine receptor gene (RYR1) on chromosome 19q13. Manifestations of malignant hyperthermia (MH) are precipitated by certain volatile anesthetics (i.e., halothane, isoflurane, sevoflurane, desflurane, enflurane), either alone or in conjunction with a depolarizing muscle relaxant (specifically, succinylcholine)." [url:http\://en.wikipedia.org/wiki/Malignant_hyperthermia]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus

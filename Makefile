@@ -196,6 +196,17 @@ $(DO).json: $(DO).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
+$(DO)-base.owl: $(EDIT) | build/robot.jar
+	@$(ROBOT) remove \
+	 --input $< \
+	 --select imports \
+	 --trim false \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
+
 # ----------------------------------------
 # DOID-MERGED
 # ----------------------------------------
@@ -324,10 +335,12 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DO).json\
+ $(DO)-base.owl\
  $(DM).owl $(DM).obo\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
 	@cp $(DO).* src/ontology/releases
+	@cp $(DO)-base.owl src/ontology/releases
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases
 	@cp -r src/ontology/subsets src/ontology/releases

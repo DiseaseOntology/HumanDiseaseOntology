@@ -173,6 +173,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
 	 --input $< \
 	 --method mireot \
 	 --upper-term HP:0000118 \
+	 --upper-term HP:0003674 \
 	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \

@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-07-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-07-29)
+
+DO's 99th GitHub release: includes 10,855 disease terms (76% with text definitions), 707 EQ and 6,542 SubClassOf disease axioms. Addition of "Disease Drivers" and "Onset" imports; doid-base.owl file, new disease terms including: diffuse large B-cell lymphoma activated B-cell type, diffuse large B-cell lymphoma germinal center B-cell type, autoimmune epilepsy, tuberculous encephalopathy; revised the Cowden classification; replace Relation term: 'located in' with 'disease has location'.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-07-29/src/ontology/doid-merged.obo) | |
+
 ### [v2021--6-08](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021--6-08)
 
 This release includes axiom updates defining anatomy to disease relationships (change from ‘located in’ to ‘disease has location’ usage in the logical axioms); the addition of Ryanodine receptor-1 (RYR1) related disease terms. 10,844 DO disease terms.

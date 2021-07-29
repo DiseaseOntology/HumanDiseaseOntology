@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-06-08/subsets/DO_IEDB_slim.obo
+data-version: doid/releases/2021-07-29/subsets/DO_IEDB_slim.obo
 ontology: doid/subsets/DO_IEDB_slim.obo
 
 [Term]
@@ -1349,6 +1349,22 @@ name: latex allergy
 namespace: disease_ontology
 def: "An allergic disease that is triggered by latex." [url:https\://en.wikipedia.org/wiki/Latex_allergy, url:https\://www.ncbi.nlm.nih.gov/pubmed/27010091]
 subset: DO_IEDB_slim
+
+[Term]
+id: DOID:0070334
+name: vegetable allergy
+namespace: disease_ontology
+def: "A food allergy triggered by a vegetable food product." [url:https\://farrp.unl.edu/informallvegetables]
+subset: DO_IEDB_slim
+is_a: DOID:3044 ! food allergy
+
+[Term]
+id: DOID:0070335
+name: celery allergy
+namespace: disease_ontology
+def: "A vegetable allergy triggered by celery (Apium graveolens)." [url:https\://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=4045]
+subset: DO_IEDB_slim
+is_a: DOID:0070334 ! vegetable allergy
 
 [Term]
 id: DOID:13272

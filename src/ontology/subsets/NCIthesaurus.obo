@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-06-08/subsets/NCIthesaurus.obo
+data-version: doid/releases/2021-07-29/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -1236,10 +1236,11 @@ is_a: DOID:655 ! inherited metabolic disorder
 id: DOID:0050657
 name: Bannayan-Riley-Ruvalcaba syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by macrocephaly, multiple noncancerous tumors and hamartomas, and dark freckles on the penis, and has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://en.wikipedia.org/wiki/Bannayan%E2%80%93Riley%E2%80%93Ruvalcaba_syndrome, url:https\://ghr.nlm.nih.gov/condition/bannayan-riley-ruvalcaba-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/31062505]
+def: "A Cowden syndrome that is characterized by macrocephaly, multiple noncancerous tumors and hamartomas, and dark freckles on the penis, and has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://en.wikipedia.org/wiki/Bannayan%E2%80%93Riley%E2%80%93Ruvalcaba_syndrome, url:https\://ghr.nlm.nih.gov/condition/bannayan-riley-ruvalcaba-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/31062505]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Bannayan-Zonana syndrome" EXACT []
+synonym: "Cowden syndrome 1" EXACT []
 synonym: "Riley-Smith syndrome" EXACT []
 synonym: "Ruvalcaba-Myhre-Smith syndrome" EXACT []
 xref: GARD:5887
@@ -1248,7 +1249,7 @@ xref: MESH:D006223
 xref: NCI:C3939
 xref: OMIM:158350
 xref: ORDO:109
-is_a: DOID:225 ! syndrome
+is_a: DOID:6457 ! Cowden syndrome
 
 [Term]
 id: DOID:0050678
@@ -15490,7 +15491,7 @@ property_value: exactMatch MESH:D013796 xsd:string
 id: DOID:13482
 name: Proteus syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by overgrowth of the bones, skin, and other tissues." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
+def: "A PTEN hamartoma tumor syndrome that is characterized by overgrowth of the bones, skin, and other tissues." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Wiedemann's syndrome" EXACT []
@@ -27256,6 +27257,7 @@ id: DOID:2913
 name: acute pancreatitis
 namespace: disease_ontology
 alt_id: DOID:2912
+def: "A pancreatitis that is characterized by inflammation of the pancreas over a short period of time and has symptoms of severe abdominal pain, nausea, vomiting, diarrhea, fever, and shock." [url:https\://www.nhs.uk/conditions/acute-pancreatitis/]
 subset: NCIthesaurus
 synonym: "acute necrotizing pancreatitis" EXACT []
 synonym: "PANCREATITIS NECROTIZING" EXACT []
@@ -40469,6 +40471,7 @@ is_a: DOID:4232 ! extraosseous Ewing sarcoma
 id: DOID:4989
 name: pancreatitis
 namespace: disease_ontology
+def: "A pancreas disease that is characterized by inflammation of the pancreas." [url:https\://medlineplus.gov/pancreatitis.html]
 subset: NCIthesaurus
 xref: EFO:0000278
 xref: ICD10CM:K85.9
@@ -46041,7 +46044,7 @@ is_a: DOID:3373 ! parosteal osteosarcoma
 id: DOID:5810
 name: adenosine deaminase deficiency
 namespace: disease_ontology
-def: "A severe combined immunodeficiency that is caused by a defective enzyme, adenosine deaminase (ADA), necessary for the breakdown of purines. Lack of ADA causes accumulation of dATP." [url:http\://en.wikipedia.org/wiki/Severe_combined_immunodeficiency]
+def: "A severe combined immunodeficiency that is caused by a defective enzyme, adenosine deaminase (ADA), necessary for the breakdown of purines. Lack of ADA causes accumulation of dATP." [url:http\://en.wikipedia.org/wiki/Severe_combined_immunodeficiency, url:https\://pubmed.ncbi.nlm.nih.gov/2166947/, url:https\://pubmed.ncbi.nlm.nih.gov/2783588/]
 subset: NCIthesaurus
 synonym: "ADA" EXACT []
 xref: GARD:5748
@@ -46051,6 +46054,7 @@ xref: OMIM:102700
 xref: SNOMEDCT_US_2020_09_01:190999009
 xref: UMLS_CUI:C0268124
 is_a: DOID:627 ! severe combined immunodeficiency
+is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:5812
@@ -46074,7 +46078,7 @@ is_a: DOID:627 ! severe combined immunodeficiency
 id: DOID:5813
 name: purine nucleoside phosphorylase deficiency
 namespace: disease_ontology
-def: "A combined T cell and B cell immunodeficiency that is a rare autosomal recessive metabolic disorder that has_material_basis_in mutation in the PNP gene and characterized mainly by decreased T-cell function." [url:http\://en.wikipedia.org/wiki/Purine_nucleoside_phosphorylase_deficiency]
+def: "A combined T cell and B cell immunodeficiency that is a rare autosomal recessive metabolic disorder that has_material_basis_in mutation in the PNP gene and characterized mainly by decreased T-cell function." [url:http\://en.wikipedia.org/wiki/Purine_nucleoside_phosphorylase_deficiency, url:https\://pubmed.ncbi.nlm.nih.gov/1384322/, url:https\://pubmed.ncbi.nlm.nih.gov/3029074/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "deficiency of inosine phosphorylase" EXACT []
@@ -46090,6 +46094,7 @@ xref: ORDO:760
 xref: SNOMEDCT_US_2020_09_01:60743005
 xref: UMLS_CUI:C0268125
 is_a: DOID:628 ! combined T cell and B cell immunodeficiency
+is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:5815
@@ -49043,7 +49048,7 @@ id: DOID:6457
 name: Cowden syndrome
 namespace: disease_ontology
 alt_id: DOID:3471
-def: "A syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome, url:http\://rarediseases.info.nih.gov/gard/6202/cowden-syndrome/resources/1]
+def: "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome, url:http\://rarediseases.info.nih.gov/gard/6202/cowden-syndrome/resources/1]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -60867,6 +60872,7 @@ def: "An amino acid metabolic disorder that involves an abnormally large level o
 subset: NCIthesaurus
 xref: MESH:D020138
 xref: NCI:C84770
+xref: OMIM:603174
 xref: SNOMEDCT_US_2020_09_01:419503008
 xref: UMLS_CUI:C0598608
 is_a: DOID:9252 ! amino acid metabolic disorder

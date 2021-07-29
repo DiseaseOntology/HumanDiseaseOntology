@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2021-06-08/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2021-07-29/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -296,6 +296,7 @@
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-09-18T01:58:25Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:3178</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D016403</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>DLBCL</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050745</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
@@ -3469,6 +3470,47 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://pubmed.ncbi.nlm.nih.gov/29521591/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://thejns.org/view/journals/j-neurosurg/130/2/article-p418.xml</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.sciencedirect.com/science/article/pii/S221475191830183X</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0080996 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080996">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050745"/>
+        <obo:IAO_0000115>A diffuse kage B-cell lymphoma that is characterized by the expression of CD44, PKCbeta1, Cyclin D2, BCL-2, and IRF4/MUM1 genes.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C36081</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>DLBCL ABC type</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0080996</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">diffuse large B-cell lymphoma activated B-cell type</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080996"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A diffuse kage B-cell lymphoma that is characterized by the expression of CD44, PKCbeta1, Cyclin D2, BCL-2, and IRF4/MUM1 genes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C36081</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0080997 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080997">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050745"/>
+        <obo:IAO_0000115>A diffuse large B-cell lymphoma that is characterized by the expression of CD10, BCL-6, A-myb, and LMO2 genes, BCL-2 translocation, and c-REL amplification.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C36080</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0080997</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">diffuse large B-cell lymphoma germinal center B-cell type</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080997"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A diffuse large B-cell lymphoma that is characterized by the expression of CD10, BCL-6, A-myb, and LMO2 genes, BCL-2 translocation, and c-REL amplification.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C36080</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

@@ -6,7 +6,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl"/>
     </owl:Ontology>
@@ -31,6 +32,12 @@
         <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">definition</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
     
 
 
@@ -131,6 +138,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001714"/>
+        <obo:IAO_0000115>A relish, sauce, or seasoning  added to food to impart a particular flavour or to complement the dish.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">condiment food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001150">
@@ -193,6 +210,17 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001175">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
         <rdfs:label xml:lang="en">plant stem food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001133"/>
+        <obo:IAO_0000115 xml:lang="en">A vegetable product such as leaves, flowers, seeds and roots that is rich in essential oils and aromatic principles. Used mainly a a condiment.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">spice or herb</rdfs:label>
     </owl:Class>
     
 
@@ -338,6 +366,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001714 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001714">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
+        <obo:IAO_0000115 xml:lang="en">A food product which normally exists as an ingredient to another food product, rather than eaten on its own, and is more complex than a chemical food component.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">food product component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001717 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001717">
@@ -384,6 +422,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001811 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001811">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001242"/>
+        <rdfs:label xml:lang="en">dill food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00002029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002029">
@@ -416,6 +463,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002220"/>
         <rdfs:label xml:lang="en">pacific salmon food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001242"/>
+        <rdfs:label xml:lang="en">parsley food product</rdfs:label>
     </owl:Class>
     
 
@@ -536,7 +592,73 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003652">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030103"/>
+        <obo:IAO_0000115 xml:lang="en">A drupe fruit of a jujube plant (Ziziphus jujuba).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">jujube fruit (whole)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420116">
+        <obo:IAO_0000115 xml:lang="en">Anatomical part of the plant or animal from which a food product or its major ingredient is derived.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">part of organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025496"/>
+        <obo:IAO_0000115>A multi-tissue plant structure (PO:0025496) that develops from a gynoecium (PO:0009062), or a single carpel (PO:0009030), and at maturity may have as parts one or more seeds (PO:0009010).</obo:IAO_0000115>
+        <oboInOwl:id>PO:0009001</oboInOwl:id>
+        <rdfs:label>fruit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420116"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+        <obo:IAO_0000115>A plant anatomical entity (PO:0025131) that is, or was, part of a plant, or was derived from a part of a plant.</obo:IAO_0000115>
+        <oboInOwl:id>PO:0009011</oboInOwl:id>
+        <rdfs:label>plant structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025131">
+        <obo:IAO_0000115>An anatomical entity that is or was part of a plant.</obo:IAO_0000115>
+        <oboInOwl:id>PO:0025131</oboInOwl:id>
+        <rdfs:label>plant anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025496 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025496">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
+        <obo:IAO_0000115>A plant structure (PO:0009011) that has as parts two or more portions of plant tissue (PO:0009007) of at least two different types and which through specific morphogenetic processes forms a single structural unit demarcated by primarily bona-fide boundaries from other structural units of different types.</obo:IAO_0000115>
+        <oboInOwl:id>PO:0025496</oboInOwl:id>
+        <rdfs:label>multi-tissue plant structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0030103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
+        <obo:IAO_0000115>A fruit (PO:0009001) which develops from a carpel (PO:0009030) and at maturity comprises a fleshy exocarp (PO:0009085), fleshy mesocarp (PO:0009087), and a stony endocarp (PO:0009086).</obo:IAO_0000115>
+        <oboInOwl:id>PO:0030103</oboInOwl:id>
+        <rdfs:label>drupe fruit</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

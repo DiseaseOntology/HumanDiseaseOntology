@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-08-17](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-08-17)
+
+The 100th GitHub Release of the Human Disease Ontology. 10,862 disease terms. 76% (8312) textual definitions. Includes UMLS bi-annual update: new MESH, NCI, SNOMEDCT xrefs. New disease terms including parsley allergy, dill allergy, RNASET2-deficient cystic leukoencephalopathy.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-08-17/src/ontology/doid-merged.obo) | |
+
 ### [v2021-07-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-07-29)
 
 DO's 99th GitHub release: includes 10,855 disease terms (76% with text definitions), 707 EQ and 6,542 SubClassOf disease axioms. Addition of "Disease Drivers" and "Onset" imports; doid-base.owl file, new disease terms including: diffuse large B-cell lymphoma activated B-cell type, diffuse large B-cell lymphoma germinal center B-cell type, autoimmune epilepsy, tuberculous encephalopathy; revised the Cowden classification; replace Relation term: 'located in' with 'disease has location'.

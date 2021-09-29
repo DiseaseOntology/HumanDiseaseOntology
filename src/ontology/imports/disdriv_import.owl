@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/disdriv.owl/"
-     xml:base="http://purl.obolibrary.org/obo/disdriv.owl/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl/"
+     xml:base="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl">
-        <dc:description>Drivers of human diseases including environmental, maternal and social exposures.</dc:description>
-        <dc:title>Disease Drivers</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:title>Disease Drivers</dc:title>
+        <dc:description>Drivers of human diseases including environmental, maternal and social exposures.</dc:description>
     </owl:Ontology>
     
 
@@ -198,84 +198,94 @@
     <!-- http://purl.obolibrary.org/obo/DISDRIV_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000000">
+        <obo:IAO_0000115>Disease emergence or outbreaks often occur following a driver. Examples of such drivers include climate and weather, economic development, poverty and social inequality, war and famine, human–wildlife interactions, land use and ecosystem changes. (antecedent conditions)</obo:IAO_0000115>
+        <oboInOwl:id>DISDRIV:0000000</oboInOwl:id>
         <rdfs:label xml:lang="en">disease driver</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ExO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000000"/>
-        <obo:IAO_0000115>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
-        <oboInOwl:id>ExO:0000000</oboInOwl:id>
-        <rdfs:label>exposure stressor</rdfs:label>
+        <obo:IAO_0000115>A disease driver that is comprised of a shortage of a nutrient.</obo:IAO_0000115>
+        <oboInOwl:id>DISDRIV:0000001</oboInOwl:id>
+        <rdfs:label xml:lang="en">nutrient deficiency</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A disease driver that is comprised of a shortage of a nutrient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.who.int/health-topics/micronutrients</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ExO_0000005 -->
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000005">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000005"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-        <obo:IAO_0000115>An agent of biological origin.</obo:IAO_0000115>
-        <oboInOwl:id>ExO:0000005</oboInOwl:id>
-        <rdfs:label>biological agent</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000000"/>
+        <rdfs:label xml:lang="en">socioeconomic drivers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000000"/>
+        <rdfs:label xml:lang="en">weather driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000001"/>
+        <obo:IAO_0000115>A nutrient deficiency of vitamin B7 (biotin) foods like eggs, milk, and bananas.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">deficiency of biotin</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000005"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent of biological origin.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A nutrient deficiency of vitamin B7 (biotin) foods like eggs, milk, and bananas.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ods.od.nih.gov/factsheets/Biotin-Consumer/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ExO_0000006 -->
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000006">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000006"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-        <obo:IAO_0000115>An agent of chemical origin.</obo:IAO_0000115>
-        <oboInOwl:id>ExO:0000006</oboInOwl:id>
-        <rdfs:label>chemical agent</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000001"/>
+        <obo:IAO_0000115>A nutrient deficiency</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">deficiency of choline</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000006"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent of chemical origin.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A nutrient deficiency</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ods.od.nih.gov/factsheets/Choline-Consumer/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:url:https://ods.od.nih.gov/factsheets/Choline-HealthProfessional/</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DISDRIV_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DISDRIV_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000000"/>
+        <rdfs:label xml:lang="en">chemical driver</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/ExO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000007">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000007"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000000"/>
         <obo:IAO_0000115>An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment.</obo:IAO_0000115>
         <oboInOwl:id>ExO:0000007</oboInOwl:id>
         <rdfs:label>ecological perturbations</rdfs:label>
@@ -284,52 +294,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000008 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000008">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000008"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-        <obo:IAO_0000115>An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes).</obo:IAO_0000115>
-        <oboInOwl:id>ExO:0000008</oboInOwl:id>
-        <rdfs:label>physical agent</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000008"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000009">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000009"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-        <obo:IAO_0000115>An agent that interferes with one&apos;s psychological development in and interaction with a social environment.</obo:IAO_0000115>
-        <oboInOwl:id>ExO:0000009</oboInOwl:id>
-        <rdfs:label>psychosocial agent</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000009"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent that interferes with one&apos;s psychological development in and interaction with a social environment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29351546/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -375,7 +339,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000002"/>
         <obo:IAO_0000115>A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level.</obo:IAO_0000115>
         <oboInOwl:id>ExO:0000015</oboInOwl:id>
         <rdfs:label>poverty</rdfs:label>
@@ -388,9 +352,43 @@
         <oboInOwl:hasDbXref>url:https://www.un.org/en/global-issues/ending-poverty</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.worldbank.org/en/topic/poverty/overview</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30879/ -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30879/">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001579/"/>
+        <obo:IAO_0000115>A compound in which a hydroxy group, -OH, is attached to a saturated carbon atom.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:30879</oboInOwl:id>
+        <rdfs:label>alcohol</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879/"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A compound in which a hydroxy group, -OH, is attached to a saturated carbon atom.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/alcohol.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001579/ -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001579/">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>An alcoholic drink (or alcoholic beverage) is a drink that contains ethanol, a type of alcohol produced by fermentation of grains, fruits, or other sources of sugar.</obo:IAO_0000115>
+        <oboInOwl:id>FOODON:00001579</oboInOwl:id>
+        <rdfs:label>alcoholic beverage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001579/"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An alcoholic drink (or alcoholic beverage) is a drink that contains ethanol, a type of alcohol produced by fermentation of grains, fruits, or other sources of sugar.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.m.wikipedia.org/wiki/Alcoholic_drink</oboInOwl:hasDbXref>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
 

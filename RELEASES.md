@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-10-11](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-10-11)
+
+An extra release in early October to update imports and push out 11 new disease terms added by MGI.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-10-11/src/ontology/doid-merged.obo) | |
+
 ### [v2021-09-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-09-30)
 
 DO's September 2021 release, contains updated biotin deficiency, dextro-looped transposition of the great arteries, glycogen storage diseases, the addition of the WHO's critical, severe and non-severe COVID-19 terms, classification updates for sexual health disorders and fibromyalgia, additional HPO phenotype axioms, and the addition of RO term object property 'disease has feature', and updated DISDRIV import.

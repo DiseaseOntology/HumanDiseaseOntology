@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-10-12/subsets/NCIthesaurus.obo
+data-version: doid/releases/2021-11-16/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -28,6 +28,7 @@ name: disease of metabolism
 namespace: disease_ontology
 def: "A disease that involving errors in metabolic processes of building or degradation of molecules." [url:http\://www.ncbi.nlm.nih.gov/books/NBK22259/]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "metabolic disease" EXACT []
@@ -59,6 +60,7 @@ alt_id: DOID:9532
 alt_id: DOID:9696
 def: "A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions." [url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C26726]
 comment: DO:wk
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -5332,6 +5334,7 @@ alt_id: DOID:514
 def: "A male reproductive organ cancer that is located_in the prostate." [url:http\://www.cancer.gov/dictionary?CdrID=445079]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -6165,6 +6168,7 @@ alt_id: DOID:4713
 def: "A gastrointestinal system cancer that is located_in the stomach." [url:http\://cancergenome.nih.gov/cancersselected/stomach-esophagealcancer, url:http\://en.wikipedia.org/wiki/Stomach]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
@@ -8325,6 +8329,7 @@ alt_id: DOID:5428
 def: "An urinary system cancer that results_in malignant growth located_in the urinary bladder." [url:http\://en.wikipedia.org/wiki/Bladder_cancer]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -11148,6 +11153,7 @@ name: head and neck cancer
 namespace: disease_ontology
 def: "An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx." [url:http\://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&codlan=1&codcol=70&codcch=9, url:http\://en.wikipedia.org/wiki/Head_and_neck_cancer, url:http\://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck, url:http\://www.cancer.gov/dictionary?CdrID=257519, url:http\://www.iarc.fr/en/publications/pdfs-online/pat-gen/bb9/index.php]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -13676,6 +13682,7 @@ namespace: disease_ontology
 alt_id: DOID:73
 def: "A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis." [url:http\://en.wikipedia.org/wiki/Circulatory_system]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: DO_RAD_slim
@@ -14631,6 +14638,7 @@ alt_id: DOID:6649
 alt_id: DOID:911
 def: "A central nervous system cancer that is characterized by the growth of abnormal cells in the tissues of the brain." [url:http\://www.cancer.gov/dictionary?CdrID=387264]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
@@ -19412,6 +19420,7 @@ namespace: disease_ontology
 alt_id: DOID:6309
 def: "A disease of anatomical entity that is located_in reproductive system organs." [url:http\://en.wikipedia.org/wiki/Reproductive_system]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -19426,6 +19435,7 @@ name: disease of mental health
 namespace: disease_ontology
 def: "A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture." [url:http\://en.wikipedia.org/wiki/Mental_disorder]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: DO_RAD_slim
@@ -19931,6 +19941,7 @@ alt_id: DOID:4241
 def: "A thoracic cancer that originates in the mammary gland." [url:http\://en.wikipedia.org/wiki/Breast_cancer, url:http\://en.wikipedia.org/wiki/Mammary, url:http\://www.cancer.gov/cancertopics/types/breast, url:http\://www.nlm.nih.gov/medlineplus/breastcancer.html]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -19998,6 +20009,7 @@ def: "A disease of cellular proliferation that is malignant and primary, charact
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_GXD_slim
 subset: DO_RAD_slim
@@ -20363,6 +20375,7 @@ name: musculoskeletal system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that occurs in the muscular and/or skeletal system." [url:http\://en.wikipedia.org/wiki/Human_musculoskeletal_system#Diseases_and_disorders]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -20876,6 +20889,7 @@ namespace: disease_ontology
 alt_id: DOID:10008
 def: "An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of thyroid gland" EXACT []
@@ -21035,6 +21049,7 @@ alt_id: DOID:9859
 def: "An endocrine gland cancer located_in the pancreas." [url:http\://en.wikipedia.org/wiki/Pancreatic]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -21153,6 +21168,7 @@ namespace: disease_ontology
 alt_id: DOID:579
 def: "A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra." [url:http\://en.wikipedia.org/wiki/Urinary_system]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -23481,6 +23497,7 @@ name: syndrome
 namespace: disease_ontology
 def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -24102,6 +24119,7 @@ alt_id: DOID:9595
 def: "A female reproductive organ cancer that is located_in the ovary." [url:http\://www.cancer.gov/dictionary?CdrID=445074]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
 subset: DO_rare_slim
@@ -24723,6 +24741,7 @@ alt_id: DOID:1034
 alt_id: DOID:2532
 def: "An organ system cancer located in the hematological system that is characterized by uncontrolled cellular proliferation in blood, bone marrow and lymph nodes." [url:http\://en.wikipedia.org/wiki/Blood_cancer, url:http\://www.cancer.gov/dictionary/?CdrID=45708]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
@@ -25293,6 +25312,7 @@ alt_id: DOID:11834
 alt_id: DOID:3676
 def: "A urinary system cancer that is located_in the kidney." [url:http\://en.wikipedia.org/wiki/Kidney_cancer]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of kidney except pelvis" EXACT []
@@ -26636,6 +26656,7 @@ name: endocrine system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in endocrine glands which secretes a type of hormone directly into the bloodstream to regulate the body." [url:http\://en.wikipedia.org/wiki/Endocrine_system]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: DO_RAD_slim
@@ -29292,13 +29313,13 @@ is_a: DOID:655 ! inherited metabolic disorder
 id: DOID:3213
 name: demyelinating disease
 namespace: disease_ontology
-def: "A neurodegenerative disease that is characterized by damage to the myelin sheath present around nerve axons." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17071802]
+def: "A central nervous system disease that is characterized by damage to the myelin sheath present around nerve axons." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17071802]
 subset: NCIthesaurus
 synonym: "demyelinating disorder" EXACT []
 xref: MESH:D003711
 xref: NCI:C34527
 xref: UMLS_CUI:C0011303
-is_a: DOID:1289 ! neurodegenerative disease
+is_a: DOID:331 ! central nervous system disease
 
 [Term]
 id: DOID:3216
@@ -29926,6 +29947,7 @@ name: central nervous system disease
 namespace: disease_ontology
 def: "A nervous system disease that affects either the spinal cord (myelopathy) or brain (encephalopathy) of the central nervous system." [url:http\://en.wikipedia.org/wiki/Central_nervous_system_disease]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: NCIthesaurus
 xref: ICD10CM:G96.9
@@ -30545,7 +30567,7 @@ synonym: "small cell Osteosarcoma" EXACT []
 xref: NCI:C4023
 xref: SNOMEDCT_US_2021_03_01:12302002
 xref: UMLS_CUI:C0279622
-is_a: DOID:3376 ! bone osteosarcoma
+is_a: DOID:7602 ! conventional osteosarcoma
 
 [Term]
 id: DOID:3379
@@ -31645,6 +31667,7 @@ alt_id: DOID:915
 alt_id: DOID:919
 def: "A hepatobiliary system cancer that is located_in the liver." [url:http\://en.wikipedia.org/wiki/Liver]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -32071,6 +32094,7 @@ namespace: disease_ontology
 alt_id: DOID:4363
 def: "A female reproductive organ cancer that is located_in the uterus." [url:http\://www.cancer.gov/dictionary?CdrID=445094]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "CA - cancer of uterus" EXACT []
@@ -34143,6 +34167,7 @@ name: adrenal gland cancer
 namespace: disease_ontology
 alt_id: DOID:11007
 def: "An endocrine gland cancer located_in the adrenal glands which are located above the kidneys." [url:http\://en.wikipedia.org/wiki/Adrenal_gland]
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "adrenal cancer" EXACT []
@@ -35328,6 +35353,7 @@ id: DOID:4159
 name: skin cancer
 namespace: disease_ontology
 def: "An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells." [url:https\://medlineplus.gov/skincancer.html]
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "CA - skin cancer" EXACT []
@@ -36539,6 +36565,7 @@ namespace: disease_ontology
 alt_id: DOID:4361
 def: "A female reproductive organ cancer that is located_in the cervix." [url:http\://cancergenome.nih.gov/cancersselected/cervicalcancer, url:http\://en.wikipedia.org/wiki/Cervical_cancer, url:http\://www.cancer.gov/dictionary?CdrID=444973]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "cervical neoplasm" EXACT []
@@ -37370,6 +37397,7 @@ synonym: "Perenial allergic rhinitis" EXACT []
 synonym: "pollenosis" EXACT []
 synonym: "seasonal allergic rhinitis" EXACT []
 xref: EFO:0003956
+xref: MESH:D065631
 xref: NCI:C34987
 xref: OMIM:607154
 xref: SNOMEDCT_US_2021_03_01:38103000
@@ -40743,6 +40771,7 @@ alt_id: DOID:1102
 alt_id: DOID:1104
 def: "A gastrointestinal system cancer that is located_in the esophagus." [url:http\://cancergenome.nih.gov/cancersselected/stomach-esophagealcancer, url:http\://en.wikipedia.org/wiki/Esophagus]
 subset: DO_cancer_slim
+subset: DO_CFDE_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -43002,7 +43031,6 @@ synonym: "Prolactinoma of Pituitary gland" EXACT []
 xref: GARD:4508
 xref: MESH:D015175
 xref: NCI:C3342
-xref: OMIM:600634
 xref: SNOMEDCT_US_2021_03_01:367098005
 xref: UMLS_CUI:C0033375
 is_a: DOID:5395 ! functioning pituitary adenoma
@@ -45610,6 +45638,7 @@ namespace: disease_ontology
 alt_id: DOID:13069
 def: "A nervous system disease that affects the peripheral nervous system." [url:http\://en.wikipedia.org/w/index.php?title=Peripheral_neuropathy&redirect=no]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: NCIthesaurus
 synonym: "peripheral nerve disease" RELATED []
@@ -48471,6 +48500,7 @@ id: DOID:630
 name: genetic disease
 namespace: disease_ontology
 def: "A disease that has_material_basis_in genetic variations in the human genome." [url:http\://ghr.nlm.nih.gov/]
+subset: DO_CFDE_slim
 subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: MESH:D030342
@@ -51244,7 +51274,7 @@ synonym: "Telangiectatic osteosarcoma" EXACT []
 xref: NCI:C3902
 xref: SNOMEDCT_US_2021_03_01:78453009
 xref: UMLS_CUI:C0259782
-is_a: DOID:3376 ! bone osteosarcoma
+is_a: DOID:7602 ! conventional osteosarcoma
 
 [Term]
 id: DOID:6958
@@ -53065,6 +53095,7 @@ name: hematopoietic system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that has_material_basis_in hematopoietic cells." [url:http\://en.wikipedia.org/wiki/Hematopathology, url:https\://www.ncbi.nlm.nih.gov/books/NBK1741/]
 subset: DO_AGR_slim
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus
@@ -54058,9 +54089,13 @@ is_a: DOID:6477 ! invasive bladder transitional cell carcinoma
 id: DOID:7602
 name: conventional osteosarcoma
 namespace: disease_ontology
+alt_id: DOID:3378
+def: "A bone osteosarcoma that is characterized by the presence of osteoid extracellular matrix and that arises from the medullary portion of the bone. It affects the long bones and most commonly, the distal femur, proximal tibia, and proximal humerus. Pain with or without a palpable mass is the most common clinical presentation." [url:https\://radiopaedia.org/articles/osteosarcoma]
 subset: NCIthesaurus
+synonym: "conventional central osteosarcoma" EXACT []
 synonym: "intracortical osteogenic sarcoma" EXACT []
 synonym: "Intracortical osteosarcoma" EXACT []
+synonym: "Medullary Osteosarcoma" EXACT []
 xref: ICDO:9195/3
 xref: NCI:C35870
 xref: SNOMEDCT_US_2021_03_01:128774006
@@ -54077,7 +54112,7 @@ synonym: "Fibrosarcomatous Osteogenic sarcoma" EXACT []
 xref: NCI:C4020
 xref: SNOMEDCT_US_2021_03_01:12690005
 xref: UMLS_CUI:C0279602
-is_a: DOID:3376 ! bone osteosarcoma
+is_a: DOID:7602 ! conventional osteosarcoma
 
 [Term]
 id: DOID:7607
@@ -58136,6 +58171,7 @@ id: DOID:863
 name: nervous system disease
 namespace: disease_ontology
 def: "A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system." [url:http\://en.wikipedia.org/wiki/Nervous_system]
+subset: DO_CFDE_slim
 subset: DO_GXD_slim
 subset: DO_MGI_slim
 subset: NCIthesaurus

@@ -11,6 +11,17 @@
 
 ## 2021 Releases
 
+### [v2021-11-17](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-11-17)
+
+This release addresses two issues, an IAO ID substitution for the rdf:label, and the revision of has_symptom property.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2021-11-17/src/ontology/doid-merged.obo) | |
+
 ### [v2021-11-16](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-11-16)
 
 The DO's November 2021 release includes 10,901 disease terms, the addition of: 32 disease terms,  a new slim file: DO_CFDE_slim with 44 DO terms, for the Common Fund Data Ecosystem project, the addition of: over 2,600 has_symptom axioms, DO terms for the OMIM pontocerebellar hypoplasia phenotypic series, and additional definitions and xrefs.

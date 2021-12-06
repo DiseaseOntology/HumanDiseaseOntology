@@ -59,9 +59,9 @@ FASTOBO := build/fastobo-validator
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
-	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=v0.4.0%2Ffastobo_validator-x86_64-apple-darwin.tar.gz
+	FASTOBO_URL := https://github.com/fastobo/fastobo-validator/releases/latest/download/fastobo_validator-x86_64-apple-darwin.tar.gz
 else
-	FASTOBO_URL := https://bintray.com/fastobo/fastobo-validator/download_file?file_path=stable%2Ffastobo_validator-x86_64-linux-musl.tar.gz
+	FASTOBO_URL := https://github.com/fastobo/fastobo-validator/releases/latest/download/fastobo_validator-x86_64-linux-musl.tar.gz
 endif
 
 build/fastobo.tar.gz: | build

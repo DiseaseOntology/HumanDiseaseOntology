@@ -49,7 +49,7 @@ update_robot:
 	rm -rf build/robot.jar && make build/robot.jar
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/latest/download/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -96,6 +96,7 @@ $(IMPS): | build/robot.jar
 # PRE-BUILD TESTS
 # ----------------------------------------
 
+.PHONY: report
 report: build/reports/report.tsv
 
 # Report for general issues on doid-edit

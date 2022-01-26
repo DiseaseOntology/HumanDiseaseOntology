@@ -1,0 +1,16 @@
+# identifies IDs that were mistyped and do not match the class
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?class ?id
+WHERE {
+    # identify active classes & id
+	?class a owl:Class ;
+		oboInOwl:id ?id .
+	FILTER NOT EXISTS { ?class owl:deprecated ?any . }
+
+	# capture & compare class/id numbers
+	BIND(STRAFTER(str(?id), ":") AS ?id_num)
+	BIND(STRAFTER(str(?class), "_") AS ?class_num)
+	FILTER (str(?class_num) != str(?id_num))
+}

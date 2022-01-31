@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2021-12-15/subsets/NCIthesaurus.obo
+data-version: doid/releases/2022-01-31/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -729,6 +729,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:9884
 xref: ICD10CM:C93.3
+xref: ICDO:9946/3
 xref: MESH:D054429
 xref: NCI:C9233
 xref: OMIM:607785
@@ -1276,6 +1277,7 @@ subset: NCIthesaurus
 synonym: "intermediate cell small cell carcinoma" EXACT []
 synonym: "Small cell carcinoma - intermediate cell" EXACT []
 synonym: "Small cell carcinoma, intermediate cell" EXACT []
+xref: ICDO:8041/3
 xref: NCI:C4099
 xref: SNOMEDCT_US_2021_09_01:5958006
 xref: UMLS_CUI:C0334239
@@ -1377,6 +1379,7 @@ def: "A B-cell lymphocytic neoplasm characterized by an uncontrolled increase of
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
+xref: ICDO:9671/3
 is_a: DOID:707 ! B-cell lymphoma
 created_by: lschriml
 creation_date: 2012-09-18T02:00:45Z
@@ -1429,6 +1432,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "chemodectoma" EXACT []
 synonym: "glomus body tumor" EXACT []
+xref: ICDO:8680/3
 xref: MESH:D010235
 xref: NCI:C3308
 xref: OMIM:115310
@@ -1786,6 +1790,7 @@ namespace: disease_ontology
 def: "A hypersensitivity reaction type IV disease that results from a proliferation of cells producing immunoglobulin heavy chains." [url:http\://en.wikipedia.org/wiki/Heavy_chain_disease]
 subset: NCIthesaurus
 xref: ICD10CM:C88.2
+xref: ICDO:9762/3
 xref: MESH:D006362
 xref: NCI:C3082
 xref: NCI:C3083
@@ -3090,6 +3095,7 @@ name: hepatoid adenocarcinoma
 namespace: disease_ontology
 def: "An adenocarcinoma with morphologic characteristics similar to hepatocellular carcinoma, arising from an anatomic site other than the liver." [url:https\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: NCIthesaurus
+xref: ICDO:8576/3
 xref: NCI:C66950
 is_a: DOID:299 ! adenocarcinoma
 disjoint_from: DOID:0080202 ! adenoid cystic carcinoma
@@ -3384,7 +3390,6 @@ subset: NCIthesaurus
 synonym: "familial pemphigus vulgaris" EXACT []
 xref: GARD:7355
 xref: ICD10CM:L10.0
-xref: MESH:D010392
 xref: NCI:C34910
 xref: OMIM:169610
 xref: ORDO:704
@@ -3614,13 +3619,13 @@ subset: NCIthesaurus
 synonym: "childhood acute myeloid leukaemia" EXACT []
 synonym: "paediatric acute myeloid leukaemia" EXACT []
 synonym: "pediatric acute myeloid leukemia" EXACT []
-xref: ICDO:M9861/3
+xref: ICDO:9861/3
 xref: NCI:C9160
 is_a: DOID:7757 ! childhood leukemia
 
 [Term]
 id: DOID:0070324
-name: systemic Epstein-Barr virus-positive T-cell lymphoma of childhood
+name: systemic Epstein-Barr virus positive T-cell lymphoma of childhood
 namespace: disease_ontology
 def: "A childhood lymphoma that is characterized by monoclonal expansion of Epstein-Barr virus-positive T cells with an activated cytotoxic phenotype in tissues or peripheral blood." [url:https\://en.wikipedia.org/wiki/Epstein-Barr_virus-associated_lymphoproliferative_diseases, url:https\://www.ncbi.nlm.nih.gov/pubmed/30931288]
 subset: DO_cancer_slim
@@ -3632,7 +3637,8 @@ xref: ICDO:9724/3
 xref: MESH:D008232
 xref: NCI:C80374
 xref: ORDO:364033
-xref: SNOMEDCT_US_2019_09_01:450906003
+xref: SNOMEDCT_US_2021_07_31:721311006
+xref: UMLS_CUI:C4303422
 is_a: DOID:5823 ! childhood lymphoma
 
 [Term]
@@ -3668,9 +3674,10 @@ subset: NCIthesaurus
 synonym: "Malignant melanoma in congenital melanocytic nevus" EXACT []
 synonym: "melanocytic nevi" EXACT []
 xref: GARD:2469
-xref: ICDO:M8761/3
+xref: ICDO:8761/3
 xref: NCI:C48613
-xref: SNOMEDCT_US_2019_09_01:75931002
+xref: SNOMEDCT_US_2021_07_31:75931002
+xref: UMLS_CUI:C1711221
 is_a: DOID:8923 ! skin melanoma
 
 [Term]
@@ -3862,6 +3869,7 @@ namespace: disease_ontology
 def: "A chronic leukemia characterized by neutrophilic leukocytosis with no detectable Philadelphia chromosome or BCR/ABL fusion gene." [url:https\://en.wikipedia.org/wiki/Chronic_neutrophilic_leukemia]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:9963/3
 xref: NCI:C3179
 is_a: DOID:1036 ! chronic leukemia
 
@@ -3873,6 +3881,7 @@ def: "A chronic leukemia characterized by monocytosis, increased monocytes in th
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:8225
+xref: ICDO:9945/3
 xref: NCI:C3178
 is_a: DOID:1036 ! chronic leukemia
 
@@ -3905,6 +3914,7 @@ namespace: disease_ontology
 def: "An adenocarcinoma that is characterized by bands or cylinders of hyalinized or mucinous stroma separating or surrounded by nests or cords of small epithelial cells." [url:http\://codes.iarc.fr/code/2592, url:https\://en.wikipedia.org/wiki/Adenoid_cystic_carcinoma, url:https\://meshb.nlm.nih.gov/record/ui?ui=D003528]
 subset: NCIthesaurus
 xref: GARD:5743
+xref: ICDO:8200/3
 xref: MESH:D003528
 xref: NCI:C2970
 is_a: DOID:8858 ! tonsil cancer
@@ -4234,6 +4244,7 @@ def: "A peripheral T-cell lymphoma characterized by autoimmune features and poor
 subset: NCIthesaurus
 xref: GARD:11973
 xref: ICD10CM:C86.5
+xref: ICDO:9705/3
 xref: MEDDRA:10002449
 xref: MESH:D007119
 xref: NCI:C7528
@@ -4984,6 +4995,7 @@ namespace: disease_ontology
 def: "A lipoma that is an asymptomatic, slow-growing subcutaneous tumor that has a predilection for the posterior back, neck, and shoulders of older men." [url:http\://en.wikipedia.org/wiki/Lipoma]
 subset: NCIthesaurus
 synonym: "spindle cell Lipoma" EXACT []
+xref: ICDO:8857/0
 xref: NCI:C4254
 xref: SNOMEDCT_US_2021_09_01:27313007
 xref: UMLS_CUI:C0334474
@@ -5042,6 +5054,7 @@ def: "A lipoma that is characterized by floret giant cells with overlapping nucl
 subset: NCIthesaurus
 synonym: "Pleomorphic Lipoma" EXACT []
 synonym: "Pleomorphic lipoma" EXACT []
+xref: ICDO:8854/0
 xref: MESH:D008067
 xref: NCI:C3703
 xref: SNOMEDCT_US_2021_09_01:189783001
@@ -5173,6 +5186,7 @@ name: chondroid lipoma
 namespace: disease_ontology
 def: "A lipoma that is a deep-seated, firm, yellow tumors that characteristically occur on the legs of women." [url:http\://en.wikipedia.org/wiki/Lipoma]
 subset: NCIthesaurus
+xref: ICDO:8862/0
 xref: NCI:C6503
 xref: SNOMEDCT_US_2021_09_01:404065000
 xref: UMLS_CUI:C1266131
@@ -5528,6 +5542,7 @@ is_a: DOID:850 ! lung disease
 id: DOID:10319
 name: mixed mineral dust pneumoconiosis
 namespace: disease_ontology
+def: "A pneumoconiosis caused by the inhalation of mixed mineral dust particles." [url:https\://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6928373/]
 subset: NCIthesaurus
 xref: NCI:C27559
 xref: SNOMEDCT_US_2021_09_01:233759002
@@ -5553,6 +5568,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10321
 name: baritosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is characterized by the formation of fine dense lesions in the lung parenchyma, caused by long standing exposure to barium dust. The lesions do not affect the lung function and disappear without treatment after the exposure to barium dust stops." [url:https\://rarediseases.info.nih.gov/diseases/8371/baritosis]
 subset: NCIthesaurus
 xref: GARD:8371
 xref: MESH:C537080
@@ -5565,6 +5581,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10323
 name: byssinosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is characterized by hypersensitive reaction to inhaled dust during the initial processing of cotton, flax, or hemp, and has symptoms of chest tightness, cough and wheezing." [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7767605/]
 subset: NCIthesaurus
 synonym: "cotton mill fever" EXACT []
 synonym: "Flax-dressers' disease" EXACT []
@@ -5581,6 +5598,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10324
 name: anthracosilicosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is characterized by fibrosis of the lung parenchyma caused by inhalation of carbon and silica dust. It manifests as shortness of breath and induces fibrous nodule formation in the lung." [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765255/]
 subset: NCIthesaurus
 xref: ICD10CM:J60
 xref: MESH:D000874
@@ -5613,6 +5631,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10327
 name: anthracosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is characterized by deposition of carbon or coal dust in the lung parenchyma leading to the formation of black nodules and emphysema." [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4386010/]
 subset: NCIthesaurus
 synonym: "black lung" EXACT []
 synonym: "Coal Miner's Pneumoconiosis" EXACT []
@@ -5629,10 +5648,13 @@ is_a: DOID:10316 ! pneumoconiosis
 
 [Term]
 id: DOID:10329
-name: pneumoconiosis due to talc
+name: pulmonary talcosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is characterized by fibrosis and granulomatous changes in the lung parenchyma and resulting from exposure to talc." [https://diagnosticpathology.biomedcentral.com/articles/10.1186/1746-1596-7-26, https://pubmed.ncbi.nlm.nih.gov/34390717/, https://pubmed.ncbi.nlm.nih.gov/34401315/, https://radiopaedia.org/articles/talcosis-1]
 subset: NCIthesaurus
-synonym: "Talc Pneumoconiosis" EXACT []
+synonym: "pneumoconiosis due to talc" EXACT []
+synonym: "talc pneumoconiosis" EXACT []
+synonym: "talcosis" EXACT []
 xref: ICD10CM:J62.0
 xref: NCI:C27026
 xref: SNOMEDCT_US_2021_09_01:73144008
@@ -5643,6 +5665,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10330
 name: slate pneumoconiosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is caused by exposure to slate dust." [https://academic.oup.com/occmed/article/67/1/20/2420658, https://pubmed.ncbi.nlm.nih.gov/7426466/]
 subset: NCIthesaurus
 synonym: "Schistosis" EXACT []
 xref: NCI:C35397
@@ -5654,6 +5677,7 @@ is_a: DOID:10316 ! pneumoconiosis
 id: DOID:10331
 name: kaolin pneumoconiosis
 namespace: disease_ontology
+def: "A pneumoconiosis that is caused by inhalation of kaolin dust." [https://www.amjmed.com/article/S0002-9343(20)30716-6/fulltext]
 subset: NCIthesaurus
 synonym: "Kaolinosis" EXACT []
 xref: GARD:8355
@@ -5688,6 +5712,7 @@ synonym: "large granular Lymphocyte Leukemia, NK-cell type" EXACT []
 synonym: "natural killer cell leukaemia" EXACT []
 synonym: "natural killer cell leukemia" EXACT []
 xref: ICD10CM:C94.8
+xref: ICDO:9948/3
 xref: NCI:C8647
 xref: SNOMEDCT_US_2021_09_01:128833001
 xref: UMLS_CUI:C1292777
@@ -5756,6 +5781,7 @@ is_a: DOID:1240 ! leukemia
 id: DOID:10361
 name: eosinophilic meningitis
 namespace: disease_ontology
+def: "A chronic meningitis that is characterized by the presence of 10 or more eosinophils/microL in the cerebrospinal fluid (CSF) or a CSF eosinophilia of at least 10 percent. Symptoms of this condition range from mild headache to severe, throbbing headache, dizziness, nausea, vomiting, fever, neck stiffness, paresthesia, and stabbing pain in the trunk and limbs aggravated by touch." [url:https\://pubmed.ncbi.nlm.nih.gov/31972289/]
 subset: NCIthesaurus
 xref: ICD9CM:322.1
 xref: NCI:C128374
@@ -5767,6 +5793,7 @@ is_a: DOID:9471 ! meningitis
 id: DOID:10366
 name: epididymis cancer
 namespace: disease_ontology
+def: "A male reproductive organ cancer that is located in the epididymis." [url:https\://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC3720153/]
 subset: NCIthesaurus
 synonym: "malignant Epididymal tumor" EXACT []
 synonym: "malignant neoplasm of epididymis" EXACT []
@@ -5804,6 +5831,7 @@ synonym: "lymphocytic leukaemia" EXACT []
 synonym: "lymphoid leukemia" EXACT []
 xref: ICD10CM:C91
 xref: ICD9CM:204
+xref: ICDO:9820/3
 xref: MESH:D007945
 xref: NCI:C7539
 xref: SNOMEDCT_US_2021_09_01:93170002
@@ -5836,8 +5864,9 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:10376
 name: amblyopia
 namespace: disease_ontology
-def: "An eye disease that is characterized by poor vision in one eye resulting from the brain failing to process inputs from one eye and over time favors the other eye." [url:https\://en.wikipedia.org/wiki/Amblyopia, url:https\://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/amblyopia-lazy-eye]
+def: "An eye disease that is characterized by poor vision in one eye resulting from the brain failing to process inputs from one eye and over time favors the other eye. The weaker or lazy eye often wanders inward or outward." [url:https\://en.wikipedia.org/wiki/Amblyopia, url:https\://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/amblyopia-lazy-eye]
 subset: NCIthesaurus
+synonym: "lazy eye" EXACT []
 xref: ICD10CM:H53.00
 xref: ICD9CM:368.00
 xref: MESH:D000550
@@ -5853,6 +5882,7 @@ name: prolymphocytic leukemia
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:9832/3
 xref: MESH:D015463
 xref: NCI:C3181
 xref: SNOMEDCT_US_2021_09_01:110006004
@@ -12936,6 +12966,7 @@ synonym: "Stem cell leukaemia" EXACT []
 synonym: "Stem cell Leukemia" EXACT []
 xref: ICD10CM:C95.00
 xref: ICD9CM:208.0
+xref: ICDO:9801/3
 xref: NCI:C9300
 xref: OMIM:308960
 xref: SNOMEDCT_US_2021_09_01:24072005
@@ -13155,6 +13186,7 @@ def: "A cell type benign neoplasm that is a benign tumor of smooth muscle cells.
 subset: NCIthesaurus
 synonym: "leiomyomatous neoplasm" EXACT []
 synonym: "leiomyomatous tumor" EXACT []
+xref: ICDO:8890/0
 xref: MESH:D007889
 xref: NCI:C3157
 xref: SNOMEDCT_US_2021_09_01:702978006
@@ -16219,6 +16251,7 @@ name: endometrial stromal nodule
 namespace: disease_ontology
 def: "An uterine benign neoplasm that has_material_basis_in cells reminiscent of proliferative phase endometrial stroma." [url:http\://www.pathologyoutlines.com/topic/uterusstromalnodule.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/26221551]
 subset: NCIthesaurus
+xref: ICDO:8930/0
 xref: NCI:C4262
 xref: SNOMEDCT_US_2021_09_01:189810002
 xref: UMLS_CUI:C0334485
@@ -16665,6 +16698,7 @@ name: squamous cell papilloma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Epidermoid papilloma" EXACT []
+xref: ICDO:8052/0
 xref: MESH:D010212
 xref: NCI:C3712
 xref: SNOMEDCT_US_2021_09_01:63451008
@@ -17466,6 +17500,7 @@ name: central neurocytoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Neurolipocytoma" EXACT []
+xref: ICDO:9506/1
 xref: MESH:D018306
 xref: NCI:C3791
 xref: SNOMEDCT_US_2021_09_01:302832007
@@ -19162,6 +19197,7 @@ synonym: "Congenital lymphangioma" EXACT []
 xref: GARD:9789
 xref: ICD10CM:D18.1
 xref: ICD9CM:228.1
+xref: ICDO:9170/0
 xref: MESH:D008202
 xref: NCI:C8965
 xref: SNOMEDCT_US_2021_09_01:154625006
@@ -20032,7 +20068,7 @@ synonym: "malignant tumor" EXACT []
 synonym: "primary cancer" EXACT []
 xref: ICD10CM:C80.1
 xref: ICD9CM:199
-xref: ICDO:M8000/3
+xref: ICDO:8000/3
 xref: MESH:D009369
 xref: NCI:C9305
 xref: SNOMEDCT_US_2021_09_01:269513004
@@ -20080,6 +20116,7 @@ name: intraductal papilloma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "ductal papilloma" EXACT []
+xref: ICDO:8503/0
 xref: MESH:D018300
 xref: NCI:C3785
 xref: SNOMEDCT_US_2021_09_01:5244003
@@ -20221,6 +20258,7 @@ synonym: "Melanotic neuroectodermal tumour" EXACT []
 synonym: "melanotic neuroectodermal tumour" EXACT []
 synonym: "Melanotic neuroectodermal tumour of infancy" EXACT []
 synonym: "Pigmented neuroectodermal tumour of infancy" EXACT []
+xref: ICDO:9363/0
 xref: MESH:D017600
 xref: NCI:C3717
 xref: SNOMEDCT_US_2021_09_01:1513001
@@ -20254,6 +20292,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Pineal PNET" EXACT []
 xref: GARD:9369
+xref: ICDO:9362/3
 xref: MESH:D010871
 xref: NCI:C9344
 xref: SNOMEDCT_US_2021_09_01:31671006
@@ -20365,6 +20404,7 @@ subset: NCIthesaurus
 synonym: "neuroendocrine neoplasm" EXACT []
 xref: ICD10CM:D3A.8
 xref: ICD9CM:209-209.99
+xref: ICDO:8240/3
 xref: MESH:D018358
 xref: NCI:C3809
 xref: SNOMEDCT_US_2021_09_01:55937004
@@ -20499,6 +20539,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Clear cell acanthoma" EXACT []
 synonym: "Pale (Clear cell) acanthoma" EXACT []
+xref: ICDO:8084/0
 xref: MESH:D049309
 xref: NCI:C97041
 xref: SNOMEDCT_US_2021_09_01:65540008
@@ -20688,6 +20729,7 @@ synonym: "squamous cell cancer" EXACT []
 synonym: "squamous cell Epithelioma" EXACT []
 xref: EFO:0000707
 xref: GARD:1091
+xref: ICDO:8070/3
 xref: MESH:D002294
 xref: MESH:D018307
 xref: NCI:C2929
@@ -20941,6 +20983,7 @@ name: adrenal rest tumor
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Adrenal Rest neoplasm" EXACT []
+xref: ICDO:8671/0
 xref: MESH:D000314
 xref: NCI:C2860
 xref: SNOMEDCT_US_2021_09_01:54292009
@@ -21023,12 +21066,12 @@ is_a: DOID:162 ! cancer
 id: DOID:1791
 name: peritoneal carcinoma
 namespace: disease_ontology
-def: "A carcinoma that is located_in the inside of the abdomen." [url:https\://www.cedars-sinai.org/health-library/diseases-and-conditions/p/peritoneal-cancer.html]
+def: "A peritoneum cancer that is located_in the inside of the abdomen." [url:https\://www.cedars-sinai.org/health-library/diseases-and-conditions/p/peritoneal-cancer.html]
 subset: NCIthesaurus
 synonym: "primary peritoneal carcinoma" EXACT []
 xref: NCI:C40022
 xref: UMLS_CUI:C1514428
-is_a: DOID:3119 ! gastrointestinal system cancer
+is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:1792
@@ -21188,6 +21231,7 @@ def: "A bone benign neoplasm that is located_in the mouth and results_in an over
 subset: NCIthesaurus
 synonym: "Fibro-osteoma" EXACT []
 synonym: "peripheral ossifying fibroma" RELATED []
+xref: ICDO:9262/0
 xref: MESH:D018214
 xref: NCI:C8422
 xref: SNOMEDCT_US_2021_09_01:189896007
@@ -21200,6 +21244,7 @@ name: neuroendocrine carcinoma
 namespace: disease_ontology
 def: "A carcinoma that derives_from neuroendocrine cells." [url:https\://www.mayoclinic.org/diseases-conditions/neuroendocrine-tumors/symptoms-causes/syc-20354132]
 subset: NCIthesaurus
+xref: ICDO:8246/3
 xref: MESH:D018278
 xref: NCI:C3773
 xref: SNOMEDCT_US_2021_09_01:55937004
@@ -21466,12 +21511,13 @@ is_a: DOID:184 ! bone cancer
 id: DOID:1876
 name: sexual dysfunction
 namespace: disease_ontology
+def: "A male reproductive system disease that is characterized by disturbances in sexual desire or performance." [url:https\://my.clevelandclinic.org/health/diseases/9121-sexual-dysfunction]
 subset: NCIthesaurus
 xref: ICD10CM:F52.9
 xref: NCI:C3347
 xref: SNOMEDCT_US_2021_09_01:39894007
 xref: UMLS_CUI:C0549622
-is_a: DOID:150 ! disease of mental health
+is_a: DOID:15 ! reproductive system disease
 
 [Term]
 id: DOID:1882
@@ -21565,6 +21611,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Fibroxanthosarcoma" EXACT []
 synonym: "MFH" EXACT []
+xref: ICDO:8830/3
 xref: MESH:D051677
 xref: NCI:C4247
 xref: SNOMEDCT_US_2021_09_01:34360000
@@ -21659,6 +21706,7 @@ synonym: "Sex Cord-Stromal neoplasm" EXACT []
 synonym: "Specialized gonadal neoplasm" EXACT []
 synonym: "Specialized gonadal tumor" EXACT []
 synonym: "Specialized gonadal tumour" EXACT []
+xref: ICDO:8590/1
 xref: MESH:D018312
 xref: NCI:C3794
 xref: SNOMEDCT_US_2021_09_01:253028001
@@ -22054,6 +22102,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Leiomyosarcomas" EXACT []
 xref: GARD:6880
+xref: ICDO:8890/3
 xref: MESH:D007890
 xref: NCI:C3158
 xref: SNOMEDCT_US_2021_09_01:443719001
@@ -22108,6 +22157,7 @@ def: "A carcinosarcoma that derives_from simultaneously or consecutively in meso
 subset: NCIthesaurus
 synonym: "Adenosarcoma" EXACT []
 synonym: "mullerian Adenosarcoma" EXACT []
+xref: ICDO:8933/3
 xref: MESH:D018195
 xref: NCI:C9474
 xref: SNOMEDCT_US_2021_09_01:189804002
@@ -22232,6 +22282,7 @@ name: neuroma
 namespace: disease_ontology
 def: "A nervous system benign neoplasm that is characterized as a nerve tissue tumor." [url:http\://en.wikipedia.org/wiki/Neuroma]
 subset: NCIthesaurus
+xref: ICDO:9570/0
 xref: MESH:D009463
 xref: NCI:C3275
 xref: SNOMEDCT_US_2021_09_01:25169009
@@ -22529,6 +22580,7 @@ name: syringoma
 namespace: disease_ontology
 subset: NCIthesaurus
 xref: GARD:10547
+xref: ICDO:8407/0
 xref: MESH:D018252
 xref: NCI:C3761
 xref: OMIM:186600
@@ -23005,7 +23057,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult nephroblastoma" EXACT []
 synonym: "Wilms' tumor" RELATED []
-xref: ICDO:M8960/3
+xref: ICDO:8960/3
 xref: MESH:D009396
 xref: NCI:C27730
 xref: NCI:C3267
@@ -23281,6 +23333,7 @@ synonym: "primary Thrombocytosis" EXACT []
 xref: GARD:6594
 xref: ICD10CM:D47.3
 xref: ICD9CM:238.71
+xref: ICDO:9962/3
 xref: MESH:D013920
 xref: NCI:C3407
 xref: OMIM:187950
@@ -23314,6 +23367,7 @@ synonym: "chronic myeloproliferative disease" EXACT []
 synonym: "CMPD" EXACT []
 synonym: "CMPD, U" EXACT []
 xref: ICD10CM:D47.1
+xref: ICDO:9960/3
 xref: NCI:C4345
 xref: SNOMEDCT_US_2021_09_01:115248004
 xref: UMLS_CUI:C1292778
@@ -23681,6 +23735,7 @@ name: capillary lymphangioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "cutaneous lymphangioma" RELATED []
+xref: ICDO:9171/0
 xref: NCI:C27509
 xref: SNOMEDCT_US_2021_09_01:445492005
 xref: UMLS_CUI:C1333176
@@ -24207,6 +24262,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "neoplasm of granular cell" EXACT []
 xref: GARD:9618
+xref: ICDO:9580/0
 xref: MESH:D016586
 xref: NCI:C3474
 xref: SNOMEDCT_US_2021_09_01:12169001
@@ -24233,6 +24289,7 @@ def: "A central nervous system benign neoplasm that has_material_basis_in mature
 subset: NCIthesaurus
 synonym: "gangliocytoma of central nervous system" EXACT []
 xref: GARD:10638
+xref: ICDO:9492/0
 xref: MESH:D005729
 xref: NCI:C6934
 xref: SNOMEDCT_US_2020_03_01:78268004
@@ -24261,6 +24318,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Glomus neoplasm" EXACT []
 synonym: "Glomus tumour" EXACT []
+xref: ICDO:8711/0
 xref: MESH:D005918
 xref: NCI:C3060
 xref: SNOMEDCT_US_2021_09_01:189193002
@@ -24297,6 +24355,7 @@ id: DOID:2436
 name: glomangioma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8712/0
 xref: MESH:D005918
 xref: NCI:C4222
 xref: SNOMEDCT_US_2021_09_01:7429002
@@ -24632,6 +24691,7 @@ synonym: "malignant Basal cell neoplasm" EXACT []
 synonym: "malignant basal cell tumor" EXACT []
 synonym: "Rodent ulcer" EXACT []
 xref: EFO:0004193
+xref: ICDO:8090/3
 xref: KEGG:05217
 xref: MESH:D018295
 xref: NCI:C156767
@@ -24843,6 +24903,7 @@ def: "A cardiovascular organ benign neoplasm that has_material_basis_in endothel
 subset: NCIthesaurus
 xref: ICD10CM:D18.0
 xref: ICD9CM:228.00
+xref: ICDO:9120/0
 xref: MESH:D006391
 xref: NCI:C3085
 xref: SNOMEDCT_US_2021_09_01:154625006
@@ -25203,6 +25264,7 @@ def: "A cell type benign neoplasm that is a cartilaginous tumor encapsulated wit
 subset: NCIthesaurus
 synonym: "central Chondroma" EXACT []
 xref: GARD:6052
+xref: ICDO:9220/0
 xref: MESH:D002812
 xref: NCI:C53459
 xref: SNOMEDCT_US_2021_09_01:269638002
@@ -25215,6 +25277,7 @@ name: adenomyoma
 namespace: disease_ontology
 def: "A cell type benign neoplasm that has_material_basis_in gland and muscle components." [url:http\://en.wikipedia.org/wiki/Adenomyoma]
 subset: NCIthesaurus
+xref: ICDO:8932/0
 xref: MESH:D018194
 xref: NCI:C3726
 xref: SNOMEDCT_US_2021_09_01:40293003
@@ -25228,6 +25291,7 @@ name: serous surface papilloma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "serous Surface papilloma" EXACT []
+xref: ICDO:8461/0
 xref: NCI:C4181
 xref: SNOMEDCT_US_2021_09_01:67073007
 xref: UMLS_CUI:C0334360
@@ -25241,6 +25305,7 @@ alt_id: DOID:1635
 def: "A cell type benign neoplam that is composed of epithelial tissue on papillae of vascularized connective tissue." [url:http\://www.merriam-webster.com/medlineplus/papilloma]
 subset: NCIthesaurus
 synonym: "papillomatosis" EXACT []
+xref: ICDO:8050/0
 xref: MESH:D010212
 xref: NCI:C3713
 xref: NCI:C7440
@@ -25298,7 +25363,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "childhood choroid plexus papilloma" EXACT []
 xref: GARD:4214
-xref: ICDO:9390/3
+xref: ICDO:9390/0
 xref: MESH:D020288
 xref: NCI:C3698
 xref: NCI:C5800
@@ -25357,6 +25422,7 @@ def: "An adenoma that forms a cyst." [url:http\://en.wikipedia.org/wiki/Cystaden
 subset: NCIthesaurus
 synonym: "Cystadenoma" EXACT []
 synonym: "Cystoma" EXACT []
+xref: ICDO:8440/0
 xref: MESH:D003537
 xref: NCI:C2972
 xref: SNOMEDCT_US_2021_09_01:189680006
@@ -25417,6 +25483,7 @@ namespace: disease_ontology
 def: "An ovarian germ cell monodermal and highly specialized teratoma that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26374222]
 subset: NCIthesaurus
 synonym: "Struma ovarii" EXACT []
+xref: ICDO:9090/0
 xref: MESH:D013330
 xref: NCI:C7468
 xref: SNOMEDCT_US_2021_09_01:24327009
@@ -25468,6 +25535,7 @@ id: DOID:2647
 name: parachordoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:9373/0
 xref: NCI:C6581
 xref: SNOMEDCT_US_2021_09_01:404086000
 xref: UMLS_CUI:C1266175
@@ -25496,6 +25564,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Chondroblastoma of bone" EXACT []
 xref: GARD:6047
+xref: ICDO:9230/1
 xref: MESH:D002804
 xref: NCI:C2945
 xref: SNOMEDCT_US_2021_09_01:9001003
@@ -25551,6 +25620,7 @@ synonym: "Dermoid tumour" EXACT []
 synonym: "Mature cystic teratoma" EXACT []
 synonym: "teratoma, benign" EXACT []
 xref: ICD10CM:K09.8
+xref: ICDO:9084/0
 xref: MESH:D003884
 xref: NCI:C9011
 xref: SNOMEDCT_US_2021_09_01:189117002
@@ -25577,6 +25647,7 @@ subset: NCIthesaurus
 synonym: "benign myoepithelioma" EXACT []
 synonym: "Myoepithelial adenoma" EXACT []
 synonym: "Myoepithelial neoplasm" EXACT []
+xref: ICDO:8982/0
 xref: MESH:D009208
 xref: NCI:C40392
 xref: SNOMEDCT_US_2021_09_01:69291002
@@ -25616,6 +25687,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Pacinian Neurofibroma" EXACT []
 synonym: "Pacinian neurofibroma" EXACT []
+xref: ICDO:9507/0
 xref: NCI:C4328
 xref: SNOMEDCT_US_2021_09_01:4230004
 xref: UMLS_CUI:C0334599
@@ -25646,6 +25718,7 @@ synonym: "transitional cell neoplasm" RELATED []
 synonym: "transitional cell tumor" EXACT []
 synonym: "urothelial cell carcinoma" EXACT []
 xref: GARD:7794
+xref: ICDO:8120/3
 xref: MESH:D002295
 xref: NCI:C2930
 xref: NCI:C6783
@@ -25673,6 +25746,7 @@ synonym: "Dysembryoplastic neuroepithelial tumor" EXACT []
 synonym: "Dysembryoplastic neuroepithelial tumour" EXACT []
 synonym: "dysembryoplastic neuroepithelial tumour" EXACT []
 xref: GARD:10640
+xref: ICDO:9413/0
 xref: NCI:C9505
 xref: SNOMEDCT_US_2021_09_01:87211000119104
 xref: UMLS_CUI:C1266177
@@ -25700,6 +25774,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Intracystic papillary adenoma" EXACT []
 synonym: "Intracystic papilloma" EXACT []
+xref: ICDO:8504/0
 xref: SNOMEDCT_US_2021_09_01:47488001
 xref: UMLS_CUI:C0334374
 is_a: DOID:657 ! adenoma
@@ -25713,6 +25788,7 @@ synonym: "Ossifying fibromyxoid tumor" EXACT []
 synonym: "Ossifying fibromyxoid tumour" EXACT []
 synonym: "ossifying fibromyxoid tumour" EXACT []
 synonym: "Ossifying Fibromyxoma" EXACT []
+xref: ICDO:8842/0
 xref: NCI:C6582
 xref: SNOMEDCT_US_2021_09_01:404076001
 xref: UMLS_CUI:C1266128
@@ -25740,6 +25816,7 @@ synonym: "Lymphangiosarcoma of Stewart and Treves" EXACT []
 synonym: "malignant Lymphangioendothelioma" EXACT []
 synonym: "skin lymphangiosarcoma" EXACT []
 synonym: "Stewart-Treves syndrome" EXACT []
+xref: ICDO:9170/3
 xref: MESH:C537491
 xref: MESH:D008204
 xref: NCI:C3205
@@ -25758,6 +25835,7 @@ def: "A muscle benign neoplasm that is characterized as benign hyperplastic lesi
 subset: NCIthesaurus
 synonym: "benign neoplasm of the Muscle" EXACT []
 xref: ICD10CM:D21
+xref: ICDO:8895/0
 xref: MESH:D009214
 xref: NCI:C4882
 xref: SNOMEDCT_US_2021_09_01:66357004
@@ -25821,6 +25899,7 @@ name: mucinous adenofibroma
 namespace: disease_ontology
 def: "An adenofibroma that is characterized by the presence of mucin." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3977110/]
 subset: NCIthesaurus
+xref: ICDO:9015/0
 xref: NCI:C8978
 xref: SNOMEDCT_US_2021_09_01:10705005
 xref: UMLS_CUI:C0334499
@@ -26010,6 +26089,7 @@ synonym: "Strawberry haemangioma" EXACT []
 synonym: "Strawberry nevus" EXACT []
 synonym: "Strawberry nevus of skin" EXACT []
 xref: ICD10CM:Q82.5
+xref: ICDO:9131/0
 xref: MESH:D018324
 xref: NCI:C7457
 xref: SNOMEDCT_US_2021_09_01:56975005
@@ -26958,6 +27038,7 @@ subset: NCIthesaurus
 xref: GARD:6560
 xref: ICD10CM:C91.4
 xref: ICD9CM:202.4
+xref: ICDO:9940/3
 xref: MESH:D007943
 xref: NCI:C7402
 xref: SNOMEDCT_US_2021_09_01:118613001
@@ -27727,6 +27808,7 @@ name: adenocarcinoma
 namespace: disease_ontology
 def: "A carcinoma that has_material_basis_in abnormally proliferating cells, derives_from epithelial cells, which originate in glandular tissue." [url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: NCIthesaurus
+xref: ICDO:8140/3
 xref: MESH:D000230
 xref: NCI:C2852
 xref: SNOMEDCT_US_2021_09_01:443961001
@@ -28026,6 +28108,7 @@ def: "A carcinoma that has_material_basis_in abnormally proliferating cells, der
 subset: NCIthesaurus
 synonym: "acinic cell carcinoma" EXACT []
 xref: GARD:8568
+xref: ICDO:8550/3
 xref: MESH:D018267
 xref: NCI:C3768
 xref: SNOMEDCT_US_2021_09_01:45410002
@@ -28069,6 +28152,7 @@ synonym: "Mucin-Secreting adenocarcinoma" EXACT []
 synonym: "Mucin-Secreting carcinoma" EXACT []
 synonym: "Mucous carcinoma" EXACT []
 synonym: "Pseudomyxoma peritonei with unknown primary site" EXACT []
+xref: ICDO:8480/3
 xref: MESH:D002288
 xref: NCI:C26712
 xref: NCI:C27379
@@ -28142,6 +28226,7 @@ subset: NCIthesaurus
 synonym: "epithelial cancer" EXACT []
 synonym: "epithelioma" EXACT []
 synonym: "malignant Epithelioma" EXACT []
+xref: ICDO:8010/3
 xref: MESH:D002277
 xref: MESH:D009375
 xref: NCI:C2916
@@ -28216,6 +28301,7 @@ synonym: "grade IV adult Astrocytic tumor" EXACT []
 synonym: "primary glioblastoma multiforme" EXACT []
 synonym: "spongioblastoma multiforme" EXACT []
 xref: GARD:2491
+xref: ICDO:9440/3
 xref: MESH:D005909
 xref: NCI:C3058
 xref: NCI:C39750
@@ -28239,7 +28325,7 @@ synonym: "astrocytoma of brain" EXACT []
 synonym: "astrocytoma of Cerebrum" EXACT []
 synonym: "astroglioma" EXACT []
 synonym: "cerebral astrocytoma" EXACT []
-xref: ICDO:M9400/3
+xref: ICDO:9400/3
 xref: MESH:D001254
 xref: NCI:C4951
 xref: NCI:C60781
@@ -28266,7 +28352,7 @@ synonym: "glioma, malignant" EXACT []
 synonym: "malignant glioma" EXACT []
 synonym: "malignant Neuroglial tumor" EXACT []
 synonym: "Neuroglial tumor" EXACT []
-xref: ICDO:M9380/3
+xref: ICDO:9380/3
 xref: KEGG:05214
 xref: MESH:D005910
 xref: NCI:C3059
@@ -28287,6 +28373,7 @@ def: "A gliomablastoma that is characterized by a biphasic tissue pattern with a
 subset: NCIthesaurus
 synonym: "Glioblastoma with sarcomatous component" EXACT []
 xref: GARD:5653
+xref: ICDO:9442/3
 xref: MESH:D018316
 xref: NCI:C3796
 xref: SNOMEDCT_US_2021_09_01:35262004
@@ -28314,6 +28401,7 @@ namespace: disease_ontology
 def: "A glioblastoma that is characterized by a prevalence of bizarre, multinucleated giant cells." [url:http\://en.wikipedia.org/wiki/Giant-cell_glioblastoma, url:http\://neuro-oncology.oxfordjournals.org/content/11/6/833.full]
 subset: NCIthesaurus
 synonym: "Monstrocellular sarcoma" EXACT []
+xref: ICDO:9441/3
 xref: MESH:D005909
 xref: NCI:C4325
 xref: SNOMEDCT_US_2021_09_01:44529004
@@ -28365,6 +28453,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "cystic Hygroma" EXACT []
 xref: GARD:6234
+xref: ICDO:9173/0
 xref: MESH:D018191
 xref: NCI:C3724
 xref: OMIM:257350
@@ -28459,6 +28548,7 @@ id: DOID:3098
 name: small cell sarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8803/3
 xref: MESH:D018228
 xref: NCI:C3746
 xref: SNOMEDCT_US_2021_09_01:73506006
@@ -28517,6 +28607,7 @@ def: "A cystadenocarcinoma that derives_from epithelial cells originating in gla
 subset: NCIthesaurus
 synonym: "Papillary cystadenocarcinoma" EXACT []
 xref: GARD:10162
+xref: ICDO:8450/3
 xref: MESH:D018283
 xref: NCI:C3777
 xref: SNOMEDCT_US_2021_09_01:2735009
@@ -28529,6 +28620,7 @@ name: cystadenocarcinoma
 namespace: disease_ontology
 def: "An adenocarcinoma that derives_from epithelial cells originating in glandular tissue, in which cystic accumulations of retained secretions are formed." [url:http\://en.wikipedia.org/wiki/Cystadenocarcinoma]
 subset: NCIthesaurus
+xref: ICDO:8440/3
 xref: MESH:D003536
 xref: NCI:C2971
 xref: SNOMEDCT_US_2021_09_01:21008007
@@ -28546,6 +28638,7 @@ subset: NCIthesaurus
 synonym: "Infiltrating and papillary adenocarcinoma" EXACT []
 synonym: "infiltrating papillary adenocarcinoma" EXACT []
 synonym: "Papillary adenocarcinoma" EXACT []
+xref: ICDO:8260/3
 xref: MESH:D000231
 xref: NCI:C2853
 xref: SNOMEDCT_US_2021_09_01:4797003
@@ -28559,6 +28652,7 @@ namespace: disease_ontology
 def: "A carcinoma that is derives_from epithelial cells with finger like projections." [url:http\://breastcancer.about.com/od/types/p/papillary_ca.htm]
 subset: NCIthesaurus
 synonym: "Papillary carcinoma" EXACT []
+xref: ICDO:8050/3
 xref: MESH:D002291
 xref: NCI:C2927
 xref: SNOMEDCT_US_2021_09_01:25910003
@@ -28767,6 +28861,7 @@ synonym: "Giant cell tumour of tendon sheath" EXACT []
 synonym: "Giant cell tumour of Tenosynovium" EXACT []
 synonym: "tenosynovial giant cell tumour" EXACT []
 xref: ICD9CM:727.02
+xref: ICDO:9252/0
 xref: MESH:D000070779
 xref: NCI:C3402
 xref: SNOMEDCT_US_2021_09_01:310605004
@@ -28944,6 +29039,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "glandular papilloma" EXACT []
 synonym: "Papillary adenoma" EXACT []
+xref: ICDO:8260/0
 xref: MESH:D000236
 xref: NCI:C79951
 xref: SNOMEDCT_US_2021_09_01:86143001
@@ -28965,6 +29061,7 @@ id: DOID:3177
 name: verrucous papilloma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8051/0
 xref: NCI:C4101
 xref: SNOMEDCT_US_2021_09_01:48218007
 xref: UMLS_CUI:C0334243
@@ -29113,7 +29210,7 @@ is_a: DOID:331 ! central nervous system disease
 id: DOID:3192
 name: neurilemmoma
 namespace: disease_ontology
-comment: A neuroma that is characterized as a benign nerve sheath tumor that is composed of Schwann cells. {xref="url:https://en.wikipedia.org/wiki/Schwannoma"}
+def: "A neuroma that is characterized as a benign nerve sheath tumor that is composed of Schwann cells." [url:https\://en.wikipedia.org/wiki/Schwannoma]
 subset: NCIthesaurus
 synonym: "Psammomatous schwannoma" EXACT []
 synonym: "schwannoma" EXACT []
@@ -29574,6 +29671,7 @@ name: spindle cell rhabdomyosarcoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:8912/3
 xref: NCI:C6519
 xref: SNOMEDCT_US_2021_09_01:404055006
 xref: UMLS_CUI:C1266134
@@ -29705,6 +29803,7 @@ namespace: disease_ontology
 def: "A thymus cancer that derives_from epithelial cells located_in the thymus. The tumor cells in a thymoma look similar to the normal cells of the thymus, grow slowly, and rarely spread beyond the thymus." [url:http\://cancergenome.nih.gov/cancersselected/Thymoma, url:http\://en.wikipedia.org/wiki/Thymoma, url:http\://www.cancer.gov/cancertopics/pdq/treatment/thymoma/patient/page1]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:8580/3
 xref: MESH:D013945
 xref: NCI:C3411
 xref: SNOMEDCT_US_2021_09_01:444231005
@@ -29794,6 +29893,7 @@ subset: NCIthesaurus
 synonym: "malignant Thymoma" EXACT []
 synonym: "Thymic carcinoma" EXACT []
 synonym: "Thymoma, malignant" EXACT []
+xref: ICDO:8586/3
 xref: MESH:D013945
 xref: NCI:C7569
 xref: SNOMEDCT_US_2021_09_01:128717008
@@ -29823,6 +29923,7 @@ namespace: disease_ontology
 def: "A cell type benign neoplasm that is composed_of a mixture of gonadal elements, such as large primordial germ cells, immature Sertoli cells or granulosa cells of the sex cord, and gonadal stromal cells (which comprises the granulosa, theca, and fibrocyte cells)." [url:http\://en.wikipedia.org/wiki/Gonadoblastoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
+xref: ICDO:9073/1
 xref: MESH:D018238
 xref: NCI:C3754
 xref: OMIM:424500
@@ -29841,6 +29942,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "notochordoma" EXACT []
 xref: GARD:1303
+xref: ICDO:9370/3
 xref: MESH:D002817
 xref: NCI:C2947
 xref: SNOMEDCT_US_2021_09_01:50007008
@@ -30007,6 +30109,7 @@ namespace: disease_ontology
 def: "A cell type benign neoplasm that is primarily located in the kidneys but may be found in the lungs, liver or other organs and is derived from perivascular epithelioid cells." [url:http\://en.wikipedia.org/wiki/Angiomyolipoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/9503504]
 subset: NCIthesaurus
 synonym: "Angiomyolipoma" EXACT []
+xref: ICDO:8860/0
 xref: MESH:D018207
 xref: NCI:C3734
 xref: SNOMEDCT_US_2021_09_01:19929002
@@ -30033,6 +30136,7 @@ synonym: "tumor of adipose tissue" EXACT []
 xref: ICD10CM:D17
 xref: ICD10CM:D17.9
 xref: ICD9CM:214
+xref: ICDO:8850/0
 xref: MESH:D008067
 xref: MESH:D018205
 xref: NCI:C3192
@@ -30089,6 +30193,7 @@ synonym: "lung lymphangioleiomyomatosis" EXACT []
 synonym: "lymphangiomyomatosis" EXACT []
 synonym: "pulmonary lymphangioleiomyomatosis" EXACT []
 xref: GARD:3319
+xref: ICDO:9174/1
 xref: NCI:C38153
 xref: OMIM:606690
 xref: ORDO:538
@@ -30455,6 +30560,7 @@ synonym: "localized peripheral primitive neuroectodermal tumor" EXACT []
 synonym: "peripheral primitive neuroectodermal tumor" EXACT []
 synonym: "PNET of Thoracopulmonary Region" EXACT []
 xref: GARD:6390
+xref: ICDO:9364/3
 xref: MESH:C563168
 xref: MESH:D012512
 xref: MESH:D018241
@@ -30502,6 +30608,7 @@ synonym: "chondrosarcoma of bone" EXACT []
 synonym: "primary chondrosarcoma of the bone" EXACT []
 xref: GARD:6004
 xref: GARD:6055
+xref: ICDO:9220/3
 xref: MESH:D002813
 xref: NCI:C2946
 xref: NCI:C7155
@@ -30519,6 +30626,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Chondroblastic osteosarcoma" EXACT []
 synonym: "chondrosarcomatous Osteogenic sarcoma" EXACT []
+xref: ICDO:9181/3
 xref: NCI:C4021
 xref: SNOMEDCT_US_2021_09_01:76312009
 xref: UMLS_CUI:C0279603
@@ -31560,6 +31668,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Atypical Choroid Plexus papilloma" EXACT []
 synonym: "Atypical choroid plexus papilloma" EXACT []
+xref: ICDO:9390/1
 xref: NCI:C53686
 xref: SNOMEDCT_US_2021_09_01:1156470000
 xref: UMLS_CUI:C1266176
@@ -31625,6 +31734,7 @@ subset: NCIthesaurus
 synonym: "mucinous Ascites" EXACT []
 synonym: "Pseudomyxoma peritonei" EXACT []
 xref: GARD:7488
+xref: ICDO:8480/6
 xref: MESH:D011553
 xref: NCI:C3345
 xref: SNOMEDCT_US_2021_09_01:307601000
@@ -31650,7 +31760,7 @@ synonym: "primary Meningeal tumor" EXACT []
 synonym: "supratentorial meningioma" EXACT []
 xref: GARD:7015
 xref: ICD10CM:D32.9
-xref: ICDO:M9530/3
+xref: ICDO:9530/0
 xref: MESH:D008579
 xref: NCI:C3230
 xref: NCI:C6971
@@ -31714,6 +31824,7 @@ alt_id: DOID:0050617
 def: "A sex cord-gonadal stromal tumor characterized by excessive proliferation of Sertoli cells." [url:https\://en.wikipedia.org/wiki/Sertoli_cell_tumour]
 subset: NCIthesaurus
 synonym: "tubular androblastoma" EXACT []
+xref: ICDO:8640/1
 xref: MESH:D012707
 xref: NCI:C39976
 xref: SNOMEDCT_US_2021_09_01:89089007
@@ -31802,6 +31913,7 @@ synonym: "Placental site trophoblastic tumor" EXACT []
 synonym: "Placental site trophoblastic tumour" EXACT []
 synonym: "placental site trophoblastic tumour" EXACT []
 synonym: "Placental-Site Gestational Trophoblastic neoplasm" EXACT []
+xref: ICDO:9104/1
 xref: MESH:D018245
 xref: NCI:C3757
 xref: SNOMEDCT_US_2021_09_01:75320001
@@ -31829,6 +31941,7 @@ namespace: disease_ontology
 def: "A cystadenocarcinoma that derives_from epithelial cells originating in glandular tissue, with a capsulated structure and mucus-producing cells." [url:http\://www.wisegeek.com/what-is-a-mucinous-cystadenocarcinoma.htm]
 subset: NCIthesaurus
 synonym: "Pseudomucinous cystadenocarcinoma" EXACT []
+xref: ICDO:8470/3
 xref: MESH:D018282
 xref: NCI:C3776
 xref: SNOMEDCT_US_2021_09_01:79143006
@@ -31997,6 +32110,7 @@ name: angiolipoma
 namespace: disease_ontology
 def: "A lipoma that is a painful subcutaneous nodule, having all other features of a typical lipoma." [url:http\://en.wikipedia.org/wiki/Angiolipoma]
 subset: NCIthesaurus
+xref: ICDO:8861/0
 xref: MESH:D018206
 xref: NCI:C3733
 xref: SNOMEDCT_US_2021_09_01:404057003
@@ -32513,6 +32627,7 @@ is_a: DOID:1289 ! neurodegenerative disease
 id: DOID:3689
 name: brachial plexus neuritis
 namespace: disease_ontology
+def: "A brachial plexus neuropathy that affects the chest, shoulder, arm and hand." [url:https\://www.hopkinsmedicine.org/health/conditions-and-diseases/brachial-neuritis]
 subset: NCIthesaurus
 synonym: "Brachial neuritis" EXACT []
 synonym: "Parsonage-Aldren-Turner syndrome" EXACT []
@@ -32534,6 +32649,7 @@ synonym: "Esthesioneuroepithelioma" EXACT []
 synonym: "Olfactory Esthesioneuroblastoma" EXACT []
 synonym: "paranasal sinus Olfactory neuroblastoma" EXACT []
 xref: GARD:2197
+xref: ICDO:9522/3
 xref: MESH:D018304
 xref: NCI:C3789
 xref: SNOMEDCT_US_2021_09_01:76060004
@@ -32544,6 +32660,7 @@ is_a: DOID:2815 ! cranial nerve malignant neoplasm
 id: DOID:3690
 name: brachial plexus neuropathy
 namespace: disease_ontology
+def: "A peripheral nervous system disease that is characterized by damage to nerves in the upper shoulder of the brachial plexus, an area where nerves from the spinal cord branch into the arm nerves." [url:https\://pubmed.ncbi.nlm.nih.gov/30688233/, url:https\://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061]
 subset: NCIthesaurus
 synonym: "brachial plexopathy" EXACT []
 synonym: "Brachial plexus disorder" EXACT []
@@ -32827,6 +32944,7 @@ synonym: "Myeloma, solitary" EXACT []
 synonym: "Solitary myeloma" EXACT []
 synonym: "Solitary plasmacytoma" EXACT []
 xref: ICD10CM:C90.3
+xref: ICDO:9731/3
 xref: MESH:D010954
 xref: NCI:C9349
 xref: SNOMEDCT_US_2021_09_01:302852008
@@ -32864,6 +32982,7 @@ subset: NCIthesaurus
 synonym: "verrucous squamous carcinoma" EXACT []
 synonym: "verrucous squamous cell carcinoma" EXACT []
 synonym: "Warty carcinoma" EXACT []
+xref: ICDO:8051/3
 xref: MESH:D018289
 xref: NCI:C3781
 xref: SNOMEDCT_US_2021_09_01:89906000
@@ -33193,6 +33312,7 @@ namespace: disease_ontology
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chordoid glioma" EXACT []
+xref: ICDO:9444/1
 xref: NCI:C5592
 xref: SNOMEDCT_US_2021_09_01:128789002
 xref: UMLS_CUI:C1322252
@@ -33457,6 +33577,7 @@ name: chromophobe adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Chromophobe adenoma of the Pituitary gland" EXACT []
+xref: ICDO:8270/0
 xref: MESH:D000238
 xref: NCI:C2857
 xref: SNOMEDCT_US_2021_09_01:37039006
@@ -33470,6 +33591,7 @@ namespace: disease_ontology
 def: "A pituitary gland benign neoplasm that derives_from glandular epithelial cells." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24010395]
 subset: NCIthesaurus
 synonym: "adenoma of the Pituitary gland" EXACT []
+xref: ICDO:8272/0
 xref: MESH:D010911
 xref: NCI:C3329
 xref: OMIM:PS102200
@@ -33506,6 +33628,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "neoplasm of Rathke's Pouch" EXACT []
 xref: GARD:10486
+xref: ICDO:9350/1
 xref: MESH:D003397
 xref: NCI:C2964
 xref: SNOMEDCT_US_2021_09_01:189179009
@@ -33659,6 +33782,7 @@ def: "A medulloblastoma that is characterized by cells that are larger than woul
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "large cell Medulloblastoma" EXACT []
+xref: ICDO:9474/3
 xref: NCI:C6904
 xref: SNOMEDCT_US_2021_09_01:128790006
 xref: UMLS_CUI:C1266180
@@ -33680,6 +33804,7 @@ name: medullomyoblastoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Medullomyoblastoma" EXACT []
+xref: ICDO:9472/3
 xref: MESH:D008527
 xref: NCI:C3706
 xref: SNOMEDCT_US_2021_09_01:24604009
@@ -33826,6 +33951,7 @@ subset: NCIthesaurus
 synonym: "Insulin-Producing tumor of Islet cells" EXACT []
 synonym: "Islet cell adenoma" EXACT []
 xref: GARD:3010
+xref: ICDO:8151/3
 xref: MESH:D007340
 xref: MESH:D007516
 xref: NCI:C65184
@@ -33846,6 +33972,7 @@ synonym: "Apocrine cystadenoma" EXACT []
 synonym: "Eccrine Cystadenoma" EXACT []
 synonym: "Eccrine hidrocystoma of skin" EXACT []
 synonym: "Hidrocystoma" EXACT []
+xref: ICDO:8404/0
 xref: MESH:D018251
 xref: NCI:C3760
 xref: SNOMEDCT_US_2021_09_01:80549000
@@ -33859,6 +33986,7 @@ name: apocrine adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "tubular Apocrine adenoma" EXACT []
+xref: ICDO:8401/0
 xref: NCI:C4168
 xref: SNOMEDCT_US_2021_09_01:307596009
 xref: UMLS_CUI:C0334345
@@ -33873,6 +34001,7 @@ subset: NCIthesaurus
 synonym: "Hidradenoma of skin" EXACT []
 synonym: "Sweat gland adenoma" EXACT []
 synonym: "Syringoadenoma" EXACT []
+xref: ICDO:8402/0
 xref: MESH:D006607
 xref: NCI:C7560
 xref: SNOMEDCT_US_2021_09_01:81393009
@@ -34236,6 +34365,7 @@ subset: NCIthesaurus
 synonym: "Trabecular adenocarcinoma" EXACT []
 synonym: "trabecular carcinoma" EXACT []
 xref: GARD:9266
+xref: ICDO:8247/3
 xref: NCI:C4068
 xref: SNOMEDCT_US_2021_09_01:29792007
 xref: UMLS_CUI:C0302182
@@ -34411,6 +34541,7 @@ name: Schneiderian carcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Cylindrical cell carcinoma" EXACT []
+xref: ICDO:8121/3
 xref: NCI:C54287
 xref: SNOMEDCT_US_2021_09_01:5600009
 xref: UMLS_CUI:C0334270
@@ -34550,6 +34681,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Leather-bottle stomach" EXACT []
 synonym: "Linitis plastica" EXACT []
+xref: ICDO:8142/3
 xref: MESH:D008039
 xref: NCI:C3190
 xref: SNOMEDCT_US_2021_09_01:307594007
@@ -34564,6 +34696,7 @@ def: "An adenocarcinoma that results in a hard structure owing to the formation 
 subset: NCIthesaurus
 synonym: "adenocarcinoma with Productive Fibrosis" EXACT []
 synonym: "Scirrhous adenocarcinoma" EXACT []
+xref: ICDO:8141/3
 xref: MESH:D002293
 xref: NCI:C2928
 xref: SNOMEDCT_US_2021_09_01:4584002
@@ -34794,6 +34927,7 @@ subset: NCIthesaurus
 synonym: "alveolar childhood rhabdomyosarcoma" EXACT []
 synonym: "Alveolar rhabdomyosarcoma" EXACT []
 xref: GARD:4701
+xref: ICDO:8920/3
 xref: MESH:D018232
 xref: NCI:C3749
 xref: NCI:C7958
@@ -34831,6 +34965,7 @@ name: ectomesenchymoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Rhabdomyosarcoma with ganglionic differentiation" EXACT []
+xref: ICDO:8921/3
 xref: NCI:C4716
 xref: SNOMEDCT_US_2021_09_01:128750008
 xref: UMLS_CUI:C0431111
@@ -34966,6 +35101,7 @@ name: bile duct cystadenocarcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "biliary cystadenocarcinoma" EXACT []
+xref: ICDO:8161/3
 xref: NCI:C4130
 xref: SNOMEDCT_US_2021_09_01:50422007
 xref: UMLS_CUI:C0334286
@@ -35200,6 +35336,7 @@ name: myxosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Myxosarcoma" EXACT []
+xref: ICDO:8840/3
 xref: MESH:D009236
 xref: NCI:C3255
 xref: SNOMEDCT_US_2021_09_01:28351005
@@ -35290,6 +35427,7 @@ def: "A chordoma that histologically derives_from chordoma, derives_from chondro
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chondroid chordoma" EXACT []
+xref: ICDO:9371/3
 xref: NCI:C6902
 xref: SNOMEDCT_US_2021_09_01:128784007
 xref: UMLS_CUI:C1266173
@@ -35373,6 +35511,7 @@ name: ganglioneuroblastoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Ganglioneuroblastoma" EXACT []
+xref: ICDO:9490/3
 xref: MESH:D018305
 xref: NCI:C3790
 xref: SNOMEDCT_US_2021_09_01:116381000119105
@@ -35660,6 +35799,7 @@ name: clear cell meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Clear cell meningioma" EXACT []
+xref: ICDO:9538/1
 xref: MESH:D008579
 xref: NCI:C4722
 xref: SNOMEDCT_US_2021_09_01:134213009
@@ -35710,6 +35850,7 @@ synonym: "endometrial stromal sarcoma, high grade" EXACT []
 synonym: "ESS" EXACT []
 synonym: "Undifferentiated endometrial sarcoma" EXACT []
 xref: GARD:6339
+xref: ICDO:8930/3
 xref: MESH:D018203
 xref: NCI:C8973
 xref: SNOMEDCT_US_2021_09_01:70555003
@@ -35760,6 +35901,7 @@ name: histiocytoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:8831/0
 xref: MESH:D051642
 xref: NCI:C35765
 xref: SNOMEDCT_US_2021_09_01:154614002
@@ -35794,6 +35936,7 @@ synonym: "Clear cell sarcoma of soft Parts" EXACT []
 synonym: "malignant melanoma of soft parts" RELATED []
 synonym: "malignant melanoma of soft tissues" EXACT []
 synonym: "melanoma, malignant, of soft parts" EXACT []
+xref: ICDO:9044/3
 xref: MESH:D018227
 xref: NCI:C27370
 xref: NCI:C3745
@@ -35809,6 +35952,7 @@ namespace: disease_ontology
 def: "A sarcoma that results_in cells that are spindle-shaped. They are usually resistant to radiation therapy." [url:http\://medical-dictionary.thefreedictionary.com/spindle+cell+sarcoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:8801/3
 xref: MESH:D012509
 xref: NCI:C27005
 xref: SNOMEDCT_US_2021_09_01:9801004
@@ -35832,6 +35976,7 @@ synonym: "mesodermal mixed tumor" EXACT []
 synonym: "mixed Mesodermal (mullerian) tumor" EXACT []
 synonym: "MMMT" EXACT []
 synonym: "mullerian mixed tumor" EXACT []
+xref: ICDO:8980/3
 xref: MESH:D002296
 xref: MESH:D018199
 xref: MESH:D018200
@@ -35857,6 +36002,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Alveolar Soft Part sarcoma" EXACT []
 xref: GARD:5654
+xref: ICDO:9581/3
 xref: MESH:D018234
 xref: NCI:C3750
 xref: NCI:C7943
@@ -36227,6 +36373,7 @@ subset: NCIthesaurus
 synonym: "multicentric basal cell carcinoma" EXACT []
 synonym: "Multifocal superficial basal cell carcinoma" EXACT []
 synonym: "Superficial multicentric basal-cell carcinoma" EXACT []
+xref: ICDO:8091/3
 xref: NCI:C4108
 xref: SNOMEDCT_US_2021_09_01:61098004
 xref: UMLS_CUI:C0334256
@@ -36327,6 +36474,7 @@ id: DOID:4321
 name: large cell acanthoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8072/0
 xref: NCI:C27518
 xref: SNOMEDCT_US_2021_09_01:733894009
 xref: UMLS_CUI:C1334362
@@ -36339,6 +36487,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Pilar Sheath acanthoma" EXACT []
 synonym: "Pilar sheath acanthoma" EXACT []
+xref: ICDO:8104/0
 xref: MESH:D049309
 xref: NCI:C4468
 xref: SNOMEDCT_US_2021_09_01:254693008
@@ -36404,6 +36553,7 @@ name: Erdheim-Chester disease
 namespace: disease_ontology
 subset: NCIthesaurus
 xref: GARD:6369
+xref: ICDO:9749/3
 xref: MESH:D031249
 xref: NCI:C53972
 xref: SNOMEDCT_US_2021_09_01:703711007
@@ -36532,6 +36682,7 @@ name: amelanotic melanoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Amelanotic melanoma" EXACT []
+xref: ICDO:8730/3
 xref: MESH:D018328
 xref: NCI:C3802
 xref: SNOMEDCT_US_2021_09_01:70594002
@@ -36544,6 +36695,7 @@ name: epithelioid cell melanoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "epithelioid melanoma" EXACT []
+xref: ICDO:8771/3
 xref: NCI:C4236
 xref: SNOMEDCT_US_2021_09_01:37138001
 xref: UMLS_CUI:C0334443
@@ -36930,6 +37082,7 @@ subset: NCIthesaurus
 synonym: "Somatostatin cell neoplasm" EXACT []
 synonym: "Somatostatin cell tumour" EXACT []
 xref: GARD:4900
+xref: ICDO:8156/3
 xref: MESH:D013005
 xref: NCI:C3379
 xref: SNOMEDCT_US_2021_09_01:128642005
@@ -37030,6 +37183,7 @@ def: "A germinoma that has_material_basis_in cells that make sperm and eggs." [u
 comment: OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "Seminoma, Pure" EXACT []
+xref: ICDO:9061/3
 xref: MESH:D018239
 xref: NCI:C9309
 xref: SNOMEDCT_US_2021_09_01:443675005
@@ -37218,6 +37372,7 @@ synonym: "carcinoma of renal Collecting duct" EXACT []
 synonym: "renal carcinoma, collecting duct type" EXACT []
 synonym: "renal Medullary carcinoma" EXACT []
 xref: GARD:9573
+xref: ICDO:8319/3
 xref: MESH:D002292
 xref: NCI:C6194
 xref: SNOMEDCT_US_2021_09_01:733470002
@@ -37288,6 +37443,7 @@ synonym: "Water-Clear cell adenocarcinoma" EXACT []
 synonym: "Water-clear cell adenocarcinoma" EXACT []
 synonym: "Water-clear cell carcinoma" EXACT []
 synonym: "Wolffian duct neoplasm" EXACT []
+xref: ICDO:8310/3
 xref: MESH:D008649
 xref: MESH:D018262
 xref: NCI:C36815
@@ -37584,6 +37740,7 @@ def: "A gastrointestinal system benign neoplasm that is a located_in the salivar
 subset: NCIthesaurus
 synonym: "mixed tumor of the Salivary gland" EXACT []
 synonym: "Pleomorphic adenoma" EXACT []
+xref: ICDO:8940/0
 xref: MESH:D008949
 xref: NCI:C35691
 xref: OMIM:181030
@@ -37666,6 +37823,7 @@ synonym: "MEC" EXACT []
 synonym: "Mucoepidermoid carcinoma" EXACT []
 synonym: "salivary gland mucoepidermoid carcinoma" EXACT []
 xref: GARD:10671
+xref: ICDO:8430/3
 xref: MESH:D018277
 xref: NCI:C3772
 xref: SNOMEDCT_US_2021_09_01:4079000
@@ -37727,6 +37885,7 @@ name: basophil adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Pituitary gland Basophilic adenoma" EXACT []
+xref: ICDO:8300/0
 xref: MESH:D000237
 xref: NCI:C2856
 xref: SNOMEDCT_US_2021_09_01:9436005
@@ -37811,6 +37970,7 @@ name: large cell carcinoma
 namespace: disease_ontology
 def: "A carcinoma that is composed of large, monotonous rounded or overtly polygonal-shaped cells with abundant cytoplasm." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: NCIthesaurus
+xref: ICDO:8012/3
 xref: MESH:D018287
 xref: NCI:C3780
 xref: SNOMEDCT_US_2021_09_01:22687000
@@ -38324,6 +38484,7 @@ subset: NCIthesaurus
 synonym: "Indolent systemic mastocytosis" EXACT []
 synonym: "ISM" EXACT []
 xref: ICD10CM:D47.02
+xref: ICDO:9741/1
 xref: MESH:D034721
 xref: NCI:C9286
 xref: SNOMEDCT_US_2021_09_01:70910003
@@ -38346,6 +38507,7 @@ id: DOID:467
 name: venous hemangioma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:9122/0
 xref: NCI:C4296
 xref: SNOMEDCT_US_2021_09_01:56468002
 xref: UMLS_CUI:C0334532
@@ -38431,6 +38593,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Intramuscular Angioma" EXACT []
 synonym: "Intramuscular hemangioma" EXACT []
+xref: ICDO:9132/0
 xref: MESH:D006391
 xref: NCI:C3699
 xref: SNOMEDCT_US_2021_09_01:54249004
@@ -38602,6 +38765,7 @@ alt_id: DOID:8371
 subset: NCIthesaurus
 synonym: "soft tissue Perineurioma" EXACT []
 xref: GARD:12698
+xref: ICDO:9571/0
 xref: MESH:D018317
 xref: NCI:C4973
 xref: NCI:C6912
@@ -38655,6 +38819,7 @@ id: DOID:470
 name: verrucous keratotic hemangioma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:9142/0
 xref: NCI:C4299
 xref: SNOMEDCT_US_2021_09_01:20985003
 xref: UMLS_CUI:C0334540
@@ -38973,6 +39138,7 @@ namespace: disease_ontology
 def: "A lung cancer that has_material_basis_in tissues of the lung and has_material_basis_in pleural tissues. It is most commonly effects children." [url:http\://www.cancer.gov/dictionary/?CdrID=446557]
 subset: NCIthesaurus
 synonym: "Blastoma of lung" EXACT []
+xref: ICDO:8972/3
 xref: MESH:D018202
 xref: NCI:C3732
 xref: SNOMEDCT_US_2021_09_01:189815007
@@ -39019,6 +39185,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Pleuropulmonary blastoma" EXACT []
 xref: GARD:8757
+xref: ICDO:8973/3
 xref: MESH:C537516
 xref: NCI:C5669
 xref: OMIM:601200
@@ -39160,6 +39327,7 @@ synonym: "Angiokeratoma" EXACT []
 synonym: "Angiokeratoma of skin" EXACT []
 synonym: "Cutaneous Angiokeratoma" EXACT []
 synonym: "skin angiokeratoma" EXACT []
+xref: ICDO:9141/0
 xref: MESH:D000794
 xref: NCI:C2874
 xref: NCI:C4488
@@ -39177,6 +39345,7 @@ subset: NCIthesaurus
 synonym: "Diktyoma, malignant" EXACT []
 synonym: "Medulloepithelioma" EXACT []
 synonym: "Medulloepithelioma, central nervous system" EXACT []
+xref: ICDO:9501/3
 xref: MESH:D018242
 xref: NCI:C4327
 xref: SNOMEDCT_US_2021_09_01:715903004
@@ -39293,6 +39462,7 @@ name: ganglioneuroma
 namespace: disease_ontology
 def: "An autonomic nervous system benign neoplasm that is characterized by the presence of mature ganglion cells and a mature Schwannian stroma and arises from the sympathetic trunk in the mediastinum." [url:https\://medlineplus.gov/ency/article/001437.htm]
 subset: NCIthesaurus
+xref: ICDO:9490/0
 xref: MESH:D005729
 xref: NCI:C3049
 xref: NCI:C42065
@@ -39331,6 +39501,7 @@ synonym: "Cavernoma" EXACT []
 synonym: "Cavernous haemangioma" EXACT []
 synonym: "Cavernous hemangioma" EXACT []
 xref: ICD10CM:D18.0
+xref: ICDO:9121/0
 xref: MESH:D006392
 xref: NCI:C3086
 xref: SNOMEDCT_US_2021_09_01:67668002
@@ -39346,6 +39517,7 @@ subset: NCIthesaurus
 synonym: "Adenosquamous carcinoma" EXACT []
 synonym: "Adenosquamous cell carcinoma" EXACT []
 synonym: "mixed adenocarcinoma and squamous carcinoma" EXACT []
+xref: ICDO:8560/3
 xref: MESH:D018196
 xref: NCI:C3727
 xref: SNOMEDCT_US_2021_09_01:403902008
@@ -39359,6 +39531,7 @@ namespace: disease_ontology
 def: "A carcinoma that derives_from myoepithelial cells." [url:http\://www.diagnosticpathology.org/content/3/1/7]
 subset: NCIthesaurus
 xref: GARD:10558
+xref: ICDO:8982/3
 xref: NCI:C7596
 xref: SNOMEDCT_US_2021_09_01:24292006
 xref: UMLS_CUI:C0334699
@@ -39385,6 +39558,7 @@ subset: NCIthesaurus
 synonym: "malignant neoplasm of sebaceous gland" EXACT []
 synonym: "malignant Sebaceous tumor" EXACT []
 xref: ICD10CM:C44
+xref: ICDO:8410/3
 xref: NCI:C8409
 xref: SNOMEDCT_US_2021_09_01:188083002
 xref: UMLS_CUI:C1382026
@@ -39424,6 +39598,7 @@ namespace: disease_ontology
 def: "A pilocytic astrocytoma that is characterized by a monomorphic architectural pattern, usually associated with the absence of Rosenthal fibers and eosinophilic granular bodies." [url:https\://pubmed.ncbi.nlm.nih.gov/30945015/, url:https\://radiopaedia.org/articles/pilomyxoid-astrocytoma?lang=us]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:9425/3
 xref: NCI:C40315
 xref: SNOMEDCT_US_2021_09_01:388600004
 xref: UMLS_CUI:C1519086
@@ -39485,6 +39660,7 @@ def: "A low grade glioma that is characterized by pleomorphic and lipidized cell
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Pleomorphic Xantho-astrocytoma" EXACT []
+xref: ICDO:9424/3
 xref: NCI:C4323
 xref: SNOMEDCT_US_2021_09_01:189924002
 xref: UMLS_CUI:C0334586
@@ -39518,6 +39694,7 @@ name: gliofibroma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Gliofibroma" EXACT []
+xref: ICDO:9442/1
 xref: NCI:C5419
 xref: SNOMEDCT_US_2021_09_01:128909006
 xref: UMLS_CUI:C1266178
@@ -39854,6 +40031,7 @@ namespace: disease_ontology
 def: "A carcinoma that derives_from epithelial cells, with polygonal accumulation of secondary lysosomes in the cytoplasm." [url:http\://en.wikipedia.org/wiki/Granular_cell_tumor]
 subset: NCIthesaurus
 synonym: "granular cell adenocarcinoma" EXACT []
+xref: ICDO:8320/3
 xref: MESH:D000230
 xref: NCI:C3681
 xref: SNOMEDCT_US_2021_09_01:69028005
@@ -39966,6 +40144,7 @@ name: pituitary carcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "carcinoma of the Pituitary gland" EXACT []
+xref: ICDO:8272/3
 xref: MESH:D010911
 xref: NCI:C4536
 xref: SNOMEDCT_US_2021_09_01:128665000
@@ -39978,6 +40157,7 @@ name: villous adenocarcinoma
 namespace: disease_ontology
 def: "An adenocarcinoma that derives_from epithelial cells originating in glandular tissue, with villous architecture." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15489649]
 subset: NCIthesaurus
+xref: ICDO:8262/3
 xref: NCI:C4142
 xref: SNOMEDCT_US_2021_09_01:28558000
 xref: UMLS_CUI:C0334306
@@ -40124,6 +40304,7 @@ namespace: disease_ontology
 def: "An adenocarcinoma that derives_from epithelial cells originating in glandular tissue. The tumor has branched angular tubules embedded in a loose fibrous stroma." [url:http\://onlinelibrary.wiley.com/store/10.1002/dc.2161/asset/2161_ftp.pdf?v=1&t=gpju9amb&s=f4e446d3a3c1e806325be5d11994dc6fb4670edf]
 subset: NCIthesaurus
 synonym: "tubular carcinoma" EXACT []
+xref: ICDO:8211/3
 xref: MESH:D000230
 xref: NCI:C65192
 xref: SNOMEDCT_US_2021_09_01:4631006
@@ -40209,6 +40390,7 @@ name: adenocarcinoma in situ
 namespace: disease_ontology
 def: "An in situ carcinoma that derives_from epithelial cells of glandular origin." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/adenocarcinoma-in-situ]
 subset: NCIthesaurus
+xref: ICDO:8140/2
 xref: MESH:D065311
 xref: NCI:C4123
 xref: SNOMEDCT_US_2021_09_01:51642000
@@ -40240,6 +40422,7 @@ synonym: "adult primary Cholangiocarcinoma" EXACT []
 synonym: "adult primary cholangiocellular carcinoma" EXACT []
 synonym: "cholangiosarcoma" EXACT []
 xref: ICD10CM:C22.1
+xref: ICDO:8160/3
 xref: MESH:D018281
 xref: NCI:C4436
 xref: NCI:C8265
@@ -40648,7 +40831,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Clear cell carcinoma of the Liver cells" EXACT []
 synonym: "Hepatocellular carcinoma, clear cell type" EXACT []
-xref: ICDO:M8174/3
+xref: ICDO:8174/3
 xref: NCI:C5754
 xref: SNOMEDCT_US_2021_09_01:128649001
 xref: UMLS_CUI:C1266020
@@ -40948,6 +41131,7 @@ subset: NCIthesaurus
 synonym: "Basisquamous cell carcinoma" EXACT []
 synonym: "basosquamous cell carcinoma" EXACT []
 synonym: "Metatypical carcinoma" EXACT []
+xref: ICDO:8094/3
 xref: MESH:D002281
 xref: NCI:C2922
 xref: SNOMEDCT_US_2021_09_01:37304002
@@ -40978,6 +41162,7 @@ subset: NCIthesaurus
 synonym: "Myxopapillary Ependymoma" EXACT []
 synonym: "Myxopapillary ependymoma" EXACT []
 xref: GARD:10633
+xref: ICDO:9394/1
 xref: MESH:D004806
 xref: NCI:C3697
 xref: SNOMEDCT_US_2021_09_01:1623000
@@ -41005,6 +41190,7 @@ subset: NCIthesaurus
 synonym: "SEGA" EXACT []
 synonym: "Subependymal giant cell astrocytoma" EXACT []
 xref: GARD:10632
+xref: ICDO:9384/1
 xref: MESH:D001254
 xref: NCI:C3696
 xref: SNOMEDCT_US_2021_09_01:449799008
@@ -41024,6 +41210,7 @@ synonym: "adult ganglioglioma" EXACT []
 synonym: "childhood ganglioglioma" EXACT []
 synonym: "CNS ganglioglioma" EXACT []
 xref: GARD:2430
+xref: ICDO:9505/1
 xref: MESH:D018303
 xref: NCI:C27362
 xref: NCI:C27363
@@ -41230,6 +41417,7 @@ subset: NCIthesaurus
 synonym: "Atypical leiomyoma" EXACT []
 synonym: "Pleomorphic leiomyoma" EXACT []
 synonym: "Symplastic leiomyoma" EXACT []
+xref: ICDO:8893/0
 xref: NCI:C4257
 xref: SNOMEDCT_US_2021_09_01:48897006
 xref: UMLS_CUI:C0334478
@@ -41297,6 +41485,7 @@ name: leiomyomatosis
 namespace: disease_ontology
 def: "A leiomyoma that is multiple and diffuse." [url:https\://ghr.nlm.nih.gov/condition/hereditary-leiomyomatosis-and-renal-cell-cancer]
 subset: NCIthesaurus
+xref: ICDO:8890/1
 xref: MESH:D018231
 xref: NCI:C3748
 xref: SNOMEDCT_US_2021_09_01:1157154004
@@ -41309,6 +41498,7 @@ name: cellular leiomyoma
 namespace: disease_ontology
 def: "A leiomyoma that is a morphological variant of leiomyoma and is characterized by increased cellularity, no atypia and no mitotic figures." [url:http\://www.pathologyoutlines.com/topic/uterusleiomyomacellular.html]
 subset: NCIthesaurus
+xref: ICDO:8892/0
 xref: NCI:C4256
 xref: SNOMEDCT_US_2021_09_01:90955001
 xref: UMLS_CUI:C0334477
@@ -41397,6 +41587,7 @@ name: plexiform neurofibroma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
+xref: ICDO:9550/0
 xref: MESH:D018318
 xref: NCI:C3797
 xref: SNOMEDCT_US_2021_09_01:41252002
@@ -41892,6 +42083,7 @@ name: glomangiosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "malignant Glomus neoplasm" EXACT []
+xref: ICDO:8710/3
 xref: NCI:C4221
 xref: SNOMEDCT_US_2021_09_01:128908003
 xref: UMLS_CUI:C1266111
@@ -41938,6 +42130,7 @@ subset: NCIthesaurus
 synonym: "Capillary Hemangioblastoma" EXACT []
 xref: GARD:8232
 xref: GARD:8522
+xref: ICDO:9161/1
 xref: MESH:D018325
 xref: NCI:C3801
 xref: SNOMEDCT_US_2021_09_01:81201000
@@ -42074,6 +42267,7 @@ name: epithelioid leiomyosarcoma
 namespace: disease_ontology
 def: "A leiomyosarcoma that is composed predominantly or entirely of round or polygonal cells with eosinophilic, or much less commonly, clear cytoplasm." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28288693]
 subset: NCIthesaurus
+xref: ICDO:8891/3
 xref: MESH:D007890
 xref: NCI:C3700
 xref: SNOMEDCT_US_2021_09_01:42392001
@@ -42109,6 +42303,7 @@ namespace: disease_ontology
 def: "A leiomyosarcoma that is characterized by abundant myxoid stroma." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/leiomyosarcoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/26866354]
 subset: NCIthesaurus
 synonym: "Myxoid leiomyosarcoma" EXACT []
+xref: ICDO:8896/3
 xref: MESH:D007890
 xref: NCI:C3701
 xref: SNOMEDCT_US_2021_09_01:189792003
@@ -42470,6 +42665,7 @@ id: DOID:5309
 name: epithelial-myoepithelial carcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8562/3
 xref: NCI:C4199
 xref: SNOMEDCT_US_2021_09_01:189722008
 xref: UMLS_CUI:C0334392
@@ -42867,6 +43063,7 @@ namespace: disease_ontology
 def: "A biliary tract benign neoplasm that results_in a small firm white nodule with multiple bile ducts that are located_in a fibrous stroma." [url:https\://www.sciencedirect.com/topics/medicine-and-dentistry/bile-duct-adenoma]
 subset: NCIthesaurus
 synonym: "Cholangioadenoma" EXACT []
+xref: ICDO:8160/0
 xref: MESH:D002759
 xref: NCI:C2942
 xref: SNOMEDCT_US_2021_09_01:39471001
@@ -42891,6 +43088,7 @@ namespace: disease_ontology
 def: "A biliary tract benign neoplasm that is located_in the bile duct and derives_from epithelial cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4106371/]
 subset: NCIthesaurus
 synonym: "Cystadenoma of the bile duct" EXACT []
+xref: ICDO:8161/0
 xref: NCI:C4129
 xref: SNOMEDCT_US_2021_09_01:83025009
 xref: UMLS_CUI:C0334285
@@ -42902,6 +43100,7 @@ name: mixed cell adenoma
 namespace: disease_ontology
 def: "An adenoma that has_material_basis_in more than one cell type." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25002356]
 subset: NCIthesaurus
+xref: ICDO:8323/0
 xref: NCI:C4157
 xref: SNOMEDCT_US_2021_09_01:89773001
 xref: UMLS_CUI:C0334323
@@ -42940,6 +43139,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Follicular adenoma, oxyphilic cell" EXACT []
 synonym: "Oncocytoma" EXACT []
+xref: ICDO:8290/0
 xref: MESH:D018249
 xref: NCI:C3759
 xref: SNOMEDCT_US_2021_09_01:89439007
@@ -42970,6 +43170,7 @@ namespace: disease_ontology
 def: "An adenoma that is composed_of cells with a clear cytoplasm located_in ovary." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4151]
 subset: NCIthesaurus
 synonym: "Clear cell adenoma" EXACT []
+xref: ICDO:8310/0
 xref: NCI:C4151
 xref: SNOMEDCT_US_2021_09_01:1752006
 xref: UMLS_CUI:C0334315
@@ -42994,6 +43195,7 @@ name: acidophil adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Eosinophil adenoma" EXACT []
+xref: ICDO:8280/0
 xref: MESH:D000239
 xref: NCI:C6780
 xref: SNOMEDCT_US_2021_09_01:21109002
@@ -43060,6 +43262,7 @@ name: lipoadenoma
 namespace: disease_ontology
 def: "An adenoma that is composed_of epithelial cells admixed with adipose tissue cells." [url:http\://en.wiktionary.org/wiki/lipoadenoma, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4159]
 subset: NCIthesaurus
+xref: ICDO:8324/0
 xref: NCI:C4159
 xref: SNOMEDCT_US_2021_09_01:22024005
 xref: UMLS_CUI:C0334325
@@ -43072,6 +43275,7 @@ namespace: disease_ontology
 def: "An adenoma that derives_from epithelial cells which have clear cytoplasm." [url:https\://www.pathologyoutlines.com/topic/parathyroidwaterclearadenoma.html]
 subset: NCIthesaurus
 synonym: "Water-clear cell adenoma" EXACT []
+xref: ICDO:8322/0
 xref: NCI:C4155
 xref: SNOMEDCT_US_2021_09_01:26638004
 xref: UMLS_CUI:C0334321
@@ -43094,6 +43298,7 @@ namespace: disease_ontology
 def: "A pancreatic cystadenoma that is characterized by innumerable small cysts lined by bland clear cells." [url:http\://surgpathcriteria.stanford.edu/pancreas/serous_microcystic_adenoma/, url:https\://www.ncbi.nlm.nih.gov/pubmed/15559952]
 subset: NCIthesaurus
 synonym: "Microcystic adenoma" EXACT []
+xref: ICDO:8202/0
 xref: MESH:D000236
 xref: NCI:C3685
 xref: SNOMEDCT_US_2021_09_01:189580001
@@ -43327,6 +43532,7 @@ id: DOID:5439
 name: papillary hidradenoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8405/0
 xref: MESH:D000074009
 xref: NCI:C4171
 xref: SNOMEDCT_US_2021_09_01:89791006
@@ -43370,6 +43576,7 @@ subset: NCIthesaurus
 synonym: "benign eccrine spiradenoma" EXACT []
 synonym: "Eccrine spiradenoma" EXACT []
 synonym: "Eccrine spiradenoma of skin" EXACT []
+xref: ICDO:8403/0
 xref: NCI:C4170
 xref: SNOMEDCT_US_2021_09_01:403938001
 xref: UMLS_CUI:C0334347
@@ -43384,6 +43591,7 @@ synonym: "Papillary Syringadenoma" EXACT []
 synonym: "Papillary syringadenoma" EXACT []
 synonym: "Syringocystadenoma papilliferum" EXACT []
 xref: GARD:5100
+xref: ICDO:8406/0
 xref: MESH:D000074009
 xref: NCI:C4172
 xref: SNOMEDCT_US_2021_09_01:8934006
@@ -43399,6 +43607,7 @@ subset: NCIthesaurus
 synonym: "Eccrine papillary adenoma of skin" EXACT []
 synonym: "papillary eccrine adenoma" EXACT []
 xref: GARD:10463
+xref: ICDO:8408/0
 xref: NCI:C4173
 xref: SNOMEDCT_US_2021_09_01:253021007
 xref: UMLS_CUI:C0334350
@@ -43525,6 +43734,7 @@ namespace: disease_ontology
 def: "An adenofibroma that is characterized by the presence of cells with clear cytoplasm." [url:http\://www.jcancer.org/v02p0094.htm, url:https\://www.ncbi.nlm.nih.gov/pubmed/24721826]
 subset: NCIthesaurus
 synonym: "Clear cell adenofibroma" EXACT []
+xref: ICDO:8313/0
 xref: MESH:D062625
 xref: NCI:C8985
 xref: SNOMEDCT_US_2021_09_01:2962009
@@ -43594,6 +43804,7 @@ comment: Xref MGI.
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:7721
+xref: ICDO:9040/3
 xref: MESH:D013584
 xref: NCI:C3400
 xref: OMIM:300813
@@ -43724,6 +43935,7 @@ id: DOID:5505
 name: papillary ependymoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:9393/3
 xref: MESH:D004806
 xref: NCI:C4319
 xref: SNOMEDCT_US_2021_09_01:112686007
@@ -43919,6 +44131,7 @@ def: "A squamous cell carcinoma that has a solid, closely packed growth of cells
 subset: NCIthesaurus
 synonym: "Basaloid carcinoma" EXACT []
 synonym: "Basaloid squamous cell carcinoma" EXACT []
+xref: ICDO:8083/3
 xref: NCI:C54244
 xref: SNOMEDCT_US_2021_09_01:128634009
 xref: UMLS_CUI:C1266005
@@ -44275,7 +44488,7 @@ synonym: "Immature teratoma" EXACT []
 synonym: "malignant Extragonadal teratoma" EXACT []
 synonym: "primary malignant extragonadal teratoma" EXACT []
 synonym: "Teratoma, malignant, NOS" EXACT []
-xref: ICDO:M9080/3
+xref: ICDO:9080/3
 xref: MESH:D013724
 xref: NCI:C4286
 xref: NCI:C8884
@@ -44400,6 +44613,7 @@ synonym: "Vasoactive intestinal peptide-secreting tumor" EXACT []
 synonym: "VIP- Secreting tumor" EXACT []
 synonym: "Vipoma, malignant" EXACT []
 xref: GARD:5493
+xref: ICDO:8155/3
 xref: MESH:D003969
 xref: NCI:C26749
 xref: SNOMEDCT_US_2021_09_01:447643008
@@ -44427,6 +44641,7 @@ subset: NCIthesaurus
 synonym: "Gastrin cell tumour" EXACT []
 synonym: "Gastrin Secreting tumor" EXACT []
 synonym: "malignant gastrinoma" EXACT []
+xref: ICDO:8153/3
 xref: MESH:D015408
 xref: NCI:C3050
 xref: SNOMEDCT_US_2021_09_01:16189002
@@ -44872,6 +45087,7 @@ name: malignant giant cell tumor of soft parts
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "malignant Giant cell neoplasm of soft Parts" EXACT []
+xref: ICDO:9251/3
 xref: NCI:C8380
 xref: SNOMEDCT_US_2021_09_01:48460009
 xref: UMLS_CUI:C0334554
@@ -44925,6 +45141,7 @@ def: "A choroid plexus cancer that has_material_basis_in epithelial cells of the
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:8238
+xref: ICDO:9390/3
 xref: MESH:C562943
 xref: NCI:C4533
 xref: NCI:C4715
@@ -44956,6 +45173,7 @@ name: lipid-rich carcinoma
 namespace: disease_ontology
 def: "A breast carcinoma characterized by the presence of malignant epithelial cells with clear cytoplasm which contains neutral lipids." [url:http\://www.pathologyoutlines.com/topic/breastmalignantlipidrich.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/25789031\,]
 subset: NCIthesaurus
+xref: ICDO:8314/3
 xref: NCI:C4152
 xref: SNOMEDCT_US_2021_09_01:189655006
 xref: UMLS_CUI:C0334318
@@ -44982,6 +45200,7 @@ namespace: disease_ontology
 def: "A sarcomatoid carcinoma that is consisting of spindle or giant cells (or both) combined with squamous cell carcinoma, adenocarcinoma, or large-cell carcinoma." [url:http\://ats.ctsnetjournals.org/cgi/content/full/78/5/1742]
 subset: NCIthesaurus
 synonym: "Pleomorphic carcinoma" EXACT []
+xref: ICDO:8022/3
 xref: NCI:C4094
 xref: SNOMEDCT_US_2021_09_01:16741004
 xref: UMLS_CUI:C0334233
@@ -45046,6 +45265,7 @@ def: "A breast carcinoma that is characterized by an irregular cribriform growth
 subset: NCIthesaurus
 synonym: "Cribriform carcinoma" EXACT []
 synonym: "ductal carcinoma, cribriform type" EXACT []
+xref: ICDO:8201/3
 xref: MESH:D000230
 xref: NCI:C3680
 xref: SNOMEDCT_US_2021_09_01:30156004
@@ -45252,6 +45472,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Fibroblastic Liposarcoma" EXACT []
 synonym: "Fibroblastic liposarcoma" EXACT []
+xref: ICDO:8857/3
 xref: NCI:C6509
 xref: SNOMEDCT_US_2021_09_01:128883006
 xref: UMLS_CUI:C1266130
@@ -45325,6 +45546,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Pleomorphic Liposarcoma" EXACT []
 synonym: "Pleomorphic liposarcoma" EXACT []
+xref: ICDO:8854/3
 xref: MESH:D008080
 xref: NCI:C3705
 xref: SNOMEDCT_US_2021_09_01:404071006
@@ -45336,6 +45558,7 @@ id: DOID:5703
 name: mixed liposarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8855/3
 xref: NCI:C4253
 xref: SNOMEDCT_US_2021_09_01:11073003
 xref: UMLS_CUI:C0334472
@@ -46414,6 +46637,7 @@ name: clear cell chondrosarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Clear cell chondrosarcoma" EXACT []
+xref: ICDO:9242/3
 xref: MESH:D000077207
 xref: NCI:C6475
 xref: SNOMEDCT_US_2021_09_01:128775007
@@ -46451,7 +46675,7 @@ name: retroperitoneal cancer
 namespace: disease_ontology
 alt_id: DOID:12340
 alt_id: DOID:9860
-def: "An organ system cancer located_in the retroperitoneal space that is manifested in retroperitoneal space in the abdominal cavity behind the peritoneum." [url:http\://en.wikipedia.org/wiki/Retroperitoneal_space]
+def: "A thoracic cancer located_in the retroperitoneal space in the abdominal cavity behind the peritoneum." [url:http\://en.wikipedia.org/wiki/Retroperitoneal_space]
 subset: DO_MGI_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm of retroperitoneum" RELATED []
@@ -46475,7 +46699,7 @@ xref: SNOMEDCT_US_2021_09_01:363420003
 xref: UMLS_CUI:C0035358
 xref: UMLS_CUI:C0153464
 xref: UMLS_CUI:C0153465
-is_a: DOID:162 ! cancer
+is_a: DOID:5093 ! thoracic cancer
 
 [Term]
 id: DOID:5876
@@ -46599,6 +46823,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Leptomeningeal melanocytoma" EXACT []
 synonym: "melanocytoma of meninges" EXACT []
+xref: ICDO:8728/1
 xref: NCI:C4662
 xref: SNOMEDCT_US_2021_09_01:128730009
 xref: UMLS_CUI:C1266113
@@ -46655,6 +46880,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Nonencapsulated Sclerosing neoplasm" EXACT []
 synonym: "Papillary carcinoma, diffuse sclerosing" EXACT []
+xref: ICDO:8350/3
 xref: NCI:C7427
 xref: SNOMEDCT_US_2021_09_01:62681000
 xref: UMLS_CUI:C0334330
@@ -47629,6 +47855,7 @@ subset: NCIthesaurus
 synonym: "Astrocytosis cerebri" EXACT []
 synonym: "Gliomatosis cerebri" EXACT []
 xref: GARD:6514
+xref: ICDO:9381/3
 xref: MESH:D018302
 xref: NCI:C4318
 xref: SNOMEDCT_US_2021_09_01:26138003
@@ -48284,6 +48511,7 @@ subset: NCIthesaurus
 synonym: "Follicular Dendritic cell sarcoma" EXACT []
 synonym: "Follicular dendritic cell tumour" EXACT []
 xref: ICD10CM:C96.4
+xref: ICDO:9758/3
 xref: MESH:D054740
 xref: NCI:C9281
 xref: SNOMEDCT_US_2021_09_01:128816008
@@ -48870,6 +49098,7 @@ name: metanephric adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Metanephric adenoma" EXACT []
+xref: ICDO:8325/0
 xref: NCI:C27253
 xref: SNOMEDCT_US_2021_09_01:128670007
 xref: UMLS_CUI:C1266045
@@ -49030,6 +49259,7 @@ name: ceruminous adenocarcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Ceruminous adenocarcinoma" EXACT []
+xref: ICDO:8420/3
 xref: NCI:C4176
 xref: SNOMEDCT_US_2021_09_01:58069009
 xref: UMLS_CUI:C0334353
@@ -49508,6 +49738,7 @@ name: angiomatous meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Angiomatous meningioma" EXACT []
+xref: ICDO:9534/0
 xref: MESH:D008579
 xref: NCI:C4332
 xref: SNOMEDCT_US_2021_09_01:73918009
@@ -49634,6 +49865,7 @@ subset: NCIthesaurus
 synonym: "acinar cell adenoma" EXACT []
 synonym: "acinic cell adenoma" EXACT []
 synonym: "adenomas" EXACT []
+xref: ICDO:8140/0
 xref: MESH:D000236
 xref: NCI:C2855
 xref: NCI:C4196
@@ -50341,6 +50573,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "diffuse astrocytoma" EXACT []
 synonym: "Fibrillary Astrocytic tumors" EXACT []
+xref: ICDO:9420/3
 xref: MESH:D001254
 xref: NCI:C4322
 xref: SNOMEDCT_US_2021_09_01:71314006
@@ -50698,6 +50931,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Pancreatoblastoma" EXACT []
 xref: GARD:4210
+xref: ICDO:8971/3
 xref: MESH:C537162
 xref: NCI:C4265
 xref: SNOMEDCT_US_2021_09_01:53618008
@@ -50774,11 +51008,12 @@ subset: NCIthesaurus
 synonym: "Hepatoma" EXACT []
 xref: EFO:0000182
 xref: ICD10CM:C22.0
-xref: ICDO:M8170/3
+xref: ICDO:8170/3
 xref: NCI:C3099
 xref: OMIM:114550
 xref: ORDO:88673
-xref: SNOMEDCT_US_2019_09_01:109841003
+xref: SNOMEDCT_US_2021_07_31:109841003
+xref: UMLS_CUI:C2239176
 is_a: DOID:686 ! liver carcinoma
 
 [Term]
@@ -50941,7 +51176,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:2657
 xref: ICD10CM:C22.2
-xref: ICDO:M8970/3
+xref: ICDO:8970/3
 xref: MESH:D018197
 xref: NCI:C3728
 xref: SNOMEDCT_US_2021_09_01:109843000
@@ -51070,6 +51305,7 @@ name: glomangiomatosis
 namespace: disease_ontology
 def: "A benign perivascular tumor that is characterized as a vascular variant of a glomus tumor." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28656356]
 subset: NCIthesaurus
+xref: ICDO:8711/1
 xref: NCI:C27496
 xref: SNOMEDCT_US_2021_09_01:703603008
 xref: UMLS_CUI:C1333824
@@ -51453,6 +51689,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Gemistocytic Astrocytic tumor" EXACT []
 synonym: "Gemistocytic astrocytoma" EXACT []
+xref: ICDO:9411/3
 xref: MESH:D001254
 xref: NCI:C4321
 xref: SNOMEDCT_US_2021_09_01:73982001
@@ -51478,6 +51715,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Protoplasmic Astrocytic tumor" EXACT []
 synonym: "Protoplasmic astrocytoma" EXACT []
+xref: ICDO:9410/3
 xref: MESH:D001254
 xref: NCI:C4320
 xref: SNOMEDCT_US_2021_09_01:55094006
@@ -52076,6 +52314,7 @@ def: "A histiocytic and dendritic cell cancer that derives from the lymph nodes,
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICD10CM:C96.4
+xref: ICDO:9756/3
 xref: MESH:D054752
 xref: NCI:C6921
 xref: SNOMEDCT_US_2021_09_01:724649000
@@ -52209,6 +52448,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Cloacogenic anal carcinoma" EXACT []
 synonym: "Cloacogenic carcinoma" EXACT []
+xref: ICDO:8124/3
 xref: NCI:C8255
 xref: SNOMEDCT_US_2021_09_01:84570003
 xref: UMLS_CUI:C0334273
@@ -52399,6 +52639,7 @@ name: psammomatous meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Psammomatous meningioma" EXACT []
+xref: ICDO:9533/0
 xref: MESH:D008579
 xref: NCI:C4331
 xref: SNOMEDCT_US_2021_09_01:38431002
@@ -52411,6 +52652,7 @@ name: fibrous meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Fibroblastic meningioma" EXACT []
+xref: ICDO:9532/0
 xref: MESH:D008579
 xref: NCI:C4330
 xref: SNOMEDCT_US_2021_09_01:511008
@@ -52423,6 +52665,7 @@ name: meningothelial meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Meningotheliomatous meningioma" EXACT []
+xref: ICDO:9531/0
 xref: MESH:D008579
 xref: NCI:C4329
 xref: SNOMEDCT_US_2021_09_01:68944005
@@ -52435,6 +52678,7 @@ name: transitional meningioma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "transitional (mixed) meningioma" EXACT []
+xref: ICDO:9537/0
 xref: MESH:D008579
 xref: NCI:C4333
 xref: SNOMEDCT_US_2021_09_01:64967004
@@ -52524,14 +52768,15 @@ is_a: DOID:5349 ! central nervous system adult germ cell tumor
 
 [Term]
 id: DOID:7234
-name: mucinous cystadenocarcinoma of the pancreas
+name: mucinous cystadenocarcinoma of pancreas
 namespace: disease_ontology
 def: "A pancreatic cystadenocarinoma that is characterized by histological characteristics of columnar, mucin-producing epithelium associated with ovarian-type subepithelial stroma, which does not communicate with the pancreatic ductal system, most frequently localized to the body or tail of the pancreas." [url:https\://www.ncbi.nlm.nih.gov/books/NBK448105/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3959310/]
 subset: NCIthesaurus
-synonym: "mucinous Cystadencarcinoma of pancreas" EXACT []
 synonym: "pancreatic colloid cystadenocarcinoma" EXACT []
+synonym: "Pancreatic Mucinous Cystadenocarcinoma" EXACT []
 xref: NCI:C5713
-xref: SNOMEDCT_US_2019_09_01:785879009
+xref: SNOMEDCT_US_2021_07_31:785879009
+xref: UMLS_CUI:C2063873
 is_a: DOID:4073 ! pancreatic cystadenocarcinoma
 
 [Term]
@@ -52551,7 +52796,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C41246
 xref: UMLS_CUI:C1518870
-is_a: DOID:7234 ! mucinous cystadenocarcinoma of the pancreas
+is_a: DOID:7234 ! mucinous cystadenocarcinoma of pancreas
 
 [Term]
 id: DOID:7237
@@ -52561,7 +52806,7 @@ subset: NCIthesaurus
 xref: NCI:C41245
 xref: SNOMEDCT_US_2021_09_01:128900005
 xref: UMLS_CUI:C1266078
-is_a: DOID:7234 ! mucinous cystadenocarcinoma of the pancreas
+is_a: DOID:7234 ! mucinous cystadenocarcinoma of pancreas
 
 [Term]
 id: DOID:724
@@ -52736,6 +52981,7 @@ def: "A malignant astrocytoma that is characterized by tumor cells with characte
 subset: NCIthesaurus
 synonym: "Astroblastoma" EXACT []
 xref: GARD:10635
+xref: ICDO:9430/3
 xref: MESH:D018302
 xref: NCI:C4324
 xref: SNOMEDCT_US_2021_09_01:48952003
@@ -53345,6 +53591,7 @@ synonym: "adenomatoid tumour" EXACT []
 synonym: "benign localised epithelial Mesothelioma" EXACT []
 synonym: "benign localized epithelial Mesothelioma" EXACT []
 xref: ICD10CM:D19.9
+xref: ICDO:9054/0
 xref: MESH:D018254
 xref: NCI:C3762
 xref: SNOMEDCT_US_2021_09_01:2348006
@@ -53438,6 +53685,7 @@ name: large cell carcinoma with rhabdoid phenotype
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "large cell lung carcinoma with Rhabdoid Phenotype" EXACT []
+xref: ICDO:8014/3
 xref: NCI:C6876
 xref: SNOMEDCT_US_2021_09_01:128629005
 xref: UMLS_CUI:C1265997
@@ -53736,6 +53984,7 @@ id: DOID:7532
 name: squamous papillomatosis
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8060/0
 xref: NCI:C9009
 xref: SNOMEDCT_US_2021_09_01:82049002
 xref: UMLS_CUI:C1378340
@@ -54108,6 +54357,7 @@ name: chief cell adenoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Chief cell adenoma of Parathyroid gland" EXACT []
+xref: ICDO:8321/0
 xref: NCI:C4154
 xref: SNOMEDCT_US_2021_09_01:12205003
 xref: UMLS_CUI:C0334320
@@ -54196,6 +54446,7 @@ name: sarcomatosis
 namespace: disease_ontology
 def: "A sarcoma that results_in the formation of numerous sarcomas or located_in various parts of the body." [url:https\://www.merriam-webster.com/dictionary/sarcomatosis]
 subset: NCIthesaurus
+xref: ICDO:8800/9
 xref: NCI:C4243
 xref: SNOMEDCT_US_2021_09_01:9395006
 xref: UMLS_CUI:C0334451
@@ -54466,7 +54717,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: EFO:0000621
 xref: GARD:7185
-xref: ICDO:M9500/3
+xref: ICDO:9500/3
 xref: MESH:D009447
 xref: NCI:C3270
 xref: ORDO:635
@@ -54606,6 +54857,7 @@ name: acinar cell cystadenocarcinoma
 namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "pancreatic acinar cell cystadenocarcinoma" EXACT []
+xref: ICDO:8551/3
 xref: NCI:C5727
 xref: SNOMEDCT_US_2021_09_01:128703004
 xref: UMLS_CUI:C1266087
@@ -55009,6 +55261,7 @@ def: "A histiocytic and dendritic cell cancer that effect dendritic cells." [url
 subset: NCIthesaurus
 synonym: "Interdigitating cell sarcoma" EXACT []
 xref: ICD10CM:C96.4
+xref: ICDO:9757/3
 xref: MESH:D054739
 xref: NCI:C9282
 xref: SNOMEDCT_US_2021_09_01:128815007
@@ -55098,6 +55351,7 @@ def: "An ovarian benign neoplasm characterized by solid proliferations of lutein
 subset: NCIthesaurus
 synonym: "leuteoma of pregnancy" EXACT []
 synonym: "luteoma of pregnancy" EXACT []
+xref: ICDO:8610/0
 xref: NCI:C40445
 xref: UMLS_CUI:C1517842
 is_a: DOID:4 ! disease
@@ -55582,6 +55836,7 @@ id: DOID:8020
 name: glomangiomyoma
 namespace: disease_ontology
 subset: NCIthesaurus
+xref: ICDO:8713/0
 xref: NCI:C4223
 xref: SNOMEDCT_US_2021_09_01:189745002
 xref: UMLS_CUI:C0334422
@@ -56490,6 +56745,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Leptomeningeal melanomatosis" EXACT []
 synonym: "Meningeal melanomatosis" EXACT []
+xref: ICDO:8728/3
 xref: NCI:C6891
 xref: SNOMEDCT_US_2021_09_01:128731008
 xref: UMLS_CUI:C1266114
@@ -56598,6 +56854,7 @@ namespace: disease_ontology
 subset: NCIthesaurus
 synonym: "Atypical Follicular adenoma" EXACT []
 synonym: "Atypical follicular adenoma" EXACT []
+xref: ICDO:8330/1
 xref: NCI:C27729
 xref: SNOMEDCT_US_2021_09_01:128892009
 xref: UMLS_CUI:C1266046
@@ -57748,6 +58005,7 @@ synonym: "Myeloid Leukemia, chronic" EXACT []
 xref: EFO:0000339
 xref: GARD:6105
 xref: ICD9CM:205.1
+xref: ICDO:9863/3
 xref: KEGG:05220
 xref: OMIM:608232
 xref: ORDO:521
@@ -57971,6 +58229,7 @@ synonym: "small Non-Cleaved cell Lymphoma, Burkitt's type" EXACT []
 xref: GARD:5973
 xref: ICD10CM:C83.7
 xref: ICD9CM:200.2
+xref: ICDO:9687/3
 xref: MESH:D002051
 xref: NCI:C2912
 xref: OMIM:113970
@@ -58545,6 +58804,7 @@ synonym: "Extramedullary Myeloid tumor" EXACT []
 synonym: "Granulocytic sarcoma" EXACT []
 xref: GARD:12763
 xref: ICD10CM:C92.3
+xref: ICDO:9930/3
 xref: MESH:D023981
 xref: NCI:C35815
 xref: SNOMEDCT_US_2021_09_01:188738007
@@ -58643,6 +58903,7 @@ synonym: "mycosis fungoides lymphoma" EXACT []
 xref: GARD:3863
 xref: ICD10CM:C84.0
 xref: ICD9CM:202.1
+xref: ICDO:9700/3
 xref: MESH:D009182
 xref: NCI:C3246
 xref: OMIM:254400
@@ -58671,6 +58932,7 @@ synonym: "Non-Lymphocytic Leukemia" EXACT []
 xref: GARD:8226
 xref: ICD10CM:C92
 xref: ICD9CM:205
+xref: ICDO:9860/3
 xref: MESH:D007951
 xref: NCI:C3172
 xref: SNOMEDCT_US_2021_09_01:269631008
@@ -59213,6 +59475,7 @@ synonym: "SK - Solar keratosis" EXACT []
 synonym: "Solar keratosis" EXACT []
 xref: ICD10CM:L57.0
 xref: ICD9CM:702.0
+xref: ICDO:8070/0
 xref: MESH:D055623
 xref: NCI:C3148
 xref: SNOMEDCT_US_2021_09_01:267858008
@@ -59686,6 +59949,7 @@ xref: GARD:7422
 xref: ICD10CM:D45
 xref: ICD9CM:207.1
 xref: ICD9CM:238.4
+xref: ICDO:9950/3
 xref: MESH:D011087
 xref: NCI:C3336
 xref: OMIM:263300
@@ -60594,6 +60858,7 @@ synonym: "Stromal tumor of gastrointestinal tract" EXACT []
 synonym: "Stromal tumour of gastrointestinal tract" EXACT []
 xref: GARD:8598
 xref: ICD10CM:C49.A
+xref: ICDO:8936/3
 xref: MESH:D046152
 xref: NCI:C3868
 xref: OMIM:606764
@@ -61729,6 +61994,7 @@ synonym: "plasmacytic leukemia" EXACT []
 xref: GARD:9373
 xref: ICD10CM:C90.1
 xref: ICD9CM:203.1
+xref: ICDO:9733/3
 xref: MESH:D007952
 xref: NCI:C3180
 xref: SNOMEDCT_US_2021_09_01:269630009
@@ -61739,7 +62005,7 @@ is_a: DOID:706 ! mature B-cell neoplasm
 id: DOID:9521
 name: Laron syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by marked short stature with normal or high serum growth hormone and low serum insulin-like growth factor-1 levels that has_material_basis_in homozygous or compound heterozygous mutation in GHR on chromosome 5p13-p12." [url:https\://ghr.nlm.nih.gov/condition/laron-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/8488849] {comment="ECO:0007636"}
+def: "A syndrome characterized by marked short stature with normal or high serum growth hormone and low serum insulin-like growth factor-1 levels that has_material_basis_in homozygous or compound heterozygous mutation in GHR on chromosome 5p13-p12." [url:https\://ghr.nlm.nih.gov/condition/laron-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/8488849]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Laron-type isolated somatotropin defect" EXACT []
@@ -62112,6 +62378,7 @@ namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:7191
+xref: ICDO:9540/0
 xref: MESH:D009455
 xref: NCI:C3272
 xref: SNOMEDCT_US_2021_09_01:404029005

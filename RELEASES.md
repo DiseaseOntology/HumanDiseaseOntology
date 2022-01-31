@@ -9,6 +9,19 @@
 
 ---
 
+## 2022 Releases
+
+### [v2022-01-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-01-31)
+
+DO's January 2022 release. This release includes 10,902 disease terms with 77% (8,419 defined). We have added over 300 ICDO xrefs, new has_symptom axioms, revised sexual dysfunction and amblyopia terms and added lymphatic system diseases.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-01-31/src/ontology/doid-merged.obo) | |
+
 ## 2021 Releases
 
 ### [v2021-12-15](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2021-12-15)

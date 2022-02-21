@@ -393,11 +393,17 @@
         "xrefs" : [ {
           "val" : "GARD:6226"
         }, {
+          "val" : "NCI:C3467"
+        }, {
           "val" : "MESH:D016410"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "cutaneous T-cell lymphoma",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "cutaneous T cell lymphoma",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -406,7 +412,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "cutaneous T cell lymphoma"
+      "lbl" : "primary cutaneous T-cell non-Hodgkin lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3265",
       "meta" : {
@@ -2437,6 +2443,41 @@
       "type" : "CLASS",
       "lbl" : "hereditary mucosal leukokeratosis"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_1039",
+      "meta" : {
+        "definition" : {
+          "val" : "A chronic lymphocytic leukemia that is characterized by the presence of medium-sized lymphocytes with visible nucleoli (prolymphocytes) in the peripheral blood, bone marrow, and spleen.",
+          "xrefs" : [ "url:https://cancer.ca/en/cancer-information/cancer-types/non-hodgkin-lymphoma/what-is-non-hodgkin-lymphoma/prolymphocytic-leukemias" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9832/3"
+        }, {
+          "val" : "SNOMEDCT_US_2021_09_01:110006004"
+        }, {
+          "val" : "MESH:D015463"
+        }, {
+          "val" : "UMLS_CUI:C0023486"
+        }, {
+          "val" : "NCI:C3181"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "PLL",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Prolymphocytic leukaemia",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "prolymphocytic leukemia"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_13909",
       "meta" : {
         "comments" : [ "Xref MGI." ],
@@ -2738,10 +2779,10 @@
           "val" : "DOID:13301"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "DOID:1155"
+          "val" : "DOID:2486"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "DOID:2486"
+          "val" : "DOID:1155"
         } ]
       },
       "type" : "CLASS",
@@ -7484,10 +7525,6 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "acute lymphoblastic leukemia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "acute lymphocytic leukaemia",
           "xrefs" : [ ]
         }, {
@@ -9774,8 +9811,8 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_12387",
       "meta" : {
         "definition" : {
-          "val" : "A kidney disease characterized by a complete or partial resistance of the kidneys to vasopressin (ADH).",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus", "url:http://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus", "url:http://rarediseases.info.nih.gov/gard/7178/nephrogenic-diabetes-insipidus/resources/1", "url:http://www.merckmanuals.com/professional/genitourinary_disorders/renal_transport_abnormalities/nephrogenic_diabetes_insipidus.html" ]
+          "val" : "A diabetes insipidus that is characterized by a complete or partial resistance of the kidneys to vasopressin (ADH).",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus", "url:http://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus", "url:https://medlineplus.gov/ency/article/000511.htm" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping submitted by NeuroDevNet. [LS]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -9792,11 +9829,7 @@
         }, {
           "val" : "SNOMEDCT_US_2021_09_01:123294004"
         }, {
-          "val" : "OMIM:304800"
-        }, {
           "val" : "NCI:C84919"
-        }, {
-          "val" : "OMIM:125800"
         }, {
           "val" : "ORDO:223"
         } ],
@@ -11610,11 +11643,11 @@
           "val" : "OMIM:127500"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "emitraka"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "emitraka"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2015-02-09T16:53:42Z"
@@ -11759,7 +11792,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_2935",
       "meta" : {
         "definition" : {
-          "val" : "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy; it is that has_material_basis_in mutations in the CHS1 gene.",
+          "val" : "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy and that has_material_basis_in homozygous or compound heterozygous mutation in the lysosomal trafficking regulator gene (LYST) on chromosome 1q42.",
           "xrefs" : [ "url:http://ghr.nlm.nih.gov/condition/chediak-higashi-syndrome", "url:https://www.ncbi.nlm.nih.gov/pubmed/25129365" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
@@ -15303,6 +15336,24 @@
       },
       "type" : "CLASS",
       "lbl" : "fibrochondrogenesis"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081049",
+      "meta" : {
+        "definition" : {
+          "val" : "A mature T-cell and NK-cell lymphoma that is characterized by the presence of medium-size neoplastic lymphocytes infiltrating the hepatic sinusoids and that originates from cytotoxic T-cells, usually of gamma/delta T-cell type.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7596851/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C8459"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "hepatosplenic T-cell lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080182",
       "meta" : {
@@ -21681,9 +21732,9 @@
         }, {
           "val" : "NCI:C84797"
         }, {
-          "val" : "SNOMEDCT_US_2020_03_01:42402006"
-        }, {
           "val" : "GARD:6815"
+        }, {
+          "val" : "SNOMEDCT_US_2021_09_01:42402006"
         }, {
           "val" : "ORDO:98861"
         } ],
@@ -21836,6 +21887,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060681"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_1039",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1040"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060696",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060695"
@@ -21957,7 +22012,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-01-31/subsets/DO_rare_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-02-21/subsets/DO_rare_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

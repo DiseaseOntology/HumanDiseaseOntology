@@ -2139,10 +2139,6 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "anaplastic ependymoma",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Undifferentiated Ependymoma",
           "xrefs" : [ ]
         } ],
@@ -2634,10 +2630,6 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "diffuse astrocytoma",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Fibrillary Astrocytic tumors",
           "xrefs" : [ ]
         } ],
@@ -2705,10 +2697,6 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "lymphoblastic leukemia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "lymphoid leukemia",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -2854,7 +2842,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1039",
       "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "definition" : {
+          "val" : "A chronic lymphocytic leukemia that is characterized by the presence of medium-sized lymphocytes with visible nucleoli (prolymphocytes) in the peripheral blood, bone marrow, and spleen.",
+          "xrefs" : [ "url:https://cancer.ca/en/cancer-information/cancer-types/non-hodgkin-lymphoma/what-is-non-hodgkin-lymphoma/prolymphocytic-leukemias" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "xrefs" : [ {
           "val" : "ICDO:9832/3"
         }, {
@@ -2865,6 +2857,15 @@
           "val" : "UMLS_CUI:C0023486"
         }, {
           "val" : "NCI:C3181"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "PLL",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Prolymphocytic leukaemia",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -5113,6 +5114,10 @@
           "pred" : "hasExactSynonym",
           "val" : "B-ALL",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "B lymphoblastic leukemia/lymphoma",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -5517,7 +5522,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0050523",
       "meta" : {
         "definition" : {
-          "val" : "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.",
+          "val" : "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma", "url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -5525,6 +5530,8 @@
           "val" : "ICD10CM:C91.5"
         }, {
           "val" : "GARD:13103"
+        }, {
+          "val" : "ICDO:9827/3"
         }, {
           "val" : "SNOMEDCT_US_2021_09_01:77430005"
         }, {
@@ -5537,6 +5544,10 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Adult T-cell leukemia/lymphoma",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Adult T-cell leukemia/lymphoma (HTLV-1 positive)",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -5951,9 +5962,16 @@
           "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/31069976" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9819/3"
+        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "B-ALL BCR-ABL1–like",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "B lymphoblastic leukemia/lymphoma, BCR-ABL1-like",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -6343,11 +6361,6 @@
         }, {
           "val" : "SNOMEDCT_US_2021_09_01:94705007"
         } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "plasma cell myeloma",
-          "xrefs" : [ ]
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -6734,6 +6747,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80331"
+        }, {
+          "val" : "ICDO:9812/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6784,10 +6799,20 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80342"
+        }, {
+          "val" : "ICDO:9813/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "B-ALL KMT2A rearranged",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "B-lymphoblastic leukemia/lymphoma KMT2A rearranged",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -6800,7 +6825,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "B-lymphoblastic leukemia/lymphoma KMT2A rearranged"
+      "lbl" : "B-lymphoblastic leukemia/lymphoma MLL rearranged"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080645",
       "meta" : {
@@ -6811,6 +6836,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80343"
+        }, {
+          "val" : "ICDO:9814/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6874,6 +6901,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80335"
+        }, {
+          "val" : "ICDO:9815/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6896,6 +6925,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
+          "val" : "ICDO:9816/3"
+        }, {
           "val" : "NCI:C80338"
         } ],
         "synonyms" : [ {
@@ -6920,6 +6951,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80346"
+        }, {
+          "val" : "ICDO:9817/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6995,6 +7028,8 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C80347"
+        }, {
+          "val" : "ICDO:9818/3"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -7764,7 +7799,16 @@
         }, {
           "val" : "MESH:D015456"
         }, {
+          "val" : "ICDO:9805/3"
+        }, {
           "val" : "UMLS_CUI:C0023464"
+        }, {
+          "val" : "NCI:C82179"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "mixed phenotype acute leukemia",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -7772,7 +7816,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "mixed phenotype acute leukemia"
+      "lbl" : "acute biphenotypic leukemia"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9952",
       "meta" : {
@@ -7810,10 +7854,6 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "acute lymphoblastic leukaemia",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "acute lymphoblastic leukemia",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -8001,7 +8041,7 @@
       "meta" : {
         "definition" : {
           "val" : "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes.",
-          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=641291" ]
+          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=641291", "url:https://lymphoma.org/aboutlymphoma/cll/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
@@ -8013,7 +8053,15 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "chronic lymphocytic leukemia/small lymphocytic lymphoma",
+          "val" : "CLL/SLL",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "ICDO:9823/3",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "B-cell lymphocytic leukemia/small lymphocytic lymphoma",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -8022,7 +8070,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "CLL/SLL"
+      "lbl" : "chronic lymphocytic leukemia/small lymphocytic lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8410",
       "meta" : {
@@ -9423,7 +9471,7 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasBroadSynonym",
-          "val" : "'intestinal carcinoid tumour'",
+          "val" : "intestinal carcinoid tumour",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -9560,10 +9608,6 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "childhood hepatocellular carcinoma",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "pediatric hepatocellular carcinoma",
           "xrefs" : [ ]
         } ],
@@ -9655,10 +9699,6 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "head and neck cancer, Thyroid",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "thyroid gland carcinoma",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -13384,14 +13424,6 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "adenoid cystic carcinoma",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "adenoid cystic cancer",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Cylindroma",
           "xrefs" : [ ]
         } ],
@@ -14003,10 +14035,6 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "supratentorial meningioma",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "meningothelial cell tumor",
           "xrefs" : [ ]
         }, {
@@ -14156,11 +14184,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "NCI:C8578"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "childhood ependymoma",
-          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -17186,13 +17209,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_263"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080876",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3078"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080877",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3068"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080876",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3078"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3910",
       "pred" : "is_a",
@@ -17446,11 +17469,11 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080896",
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4939",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_4939",
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080896",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
@@ -17470,13 +17493,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_7732",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_5940"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3119",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_7732",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5940"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3908",
       "pred" : "is_a",
@@ -17574,13 +17597,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4851"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_5526",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6789",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_5526",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5409",
       "pred" : "is_a",
@@ -17662,13 +17685,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_6386",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_6383"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5530",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3284"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_6386",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_6383"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080647",
       "pred" : "is_a",
@@ -18078,13 +18101,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_7788",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_5503"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_234",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1520"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_7788",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5503"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4233",
       "pred" : "is_a",
@@ -18098,13 +18121,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080644",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050905",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080644",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3973",
       "pred" : "is_a",
@@ -18231,7 +18254,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-01-31/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-02-21/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

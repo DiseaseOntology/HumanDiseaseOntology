@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-01-31/subsets/DO_cancer_slim.obo
+data-version: doid/releases/2022-02-21/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 
 [Term]
@@ -43,12 +43,14 @@ is_a: DOID:0070004 ! myeloid neoplasm
 id: DOID:0050523
 name: adult T-cell leukemia
 namespace: disease_ontology
-def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
+def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Adult T-cell leukemia/lymphoma" EXACT []
+synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
 xref: GARD:13103
 xref: ICD10CM:C91.5
+xref: ICDO:9827/3
 xref: MESH:D015459
 xref: NCI:C3184
 xref: SNOMEDCT_US_2021_09_01:77430005
@@ -521,7 +523,7 @@ name: small intestine carcinoid neuroendocrine tumor
 namespace: disease_ontology
 def: "A small intestine cancer that has_material_basis_in cells of the neuroendocrine system." [url:http\://en.wikipedia.org/wiki/Carcinoid]
 subset: DO_cancer_slim
-synonym: "'intestinal carcinoid tumour'" BROAD []
+synonym: "intestinal carcinoid tumour" BROAD []
 xref: OMIM:114900
 is_a: DOID:3119 ! gastrointestinal system cancer
 created_by: lschriml
@@ -943,7 +945,6 @@ namespace: disease_ontology
 def: "A hepatocellular carcinoma that occurs in children and is characterized by a distinct etiological predisposition, biological behavior, and lower frequency of cirrhosis as compared to adult hepatocellular carcinoma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17714939, url:https\://www.ncbi.nlm.nih.gov/pubmed/28144610, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood hepatocellular carcinoma" EXACT []
 synonym: "pediatric hepatocellular carcinoma" EXACT []
 xref: GARD:9331
 xref: NCI:C7955
@@ -1210,6 +1211,7 @@ alt_id: DOID:7061
 def: "A B-cell acute lymphoblastic leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "B lymphoblastic leukemia/lymphoma" EXACT []
 synonym: "B-ALL" EXACT []
 synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
 xref: ICDO:9836/3
@@ -1236,17 +1238,21 @@ def: "A B-lymphoblastic leukemia/lymphoma that derives_from B-lymphoblasts and c
 subset: DO_cancer_slim
 synonym: "B-ALL with BCR-ABL1" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1" EXACT []
+xref: ICDO:9812/3
 xref: NCI:C80331
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
 [Term]
 id: DOID:0080644
-name: B-lymphoblastic leukemia/lymphoma KMT2A rearranged
+name: B-lymphoblastic leukemia/lymphoma MLL rearranged
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the KMT2A gene at 11q23.3 and another gene partner resulting in the production of a KMT2A related fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80342]
 subset: DO_cancer_slim
+synonym: "B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged" EXACT []
 synonym: "B-ALL KMT2A rearranged" EXACT []
+synonym: "B-lymphoblastic leukemia/lymphoma KMT2A rearranged" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(v;11q23.3);KMT2A rearranged" EXACT []
+xref: ICDO:9813/3
 xref: NCI:C80342
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1258,6 +1264,7 @@ def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence 
 subset: DO_cancer_slim
 synonym: "B-ALL with ETV6-RUNX1" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1" EXACT []
+xref: ICDO:9814/3
 xref: NCI:C80343
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1268,6 +1275,7 @@ namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is  composed of B-lymphoblasts which contain more than 50 and usually less than 66 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80335]
 subset: DO_cancer_slim
 synonym: "B-ALL with hyperdiploidy" EXACT []
+xref: ICDO:9815/3
 xref: NCI:C80335
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1278,6 +1286,7 @@ namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is composed of B-lymphoblasts which contain less than 46 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80338]
 subset: DO_cancer_slim
 synonym: "B-ALL with hypodiploidy" EXACT []
+xref: ICDO:9816/3
 xref: NCI:C80338
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1289,6 +1298,7 @@ def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence 
 subset: DO_cancer_slim
 synonym: "B-ALL with IL3-IGH" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH" EXACT []
+xref: ICDO:9817/3
 xref: NCI:C80346
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1301,6 +1311,7 @@ subset: DO_cancer_slim
 synonym: "B Acute Lymphoblastic Leukemia with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)" EXACT []
 synonym: "B-ALL with TCF3-PBX1" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1" EXACT []
+xref: ICDO:9818/3
 xref: NCI:C80347
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
@@ -1310,7 +1321,9 @@ name: B-lymphoblastic leukemia/lymphoma, BCR-ABL1–like
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that has a gene expression profile similar to that of B-ALL with t(9;22)(q34.1;q11.2) BCR-ABL1, but lacks that gene fusion." [url:https\://www.ncbi.nlm.nih.gov/pubmed/31069976]
 subset: DO_cancer_slim
+synonym: "B lymphoblastic leukemia/lymphoma, BCR-ABL1-like" EXACT []
 synonym: "B-ALL BCR-ABL1–like" EXACT []
+xref: ICDO:9819/3
 is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
 [Term]
@@ -1719,7 +1732,6 @@ subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
 synonym: "lymphoblastic leukemia" EXACT []
 synonym: "lymphocytic leukaemia" EXACT []
-synonym: "lymphoid leukemia" EXACT []
 xref: ICD10CM:C91
 xref: ICD9CM:204
 xref: ICDO:9820/3
@@ -1733,8 +1745,12 @@ is_a: DOID:1240 ! leukemia
 id: DOID:1039
 name: prolymphocytic leukemia
 namespace: disease_ontology
+def: "A chronic lymphocytic leukemia that is characterized by the presence of medium-sized lymphocytes with visible nucleoli (prolymphocytes) in the peripheral blood, bone marrow, and spleen." [url:https\://cancer.ca/en/cancer-information/cancer-types/non-hodgkin-lymphoma/what-is-non-hodgkin-lymphoma/prolymphocytic-leukemias]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "PLL" EXACT []
+synonym: "Prolymphocytic leukaemia" EXACT []
 xref: ICDO:9832/3
 xref: MESH:D015463
 xref: NCI:C3181
@@ -3940,7 +3956,6 @@ synonym: "meningeal neoplasm" EXACT []
 synonym: "meningothelial cell tumor" EXACT []
 synonym: "neoplasm of the meninges" EXACT []
 synonym: "primary Meningeal tumor" EXACT []
-synonym: "supratentorial meningioma" EXACT []
 xref: GARD:7015
 xref: ICD10CM:D32.9
 xref: ICDO:9530/0
@@ -4350,7 +4365,6 @@ def: "A thyroid gland cancer that has_material_basis_in epithelial cells." [url:
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "head and neck cancer, Thyroid" EXACT []
-synonym: "thyroid gland carcinoma" EXACT []
 xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
@@ -5039,8 +5053,6 @@ namespace: disease_ontology
 def: "A salivary gland carcinoma that is characterized by a distinctive pattern in which abnormal nests or cords of epithelial cells surround and/or infiltrate ducts or glandular structures within the affected organ. These structures are typically filled with a mucous-like material or contain abnormal fibrous membranes." [url:https\://oralcancerfoundation.org/facts/rare/adenoid-cystic-carcinoma/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adenoid cystic cancer" EXACT []
-synonym: "adenoid cystic carcinoma" EXACT []
 synonym: "Cylindroma" EXACT []
 xref: MESH:D003528
 xref: NCI:C2970
@@ -5514,7 +5526,6 @@ name: childhood ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood ependymoma" EXACT []
 xref: NCI:C8578
 is_a: DOID:5074 ! high grade ependymoma
 
@@ -5837,7 +5848,6 @@ id: DOID:5889
 name: anaplastic ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
-synonym: "anaplastic ependymoma" EXACT []
 synonym: "Ependymoma, anaplastic" EXACT []
 synonym: "Undifferentiated Ependymoma" EXACT []
 is_a: DOID:5074 ! high grade ependymoma
@@ -6125,12 +6135,14 @@ is_a: DOID:1319 ! brain cancer
 
 [Term]
 id: DOID:6354
-name: CLL/SLL
+name: chronic lymphocytic leukemia/small lymphocytic lymphoma
 namespace: disease_ontology
-def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291]
+def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291, url:https\://lymphoma.org/aboutlymphoma/cll/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
+synonym: "B-cell lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
+synonym: "CLL/SLL" EXACT []
+synonym: "ICDO:9823/3" EXACT []
 xref: NCI:C27911
 xref: SNOMEDCT_US_2021_09_01:399607007
 xref: UMLS_CUI:C1302547
@@ -6325,7 +6337,6 @@ namespace: disease_ontology
 def: "A malignant astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes." [url:http\://en.wikipedia.org/wiki/Fibrillary_astrocytoma, url:http\://www.braintumour.ca/4877/diffuse-astrocytoma-/-fibrillary-astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=45602]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "diffuse astrocytoma" EXACT []
 synonym: "Fibrillary Astrocytic tumors" EXACT []
 xref: ICDO:9420/3
 xref: MESH:D001254
@@ -7404,7 +7415,6 @@ def: "A myeloid neoplasm that is located_in the plasma cells in bone marrow." [u
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "plasma cell myeloma" EXACT []
 xref: EFO:0001378
 xref: GARD:7108
 xref: ICD10CM:C90.0
@@ -7443,7 +7453,6 @@ subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []
-synonym: "acute lymphoblastic leukemia" EXACT []
 synonym: "acute lymphocytic leukaemia" EXACT []
 synonym: "ALL" EXACT []
 synonym: "precursor lymphoblastic lymphoma/leukemia" EXACT []
@@ -7463,14 +7472,17 @@ is_a: DOID:12603 ! acute leukemia
 
 [Term]
 id: DOID:9953
-name: mixed phenotype acute leukemia
+name: acute biphenotypic leukemia
 namespace: disease_ontology
 def: "An acute leukemia that is characterized by the occurrence of more than one type of leukemia at the same time resulting from either the occurrence of blasts which coexpress myeloid and T or B lineage antigens or concurrent B and T lineage antigens." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29021517]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "mixed phenotype acute leukemia" EXACT []
 xref: ICD10CM:C95.0
+xref: ICDO:9805/3
 xref: MESH:D015456
 xref: NCI:C4673
+xref: NCI:C82179
 xref: SNOMEDCT_US_2021_09_01:128818009
 xref: UMLS_CUI:C0023464
 is_a: DOID:12603 ! acute leukemia

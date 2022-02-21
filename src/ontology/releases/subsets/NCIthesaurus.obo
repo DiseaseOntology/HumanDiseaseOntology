@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-01-31/subsets/NCIthesaurus.obo
+data-version: doid/releases/2022-02-21/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -116,7 +116,7 @@ xref: GARD:6815
 xref: MESH:D007619
 xref: NCI:C84797
 xref: ORDO:98861
-xref: SNOMEDCT_US_2020_03_01:42402006
+xref: SNOMEDCT_US_2021_09_01:42402006
 is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
@@ -1095,12 +1095,14 @@ is_a: DOID:37 ! skin disease
 id: DOID:0050523
 name: adult T-cell leukemia
 namespace: disease_ontology
-def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
+def: "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Adult T-cell leukemia/lymphoma" EXACT []
+synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
 xref: GARD:13103
 xref: ICD10CM:C91.5
+xref: ICDO:9827/3
 xref: MESH:D015459
 xref: NCI:C3184
 xref: SNOMEDCT_US_2021_09_01:77430005
@@ -1349,7 +1351,7 @@ synonym: "alcoholism" EXACT []
 xref: EFO:0003829
 xref: KEGG:05034
 xref: OMIM:103780
-xref: SNOMEDCT_US_2020_03_01:66590003
+xref: SNOMEDCT_US_2021_09_01:66590003
 is_a: DOID:9973 ! substance dependence
 created_by: lschriml
 creation_date: 2012-09-05T11:48:42Z
@@ -3592,7 +3594,7 @@ namespace: disease_ontology
 def: "A nutritional deficiency disease that is characterized by low levels of thiamine." [url:https\://en.wikipedia.org/wiki/Thiamine_deficiency]
 subset: NCIthesaurus
 xref: NCI:C34418
-xref: SNOMEDCT_US_2020_03_01:399357009
+xref: SNOMEDCT_US_2021_09_01:399357009
 is_a: DOID:374 ! nutrition disease
 
 [Term]
@@ -3602,7 +3604,6 @@ namespace: disease_ontology
 def: "A hepatocellular carcinoma that occurs in children and is characterized by a distinct etiological predisposition, biological behavior, and lower frequency of cirrhosis as compared to adult hepatocellular carcinoma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17714939, url:https\://www.ncbi.nlm.nih.gov/pubmed/28144610, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood hepatocellular carcinoma" EXACT []
 synonym: "pediatric hepatocellular carcinoma" EXACT []
 xref: GARD:9331
 xref: NCI:C7955
@@ -3968,6 +3969,7 @@ alt_id: DOID:7061
 def: "A B-cell acute lymphoblastic leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "B lymphoblastic leukemia/lymphoma" EXACT []
 synonym: "B-ALL" EXACT []
 synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
 xref: ICDO:9836/3
@@ -4113,7 +4115,7 @@ synonym: "USH2" EXACT []
 xref: MESH:D052245
 xref: NCI:C126328
 xref: ORDO:231178
-xref: SNOMEDCT_US_2020_03_01:232058008
+xref: SNOMEDCT_US_2021_09_01:232058008
 is_a: DOID:0050439 ! Usher syndrome
 
 [Term]
@@ -5828,7 +5830,6 @@ subset: NCIthesaurus
 synonym: "lymphoblastic leukaemia" EXACT []
 synonym: "lymphoblastic leukemia" EXACT []
 synonym: "lymphocytic leukaemia" EXACT []
-synonym: "lymphoid leukemia" EXACT []
 xref: ICD10CM:C91
 xref: ICD9CM:204
 xref: ICDO:9820/3
@@ -5880,8 +5881,12 @@ property_value: exactMatch MESH:D000550 xsd:string
 id: DOID:1039
 name: prolymphocytic leukemia
 namespace: disease_ontology
+def: "A chronic lymphocytic leukemia that is characterized by the presence of medium-sized lymphocytes with visible nucleoli (prolymphocytes) in the peripheral blood, bone marrow, and spleen." [url:https\://cancer.ca/en/cancer-information/cancer-types/non-hodgkin-lymphoma/what-is-non-hodgkin-lymphoma/prolymphocytic-leukemias]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "PLL" EXACT []
+synonym: "Prolymphocytic leukaemia" EXACT []
 xref: ICDO:9832/3
 xref: MESH:D015463
 xref: NCI:C3181
@@ -8507,7 +8512,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:11102
 name: bartonellosis
 namespace: disease_ontology
-def: "A primary bacterial infectious disease that is caused by the bacteria of the genus Bartonella." [url:http\://en.wikipedia/org/wiki/Bartonellosis]
+def: "A primary bacterial infectious disease that is caused by the bacteria of the genus Bartonella." [url:https\://en.wikipedia.org/wiki/Bartonellosis]
 subset: GOLD
 subset: gram-negative_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -10472,7 +10477,7 @@ is_a: DOID:178 ! vascular disease
 id: DOID:11714
 name: gestational diabetes
 namespace: disease_ontology
-def: "A diabetes mellitus that manifests during pregnancy." [url:https\://pubmed.ncbi.nlm.nih.gov/26824237/]
+def: "A diabetes that manifests during pregnancy." [url:https\://pubmed.ncbi.nlm.nih.gov/26824237/]
 subset: NCIthesaurus
 synonym: "GDM" EXACT []
 synonym: "Gestational diabetes mellitus" EXACT []
@@ -10483,7 +10488,7 @@ xref: MESH:D016640
 xref: NCI:C34942
 xref: SNOMEDCT_US_2021_09_01:11687002
 xref: UMLS_CUI:C0085207
-is_a: DOID:9351 ! diabetes mellitus
+is_a: DOID:4194 ! glucose metabolism disease
 
 [Term]
 id: DOID:11716
@@ -10505,7 +10510,7 @@ is_a: DOID:4194 ! glucose metabolism disease
 id: DOID:11717
 name: neonatal diabetes
 namespace: disease_ontology
-def: "A diabetes mellitus that is characterized by hyperglycemia occuring within the first 6 months of life." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5928785/]
+def: "A diabetes that is characterized by hyperglycemia occuring within the first 6 months of life." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5928785/]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "diabetes mellitus syndrome in newborn infant" EXACT []
@@ -10515,7 +10520,7 @@ xref: ICD9CM:775.1
 xref: NCI:C99248
 xref: SNOMEDCT_US_2021_09_01:49817004
 xref: UMLS_CUI:C0158981
-is_a: DOID:9351 ! diabetes mellitus
+is_a: DOID:4194 ! glucose metabolism disease
 
 [Term]
 id: DOID:11719
@@ -11460,7 +11465,7 @@ synonym: "tumor of Trigeminal nerve" EXACT []
 xref: NCI:C5122
 xref: SNOMEDCT_US_2021_09_01:126971002
 xref: UMLS_CUI:C1263897
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:12016
@@ -12462,7 +12467,7 @@ property_value: exactMatch MESH:D001447 xsd:string
 id: DOID:12387
 name: nephrogenic diabetes insipidus
 namespace: disease_ontology
-def: "A kidney disease characterized by a complete or partial resistance of the kidneys to vasopressin (ADH)." [url:http\://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus, url:http\://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus, url:http\://rarediseases.info.nih.gov/gard/7178/nephrogenic-diabetes-insipidus/resources/1, url:http\://www.merckmanuals.com/professional/genitourinary_disorders/renal_transport_abnormalities/nephrogenic_diabetes_insipidus.html]
+def: "A diabetes insipidus that is characterized by a complete or partial resistance of the kidneys to vasopressin (ADH)." [url:http\://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus, url:http\://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus, url:https\://medlineplus.gov/ency/article/000511.htm]
 comment: Xref MGI.\nOMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -12472,17 +12477,16 @@ xref: ICD10CM:N25.1
 xref: ICD9CM:588.1
 xref: MESH:D018500
 xref: NCI:C84919
-xref: OMIM:125800
-xref: OMIM:304800
 xref: ORDO:223
 xref: SNOMEDCT_US_2021_09_01:123294004
 xref: UMLS_CUI:C0162283
-is_a: DOID:557 ! kidney disease
+is_a: DOID:9409 ! diabetes insipidus
 
 [Term]
 id: DOID:12388
 name: neurohypophyseal diabetes insipidus
 namespace: disease_ontology
+def: "A central diabetes insipidus that is characterized by polyuria and polydipsia due to a deficiency in vasopressin synthesis and that has_material_basis_in heterozygous mutation in the arginine vasopressin gene (AVP) on chromosome 20p13." [url:https\://pubmed.ncbi.nlm.nih.gov/15070970/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "central diabetes insipidus" EXACT []
@@ -12492,10 +12496,10 @@ synonym: "Vasopressin deficiency" EXACT []
 xref: MESH:D020790
 xref: NCI:C84933
 xref: OMIM:125700
-xref: OMIM:304900
+xref: ORDO:30925
 xref: SNOMEDCT_US_2021_09_01:267393007
 xref: UMLS_CUI:C0687720
-is_a: DOID:28 ! endocrine system disease
+is_a: DOID:9409 ! diabetes insipidus
 
 [Term]
 id: DOID:12399
@@ -14087,7 +14091,7 @@ synonym: "Vagus nerve tumors" EXACT []
 xref: NCI:C5831
 xref: SNOMEDCT_US_2021_09_01:126976007
 xref: UMLS_CUI:C1263901
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:12986
@@ -17376,7 +17380,7 @@ synonym: "VIth Cranial nerve tumors" EXACT []
 xref: NCI:C5826
 xref: SNOMEDCT_US_2021_09_01:126972009
 xref: UMLS_CUI:C1263898
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:14139
@@ -20862,7 +20866,7 @@ synonym: "tumor of Facial nerve" EXACT []
 xref: NCI:C5827
 xref: SNOMEDCT_US_2021_09_01:126973004
 xref: UMLS_CUI:C1263899
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:3417 ! glossopharyngeal nerve neoplasm
 
 [Term]
 id: DOID:1761
@@ -21933,7 +21937,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:1934
 name: dysostosis
 namespace: disease_ontology
-def: "A bone development disease that results in defective ossification of located in bone." [url:http\://en.wikipedia.org/wiki/Dysostosis, url:http\://medical-dictionary.thefreedictionary.com/dysostosis]
+def: "A bone development disease that results in defective ossification of bone." [url:http\://en.wikipedia.org/wiki/Dysostosis, url:http\://medical-dictionary.thefreedictionary.com/dysostosis]
 subset: NCIthesaurus
 xref: MESH:D004413
 xref: NCI:C34560
@@ -24292,7 +24296,7 @@ xref: GARD:10638
 xref: ICDO:9492/0
 xref: MESH:D005729
 xref: NCI:C6934
-xref: SNOMEDCT_US_2020_03_01:78268004
+xref: SNOMEDCT_US_2021_09_01:128919000
 is_a: DOID:4 ! disease
 
 [Term]
@@ -25411,7 +25415,7 @@ synonym: "Micropapillary serous carcinoma" EXACT []
 synonym: "Papillary serous carcinoma" EXACT []
 synonym: "serous surface papillary carcinoma" EXACT []
 xref: NCI:C4182
-xref: SNOMEDCT_US_2020_03_01:716649003
+xref: SNOMEDCT_US_2021_09_01:90725004
 is_a: DOID:3112 ! papillary adenocarcinoma
 
 [Term]
@@ -26802,19 +26806,22 @@ is_a: DOID:2815 ! cranial nerve malignant neoplasm
 id: DOID:2815
 name: cranial nerve malignant neoplasm
 namespace: disease_ontology
-def: "A cranial nerve neoplasm that affects a cranial nerve." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3571]
+alt_id: DOID:338
+def: "A central nervous system cancer that affects a cranial nerve, develops from schwann cells located_in cranial nerves, has_material_basis_in abnormally proliferating cells." [url:https\://link.springer.com/chapter/10.1007/978-3-642-02874-8_15]
 subset: NCIthesaurus
 synonym: "malignant neoplasm of cranial nerve" EXACT []
-synonym: "malignant neoplasm of cranial nerves" EXACT []
 synonym: "malignant tumor of cranial nerve" EXACT []
 synonym: "malignant tumor of the Cranial nerve" EXACT []
 xref: ICD10CM:C72.50
 xref: ICD9CM:192.0
 xref: MESH:D003390
+xref: NCI:C2963
 xref: NCI:C3571
+xref: SNOMEDCT_US_2021_09_01:126966009
 xref: SNOMEDCT_US_2021_09_01:188311003
+xref: UMLS_CUI:C0010267
 xref: UMLS_CUI:C0153644
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:3620 ! central nervous system cancer
 
 [Term]
 id: DOID:2816
@@ -27482,7 +27489,7 @@ is_a: DOID:294 ! lacrimal gland cancer
 id: DOID:2935
 name: Chediak-Higashi syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy; it is that has_material_basis_in mutations in the CHS1 gene." [url:http\://ghr.nlm.nih.gov/condition/chediak-higashi-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/25129365]
+def: "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy and that has_material_basis_in homozygous or compound heterozygous mutation in the lysosomal trafficking regulator gene (LYST) on chromosome 1q42." [url:http\://ghr.nlm.nih.gov/condition/chediak-higashi-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/25129365]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -27647,7 +27654,7 @@ synonym: "TTD-P" EXACT []
 xref: MESH:D054463
 xref: NCI:C4924
 xref: OMIM:PS601675
-xref: SNOMEDCT_US_2020_03_01:723551003
+xref: SNOMEDCT_US_2021_09_01:723551003
 is_a: DOID:225 ! syndrome
 
 [Term]
@@ -29254,7 +29261,7 @@ synonym: "tumor of Hypoglossal nerve" EXACT []
 xref: NCI:C5830
 xref: SNOMEDCT_US_2021_09_01:126978008
 xref: UMLS_CUI:C1263903
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:3199
@@ -30178,8 +30185,9 @@ id: DOID:3318
 name: epithelioid type angiomyolipoma
 namespace: disease_ontology
 subset: NCIthesaurus
+synonym: "Epithelioid angiomyolipoma" EXACT []
 xref: NCI:C38151
-xref: SNOMEDCT_US_2020_03_01:733836008
+xref: SNOMEDCT_US_2021_09_01:733836008
 is_a: DOID:3314 ! angiomyolipoma
 
 [Term]
@@ -30592,7 +30600,7 @@ synonym: "XIth Cranial nerve tumors" EXACT []
 xref: NCI:C5829
 xref: SNOMEDCT_US_2021_09_01:126977003
 xref: UMLS_CUI:C1263902
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:3371
@@ -30693,16 +30701,12 @@ is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:338
-name: cranial nerve neoplasm
+name: obsolete cranial nerve neoplasm
 namespace: disease_ontology
 def: "A central nervous system cancer develops from schwann cells located_in cranial nerves, has_material_basis_in abnormally proliferating cells." [url:https\://en.wikipedia.org/wiki/Schwannoma, url:https\://link.springer.com/chapter/10.1007/978-3-642-02874-8_15]
 subset: NCIthesaurus
 synonym: "neoplasm of cranial nerve" EXACT []
-xref: MESH:D003390
-xref: NCI:C2963
-xref: SNOMEDCT_US_2021_09_01:126966009
-xref: UMLS_CUI:C0010267
-is_a: DOID:3620 ! central nervous system cancer
+is_obsolete: true
 
 [Term]
 id: DOID:3381
@@ -30928,7 +30932,7 @@ synonym: "tumor of Glossopharyngeal nerve" EXACT []
 xref: NCI:C5828
 xref: SNOMEDCT_US_2021_09_01:126975006
 xref: UMLS_CUI:C1263900
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:3419
@@ -30942,7 +30946,7 @@ xref: MESH:D019574
 xref: NCI:C4801
 xref: SNOMEDCT_US_2021_09_01:126968005
 xref: UMLS_CUI:C0524802
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:3421
@@ -30954,7 +30958,7 @@ synonym: "tumor of Trochlear nerve" EXACT []
 xref: NCI:C5825
 xref: SNOMEDCT_US_2021_09_01:126970001
 xref: UMLS_CUI:C1263896
-is_a: DOID:338 ! cranial nerve neoplasm
+is_a: DOID:2815 ! cranial nerve malignant neoplasm
 
 [Term]
 id: DOID:3428
@@ -31757,7 +31761,6 @@ synonym: "meningeal neoplasm" EXACT []
 synonym: "meningothelial cell tumor" EXACT []
 synonym: "neoplasm of the meninges" EXACT []
 synonym: "primary Meningeal tumor" EXACT []
-synonym: "supratentorial meningioma" EXACT []
 xref: GARD:7015
 xref: ICD10CM:D32.9
 xref: ICDO:9530/0
@@ -34349,7 +34352,6 @@ def: "A thyroid gland cancer that has_material_basis_in epithelial cells." [url:
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "head and neck cancer, Thyroid" EXACT []
-synonym: "thyroid gland carcinoma" EXACT []
 xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
@@ -34483,7 +34485,6 @@ namespace: disease_ontology
 def: "A vulva carcinoma that has_material_basis_in abnormally proliferating cells derives_from epithelial cells and is located_in Bartholin's gland." [url:http\://en.wikipedia.org/wiki/Bartholin%27s_gland, url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: NCIthesaurus
 synonym: "Bartholin gland carcinoma" EXACT []
-synonym: "Bartholin's gland cancer" EXACT []
 synonym: "carcinoma of Bartholin's gland" EXACT []
 xref: NCI:C9055
 xref: SNOMEDCT_US_2021_09_01:399533005
@@ -35632,7 +35633,7 @@ xref: MESH:D044882
 xref: NCI:C53655
 xref: SNOMEDCT_US_2021_09_01:126877002
 xref: UMLS_CUI:C1257958
-is_a: DOID:0014667 ! disease of metabolism
+is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:4195
@@ -39752,8 +39753,6 @@ namespace: disease_ontology
 def: "A salivary gland carcinoma that is characterized by a distinctive pattern in which abnormal nests or cords of epithelial cells surround and/or infiltrate ducts or glandular structures within the affected organ. These structures are typically filled with a mucous-like material or contain abnormal fibrous membranes." [url:https\://oralcancerfoundation.org/facts/rare/adenoid-cystic-carcinoma/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "adenoid cystic cancer" EXACT []
-synonym: "adenoid cystic carcinoma" EXACT []
 synonym: "Cylindroma" EXACT []
 xref: MESH:D003528
 xref: NCI:C2970
@@ -43960,7 +43959,6 @@ name: childhood ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "childhood ependymoma" EXACT []
 xref: NCI:C8578
 is_a: DOID:5074 ! high grade ependymoma
 
@@ -48946,12 +48944,14 @@ property_value: exactMatch MESH:D000163 xsd:string
 
 [Term]
 id: DOID:6354
-name: CLL/SLL
+name: chronic lymphocytic leukemia/small lymphocytic lymphoma
 namespace: disease_ontology
-def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291]
+def: "A chronic lymphocytic leukemia that is characterized by the presence of immature lymphocytes in the blood and bone marrow and/or in the lymph nodes." [url:http\://www.cancer.gov/dictionary?CdrID=641291, url:https\://lymphoma.org/aboutlymphoma/cll/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "chronic lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
+synonym: "B-cell lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
+synonym: "CLL/SLL" EXACT []
+synonym: "ICDO:9823/3" EXACT []
 xref: NCI:C27911
 xref: SNOMEDCT_US_2021_09_01:399607007
 xref: UMLS_CUI:C1302547
@@ -50571,7 +50571,6 @@ namespace: disease_ontology
 def: "A malignant astrocytoma that is characterized as a low grade astrocytoma and has_material_basis_in neoplastic astrocytes." [url:http\://en.wikipedia.org/wiki/Fibrillary_astrocytoma, url:http\://www.braintumour.ca/4877/diffuse-astrocytoma-/-fibrillary-astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=45602]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "diffuse astrocytoma" EXACT []
 synonym: "Fibrillary Astrocytic tumors" EXACT []
 xref: ICDO:9420/3
 xref: MESH:D001254
@@ -52514,7 +52513,7 @@ xref: NCI:C34378
 xref: OMIM:205700
 xref: SNOMEDCT_US_2021_09_01:25121006
 xref: UMLS_CUI:C0002880
-is_a: DOID:4 ! disease
+is_a: DOID:583 ! hemolytic anemia
 
 [Term]
 id: DOID:7181
@@ -52727,7 +52726,7 @@ subset: NCIthesaurus
 synonym: "CLL/SLL with IGVH SHM" EXACT []
 xref: NCI:C37201
 xref: UMLS_CUI:C1333037
-is_a: DOID:6354 ! CLL/SLL
+is_a: DOID:6354 ! chronic lymphocytic leukemia/small lymphocytic lymphoma
 
 [Term]
 id: DOID:7231
@@ -56345,7 +56344,7 @@ subset: NCIthesaurus
 synonym: "CLL/SLL with Unmutated IGVH" EXACT []
 xref: NCI:C37204
 xref: UMLS_CUI:C1333038
-is_a: DOID:6354 ! CLL/SLL
+is_a: DOID:6354 ! chronic lymphocytic leukemia/small lymphocytic lymphoma
 
 [Term]
 id: DOID:8149
@@ -59225,6 +59224,7 @@ synonym: "Thrombocytic leukaemia" EXACT []
 xref: GARD:524
 xref: ICD10CM:C94.2
 xref: ICD9CM:207.2
+xref: ICDO:9910/3
 xref: MESH:D007947
 xref: NCI:C3170
 xref: SNOMEDCT_US_2021_09_01:52220008
@@ -60873,6 +60873,7 @@ namespace: disease_ontology
 def: "A leukemia that results_in an overwhelming number of tissue mast cells located_in peripheral blood." [url:http\://medical-dictionary.thefreedictionary.com/mast+cell+leukemia]
 subset: NCIthesaurus
 xref: ICD10CM:C94.3
+xref: ICDO:9742/3
 xref: MESH:D007946
 xref: NCI:C3169
 xref: SNOMEDCT_US_2021_09_01:110002002
@@ -61439,7 +61440,7 @@ is_a: DOID:3407 ! carotid artery disease
 id: DOID:9351
 name: diabetes mellitus
 namespace: disease_ontology
-def: "A glucose metabolism disease characterized by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretion, insulin action, or both." [url:http\://www.who.int/diabetes/action_online/basics/en/, url:https\://en.wikipedia.org/wiki/Diabetes_mellitus, url:https\://www.ncbi.nlm.nih.gov/pubmed/9686693]
+def: "A diabetes that is characterized by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretion, insulin action, or both." [url:http\://www.who.int/diabetes/action_online/basics/en/, url:https\://en.wikipedia.org/wiki/Diabetes_mellitus, url:https\://www.ncbi.nlm.nih.gov/pubmed/9686693]
 subset: NCIthesaurus
 xref: ICD10CM:E08-E13
 xref: ICD9CM:250
@@ -61659,6 +61660,7 @@ is_a: DOID:5844 ! myocardial infarction
 id: DOID:9409
 name: diabetes insipidus
 namespace: disease_ontology
+def: "A kidney disease that is characterized by polydipsia and polyuria with a dilute urine having a specific gravity less than 1.010, hypernatremia, and dehydration." [url:https\://pubmed.ncbi.nlm.nih.gov/26913870/, url:https\://pubmed.ncbi.nlm.nih.gov/27156759/, url:https\://pubmed.ncbi.nlm.nih.gov/28476225/, url:https\://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7426034/]
 subset: NCIthesaurus
 xref: ICD10CM:E23.2
 xref: ICD9CM:253.5
@@ -62060,7 +62062,6 @@ def: "A myeloid neoplasm that is located_in the plasma cells in bone marrow." [u
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "plasma cell myeloma" EXACT []
 xref: EFO:0001378
 xref: GARD:7108
 xref: ICD10CM:C90.0
@@ -63240,7 +63241,6 @@ subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []
-synonym: "acute lymphoblastic leukemia" EXACT []
 synonym: "acute lymphocytic leukaemia" EXACT []
 synonym: "ALL" EXACT []
 synonym: "precursor lymphoblastic lymphoma/leukemia" EXACT []
@@ -63260,14 +63260,17 @@ is_a: DOID:12603 ! acute leukemia
 
 [Term]
 id: DOID:9953
-name: mixed phenotype acute leukemia
+name: acute biphenotypic leukemia
 namespace: disease_ontology
 def: "An acute leukemia that is characterized by the occurrence of more than one type of leukemia at the same time resulting from either the occurrence of blasts which coexpress myeloid and T or B lineage antigens or concurrent B and T lineage antigens." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29021517]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "mixed phenotype acute leukemia" EXACT []
 xref: ICD10CM:C95.0
+xref: ICDO:9805/3
 xref: MESH:D015456
 xref: NCI:C4673
+xref: NCI:C82179
 xref: SNOMEDCT_US_2021_09_01:128818009
 xref: UMLS_CUI:C0023464
 is_a: DOID:12603 ! acute leukemia

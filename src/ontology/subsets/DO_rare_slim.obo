@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-01-31/subsets/DO_rare_slim.obo
+data-version: doid/releases/2022-02-21/subsets/DO_rare_slim.obo
 ontology: doid/subsets/DO_rare_slim.obo
 
 [Term]
@@ -14,7 +14,7 @@ xref: GARD:6815
 xref: MESH:D007619
 xref: NCI:C84797
 xref: ORDO:98861
-xref: SNOMEDCT_US_2020_03_01:42402006
+xref: SNOMEDCT_US_2021_09_01:42402006
 
 [Term]
 id: DOID:0050335
@@ -1220,13 +1220,15 @@ creation_date: 2015-02-04T14:16:39Z
 
 [Term]
 id: DOID:0060061
-name: cutaneous T cell lymphoma
+name: primary cutaneous T-cell non-Hodgkin lymphoma
 namespace: disease_ontology
 def: "A non-Hodgkin's lymphoma that has_material_basis_in a mutation of T cells." [url:http\://en.wikipedia.org/wiki/Cutaneous_T-cell_lymphoma]
 subset: DO_rare_slim
+synonym: "cutaneous T cell lymphoma" EXACT []
 synonym: "cutaneous T-cell lymphoma" EXACT []
 xref: GARD:6226
 xref: MESH:D016410
+xref: NCI:C3467
 
 [Term]
 id: DOID:0060062
@@ -5227,6 +5229,14 @@ xref: OMIM:221820
 xref: ORDO:313808
 
 [Term]
+id: DOID:0081049
+name: hepatosplenic T-cell lymphoma
+namespace: disease_ontology
+def: "A mature T-cell and NK-cell lymphoma that is characterized by the presence of medium-size neoplastic lymphocytes infiltrating the hepatic sinusoids and that originates from cytotoxic T-cells, usually of gamma/delta T-cell type." [url:https\://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7596851/]
+subset: DO_rare_slim
+xref: NCI:C8459
+
+[Term]
 id: DOID:0111160
 name: camptodactyly-tall stature-scoliosis-hearing loss syndrome
 namespace: disease_ontology
@@ -5341,6 +5351,23 @@ xref: OMIM:613407
 xref: ORDO:548
 xref: SNOMEDCT_US_2021_09_01:154298007
 xref: UMLS_CUI:C0023343
+
+[Term]
+id: DOID:1039
+name: prolymphocytic leukemia
+namespace: disease_ontology
+def: "A chronic lymphocytic leukemia that is characterized by the presence of medium-sized lymphocytes with visible nucleoli (prolymphocytes) in the peripheral blood, bone marrow, and spleen." [url:https\://cancer.ca/en/cancer-information/cancer-types/non-hodgkin-lymphoma/what-is-non-hodgkin-lymphoma/prolymphocytic-leukemias]
+subset: DO_cancer_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "PLL" EXACT []
+synonym: "Prolymphocytic leukaemia" EXACT []
+xref: ICDO:9832/3
+xref: MESH:D015463
+xref: NCI:C3181
+xref: SNOMEDCT_US_2021_09_01:110006004
+xref: UMLS_CUI:C0023486
+is_a: DOID:1040 ! chronic lymphocytic leukemia
 
 [Term]
 id: DOID:1040
@@ -6092,7 +6119,7 @@ xref: UMLS_CUI:C0029434
 id: DOID:12387
 name: nephrogenic diabetes insipidus
 namespace: disease_ontology
-def: "A kidney disease characterized by a complete or partial resistance of the kidneys to vasopressin (ADH)." [url:http\://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus, url:http\://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus, url:http\://rarediseases.info.nih.gov/gard/7178/nephrogenic-diabetes-insipidus/resources/1, url:http\://www.merckmanuals.com/professional/genitourinary_disorders/renal_transport_abnormalities/nephrogenic_diabetes_insipidus.html]
+def: "A diabetes insipidus that is characterized by a complete or partial resistance of the kidneys to vasopressin (ADH)." [url:http\://en.wikipedia.org/wiki/Nephrogenic_diabetes_insipidus, url:http\://ghr.nlm.nih.gov/condition/nephrogenic-diabetes-insipidus, url:https\://medlineplus.gov/ency/article/000511.htm]
 comment: Xref MGI.\nOMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -6102,8 +6129,6 @@ xref: ICD10CM:N25.1
 xref: ICD9CM:588.1
 xref: MESH:D018500
 xref: NCI:C84919
-xref: OMIM:125800
-xref: OMIM:304800
 xref: ORDO:223
 xref: SNOMEDCT_US_2021_09_01:123294004
 xref: UMLS_CUI:C0162283
@@ -7527,7 +7552,7 @@ xref: UMLS_CUI:C0022739
 id: DOID:2935
 name: Chediak-Higashi syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy; it is that has_material_basis_in mutations in the CHS1 gene." [url:http\://ghr.nlm.nih.gov/condition/chediak-higashi-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/25129365]
+def: "A syndrome characterized by oculocutaneous albinism, immune deficiency, coagulation deficiency and neuropathy and that has_material_basis_in homozygous or compound heterozygous mutation in the lysosomal trafficking regulator gene (LYST) on chromosome 1q42." [url:http\://ghr.nlm.nih.gov/condition/chediak-higashi-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/25129365]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -9240,7 +9265,6 @@ subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute lymphoblastic leukaemia" EXACT []
-synonym: "acute lymphoblastic leukemia" EXACT []
 synonym: "acute lymphocytic leukaemia" EXACT []
 synonym: "ALL" EXACT []
 synonym: "precursor lymphoblastic lymphoma/leukemia" EXACT []

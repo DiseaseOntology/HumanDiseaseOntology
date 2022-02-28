@@ -3223,30 +3223,6 @@
       "type" : "CLASS",
       "lbl" : "neomycin sulfate allergic contact dermatitis"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0060057",
-      "meta" : {
-        "definition" : {
-          "val" : "A food allergy to wheat that is characterized by stomach cramping, diarrhea and gastrointestinal upset and is unrelated to the gluten intolerance.",
-          "xrefs" : [ "url:https://acaai.org/allergies/types/food-allergies/types-food-allergy/wheat-gluten-allergy" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_IEDB_slim" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "allergy to gluten",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "gluten allergic reaction",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "gluten allergy"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0040066",
       "meta" : {
         "definition" : {
@@ -3271,6 +3247,30 @@
       },
       "type" : "CLASS",
       "lbl" : "melphalan allergy"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0060057",
+      "meta" : {
+        "definition" : {
+          "val" : "A food allergy that develops from an immune reaction to eating gluten, a protein found in wheat, barley, rye and triticale and that is characterized by stomach cramping, diarrhea and gastrointestinal upset and is unrelated to the gluten intolerance.",
+          "xrefs" : [ "url:https://acaai.org/allergies/types/food-allergies/types-food-allergy/wheat-gluten-allergy" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_IEDB_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "allergy to gluten",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "gluten allergic reaction",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "gluten allergy"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0040065",
       "meta" : {
@@ -3409,13 +3409,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060500"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0040037",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060519"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060509",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060503"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0040037",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060519"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060057",
       "pred" : "is_a",
@@ -3537,25 +3537,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060500"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0040063",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060496"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060524",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060495"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0040063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060496"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060520",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060519"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_4378",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060503"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0040001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060524"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_4378",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060503"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0040014",
       "pred" : "is_a",
@@ -3725,13 +3725,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060500"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0040002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0060500"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060513",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0040002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060500"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060492",
       "pred" : "is_a",
@@ -3754,7 +3754,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-02-21/subsets/DO_IEDB_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-02-28/subsets/DO_IEDB_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

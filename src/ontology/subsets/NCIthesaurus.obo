@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-02-28/subsets/NCIthesaurus.obo
+data-version: doid/releases/2022-03-02/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -23353,16 +23353,6 @@ xref: UMLS_CUI:C0040028
 is_a: DOID:2226 ! myeloproliferative neoplasm
 
 [Term]
-id: DOID:2225
-name: obsolete megakaryocytic tumor
-namespace: disease_ontology
-comment: A legacy term, obsoleted.
-subset: NCIthesaurus
-xref: NCI:C7066
-xref: UMLS_CUI:C1334687
-is_obsolete: true
-
-[Term]
 id: DOID:2226
 name: myeloproliferative neoplasm
 namespace: disease_ontology
@@ -25736,14 +25726,6 @@ xref: UMLS_CUI:C0334265
 is_a: DOID:305 ! carcinoma
 
 [Term]
-id: DOID:2678
-name: obsolete adult mesoblastic nephroma
-namespace: disease_ontology
-def: "A mixed neoplasm that is seen mostly in early infancy and that consists of classic and cellular (atypical) variants." [url:https\://www.ncbi.nlm.nih.gov/pubmed/9669345]
-subset: NCIthesaurus
-is_obsolete: true
-
-[Term]
 id: DOID:2679
 name: dysembryoplastic neuroepithelial tumor
 namespace: disease_ontology
@@ -26557,23 +26539,6 @@ xref: NCI:C4868
 xref: SNOMEDCT_US_2021_09_01:699948001
 xref: UMLS_CUI:C0677608
 is_a: DOID:4 ! disease
-
-[Term]
-id: DOID:2770
-name: obsolete diaper rash
-namespace: disease_ontology
-subset: NCIthesaurus
-synonym: "Diaper or napkin erythema" EXACT []
-synonym: "Diaper or napkin rash" EXACT []
-synonym: "Diaper rash (disorder)" EXACT []
-synonym: "Irritant contact dermatitis due to contact with urine and/or faeces" EXACT []
-synonym: "Jacquet's dermatitis" EXACT []
-xref: ICD10CM:L22
-xref: ICD9CM:691.0
-xref: MESH:D003963
-xref: NCI:C111886
-xref: UMLS_CUI:C0011974
-is_obsolete: true
 
 [Term]
 id: DOID:2772
@@ -29015,20 +28980,6 @@ xref: UMLS_CUI:C0037286
 is_a: DOID:4 ! disease
 
 [Term]
-id: DOID:3166
-name: obsolete leukemoid reaction
-namespace: disease_ontology
-comment: This is not a disease. A leukemoid reaction is an increase in the white blood cell count, which can mimic leukemia. The reaction is actually due to an infection or another disease and is not a sign of cancer. Blood counts often return to normal when the underlying condition is treated.
-subset: NCIthesaurus
-synonym: "transient myeloproliferative disorder" RELATED []
-xref: ICD10CM:D72.823
-xref: ICD9CM:288.62
-xref: MESH:D007955
-xref: NCI:C3185
-xref: UMLS_CUI:C0023501
-is_obsolete: true
-
-[Term]
 id: DOID:3168
 name: squamous cell neoplasm
 namespace: disease_ontology
@@ -30701,15 +30652,6 @@ subset: NCIthesaurus
 xref: NCI:C38157
 xref: UMLS_CUI:C1334704
 is_a: DOID:3347 ! osteosarcoma
-
-[Term]
-id: DOID:338
-name: obsolete cranial nerve neoplasm
-namespace: disease_ontology
-def: "A central nervous system cancer develops from schwann cells located_in cranial nerves, has_material_basis_in abnormally proliferating cells." [url:https\://en.wikipedia.org/wiki/Schwannoma, url:https\://link.springer.com/chapter/10.1007/978-3-642-02874-8_15]
-subset: NCIthesaurus
-synonym: "neoplasm of cranial nerve" EXACT []
-is_obsolete: true
 
 [Term]
 id: DOID:3381
@@ -34215,19 +34157,6 @@ subset: NCIthesaurus
 synonym: "inner ear infection" EXACT []
 xref: UMLS_CUI:C1168225
 is_a: DOID:2952 ! inner ear disease
-
-[Term]
-id: DOID:3939
-name: obsolete lipomatous cancer
-namespace: disease_ontology
-comment: NCI retired concept, merged with liposarcoma[LS]
-subset: NCIthesaurus
-synonym: "malignant lipomatous tumor" EXACT []
-synonym: "malignant tumor of Adipose tissue" EXACT []
-xref: NCI:C4501
-xref: SNOMEDCT_US_2020_03_01:254828009
-xref: UMLS_CUI:C0346117
-is_obsolete: true
 
 [Term]
 id: DOID:3946
@@ -47296,13 +47225,6 @@ xref: UMLS_CUI:C0233705
 is_a: DOID:599 ! specific phobia
 
 [Term]
-id: DOID:6021
-name: obsolete malignant testicular Leydig cell tumor
-namespace: disease_ontology
-subset: NCIthesaurus
-is_obsolete: true
-
-[Term]
 id: DOID:6024
 name: selective IgE deficiency disease
 namespace: disease_ontology
@@ -51975,14 +51897,6 @@ xref: UMLS_CUI:C1334633
 is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
-id: DOID:7061
-name: obsolete precursor B lymphoblastic lymphoma/leukemia
-namespace: disease_ontology
-def: "A precursor lymphoblastic lymphoma/leukemia that is characterized by the presence of too many B-cell lymphoblasts in the blood and bone marrow." [url:https\://en.wikipedia.org/wiki/Precursor_B-cell_lymphoblastic_leukemia]
-subset: NCIthesaurus
-is_obsolete: true
-
-[Term]
 id: DOID:707
 name: B-cell lymphoma
 namespace: disease_ontology
@@ -53550,16 +53464,6 @@ subset: NCIthesaurus
 xref: NCI:C35602
 xref: UMLS_CUI:C1333042
 is_a: DOID:5221 ! chronic polyneuropathy
-
-[Term]
-id: DOID:7444
-name: obsolete diffuse intraductal papillomatosis
-namespace: disease_ontology
-subset: NCIthesaurus
-synonym: "Diffuse intraductal papillomatosis" EXACT []
-xref: NCI:C7364
-xref: UMLS_CUI:C1377912
-is_obsolete: true
 
 [Term]
 id: DOID:745

@@ -1,0 +1,16 @@
+# identifies IDs that were mistyped and do not match the class
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { oboInOwl:id }
+	?entity a owl:Class ;
+		 ?property ?value .
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any . }
+
+	# capture & compare entity/id numbers
+	BIND(REPLACE(str(?value), ":", "_") AS ?oio_id)
+	BIND(REPLACE(str(?entity), ".*[/#]", "") AS ?iri_id)
+	FILTER (str(?iri_id) != str(?oio_id))
+}

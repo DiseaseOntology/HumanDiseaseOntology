@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-04-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-04-28)
+
+This release includes 10, 960 human diseases. This release includes the addition of diffuse large B-cell lymphoma molecular subtypes and spondylocostal dysostosis subtypes, syndrome definitions, updated definition source URLs and new symptom SubClassOf axioms.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-04-28/src/ontology/doid-merged.obo) | |
+
 ### [v2022-04-01](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-04-01)
 
 This release includes 10,948 DO disease terms, 77% with textual definitions; new cancer syndrome synonyms, ICDO xrefs, DLBCL disease subtypes, DICER1 syndrome and symptom SubClassOf statements have been added.

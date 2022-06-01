@@ -10,7 +10,7 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 IMPORTS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
-SOURCES := $(foreach I,$(filter-out ro uberon,$(IMPORTS)), build/$(I).owl) build/ro.obo build/uberon-base.owl
+SOURCES := $(foreach I,$(filter-out ro,$(IMPORTS)), build/$(I).owl) build/ro.obo
 
 # Either update all import files at once with `make imports`
 # or one at a time with `make <import name>` (e.g. `make cl`)
@@ -22,7 +22,7 @@ sources: $(SOURCES)
 clean:
 	rm -rf build
 
-clean_imports:
+clean_imports: 
 	make clean
 	make sources
 	make imports
@@ -36,9 +36,6 @@ build/ro.obo: | build
 # Download compressed ChEBI to save some time
 build/chebi.owl.gz: | build
 	curl -Lk $(OBO)$(notdir $@) > $@
-
-build/uberon-base.owl: | build
-	curl -Lk $(OBO)uberon/$(notdir $@) > $@
 
 build/%.owl: | build
 	curl -Lk $(OBO)$(notdir $@) > $@
@@ -259,7 +256,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt
 	 --output $@
 
 uberon: uberon_import.owl
-uberon_import.owl: build/uberon-base.owl uberon_terms.txt | annotations.txt
+uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
 	$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \

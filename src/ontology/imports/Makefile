@@ -22,7 +22,7 @@ sources: $(SOURCES)
 clean:
 	rm -rf build
 
-clean_imports: 
+clean_imports:
 	make clean
 	make sources
 	make imports
@@ -265,6 +265,10 @@ uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
+	remove \
+	 --select "UBERON:*" \
+	 --select complement \
+	 --select classes \
 	annotate \
 	 --version-iri "$(OBO)doid/imports/$@"\
 	 --ontology-iri "$(OBO)doid/imports/$@"\

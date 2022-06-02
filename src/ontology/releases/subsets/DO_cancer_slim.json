@@ -5525,7 +5525,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_0050523",
       "meta" : {
         "definition" : {
-          "val" : "A T-cell leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.",
+          "val" : "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma", "url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -5546,7 +5546,7 @@
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Adult T-cell leukemia/lymphoma",
+          "val" : "adult T-cell leukemia",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -5559,7 +5559,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "adult T-cell leukemia"
+      "lbl" : "adult T-cell leukemia/lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_6367",
       "meta" : {
@@ -6076,10 +6076,30 @@
       "type" : "CLASS",
       "lbl" : "solitary fibrous tumor/hemangiopericytoma"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080779",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is characterized by the presence of large neoplastic cells resembling B-immunoblasts which have the immunophenotypic profile of plasma cells.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6467349/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7430862/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C7224"
+        }, {
+          "val" : "ICDO:9735/3"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "plasmablastic lymphoma"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050751",
       "meta" : {
         "definition" : {
-          "val" : "A T-cell lymphocytic leukemia that exhibits an unexplained, chronic (greater than 6 months) elevation in large granular lymphocytes (LGLs) in the peripheral blood.",
+          "val" : "A T-cell acute lymphocytic leukemia that exhibits an unexplained, chronic (greater than 6 months) elevation in large granular lymphocytes (LGLs) in the peripheral blood.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/T-cell_large_granular_lymphocyte_leukemia" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -6367,6 +6387,11 @@
           "val" : "ICD10CM:C90.0"
         }, {
           "val" : "SNOMEDCT_US_2021_09_01:94705007"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "myeloma",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -7765,31 +7790,6 @@
       "type" : "CLASS",
       "lbl" : "sinonasal undifferentiated carcinoma"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_715",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
-        "xrefs" : [ {
-          "val" : "ICDO:9837/3"
-        }, {
-          "val" : "ICDO:9729/3"
-        }, {
-          "val" : "MESH:D015458"
-        }, {
-          "val" : "UMLS_CUI:C0023492"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "T-cell leukemia",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "T-cell lymphoblastic leukemia/lymphoma"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9953",
       "meta" : {
         "definition" : {
@@ -8520,6 +8520,39 @@
       },
       "type" : "CLASS",
       "lbl" : "brain glioblastoma multiforme"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080210",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is is characterized by a diffuse proliferation of medium to large B-cells associated with sclerosis.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/28318892" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ORDO:98838"
+        }, {
+          "val" : "ICD10CM:C85.2"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Mediastinal diffuse large-cell lymphoma with sclerosis",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Large cell lymphoma of the mediastinum",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Primary mediastinal clear cell lymphoma of B-cell type",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "primary mediastinal B-cell lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080684",
       "meta" : {
@@ -11511,11 +11544,15 @@
       "meta" : {
         "definition" : {
           "val" : "A histiocytic and dendritic cell cancer that derives from the lymph nodes, derives from the skin, derives from the liver, derives from the spleen and derives from bones.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Langerhans_cell_sarcoma", "url:http://www.wrongdiagnosis.com/l/langerhans_cell_sarcoma/intro.htm" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Langerhans_cell_sarcoma", "url:https://pubmed.ncbi.nlm.nih.gov/25805533/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
         "xrefs" : [ {
           "val" : "NCI:C6921"
+        }, {
+          "val" : "ORDO:86897"
+        }, {
+          "val" : "GARD:10491"
         }, {
           "val" : "ICDO:9756/3"
         }, {
@@ -12172,11 +12209,6 @@
           "xrefs" : [ "url:http://www.bloodjournal.org/content/bloodjournal/128/3/462.full.pdf", "url:https://www.ncbi.nlm.nih.gov/pubmed/19357394" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "myeloma",
-          "xrefs" : [ ]
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -12781,19 +12813,25 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
-          "val" : "NCI:C3184"
+          "val" : "NCI:C3183"
         }, {
-          "val" : "UMLS_CUI:C0023493"
+          "val" : "UMLS_CUI:C0023492"
         }, {
-          "val" : "MESH:D015459"
+          "val" : "MESH:D015458"
         }, {
-          "val" : "SNOMEDCT_US_2021_09_01:77430005"
+          "val" : "ICDO:9729/3"
+        }, {
+          "val" : "ICDO:9837/3"
         }, {
           "val" : "ICD10CM:C91.5"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "acute T cell leukemia",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "T-cell leukemia",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -12805,7 +12843,7 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "acute T cell leukaemia",
+          "val" : "T-cell lymphoblastic leukemia/lymphoma",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -12817,6 +12855,9 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:715"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:5599"
         }, {
@@ -13670,6 +13711,8 @@
         }, {
           "val" : "ICD9CM:205.2"
         }, {
+          "val" : "ICDO:9876/3"
+        }, {
           "val" : "MESH:D054438"
         }, {
           "val" : "SNOMEDCT_US_2021_09_01:128826001"
@@ -13705,7 +13748,22 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "atypical chronic myeloid leukemia"
+      "lbl" : "atypical chronic myeloid leukemia, BCR-ABL1 negative"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080192",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma characterized by less than 50 percent decrease in lesion size with induction therapy or the appearance of new lesions or the appearance of new lesions after attainment of complete remission.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/22160081" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "relapsed/refractory diffuse large B-cell lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080191",
       "meta" : {
@@ -14153,6 +14211,75 @@
       "type" : "CLASS",
       "lbl" : "DICER1 syndrome"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081064",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is categorized as BN2 with high probability by the LymphGen algorithm. This is based on a combination of genetic features and BN2 DLBCLs often, but do not always, have a translocation involving the BCL6 locus and/or some combination of mutations affecting NOTCH2, TNFAIP3, BCL10 and UBE2A. This subgroup also commonly has mutations due to aberrant somatic hypermutation affecting CD70, which can be coding or non-coding.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/29641966/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8459709/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C148395"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "BN2 DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "BN2 diffuse large B-cell lymphoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081065",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is categorized as EZB with high probability by the LymphGen algorithm. This is based on a combination of genetic features and EZB DLBCLs often, but do not always, have hot spot mutations in EZH2 and/or a BCL2 translocation. This class can be further subdivided into two sub-classes EZB-MYC+ and EZB-MYC- using the double hit gene expression signature (DHITsig). This subgroup also commonly has mutations due to aberrant somatic hypermutation affecting IRF8, which can be coding or non-coding.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/29641966/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8459709/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C148398"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "EZB DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "EZB diffuse large B-cell lymphoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081066",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is categorized as MCD with high probability by the LymphGen algorithm. This is based on a combination of genetic features and MCD DLBCLs often, but do not always, have the most common hot spot mutation in MYD88 (L265P) and/or activating mutations in CD79B. This subgroup also commonly has mutations due to aberrant somatic hypermutation affecting PIM1 and/or ETV6, which can be coding or non-coding.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/29641966/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8459709/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C148394"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MCD DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "MCD diffuse large B-cell lymphoma"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1380",
       "meta" : {
         "definition" : {
@@ -14222,6 +14349,69 @@
       },
       "type" : "CLASS",
       "lbl" : "endometrial cancer"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081067",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is categorized as N1 with high probability by the LymphGen algorithm. This is based on a combination of genetic features. Although N1 DLBCLs always have an activating mutation affecting NOTCH1, LymphGen can assign cases with this mutation to other classes, depending on the presence of other genetic features.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/29641966/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C148396"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "N1 DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "N1 diffuse large B-cell lymphoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081068",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is categorized as ST2 with high probability by the LymphGen algorithm. This is based on a combination of genetic features and ST2 DLBCLs often, but do not always, have missense or nonsense mutations affecting TET2 and NFKBIA. This subgroup also commonly has mutations due to aberrant somatic hypermutation affecting some combination of SGK1, ZFP36L1, SOCS1, HIST1H1E and CD83, which can be coding or non-coding.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6010183/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8459709/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "ST2 DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "ST2 diffuse large B-cell lymphoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081069",
+      "meta" : {
+        "definition" : {
+          "val" : "A diffuse large B-cell lymphoma that is characterized by aneuploidy with TP53 inactivation.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32289277/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "A53 DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "A53 diffuse large B-cell lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_5509",
       "meta" : {
@@ -14766,6 +14956,41 @@
       "type" : "CLASS",
       "lbl" : "cervix carcinoma"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081080",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia associated with t(6;9)(p23;q34), resulting in DEK-NUP214(CAN) fusion protein expression. It is often associated with multilineage dysplasia and basophilia.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32526729/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9865/3"
+        }, {
+          "val" : "NCI:C82423"
+        }, {
+          "val" : "UMLS_CUI:C2826169"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia with t(6;9) (p23;q34.1); DEK-NUP214",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "acute myeloid leukemia with t(6;9)(p23;q34)",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "DEK-NUP214",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with t(6;9) (p23;q34.1)"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2531",
       "meta" : {
         "definition" : {
@@ -14833,6 +15058,194 @@
       "type" : "CLASS",
       "lbl" : "hematologic cancer"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081081",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute promyelocytic leukemia that is characterized by a severe coagulopathy and the t(15;17)(q24;q21), generating a PML-RARA fusion gene, and where abnormal promyelocytes predominate.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/24720386/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9866/3"
+        }, {
+          "val" : "NCI:C3182"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "acute promyelocytic leukemia, t(15;17)(q22;q11-12)",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute promyelocytic leukemia with PML-RARA"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081082",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia that is characterized by the proliferation of both neutrophil and monocyte precursors.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/31915926/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9867/3"
+        }, {
+          "val" : "NCI:C7463"
+        }, {
+          "val" : "UMLS_CUI:C0023479"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myelomonocytic leukemia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081083",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia associated with inv(3)(q21q26.2) or t(3;3)(q21;q26.2), resulting in the expression of RPN1-EVI1 fusion protein and the reposition of a distal GATA2 enhancer to activate MECOM expression.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/31711889/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C2826172"
+        }, {
+          "val" : "ICDO:9869/3"
+        }, {
+          "val" : "NCI:C82426"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute myeloid leukemia with inv(3)(q21;q26.2) or t(3;3)(q21;q26.2); RPN1-EVI1",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia with inv(3) (q21.3;q26.2) or t(3;3) (q21.3;q26.2); GATA2, MECOM",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with inv(3) (q21.3;q26.2) or t(3;3) (q21.3;q26.2)"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081084",
+      "meta" : {
+        "definition" : {
+          "val" : "Acute myeloid leukemia that is characterized by the presence of abnormal bone marrow eosinophils and the characteristic cytogenetic abnormality inv(16)(p13.1q22) or t(16;16)(p13.1;q22), which results in the expression of the fusion protein CBFB-MYH11.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/31353165/", "url:https://pubmed.ncbi.nlm.nih.gov/33303720/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9871/3"
+        }, {
+          "val" : "NCI:C9287"
+        }, {
+          "val" : "UMLS_CUI:C0522630"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "acute myeloid leukemia with abnormal marrow eosinophils",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with inv(16)(p13.1q22) or t(16;16)(p13.1;q22)"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081085",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia in which the blasts do not show evidence of myeloid differentiation by morphology and conventional cytochemistry.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/12110349/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C8460"
+        }, {
+          "val" : "ICDO:9872/3"
+        }, {
+          "val" : "UMLS_CUI:C0522631"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "AML-M0",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute myeloid leukemia, minimal differentiation",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with minimal differentiation"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081086",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia that is characterized by blasts without evidence of significant maturation in the neutrophilic lineage.",
+          "xrefs" : [ "url:https://wiki.clinicalflow.com/aml-acute-myelogenous-leukemia-without-maturation-m1" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ORDO:98833"
+        }, {
+          "val" : "UMLS_CUI:C0026998"
+        }, {
+          "val" : "NCI:C3249"
+        }, {
+          "val" : "GARD:526"
+        }, {
+          "val" : "ICDO:9873/3"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia without maturation"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081087",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia characterized by blasts with evidence of significant maturation in the neutrophilic lineage.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Acute_myeloblastic_leukemia_with_maturation" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9874/3"
+        }, {
+          "val" : "NCI:C3250"
+        }, {
+          "val" : "UMLS_CUI:C1879321"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with maturation"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8078",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -14848,6 +15261,55 @@
       },
       "type" : "CLASS",
       "lbl" : "childhood central nervous system germinoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081088",
+      "meta" : {
+        "definition" : {
+          "val" : "A chronic myeloid leukemia that is characterized by an abnormally high number of neutrophils and the expression of the BCR-ABL1 fusion gene.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32239758/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9875/3"
+        }, {
+          "val" : "NCI:C3174"
+        }, {
+          "val" : "UMLS_CUI:C0023473"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Chronic myelogenous leukemia, BCR/ABL positive",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "chronic myelogenous leukemia, BCR-ABL1 positive"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081089",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia with mutation of the nucleophosmin gene. It is usually associated with normal karyotype and frequently has myelomonocytic or monocytic features.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32609823/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "UMLS_CUI:C2826177"
+        }, {
+          "val" : "ICDO:9877/3"
+        }, {
+          "val" : "NCI:C82431"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with mutated NPM1"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14145",
       "meta" : {
@@ -15383,6 +15845,46 @@
       },
       "type" : "CLASS",
       "lbl" : "malignant exocrine pancreas neoplasm"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081070",
+      "meta" : {
+        "definition" : {
+          "val" : "An EZB diffuse large B-cell lymphoma that expresses the double hit gene expression signature (DHITsig+) according to gene expression profiling. In addition to the features characteristic of EZB, these cases commonly, but do not always, harbour MYC translocations and DDX3X mutations.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32289277/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6010183/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "EZB-MYC+ DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "EZB-MYC+ diffuse large B-cell lymphoma"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081071",
+      "meta" : {
+        "definition" : {
+          "val" : "An EZB diffuse large B-cell lymphoma that does not express the double hit gene expression signature (DHITsig-) according to gene expression profiling. These cases tend to have few MYC translocations or DDX3X mutations.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32289277/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6010183/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "EZB-MYC- DLBCL",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "EZB-MYC- diffuse large B-cell lymphoma"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1790",
       "meta" : {
@@ -16322,6 +16824,126 @@
       "type" : "CLASS",
       "lbl" : "bone marrow cancer"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081090",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia with double mutations of the CEBPA gene.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5394975/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9878/3"
+        }, {
+          "val" : "NCI:C129782"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with biallelic mutation of CEBPA"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081091",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia that is characterized by de novo RUNX1 gene mutation, not associated with myelodysplastic syndrome-related cytogenetic abnormalities.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32871587/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C129786"
+        }, {
+          "val" : "ICDO:9879/3"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with mutated RUNX1"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081092",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia with at least 20% blasts in the bone marrow or blood and one of the following: a previous history of myelodysplastic syndrome; multilineage dysplasia; or myelodysplastic syndrome-related cytogenetic abnormalities.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32864703/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C7600"
+        }, {
+          "val" : "UMLS_CUI:C2825139"
+        }, {
+          "val" : "ICDO:9895/3"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with myelodysplasia-related changes"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081093",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia associated with t(8;21)(q22;q22) resulting in RUNX1-RUNX1T1 fusion protein expression. The bone marrow and the peripheral blood show large myeloblasts with abundant basophilic cytoplasm, often containing azurophilic granules.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/31004601/", "url:https://pubmed.ncbi.nlm.nih.gov/35502592/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9896/3"
+        }, {
+          "val" : "NCI:C9288"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia with t(8;21); (q22; q22.1); RUNX1-RUNX1T1",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "acute myeloid leukemia, t(8;21)(q22;q22)",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with t(8;21); (q22; q22.1)"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081094",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia characterized by rearrangement of the MLL (mixed-lineage leukemia) gene.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/34964255/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9897/3"
+        }, {
+          "val" : "NCI:C174129"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "acute myeloid leukemia, 11q23 abnormalities",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia with KMT2A/MLL Rearrangement",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with MLL rearrangement"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3870",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
@@ -16342,6 +16964,51 @@
       },
       "type" : "CLASS",
       "lbl" : "childhood central nervous system primitive neuroectodermal neoplasm"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081095",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia with non-germline mutations of the CEBPA gene.",
+          "xrefs" : [ "url:https://medlineplus.gov/genetics/condition/familial-acute-myeloid-leukemia-with-mutated-cebpa/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9861/3"
+        }, {
+          "val" : "NCI:C82433"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with mutated CEBPA"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081096",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia typically showing megakaryocytic maturation and associated with t(1;22)(p13;q13), resulting in the expression of RBM15-MKL1 fusion protein.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/22469944/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9911/3"
+        }, {
+          "val" : "NCI:C82427"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Acute Myeloid Leukemia (Megakaryoblastic) with t(1;22)(p13.3;q13.1); RBM15-MKL1",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "acute myeloid leukemia with t(1;22)(p13;q13)"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060058",
       "meta" : {
@@ -16480,6 +17147,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3247"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081069",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080148",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060058"
@@ -16511,6 +17182,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050921",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080779",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050919",
       "pred" : "is_a",
@@ -16608,6 +17283,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3193"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080192",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060081",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1612"
@@ -16639,6 +17318,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_5579",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_10534"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081089",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1970",
       "pred" : "is_a",
@@ -16732,9 +17415,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_363"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6639",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081066",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080704",
       "pred" : "is_a",
@@ -16780,10 +17471,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0050751",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_715"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1790",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -16808,6 +17495,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_120"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081088",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_8552"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3857",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050902"
@@ -16820,9 +17511,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_8923"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0050523",
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081068",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_715"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050922",
       "pred" : "is_a",
@@ -16920,6 +17611,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_8923"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1039",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1040"
@@ -16943,6 +17638,14 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_4206",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080210",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3371",
       "pred" : "is_a",
@@ -16979,6 +17682,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050924",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081084",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3444",
       "pred" : "is_a",
@@ -17023,6 +17730,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_6037",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1752"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081065",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4207",
       "pred" : "is_a",
@@ -17119,6 +17830,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_3748",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1107"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081087",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4015",
       "pred" : "is_a",
@@ -17228,6 +17943,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5604"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081086",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3029",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_234"
@@ -17240,10 +17959,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3449"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_715",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_5603"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_8036",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2394"
@@ -17252,13 +17967,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_263"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080876",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3078"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080877",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3068"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080876",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3078"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3910",
       "pred" : "is_a",
@@ -17275,6 +17990,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_1040",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1037"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081094",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4556",
       "pred" : "is_a",
@@ -17347,6 +18066,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080190",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050751",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5603"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060463",
       "pred" : "is_a",
@@ -17427,6 +18150,14 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_6654",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0050523",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5603"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4006",
       "pred" : "is_a",
@@ -17512,13 +18243,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4001"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080896",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4939",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080896",
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081080",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4926",
       "pred" : "is_a",
@@ -17547,6 +18282,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_3908",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3905"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4455",
       "pred" : "is_a",
@@ -17600,6 +18339,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4001"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2152"
@@ -17640,13 +18383,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4851"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_6789",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_120"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5526",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_6789",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_120"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_5409",
       "pred" : "is_a",
@@ -17672,6 +18415,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_6052"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081095",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3545",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
@@ -17691,6 +18438,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_4971",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0070004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081082",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4769",
       "pred" : "is_a",
@@ -17872,13 +18623,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060058"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080187",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1036"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080997",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050745"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080187",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1036"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1037",
       "pred" : "is_a",
@@ -17893,6 +18644,10 @@
       "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060318",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081090",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
@@ -17959,6 +18714,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050861",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_9256"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081065"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1240",
       "pred" : "is_a",
@@ -18048,6 +18807,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1107"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081070",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081065"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_10660",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
@@ -18087,6 +18850,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_6052",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081092",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7642",
       "pred" : "is_a",
@@ -18144,13 +18911,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_234",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1520"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7788",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_5503"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_234",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1520"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4233",
       "pred" : "is_a",
@@ -18164,13 +18931,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0080644",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050905",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080644",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3973",
       "pred" : "is_a",
@@ -18248,6 +19015,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0070004"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081081",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060318"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060058",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_2531"
@@ -18267,6 +19038,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0050926",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3119"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081091",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_8057",
       "pred" : "is_a",
@@ -18297,7 +19072,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-04-28/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-06-02/subsets/DO_cancer_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

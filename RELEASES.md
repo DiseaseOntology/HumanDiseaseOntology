@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-06-06](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-06-06)
+
+This release includes a revised diabetes DM1 classification and revision of synonyms for two DO terms.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-06-06/src/ontology/doid-merged.obo) | |
+
 ### [v2022-06-02](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-06-02)
 
 DO's May release was delayed a couple of days, as we were curating updates to some classifications. This release contains 11,003 DOIDs disease terms. New definitions, xrefs, uberon import terms, symptom axioms and terms were added, including: leukemia molecular subtypes & their ICDO codes; ectodermal dysplasia, immune deficiency, blastic plasmacytoid dendridic cell neoplasm, Marsili syndrome, Teebi hypertelorism syndrome terms. The Opitz GBBB syndrome and intellectual disability classifications were revised.

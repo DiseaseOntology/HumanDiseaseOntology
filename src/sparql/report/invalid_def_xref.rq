@@ -1,0 +1,16 @@
+# identifies invalid predicates used for ECO codes (cause issues with loader)
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { oboInOwl:hasDbXref }
+	?entity a owl:Class ;
+		obo:IAO_0000115 ?definition .
+	?blank owl:annotatedTarget ?definition ;
+		?property ?value .
+	FILTER(!REGEX(?value, "^url:https?://"))
+	FILTER NOT EXISTS { ?entity owl:deprecated "true"^^xsd:boolean }
+}

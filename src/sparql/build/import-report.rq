@@ -1,32 +1,43 @@
-# Return a count of each import
+# Return a count of each import by root (auto-identified)
+#
+# NOTES:
+# - Execute query against doid-merged.owl
+# - Class counts are unique within an import branch but will be counted
+# multiple times if in more than one import (example: when created, this query
+# counted duplicate CHEBI terms in DISDRIV & chebi because they were imported by
+# each).
 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT (COUNT(?chebiClass) as ?chebi) (COUNT(?clClass) as ?cl) (COUNT(?hpClass) as ?hp) (COUNT(?soClass) as ?so) (COUNT(?ncbiClass) as ?ncbi) (COUNT(?sympClass) as ?symp) (COUNT(?transClass) as ?trans) (COUNT(?foodonClass) as ?foodon) (COUNT(?uberonClass) as ?uberon) WHERE {
-	{ ?chebiClass ?p ?o .
-	FILTER STRSTARTS(str(?chebiClass), "http://purl.obolibrary.org/obo/CHEBI_") }
-	UNION
-	{ ?clClass ?p ?o .
-	FILTER STRSTARTS(str(?clClass), "http://purl.obolibrary.org/obo/CL_") }
-	UNION
-	{ ?foodonClass ?p ?o .
-	FILTER STRSTARTS(str(?foodonClass), "http://purl.obolibrary.org/obo/FOODON_") }
-	UNION
-	{ ?hpClass ?p ?o .
-	FILTER STRSTARTS(str(?hpClass), "http://purl.obolibrary.org/obo/HP_") }
-	UNION
-	{ ?soClass ?p ?o .
-	FILTER STRSTARTS(str(?soClass), "http://purl.obolibrary.org/obo/SO_")}
-	UNION
-	{ ?ncbiClass ?p ?o .
-	FILTER STRSTARTS(str(?ncbiClass), "http://purl.obolibrary.org/obo/NCBITaxon_") }
-	UNION
-	{ ?sympClass ?p ?o .
-	FILTER STRSTARTS(str(?sympClass), "http://purl.obolibrary.org/obo/SYMP_") }
-	UNION
-	{ ?transClass ?p ?o .
-	FILTER STRSTARTS(str(?transClass), "http://purl.obolibrary.org/obo/TRANS_") }
-	UNION
-	{ ?uberonClass ?p ?o
-	FILTER STRSTARTS(str(?uberonClass), "http://purl.obolibrary.org/obo/UBERON_") }
+SELECT ?import_root ?namespace (COUNT(DISTINCT ?class) as ?count)
+WHERE {
+	{
+		# Identify import root classes
+		SELECT ?root
+		WHERE {
+			{
+				# root has no superclass (exclusion of deprecated required)
+				?root a owl:Class .
+				FILTER NOT EXISTS { ?root rdfs:subClassOf ?any . }
+				FILTER(!isBlank(?root) && !CONTAINS(STR(?root), "DOID"))
+				FILTER NOT EXISTS { ?root owl:deprecated ?obsolete . }
+			}
+			UNION
+			{
+				# root subClassOf owl:Thing
+				?root a owl:Class ;
+					rdfs:subClassOf owl:Thing .
+				FILTER(!CONTAINS(STR(?root), "DOID"))
+			}
+		}
+	}
+	?root rdfs:label ?import_root .
+
+	?class a owl:Class ;
+		rdfs:subClassOf* ?root .
+	FILTER(!isBlank(?class) && !CONTAINS(STR(?class), "doid"))
+	BIND(STRBEFORE(STRAFTER(STR(?class), "obo/"), "_") AS ?namespace)
 }
+GROUP BY ?import_root ?namespace
+ORDER BY ?import_root ?namespace

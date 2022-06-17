@@ -156,7 +156,7 @@ add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 # RELEASE
 # ----------------------------------------
 
-products: subsets human merged
+products: subsets human merged DOreports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -327,6 +327,24 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@
 	@echo "Created $@"
+
+# ----------------------------------------
+# DOreports
+# ----------------------------------------
+
+DO_REPORTS := $(patsubst src/sparql/build/DOreport-%.rq, src/DOreports/%.tsv, \
+	$(wildcard src/sparql/build/DOreport-*.rq))
+
+.PHONY: DOreports
+DOreports: $(DO_REPORTS)
+	@echo "Created src/DOreports"
+
+src/DOreports:
+	mkdir $@
+
+src/DOreports/%.tsv: $(DO).owl src/sparql/build/DOreport-%.rq | src/DOreports build/robot.jar
+	@$(ROBOT) query --input $< --query $(word 2,$^) $@
+	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 
 # ----------------------------------------
 # RELEASE

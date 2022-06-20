@@ -337,14 +337,14 @@ DO_REPORTS := $(patsubst src/sparql/build/DOreport-%.rq, src/DOreports/%.tsv, \
 
 .PHONY: DOreports
 DOreports: $(DO_REPORTS)
-	@echo "Created src/DOreports"
 
 src/DOreports:
 	mkdir $@
 
-src/DOreports/%.tsv: $(DO).owl src/sparql/build/DOreport-%.rq | src/DOreports build/robot.jar
+src/DOreports/%.tsv: $(EDIT) src/sparql/build/DOreport-%.rq | src/DOreports build/robot.jar
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
+	@echo "Created $@"
 
 # ----------------------------------------
 # RELEASE

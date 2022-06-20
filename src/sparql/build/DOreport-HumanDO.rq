@@ -1,16 +1,17 @@
-# Return a list of all non-obsolete class IDs and labels
+# Return ID, label, and asserted superclasses of all non-obsolete classes
+# NOTE: language tags are removed from labels
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?id ?label ?subClassOf
+SELECT ?id (str(?label_lang) AS ?label) (str(?subClassOf_lang) AS ?subClassOf)
 WHERE {
     ?class a owl:Class ;
         oboInOwl:id ?id ;
-        rdfs:label ?label ;
+        rdfs:label ?label_lang ;
         rdfs:subClassOf ?superclass .
-    ?superclass rdfs:label ?subClassOf .
+    ?superclass rdfs:label ?subClassOf_lang .
 
     FILTER (CONTAINS(STR(?class), "DOID"))
     FILTER NOT EXISTS { ?class owl:deprecated ?obsolete . }

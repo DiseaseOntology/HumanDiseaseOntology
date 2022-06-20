@@ -1,15 +1,16 @@
 # Return a list of all xrefs for non-obsolete classes
+# NOTE: language tags are removed from labels & xrefs
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?id ?label ?xref
+SELECT ?id (str(?label_lang) AS ?label) (str(?xref_lang) AS ?xref)
 WHERE {
     ?class a owl:Class ;
-        oboInOwl:hasDbXref ?xref ;
+        oboInOwl:hasDbXref ?xref_lang ;
         oboInOwl:id ?id ;
-        rdfs:label ?label .
+        rdfs:label ?label_lang .
 
     FILTER(CONTAINS(STR(?class), "DOID"))
     FILTER NOT EXISTS { ?class owl:deprecated ?obsolete . }

@@ -9,8 +9,18 @@ SHELL := bash
 
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
-IMPORTS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
-SOURCES := $(foreach I,$(filter-out ro,$(IMPORTS)), build/$(I).owl) build/ro.obo
+
+IMPORT_OBO := ro
+IMPORT_OWL := cl foodon geno hp so uberon symp trans
+# Download compressed (large file size)
+IMPORT_OWL_GZ := chebi ncbitaxon
+
+IMPORTS := $(IMPORT_OBO) $(IMPORT_OWL) $(IMPORT_OWL_GZ)
+SOURCES := $(addprefix build/, \
+	$(addsuffix .obo,$(IMPORT_OBO)) \
+	$(addsuffix .owl,$(IMPORT_OWL)) \
+	$(addsuffix .owl.gz,$(IMPORT_OWL_GZ)) \
+)
 
 # Either update all import files at once with `make imports`
 # or one at a time with `make <import name>` (e.g. `make cl`)
@@ -30,15 +40,10 @@ clean_imports:
 build:
 	mkdir $@
 
-build/ro.obo: | build
-	curl -Lk "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.obo" > $@
-
-# Download compressed ChEBI to save some time
-build/chebi.owl.gz: | build
+# download ontologies to update
+build/%: | build
 	curl -Lk $(OBO)$(notdir $@) > $@
 
-build/%.owl: | build
-	curl -Lk $(OBO)$(notdir $@) > $@
 
 
 # ----------------------------------------
@@ -180,7 +185,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
 
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
-ncbitaxon_import.owl: build/ncbitaxon.owl ncbitaxon_terms.txt | annotations.txt
+ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt
 	$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \

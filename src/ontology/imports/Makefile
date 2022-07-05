@@ -52,10 +52,6 @@ symp_import.owl: build/symp.owl | annotations.txt
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
-	 --select complement \
-	 --select annotation-properties \
-	 --term-file annotations.txt \
-	remove \
 	 --select object-properties \
 	annotate \
 	 --version-iri "$(OBO)doid/imports/$@" \
@@ -68,10 +64,6 @@ trans_import.owl: build/trans.owl | annotations.txt
 	 --input $< \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
-	remove \
-	 --select complement \
-	 --select annotation-properties \
-	 --term-file annotations.txt \
 	remove \
 	 --select object-properties \
 	annotate \

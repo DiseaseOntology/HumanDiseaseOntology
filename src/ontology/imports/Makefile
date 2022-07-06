@@ -48,6 +48,7 @@ build:
 # Consistent ROBOT annotation for imports
 define annotate_import
 	annotate \
+	 --remove-annotations \
 	 --ontology-iri "$(OBO)doid/imports/$(1)" \
 	 --version-iri "$(OBO)doid/imports/$(1)" \
 	 --output $(1)

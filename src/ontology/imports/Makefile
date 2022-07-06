@@ -40,10 +40,19 @@ clean_imports:
 build:
 	mkdir $@
 
-# download ontologies to update
-build/%: | build
+# ----------------------------------------
+# DOWNLOAD IMPORTS (SOURCES)
+# ----------------------------------------
+
+# download ontologies to update (separate to avoid execution as grouped targets)
+build/%.obo: | build
 	curl -Lk $(OBO)$(notdir $@) > $@
 
+build/%.owl: | build
+	curl -Lk $(OBO)$(notdir $@) > $@
+
+build/%.owl.gz: | build
+	curl -Lk $(OBO)$(notdir $@) > $@
 
 
 # ----------------------------------------

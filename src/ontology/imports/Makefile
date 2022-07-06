@@ -87,20 +87,18 @@ build/%.version: build/%.owl.gz
 # ----------------------------------------
 
 symp: symp_import.owl
-symp_import.owl: build/symp.owl | annotations.txt
-	@$(ROBOT) merge \
+symp_import.owl: build/symp.owl
+	@$(ROBOT) remove \
 	 --input $< \
-	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
 	 --select object-properties \
 	$(call annotate_import,$@)
 
 trans: trans_import.owl
-trans_import.owl: build/trans.owl | annotations.txt
-	@$(ROBOT) merge \
+trans_import.owl: build/trans.owl
+	@$(ROBOT) remove \
 	 --input $< \
-	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
 	 --select object-properties \

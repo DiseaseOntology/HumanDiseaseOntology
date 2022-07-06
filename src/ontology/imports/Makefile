@@ -40,6 +40,20 @@ clean_imports:
 build:
 	mkdir $@
 
+
+# ----------------------------------------
+# CUSTOM FUNCTIONS
+# ----------------------------------------
+
+# Consistent ROBOT annotation for imports
+define annotate_import
+	annotate \
+	 --ontology-iri "$(OBO)doid/imports/$(1)" \
+	 --version-iri "$(OBO)doid/imports/$(1)" \
+	 --output $(1)
+endef
+
+
 # ----------------------------------------
 # DOWNLOAD IMPORTS (SOURCES)
 # ----------------------------------------
@@ -62,10 +76,7 @@ symp_import.owl: build/symp.owl | annotations.txt
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
 	 --select object-properties \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 trans: trans_import.owl
 trans_import.owl: build/trans.owl | annotations.txt
@@ -75,10 +86,7 @@ trans_import.owl: build/trans.owl | annotations.txt
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	remove \
 	 --select object-properties \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 
 # ----------------------------------------
@@ -97,10 +105,7 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt
 	 --term-file annotations.txt \
 	remove \
 	 --term "owl:Thing" \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 cl: cl_import.owl
 cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt
@@ -116,10 +121,7 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 foodon: foodon_import.owl
 foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt
@@ -143,10 +145,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt
 	 --term-file annotations.txt \
 	query \
 	 --update ../../sparql/build/remove_non_en_labels.ru \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@"\
-	 --ontology-iri "$(OBO)doid/imports/$@"\
-	 --output $@
+	$(call annotate_import,$@)
 
 geno: geno_import.owl
 geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt
@@ -162,10 +161,7 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt
 	remove \
 	 --term oboInOwl:ObsoleteClass \
 	 --select "self descendants" \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
@@ -182,10 +178,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
 	 --term-file annotations.txt \
 	remove \
 	 --term-file $(word 3,$^) \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
@@ -200,10 +193,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	 --select complement \
 	 --select annotation-properties\
 	 --term-file annotations.txt \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 ro: ro_import.owl
 ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt
@@ -215,11 +205,7 @@ ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt
 	 --select complement \
 	 --select annotation-properties\
 	 --term-file annotations.txt \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
-
+	$(call annotate_import,$@)
 # The SO import contains only the sequence_variant branch plus a few terms from sequence_feature
 .INTERMEDIATE: build/so_feature.owl
 build/so_feature.owl: build/so.owl so_terms.txt
@@ -251,10 +237,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@" \
-	 --ontology-iri "$(OBO)doid/imports/$@" \
-	 --output $@
+	$(call annotate_import,$@)
 
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
@@ -270,7 +253,4 @@ uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
 	 --select "UBERON:*" \
 	 --select complement \
 	 --select classes \
-	annotate \
-	 --version-iri "$(OBO)doid/imports/$@"\
-	 --ontology-iri "$(OBO)doid/imports/$@"\
-	 --output $@
+	$(call annotate_import,$@)

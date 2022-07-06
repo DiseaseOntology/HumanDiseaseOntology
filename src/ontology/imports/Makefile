@@ -88,7 +88,7 @@ build/%.version: build/%.owl.gz
 
 symp: symp_import.owl
 symp_import.owl: build/symp.owl | annotations.txt
-	$(ROBOT) merge \
+	@$(ROBOT) merge \
 	 --input $< \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -98,7 +98,7 @@ symp_import.owl: build/symp.owl | annotations.txt
 
 trans: trans_import.owl
 trans_import.owl: build/trans.owl | annotations.txt
-	$(ROBOT) merge \
+	@$(ROBOT) merge \
 	 --input $< \
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -113,7 +113,7 @@ trans_import.owl: build/trans.owl | annotations.txt
 
 chebi: chebi_import.owl
 chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \
@@ -127,7 +127,7 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt
 
 cl: cl_import.owl
 cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --upper-term obo:CL_0000000 \
@@ -143,7 +143,7 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt
 
 foodon: foodon_import.owl
 foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt
-	$(ROBOT) merge \
+	@$(ROBOT) merge \
 	 --input $< \
 	extract \
 	 --method mireot \
@@ -167,7 +167,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt
 
 geno: geno_import.owl
 geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --upper-term obo:GENO_0000141 \
@@ -184,7 +184,7 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
 hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --upper-term HP:0000118 \
@@ -201,7 +201,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
 ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --upper-term NCBITaxon:10239 \
@@ -215,7 +215,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 
 ro: ro_import.owl
 ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \
@@ -227,7 +227,7 @@ ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt
 # The SO import contains only the sequence_variant branch plus a few terms from sequence_feature
 .INTERMEDIATE: build/so_feature.owl
 build/so_feature.owl: build/so.owl so_terms.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \
@@ -238,7 +238,7 @@ build/so_feature.owl: build/so.owl so_terms.txt
 
 .INTERMEDIATE: build/so_variant.owl
 build/so_variant.owl: build/so.owl
-	$(ROBOT) filter \
+	@$(ROBOT) filter \
 	 --input $< \
 	 --term SO:0001060 \
 	 --select "self descendants annotations" \
@@ -248,7 +248,7 @@ build/so_variant.owl: build/so.owl
 
 so: so_import.owl
 so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt
-	$(ROBOT) merge \
+	@$(ROBOT) merge \
 	 --input $< \
 	 --input $(word 2,$^) \
 	remove \
@@ -259,7 +259,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt
 
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt
-	$(ROBOT) extract \
+	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \

@@ -74,8 +74,11 @@ $(FASTOBO): build/fastobo.tar.gz
 # IMPORTS
 # ----------------------------------------
 
-# You can run `make <import name>` from the `ontology` dir
-# or the `ontology/imports` dir
+# Import update options (each can be executed here or from the src/ontology/imports dir):
+# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
+# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
+# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
+# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
 .PHONY: imports
 imports: | build/robot.jar

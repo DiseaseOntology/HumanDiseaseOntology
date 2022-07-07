@@ -22,9 +22,13 @@ SOURCES := $(addprefix build/, \
 	$(addsuffix .owl.gz,$(IMPORT_OWL_GZ)) \
 )
 
-# Either update all import files at once with `make imports`
-# or one at a time with `make <import name>` (e.g. `make cl`)
-# Refresh the source ontologies with `make clean_imports`
+# Import update options (each can be executed here or from the src/ontology/imports dir):
+# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
+# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
+# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
+# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
+
+# To refresh all source ontologies, use `make refresh_imports`
 
 imports: $(IMPORTS)
 sources: $(SOURCES)
@@ -68,8 +72,9 @@ endef
 # DOWNLOAD IMPORTS (SOURCES)
 # ----------------------------------------
 
-# Rules are explicit to avoid execution as grouped targets & prevent target ambiguity.
-# WARNING: Sources are ONLY downloaded when file doesn't exist. To re-download all use `make clean`.
+# Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
+# WARNING: Sources are ONLY downloaded when file doesn't exist. To re-download
+#	source files, use the make refresh commands.
 $(SOURCES): | build
 	curl -Lk $(OBO)$(notdir $@) > $@
 

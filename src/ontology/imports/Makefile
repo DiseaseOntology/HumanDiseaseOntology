@@ -68,6 +68,20 @@ define annotate_import
 	 --output $(1)
 endef
 
+# Message about version of source used for import (same or different;
+# if different, strip leading namespace from source version for readability)
+define announce_version
+	CUR_VERS=$$(grep -s 'rdfs:comment.*Sourced from' $(1) | sed -E 's/.*Sourced from ([^< ]+).*/\1/') ; \
+	SRC_VERS=$$(sed '1q' $(2)) ; \
+	if [[ $${CUR_VERS} = $${SRC_VERS} ]]; then \
+		echo "Updating $(1) from source with same version: $${SRC_VERS}" ; \
+	else \
+		NS=$$(echo $${CUR_VERS} | grep -Eo ".*/obo/[^/]+/") ; \
+		SRC_VERS=$${SRC_VERS#"$$NS"} ; \
+		echo "Updating $(1): $${CUR_VERS} >> $${SRC_VERS}" ; \
+	fi ;
+endef
+
 
 # ----------------------------------------
 # DOWNLOAD IMPORTS (SOURCES)
@@ -107,6 +121,7 @@ vpath %.version build
 
 symp: symp_import.owl
 symp_import.owl: build/symp.owl | symp.version
+	@$(call announce_version,$@,$|)
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -114,9 +129,9 @@ symp_import.owl: build/symp.owl | symp.version
 	 --select object-properties \
 	$(call annotate_import,$@,$|)
 
-
 trans: trans_import.owl
 trans_import.owl: build/trans.owl | trans.version
+	@$(call announce_version,$@,$|)
 	@$(ROBOT) remove \
 	--input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -131,6 +146,7 @@ trans_import.owl: build/trans.owl | trans.version
 
 chebi: chebi_import.owl
 chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt chebi.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -145,6 +161,7 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt chebi.ver
 
 cl: cl_import.owl
 cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt cl.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -161,6 +178,7 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt cl.version
 
 foodon: foodon_import.owl
 foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt foodon.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) merge \
 	 --input $< \
 	extract \
@@ -185,6 +203,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt foodon.ve
 
 geno: geno_import.owl
 geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt geno.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -202,6 +221,7 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt geno.version
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
 hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -219,6 +239,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.ver
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
 ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt ncbitaxon.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -233,6 +254,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 
 ro: ro_import.owl
 ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt ro.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -267,6 +289,7 @@ build/so_variant.owl: build/so.owl
 
 so: so_import.owl
 so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt so.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) merge \
 	 --input $< \
 	 --input $(word 2,$^) \
@@ -278,6 +301,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt so.ve
 
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt uberon.version
+	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \

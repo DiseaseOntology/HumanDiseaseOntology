@@ -5,7 +5,6 @@ SHELL := bash
 .DEFAULT_GOAL := all
 .DELETE_ON_ERROR:
 .SUFFIXES:
-.SECONDARY:
 
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
@@ -98,6 +97,7 @@ $(SOURCES): | build
 # CAPTURE versionIRIs
 # ----------------------------------------
 
+.SECONDARY: $(addprefix build/,$(addsuffix .version,$(IMPORTS)))
 %.version: %.obo
 	@$(ROBOT) convert --input $< --format owl --output $@.tmp
 	@grep "owl:versionIRI" $@.tmp | sed -E 's/.*"([^"]+)\.owl".*/\1\.obo/' > $@

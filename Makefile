@@ -31,7 +31,7 @@ release: imports products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
 # This will download all new sources for the imports and may take some time
-all: clean_imports release
+all: refresh_imports release
 
 # `make test` is used for Travis integration
 test: reason build/reports/report.tsv verify-edit
@@ -82,10 +82,10 @@ imports: | build/robot.jar
 	@echo "Checking import modules..."
 	@cd src/ontology/imports && make imports
 
-.PHONY: clean_imports
-clean_imports: | build/robot.jar
+.PHONY: refresh_imports
+refresh_imports: | build/robot.jar
 	@echo "Refreshing import modules (this may take some time)..."
-	@cd src/ontology/imports && make clean_imports
+	@cd src/ontology/imports && make refresh_imports
 
 IMPS = chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
 $(IMPS): | build/robot.jar

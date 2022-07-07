@@ -32,10 +32,9 @@ sources: $(SOURCES)
 clean:
 	rm -rf build
 
-clean_imports:
-	make clean
-	make sources
-	make imports
+refresh_imports:
+	$(MAKE) clean
+	$(MAKE) imports
 
 # Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
 IMP_REFRESH := ""

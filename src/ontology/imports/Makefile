@@ -265,28 +265,8 @@ ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt ro.version
 	 --term-file annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
-# The SO import contains only the sequence_variant branch plus a few terms from sequence_feature
-.INTERMEDIATE: build/so_feature.owl
-build/so_feature.owl: build/so.owl so_terms.txt
-	@$(ROBOT) extract \
-	 --input $< \
-	 --method mireot \
-	 --lower-terms $(word 2,$^) \
-	remove \
-	 --term owl:Thing \
-	collapse \
-	 --output $@
-
-.INTERMEDIATE: build/so_variant.owl
-build/so_variant.owl: build/so.owl
-	@$(ROBOT) filter \
-	 --input $< \
-	 --term SO:0001060 \
-	 --select "self descendants annotations" \
-	remove \
-	 --select "owl:deprecated='true'^^xsd:boolean" \
-	 --output $@
-
+# The SO import contains only the sequence_variant branch plus a few terms
+# from sequence_feature. See IMPORT INTERMEDIATES below for more details.
 so: so_import.owl
 so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt so.version
 	@$(call announce_version,$@,$(word 2,$|))
@@ -315,3 +295,30 @@ uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt uberon.ve
 	 --select complement \
 	 --select classes \
 	$(call annotate_import,$@,$(word 2,$|))
+
+
+# ----------------------------------------
+# IMPORT INTERMEDIATES
+# ----------------------------------------
+
+.INTERMEDIATE: build/so_feature.owl build/so_variant.owl
+build/so_feature.owl: build/so.owl so_terms.txt
+	@echo "Creating so intermediate $@"
+	@$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --term owl:Thing \
+	collapse \
+	 --output $@
+
+build/so_variant.owl: build/so.owl
+	@echo "Creating so intermediate $@"
+	@$(ROBOT) filter \
+	 --input $< \
+	 --term SO:0001060 \
+	 --select "self descendants annotations" \
+	remove \
+	 --select "owl:deprecated='true'^^xsd:boolean" \
+	 --output $@

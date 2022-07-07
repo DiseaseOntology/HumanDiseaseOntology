@@ -92,6 +92,12 @@ $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && make $@
 
+# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
+REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
+$(REFRESH_IMPS):
+	@cd src/ontology/imports && $(MAKE) $@
+
+
 # ----------------------------------------
 # PRE-BUILD TESTS
 # ----------------------------------------

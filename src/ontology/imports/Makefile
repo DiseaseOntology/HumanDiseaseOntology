@@ -37,6 +37,16 @@ clean_imports:
 	make sources
 	make imports
 
+# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
+IMP_REFRESH := ""
+REFRESH_IMPORTS := $(foreach IMP,$(IMPORTS),refresh_$(IMP))
+$(REFRESH_IMPORTS):
+	$(eval IMP_REFRESH=$(patsubst refresh_%,%,$@))
+	@rm -f $(filter build/$(IMP_REFRESH)%,$(SOURCES))
+	@$(MAKE) $(IMP_REFRESH)
+	@echo "$(IMP_REFRESH)_import.owl refreshed"
+	$(eval IMP_REFRESH="")
+
 build:
 	mkdir $@
 

@@ -80,17 +80,17 @@ $(FASTOBO): build/fastobo.tar.gz
 # 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
 # 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
-.PHONY: imports
+.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
+
 imports: | build/robot.jar
 	@echo "Checking import modules..."
 	@cd src/ontology/imports && make imports
 
-.PHONY: refresh_imports
 refresh_imports: | build/robot.jar
 	@echo "Refreshing import modules (this may take some time)..."
 	@cd src/ontology/imports && make refresh_imports
 
-IMPS = chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && make $@
@@ -169,7 +169,7 @@ products: subsets human merged DOreports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
-DATE = $(shell date +'%Y-%m-%d')
+DATE := $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
 
 # Set versionIRI for imports & ext.owl (if updated)
@@ -321,7 +321,7 @@ $(DNC).json: $(DNC).owl | build/robot.jar
 SUB_NAMES = DO_AGR_slim DO_cancer_slim DO_FlyBase_slim DO_GXD_slim DO_IEDB_slim DO_MGI_slim\
  DO_rare_slim DO_RAD_slim DO_CFDE_slim GOLD NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
- tick-borne_infectious_disease zoonotic_infectious_disease 
+ tick-borne_infectious_disease zoonotic_infectious_disease
 SUBS = $(foreach N,$(SUB_NAMES),$(addprefix src/ontology/subsets/, $(N)))
 OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))
@@ -482,7 +482,7 @@ validate-obo: validate-$(DO) validate-$(DNC)
 
 .PHONY: validate-$(DO)
 validate-$(DO): $(DO).obo | $(FASTOBO)
-	$(FASTOBO) $< 
+	$(FASTOBO) $<
 
 .PHONY: validate-$(DNC)
 validate-$(DNC): $(DNC).obo | $(FASTOBO)

@@ -27,7 +27,7 @@ HD = src/ontology/HumanDO
 # 4. Verify logical structure of products with SPARQL queries
 # 5. Publish to release directory
 # 6. Generate post-build reports (counts, etc.)
-release: imports products verify publish post
+release: imports version_imports products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
 # This will download all new sources for the imports and may take some time
@@ -171,6 +171,23 @@ products: subsets human merged DOreports
 TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
+
+# Set versionIRI for imports & ext.owl (if updated)
+.PHONY: version_imports
+version_imports: | imports build/robot.jar
+	@echo "Updating versionIRI of imports..."
+	@$(ROBOT) annotate \
+	 --input src/ontology/ext.owl \
+	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
+	convert \
+	 --format ofn \
+	 --output src/ontology/ext.owl
+	@for IMP in $(IMPS); do \
+		$(ROBOT) annotate \
+		 --input src/ontology/imports/$${IMP}_import.owl \
+		 --version-iri "$(RELEASE_PREFIX)imports/$${IMP}_import.owl" \
+		 --output src/ontology/imports/$${IMP}_import.owl ; \
+	 done
 
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason \

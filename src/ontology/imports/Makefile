@@ -83,18 +83,21 @@ $(SOURCES): | build
 # CAPTURE versionIRIs
 # ----------------------------------------
 
-build/%.version: build/%.obo
+%.version: %.obo
 	@$(ROBOT) convert --input $< --format owl --output $@.tmp
 	@grep "owl:versionIRI" $@.tmp | sed -E 's/.*"([^"]+)\.owl".*/\1\.obo/' > $@
 	@rm $@.tmp
 
 # second sed cmd added to standardize weird Foodon versionIRI
-build/%.version: build/%.owl
+%.version: %.owl
 	@grep "owl:versionIRI" $< | sed -E 's/.*"([^"]+)".*/\1/' | \
 	sed 's|&obo;|http://purl.obolibrary.org/obo/|' > $@
 
-build/%.version: build/%.owl.gz
+%.version: %.owl.gz
 	@gzcat $< | sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | sed -E 's/.*"([^"]+)".*/\1/' > $@
+
+# Help make find version files in build/ when bare names given as prereqs.
+vpath %.version build
 
 
 # ----------------------------------------

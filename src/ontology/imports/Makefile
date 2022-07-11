@@ -44,14 +44,9 @@ build:
 # DOWNLOAD IMPORTS (SOURCES)
 # ----------------------------------------
 
-# download ontologies to update (separate to avoid execution as grouped targets)
-build/%.obo: | build
-	curl -Lk $(OBO)$(notdir $@) > $@
-
-build/%.owl: | build
-	curl -Lk $(OBO)$(notdir $@) > $@
-
-build/%.owl.gz: | build
+# Rules are explicit to avoid execution as grouped targets & prevent target ambiguity.
+# WARNING: Sources are ONLY downloaded when file doesn't exist. To re-download all use `make clean`.
+$(SOURCES): | build
 	curl -Lk $(OBO)$(notdir $@) > $@
 
 

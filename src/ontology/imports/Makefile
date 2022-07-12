@@ -98,17 +98,17 @@ $(SOURCES): | build
 # ----------------------------------------
 
 .SECONDARY: $(addprefix build/,$(addsuffix .version,$(IMPORTS)))
-%.version: %.obo
+$(patsubst %,build/%.version,$(IMPORT_OBO)): %.version: %.obo
 	@$(ROBOT) convert --input $< --format owl --output $@.tmp
 	@grep "owl:versionIRI" $@.tmp | sed -E 's/.*"([^"]+)\.owl".*/\1\.obo/' > $@
 	@rm $@.tmp
 
 # second sed cmd added to standardize weird Foodon versionIRI
-%.version: %.owl
+$(patsubst %,build/%.version,$(IMPORT_OWL)): %.version: %.owl
 	@grep "owl:versionIRI" $< | sed -E 's/.*"([^"]+)".*/\1/' | \
 	sed 's|&obo;|http://purl.obolibrary.org/obo/|' > $@
 
-%.version: %.owl.gz
+$(patsubst %,build/%.version,$(IMPORT_OWL_GZ)):%.version: %.owl.gz
 	@gzcat $< | sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | sed -E 's/.*"([^"]+)".*/\1/' > $@
 
 # Help make find version files in build/ when bare names given as prereqs.

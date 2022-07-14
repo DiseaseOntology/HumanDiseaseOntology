@@ -71,7 +71,7 @@ $(FASTOBO): build/fastobo.tar.gz
 	cd build && tar -xvf $(notdir $<)
 
 # ----------------------------------------
-# IMPORTS
+# BUILDING IMPORTS
 # ----------------------------------------
 
 # Import update options (each can be executed here or from the src/ontology/imports dir):
@@ -80,7 +80,9 @@ $(FASTOBO): build/fastobo.tar.gz
 # 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
 # 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
-.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
+IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+# define imports updated manually, solely for versioning
+MANUAL_IMPS := disdriv eco omim_susc
 
 imports: | build/robot.jar
 	@echo "Checking import modules..."
@@ -90,7 +92,6 @@ refresh_imports: | build/robot.jar
 	@echo "Refreshing import modules (this may take some time)..."
 	@cd src/ontology/imports && make refresh_imports
 
-IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && make $@
@@ -99,6 +100,8 @@ $(IMPS): | build/robot.jar
 REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
 $(REFRESH_IMPS):
 	@cd src/ontology/imports && $(MAKE) $@
+
+.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
 
 
 # ----------------------------------------
@@ -175,14 +178,14 @@ RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
 # Set versionIRI for imports & ext.owl (if updated)
 .PHONY: version_imports
 version_imports: | imports build/robot.jar
-	@echo "Updating versionIRI of imports..."
+	@echo "Updating versionIRI of ext.owl & imports..."
 	@$(ROBOT) annotate \
 	 --input src/ontology/ext.owl \
 	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
 	convert \
 	 --format ofn \
 	 --output src/ontology/ext.owl
-	@for IMP in $(IMPS); do \
+	@for IMP in $(IMPS) $(MANUAL_IMPS); do \
 		$(ROBOT) annotate \
 		 --input src/ontology/imports/$${IMP}_import.owl \
 		 --version-iri "$(RELEASE_PREFIX)imports/$${IMP}_import.owl" \

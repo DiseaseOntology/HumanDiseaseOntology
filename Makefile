@@ -22,11 +22,12 @@ HD = src/ontology/HumanDO
 
 # Release process:
 # 1. Build import modules (if anything has changed)
-# 2. Build all products (doid, doid-non-classified, doid-merged, all subsets)
-# 3. Validate syntax of OBO-format products with fastobo-validator
-# 4. Verify logical structure of products with SPARQL queries
-# 5. Publish to release directory
-# 6. Generate post-build reports (counts, etc.)
+# 2. Update versionIRIs of import modules to release
+# 3. Build all products (doid, doid-non-classified, doid-merged, all subsets)
+# 4. Validate syntax of OBO-format products with fastobo-validator
+# 5. Verify logical structure of products with SPARQL queries
+# 6. Publish to release directory
+# 7. Generate post-build reports (counts, etc.)
 release: imports version_imports products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!

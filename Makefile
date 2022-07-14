@@ -235,7 +235,7 @@ $(DO)-base.owl: $(EDIT) | build/robot.jar
 	 --trim false \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri $(RELEASE_PREFIX)$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -450,7 +450,7 @@ build/reports/report-diff.txt: last-reports new-reports
 # create a count of the various disease branches
 build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
 	@echo "Counting all branches..."
-	@./src/util/branch_count/branch_count.py $< $@
+	@python3 src/util/branch_count/branch_count.py $< $@
 	@echo "Branch count available at $@"
 
 # the following targets are used to build a smaller diff with only removed axioms to review

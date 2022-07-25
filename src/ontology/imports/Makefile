@@ -182,16 +182,16 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt foodon.ve
 	 --input $< \
 	extract \
 	 --method mireot \
-	 --upper-term obo:FOODON_00002403\
+	 --upper-term obo:FOODON_00002403 \
 	 --lower-terms $(word 2,$^) \
+	extract \
+	 --method mireot \
+	 --branch-from-term obo:FOODON_00002403 \
 	remove \
 	 --term obo:FOODON_00002381 \
 	 --term obo:FOODON_00001002 \
 	 --term obo:FOODON_03400361 \
 	 --term obo:FOODON_00001176 \
-	remove \
-	 --term BFO:0000040 \
-	 --select "self ancestors" \
 	remove \
 	 --select complement \
 	 --select annotation-properties \

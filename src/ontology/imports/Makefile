@@ -166,6 +166,9 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt cl.version
 	 --method mireot \
 	 --upper-term obo:CL_0000000 \
 	 --lower-terms $(word 2,$^) \
+	extract \
+	 --method mireot \
+	 --branch-from-term obo:CL_0000000 \
 	remove \
 	 --term GO:0005623 \
 	 --select "self ancestors" \

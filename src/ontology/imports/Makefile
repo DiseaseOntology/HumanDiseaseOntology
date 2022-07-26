@@ -232,10 +232,14 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.ver
 	 --lower-terms $(word 2,$^) \
 	remove \
 	 --term-file $(word 3,$^) \
+	query \
+	 --update ../../sparql/build/remove_def_annotations.ru \
+	 --update ../../sparql/build/remove_phenotype_defs.ru \
 	remove \
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
+	 --term IAO:0000115 \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # WARNING: NCBITaxon is BIG! This will take time.

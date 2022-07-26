@@ -46,7 +46,6 @@ $(REFRESH_IMPORTS):
 	$(eval IMP_REFRESH=$(patsubst refresh_%,%,$@))
 	@rm -f $(filter build/$(IMP_REFRESH)%,$(SOURCES))
 	@$(MAKE) $(IMP_REFRESH)
-	@echo "$(IMP_REFRESH)_import.owl refreshed"
 	$(eval IMP_REFRESH="")
 
 build:

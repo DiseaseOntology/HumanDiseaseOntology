@@ -235,6 +235,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.ver
 	query \
 	 --update ../../sparql/build/remove_def_annotations.ru \
 	 --update ../../sparql/build/remove_phenotype_defs.ru \
+	 --update ../../sparql/build/remove_non_en_labels.ru \
 	remove \
 	 --select complement \
 	 --select annotation-properties \

@@ -228,11 +228,11 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.ver
 	 --upper-term HP:0003674 \
 	 --lower-terms $(word 2,$^) \
 	remove \
+	 --term-file $(word 3,$^) \
+	remove \
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
-	remove \
-	 --term-file $(word 3,$^) \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # WARNING: NCBITaxon is BIG! This will take time.

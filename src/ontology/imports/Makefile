@@ -110,16 +110,13 @@ $(patsubst %,build/%.version,$(IMPORT_OWL)): %.version: %.owl
 $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)):%.version: %.owl.gz
 	@gzcat $< | sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | sed -E 's/.*"([^"]+)".*/\1/' > $@
 
-# Help make find version files in build/ when bare names given as prereqs.
-vpath %.version build
-
 
 # ----------------------------------------
 # FULL IMPORTS
 # ----------------------------------------
 
 symp: symp_import.owl
-symp_import.owl: build/symp.owl | symp.version
+symp_import.owl: build/symp.owl | build/symp.version
 	@$(call announce_version,$@,$|)
 	@$(ROBOT) remove \
 	 --input $< \
@@ -129,7 +126,7 @@ symp_import.owl: build/symp.owl | symp.version
 	$(call annotate_import,$@,$|)
 
 trans: trans_import.owl
-trans_import.owl: build/trans.owl | trans.version
+trans_import.owl: build/trans.owl | build/trans.version
 	@$(call announce_version,$@,$|)
 	@$(ROBOT) remove \
 	--input $< \
@@ -144,7 +141,7 @@ trans_import.owl: build/trans.owl | trans.version
 # ----------------------------------------
 
 chebi: chebi_import.owl
-chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt chebi.version
+chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt build/chebi.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -159,7 +156,7 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt chebi.ver
 	$(call annotate_import,$@,$(word 2,$|))
 
 cl: cl_import.owl
-cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt cl.version
+cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -179,7 +176,7 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt cl.version
 	$(call annotate_import,$@,$(word 2,$|))
 
 foodon: foodon_import.owl
-foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt foodon.version
+foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt build/foodon.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) merge \
 	 --input $< \
@@ -204,7 +201,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt foodon.ve
 	$(call annotate_import,$@,$(word 2,$|))
 
 geno: geno_import.owl
-geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt geno.version
+geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt build/geno.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -222,7 +219,7 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt geno.version
 
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
-hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.version
+hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/hp.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -245,7 +242,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt hp.ver
 
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
-ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt ncbitaxon.version
+ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt build/ncbitaxon.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -260,7 +257,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	$(call annotate_import,$@,$(word 2,$|))
 
 ro: ro_import.owl
-ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt ro.version
+ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt build/ro.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -275,7 +272,7 @@ ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt ro.version
 # The SO import contains only the sequence_variant branch plus a few terms
 # from sequence_feature. See IMPORT INTERMEDIATES below for more details.
 so: so_import.owl
-so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt so.version
+so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build/so.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) merge \
 	 --input $< \
@@ -287,7 +284,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt so.ve
 	$(call annotate_import,$@,$(word 2,$|))
 
 uberon: uberon_import.owl
-uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt uberon.version
+uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt build/uberon.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \

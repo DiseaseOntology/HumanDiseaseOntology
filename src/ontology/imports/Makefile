@@ -318,6 +318,7 @@ build/so_feature.owl: build/so.owl so_terms.txt
 	remove \
 	 --term owl:Thing \
 	collapse \
+	 --precious-terms $(word 2,$^) \
 	 --output $@
 
 build/so_variant.owl: build/so.owl

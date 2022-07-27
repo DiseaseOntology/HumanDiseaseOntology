@@ -21,4 +21,4 @@ WHERE {
 	# BIND(REPLACE(STR(?prop), CONCAT(STR(?import), "[#_/]"), "") AS ?prop2)
 	BIND(CONCAT("owl:", STRAFTER(STR(?prop_type), "#")) AS ?type)
 }
-GROUP BY ?import
+GROUP BY ?type ?import

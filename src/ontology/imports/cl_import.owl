@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,6 +9,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sourced from http://purl.obolibrary.org/obo/cl/releases/2022-06-18/cl.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -22,14 +22,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
-    </owl:AnnotationProperty>
     
 
 
@@ -59,8 +51,6 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000000">
-        <oboInOwl:id>CL:0000000</oboInOwl:id>
-        <rdfs:label xml:lang="en">cell</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</rdfs:label>
     </owl:Class>
     
@@ -115,6 +105,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0011115"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem cell</rdfs:label>
     </owl:Class>
@@ -392,6 +383,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000128">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000126"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_4023154"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte</rdfs:label>
     </owl:Class>
     
@@ -735,7 +727,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000945"/>
-        <oboInOwl:id>CL:0000236</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B cell</rdfs:label>
     </owl:Class>
     
@@ -833,7 +824,6 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000327 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000327">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000499"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracellular matrix secreting cell</rdfs:label>
     </owl:Class>
@@ -1122,7 +1112,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000393"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000404"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
-        <rdfs:label xml:lang="en">neuron</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</rdfs:label>
     </owl:Class>
     
@@ -1210,7 +1199,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000630">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000003"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supportive cell</rdfs:label>
+        <rdfs:label>supporting cell</rdfs:label>
     </owl:Class>
     
 
@@ -1271,7 +1260,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000630"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002320"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0008034"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pericyte cell</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pericyte</rdfs:label>
     </owl:Class>
     
 
@@ -1398,7 +1387,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000845">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000785"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_2000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marginal zone B cell</rdfs:label>
+        <rdfs:label>marginal zone B cell of spleen</rdfs:label>
     </owl:Class>
     
 
@@ -1574,6 +1563,7 @@
     <!-- http://purl.obolibrary.org/obo/CL_0002174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000500"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002078"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">follicular cell of ovary</rdfs:label>
     </owl:Class>
@@ -1728,7 +1718,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0008019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000219"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A non-polarised cell precursor cell that is part of some mesenchyme, is associated with the cell matrix but is not connected to other cells and is capable of migration.</obo:IAO_0000115>
         <rdfs:label>mesenchymal cell</rdfs:label>
     </owl:Class>
     
@@ -1826,6 +1815,15 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:2000074</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splenocyte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_4023154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_4023154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000125"/>
+        <rdfs:label>myelinating glial cell</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

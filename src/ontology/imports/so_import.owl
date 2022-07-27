@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/so_import.owl/"
-     xml:base="http://purl.obolibrary.org/obo/doid/imports/so_import.owl/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/imports/so_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/doid/imports/so_import.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/so_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/so_import.owl"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sourced from http://purl.obolibrary.org/obo/so/2021-11-22/so.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -22,14 +22,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
-    </owl:AnnotationProperty>
     
 
 
@@ -90,8 +82,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000199">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001785"/>
-        <oboInOwl:id>SO:0000199</oboInOwl:id>
-        <rdfs:label>translocation</rdfs:label>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000199</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001260"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000240</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome_variation</rdfs:label>
     </owl:Class>
     
 
@@ -137,7 +139,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0001059 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002072"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001059</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_alteration</rdfs:label>
     </owl:Class>
@@ -464,7 +466,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0001565 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001565">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001882"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001565</oboInOwl:id>
@@ -712,7 +714,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001593">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001589"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant which causes a disruption of the translational reading frame, by shifting two bases forward.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001593</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minus_2_frameshift_variant</rdfs:label>
     </owl:Class>
@@ -733,7 +734,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001595">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001589"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant which causes a disruption of the translational reading frame, by shifting two bases backward.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001595</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plus_2_frameshift_variant</rdfs:label>
     </owl:Class>
@@ -804,7 +804,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001602">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001539"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant that changes the translational product with respect to the reference.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001602</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex_change_of_translational_product_variant</rdfs:label>
     </owl:Class>
@@ -1198,7 +1197,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001773">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002218"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant where the mutated gene product does not allow for one or more basic functions necessary for survival.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001773</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal_variant</rdfs:label>
     </owl:Class>
@@ -1209,7 +1207,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001775">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant in the genetic material inherited from the mother.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001775</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal_variant</rdfs:label>
     </owl:Class>
@@ -1220,7 +1217,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001776">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant in the genetic material inherited from the father.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001776</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paternal_variant</rdfs:label>
     </owl:Class>
@@ -1231,7 +1227,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001777">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant that has arisen after splitting of the embryo, resulting in the variant being found in only some of the tissues or cells of the body.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001777</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">somatic_variant</rdfs:label>
     </owl:Class>
@@ -1242,7 +1237,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001778">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variant present in the embryo that is carried by every cell in the body.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001778</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">germline_variant</rdfs:label>
     </owl:Class>
@@ -1263,8 +1257,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001785">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
-        <oboInOwl:id>SO:0001785</oboInOwl:id>
-        <rdfs:label>structural alteration</rdfs:label>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001785</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural_alteration</rdfs:label>
     </owl:Class>
     
 
@@ -1730,7 +1724,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001987">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001628"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A feature variant, where the alteration occurs downstream of the transcript termination site.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001987</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream_transcript_variant</rdfs:label>
     </owl:Class>
@@ -1952,10 +1945,19 @@
     <!-- http://purl.obolibrary.org/obo/SO_0002060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000183"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000044"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002060</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interchromosomal_translocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0002072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002072</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_comparison</rdfs:label>
     </owl:Class>
     
 
@@ -2177,7 +2179,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant that changes the length of one or more sequence features.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002160</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_length_variant</rdfs:label>
     </owl:Class>
@@ -2188,7 +2189,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002161">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002160"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant where the copies of a short tandem repeat (STR) feature are either contracted or expanded.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002161</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short_tandem_repeat_change</rdfs:label>
     </owl:Class>
@@ -2199,7 +2199,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002161"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A short tandem repeat variant containing more repeat units than the reference sequence.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002162</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short_tandem_repeat_expansion</rdfs:label>
     </owl:Class>
@@ -2210,7 +2209,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002163">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002161"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A short tandem repeat variant containing fewer repeat units than the reference sequence.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002163</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short_tandem_repeat_contraction</rdfs:label>
     </owl:Class>
@@ -2221,7 +2219,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002165">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002162"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A short tandem repeat expansion with an increase in a sequence of three nucleotide units repeated in tandem compared to a reference sequence.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002165</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trinucleotide_repeat_expansion</rdfs:label>
     </owl:Class>
@@ -2232,7 +2229,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002169">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001568"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant that falls in the polypyrimidine tract at 3&apos; end of intron between 17 and 3 bases from the end (acceptor -3 to acceptor -17).</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002169</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splice_polypyrimidine_tract_variant</rdfs:label>
     </owl:Class>
@@ -2243,7 +2239,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002170">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001630"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant that falls in the region between the 3rd and 6th base after splice junction (5&apos; end of intron).</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002170</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splice_donor_region_variant</rdfs:label>
     </owl:Class>
@@ -2254,7 +2249,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002214">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001992"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant whereby at least one base of a codon is changed, resulting in a stop codon inserted next to an existing stop codon. This leads to a polypeptide of the same length.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002214</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">redundant_inserted_stop_gained</rdfs:label>
     </owl:Class>
@@ -2264,9 +2258,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0002218 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002218">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001536"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant in which the function of a gene product is altered with respect to a reference.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002218</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functionally_abnormal</rdfs:label>
     </owl:Class>
@@ -2277,7 +2269,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002219">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001536"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant in which the function of a gene product is retained with respect to a reference.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002219</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functionally_normal</rdfs:label>
     </owl:Class>
@@ -2288,7 +2279,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002220">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001536"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence variant in which the function of a gene product is unknown with respect to a reference.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002220</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function_uncertain_variant</rdfs:label>
     </owl:Class>
@@ -2299,7 +2289,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002244">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transcript which is partially duplicated due to duplication of DNA, leading to a new transcript that is only partial and likely nonfunctional.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002244</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially_duplicated_transcript</rdfs:label>
     </owl:Class>
@@ -2310,7 +2299,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002245">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002244"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A partially_duplicated_transcript where the 5&apos; end of the transcript is duplicated.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002245</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five_prime_duplicated_transcript</rdfs:label>
     </owl:Class>
@@ -2321,7 +2309,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002246">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002244"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A partially_duplicated_transcript where the 3&apos; end of the transcript is duplicated.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0002246</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">three_prime_duplicated_transcript</rdfs:label>
     </owl:Class>
@@ -2542,8 +2529,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000199"/>
-        <oboInOwl:id>SO:1000044</oboInOwl:id>
-        <rdfs:label>chromosomal translocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000183"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000044</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal_translocation</rdfs:label>
     </owl:Class>
     
 
@@ -2551,8 +2539,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_1000183 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000183">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001260"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alteration of the genome that leads to a change in the structure or number of one or more chromosomes.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000240"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000183</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome_structure_variation</rdfs:label>
     </owl:Class>
@@ -2560,5 +2547,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 

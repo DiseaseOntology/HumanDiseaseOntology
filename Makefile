@@ -22,16 +22,17 @@ HD = src/ontology/HumanDO
 
 # Release process:
 # 1. Build import modules (if anything has changed)
-# 2. Build all products (doid, doid-non-classified, doid-merged, all subsets)
-# 3. Validate syntax of OBO-format products with fastobo-validator
-# 4. Verify logical structure of products with SPARQL queries
-# 5. Publish to release directory
-# 6. Generate post-build reports (counts, etc.)
-release: imports products verify publish post
+# 2. Update versionIRIs of import modules to release
+# 3. Build all products (doid, doid-non-classified, doid-merged, all subsets)
+# 4. Validate syntax of OBO-format products with fastobo-validator
+# 5. Verify logical structure of products with SPARQL queries
+# 6. Publish to release directory
+# 7. Generate post-build reports (counts, etc.)
+release: imports version_imports products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
 # This will download all new sources for the imports and may take some time
-all: clean_imports release
+all: refresh_imports release
 
 # `make test` is used for Travis integration
 test: reason build/reports/report.tsv verify-edit
@@ -71,26 +72,38 @@ $(FASTOBO): build/fastobo.tar.gz
 	cd build && tar -xvf $(notdir $<)
 
 # ----------------------------------------
-# IMPORTS
+# BUILDING IMPORTS
 # ----------------------------------------
 
-# You can run `make <import name>` from the `ontology` dir
-# or the `ontology/imports` dir
+# Import update options (each can be executed here or from the src/ontology/imports dir):
+# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
+# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
+# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
+# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
-.PHONY: imports
+IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+# define imports updated manually, solely for versioning
+MANUAL_IMPS := disdriv eco omim_susc
+
 imports: | build/robot.jar
 	@echo "Checking import modules..."
 	@cd src/ontology/imports && make imports
 
-.PHONY: clean_imports
-clean_imports: | build/robot.jar
+refresh_imports: | build/robot.jar
 	@echo "Refreshing import modules (this may take some time)..."
-	@cd src/ontology/imports && make clean_imports
+	@cd src/ontology/imports && make refresh_imports
 
-IMPS = chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && make $@
+
+# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
+REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
+$(REFRESH_IMPS):
+	@cd src/ontology/imports && $(MAKE) $@
+
+.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
+
 
 # ----------------------------------------
 # PRE-BUILD TESTS
@@ -160,7 +173,25 @@ products: subsets human merged DOreports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
-DATE = $(shell date +'%Y-%m-%d')
+DATE := $(shell date +'%Y-%m-%d')
+RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
+
+# Set versionIRI for imports & ext.owl (if updated)
+.PHONY: version_imports
+version_imports: | imports build/robot.jar
+	@echo "Updating versionIRI of ext.owl & imports..."
+	@$(ROBOT) annotate \
+	 --input src/ontology/ext.owl \
+	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
+	convert \
+	 --format ofn \
+	 --output src/ontology/ext.owl
+	@for IMP in $(IMPS) $(MANUAL_IMPS); do \
+		$(ROBOT) annotate \
+		 --input src/ontology/imports/$${IMP}_import.owl \
+		 --version-iri "$(RELEASE_PREFIX)imports/$${IMP}_import.owl" \
+		 --output src/ontology/imports/$${IMP}_import.owl ; \
+	 done
 
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason \
@@ -170,7 +201,7 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --exclude-duplicate-axioms true \
 	annotate \
 	 --annotation oboInOwl:date "$(TS)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -185,7 +216,7 @@ $(DO).obo: $(DO).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	query \
 	 --update $(word 2,$^) \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	grep -v ^date | \
@@ -204,7 +235,7 @@ $(DO)-base.owl: $(EDIT) | build/robot.jar
 	 --trim false \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -219,7 +250,7 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --input $< \
 	 --collapse-import-closure true \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
@@ -232,7 +263,7 @@ $(DM).obo: $(DM).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
 	 --select "parents equivalents" \
 	 --select "anonymous" \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
@@ -257,7 +288,7 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	 --select anonymous \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $@
 	@cp $@ $(HD).owl
 	@echo "Created $@"
@@ -274,7 +305,7 @@ $(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
 	 --update $(word 2,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
@@ -294,7 +325,7 @@ $(DNC).json: $(DNC).owl | build/robot.jar
 SUB_NAMES = DO_AGR_slim DO_cancer_slim DO_FlyBase_slim DO_GXD_slim DO_IEDB_slim DO_MGI_slim\
  DO_rare_slim DO_RAD_slim DO_CFDE_slim GOLD NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
- tick-borne_infectious_disease zoonotic_infectious_disease 
+ tick-borne_infectious_disease zoonotic_infectious_disease
 SUBS = $(foreach N,$(SUB_NAMES),$(addprefix src/ontology/subsets/, $(N)))
 OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))
@@ -307,7 +338,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@
 	@echo "Created $@"
 
@@ -316,14 +347,14 @@ src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
 	 --input $< \
 	 --update src/sparql/build/remove-ref-type.ru \
 	annotate \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@
 	@echo "Created $@"
 
 src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 	@$(ROBOT) annotate --input $< \
-	 --version-iri "$(OBO)doid/releases/$(DATE)/subsets/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
 	convert --output $@
 	@echo "Created $@"
@@ -419,7 +450,7 @@ build/reports/report-diff.txt: last-reports new-reports
 # create a count of the various disease branches
 build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
 	@echo "Counting all branches..."
-	@./src/util/branch_count/branch_count.py $< $@
+	@python3 src/util/branch_count/branch_count.py $< $@
 	@echo "Branch count available at $@"
 
 # the following targets are used to build a smaller diff with only removed axioms to review
@@ -455,7 +486,7 @@ validate-obo: validate-$(DO) validate-$(DNC)
 
 .PHONY: validate-$(DO)
 validate-$(DO): $(DO).obo | $(FASTOBO)
-	$(FASTOBO) $< 
+	$(FASTOBO) $<
 
 .PHONY: validate-$(DNC)
 validate-$(DNC): $(DNC).obo | $(FASTOBO)

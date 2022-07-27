@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-07-27](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-07-27)
+
+This release includes the addition of new disease terms, definitions, and xrefs with updates to the SYMP symptom ontology. 11,033 DO disease terms, 9,171 (83%) with textual definitions, over 200 new axioms. New disease terms and their subtypes including hot water epilepsy, keratosis palmoplantaris striata, Baraitser-Winter syndrome, benign familial infantile seizures, Graves ophthalmopathy, inclusion body myopathy and brain white matter abnormalities, Catel Manzke syndrome, X-linked mental retardation Gustavson type, hyperthyroidism, nasal cavity benign neoplasm and spastic paraplegia with deafness; added term replaced by annotation property; definitions for biliary tract benign neoplasm, dental diseases, revised DO imports, augmented SYMP symptom ontology terms.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-07-27/src/ontology/doid-merged.obo) | |
+
 ### [v2022-06-07](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-06-07)
 
 Updating DO imports.

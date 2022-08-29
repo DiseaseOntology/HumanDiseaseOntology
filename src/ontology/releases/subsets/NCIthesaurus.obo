@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-07-27/subsets/NCIthesaurus.obo
+data-version: doid/releases/2022-08-29/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -1039,7 +1039,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:0050476
 name: Barth syndrome
 namespace: disease_ontology
-def: "A lipid metabolism disorder that has_material_basis_in X-linked inheritance of the tafazzin gene and is characterized by decreased production of an enzyme required to produce cardiolipin." [url:http\://en.wikipedia.org/wiki/Barth_syndrome, url:http\://rarediseases.info.nih.gov/gard/5890/barth-syndrome/resources/1, url:http\://www.ninds.nih.gov/disorders/barth/barth.htm, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/1116/viewAbstract]
+def: "A 3-methylglutaconic aciduria that has_material_basis_in X-linked inheritance of the tafazzin gene and is characterized by decreased production of an enzyme required to produce cardiolipin." [url:http\://en.wikipedia.org/wiki/Barth_syndrome, url:http\://rarediseases.info.nih.gov/gard/5890/barth-syndrome/resources/1, url:http\://www.ninds.nih.gov/disorders/barth/barth.htm, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/1116/viewAbstract]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -1055,7 +1055,7 @@ xref: NCI:C84585
 xref: OMIM:302060
 xref: SNOMEDCT_US_2021_09_01:297231002
 xref: UMLS_CUI:C0574083
-is_a: DOID:655 ! inherited metabolic disorder
+is_a: DOID:9252 ! amino acid metabolic disorder
 property_value: exactMatch MESH:D056889 xsd:string
 
 [Term]
@@ -3256,7 +3256,8 @@ is_a: DOID:225 ! syndrome
 id: DOID:0060799
 name: syndromic X-linked intellectual disability Lubs type
 namespace: disease_ontology
-def: "A syndromic X-linked intellectual disability characterized by moderate to profound intellectual disability, infantile hypotonia, mild dysmorphic features, poor speech development, autistic features, seizures, progressive spasticity, and recurrent infections in males that has_material_basis_in duplication or triplication of the MECP2 gene on chromosome Xq28." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15689435, url:https\://www.ncbi.nlm.nih.gov/pubmed/20425814]
+alt_id: DOID:0080713
+def: "A syndromic X-linked intellectual disability characterized by moderate to profound intellectual disability, infantile hypotonia, mild dysmorphic features, poor speech development, autistic features, seizures, progressive spasticity, and recurrent infections in males that has_material_basis_in duplication or triplication of the MECP2 gene on chromosome Xq28." [url:https\://ghr.nlm.nih.gov/condition/mecp2-duplication-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/15689435, url:https\://www.ncbi.nlm.nih.gov/pubmed/20425814]
 subset: NCIthesaurus
 synonym: "Lubs X-linked mental retardation syndrome" EXACT []
 synonym: "MECP2 duplication syndrome" EXACT []
@@ -3264,6 +3265,7 @@ synonym: "mental retardation, X-linked, syndromic, Lubs type" EXACT []
 synonym: "mental retardation, X-linked, with recurrent respiratory infections" EXACT []
 synonym: "MRXSL" EXACT []
 synonym: "X-linked intellectual disability-hypotonia-recurrent Infections syndrome" EXACT []
+xref: GARD:9781
 xref: MESH:C537723
 xref: NCI:C126747
 xref: OMIM:300260
@@ -4012,7 +4014,7 @@ is_a: DOID:5295 ! intestinal disease
 id: DOID:0090106
 name: BH4-deficient hyperphenylalaninemia A
 namespace: disease_ontology
-def: "An amino acid metabolic disorder that is characterized by hyperphenylalaninemia, depletion of the neurotransmitters dopamine and serotonin, and progressive cognitive and motor deficits that has_material_basis_in autosomal recessive inheritance of mutation in the gene encoding 6-pyruvoyl-tetrahydropterin synthase (PTS) on chromosome 11q23.1." [url:https\://ghr.nlm.nih.gov/condition/tetrahydrobiopterin-deficiency, url:https\://www.omim.org/entry/261640]
+def: "A tetrahydrobiopterin (BH4)-deficient hyperphenylalaninemia that is characterized by hyperphenylalaninemia, depletion of the neurotransmitters dopamine and serotonin, and progressive cognitive and motor deficits that has_material_basis_in autosomal recessive inheritance of mutation in the gene encoding 6-pyruvoyl-tetrahydropterin synthase (PTS) on chromosome 11q23.1." [url:https\://ghr.nlm.nih.gov/condition/tetrahydrobiopterin-deficiency, url:https\://www.omim.org/entry/261640]
 subset: NCIthesaurus
 synonym: "6-pyruvoyl-tetrahydropterin synthase deficiency" EXACT []
 synonym: "HPABH4A" EXACT []
@@ -11328,22 +11330,17 @@ id: DOID:11984
 name: hypertrophic cardiomyopathy
 namespace: disease_ontology
 alt_id: DOID:11986
-def: "An intrinsic cardiomyopathy that is characterized by abnormal  thickening (hypertrophy) of the heart without any obvious cause." [url:http\://en.wikipedia.org/wiki/Hypertrophic_cardiomyopathy, url:http\://www.mayoclinic.org/diseases-conditions/hypertrophic-cardiomyopathy/basics/definition/con-20030747, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/cm/]
+def: "An intrinsic cardiomyopathy that is characterized by abnormal thickening (hypertrophy) of the heart without any obvious cause." [url:http\://en.wikipedia.org/wiki/Hypertrophic_cardiomyopathy, url:http\://www.mayoclinic.org/diseases-conditions/hypertrophic-cardiomyopathy/basics/definition/con-20030747, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/cm/]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "familial hypertrophic cardiomyopathy" EXACT []
 synonym: "hypertrophic obstructive cardiomyopathy" EXACT []
 xref: ICD9CM:425.1
 xref: KEGG:05410
 xref: MESH:D002312
-xref: MESH:D024741
 xref: NCI:C34449
-xref: NCI:C84773
-xref: ORDO:217568
-xref: SNOMEDCT_US_2021_09_01:389998005
-xref: SNOMEDCT_US_2021_09_01:83978005
+xref: ORDO:217569
+xref: SNOMEDCT_US_2021_09_01:233873004
 xref: UMLS_CUI:C0007194
-xref: UMLS_CUI:C0949658
 is_a: DOID:0050700 ! cardiomyopathy
 
 [Term]
@@ -12491,7 +12488,6 @@ namespace: disease_ontology
 def: "A central diabetes insipidus that is characterized by polyuria and polydipsia due to a deficiency in vasopressin synthesis and that has_material_basis_in heterozygous mutation in the arginine vasopressin gene (AVP) on chromosome 20p13." [url:https\://pubmed.ncbi.nlm.nih.gov/15070970/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
-synonym: "central diabetes insipidus" EXACT []
 synonym: "Pituitary diabetes insipidus" EXACT []
 synonym: "vasopressin defective diabetes insipidus" EXACT []
 synonym: "Vasopressin deficiency" EXACT []
@@ -15283,7 +15279,6 @@ xref: MESH:D029503
 xref: NCI:C61236
 xref: OMIM:PS105650
 xref: ORDO:124
-xref: SNOMEDCT_US_2020_03_01:188588001
 is_a: DOID:12449 ! aplastic anemia
 
 [Term]
@@ -17564,6 +17559,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Bruton agammaglobulinemia tyrosine kinase deficiency" EXACT []
+synonym: "Bruton disease" EXACT []
 synonym: "Bruton's agammaglobulinaemia" EXACT []
 synonym: "Bruton's Sex-Linked Agammaglobulinemia" EXACT []
 synonym: "Bruton's type agammaglobulinemia" EXACT []
@@ -25129,14 +25125,8 @@ xref: ICD10CM:D80.1
 xref: ICD9CM:279.00
 xref: MESH:D000361
 xref: NCI:C26931
-xref: OMIM:601495
-xref: OMIM:612692
-xref: OMIM:613500
-xref: OMIM:613501
-xref: OMIM:615214
 xref: OMIM:PS601495
-xref: SNOMEDCT_US_2021_09_01:119250001
-xref: SNOMEDCT_US_2021_09_01:267512002
+xref: SNOMEDCT_US_2022_07_31:119249001
 xref: UMLS_CUI:C0001768
 xref: UMLS_CUI:C0086438
 is_a: DOID:612 ! primary immunodeficiency disease
@@ -27342,8 +27332,6 @@ namespace: disease_ontology
 alt_id: DOID:2912
 def: "A pancreatitis that is characterized by inflammation of the pancreas over a short period of time and has symptoms of severe abdominal pain, nausea, vomiting, diarrhea, fever, and shock." [url:https\://www.nhs.uk/conditions/acute-pancreatitis/]
 subset: NCIthesaurus
-synonym: "acute necrotizing pancreatitis" EXACT []
-synonym: "PANCREATITIS NECROTIZING" EXACT []
 xref: ICD10CM:K85
 xref: ICD9CM:577.0
 xref: MESH:D010195
@@ -56067,7 +56055,7 @@ is_a: DOID:730 ! urethral benign neoplasm
 id: DOID:811
 name: lipodystrophy
 namespace: disease_ontology
-def: "A connective tissue disease that is characterized by  marked reduction, absence, and/or the redistribution of adipose tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25690482, url:https\://www.ncbi.nlm.nih.gov/pubmed/25833179]
+def: "A connective tissue disease that is characterized by marked reduction, absence, and/or the redistribution of adipose tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25690482, url:https\://www.ncbi.nlm.nih.gov/pubmed/25833179]
 subset: NCIthesaurus
 xref: ICD10CM:E88.1
 xref: ICD9CM:272.6
@@ -61382,8 +61370,10 @@ is_a: DOID:3407 ! carotid artery disease
 id: DOID:9351
 name: diabetes mellitus
 namespace: disease_ontology
-def: "A diabetes that is characterized by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretion, insulin action, or both." [url:http\://www.who.int/diabetes/action_online/basics/en/, url:https\://en.wikipedia.org/wiki/Diabetes_mellitus, url:https\://www.ncbi.nlm.nih.gov/pubmed/9686693]
+alt_id: DOID:0081062
+def: "A glucose metabolism disease that is characterized by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretion, insulin action, or both." [url:http\://www.who.int/diabetes/action_online/basics/en/, url:https\://en.wikipedia.org/wiki/Diabetes_mellitus, url:https\://medlineplus.gov/diabetes.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/9686693]
 subset: NCIthesaurus
+synonym: "diabetes" EXACT []
 xref: ICD10CM:E08-E13
 xref: ICD9CM:250
 xref: MESH:D003920

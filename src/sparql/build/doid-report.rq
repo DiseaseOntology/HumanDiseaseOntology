@@ -1,9 +1,12 @@
-# Return a count of non-obsolete classes
+# Return a count of non-obsolete classes & definitions
 
+PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT (COUNT(?s) AS ?classes) WHERE {
-	?s a owl:Class .
-	FILTER STRSTARTS(str(?s), "http://purl.obolibrary.org/obo/DOID_")
-	FILTER NOT EXISTS {?s owl:deprecated ?any}
+SELECT (COUNT(?class) AS ?classes) (COUNT(?def) AS ?definitions)
+WHERE {
+  ?class a owl:Class .
+  FILTER(CONTAINS(str(?class), "DOID_"))
+  OPTIONAL { ?class obo:IAO_0000115 ?def . }
+  FILTER NOT EXISTS { ?class owl:deprecated ?obsolete . }
 }

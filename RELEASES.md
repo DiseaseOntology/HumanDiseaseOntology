@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-09-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-09-29)
+
+This release of 11,158 disease terms includes expansion of DO's logical axioms defining disease to phenotype, disease to symptom and disease to disease features along with new disease terms (e.g. RCDP type 4, COPA syndrome, peroxisomal biogenesis disorder); enhancement of ICDO codes for CIViC/ClinGen collaboration, cleaning up of duplicate synonyms that differed by capitalization along with a UMLS xref update.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-09-29/src/ontology/doid-merged.obo) | |
+
 ### [v2022-08-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-08-29)
 
 DO's August release includes the revision of disease classifications and the addition of new disease terms and xrefs. This release includes 11,137 disease terms which includes the addition of:  injection anthrax, 89 autosomal recessive intellectual  developmental disorder subtypes, hypotonia, ataxia, and delayed development syndrome and short stature, hearing loss, retinitis pigmentosa, and distinctive facies,  Leber congenital amaurosis 19,   HMG-CoA synthase 2 deficiency, DeSanto-Shinawi syndrome. This release includes revised classifications/added subtypes:  acromesomelic dysplasia, dilated cardiomyopathy, common variable immunodeficiency, agammaglobulinemia, 3-methylglutaconic aciduria, tetrahydrobiopterin (BH4)-deficient hyperphenylalaninemia, Mandibuloacral dysplasia, arthrogryposis. This release includes the addition of the annotation property, 'term replaced by': we will now add this annotation to  obsolete terms, relating the obsoleted term to the term that it was merged into; and we updated NCBITaxon logical definitions.

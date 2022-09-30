@@ -12,8 +12,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.6'
-      - name: Install GH CLI
-        run: brew install gh
       - name: Login to GH
         env:
           TOKEN: ${{ secrets.GH_TOKEN }}

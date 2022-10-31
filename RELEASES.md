@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-10-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-10-31)
+
+This release includes 11,160 Disease Ontology terms along with the addition of skos exact mappings for MeSH xrefs, new disease terms, including: REV3L related disease; intellectual developmental disorder with hypotonia, impaired speech, and dysmorphic facies; revision of spinocerebellar ataxia type 27; spermatogenic failure,  augmentation of the Symptom Ontology logical definitions, new symptom axioms with review of DO-SYMP term overlap, updated SYMP import; and the addition of MeSH xref skos exact mappings & addition of terms to the DO_cancerslim.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-10-31/src/ontology/doid-merged.obo) | |
+
 ### [v2022-09-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-09-29)
 
 This release of 11,158 disease terms includes expansion of DO's logical axioms defining disease to phenotype, disease to symptom and disease to disease features along with new disease terms (e.g. RCDP type 4, COPA syndrome, peroxisomal biogenesis disorder); enhancement of ICDO codes for CIViC/ClinGen collaboration, cleaning up of duplicate synonyms that differed by capitalization along with a UMLS xref update.

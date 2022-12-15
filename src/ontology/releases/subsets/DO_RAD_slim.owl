@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_RAD_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2022-11-30/subsets/DO_RAD_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2022-12-15/subsets/DO_RAD_slim.owl"/>
     </owl:Ontology>
     
 
@@ -226,6 +226,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3222</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3716</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:155255</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:616</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2022_03_01:189925001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2022_03_01:443333004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0025149</oboInOwl:hasDbXref>
@@ -233,6 +234,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C1334410</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">CNS PNET</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">CPNET</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Medulloblastoma, histologically defined</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">brain medulloblastoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">infratentorial primitive neuroectodermal tumor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">localized primitive neuroectodermal tumor</oboInOwl:hasExactSynonym>
@@ -2049,6 +2051,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4961">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
+        <obo:IAO_0000115>A hematopoietic system disease that is located_in the bone marrow.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001855</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C34433</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2022_03_01:127035006</oboInOwl:hasDbXref>
@@ -2060,6 +2063,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bone marrow disease</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4961"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A hematopoietic system disease that is located_in the bone marrow.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/bonemarrowdiseases.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 

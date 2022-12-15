@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-11-30/subsets/NCIthesaurus.obo
+data-version: doid/releases/2022-12-15/subsets/NCIthesaurus.obo
 ontology: doid/subsets/NCIthesaurus.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0080202>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3112>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4024>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4468>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4929>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060534> (hepatoid adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0080202> (adenoid cystic carcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3030> (mucinous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3111> (cystadenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3112> (papillary adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3493> (signet ring cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4024> (scirrhous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4468> (clear cell adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4917> (villous adenocarcinoma)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4929> (tubular adenocarcinoma)\n\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/DOID_0060534> <http://purl.obolibrary.org/obo/DOID_0080202> <http://purl.obolibrary.org/obo/DOID_3030> <http://purl.obolibrary.org/obo/DOID_3111> <http://purl.obolibrary.org/obo/DOID_3112> <http://purl.obolibrary.org/obo/DOID_3493> <http://purl.obolibrary.org/obo/DOID_4024> <http://purl.obolibrary.org/obo/DOID_4468> <http://purl.obolibrary.org/obo/DOID_4917> <http://purl.obolibrary.org/obo/DOID_4929>)\n)
 
@@ -1646,6 +1646,7 @@ synonym: "CNS PNET" EXACT []
 synonym: "CPNET" EXACT []
 synonym: "infratentorial primitive neuroectodermal tumor" EXACT []
 synonym: "localized primitive neuroectodermal tumor" EXACT []
+synonym: "Medulloblastoma, histologically defined" EXACT []
 xref: GARD:7005
 xref: ICDO:9470/3
 xref: MESH:D008527
@@ -1654,6 +1655,7 @@ xref: NCI:C27294
 xref: NCI:C3222
 xref: NCI:C3716
 xref: OMIM:155255
+xref: ORDO:616
 xref: SNOMEDCT_US_2022_03_01:189925001
 xref: SNOMEDCT_US_2022_03_01:443333004
 xref: UMLS_CUI:C0025149
@@ -3984,7 +3986,8 @@ id: DOID:0080903
 name: embryonal tumor with multilayered rosettes, C19MC-altered
 namespace: disease_ontology
 alt_id: DOID:4794
-def: "A central nervous system primitive neuroectodermal neoplasm that is characterized by the presence of multilayered rosettes formation and the presence of amplification of the C19MC region on chromosome 19 (19q13.42)." [url:https\://radiopaedia.org/articles/embryonal-tumours-with-multilayered-rosettes-etmr?lang=us, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5718304/]
+def: "An embryonal tumor with multilayered rosettes that is characterized by the presence of multilayered rosettes formation and the presence of amplification of the C19MC region on chromosome 19 (19q13.42)." [url:https\://radiopaedia.org/articles/embryonal-tumours-with-multilayered-rosettes-etmr?lang=us, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5718304/]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "ependymoblastoma" EXACT []
 xref: MESH:D018242
@@ -9316,6 +9319,7 @@ synonym: "Racemose aneurysm" EXACT []
 synonym: "Racemose Angioma" EXACT []
 synonym: "Racemose hemangioma" EXACT []
 xref: ICD10CM:I77.0
+xref: ICDO:9123/0
 xref: NCI:C2882
 xref: SNOMEDCT_US_2022_03_01:403966009
 xref: UMLS_CUI:C0334533
@@ -14937,7 +14941,9 @@ is_a: DOID:28 ! endocrine system disease
 id: DOID:13316
 name: exocrine pancreatic insufficiency
 namespace: disease_ontology
+def: "A pancreas disease that is characterized by the inability of the exocrine pancreas to produce and secrete an adequate amount of digestive enzymes into the small intestine." [url:https\://www.ncbi.nlm.nih.gov/books/NBK555926/]
 subset: NCIthesaurus
+synonym: "EPI" EXACT []
 xref: ICD10CM:K86.81
 xref: MESH:D010188
 xref: NCI:C84316
@@ -16408,6 +16414,7 @@ is_a: DOID:1168 ! familial hyperlipidemia
 id: DOID:13814
 name: hypoglossal nerve disease
 namespace: disease_ontology
+def: "A glossopharyngeal nerve disease that is located_in the hypoglossal nerve (twelfth cranial nerve)." [url:https\://www.merckmanuals.com/home/brain\,-spinal-cord\,-and-nerve-disorders/cranial-nerve-disorders/hypoglossal-nerve-disorders]
 subset: NCIthesaurus
 synonym: "disorder of 12th nerve" EXACT []
 synonym: "disorder of hypoglossal [12th] nerve" EXACT []
@@ -17402,6 +17409,7 @@ is_a: DOID:10908 ! hydrocephalus
 id: DOID:1417
 name: choroid disease
 namespace: disease_ontology
+def: "An uveal disease that is located_in the choroid." [url:https\://www.vagelos.columbia.edu/departments-centers/ophthalmology/education/digital-reference-ophthalmology/vitreous-and-retina/retina-choroid-disorders]
 subset: NCIthesaurus
 xref: ICD10CM:H31.9
 xref: ICD9CM:363.9
@@ -20702,6 +20710,7 @@ is_a: DOID:61 ! mitral valve disease
 id: DOID:1756
 name: facial nerve disease
 namespace: disease_ontology
+def: "A cranial nerve disease that is located_in the facial nerve (seventh cranial nerve." [url:https\://ent.uci.edu/more-at-uc-irvine/conditions/facial-nerve-disorders.asp]
 subset: NCIthesaurus
 xref: ICD10CM:G51
 xref: ICD9CM:351
@@ -23434,7 +23443,7 @@ is_a: DOID:4 ! disease
 id: DOID:2253
 name: cervix disease
 namespace: disease_ontology
-def: "A uterine disease that is located_in the cervix." [url:https\://www.mdedge.com/obgmanagement/article/136739/gynecology/2017-update-cervical-disease]
+def: "An uterine disease that is located_in the cervix." [url:https\://www.mdedge.com/obgmanagement/article/136739/gynecology/2017-update-cervical-disease]
 subset: NCIthesaurus
 xref: MESH:D002577
 xref: NCI:C40241
@@ -24908,6 +24917,7 @@ synonym: "Letterer-Siwe disease of spleen" EXACT []
 xref: ICD10CM:C96.0
 xref: ICD10CM:C96.6
 xref: ICD9CM:202.5
+xref: ICDO:9751/1
 xref: MESH:C538636
 xref: MESH:D006646
 xref: NCI:C3107
@@ -28609,6 +28619,7 @@ name: anus disease
 namespace: disease_ontology
 alt_id: DOID:11479
 alt_id: DOID:11993
+def: "A rectal disease located_in the anus." [url:https\://www.health.harvard.edu/a_to_z/anal-disorders-a-to-z]
 subset: NCIthesaurus
 synonym: "anal disease" EXACT []
 synonym: "anal fissure" EXACT []
@@ -29694,11 +29705,13 @@ is_a: DOID:3277 ! thymus cancer
 
 [Term]
 id: DOID:3292
-name: monkeypox
+name: mpox
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection of primates, rodents and humans, located in skin, has_material_basis_in Monkeypox virus, which is transmitted by contact with the animal's blood, body fluids, rash, or with the body fluids of a sick person, transmitted by fomites, and transmitted by respiratory droplets. The infection has symptom fever, has symptom muscle ache, has symptom headache, and has symptom lymphadenopathy." [url:http\://www.cdc.gov/ncidod/monkeypox/factsheet2.htm]
+def: "A viral infectious disease that results in infection of primates, rodents and humans, located in skin, has_material_basis_in Monkeypox virus, which is transmitted by contact with the animal's blood, body fluids, rash, or with the body fluids of a sick person, transmitted by fomites, and transmitted by respiratory droplets. The infection has symptom fever, has symptom muscle ache, has symptom headache, and has symptom lymphadenopathy." [url:http\://www.cdc.gov/ncidod/monkeypox/factsheet2.htm, url:https\://www.who.int/news/item/28-11-2022-who-recommends-new-name-for-monkeypox-disease]
+comment: November 2022 WHO name update.
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
+synonym: "monkeypox" EXACT []
 xref: GARD:10722
 xref: ICD10CM:B04
 xref: ICD9CM:059.01
@@ -30568,6 +30581,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:339
 name: accessory nerve disease
 namespace: disease_ontology
+def: "A glossopharyngeal nerve disease that is characterized by involvement of the accessory nerve (eleventh cranial nerve)." [url:https\://en.wikipedia.org/wiki/Accessory_nerve_disorder]
 subset: NCIthesaurus
 synonym: "disorder of 11th nerve" EXACT []
 synonym: "disorder of accessory [11th] nerve" EXACT []
@@ -33146,6 +33160,7 @@ name: external ear disease
 namespace: disease_ontology
 alt_id: DOID:13122
 alt_id: DOID:835
+def: "An auditory system disease that is located_in the external ear." [url:https\://app1.unmc.edu/medicine/heywood/otology/unit3-external-ear-disease-diagnosis.cfm]
 subset: NCIthesaurus
 synonym: "Preauricular cyst" EXACT []
 synonym: "Preauricular sinus and fistula" EXACT []
@@ -33558,8 +33573,10 @@ namespace: disease_ontology
 def: "A medulloblastoma that is characterized by cells that are larger than would be normally expected." [url:http\://en.wikipedia.org/wiki/Large_cell]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Anaplastic medulloblastoma" EXACT []
 xref: ICDO:9474/3
 xref: NCI:C6904
+xref: ORDO:251855
 xref: SNOMEDCT_US_2022_03_01:128790006
 xref: UMLS_CUI:C1266180
 is_a: DOID:0050902 ! medulloblastoma
@@ -33601,9 +33618,11 @@ is_a: DOID:0050902 ! medulloblastoma
 
 [Term]
 id: DOID:3865
-name: adult central nervous system primitive neuroectodermal neoplasm
+name: adult central nervous system embryonal tumor
 namespace: disease_ontology
+def: "A central nervous system embryonal tumor that occurs in adults." [url:https\://pubmed.ncbi.nlm.nih.gov/33477185/]
 subset: NCIthesaurus
+synonym: "adult central nervous system primitive neuroectodermal neoplasm" EXACT []
 synonym: "adult CNS PNET" EXACT []
 xref: NCI:C5411
 xref: UMLS_CUI:C1332196
@@ -33635,10 +33654,12 @@ is_a: DOID:0050902 ! medulloblastoma
 
 [Term]
 id: DOID:3870
-name: childhood central nervous system primitive neuroectodermal neoplasm
+name: childhood central nervous system embryonal tumor
 namespace: disease_ontology
+def: "A central nervous system embryonal tumor that occurs in childhood." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315657/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "childhood central nervous system primitive neuroectodermal neoplasm" EXACT []
 synonym: "pediatric CNS PNET" EXACT []
 xref: NCI:C5961
 xref: UMLS_CUI:C1332957
@@ -33646,12 +33667,13 @@ is_a: DOID:3620 ! central nervous system cancer
 
 [Term]
 id: DOID:3873
-name: desmoplastic nodular medulloblastoma
+name: desmoplastic/nodular medulloblastoma
 namespace: disease_ontology
 def: "A medulloblastoma that is characterized by the presence of nodular, collagenous areas which do not contain reticulin, surrounded by hypercellular areas which contain an intercellular reticulin fiber network." [url:https\://pubmed.ncbi.nlm.nih.gov/32304218/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4910646/]
 comment: According to WHO ICDO Medulloblastoma with extensive nodularity is the same as desmoplastic nodular medulloblastoma.
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "desmoplastic nodular medulloblastoma" EXACT []
 synonym: "Medulloblastoma with extensive nodularity" EXACT []
 synonym: "nodular medulloblastoma" EXACT []
 xref: ICDO:9471/3
@@ -36304,6 +36326,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:4329
 name: Erdheim-Chester disease
 namespace: disease_ontology
+def: "A non-Langerhans-cell histiocytosis that is characterized by the proliferation in the tissues of lipid-laden macrophages and the presence of multinucleated giant cells. It results in sclerosis of the long bones and failure of the affected organs." [url:https\://medlineplus.gov/genetics/condition/erdheim-chester-disease/, url:https\://rarediseases.org/rare-diseases/erdheim-chester-disease/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:6369
@@ -36424,6 +36447,7 @@ is_a: DOID:3479 ! uveal cancer
 id: DOID:4353
 name: ciliary body disease
 namespace: disease_ontology
+def: "An iris disease that is located_in the ciliary body." [url:https\://pubmed.ncbi.nlm.nih.gov/35695216/]
 subset: NCIthesaurus
 xref: NCI:C35775
 xref: SNOMEDCT_US_2022_03_01:68575007
@@ -36789,10 +36813,13 @@ is_a: DOID:1927 ! sphingolipidosis
 id: DOID:4424
 name: juvenile xanthogranuloma
 namespace: disease_ontology
+def: "A non-Langerhans-cell histiocytosis is characterized as a benign skin lump or bump caused by a collection of cells called histiocytes. These may be red, orange or tan at first, but over time may become more yellow in color. These bumps usually appear on the head, neck and trunk." [url:https\://www.nationwidechildrens.org/conditions/juvenile-xanthogranuloma, url:https\://www.ncbi.nlm.nih.gov/books/NBK526103/]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Multiple eruptive juvenile xanthogranuloma" EXACT []
 synonym: "Naevoxanthoendothelioma" EXACT []
 synonym: "Xanthoma neviforme" EXACT []
+xref: ICDO:9749/1
 xref: MESH:D014972
 xref: NCI:C3451
 xref: SNOMEDCT_US_2022_03_01:71709009
@@ -38339,6 +38366,7 @@ subset: NCIthesaurus
 synonym: "metaplastic carcinoma of breast" RELATED []
 synonym: "Metaplastic carcinoma of the breast" EXACT []
 xref: GARD:10804
+xref: ICDO:8575/3
 xref: NCI:C5164
 xref: SNOMEDCT_US_2022_03_01:763479005
 xref: UMLS_CUI:C1334708
@@ -39285,8 +39313,10 @@ is_a: DOID:4840 ! sebaceous carcinoma
 id: DOID:4840
 name: sebaceous carcinoma
 namespace: disease_ontology
+def: "A skin cancer that arises from the sebaceous glands." [url:https\://www.mayoclinic.org/diseases-conditions/sebaceous-carcinoma/cdc-20352957]
 subset: NCIthesaurus
 synonym: "malignant neoplasm of sebaceous gland" EXACT []
+synonym: "Malignant Sebaceous Neoplasm" EXACT []
 synonym: "malignant Sebaceous tumor" EXACT []
 xref: ICD10CM:C44
 xref: ICDO:8410/3
@@ -40248,6 +40278,7 @@ is_a: DOID:255 ! hemangioma
 id: DOID:4961
 name: bone marrow disease
 namespace: disease_ontology
+def: "A hematopoietic system disease that is located_in the bone marrow." [url:https\://medlineplus.gov/bonemarrowdiseases.html]
 subset: DO_RAD_slim
 subset: NCIthesaurus
 synonym: "bone marrow disorder" EXACT []
@@ -40759,9 +40790,11 @@ is_a: DOID:6175 ! mediastinal neurilemmoma
 
 [Term]
 id: DOID:5047
-name: neurohypophysis granular cell tumor
+name: granular cell tumor of the sellar region
 namespace: disease_ontology
+def: "A posterior pituitary gland neoplasm that arises from the neurohypophysis or infundibulum. It is composed of nests of large cells with granular, eosinophilic cytoplasm due to abundant intracytoplasmic lysosomes." [url:https\://pubmed.ncbi.nlm.nih.gov/32926559/]
 subset: NCIthesaurus
+synonym: "neurohypophysis granular cell tumor" EXACT []
 xref: NCI:C7017
 xref: SNOMEDCT_US_2022_03_01:699331002
 xref: UMLS_CUI:C1333873
@@ -40771,11 +40804,12 @@ is_a: DOID:5048 ! posterior pituitary gland neoplasm
 id: DOID:5048
 name: posterior pituitary gland neoplasm
 namespace: disease_ontology
+def: "A pituitary gland benign neoplasm that arises from the neurohypophysis." [url:https\://pubmed.ncbi.nlm.nih.gov/33709954/]
 subset: NCIthesaurus
 synonym: "Posterior Pituitary tumor" EXACT []
 xref: NCI:C7157
 xref: UMLS_CUI:C1334957
-is_a: DOID:1785 ! pituitary cancer
+is_a: DOID:28 ! endocrine system disease
 
 [Term]
 id: DOID:5052
@@ -44227,6 +44261,7 @@ name: mature teratoma
 namespace: disease_ontology
 def: "A teratoma that is composed exclusively of mature tissues derived from two or three germ layers." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/mature-teratoma]
 subset: NCIthesaurus
+xref: ICDO:9080/0
 xref: NCI:C9015
 xref: SNOMEDCT_US_2022_03_01:55818009
 xref: UMLS_CUI:C1368910
@@ -47855,6 +47890,7 @@ id: DOID:62
 name: aortic valve disease
 namespace: disease_ontology
 alt_id: DOID:56
+def: "A heart valve disease that is located_in the aortic valve." [url:https\://www.mayoclinic.org/diseases-conditions/aortic-valve-disease/symptoms-causes/syc-20355117]
 comment: Updating out dated UMLS CUI.
 subset: NCIthesaurus
 xref: ICD9CM:424.1
@@ -49606,23 +49642,27 @@ is_a: DOID:3458 ! breast adenocarcinoma
 
 [Term]
 id: DOID:6585
-name: oncocytic breast carcinoma
+name: breast oncocytic carcinoma
 namespace: disease_ontology
 def: "A breast adenocarcinoma that is characterized by abundant eosinophilic cytoplasm due to large numbers of mitochondria." [url:http\://surgpathcriteria.stanford.edu/breast/oncocyticcabr/printable.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/21111455]
 subset: NCIthesaurus
+synonym: "oncocytic breast carcinoma" EXACT []
+xref: ICDO:8290/3
 xref: NCI:C40366
 xref: UMLS_CUI:C1518574
 is_a: DOID:3458 ! breast adenocarcinoma
 
 [Term]
 id: DOID:6587
-name: invasive tubular breast carcinoma
+name: breast tubular carcinoma
 namespace: disease_ontology
 def: "A breast adenocarcinoma that is characterized as a well-differentiated invasive carcinoma with regular cells arranged in well-defined tubules (typically one layer thick) surrounded by an abundant fibrohyaline stroma." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893342/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "invasive tubular breast carcinoma" EXACT []
 synonym: "Invasive tubular carcinoma of breast" EXACT []
 synonym: "tubular carcinoma of breast" EXACT []
+xref: ICDO:8211/3
 xref: NCI:C9135
 xref: UMLS_CUI:C1328544
 is_a: DOID:3458 ! breast adenocarcinoma
@@ -51671,10 +51711,12 @@ is_a: DOID:2658 ! dermoid cyst
 
 [Term]
 id: DOID:7076
-name: lipid-rich breast carcinoma
+name: breast lipid-rich carcinoma
 namespace: disease_ontology
 def: "A lipid-rich carcinoma characterized by the presence of cytoplasmic neutral lipids in the vast majority of the malignant cells." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.12d&ns=NCI_Thesaurus&code=C40365]
 subset: NCIthesaurus
+synonym: "lipid-rich breast carcinoma" EXACT []
+xref: ICDO:8314/3
 xref: NCI:C40365
 xref: UMLS_CUI:C1517894
 is_a: DOID:5658 ! lipid-rich carcinoma
@@ -53590,7 +53632,7 @@ is_a: DOID:3004 ! breast myoepithelial neoplasm
 id: DOID:7522
 name: childhood infratentorial embryonal tumor with multilayered rosettes, C19MC-altered
 namespace: disease_ontology
-def: "An embryonal tumor with multilayered rosettes, C19MC-altered that arises from the infratentorial region and occurs in children." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6773]
+def: "A childhood embryonal tumor with multilayered rosettes, C19MC-altered that arises from the infratentorial region and occurs in children." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6773]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood infratentorial ependymoblastoma" EXACT []
@@ -54102,6 +54144,8 @@ is_a: DOID:162 ! cancer
 id: DOID:7631
 name: adult embryonal tumor with multilayered rosettes, C19MC-altered
 namespace: disease_ontology
+def: "An embryonal tumor with multilayered rosettes, C19MC-altered, occurring in adults." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5718304/]
+subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult ependymoblastoma" EXACT []
 xref: NCI:C8290

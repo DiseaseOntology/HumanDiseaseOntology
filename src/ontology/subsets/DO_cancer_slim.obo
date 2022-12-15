@@ -1,6 +1,7 @@
 format-version: 1.2
-data-version: doid/releases/2022-11-30/subsets/DO_cancer_slim.obo
+data-version: doid/releases/2022-12-15/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/DOID_0081281> \"DOID_0081281\")\n)
 
 [Term]
 id: DOID:0001816
@@ -375,6 +376,7 @@ synonym: "CNS PNET" EXACT []
 synonym: "CPNET" EXACT []
 synonym: "infratentorial primitive neuroectodermal tumor" EXACT []
 synonym: "localized primitive neuroectodermal tumor" EXACT []
+synonym: "Medulloblastoma, histologically defined" EXACT []
 xref: GARD:7005
 xref: ICDO:9470/3
 xref: MESH:D008527
@@ -383,6 +385,7 @@ xref: NCI:C27294
 xref: NCI:C3222
 xref: NCI:C3716
 xref: OMIM:155255
+xref: ORDO:616
 xref: SNOMEDCT_US_2022_03_01:189925001
 xref: SNOMEDCT_US_2022_03_01:443333004
 xref: UMLS_CUI:C0025149
@@ -703,6 +706,8 @@ name: breast lobular carcinoma
 namespace: disease_ontology
 def: "A breast carcinoma that derives_from breast lobules (milk glands)." [url:http\://cancergenome.nih.gov/cancersselected/breastlobular, url:http\://www.cancer.gov/dictionary?CdrID=426416]
 subset: DO_cancer_slim
+xref: ICDO:8520/3
+xref: NCI:C3771
 is_a: DOID:3459 ! breast carcinoma
 created_by: lschriml
 creation_date: 2014-10-22T13:05:34Z
@@ -823,11 +828,14 @@ creation_date: 2011-07-15T02:14:40Z
 
 [Term]
 id: DOID:0060103
-name: central nervous system primitive neuroectodermal neoplasm
+name: central nervous system embryonal tumor
 namespace: disease_ontology
 def: "A central nervous system cancer of children and young adults that develops from neural crest cells located_in cerebrum, has_material_basis_in abnormally proliferating cells derives_from neuroectoderm." [url:http\://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151465, url:https\://en.wikipedia.org/wiki/Primitive_neuroectodermal_tumor]
 subset: DO_cancer_slim
+synonym: "central nervous system primitive neuroectodermal neoplasm" EXACT []
+synonym: "CNS embryonal tumour, NEC/NOS" EXACT []
 xref: ICDO:9473/3
+xref: NCI:C5398
 is_a: DOID:162 ! cancer
 created_by: lschriml
 creation_date: 2011-07-21T02:24:10Z
@@ -1735,7 +1743,20 @@ name: diffuse glioma, H3 G34 mutant
 namespace: disease_ontology
 def: "A histone mutated tumor that has_material_basis_in mutations in codon 34 of the H3 histone family 3A protein." [url:https\://pubmed.ncbi.nlm.nih.gov/30358620/]
 subset: DO_cancer_slim
+xref: ICDO:9385/3
+xref: NCI:C185371
 is_a: DOID:0080879 ! histone mutated tumor
+
+[Term]
+id: DOID:0080882
+name: IDH-mutant and 1p/19q-codeleted oligodendroglioma
+namespace: disease_ontology
+def: "An anaplastic oligodendroglioma that has_material_basis_in IDH gene family mutation and combined whole-arm losses of 1p and 19q (1p/19q codeletion)." [url:https\://www.nature.com/articles/s41598-020-68733-5, url:https\://www.pathologyoutlines.com/topic/cnstumoroligodendrogliomaidhmutant.html]
+subset: DO_cancer_slim
+synonym: "anaplastic oligodendroglioma, IDH-mutant and 1p/19q-codeleted" EXACT []
+synonym: "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted" EXACT []
+xref: NCI:C129321
+is_a: DOID:7154 ! anaplastic oligodendroglioma
 
 [Term]
 id: DOID:0080888
@@ -1807,6 +1828,21 @@ xref: ORDO:2126
 is_a: DOID:162 ! cancer
 
 [Term]
+id: DOID:0080903
+name: embryonal tumor with multilayered rosettes, C19MC-altered
+namespace: disease_ontology
+alt_id: DOID:4794
+def: "An embryonal tumor with multilayered rosettes that is characterized by the presence of multilayered rosettes formation and the presence of amplification of the C19MC region on chromosome 19 (19q13.42)." [url:https\://radiopaedia.org/articles/embryonal-tumours-with-multilayered-rosettes-etmr?lang=us, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5718304/]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "ependymoblastoma" EXACT []
+xref: MESH:D018242
+xref: NCI:C4915
+xref: SNOMEDCT_US_2022_03_01:253070006
+xref: UMLS_CUI:C0700367
+is_a: DOID:0081286 ! embryonal tumor with multilayered rosettes
+
+[Term]
 id: DOID:0080904
 name: astroblastoma, MN1-altered
 namespace: disease_ontology
@@ -1839,6 +1875,15 @@ xref: MESH:D054747
 xref: NCI:C27349
 is_a: DOID:5621 ! histiocytic and dendritic cell cancer
 property_value: exactMatch MESH:D054747 xsd:string
+
+[Term]
+id: DOID:0080956
+name: childhood supratentorial embryonal tumor with multilayered rosettes, C19MC-altered
+namespace: disease_ontology
+def: "A childhood embryonal tumor with multilayered rosettes, C19MC-altered that arises from the supratentorial brain and occurs in children." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6772]
+subset: DO_cancer_slim
+xref: NCI:C6772
+is_a: DOID:7841 ! childhood embryonal tumor with multilayered rosettes, C19MC-altered
 
 [Term]
 id: DOID:0080996
@@ -2295,12 +2340,17 @@ is_a: DOID:0080875 ! IDH-mutant anaplastic astrocytoma
 
 [Term]
 id: DOID:0081259
-name: desmoplastic infantile ganglioglioma
+name: desmoplastic infantile ganglioglioma / desmoplastic infantile astrocytoma
 namespace: disease_ontology
-def: "A ganglioglioma with a prominent desmoplastic stroma having a neuroepithelial population of neoplastic astrocytes together with a variable neuronal component. It involves the superficial cerebral cortex and leptomeninges, and often attaches to the dura." [url:https\://pubmed.ncbi.nlm.nih.gov/31223403/]
+def: "A ganglioglioma occurring predominantly in the cerebral hemispheres of infants, that are driven by MAPK pathway activation and composed of a mixed astrocytic and neuronal component (DIG) or an astrocytic component only (DIA) embedded in an extensive desmoplastic stroma, often containing foci of undifferentiated embryonal-like tumour cells." [url:https\://pubmed.ncbi.nlm.nih.gov/31223403/, url:https\://pubmed.ncbi.nlm.nih.gov/35015431/]
+comment: WHO combines desmophlastic infantile ganglioglioma and desmoplastic infantile astrocytoma.
 subset: DO_cancer_slim
+synonym: "Desmoplastic Infantile Astrocytoma" EXACT []
+synonym: "desmoplastic infantile ganglioglioma" EXACT []
+synonym: "desmoplastic infantile ganglioglioma and desmoplastic infantile astrocytoma" EXACT []
 xref: ICDO:9412/1
 xref: NCI:C4738
+xref: NCI:C9476
 is_a: DOID:5078 ! ganglioglioma
 
 [Term]
@@ -2322,6 +2372,96 @@ subset: DO_cancer_slim
 xref: ICDO:9431/1
 xref: NCI:C92552
 is_a: DOID:0080829 ! low grade glioma
+
+[Term]
+id: DOID:0081277
+name: diffuse pediatric-type high-grade glioma, H3-wildtype and IDH-wildtype
+namespace: disease_ontology
+def: "A high grade glioma that is characterized by the absence of histone H3, IDH1, and IDH2 mutations." [url:https\://pubmed.ncbi.nlm.nih.gov/34858308/]
+subset: DO_cancer_slim
+synonym: "diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype" EXACT []
+xref: ICDO:9385/3
+xref: NCI:C185467
+is_a: DOID:3070 ! high grade glioma
+
+[Term]
+id: DOID:0081279
+name: diffuse astrocytoma, MYB- or MYBL1-altered
+namespace: disease_ontology
+def: "A diffuse astrocytoma that is a diffusely infiltrative astroglial neoplasm composed of monomorphic cells with genetic alterations in MYB or MYBL1." [url:https\://pubmed.ncbi.nlm.nih.gov/35015431/]
+subset: DO_cancer_slim
+xref: ICDO:9421/1
+xref: NCI:C185196
+is_a: DOID:4857 ! diffuse astrocytoma
+
+[Term]
+id: DOID:0081280
+name: pituicytoma
+namespace: disease_ontology
+def: "A posterior pituitary gland neoplasm that is characterized by the presence of elongated, spindle-shaped neoplastic glial cells that form storiform patterns or interlacing fascicular arrangements." [url:https\://en.wikipedia.org/wiki/Pituicytoma, url:https\://pubmed.ncbi.nlm.nih.gov/36057248/, url:https\://pubmed.ncbi.nlm.nih.gov/36180358/]
+subset: DO_cancer_slim
+xref: ICDO:9432/1
+xref: NCI:C94524
+
+[Term]
+id: DOID:0081281
+name: oligodendroglioma, IDH-mutant and 1p/19q-codeleted grade 2
+namespace: disease_ontology
+def: "An IDH-mutant, and 1p/19q-codeleted oligodendroglioma that is characterized as a well differentiated tumor lacking anaplastic features (brisk mitotic activity, microvascular proliferation, necrosis)." [url:https\://www.pathologyoutlines.com/topic/cnstumoroligodendrogliomaidhmutant.html]
+subset: DO_cancer_slim
+xref: ICDO:9450/3
+is_a: DOID:0080882 ! IDH-mutant and 1p/19q-codeleted oligodendroglioma
+
+[Term]
+id: DOID:0081282
+name: oligodendroglioma, IDH-mutant and 1p/19q-codeleted, grade 3
+namespace: disease_ontology
+def: "An IDH-mutant, and 1p/19q-codeleted oligodendroglioma that is characterized as grade 3 tumors associated with a more rapid growth. Grade 3 tumors appear to have abnormalities on chromosomes 9 or 10, along with unusual amounts of growth factors and proteins, which are thought to contribute to the more rapid growth of these gliomas." [url:https\://www.abta.org/tumor_types/oligodendroglioma/, url:https\://www.pathologyoutlines.com/topic/cnstumoroligodendrogliomaidhmutant.html]
+subset: DO_cancer_slim
+xref: ICDO:9451/3
+is_a: DOID:0080882 ! IDH-mutant and 1p/19q-codeleted oligodendroglioma
+
+[Term]
+id: DOID:0081283
+name: papillary glioneuronal tumor
+namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is characterized by the presence of astrocytes that line vascular and hyalinized pseudopapillae." [url:https\://pubmed.ncbi.nlm.nih.gov/35854961/]
+subset: DO_cancer_slim
+synonym: "Papillary glioneuronal tumour" EXACT []
+xref: ICDO:9509/1
+xref: NCI:C92554
+
+[Term]
+id: DOID:0081284
+name: rosette-forming glioneuronal tumor
+namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is characterized by the presence of neurocytes forming pseudorosettes and astrocytes which contain Rosenthal fibers." [url:https\://pubmed.ncbi.nlm.nih.gov/36230557/]
+subset: DO_cancer_slim
+synonym: "RGNT" EXACT []
+synonym: "Rosette-forming glioneuronal tumour" EXACT []
+xref: ICDO:9509/1
+xref: NCI:C129431
+
+[Term]
+id: DOID:0081285
+name: myxoid glioneuronal tumor
+namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is characterized by a dinucleotide mutation at codon 385 of the PDGFR gene. It usually occurs in the septum pellucidum but has also been described in the corpus callosum and periventricular white matter of the lateral ventricle. It is composed of oligodendrocyte-like cells in a prominent myxoid stroma." [url:https\://pubmed.ncbi.nlm.nih.gov/34297434/]
+subset: DO_cancer_slim
+synonym: "Myxoid glioneuronal tumour" EXACT []
+xref: ICDO:9509/1
+xref: NCI:C179229
+
+[Term]
+id: DOID:0081286
+name: embryonal tumor with multilayered rosettes
+namespace: disease_ontology
+def: "A central nervous system embryonal tumor that is characterized by the presence of multilayered rosette formation and typically the presence of amplification of the C19MC region on chromosome 19 (19q13.42) or rarely a DICER1 mutation." [url:https\://pubmed.ncbi.nlm.nih.gov/36451902/]
+subset: DO_cancer_slim
+synonym: "Embryonal tumour with multilayered rosettes" EXACT []
+xref: ICDO:9478/3
+xref: NCI:C186534
+is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
 id: DOID:0111147
@@ -3913,6 +4053,7 @@ synonym: "Letterer-Siwe disease of spleen" EXACT []
 xref: ICD10CM:C96.0
 xref: ICD10CM:C96.6
 xref: ICD9CM:202.5
+xref: ICDO:9751/1
 xref: MESH:C538636
 xref: MESH:D006646
 xref: NCI:C3107
@@ -5893,8 +6034,10 @@ namespace: disease_ontology
 def: "A medulloblastoma that is characterized by cells that are larger than would be normally expected." [url:http\://en.wikipedia.org/wiki/Large_cell]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Anaplastic medulloblastoma" EXACT []
 xref: ICDO:9474/3
 xref: NCI:C6904
+xref: ORDO:251855
 xref: SNOMEDCT_US_2022_03_01:128790006
 xref: UMLS_CUI:C1266180
 is_a: DOID:0050902 ! medulloblastoma
@@ -5926,23 +6069,26 @@ is_a: DOID:0050902 ! medulloblastoma
 
 [Term]
 id: DOID:3870
-name: childhood central nervous system primitive neuroectodermal neoplasm
+name: childhood central nervous system embryonal tumor
 namespace: disease_ontology
+def: "A central nervous system embryonal tumor that occurs in childhood." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315657/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "childhood central nervous system primitive neuroectodermal neoplasm" EXACT []
 synonym: "pediatric CNS PNET" EXACT []
 xref: NCI:C5961
 xref: UMLS_CUI:C1332957
-is_a: DOID:0060103 ! central nervous system primitive neuroectodermal neoplasm
+is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
 id: DOID:3873
-name: desmoplastic nodular medulloblastoma
+name: desmoplastic/nodular medulloblastoma
 namespace: disease_ontology
 def: "A medulloblastoma that is characterized by the presence of nodular, collagenous areas which do not contain reticulin, surrounded by hypercellular areas which contain an intercellular reticulin fiber network." [url:https\://pubmed.ncbi.nlm.nih.gov/32304218/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4910646/]
 comment: According to WHO ICDO Medulloblastoma with extensive nodularity is the same as desmoplastic nodular medulloblastoma.
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "desmoplastic nodular medulloblastoma" EXACT []
 synonym: "Medulloblastoma with extensive nodularity" EXACT []
 synonym: "nodular medulloblastoma" EXACT []
 xref: ICDO:9471/3
@@ -6492,6 +6638,7 @@ xref: UMLS_CUI:C0206638
 id: DOID:4329
 name: Erdheim-Chester disease
 namespace: disease_ontology
+def: "A non-Langerhans-cell histiocytosis that is characterized by the proliferation in the tissues of lipid-laden macrophages and the presence of multinucleated giant cells. It results in sclerosis of the long bones and failure of the affected organs." [url:https\://medlineplus.gov/genetics/condition/erdheim-chester-disease/, url:https\://rarediseases.org/rare-diseases/erdheim-chester-disease/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: GARD:6369
@@ -6565,6 +6712,22 @@ xref: ICDO:8824/0
 xref: MESH:D047708
 xref: SNOMEDCT_US_2022_03_01:128917003
 xref: UMLS_CUI:C1266121
+
+[Term]
+id: DOID:4424
+name: juvenile xanthogranuloma
+namespace: disease_ontology
+def: "A non-Langerhans-cell histiocytosis is characterized as a benign skin lump or bump caused by a collection of cells called histiocytes. These may be red, orange or tan at first, but over time may become more yellow in color. These bumps usually appear on the head, neck and trunk." [url:https\://www.nationwidechildrens.org/conditions/juvenile-xanthogranuloma, url:https\://www.ncbi.nlm.nih.gov/books/NBK526103/]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "Multiple eruptive juvenile xanthogranuloma" EXACT []
+synonym: "Naevoxanthoendothelioma" EXACT []
+synonym: "Xanthoma neviforme" EXACT []
+xref: ICDO:9749/1
+xref: MESH:D014972
+xref: NCI:C3451
+xref: SNOMEDCT_US_2022_03_01:71709009
+xref: UMLS_CUI:C0043324
 
 [Term]
 id: DOID:4440
@@ -6994,7 +7157,7 @@ xref: MESH:D018242
 xref: NCI:C4327
 xref: SNOMEDCT_US_2022_03_01:715903004
 xref: UMLS_CUI:C0334596
-is_a: DOID:0060103 ! central nervous system primitive neuroectodermal neoplasm
+is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
 id: DOID:4817
@@ -8744,13 +8907,15 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:6587
-name: invasive tubular breast carcinoma
+name: breast tubular carcinoma
 namespace: disease_ontology
 def: "A breast adenocarcinoma that is characterized as a well-differentiated invasive carcinoma with regular cells arranged in well-defined tubules (typically one layer thick) surrounded by an abundant fibrohyaline stroma." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893342/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "invasive tubular breast carcinoma" EXACT []
 synonym: "Invasive tubular carcinoma of breast" EXACT []
 synonym: "tubular carcinoma of breast" EXACT []
+xref: ICDO:8211/3
 xref: NCI:C9135
 xref: UMLS_CUI:C1328544
 is_a: DOID:3458 ! breast adenocarcinoma
@@ -9328,7 +9493,7 @@ is_a: DOID:6052 ! central nervous system childhood germ cell tumor
 id: DOID:7522
 name: childhood infratentorial embryonal tumor with multilayered rosettes, C19MC-altered
 namespace: disease_ontology
-def: "An embryonal tumor with multilayered rosettes, C19MC-altered that arises from the infratentorial region and occurs in children." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6773]
+def: "A childhood embryonal tumor with multilayered rosettes, C19MC-altered that arises from the infratentorial region and occurs in children." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6773]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "childhood infratentorial ependymoblastoma" EXACT []
@@ -9387,6 +9552,18 @@ xref: NCI:C4243
 xref: SNOMEDCT_US_2022_03_01:9395006
 xref: UMLS_CUI:C0334451
 is_a: DOID:1115 ! sarcoma
+
+[Term]
+id: DOID:7631
+name: adult embryonal tumor with multilayered rosettes, C19MC-altered
+namespace: disease_ontology
+def: "An embryonal tumor with multilayered rosettes, C19MC-altered, occurring in adults." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5718304/]
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "adult ependymoblastoma" EXACT []
+xref: NCI:C8290
+xref: UMLS_CUI:C0281330
+is_a: DOID:0080903 ! embryonal tumor with multilayered rosettes, C19MC-altered
 
 [Term]
 id: DOID:7642
@@ -9539,7 +9716,7 @@ subset: NCIthesaurus
 synonym: "childhood cerebral ependymoblastoma" EXACT []
 synonym: "pediatric cerebral ependymoblastoma" EXACT []
 xref: NCI:C115203
-is_a: DOID:0060103 ! central nervous system primitive neuroectodermal neoplasm
+is_a: DOID:0080903 ! embryonal tumor with multilayered rosettes, C19MC-altered
 
 [Term]
 id: DOID:7848

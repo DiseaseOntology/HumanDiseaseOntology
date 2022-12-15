@@ -11,6 +11,17 @@
 
 ## 2022 Releases
 
+### [v2022-12-15](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-12-15)
+
+This release includes 11,181 disease terms and the addition of ICDO codes for CNS cancers and breast cancers, 36 additional textual definitions and an updated disease name for monkeypox, now mpox.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2022-12-15/src/ontology/doid-merged.obo) | |
+
 ### [v2022-11-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2022-11-30)
 
 This release includes 11,171 DO disease terms, with 8,746 terms with textual definitions (78.29%). This build includes 12 new diseases including: pulmonary veno-occlusive disease subtypes, Smith-McCort dysplasia subtypes, Sandestig-Stefanova syndrome, overactive bladder syndrome, graft verus host disease, and several neurodevelopmental disorders. New symptom and phenotype axioms have been added and we have standardized 'has_material_basis_in' in textual definitions.

@@ -165,6 +165,28 @@ add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 	&& mv doid-edit.ofn $(EDIT)
 	@echo "British synonyms added to $(EDIT)!"
 
+
+# ----------------------------------------
+# AUTO-ADD TO INFECTIOUS DISEASE SUBSET
+# ----------------------------------------
+
+infectious_disease_slim: $(EDIT) src/sparql/build/infectious_disease_not_slim.rq | build/robot.jar
+	@$(ROBOT) reason \
+	 --input $< \
+	query \
+	 --query $(word 2,$^) build/infectious_disease_not_slim.tsv
+	@sed '1s/.*/ID\tsubset\nID\tAI oboInOwl:inSubset/' build/infectious_disease_not_slim.tsv | \
+	 sed 's/<//' | \
+	 sed 's|>|\thttp://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim|' > build/infectious_disease_template.tsv
+	@$(ROBOT) template \
+	 --merge-before \
+	 --input $< \
+	 --template build/infectious_disease_template.tsv \
+	convert \
+	 --format ofn \
+	 --output $<
+
+
 # ----------------------------------------
 # RELEASE
 # ----------------------------------------

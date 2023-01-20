@@ -470,9 +470,11 @@ build/reports/report-diff.txt: last-reports new-reports
 	@echo "Diff report between current release and last release available at $@"
 
 # create a count of the various disease branches
-build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
+build/reports/branch-count.tsv: $(DNC).owl src/sparql/build/branch-count.rq | build/robot.jar build/reports
 	@echo "Counting all branches..."
-	@python3 src/util/branch_count/branch_count.py $< $@
+	@$(ROBOT) query \
+	 --input $< \
+	 --query $(word 2,$^) $@
 	@echo "Branch count available at $@"
 
 # the following targets are used to build a smaller diff with only removed axioms to review

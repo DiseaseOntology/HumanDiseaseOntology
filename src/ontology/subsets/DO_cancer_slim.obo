@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2022-12-15/subsets/DO_cancer_slim.obo
+data-version: doid/releases/2023-01-30/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/DOID_0081281> \"DOID_0081281\")\n)
 
@@ -17,7 +17,7 @@ xref: ICDO:9120/3
 xref: MESH:D006394
 xref: NCI:C3088
 xref: NCI:C9275
-xref: SNOMEDCT_US_2022_03_01:39000009
+xref: SNOMEDCT_US_2022_09_01:39000009
 xref: UMLS_CUI:C0018923
 xref: UMLS_CUI:C0854893
 is_a: DOID:162 ! cancer
@@ -36,7 +36,7 @@ xref: ICDO:9946/3
 xref: MESH:D054429
 xref: NCI:C9233
 xref: OMIM:607785
-xref: SNOMEDCT_US_2022_03_01:445227008
+xref: SNOMEDCT_US_2022_09_01:445227008
 xref: UMLS_CUI:C0349639
 is_a: DOID:0070004 ! myeloid neoplasm
 
@@ -46,6 +46,7 @@ name: adult T-cell leukemia/lymphoma
 namespace: disease_ontology
 def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
 subset: DO_cancer_slim
+subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "adult T-cell leukemia" EXACT []
 synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
@@ -54,7 +55,7 @@ xref: ICD10CM:C91.5
 xref: ICDO:9827/3
 xref: MESH:D015459
 xref: NCI:C3184
-xref: SNOMEDCT_US_2022_03_01:77430005
+xref: SNOMEDCT_US_2022_09_01:77430005
 xref: UMLS_CUI:C0023493
 is_a: DOID:5603 ! T-cell acute lymphoblastic leukemia
 
@@ -73,11 +74,11 @@ is_a: DOID:3119 ! gastrointestinal system cancer
 id: DOID:0050743
 name: mature T-cell and NK-cell lymphoma
 namespace: disease_ontology
-def: "A non-Hodgkin lymphoma that has_material_basis_in mature T lymphocytes and natural killer cells." [url:http\://www.cancer.gov/dictionary?CdrID=393800, url:http\://www.cancer.gov/dictionary?CdrID=44062, url:https\://www.ncbi.nlm.nih.gov/pubmed/21919697]
+def: "A T-cell non-Hodgkin lymphoma that has_material_basis_in mature T lymphocytes and natural killer cells." [url:http\://www.cancer.gov/dictionary?CdrID=393800, url:http\://www.cancer.gov/dictionary?CdrID=44062, url:https\://www.ncbi.nlm.nih.gov/pubmed/21919697]
 subset: DO_cancer_slim
 synonym: "mature T-cell and natural killer cell lymphoma" EXACT []
 synonym: "NK-T cell lymphoma" EXACT []
-is_a: DOID:0060058 ! lymphoma
+is_a: DOID:0081312 ! T-cell non-Hodgkin lymphoma
 created_by: lschriml
 creation_date: 2012-09-18T01:56:52Z
 
@@ -87,7 +88,9 @@ name: anaplastic large cell lymphoma
 namespace: disease_ontology
 def: "A non-Hodgkin lymphoma involving aberrant T-cells." [url:http\://en.wikipedia.org/wiki/Anaplastic_large-cell_lymphoma#Epidemiology]
 subset: DO_cancer_slim
-is_a: DOID:0060058 ! lymphoma
+xref: ICDO:9714/3
+xref: NCI:C3720
+is_a: DOID:0060060 ! non-Hodgkin lymphoma
 created_by: lschriml
 creation_date: 2012-09-18T01:57:40Z
 
@@ -205,7 +208,7 @@ xref: OMIM:601650
 xref: OMIM:605373
 xref: OMIM:614165
 xref: OMIM:PS168000
-xref: SNOMEDCT_US_2022_03_01:302833002
+xref: SNOMEDCT_US_2022_09_01:302833002
 xref: UMLS_CUI:C0030421
 is_a: DOID:0050771 ! pheochromocytoma
 created_by: lschriml
@@ -241,7 +244,7 @@ namespace: disease_ontology
 def: "A colorectal carcinoma that derives_from epithelial cells of glandular origin." [url:http\://cancergenome.nih.gov/cancersselected/colorectaladenocarcinoma, url:http\://en.wikipedia.org/wiki/Adenocarcinoma]
 subset: DO_cancer_slim
 xref: NCI:C5105
-xref: SNOMEDCT_US_2022_03_01:408645001
+xref: SNOMEDCT_US_2022_09_01:408645001
 xref: UMLS_CUI:C1319315
 is_a: DOID:9256 ! colorectal cancer
 created_by: lschriml
@@ -386,8 +389,8 @@ xref: NCI:C3222
 xref: NCI:C3716
 xref: OMIM:155255
 xref: ORDO:616
-xref: SNOMEDCT_US_2022_03_01:189925001
-xref: SNOMEDCT_US_2022_03_01:443333004
+xref: SNOMEDCT_US_2022_09_01:189925001
+xref: SNOMEDCT_US_2022_09_01:443333004
 xref: UMLS_CUI:C0025149
 xref: UMLS_CUI:C0206663
 xref: UMLS_CUI:C1334410
@@ -453,11 +456,15 @@ creation_date: 2014-10-13T12:51:33Z
 
 [Term]
 id: DOID:0050909
-name: MALT lymphoma
+name: extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
 namespace: disease_ontology
 def: "A marginal zone B-cell lymphoma that has_material_basis_in mucosal tissue involved in antibody production." [url:http\://www.cancer.gov/dictionary?CdrID=45774, url:http\://www.cancerresearchuk.org/about-cancer/non-hodgkin-lymphoma/types/malt]
 subset: DO_cancer_slim
+synonym: "MALT lymphoma" EXACT []
+synonym: "MALT lymphoma of the dura" EXACT []
 synonym: "mucosa-associated lymphoid tissue lymphoma" EXACT []
+xref: ICDO:9699/3
+xref: NCI:C3898
 xref: OMIM:137245
 is_a: DOID:0050748 ! marginal zone B-cell lymphoma
 created_by: lschriml
@@ -488,9 +495,9 @@ creation_date: 2014-10-13T15:00:10Z
 id: DOID:0050916
 name: bronchus mucoepidermoid carcinoma
 namespace: disease_ontology
-def: "A bronchus cancer that has_material_basis_in squamous cells, mucus-secreting cells, and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
+def: "A mucoepidermoid carcinoma located_in the bronchus." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
+is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-13T15:13:54Z
 
@@ -518,9 +525,9 @@ creation_date: 2014-10-21T11:37:19Z
 id: DOID:0050919
 name: trachea mucoepidermoid carcinoma
 namespace: disease_ontology
-def: "A trachea carcinoma that is characterized by the presence of squamous cells, mucus-secreting cells, and intermediate cells." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
+def: "A mucoepidermoid carcinoma located_in the trachea." [url:http\://en.wikipedia.org/wiki/Mucoepidermoid_carcinoma]
 subset: DO_cancer_slim
-is_a: DOID:0050904 ! salivary gland carcinoma
+is_a: DOID:305 ! carcinoma
 created_by: lschriml
 creation_date: 2014-10-21T11:42:42Z
 
@@ -748,11 +755,26 @@ xref: ICDO:9590/3
 xref: MESH:D008223
 xref: NCI:C3208
 xref: NCI:C7065
-xref: SNOMEDCT_US_2022_03_01:118600007
-xref: SNOMEDCT_US_2022_03_01:414628006
+xref: SNOMEDCT_US_2022_09_01:118600007
+xref: SNOMEDCT_US_2022_09_01:414628006
 xref: UMLS_CUI:C0024299
 xref: UMLS_CUI:C0598798
 is_a: DOID:2531 ! hematologic cancer
+
+[Term]
+id: DOID:0060060
+name: non-Hodgkin lymphoma
+namespace: disease_ontology
+def: "A lymphoma that is characterized as any kind of lymphoma except Hodgkin's lymphoma." [url:http\://en.wikipedia.org/wiki/Non-Hodgkin_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=45148]
+comment: OMIM mapping confirmed by DO. [LS].
+subset: DO_cancer_slim
+xref: ICDO:9591/3
+xref: MESH:D008228
+xref: NCI:C3211
+xref: OMIM:605027
+xref: ORDO:547
+xref: UMLS_CUI:C0024305
+is_a: DOID:0060058 ! lymphoma
 
 [Term]
 id: DOID:0060075
@@ -892,7 +914,7 @@ xref: MESH:D015473
 xref: NCI:C3182
 xref: OMIM:612376
 xref: ORDO:520
-xref: SNOMEDCT_US_2022_03_01:28950004
+xref: SNOMEDCT_US_2022_09_01:28950004
 xref: UMLS_CUI:C0023487
 is_a: DOID:9119 ! acute myeloid leukemia
 created_by: emitraka
@@ -907,7 +929,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "nuclear protein in testis midline carcinoma" EXACT []
 xref: NCI:C45716
-xref: SNOMEDCT_US_2022_03_01:733922002
+xref: SNOMEDCT_US_2022_09_01:733922002
 xref: UMLS_CUI:C1707291
 is_a: DOID:305 ! carcinoma
 created_by: elvira
@@ -930,7 +952,7 @@ xref: NCI:C124837
 xref: OMIM:147920
 xref: OMIM:300867
 xref: ORDO:2322
-xref: SNOMEDCT_US_2022_03_01:205805008
+xref: SNOMEDCT_US_2022_09_01:205805008
 xref: UMLS_CUI:C0796004
 created_by: elvira
 creation_date: 2015-11-18T16:21:35Z
@@ -958,6 +980,7 @@ is_a: DOID:5604 ! adult acute lymphocytic leukemia
 id: DOID:0060597
 name: atypical chronic myeloid leukemia, BCR-ABL1 negative
 namespace: disease_ontology
+alt_id: DOID:8747
 def: "A myelodysplastic myeloproliferative neoplasm characterized by the principal involvement of the neutrophil series with leukocytosis and multilineage dysplasia. The neoplastic cells do not have a Philadelphia chromosome or the BCR/ABL fusion gene." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.08e&ns=NCI_Thesaurus&code=C3519, url:https\://www.ncbi.nlm.nih.gov/pubmed/29226717]
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -966,13 +989,15 @@ synonym: "atypical chronic myeloid leukaemia" EXACT []
 synonym: "atypical chronic myeloid leukaemia BCR-ABL1 negative" EXACT []
 synonym: "atypical chronic myeloid leukemia BCR-ABL1 negative" EXACT []
 synonym: "atypical CML" EXACT []
+synonym: "subacute myeloid leukemia" EXACT []
 xref: ICD10CM:C92.2
 xref: ICD9CM:205.2
 xref: ICDO:9876/3
 xref: MESH:D054438
 xref: NCI:C3519
 xref: ORDO:98824
-xref: SNOMEDCT_US_2022_03_01:128826001
+xref: SNOMEDCT_US_2022_09_01:128826001
+xref: SNOMEDCT_US_2022_12_31:74326002
 xref: UMLS_CUI:C1292772
 is_a: DOID:0070004 ! myeloid neoplasm
 
@@ -1012,7 +1037,7 @@ xref: NCI:C80307
 xref: OMIM:153600
 xref: OMIM:610430
 xref: ORDO:33226
-xref: SNOMEDCT_US_2022_03_01:35562000
+xref: SNOMEDCT_US_2022_09_01:35562000
 xref: UMLS_CUI:C0024419
 xref: UMLS_CUI:C2936755
 is_a: DOID:0050747 ! lymphoplasmacytic lymphoma
@@ -1064,7 +1089,7 @@ synonym: "EBV-positive T-cell lymphoproliferative disorder of childhood" EXACT [
 synonym: "systemic EBV-positive T-cell lymphoma of childhood" EXACT []
 xref: ICDO:9724/3
 xref: ORDO:364033
-xref: SNOMEDCT_US_2022_03_01:721311006
+xref: SNOMEDCT_US_2022_09_01:721311006
 xref: UMLS_CUI:C4303422
 is_a: DOID:5823 ! childhood lymphoma
 
@@ -1372,7 +1397,7 @@ synonym: "B-ALL" EXACT []
 synonym: "precursor B lymphoblastic lymphoma/leukemia" EXACT []
 xref: ICDO:9836/3
 xref: NCI:C8936
-xref: SNOMEDCT_US_2022_03_01:1162660006
+xref: SNOMEDCT_US_2022_09_01:1162660006
 xref: UMLS_CUI:C0862030
 is_a: DOID:0080638 ! B-cell acute lymphoblastic leukemia
 
@@ -1619,6 +1644,7 @@ name: nasal type extranodal NK/T-cell lymphoma
 namespace: disease_ontology
 def: "A mature T-cell and NK-cell lymphoma that is characterized by an often angiocentric and angiodestructive cellular infiltrate composed of EBV positive NK/T cells." [url:https\://pubmed.ncbi.nlm.nih.gov/29602763/]
 subset: DO_cancer_slim
+xref: ICDO:9719/3
 xref: NCI:C4684
 is_a: DOID:0050743 ! mature T-cell and NK-cell lymphoma
 
@@ -1838,7 +1864,7 @@ subset: NCIthesaurus
 synonym: "ependymoblastoma" EXACT []
 xref: MESH:D018242
 xref: NCI:C4915
-xref: SNOMEDCT_US_2022_03_01:253070006
+xref: SNOMEDCT_US_2022_09_01:253070006
 xref: UMLS_CUI:C0700367
 is_a: DOID:0081286 ! embryonal tumor with multilayered rosettes
 
@@ -2005,7 +2031,7 @@ synonym: "acute myeloid leukemia with t(6;9)(p23;q34)" EXACT []
 synonym: "DEK-NUP214" EXACT []
 xref: ICDO:9865/3
 xref: NCI:C82423
-xref: SNOMEDCT_US_2022_03_01:450928003
+xref: SNOMEDCT_US_2022_09_01:450928003
 xref: UMLS_CUI:C2826169
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2030,7 +2056,7 @@ xref: ICD10CM:C92.5
 xref: ICDO:9867/3
 xref: MESH:D015479
 xref: NCI:C7463
-xref: SNOMEDCT_US_2022_03_01:30962008
+xref: SNOMEDCT_US_2022_09_01:30962008
 xref: UMLS_CUI:C0023479
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2044,7 +2070,7 @@ synonym: "Acute Myeloid Leukemia with inv(3) (q21.3;q26.2) or t(3;3) (q21.3;q26.
 synonym: "Acute myeloid leukemia with inv(3)(q21;q26.2) or t(3;3)(q21;q26.2); RPN1-EVI1" EXACT []
 xref: ICDO:9869/3
 xref: NCI:C82426
-xref: SNOMEDCT_US_2022_03_01:780844005
+xref: SNOMEDCT_US_2022_09_01:780844005
 xref: UMLS_CUI:C2826172
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2057,7 +2083,7 @@ subset: DO_cancer_slim
 synonym: "acute myeloid leukemia with abnormal marrow eosinophils" EXACT []
 synonym: "Acute Myeloid Leukemia with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11" EXACT []
 xref: ICDO:9871/3
-xref: SNOMEDCT_US_2022_03_01:103688009
+xref: SNOMEDCT_US_2022_09_01:103688009
 xref: UMLS_CUI:C0522630
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2072,7 +2098,7 @@ synonym: "AML-M0" EXACT []
 xref: ICD10CM:C92.0
 xref: ICDO:9872/3
 xref: NCI:C8460
-xref: SNOMEDCT_US_2022_03_01:103689001
+xref: SNOMEDCT_US_2022_09_01:103689001
 xref: UMLS_CUI:C0522631
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2088,7 +2114,7 @@ xref: ICDO:9873/3
 xref: MESH:D015470
 xref: NCI:C3249
 xref: ORDO:98833
-xref: SNOMEDCT_US_2022_03_01:103690005
+xref: SNOMEDCT_US_2022_09_01:103690005
 xref: UMLS_CUI:C0026998
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2102,7 +2128,7 @@ xref: ICD10CM:C92.0
 xref: ICDO:9874/3
 xref: MESH:D015470
 xref: NCI:C3250
-xref: SNOMEDCT_US_2022_03_01:103691009
+xref: SNOMEDCT_US_2022_09_01:103691009
 xref: UMLS_CUI:C1879321
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2115,7 +2141,7 @@ subset: DO_cancer_slim
 synonym: "Chronic myelogenous leukemia, BCR/ABL positive" EXACT []
 xref: ICD9CM:205.1
 xref: ICDO:9875/3
-xref: SNOMEDCT_US_2022_03_01:154592009
+xref: SNOMEDCT_US_2022_09_01:154592009
 xref: UMLS_CUI:C0023473
 is_a: DOID:8552 ! chronic myeloid leukemia
 
@@ -2127,7 +2153,7 @@ def: "An acute myeloid leukemia with mutation of the nucleophosmin gene. It is u
 subset: DO_cancer_slim
 xref: ICDO:9877/3
 xref: NCI:C82431
-xref: SNOMEDCT_US_2022_03_01:703820005
+xref: SNOMEDCT_US_2022_09_01:703820005
 xref: UMLS_CUI:C2826177
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2159,7 +2185,7 @@ def: "An acute myeloid leukemia with at least 20% blasts in the bone marrow or b
 subset: DO_cancer_slim
 xref: ICDO:9895/3
 xref: NCI:C7600
-xref: SNOMEDCT_US_2022_03_01:128827005
+xref: SNOMEDCT_US_2022_09_01:128827005
 xref: UMLS_CUI:C2825139
 is_a: DOID:9119 ! acute myeloid leukemia
 
@@ -2464,6 +2490,96 @@ xref: NCI:C186534
 is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
+id: DOID:0081302
+name: diffuse leptomeningeal glioneuronal tumor
+namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is characterized by the presence of clear glial neoplastic cells reminiscent of oligodendroglioma." [url:https\://radiopaedia.org/articles/diffuse-leptomeningeal-glioneuronal-tumour?lang=us]
+subset: DO_cancer_slim
+synonym: "Diffuse leptomeningeal glioneuronal tumour" EXACT []
+xref: ICDO:9509/3
+xref: NCI:C129424
+
+[Term]
+id: DOID:0081303
+name: multinodular and vacuolating neuronal tumor
+namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is composed of cells with glial and/or neuronal differentiation forming multiple nodules with prominent vacuolation and that affecting the cerebral hemispheres." [url:https\://radiopaedia.org/articles/multinodular-and-vacuolating-neuronal-tumour-1?lang=us]
+subset: DO_cancer_slim
+xref: ICDO:9509/0
+xref: NCI:C129427
+
+[Term]
+id: DOID:0081304
+name: high-grade astrocytoma with piloid features
+namespace: disease_ontology
+def: "An anaplastic astrocytoma that is characterized by high-grade piloid and/or glioblastoma-like histological features. It may occur anywhere in the central nervous system but most often arises in the posterior fossa." [url:https\://radiopaedia.org/articles/high-grade-astrocytoma-with-piloid-features-1?lang=us, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC8131327/]
+subset: DO_cancer_slim
+xref: ICDO:9421/3
+xref: NCI:C185879
+is_a: DOID:3078 ! anaplastic astrocytoma
+
+[Term]
+id: DOID:0081306
+name: spindle cell oncocytoma
+namespace: disease_ontology
+def: "A posterior pituitary benign neoplasm that is characterized by the presence of spindle cells with eosinophilic, granular cytoplasm forming fascicles." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6486883/]
+subset: DO_cancer_slim
+xref: ICDO:8290/0
+xref: NCI:C94537
+
+[Term]
+id: DOID:0081307
+name: lymphomatoid granulomatosis
+namespace: disease_ontology
+def: "A lymphoproliferative syndrome that is characterized by overproduction (proliferation) of white blood cells called lymphocytes. The abnormal cells infiltrate and accumulate (form lesions or nodules) within tissues. The lesions or nodules damage or destroy the blood vessels within these tissues." [url:https\://rarediseases.org/rare-diseases/lymphomatoid-granulomatosis/]
+subset: DO_cancer_slim
+xref: ICDO:9766/1
+xref: NCI:C7930
+xref: UMLS_CUI:C0024307
+
+[Term]
+id: DOID:0081312
+name: T-cell non-Hodgkin lymphoma
+namespace: disease_ontology
+def: "A non-Hodgkin lymphoma of T-cell lineage." [url:https\://www.cancer.org/cancer/non-hodgkin-lymphoma/treating/t-cell-lymphoma.html]
+subset: DO_cancer_slim
+xref: ICDO:9702/3
+xref: NCI:C3466
+xref: UMLS_CUI:C0079772
+is_a: DOID:0060060 ! non-Hodgkin lymphoma
+
+[Term]
+id: DOID:0081314
+name: extraventricular neurocytoma
+namespace: disease_ontology
+def: "A cerebral ventricle cancer that is characterized by the presence of neoplastic uniform, round cells with neuronal differentiation, that arises from the brain parenchyma. Unlike central neurocytoma, it does not involve the lateral ventricles." [url:https\://pubmed.ncbi.nlm.nih.gov/24357019/]
+subset: DO_cancer_slim
+xref: ICDO:9506/1
+xref: NCI:C92555
+is_a: DOID:1319 ! brain cancer
+
+[Term]
+id: DOID:0081315
+name: central nervous system tumor with BCOR internal tandem duplication
+namespace: disease_ontology
+def: "A central nervous system embryonal tumor that is characterized by the presence of uniform oval or spindle-shaped cells with round or oval nuclei, pseudorosette formation, and heterozygous internal tandem duplication in exon 15 of the BCOR gene." [url:https\://pubmed.ncbi.nlm.nih.gov/35809497/]
+subset: DO_cancer_slim
+synonym: "CNS tumour with BCOR internal tandem duplication" EXACT []
+xref: ICDO:9500/3
+xref: NCI:C186556
+is_a: DOID:0060103 ! central nervous system embryonal tumor
+
+[Term]
+id: DOID:0081316
+name: primary intracranial sarcoma, DICER1-mutant
+namespace: disease_ontology
+def: "A brain sarcoma that is composed of malignant pleomorphic or spindle neoplastic cells typically demonstrating myogenic and/or chondroid differentiation. Cytoplasmic eosinophilic globules and myxoid stroma formation are usually present. It is associated with mutations in the DICER1 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/35789272/]
+subset: DO_cancer_slim
+xref: ICDO:9480/3
+xref: NCI:C186610
+is_a: DOID:1319 ! brain cancer
+
+[Term]
 id: DOID:0111147
 name: angioimmunoblastic T-cell lymphoma
 namespace: disease_ontology
@@ -2477,7 +2593,7 @@ xref: MEDDRA:10002449
 xref: MESH:D007119
 xref: NCI:C7528
 xref: ORDO:86886
-xref: SNOMEDCT_US_2022_03_01:52097008
+xref: SNOMEDCT_US_2022_09_01:52097008
 xref: UMLS_CUI:C0020981
 is_a: DOID:0050749 ! peripheral T-cell lymphoma
 
@@ -2491,7 +2607,7 @@ subset: NCIthesaurus
 synonym: "nodular melanoma" EXACT []
 xref: GARD:9961
 xref: NCI:C4225
-xref: SNOMEDCT_US_2022_03_01:2142002
+xref: SNOMEDCT_US_2022_09_01:2142002
 xref: UMLS_CUI:C0334424
 is_a: DOID:8923 ! skin melanoma
 
@@ -2504,7 +2620,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8857/0
 xref: NCI:C4254
-xref: SNOMEDCT_US_2022_03_01:27313007
+xref: SNOMEDCT_US_2022_09_01:27313007
 xref: UMLS_CUI:C0334474
 is_a: DOID:3315 ! lipoma
 
@@ -2518,7 +2634,7 @@ subset: NCIthesaurus
 xref: ICDO:8854/0
 xref: MESH:D008067
 xref: NCI:C3703
-xref: SNOMEDCT_US_2022_03_01:189783001
+xref: SNOMEDCT_US_2022_09_01:189783001
 xref: UMLS_CUI:C0205823
 is_a: DOID:3315 ! lipoma
 
@@ -2531,7 +2647,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8862/0
 xref: NCI:C6503
-xref: SNOMEDCT_US_2022_03_01:404065000
+xref: SNOMEDCT_US_2022_09_01:404065000
 xref: UMLS_CUI:C1266131
 is_a: DOID:3315 ! lipoma
 
@@ -2579,8 +2695,8 @@ xref: OMIM:611955
 xref: OMIM:611958
 xref: OMIM:611959
 xref: ORDO:1331
-xref: SNOMEDCT_US_2022_03_01:126906006
-xref: SNOMEDCT_US_2022_03_01:93974005
+xref: SNOMEDCT_US_2022_09_01:126906006
+xref: SNOMEDCT_US_2022_09_01:93974005
 xref: UMLS_CUI:C0033578
 xref: UMLS_CUI:C0376358
 is_a: DOID:162 ! cancer
@@ -2598,7 +2714,7 @@ synonym: "carcinoma of prostate" EXACT []
 xref: EFO:0001663
 xref: KEGG:05215
 xref: NCI:C4863
-xref: SNOMEDCT_US_2022_03_01:254900004
+xref: SNOMEDCT_US_2022_09_01:254900004
 xref: UMLS_CUI:C0600139
 is_a: DOID:10283 ! prostate cancer
 
@@ -2632,7 +2748,7 @@ xref: ICD9CM:204
 xref: ICDO:9820/3
 xref: MESH:D007945
 xref: NCI:C7539
-xref: SNOMEDCT_US_2022_03_01:93170002
+xref: SNOMEDCT_US_2022_09_01:93170002
 xref: UMLS_CUI:C0023448
 is_a: DOID:1240 ! leukemia
 
@@ -2649,7 +2765,7 @@ synonym: "Prolymphocytic leukaemia" EXACT []
 xref: ICDO:9832/3
 xref: MESH:D015463
 xref: NCI:C3181
-xref: SNOMEDCT_US_2022_03_01:110006004
+xref: SNOMEDCT_US_2022_09_01:110006004
 xref: UMLS_CUI:C0023486
 is_a: DOID:1040 ! chronic lymphocytic leukemia
 
@@ -2685,7 +2801,7 @@ xref: OMIM:612557
 xref: OMIM:612558
 xref: OMIM:612559
 xref: ORDO:67038
-xref: SNOMEDCT_US_2022_03_01:51092000
+xref: SNOMEDCT_US_2022_09_01:51092000
 xref: UMLS_CUI:C0023434
 is_a: DOID:1037 ! lymphoid leukemia
 
@@ -2720,11 +2836,11 @@ xref: MESH:D013274
 xref: NCI:C3387
 xref: NCI:C9331
 xref: OMIM:613659
-xref: SNOMEDCT_US_2022_03_01:126824007
-xref: SNOMEDCT_US_2022_03_01:269459004
-xref: SNOMEDCT_US_2022_03_01:269460009
-xref: SNOMEDCT_US_2022_03_01:93717002
-xref: SNOMEDCT_US_2022_03_01:94074003
+xref: SNOMEDCT_US_2022_09_01:126824007
+xref: SNOMEDCT_US_2022_09_01:269459004
+xref: SNOMEDCT_US_2022_09_01:269460009
+xref: SNOMEDCT_US_2022_09_01:93717002
+xref: SNOMEDCT_US_2022_09_01:94074003
 xref: UMLS_CUI:C0024623
 xref: UMLS_CUI:C0038356
 xref: UMLS_CUI:C0153421
@@ -2766,8 +2882,8 @@ xref: MESH:D001749
 xref: NCI:C2901
 xref: NCI:C9334
 xref: OMIM:109800
-xref: SNOMEDCT_US_2022_03_01:126885006
-xref: SNOMEDCT_US_2022_03_01:363455001
+xref: SNOMEDCT_US_2022_09_01:126885006
+xref: SNOMEDCT_US_2022_09_01:363455001
 xref: UMLS_CUI:C0005684
 xref: UMLS_CUI:C0005695
 is_a: DOID:162 ! cancer
@@ -2785,7 +2901,7 @@ synonym: "carcinoma of esophagus" EXACT []
 synonym: "carcinoma of oesophagus" EXACT []
 xref: EFO:0002916
 xref: NCI:C3513
-xref: SNOMEDCT_US_2022_03_01:255079005
+xref: SNOMEDCT_US_2022_09_01:255079005
 xref: UMLS_CUI:C0152018
 is_a: DOID:5041 ! esophageal cancer
 
@@ -2803,8 +2919,7 @@ synonym: "tumor of soft tissue and skeleton" EXACT []
 xref: ICD10CM:C49
 xref: ICD9CM:171.9
 xref: ICDO:8800/3
-xref: MESH:D012509
-xref: SNOMEDCT_US_2022_03_01:93765001
+xref: SNOMEDCT_US_2022_09_01:93765001
 xref: UMLS_CUI:C0153519
 is_a: DOID:162 ! cancer
 
@@ -2824,7 +2939,7 @@ xref: ICD10CM:C18.1
 xref: ICD9CM:153.5
 xref: MESH:D001063
 xref: NCI:C9333
-xref: SNOMEDCT_US_2022_03_01:93679002
+xref: SNOMEDCT_US_2022_09_01:93679002
 xref: UMLS_CUI:C0496779
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -2845,7 +2960,7 @@ synonym: "tumor of head and neck" EXACT []
 xref: GARD:12425
 xref: MESH:D006258
 xref: NCI:C3077
-xref: SNOMEDCT_US_2022_03_01:255055008
+xref: SNOMEDCT_US_2022_09_01:255055008
 xref: UMLS_CUI:C0018671
 is_a: DOID:162 ! cancer
 
@@ -2866,8 +2981,8 @@ xref: ICD9CM:184
 xref: MESH:D005833
 xref: NCI:C3053
 xref: NCI:C4913
-xref: SNOMEDCT_US_2022_03_01:126907002
-xref: SNOMEDCT_US_2022_03_01:188207007
+xref: SNOMEDCT_US_2022_09_01:126907002
+xref: SNOMEDCT_US_2022_09_01:188207007
 xref: UMLS_CUI:C0017416
 xref: UMLS_CUI:C0153585
 xref: UMLS_CUI:C0699889
@@ -2887,7 +3002,7 @@ xref: ICD9CM:208
 xref: ICDO:9800/3
 xref: MESH:D007938
 xref: NCI:C3161
-xref: SNOMEDCT_US_2022_03_01:255049003
+xref: SNOMEDCT_US_2022_09_01:255049003
 xref: UMLS_CUI:C0023418
 is_a: DOID:2531 ! hematologic cancer
 
@@ -2906,7 +3021,7 @@ xref: ICD9CM:208.0
 xref: ICDO:9801/3
 xref: NCI:C9300
 xref: OMIM:308960
-xref: SNOMEDCT_US_2022_03_01:24072005
+xref: SNOMEDCT_US_2022_09_01:24072005
 xref: UMLS_CUI:C0085669
 xref: UMLS_CUI:C1378511
 is_a: DOID:1037 ! lymphoid leukemia
@@ -2922,7 +3037,7 @@ synonym: "Vestibular schwannoma" EXACT []
 xref: GARD:223
 xref: MESH:D009464
 xref: NCI:C3276
-xref: SNOMEDCT_US_2022_03_01:269643009
+xref: SNOMEDCT_US_2022_09_01:269643009
 xref: UMLS_CUI:C0027859
 is_a: DOID:3192 ! neurilemmoma
 
@@ -2938,7 +3053,7 @@ synonym: "leiomyomatous tumor" EXACT []
 xref: ICDO:8890/0
 xref: MESH:D007889
 xref: NCI:C3157
-xref: SNOMEDCT_US_2022_03_01:1162890002
+xref: SNOMEDCT_US_2022_09_01:1162890002
 xref: UMLS_CUI:C0023267
 
 [Term]
@@ -2981,9 +3096,9 @@ xref: NCI:C2907
 xref: NCI:C3568
 xref: NCI:C5115
 xref: NCI:C7710
-xref: SNOMEDCT_US_2022_03_01:126952004
-xref: SNOMEDCT_US_2022_03_01:428061005
-xref: SNOMEDCT_US_2022_03_01:93727008
+xref: SNOMEDCT_US_2022_09_01:126952004
+xref: SNOMEDCT_US_2022_09_01:428061005
+xref: SNOMEDCT_US_2022_09_01:93727008
 xref: UMLS_CUI:C0006118
 xref: UMLS_CUI:C0153633
 xref: UMLS_CUI:C0220624
@@ -3016,10 +3131,10 @@ xref: OMIM:608935
 xref: OMIM:612571
 xref: OMIM:612593
 xref: OMIM:614210
-xref: SNOMEDCT_US_2022_03_01:187860004
-xref: SNOMEDCT_US_2022_03_01:187864008
-xref: SNOMEDCT_US_2022_03_01:187868006
-xref: SNOMEDCT_US_2022_03_01:187874006
+xref: SNOMEDCT_US_2022_09_01:187860004
+xref: SNOMEDCT_US_2022_09_01:187864008
+xref: SNOMEDCT_US_2022_09_01:187868006
+xref: SNOMEDCT_US_2022_09_01:187874006
 xref: UMLS_CUI:C0024624
 xref: UMLS_CUI:C0153491
 xref: UMLS_CUI:C0153492
@@ -3046,7 +3161,7 @@ xref: ICD9CM:759.5
 xref: MESH:D014402
 xref: NCI:C3424
 xref: OMIM:PS191100
-xref: SNOMEDCT_US_2022_03_01:157033002
+xref: SNOMEDCT_US_2022_09_01:157033002
 xref: UMLS_CUI:C0041341
 
 [Term]
@@ -3058,7 +3173,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8930/0
 xref: NCI:C4262
-xref: SNOMEDCT_US_2022_03_01:189810002
+xref: SNOMEDCT_US_2022_09_01:189810002
 xref: UMLS_CUI:C0334485
 
 [Term]
@@ -3084,7 +3199,7 @@ xref: MESH:D016889
 xref: NCI:C27815
 xref: NCI:C3012
 xref: OMIM:608089
-xref: SNOMEDCT_US_2022_03_01:123844007
+xref: SNOMEDCT_US_2022_09_01:123844007
 xref: UMLS_CUI:C0007103
 xref: UMLS_CUI:C0014170
 is_a: DOID:363 ! uterine cancer
@@ -3098,7 +3213,7 @@ subset: NCIthesaurus
 synonym: "anal melanoma" EXACT []
 synonym: "malignant melanoma of anus" EXACT []
 xref: NCI:C4639
-xref: SNOMEDCT_US_2022_03_01:276821000
+xref: SNOMEDCT_US_2022_09_01:276821000
 xref: UMLS_CUI:C0349538
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -3112,7 +3227,7 @@ synonym: "Neurolipocytoma" EXACT []
 xref: ICDO:9506/1
 xref: MESH:D018306
 xref: NCI:C3791
-xref: SNOMEDCT_US_2022_03_01:302832007
+xref: SNOMEDCT_US_2022_09_01:302832007
 xref: UMLS_CUI:C0206719
 is_a: DOID:1319 ! brain cancer
 
@@ -3131,7 +3246,7 @@ xref: ICD9CM:228.1
 xref: ICDO:9170/0
 xref: MESH:D008202
 xref: NCI:C8965
-xref: SNOMEDCT_US_2022_03_01:154625006
+xref: SNOMEDCT_US_2022_09_01:154625006
 xref: UMLS_CUI:C0024221
 
 [Term]
@@ -3145,7 +3260,7 @@ subset: NCIthesaurus
 synonym: "carcinoma of colon" EXACT []
 synonym: "Colonic carcinoma" EXACT []
 xref: NCI:C4910
-xref: SNOMEDCT_US_2022_03_01:154454005
+xref: SNOMEDCT_US_2022_09_01:154454005
 xref: UMLS_CUI:C0699790
 is_a: DOID:219 ! colon cancer
 
@@ -3186,7 +3301,7 @@ xref: ICD10CM:C50
 xref: MESH:D001943
 xref: NCI:C9335
 xref: OMIM:114480
-xref: SNOMEDCT_US_2022_03_01:254837009
+xref: SNOMEDCT_US_2022_09_01:254837009
 xref: UMLS_CUI:C0006142
 is_a: DOID:162 ! cancer
 
@@ -3211,7 +3326,7 @@ xref: ICD9CM:199
 xref: ICDO:8000/3
 xref: MESH:D009369
 xref: NCI:C9305
-xref: SNOMEDCT_US_2022_03_01:269513004
+xref: SNOMEDCT_US_2022_09_01:269513004
 xref: UMLS_CUI:C0006826
 
 [Term]
@@ -3228,7 +3343,7 @@ synonym: "Pigmented neuroectodermal tumour of infancy" EXACT []
 xref: ICDO:9363/0
 xref: MESH:D017600
 xref: NCI:C3717
-xref: SNOMEDCT_US_2022_03_01:1513001
+xref: SNOMEDCT_US_2022_09_01:1513001
 xref: UMLS_CUI:C0206094
 
 [Term]
@@ -3243,7 +3358,7 @@ xref: GARD:9369
 xref: ICDO:9362/3
 xref: MESH:D010871
 xref: NCI:C9344
-xref: SNOMEDCT_US_2022_03_01:31671006
+xref: SNOMEDCT_US_2022_09_01:31671006
 xref: UMLS_CUI:C0205898
 is_a: DOID:162 ! cancer
 
@@ -3260,7 +3375,7 @@ xref: ICD9CM:209-209.99
 xref: ICDO:8240/3
 xref: MESH:D018358
 xref: NCI:C3809
-xref: SNOMEDCT_US_2022_03_01:55937004
+xref: SNOMEDCT_US_2022_09_01:55937004
 xref: UMLS_CUI:C0206754
 is_a: DOID:162 ! cancer
 
@@ -3283,7 +3398,7 @@ xref: ICDO:8070/3
 xref: MESH:D002294
 xref: MESH:D018307
 xref: NCI:C2929
-xref: SNOMEDCT_US_2022_03_01:154605007
+xref: SNOMEDCT_US_2022_09_01:154605007
 xref: UMLS_CUI:C0007137
 xref: UMLS_CUI:C0751688
 is_a: DOID:305 ! carcinoma
@@ -3297,7 +3412,7 @@ subset: NCIthesaurus
 synonym: "Conjunctival melanoma" EXACT []
 synonym: "malignant melanoma of conjunctiva" EXACT []
 xref: NCI:C4550
-xref: SNOMEDCT_US_2022_03_01:255004001
+xref: SNOMEDCT_US_2022_09_01:255004001
 xref: UMLS_CUI:C0346360
 is_a: DOID:162 ! cancer
 
@@ -3335,8 +3450,8 @@ xref: KEGG:05216
 xref: MESH:D013964
 xref: NCI:C3414
 xref: NCI:C7510
-xref: SNOMEDCT_US_2022_03_01:127018007
-xref: SNOMEDCT_US_2022_03_01:94098005
+xref: SNOMEDCT_US_2022_09_01:127018007
+xref: SNOMEDCT_US_2022_09_01:94098005
 xref: UMLS_CUI:C0007115
 xref: UMLS_CUI:C0040136
 is_a: DOID:162 ! cancer
@@ -3356,7 +3471,7 @@ synonym: "malignant mesothelioma of peritoneum" EXACT []
 xref: ICD10CM:C45.1
 xref: NCI:C8704
 xref: NCI:C9350
-xref: SNOMEDCT_US_2022_03_01:187806007
+xref: SNOMEDCT_US_2022_09_01:187806007
 xref: UMLS_CUI:C0346109
 xref: UMLS_CUI:C0854886
 is_a: DOID:162 ! cancer
@@ -3382,7 +3497,7 @@ xref: NCI:C4456
 xref: NCI:C7865
 xref: NCI:C8420
 xref: OMIM:156240
-xref: SNOMEDCT_US_2022_03_01:109378008
+xref: SNOMEDCT_US_2022_09_01:109378008
 xref: UMLS_CUI:C0278752
 xref: UMLS_CUI:C0345967
 xref: UMLS_CUI:C0392400
@@ -3426,11 +3541,11 @@ xref: MESH:D010190
 xref: NCI:C3305
 xref: ORDO:1333
 xref: ORDO:217074
-xref: SNOMEDCT_US_2022_03_01:126859007
-xref: SNOMEDCT_US_2022_03_01:187796007
-xref: SNOMEDCT_US_2022_03_01:93715005
-xref: SNOMEDCT_US_2022_03_01:93823001
-xref: SNOMEDCT_US_2022_03_01:94082003
+xref: SNOMEDCT_US_2022_09_01:126859007
+xref: SNOMEDCT_US_2022_09_01:187796007
+xref: SNOMEDCT_US_2022_09_01:93715005
+xref: SNOMEDCT_US_2022_09_01:93823001
+xref: SNOMEDCT_US_2022_09_01:94082003
 xref: UMLS_CUI:C0030297
 xref: UMLS_CUI:C0153458
 xref: UMLS_CUI:C0153459
@@ -3450,7 +3565,7 @@ synonym: "malignant neoplasm of the Exocrine pancreas" EXACT []
 synonym: "malignant tumor of exocrine pancreas" EXACT []
 synonym: "malignant tumour of exocrine pancreas" EXACT []
 xref: NCI:C7430
-xref: SNOMEDCT_US_2022_03_01:255088001
+xref: SNOMEDCT_US_2022_09_01:255088001
 xref: UMLS_CUI:C0346648
 is_a: DOID:1793 ! pancreatic cancer
 
@@ -3470,7 +3585,7 @@ xref: ICD10CM:C25.4
 xref: ICD9CM:157.4
 xref: MESH:D018273
 xref: NCI:C3770
-xref: SNOMEDCT_US_2022_03_01:254612002
+xref: SNOMEDCT_US_2022_09_01:254612002
 xref: UMLS_CUI:C1328479
 is_a: DOID:1793 ! pancreatic cancer
 
@@ -3486,7 +3601,7 @@ synonym: "peripheral ossifying fibroma" RELATED []
 xref: ICDO:9262/0
 xref: MESH:D018214
 xref: NCI:C8422
-xref: SNOMEDCT_US_2022_03_01:189896007
+xref: SNOMEDCT_US_2022_09_01:189896007
 xref: UMLS_CUI:C0206640
 
 [Term]
@@ -3512,7 +3627,7 @@ synonym: "MFH" EXACT []
 xref: ICDO:8830/3
 xref: MESH:D051677
 xref: NCI:C4247
-xref: SNOMEDCT_US_2022_03_01:34360000
+xref: SNOMEDCT_US_2022_09_01:34360000
 xref: UMLS_CUI:C0334463
 is_a: DOID:1115 ! sarcoma
 
@@ -3532,7 +3647,7 @@ xref: ICDO:8720/3
 xref: KEGG:05218
 xref: MESH:D008545
 xref: NCI:C3224
-xref: SNOMEDCT_US_2022_03_01:2092003
+xref: SNOMEDCT_US_2022_09_01:2092003
 xref: UMLS_CUI:C0025202
 is_a: DOID:162 ! cancer
 property_value: exactMatch MESH:D008545 xsd:string
@@ -3553,7 +3668,7 @@ synonym: "Yolk sac tumour" EXACT []
 xref: ICDO:9071/3
 xref: MESH:D018240
 xref: NCI:C3011
-xref: SNOMEDCT_US_2022_03_01:74409009
+xref: SNOMEDCT_US_2022_09_01:74409009
 xref: UMLS_CUI:C0014145
 is_a: DOID:162 ! cancer
 
@@ -3569,7 +3684,7 @@ xref: GARD:6880
 xref: ICDO:8890/3
 xref: MESH:D007890
 xref: NCI:C3158
-xref: SNOMEDCT_US_2022_03_01:443719001
+xref: SNOMEDCT_US_2022_09_01:443719001
 xref: UMLS_CUI:C0023269
 is_a: DOID:162 ! cancer
 
@@ -3597,7 +3712,7 @@ synonym: "mullerian Adenosarcoma" EXACT []
 xref: ICDO:8933/3
 xref: MESH:D018195
 xref: NCI:C9474
-xref: SNOMEDCT_US_2022_03_01:189804002
+xref: SNOMEDCT_US_2022_09_01:189804002
 xref: UMLS_CUI:C0001442
 is_a: DOID:4236 ! carcinosarcoma
 property_value: exactMatch MESH:D018195 xsd:string
@@ -3624,8 +3739,8 @@ xref: ICD9CM:154.1
 xref: MESH:D012004
 xref: NCI:C7418
 xref: NCI:C9382
-xref: SNOMEDCT_US_2022_03_01:254582000
-xref: SNOMEDCT_US_2022_03_01:93984006
+xref: SNOMEDCT_US_2022_09_01:254582000
+xref: SNOMEDCT_US_2022_09_01:93984006
 xref: UMLS_CUI:C0007113
 xref: UMLS_CUI:C0949022
 is_a: DOID:9256 ! colorectal cancer
@@ -3639,7 +3754,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Rectal adenocarcinoma" EXACT []
 xref: NCI:C9383
-xref: SNOMEDCT_US_2022_03_01:254582000
+xref: SNOMEDCT_US_2022_09_01:254582000
 xref: UMLS_CUI:C0149978
 is_a: DOID:1993 ! rectum cancer
 
@@ -3653,7 +3768,7 @@ subset: NCIthesaurus
 xref: ICDO:9570/0
 xref: MESH:D009463
 xref: NCI:C3275
-xref: SNOMEDCT_US_2022_03_01:443892003
+xref: SNOMEDCT_US_2022_09_01:443892003
 xref: UMLS_CUI:C0027858
 
 [Term]
@@ -3667,7 +3782,7 @@ synonym: "squamous cell carcinoma of vulva" RELATED []
 synonym: "Vulvar Epidermoid carcinoma" EXACT []
 synonym: "vulvar squamous cell carcinoma" EXACT []
 xref: NCI:C4052
-xref: SNOMEDCT_US_2022_03_01:254895003
+xref: SNOMEDCT_US_2022_09_01:254895003
 xref: UMLS_CUI:C0280856
 is_a: DOID:120 ! female reproductive organ cancer
 
@@ -3691,7 +3806,7 @@ xref: ICDO:9508/3
 xref: NCI:C6906
 xref: OMIM:609322
 xref: ORDO:99966
-xref: SNOMEDCT_US_2022_03_01:128792003
+xref: SNOMEDCT_US_2022_09_01:128792003
 xref: UMLS_CUI:C1266184
 is_a: DOID:1319 ! brain cancer
 
@@ -3704,7 +3819,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Ovarian Surface epithelial-Stromal tumor" EXACT []
 xref: NCI:C4381
-xref: SNOMEDCT_US_2022_03_01:237057005
+xref: SNOMEDCT_US_2022_09_01:237057005
 xref: UMLS_CUI:C0341823
 is_a: DOID:2394 ! ovarian cancer
 
@@ -3726,7 +3841,7 @@ xref: NCI:C27730
 xref: NCI:C3267
 xref: NCI:C6180
 xref: OMIM:194070
-xref: SNOMEDCT_US_2022_03_01:25081006
+xref: SNOMEDCT_US_2022_09_01:25081006
 xref: UMLS_CUI:C0027708
 xref: UMLS_CUI:C1332219
 xref: UMLS_CUI:C1333015
@@ -3744,7 +3859,7 @@ xref: ICD10CM:C18
 xref: ICD9CM:153
 xref: MESH:D003110
 xref: NCI:C9242
-xref: SNOMEDCT_US_2022_03_01:363406005
+xref: SNOMEDCT_US_2022_09_01:363406005
 xref: UMLS_CUI:C0007102
 is_a: DOID:9256 ! colorectal cancer
 
@@ -3773,7 +3888,7 @@ xref: OMIM:601977
 xref: OMIM:614521
 xref: ORDO:3318
 xref: ORDO:71493
-xref: SNOMEDCT_US_2022_03_01:234499005
+xref: SNOMEDCT_US_2022_09_01:234499005
 xref: UMLS_CUI:C0040028
 is_a: DOID:2226 ! myeloproliferative neoplasm
 
@@ -3791,7 +3906,7 @@ synonym: "CMPD, U" EXACT []
 xref: ICD10CM:D47.1
 xref: ICDO:9960/3
 xref: NCI:C4345
-xref: SNOMEDCT_US_2022_03_01:115248004
+xref: SNOMEDCT_US_2022_09_01:115248004
 xref: UMLS_CUI:C1292778
 is_a: DOID:0070004 ! myeloid neoplasm
 
@@ -3804,7 +3919,7 @@ subset: NCIthesaurus
 synonym: "cutaneous lymphangioma" RELATED []
 xref: ICDO:9171/0
 xref: NCI:C27509
-xref: SNOMEDCT_US_2022_03_01:445492005
+xref: SNOMEDCT_US_2022_09_01:445492005
 xref: UMLS_CUI:C1333176
 
 [Term]
@@ -3819,7 +3934,7 @@ synonym: "adenocarcinoma of the colon" RELATED []
 synonym: "Colonic adenocarcinoma" EXACT []
 xref: MESH:D003110
 xref: NCI:C4349
-xref: SNOMEDCT_US_2022_03_01:255082000
+xref: SNOMEDCT_US_2022_09_01:255082000
 xref: UMLS_CUI:C0338106
 is_a: DOID:1520 ! colon carcinoma
 
@@ -3855,9 +3970,9 @@ xref: OMIM:167000
 xref: OMIM:607893
 xref: ORDO:213500
 xref: ORDO:213517
-xref: SNOMEDCT_US_2022_03_01:123843001
-xref: SNOMEDCT_US_2022_03_01:372117006
-xref: SNOMEDCT_US_2022_03_01:93934004
+xref: SNOMEDCT_US_2022_09_01:123843001
+xref: SNOMEDCT_US_2022_09_01:372117006
+xref: SNOMEDCT_US_2022_09_01:93934004
 xref: UMLS_CUI:C0919267
 xref: UMLS_CUI:C1140680
 xref: UMLS_CUI:C1299247
@@ -3874,7 +3989,7 @@ xref: GARD:9618
 xref: ICDO:9580/0
 xref: MESH:D016586
 xref: NCI:C3474
-xref: SNOMEDCT_US_2022_03_01:12169001
+xref: SNOMEDCT_US_2022_09_01:12169001
 xref: UMLS_CUI:C0085167
 
 [Term]
@@ -3903,7 +4018,7 @@ synonym: "Glomus tumour" EXACT []
 xref: ICDO:8711/0
 xref: MESH:D005918
 xref: NCI:C3060
-xref: SNOMEDCT_US_2022_03_01:189193002
+xref: SNOMEDCT_US_2022_09_01:189193002
 xref: UMLS_CUI:C0017653
 is_a: DOID:162 ! cancer
 
@@ -3916,7 +4031,7 @@ subset: NCIthesaurus
 xref: ICDO:8712/0
 xref: MESH:D005918
 xref: NCI:C4222
-xref: SNOMEDCT_US_2022_03_01:7429002
+xref: SNOMEDCT_US_2022_09_01:7429002
 xref: UMLS_CUI:C0334421
 
 [Term]
@@ -3945,9 +4060,9 @@ xref: MESH:D018295
 xref: NCI:C156767
 xref: NCI:C3784
 xref: NCI:C7586
-xref: SNOMEDCT_US_2022_03_01:127570002
-xref: SNOMEDCT_US_2022_03_01:154507009
-xref: SNOMEDCT_US_2022_03_01:252995000
+xref: SNOMEDCT_US_2022_09_01:127570002
+xref: SNOMEDCT_US_2022_09_01:154507009
+xref: SNOMEDCT_US_2022_09_01:252995000
 xref: UMLS_CUI:C0007117
 xref: UMLS_CUI:C0206710
 xref: UMLS_CUI:C1368295
@@ -3961,7 +4076,7 @@ def: "A prostate carcinoma that derives_from epithelial cells of glandular origi
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C2919
-xref: SNOMEDCT_US_2022_03_01:399490008
+xref: SNOMEDCT_US_2022_09_01:399490008
 xref: UMLS_CUI:C0007112
 is_a: DOID:10286 ! prostate carcinoma
 
@@ -3989,7 +4104,7 @@ synonym: "hematopoietic tumors" EXACT []
 synonym: "malignant hematopoietic neoplasm" EXACT []
 xref: MESH:D019337
 xref: NCI:C27134
-xref: SNOMEDCT_US_2022_03_01:414388001
+xref: SNOMEDCT_US_2022_09_01:414388001
 xref: UMLS_CUI:C0376544
 is_a: DOID:162 ! cancer
 
@@ -4005,7 +4120,7 @@ xref: ICD9CM:228.00
 xref: ICDO:9120/0
 xref: MESH:D006391
 xref: NCI:C3085
-xref: SNOMEDCT_US_2022_03_01:154625006
+xref: SNOMEDCT_US_2022_09_01:154625006
 xref: UMLS_CUI:C0018916
 
 [Term]
@@ -4060,8 +4175,8 @@ xref: NCI:C3107
 xref: NCI:C3160
 xref: OMIM:246400
 xref: OMIM:604856
-xref: SNOMEDCT_US_2022_03_01:154583006
-xref: SNOMEDCT_US_2022_03_01:234439008
+xref: SNOMEDCT_US_2022_09_01:154583006
+xref: SNOMEDCT_US_2022_09_01:234439008
 xref: UMLS_CUI:C0019621
 xref: UMLS_CUI:C0023381
 
@@ -4075,7 +4190,7 @@ subset: NCIthesaurus
 synonym: "cancer of larynx" EXACT []
 synonym: "carcinoma of larynx" EXACT []
 xref: NCI:C4855
-xref: SNOMEDCT_US_2022_03_01:154480006
+xref: SNOMEDCT_US_2022_09_01:154480006
 xref: UMLS_CUI:C0595989
 is_a: DOID:162 ! cancer
 
@@ -4091,7 +4206,7 @@ xref: GARD:6052
 xref: ICDO:9220/0
 xref: MESH:D002812
 xref: NCI:C53459
-xref: SNOMEDCT_US_2022_03_01:269638002
+xref: SNOMEDCT_US_2022_09_01:269638002
 xref: UMLS_CUI:C0936248
 
 [Term]
@@ -4104,7 +4219,7 @@ subset: NCIthesaurus
 xref: ICDO:8932/0
 xref: MESH:D018194
 xref: NCI:C3726
-xref: SNOMEDCT_US_2022_03_01:40293003
+xref: SNOMEDCT_US_2022_09_01:40293003
 xref: UMLS_CUI:C0206622
 property_value: exactMatch MESH:D018194 xsd:string
 
@@ -4123,7 +4238,7 @@ xref: MESH:D020288
 xref: NCI:C3698
 xref: NCI:C5800
 xref: OMIM:260500
-xref: SNOMEDCT_US_2022_03_01:18021007
+xref: SNOMEDCT_US_2022_09_01:18021007
 xref: UMLS_CUI:C0205770
 xref: UMLS_CUI:C1332963
 
@@ -4147,8 +4262,8 @@ xref: MESH:D007680
 xref: NCI:C120456
 xref: NCI:C3150
 xref: NCI:C7548
-xref: SNOMEDCT_US_2022_03_01:126880001
-xref: SNOMEDCT_US_2022_03_01:93849006
+xref: SNOMEDCT_US_2022_09_01:126880001
+xref: SNOMEDCT_US_2022_09_01:93849006
 xref: UMLS_CUI:C0022665
 xref: UMLS_CUI:C0494158
 xref: UMLS_CUI:C0740457
@@ -4169,7 +4284,7 @@ xref: GARD:2627
 xref: ICDO:9150/3
 xref: MESH:D006393
 xref: NCI:C3087
-xref: SNOMEDCT_US_2022_03_01:134335004
+xref: SNOMEDCT_US_2022_09_01:134335004
 xref: UMLS_CUI:C0018922
 is_a: DOID:162 ! cancer
 
@@ -4183,7 +4298,7 @@ subset: NCIthesaurus
 xref: ICDO:9090/0
 xref: MESH:D013330
 xref: NCI:C7468
-xref: SNOMEDCT_US_2022_03_01:24327009
+xref: SNOMEDCT_US_2022_09_01:24327009
 xref: UMLS_CUI:C0038478
 is_a: DOID:2394 ! ovarian cancer
 
@@ -4199,7 +4314,7 @@ synonym: "benign tumor of Mesothelium" EXACT []
 xref: ICD10CM:C45
 xref: MESH:D008654
 xref: NCI:C3234
-xref: SNOMEDCT_US_2022_03_01:154491004
+xref: SNOMEDCT_US_2022_09_01:154491004
 xref: UMLS_CUI:C0025500
 
 [Term]
@@ -4210,7 +4325,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9373/0
 xref: NCI:C6581
-xref: SNOMEDCT_US_2022_03_01:404086000
+xref: SNOMEDCT_US_2022_09_01:404086000
 xref: UMLS_CUI:C1266175
 is_a: DOID:162 ! cancer
 
@@ -4226,7 +4341,7 @@ xref: GARD:6047
 xref: ICDO:9230/1
 xref: MESH:D002804
 xref: NCI:C2945
-xref: SNOMEDCT_US_2022_03_01:9001003
+xref: SNOMEDCT_US_2022_09_01:9001003
 xref: UMLS_CUI:C0008441
 
 [Term]
@@ -4245,7 +4360,7 @@ xref: ICD10CM:K09.8
 xref: ICDO:9084/0
 xref: MESH:D003884
 xref: NCI:C9011
-xref: SNOMEDCT_US_2022_03_01:189117002
+xref: SNOMEDCT_US_2022_09_01:189117002
 xref: UMLS_CUI:C0011649
 is_a: DOID:0080602 ! benign teratoma
 
@@ -4262,7 +4377,7 @@ synonym: "Myoepithelial neoplasm" EXACT []
 xref: ICDO:8982/0
 xref: MESH:D009208
 xref: NCI:C40392
-xref: SNOMEDCT_US_2022_03_01:69291002
+xref: SNOMEDCT_US_2022_09_01:69291002
 xref: UMLS_CUI:C0027070
 
 [Term]
@@ -4274,7 +4389,7 @@ subset: NCIthesaurus
 xref: ICDO:8990/3
 xref: MESH:D008637
 xref: NCI:C3233
-xref: SNOMEDCT_US_2022_03_01:44524009
+xref: SNOMEDCT_US_2022_09_01:44524009
 xref: UMLS_CUI:C0025464
 is_a: DOID:162 ! cancer
 
@@ -4287,7 +4402,7 @@ subset: NCIthesaurus
 synonym: "Pacinian neurofibroma" EXACT []
 xref: ICDO:9507/0
 xref: NCI:C4328
-xref: SNOMEDCT_US_2022_03_01:4230004
+xref: SNOMEDCT_US_2022_09_01:4230004
 xref: UMLS_CUI:C0334599
 is_a: DOID:962 ! neurofibroma
 
@@ -4308,8 +4423,8 @@ xref: ICDO:8120/3
 xref: MESH:D002295
 xref: NCI:C2930
 xref: NCI:C6783
-xref: SNOMEDCT_US_2022_03_01:118287003
-xref: SNOMEDCT_US_2022_03_01:27090000
+xref: SNOMEDCT_US_2022_09_01:118287003
+xref: SNOMEDCT_US_2022_09_01:27090000
 xref: UMLS_CUI:C0007138
 xref: UMLS_CUI:C0334265
 is_a: DOID:305 ! carcinoma
@@ -4325,7 +4440,7 @@ synonym: "dysembryoplastic neuroepithelial tumour" EXACT []
 xref: GARD:10640
 xref: ICDO:9413/0
 xref: NCI:C9505
-xref: SNOMEDCT_US_2022_03_01:87211000119104
+xref: SNOMEDCT_US_2022_09_01:87211000119104
 xref: UMLS_CUI:C1266177
 
 [Term]
@@ -4336,7 +4451,7 @@ def: "A cell type benign neoplasm that is composed_of glandular and fibrous tiss
 subset: DO_cancer_slim
 xref: ICDO:9013/0
 xref: MESH:D000232
-xref: SNOMEDCT_US_2022_03_01:189823009
+xref: SNOMEDCT_US_2022_09_01:189823009
 xref: UMLS_CUI:C0001422
 property_value: exactMatch MESH:D000232 xsd:string
 
@@ -4350,7 +4465,7 @@ synonym: "ossifying fibromyxoid tumour" EXACT []
 synonym: "Ossifying Fibromyxoma" EXACT []
 xref: ICDO:8842/0
 xref: NCI:C6582
-xref: SNOMEDCT_US_2022_03_01:404076001
+xref: SNOMEDCT_US_2022_09_01:404076001
 xref: UMLS_CUI:C1266128
 is_a: DOID:162 ! cancer
 
@@ -4371,8 +4486,8 @@ xref: MESH:C537491
 xref: MESH:D008204
 xref: NCI:C3205
 xref: NCI:C4490
-xref: SNOMEDCT_US_2022_03_01:403986008
-xref: SNOMEDCT_US_2022_03_01:62497000
+xref: SNOMEDCT_US_2022_09_01:403986008
+xref: SNOMEDCT_US_2022_09_01:62497000
 xref: UMLS_CUI:C0024224
 xref: UMLS_CUI:C0346082
 is_a: DOID:0060083 ! immune system cancer
@@ -4389,7 +4504,7 @@ xref: ICD10CM:D21
 xref: ICDO:8895/0
 xref: MESH:D009214
 xref: NCI:C4882
-xref: SNOMEDCT_US_2022_03_01:66357004
+xref: SNOMEDCT_US_2022_09_01:66357004
 xref: UMLS_CUI:C0027086
 
 [Term]
@@ -4401,7 +4516,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9015/0
 xref: NCI:C8978
-xref: SNOMEDCT_US_2022_03_01:10705005
+xref: SNOMEDCT_US_2022_09_01:10705005
 xref: UMLS_CUI:C0334499
 is_a: DOID:2683 ! adenofibroma
 
@@ -4409,8 +4524,10 @@ is_a: DOID:2683 ! adenofibroma
 id: DOID:2725
 name: capillary hemangioma
 namespace: disease_ontology
+def: "A hemangioma that is  characterized by the presence of capillary-sized vascular channels without prominent epithelioid endothelial cells." [url:https\://eyewiki.aao.org/Capillary_Hemangioma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Capillary haemangioma" EXACT []
 synonym: "cellular hemangioma of Infancy" EXACT []
 synonym: "Congenital vascular hamartoma" EXACT []
 synonym: "Congenital vascular naevus" EXACT []
@@ -4423,8 +4540,9 @@ xref: ICD10CM:Q82.5
 xref: ICDO:9131/0
 xref: MESH:D018324
 xref: NCI:C7457
-xref: SNOMEDCT_US_2022_03_01:56975005
+xref: SNOMEDCT_US_2022_09_01:56975005
 xref: UMLS_CUI:C0206733
+is_a: DOID:255 ! hemangioma
 
 [Term]
 id: DOID:285
@@ -4439,7 +4557,7 @@ xref: ICD9CM:202.4
 xref: ICDO:9940/3
 xref: MESH:D007943
 xref: NCI:C7402
-xref: SNOMEDCT_US_2022_03_01:118613001
+xref: SNOMEDCT_US_2022_09_01:118613001
 xref: UMLS_CUI:C0023443
 is_a: DOID:1040 ! chronic lymphocytic leukemia
 
@@ -4464,8 +4582,8 @@ synonym: "endometrioid carcinoma of Endometrium" EXACT []
 xref: NCI:C6287
 xref: NCI:C6290
 xref: NCI:C7359
-xref: SNOMEDCT_US_2022_03_01:123845008
-xref: SNOMEDCT_US_2022_03_01:762458004
+xref: SNOMEDCT_US_2022_09_01:123845008
+xref: SNOMEDCT_US_2022_09_01:762458004
 xref: UMLS_CUI:C0279763
 xref: UMLS_CUI:C1153706
 xref: UMLS_CUI:C1336905
@@ -4486,8 +4604,8 @@ synonym: "endometrioid carcinoma of female Reproductive system" EXACT []
 xref: MESH:D016889
 xref: MESH:D018269
 xref: NCI:C7558
-xref: SNOMEDCT_US_2022_03_01:30289006
-xref: SNOMEDCT_US_2022_03_01:93781006
+xref: SNOMEDCT_US_2022_09_01:30289006
+xref: SNOMEDCT_US_2022_09_01:93781006
 xref: UMLS_CUI:C0206687
 xref: UMLS_CUI:C0476089
 is_a: DOID:1380 ! endometrial cancer
@@ -4503,7 +4621,7 @@ synonym: "Epidermoid carcinoma of the Larynx" EXACT []
 synonym: "squamous cell carcinoma of larynx" EXACT []
 xref: MESH:D000077195
 xref: NCI:C4044
-xref: SNOMEDCT_US_2022_03_01:707358000
+xref: SNOMEDCT_US_2022_09_01:707358000
 xref: UMLS_CUI:C0280324
 is_a: DOID:2600 ! laryngeal carcinoma
 
@@ -4520,7 +4638,7 @@ synonym: "carcinoma cervix uteri" EXACT []
 synonym: "carcinoma of cervix" EXACT []
 synonym: "carcinoma of the Cervix Uteri" EXACT []
 xref: NCI:C9039
-xref: SNOMEDCT_US_2022_03_01:285432005
+xref: SNOMEDCT_US_2022_09_01:285432005
 xref: UMLS_CUI:C0302592
 is_a: DOID:4362 ! cervical cancer
 
@@ -4533,7 +4651,7 @@ def: "A sex cord-gonadal stromal tumor characterized by variable proportions of 
 subset: DO_cancer_slim
 xref: GARD:9967
 xref: MESH:D018310
-xref: SNOMEDCT_US_2022_03_01:34110004
+xref: SNOMEDCT_US_2022_09_01:34110004
 xref: UMLS_CUI:C0206723
 is_a: DOID:162 ! cancer
 
@@ -4552,8 +4670,8 @@ synonym: "malignant granulosa cell neoplasm" EXACT []
 xref: MESH:D006106
 xref: NCI:C3070
 xref: NCI:C4205
-xref: SNOMEDCT_US_2022_03_01:18861007
-xref: SNOMEDCT_US_2022_03_01:46585005
+xref: SNOMEDCT_US_2022_09_01:18861007
+xref: SNOMEDCT_US_2022_09_01:46585005
 xref: UMLS_CUI:C0018206
 xref: UMLS_CUI:C0334401
 is_a: DOID:162 ! cancer
@@ -4566,7 +4684,7 @@ def: "A breast carcinoma that derives_from the lining of milk ducts." [url:http\
 subset: DO_cancer_slim
 synonym: "duct carcinoma" EXACT []
 xref: MESH:D044584
-xref: SNOMEDCT_US_2022_03_01:82711006
+xref: SNOMEDCT_US_2022_09_01:82711006
 xref: UMLS_CUI:C1176475
 is_a: DOID:3459 ! breast carcinoma
 
@@ -4598,8 +4716,8 @@ xref: ICDO:8480/3
 xref: MESH:D002288
 xref: NCI:C26712
 xref: NCI:C27379
-xref: SNOMEDCT_US_2022_03_01:72495009
-xref: SNOMEDCT_US_2022_03_01:900006
+xref: SNOMEDCT_US_2022_09_01:72495009
+xref: SNOMEDCT_US_2022_09_01:900006
 xref: UMLS_CUI:C0007130
 xref: UMLS_CUI:C0334368
 is_a: DOID:305 ! carcinoma
@@ -4621,7 +4739,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Cecal adenocarcinoma" EXACT []
 xref: NCI:C5543
-xref: SNOMEDCT_US_2022_03_01:413446001
+xref: SNOMEDCT_US_2022_09_01:413446001
 xref: UMLS_CUI:C1332866
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -4643,9 +4761,9 @@ xref: MESH:D002277
 xref: MESH:D009375
 xref: NCI:C2916
 xref: NCI:C3709
-xref: SNOMEDCT_US_2022_03_01:188083002
-xref: SNOMEDCT_US_2022_03_01:269513004
-xref: SNOMEDCT_US_2022_03_01:71298006
+xref: SNOMEDCT_US_2022_09_01:188083002
+xref: SNOMEDCT_US_2022_09_01:269513004
+xref: SNOMEDCT_US_2022_09_01:71298006
 xref: UMLS_CUI:C0007097
 xref: UMLS_CUI:C0553707
 xref: UMLS_CUI:C1368683
@@ -4672,7 +4790,7 @@ xref: MESH:D005909
 xref: NCI:C129295
 xref: NCI:C39750
 xref: NCI:C9094
-xref: SNOMEDCT_US_2022_03_01:63634009
+xref: SNOMEDCT_US_2022_09_01:63634009
 xref: UMLS_CUI:C0017636
 xref: UMLS_CUI:C0278878
 xref: UMLS_CUI:C1514422
@@ -4695,8 +4813,8 @@ xref: ICDO:9400/3
 xref: MESH:D001254
 xref: NCI:C4951
 xref: NCI:C60781
-xref: SNOMEDCT_US_2022_03_01:189914005
-xref: SNOMEDCT_US_2022_03_01:99131000119108
+xref: SNOMEDCT_US_2022_09_01:189914005
+xref: SNOMEDCT_US_2022_09_01:99131000119108
 xref: UMLS_CUI:C0004114
 xref: UMLS_CUI:C0750935
 is_a: DOID:3070 ! high grade glioma
@@ -4725,8 +4843,8 @@ xref: NCI:C3059
 xref: NCI:C4822
 xref: OMIM:PS137800
 xref: ORDO:182067
-xref: SNOMEDCT_US_2022_03_01:393564001
-xref: SNOMEDCT_US_2022_03_01:74532006
+xref: SNOMEDCT_US_2022_09_01:393564001
+xref: SNOMEDCT_US_2022_09_01:74532006
 xref: UMLS_CUI:C0017638
 xref: UMLS_CUI:C0555198
 is_a: DOID:162 ! cancer
@@ -4743,7 +4861,7 @@ xref: GARD:5653
 xref: ICDO:9442/3
 xref: MESH:D018316
 xref: NCI:C3796
-xref: SNOMEDCT_US_2022_03_01:35262004
+xref: SNOMEDCT_US_2022_09_01:35262004
 xref: UMLS_CUI:C0206726
 is_a: DOID:3068 ! glioblastoma
 
@@ -4757,7 +4875,7 @@ subset: NCIthesaurus
 synonym: "brain Glioblastoma" EXACT []
 synonym: "Glioblastoma multiforme of brain" EXACT []
 xref: NCI:C4642
-xref: SNOMEDCT_US_2022_03_01:276828006
+xref: SNOMEDCT_US_2022_09_01:276828006
 xref: UMLS_CUI:C0349543
 is_a: DOID:0060108 ! brain glioma
 
@@ -4772,7 +4890,7 @@ synonym: "Monstrocellular sarcoma" EXACT []
 xref: ICDO:9441/3
 xref: MESH:D005909
 xref: NCI:C4325
-xref: SNOMEDCT_US_2022_03_01:44529004
+xref: SNOMEDCT_US_2022_09_01:44529004
 xref: UMLS_CUI:C0334588
 is_a: DOID:3068 ! glioblastoma
 
@@ -4788,7 +4906,7 @@ synonym: "grade III astrocytoma" EXACT []
 xref: GARD:5860
 xref: MESH:D001254
 xref: NCI:C9477
-xref: SNOMEDCT_US_2022_03_01:55353007
+xref: SNOMEDCT_US_2022_09_01:55353007
 xref: UMLS_CUI:C0334579
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -4804,7 +4922,7 @@ xref: ICDO:9173/0
 xref: MESH:D018191
 xref: NCI:C3724
 xref: OMIM:257350
-xref: SNOMEDCT_US_2022_03_01:40225001
+xref: SNOMEDCT_US_2022_09_01:40225001
 xref: UMLS_CUI:C0206620
 is_a: DOID:1475 ! lymphangioma
 
@@ -4817,7 +4935,7 @@ subset: NCIthesaurus
 xref: ICDO:8803/3
 xref: MESH:D018228
 xref: NCI:C3746
-xref: SNOMEDCT_US_2022_03_01:73506006
+xref: SNOMEDCT_US_2022_09_01:73506006
 xref: UMLS_CUI:C0206652
 is_a: DOID:162 ! cancer
 
@@ -4834,7 +4952,7 @@ synonym: "infiltrating papillary adenocarcinoma" EXACT []
 xref: ICDO:8260/3
 xref: MESH:D000231
 xref: NCI:C2853
-xref: SNOMEDCT_US_2022_03_01:4797003
+xref: SNOMEDCT_US_2022_09_01:4797003
 xref: UMLS_CUI:C0001420
 is_a: DOID:305 ! carcinoma
 
@@ -4858,9 +4976,9 @@ xref: MESH:D004067
 xref: MESH:D005770
 xref: NCI:C3052
 xref: NCI:C4890
-xref: SNOMEDCT_US_2022_03_01:128348002
-xref: SNOMEDCT_US_2022_03_01:276806006
-xref: SNOMEDCT_US_2022_03_01:428905002
+xref: SNOMEDCT_US_2022_09_01:128348002
+xref: SNOMEDCT_US_2022_09_01:276806006
+xref: SNOMEDCT_US_2022_09_01:428905002
 xref: UMLS_CUI:C0012243
 xref: UMLS_CUI:C0017185
 xref: UMLS_CUI:C0685938
@@ -4882,7 +5000,7 @@ xref: ICD9CM:727.02
 xref: ICDO:9252/0
 xref: MESH:D000070779
 xref: NCI:C3402
-xref: SNOMEDCT_US_2022_03_01:310605004
+xref: SNOMEDCT_US_2022_09_01:310605004
 xref: UMLS_CUI:C1318543
 
 [Term]
@@ -4895,7 +5013,7 @@ subset: NCIthesaurus
 synonym: "Epidermoid skin carcinoma" EXACT []
 synonym: "squamous cell carcinoma of skin" RELATED []
 xref: NCI:C4819
-xref: SNOMEDCT_US_2022_03_01:254651007
+xref: SNOMEDCT_US_2022_09_01:254651007
 xref: UMLS_CUI:C0553723
 is_a: DOID:162 ! cancer
 
@@ -4912,7 +5030,6 @@ xref: GARD:9953
 xref: ICDO:9450/3
 xref: MESH:D009837
 xref: NCI:C3288
-xref: SNOMEDCT_US_2022_03_01:443936004
 xref: UMLS_CUI:C0751396
 is_a: DOID:3070 ! high grade glioma
 property_value: exactMatch MESH:D009837 xsd:string
@@ -4938,7 +5055,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Oligodendroglioma of brain" EXACT []
 xref: NCI:C9377
-xref: SNOMEDCT_US_2022_03_01:254940005
+xref: SNOMEDCT_US_2022_09_01:254940005
 xref: UMLS_CUI:C0346286
 is_a: DOID:0060108 ! brain glioma
 
@@ -4954,7 +5071,7 @@ synonym: "schwannoma" EXACT []
 xref: ICDO:9560/3
 xref: MESH:D009442
 xref: NCI:C3269
-xref: SNOMEDCT_US_2022_03_01:985004
+xref: SNOMEDCT_US_2022_09_01:985004
 xref: UMLS_CUI:C0027809
 is_a: DOID:2001 ! neuroma
 
@@ -4984,7 +5101,7 @@ xref: MESH:C536641
 xref: NCI:C6557
 xref: OMIM:162091
 xref: OMIM:615670
-xref: SNOMEDCT_US_2022_03_01:781641005
+xref: SNOMEDCT_US_2022_09_01:781641005
 xref: UMLS_CUI:C1335929
 is_a: DOID:3192 ! neurilemmoma
 
@@ -5003,7 +5120,7 @@ xref: MESH:D018233
 xref: NCI:C8971
 xref: OMIM:268210
 xref: ORDO:99757
-xref: SNOMEDCT_US_2022_03_01:404051002
+xref: SNOMEDCT_US_2022_09_01:404051002
 xref: UMLS_CUI:C0206656
 is_a: DOID:3247 ! rhabdomyosarcoma
 
@@ -5017,7 +5134,7 @@ subset: NCIthesaurus
 xref: ICDO:8900/3
 xref: MESH:D012208
 xref: NCI:C3359
-xref: SNOMEDCT_US_2022_03_01:302847003
+xref: SNOMEDCT_US_2022_09_01:302847003
 xref: UMLS_CUI:C0035412
 is_a: DOID:162 ! cancer
 
@@ -5031,7 +5148,7 @@ synonym: "anaplastic Rhabdomyosarcoma" EXACT []
 synonym: "Pleomorphic rhabdomyosarcoma, adult type" EXACT []
 xref: ICDO:8901/3
 xref: NCI:C4258
-xref: SNOMEDCT_US_2022_03_01:404054005
+xref: SNOMEDCT_US_2022_09_01:404054005
 xref: UMLS_CUI:C0334480
 is_a: DOID:3247 ! rhabdomyosarcoma
 
@@ -5043,7 +5160,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8912/3
 xref: NCI:C6519
-xref: SNOMEDCT_US_2022_03_01:404055006
+xref: SNOMEDCT_US_2022_09_01:404055006
 xref: UMLS_CUI:C1266134
 is_a: DOID:3246 ! embryonal rhabdomyosarcoma
 
@@ -5057,7 +5174,7 @@ subset: NCIthesaurus
 xref: ICDO:8580/3
 xref: MESH:D013945
 xref: NCI:C3411
-xref: SNOMEDCT_US_2022_03_01:444231005
+xref: SNOMEDCT_US_2022_09_01:444231005
 xref: UMLS_CUI:C0040100
 is_a: DOID:0060083 ! immune system cancer
 
@@ -5073,7 +5190,7 @@ synonym: "Thymoma, malignant" EXACT []
 xref: ICDO:8586/3
 xref: MESH:D013945
 xref: NCI:C7569
-xref: SNOMEDCT_US_2022_03_01:128717008
+xref: SNOMEDCT_US_2022_09_01:128717008
 xref: UMLS_CUI:C0205969
 is_a: DOID:0060083 ! immune system cancer
 
@@ -5089,7 +5206,7 @@ xref: ICDO:9073/1
 xref: MESH:D018238
 xref: NCI:C3754
 xref: OMIM:424500
-xref: SNOMEDCT_US_2022_03_01:74751003
+xref: SNOMEDCT_US_2022_09_01:74751003
 xref: UMLS_CUI:C0206661
 
 [Term]
@@ -5106,7 +5223,7 @@ xref: GARD:1303
 xref: ICDO:9370/3
 xref: MESH:D002817
 xref: NCI:C2947
-xref: SNOMEDCT_US_2022_03_01:50007008
+xref: SNOMEDCT_US_2022_09_01:50007008
 xref: UMLS_CUI:C0008487
 is_a: DOID:162 ! cancer
 
@@ -5119,7 +5236,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9064/3
 xref: MESH:D018237
-xref: SNOMEDCT_US_2022_03_01:154603000
+xref: SNOMEDCT_US_2022_09_01:154603000
 xref: UMLS_CUI:C0206660
 is_a: DOID:162 ! cancer
 
@@ -5134,7 +5251,7 @@ synonym: "mixed Embryonal carcinoma and teratoma" EXACT []
 xref: ICDO:9081/3
 xref: MESH:D018243
 xref: NCI:C3756
-xref: SNOMEDCT_US_2022_03_01:67830002
+xref: SNOMEDCT_US_2022_09_01:67830002
 xref: UMLS_CUI:C0206664
 is_a: DOID:162 ! cancer
 
@@ -5151,7 +5268,7 @@ synonym: "mixed germ cell tumour" EXACT []
 synonym: "mixed teratoma and seminoma" EXACT []
 xref: ICDO:9085/3
 xref: NCI:C4290
-xref: SNOMEDCT_US_2022_03_01:189853002
+xref: SNOMEDCT_US_2022_09_01:189853002
 xref: UMLS_CUI:C0334524
 is_a: DOID:162 ! cancer
 
@@ -5165,7 +5282,7 @@ subset: NCIthesaurus
 xref: ICDO:9080/3
 xref: MESH:D013724
 xref: NCI:C3403
-xref: SNOMEDCT_US_2022_03_01:36591000119102
+xref: SNOMEDCT_US_2022_09_01:36591000119102
 xref: UMLS_CUI:C0039538
 is_a: DOID:162 ! cancer
 
@@ -5183,7 +5300,7 @@ xref: ICDO:9070/3
 xref: MESH:D018236
 xref: NCI:C3752
 xref: NCI:C8880
-xref: SNOMEDCT_US_2022_03_01:1156454002
+xref: SNOMEDCT_US_2022_09_01:1156454002
 xref: UMLS_CUI:C0206659
 xref: UMLS_CUI:C0855159
 is_a: DOID:162 ! cancer
@@ -5198,7 +5315,7 @@ subset: NCIthesaurus
 xref: ICDO:8860/0
 xref: MESH:D018207
 xref: NCI:C3734
-xref: SNOMEDCT_US_2022_03_01:19929002
+xref: SNOMEDCT_US_2022_09_01:19929002
 xref: UMLS_CUI:C0206633
 property_value: exactMatch MESH:D018207 xsd:string
 
@@ -5229,9 +5346,9 @@ xref: NCI:C3192
 xref: NCI:C4248
 xref: NCI:C4502
 xref: OMIM:151900
-xref: SNOMEDCT_US_2022_03_01:115227001
-xref: SNOMEDCT_US_2022_03_01:154612003
-xref: SNOMEDCT_US_2022_03_01:254830006
+xref: SNOMEDCT_US_2022_09_01:115227001
+xref: SNOMEDCT_US_2022_09_01:154612003
+xref: SNOMEDCT_US_2022_09_01:254830006
 xref: UMLS_CUI:C0023798
 xref: UMLS_CUI:C0206631
 xref: UMLS_CUI:C0346118
@@ -5249,11 +5366,10 @@ synonym: "lymphangiomyomatosis" EXACT []
 synonym: "pulmonary lymphangioleiomyomatosis" EXACT []
 xref: GARD:3319
 xref: ICDO:9174/1
-xref: MESH:D018192
 xref: NCI:C38153
 xref: OMIM:606690
 xref: ORDO:538
-xref: SNOMEDCT_US_2022_03_01:277844007
+xref: SNOMEDCT_US_2022_09_01:277844007
 xref: UMLS_CUI:C0349649
 property_value: exactMatch MESH:D018192 xsd:string
 
@@ -5277,7 +5393,7 @@ xref: MESH:D018213
 xref: NCI:C9145
 xref: OMIM:259500
 xref: ORDO:668
-xref: SNOMEDCT_US_2022_03_01:189878003
+xref: SNOMEDCT_US_2022_09_01:189878003
 xref: UMLS_CUI:C0029463
 xref: UMLS_CUI:C0206639
 is_a: DOID:162 ! cancer
@@ -5301,7 +5417,7 @@ xref: MESH:D018218
 xref: NCI:C3043
 xref: NCI:C6605
 xref: NCI:C7075
-xref: SNOMEDCT_US_2022_03_01:443250000
+xref: SNOMEDCT_US_2022_09_01:443250000
 xref: UMLS_CUI:C0016057
 xref: UMLS_CUI:C0206643
 xref: UMLS_CUI:C1336021
@@ -5337,7 +5453,7 @@ synonym: "localized Skeletal Ewing's sarcoma" EXACT []
 xref: NCI:C35871
 xref: NCI:C4835
 xref: NCI:C6623
-xref: SNOMEDCT_US_2022_03_01:307608006
+xref: SNOMEDCT_US_2022_09_01:307608006
 xref: UMLS_CUI:C0585474
 xref: UMLS_CUI:C1333481
 xref: UMLS_CUI:C1334406
@@ -5381,9 +5497,9 @@ xref: NCI:C7542
 xref: NCI:C7806
 xref: NCI:C9341
 xref: OMIM:612219
-xref: SNOMEDCT_US_2022_03_01:134210007
-xref: SNOMEDCT_US_2022_03_01:73676002
-xref: SNOMEDCT_US_2022_03_01:76909002
+xref: SNOMEDCT_US_2022_09_01:134210007
+xref: SNOMEDCT_US_2022_09_01:73676002
+xref: SNOMEDCT_US_2022_09_01:76909002
 xref: UMLS_CUI:C0553580
 xref: UMLS_CUI:C0684337
 xref: UMLS_CUI:C0796547
@@ -5411,8 +5527,8 @@ xref: MESH:D002813
 xref: NCI:C2946
 xref: NCI:C7155
 xref: OMIM:215300
-xref: SNOMEDCT_US_2022_03_01:443520009
-xref: SNOMEDCT_US_2022_03_01:735679005
+xref: SNOMEDCT_US_2022_09_01:443520009
+xref: SNOMEDCT_US_2022_09_01:735679005
 xref: UMLS_CUI:C0008479
 xref: UMLS_CUI:C1335473
 is_a: DOID:162 ! cancer
@@ -5426,7 +5542,7 @@ subset: NCIthesaurus
 synonym: "chondrosarcomatous Osteogenic sarcoma" EXACT []
 xref: ICDO:9181/3
 xref: NCI:C4021
-xref: SNOMEDCT_US_2022_03_01:76312009
+xref: SNOMEDCT_US_2022_09_01:76312009
 xref: UMLS_CUI:C0279603
 is_a: DOID:3347 ! osteosarcoma
 
@@ -5441,7 +5557,7 @@ synonym: "Parosteal Osteogenic sarcoma" EXACT []
 xref: ICDO:9192/3
 xref: MESH:D018217
 xref: NCI:C8969
-xref: SNOMEDCT_US_2022_03_01:91242000
+xref: SNOMEDCT_US_2022_09_01:91242000
 xref: UMLS_CUI:C0206642
 is_a: DOID:3376 ! bone osteosarcoma
 
@@ -5455,7 +5571,7 @@ subset: NCIthesaurus
 synonym: "Osteosarcoma of bone" EXACT []
 synonym: "primary Osteosarcoma of bone" EXACT []
 xref: NCI:C53707
-xref: SNOMEDCT_US_2022_03_01:307576001
+xref: SNOMEDCT_US_2022_09_01:307576001
 xref: UMLS_CUI:C0585442
 is_a: DOID:3347 ! osteosarcoma
 
@@ -5472,7 +5588,7 @@ xref: GARD:6913
 xref: ICDO:8850/3
 xref: MESH:D008080
 xref: NCI:C3194
-xref: SNOMEDCT_US_2022_03_01:254829001
+xref: SNOMEDCT_US_2022_09_01:254829001
 xref: UMLS_CUI:C0023827
 is_a: DOID:162 ! cancer
 
@@ -5498,7 +5614,7 @@ subset: NCIthesaurus
 synonym: "adenocarcinoma of anus" EXACT []
 synonym: "adenocarcinoma of the anus" RELATED []
 xref: NCI:C5600
-xref: SNOMEDCT_US_2022_03_01:423607006
+xref: SNOMEDCT_US_2022_09_01:423607006
 xref: UMLS_CUI:C1332257
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -5512,7 +5628,7 @@ subset: NCIthesaurus
 synonym: "carcinoma of penis" EXACT []
 synonym: "Penile carcinoma" EXACT []
 xref: NCI:C9061
-xref: SNOMEDCT_US_2022_03_01:372106005
+xref: SNOMEDCT_US_2022_09_01:372106005
 xref: UMLS_CUI:C0853105
 is_a: DOID:162 ! cancer
 
@@ -5526,7 +5642,7 @@ subset: NCIthesaurus
 synonym: "adenocarcinoma of breast" RELATED []
 synonym: "Mammary adenocarcinoma" EXACT []
 xref: NCI:C5214
-xref: SNOMEDCT_US_2022_03_01:865954003
+xref: SNOMEDCT_US_2022_09_01:865954003
 xref: UMLS_CUI:C0858252
 is_a: DOID:3459 ! breast carcinoma
 
@@ -5542,7 +5658,7 @@ synonym: "Mammary carcinoma" EXACT []
 xref: EFO:0000305
 xref: MESH:D001943
 xref: NCI:C4872
-xref: SNOMEDCT_US_2022_03_01:154513000
+xref: SNOMEDCT_US_2022_09_01:154513000
 xref: UMLS_CUI:C0678222
 is_a: DOID:1612 ! breast cancer
 
@@ -5558,7 +5674,7 @@ xref: GARD:8616
 xref: ICD10CM:D47.02
 xref: MESH:D034721
 xref: NCI:C9235
-xref: SNOMEDCT_US_2022_03_01:123310005
+xref: SNOMEDCT_US_2022_09_01:123310005
 xref: UMLS_CUI:C0221013
 
 [Term]
@@ -5570,7 +5686,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "ductal adenocarcinoma of the pancreas" EXACT []
 xref: NCI:C9120
-xref: SNOMEDCT_US_2022_03_01:792907004
+xref: SNOMEDCT_US_2022_09_01:792907004
 xref: UMLS_CUI:C1335302
 is_a: DOID:4074 ! pancreatic adenocarcinoma
 
@@ -5585,7 +5701,7 @@ xref: GARD:9569
 xref: ICDO:8832/1
 xref: MESH:D018223
 xref: OMIM:607907
-xref: SNOMEDCT_US_2022_03_01:302844005
+xref: SNOMEDCT_US_2022_09_01:302844005
 xref: UMLS_CUI:C0206647
 is_a: DOID:3355 ! fibrosarcoma
 
@@ -5608,7 +5724,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9390/1
 xref: NCI:C53686
-xref: SNOMEDCT_US_2022_03_01:1156470000
+xref: SNOMEDCT_US_2022_09_01:1156470000
 xref: UMLS_CUI:C1266176
 
 [Term]
@@ -5634,7 +5750,7 @@ xref: GARD:7488
 xref: ICDO:8480/6
 xref: MESH:D011553
 xref: NCI:C3345
-xref: SNOMEDCT_US_2022_03_01:307601000
+xref: SNOMEDCT_US_2022_09_01:307601000
 xref: UMLS_CUI:C0033822
 is_a: DOID:11239 ! appendix cancer
 
@@ -5660,7 +5776,7 @@ xref: ICDO:9530/0
 xref: MESH:D008579
 xref: NCI:C3230
 xref: NCI:C6971
-xref: SNOMEDCT_US_2022_03_01:269643009
+xref: SNOMEDCT_US_2022_09_01:269643009
 xref: UMLS_CUI:C0025286
 xref: UMLS_CUI:C1334698
 is_a: DOID:162 ! cancer
@@ -5701,9 +5817,9 @@ xref: ICD9CM:155.2
 xref: MESH:D008113
 xref: NCI:C34803
 xref: NCI:C7692
-xref: SNOMEDCT_US_2022_03_01:126851005
-xref: SNOMEDCT_US_2022_03_01:187771009
-xref: SNOMEDCT_US_2022_03_01:93870000
+xref: SNOMEDCT_US_2022_09_01:126851005
+xref: SNOMEDCT_US_2022_09_01:187771009
+xref: SNOMEDCT_US_2022_09_01:93870000
 xref: UMLS_CUI:C0023903
 xref: UMLS_CUI:C0024620
 xref: UMLS_CUI:C0345904
@@ -5722,7 +5838,7 @@ synonym: "pancreatic duct cancer" EXACT []
 xref: ICD10CM:C25.3
 xref: ICD9CM:157.3
 xref: MESH:D021441
-xref: SNOMEDCT_US_2022_03_01:93939009
+xref: SNOMEDCT_US_2022_09_01:93939009
 xref: UMLS_CUI:C0153461
 xref: UMLS_CUI:C0887833
 is_a: DOID:4905 ! pancreatic carcinoma
@@ -5740,7 +5856,7 @@ xref: ICD10CM:C58
 xref: ICDO:9100/3
 xref: MESH:D002822
 xref: NCI:C2948
-xref: SNOMEDCT_US_2022_03_01:189444004
+xref: SNOMEDCT_US_2022_09_01:189444004
 xref: UMLS_CUI:C0008497
 is_a: DOID:120 ! female reproductive organ cancer
 
@@ -5756,7 +5872,7 @@ synonym: "Placental-Site Gestational Trophoblastic neoplasm" EXACT []
 xref: ICDO:9104/1
 xref: MESH:D018245
 xref: NCI:C3757
-xref: SNOMEDCT_US_2022_03_01:75320001
+xref: SNOMEDCT_US_2022_09_01:75320001
 xref: UMLS_CUI:C0206666
 is_a: DOID:3594 ! choriocarcinoma
 
@@ -5770,7 +5886,7 @@ subset: NCIthesaurus
 synonym: "cystadenocarcinoma of ovary" EXACT []
 synonym: "cystadenocarcinoma of the Ovary" EXACT []
 xref: NCI:C5228
-xref: SNOMEDCT_US_2022_03_01:314191009
+xref: SNOMEDCT_US_2022_09_01:314191009
 xref: UMLS_CUI:C1096638
 is_a: DOID:4001 ! ovarian carcinoma
 
@@ -5784,7 +5900,7 @@ subset: NCIthesaurus
 xref: ICDO:8861/0
 xref: MESH:D018206
 xref: NCI:C3733
-xref: SNOMEDCT_US_2022_03_01:404057003
+xref: SNOMEDCT_US_2022_09_01:404057003
 xref: UMLS_CUI:C0206632
 is_a: DOID:3315 ! lipoma
 property_value: exactMatch MESH:D018206 xsd:string
@@ -5811,8 +5927,8 @@ xref: ICD9CM:179
 xref: MESH:D014594
 xref: NCI:C3435
 xref: NCI:C3552
-xref: SNOMEDCT_US_2022_03_01:126908007
-xref: SNOMEDCT_US_2022_03_01:371973000
+xref: SNOMEDCT_US_2022_09_01:126908007
+xref: SNOMEDCT_US_2022_09_01:371973000
 xref: UMLS_CUI:C0042138
 xref: UMLS_CUI:C0153567
 is_a: DOID:120 ! female reproductive organ cancer
@@ -5840,7 +5956,7 @@ synonym: "mast cell tumor" EXACT []
 synonym: "mastocytoma" EXACT []
 xref: ICD10CM:D47.09
 xref: NCI:C9295
-xref: SNOMEDCT_US_2022_03_01:127581004
+xref: SNOMEDCT_US_2022_09_01:127581004
 xref: UMLS_CUI:C0334664
 is_a: DOID:2531 ! hematologic cancer
 
@@ -5857,7 +5973,7 @@ synonym: "rhabdoid tumor" RELATED []
 xref: GARD:7572
 xref: MESH:D018335
 xref: NCI:C3808
-xref: SNOMEDCT_US_2022_03_01:83118000
+xref: SNOMEDCT_US_2022_09_01:83118000
 xref: UMLS_CUI:C0206743
 is_a: DOID:3675 ! childhood kidney cancer
 property_value: exactMatch MESH:D018335 xsd:string
@@ -5888,7 +6004,7 @@ xref: GARD:2197
 xref: ICDO:9522/3
 xref: MESH:D018304
 xref: NCI:C3789
-xref: SNOMEDCT_US_2022_03_01:76060004
+xref: SNOMEDCT_US_2022_09_01:76060004
 xref: UMLS_CUI:C0206717
 is_a: DOID:162 ! cancer
 
@@ -5903,7 +6019,7 @@ synonym: "adenocarcinoma cervix uteri" EXACT []
 synonym: "adenocarcinoma of cervix" EXACT []
 synonym: "adenocarcinoma of the uterine Cervix" EXACT []
 xref: NCI:C4029
-xref: SNOMEDCT_US_2022_03_01:254887002
+xref: SNOMEDCT_US_2022_09_01:254887002
 xref: UMLS_CUI:C0279672
 is_a: DOID:2893 ! cervix carcinoma
 
@@ -5917,7 +6033,7 @@ subset: NCIthesaurus
 synonym: "adenocarcinoma of stomach" EXACT []
 synonym: "stomach adenocarcinoma" EXACT []
 xref: NCI:C4004
-xref: SNOMEDCT_US_2022_03_01:408647009
+xref: SNOMEDCT_US_2022_09_01:408647009
 xref: UMLS_CUI:C0278701
 is_a: DOID:5517 ! stomach carcinoma
 
@@ -5935,7 +6051,7 @@ xref: ICD10CM:C90.3
 xref: ICDO:9731/3
 xref: MESH:D010954
 xref: NCI:C9349
-xref: SNOMEDCT_US_2022_03_01:302852008
+xref: SNOMEDCT_US_2022_09_01:302852008
 xref: UMLS_CUI:C0032131
 is_a: DOID:706 ! mature B-cell neoplasm
 
@@ -5949,7 +6065,7 @@ subset: NCIthesaurus
 synonym: "squamous cell carcinoma of cervix" EXACT []
 synonym: "squamous cell carcinoma of the Cervix Uteri" EXACT []
 xref: NCI:C4028
-xref: SNOMEDCT_US_2022_03_01:254886006
+xref: SNOMEDCT_US_2022_09_01:254886006
 xref: UMLS_CUI:C0279671
 is_a: DOID:2893 ! cervix carcinoma
 
@@ -5966,7 +6082,7 @@ synonym: "SCC of esophagus" EXACT []
 synonym: "SCC of oesophagus" EXACT []
 xref: MESH:D000077277
 xref: NCI:C4024
-xref: SNOMEDCT_US_2022_03_01:276804009
+xref: SNOMEDCT_US_2022_09_01:276804009
 xref: UMLS_CUI:C0279626
 is_a: DOID:1107 ! esophageal carcinoma
 
@@ -5979,7 +6095,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 xref: ICDO:9444/1
 xref: NCI:C5592
-xref: SNOMEDCT_US_2022_03_01:128789002
+xref: SNOMEDCT_US_2022_09_01:128789002
 xref: UMLS_CUI:C1322252
 is_a: DOID:3070 ! high grade glioma
 
@@ -5994,7 +6110,7 @@ xref: GARD:10486
 xref: ICDO:9350/1
 xref: MESH:D003397
 xref: NCI:C2964
-xref: SNOMEDCT_US_2022_03_01:189179009
+xref: SNOMEDCT_US_2022_09_01:189179009
 xref: UMLS_CUI:C0010276
 
 [Term]
@@ -6008,7 +6124,7 @@ synonym: "craniopharyngioma, adamantinomatous" EXACT []
 xref: ICDO:9351/1
 xref: MESH:D003397
 xref: NCI:C4726
-xref: SNOMEDCT_US_2022_03_01:134216001
+xref: SNOMEDCT_US_2022_09_01:134216001
 xref: UMLS_CUI:C0431129
 is_a: DOID:3840 ! craniopharyngioma
 
@@ -6023,7 +6139,7 @@ synonym: "Papillary Rathke's Pouch tumor" EXACT []
 xref: ICDO:9352/1
 xref: MESH:D003397
 xref: NCI:C4725
-xref: SNOMEDCT_US_2022_03_01:134215002
+xref: SNOMEDCT_US_2022_09_01:134215002
 xref: UMLS_CUI:C0431128
 is_a: DOID:3840 ! craniopharyngioma
 
@@ -6038,7 +6154,7 @@ synonym: "Anaplastic medulloblastoma" EXACT []
 xref: ICDO:9474/3
 xref: NCI:C6904
 xref: ORDO:251855
-xref: SNOMEDCT_US_2022_03_01:128790006
+xref: SNOMEDCT_US_2022_09_01:128790006
 xref: UMLS_CUI:C1266180
 is_a: DOID:0050902 ! medulloblastoma
 
@@ -6051,7 +6167,7 @@ subset: NCIthesaurus
 xref: ICDO:9472/3
 xref: MESH:D008527
 xref: NCI:C3706
-xref: SNOMEDCT_US_2022_03_01:24604009
+xref: SNOMEDCT_US_2022_09_01:24604009
 xref: UMLS_CUI:C0205833
 is_a: DOID:0050902 ! medulloblastoma
 
@@ -6092,9 +6208,8 @@ synonym: "desmoplastic nodular medulloblastoma" EXACT []
 synonym: "Medulloblastoma with extensive nodularity" EXACT []
 synonym: "nodular medulloblastoma" EXACT []
 xref: ICDO:9471/3
-xref: NCI:C4956
 xref: NCI:C5407
-xref: SNOMEDCT_US_2022_03_01:733902001
+xref: SNOMEDCT_US_2022_09_01:733902001
 xref: UMLS_CUI:C1334970
 is_a: DOID:0050902 ! medulloblastoma
 
@@ -6108,7 +6223,7 @@ subset: NCIthesaurus
 synonym: "BC - Bronchogenic carcinoma" EXACT []
 xref: MESH:D002283
 xref: NCI:C35875
-xref: SNOMEDCT_US_2022_03_01:254622008
+xref: SNOMEDCT_US_2022_09_01:254622008
 xref: UMLS_CUI:C0007121
 is_a: DOID:162 ! cancer
 
@@ -6124,7 +6239,7 @@ synonym: "cancer of lung" EXACT []
 synonym: "carcinoma of lung" RELATED []
 xref: EFO:0001071
 xref: NCI:C4878
-xref: SNOMEDCT_US_2022_03_01:154485001
+xref: SNOMEDCT_US_2022_09_01:154485001
 xref: UMLS_CUI:C0684249
 is_a: DOID:1324 ! lung cancer
 
@@ -6138,7 +6253,7 @@ subset: NCIthesaurus
 synonym: "Epidermoid cell carcinoma of the lung" EXACT []
 synonym: "squamous cell carcinoma of lung" RELATED []
 xref: NCI:C3493
-xref: SNOMEDCT_US_2022_03_01:254634000
+xref: SNOMEDCT_US_2022_09_01:254634000
 xref: UMLS_CUI:C0149782
 is_a: DOID:3908 ! lung non-small cell carcinoma
 
@@ -6156,7 +6271,7 @@ xref: EFO:0003060
 xref: KEGG:05223
 xref: MESH:D002289
 xref: NCI:C2926
-xref: SNOMEDCT_US_2022_03_01:254637007
+xref: SNOMEDCT_US_2022_09_01:254637007
 xref: UMLS_CUI:C0007131
 is_a: DOID:3905 ! lung carcinoma
 
@@ -6177,7 +6292,7 @@ xref: GARD:5742
 xref: MESH:D000077192
 xref: NCI:C27745
 xref: NCI:C3512
-xref: SNOMEDCT_US_2022_03_01:254626006
+xref: SNOMEDCT_US_2022_09_01:254626006
 xref: UMLS_CUI:C0152013
 xref: UMLS_CUI:C1335060
 is_a: DOID:3908 ! lung non-small cell carcinoma
@@ -6195,7 +6310,7 @@ xref: GARD:558
 xref: MESH:D018268
 xref: NCI:C9325
 xref: OMIM:202300
-xref: SNOMEDCT_US_2022_03_01:255035007
+xref: SNOMEDCT_US_2022_09_01:255035007
 xref: UMLS_CUI:C0206686
 is_a: DOID:162 ! cancer
 property_value: exactMatch MESH:D018268 xsd:string
@@ -6225,7 +6340,7 @@ synonym: "Thyroid adenocarcinoma" EXACT []
 xref: MESH:D018263
 xref: NCI:C8054
 xref: OMIM:188470
-xref: SNOMEDCT_US_2022_03_01:255028004
+xref: SNOMEDCT_US_2022_09_01:255028004
 xref: UMLS_CUI:C0206682
 is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
 
@@ -6254,7 +6369,7 @@ synonym: "trabecular carcinoma" EXACT []
 xref: GARD:9266
 xref: ICDO:8247/3
 xref: NCI:C4068
-xref: SNOMEDCT_US_2022_03_01:29792007
+xref: SNOMEDCT_US_2022_09_01:29792007
 xref: UMLS_CUI:C0302182
 is_a: DOID:162 ! cancer
 
@@ -6266,7 +6381,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: MESH:D018265
 xref: NCI:C7380
-xref: SNOMEDCT_US_2022_03_01:189643000
+xref: SNOMEDCT_US_2022_09_01:189643000
 xref: UMLS_CUI:C0206683
 is_a: DOID:3969 ! thyroid gland papillary carcinoma
 
@@ -6283,7 +6398,7 @@ xref: GARD:12027
 xref: MESH:D000077273
 xref: NCI:C4035
 xref: OMIM:188550
-xref: SNOMEDCT_US_2022_03_01:255029007
+xref: SNOMEDCT_US_2022_09_01:255029007
 xref: UMLS_CUI:C0238463
 is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
 
@@ -6300,7 +6415,7 @@ synonym: "Ultimobranchial thyroid tumor" EXACT []
 synonym: "Ultimobranchial thyroid tumour" EXACT []
 xref: MESH:C536914
 xref: NCI:C3879
-xref: SNOMEDCT_US_2022_03_01:255032005
+xref: SNOMEDCT_US_2022_09_01:255032005
 xref: UMLS_CUI:C0238462
 is_a: DOID:3963 ! thyroid gland carcinoma
 
@@ -6328,7 +6443,7 @@ synonym: "transitional cell carcinoma of bladder" EXACT []
 synonym: "urinary bladder urothelial carcinoma" EXACT []
 synonym: "urothelial bladder carcinoma" EXACT []
 xref: NCI:C39851
-xref: SNOMEDCT_US_2022_03_01:393562002
+xref: SNOMEDCT_US_2022_09_01:393562002
 xref: UMLS_CUI:C0279680
 is_a: DOID:4007 ! bladder carcinoma
 
@@ -6342,7 +6457,7 @@ subset: NCIthesaurus
 synonym: "carcinoma of urinary bladder" EXACT []
 xref: EFO:0000292
 xref: NCI:C4912
-xref: SNOMEDCT_US_2022_03_01:269607003
+xref: SNOMEDCT_US_2022_09_01:269607003
 xref: UMLS_CUI:C0699885
 is_a: DOID:11054 ! urinary bladder cancer
 
@@ -6356,7 +6471,7 @@ subset: NCIthesaurus
 synonym: "spindle cell carcinoma" EXACT []
 xref: MESH:D002277
 xref: NCI:C27004
-xref: SNOMEDCT_US_2022_03_01:65692009
+xref: SNOMEDCT_US_2022_09_01:65692009
 xref: UMLS_CUI:C0205697
 is_a: DOID:305 ! carcinoma
 
@@ -6376,7 +6491,7 @@ xref: MESH:D018232
 xref: NCI:C3749
 xref: NCI:C7958
 xref: OMIM:268220
-xref: SNOMEDCT_US_2022_03_01:404053004
+xref: SNOMEDCT_US_2022_09_01:404053004
 xref: UMLS_CUI:C0206655
 xref: UMLS_CUI:C0279613
 is_a: DOID:3247 ! rhabdomyosarcoma
@@ -6390,7 +6505,7 @@ subset: NCIthesaurus
 synonym: "Rhabdomyosarcoma with ganglionic differentiation" EXACT []
 xref: ICDO:8921/3
 xref: NCI:C4716
-xref: SNOMEDCT_US_2022_03_01:128750008
+xref: SNOMEDCT_US_2022_09_01:128750008
 xref: UMLS_CUI:C0431111
 is_a: DOID:162 ! cancer
 
@@ -6401,7 +6516,7 @@ namespace: disease_ontology
 subset: DO_cancer_slim
 synonym: "mixed embryonal rhabdomyosarcoma and alveolar rhabdomyosarcoma" EXACT []
 xref: ICDO:8902/3
-xref: SNOMEDCT_US_2022_03_01:62383007
+xref: SNOMEDCT_US_2022_09_01:62383007
 xref: UMLS_CUI:C0334481
 is_a: DOID:3247 ! rhabdomyosarcoma
 
@@ -6415,7 +6530,7 @@ subset: NCIthesaurus
 synonym: "adenocarcinoma of the pancreas" RELATED []
 synonym: "pancreas adenocarcinoma" EXACT []
 xref: NCI:C8294
-xref: SNOMEDCT_US_2022_03_01:700423003
+xref: SNOMEDCT_US_2022_09_01:700423003
 xref: UMLS_CUI:C0281361
 is_a: DOID:4905 ! pancreatic carcinoma
 
@@ -6428,7 +6543,7 @@ subset: NCIthesaurus
 xref: ICDO:8840/3
 xref: MESH:D009236
 xref: NCI:C3255
-xref: SNOMEDCT_US_2022_03_01:28351005
+xref: SNOMEDCT_US_2022_09_01:28351005
 xref: UMLS_CUI:C0027155
 is_a: DOID:162 ! cancer
 
@@ -6441,7 +6556,7 @@ subset: NCIthesaurus
 xref: ICDO:9490/3
 xref: MESH:D018305
 xref: NCI:C3790
-xref: SNOMEDCT_US_2022_03_01:116381000119105
+xref: SNOMEDCT_US_2022_09_01:116381000119105
 xref: UMLS_CUI:C0206718
 is_a: DOID:769 ! neuroblastoma
 
@@ -6478,7 +6593,7 @@ subset: NCIthesaurus
 xref: ICDO:9538/1
 xref: MESH:D008579
 xref: NCI:C4722
-xref: SNOMEDCT_US_2022_03_01:134213009
+xref: SNOMEDCT_US_2022_09_01:134213009
 xref: UMLS_CUI:C0431121
 is_a: DOID:3565 ! meningioma
 
@@ -6496,7 +6611,7 @@ xref: GARD:6339
 xref: ICDO:8930/3
 xref: MESH:D018203
 xref: NCI:C8973
-xref: SNOMEDCT_US_2022_03_01:1178986006
+xref: SNOMEDCT_US_2022_09_01:1178986006
 xref: UMLS_CUI:C0206630
 is_a: DOID:1380 ! endometrial cancer
 
@@ -6522,7 +6637,7 @@ subset: NCIthesaurus
 xref: ICDO:8831/0
 xref: MESH:D051642
 xref: NCI:C35765
-xref: SNOMEDCT_US_2022_03_01:154614002
+xref: SNOMEDCT_US_2022_09_01:154614002
 xref: UMLS_CUI:C1509147
 
 [Term]
@@ -6542,7 +6657,7 @@ xref: ICDO:9044/3
 xref: MESH:D018227
 xref: NCI:C27370
 xref: NCI:C3745
-xref: SNOMEDCT_US_2022_03_01:12622007
+xref: SNOMEDCT_US_2022_09_01:12622007
 xref: UMLS_CUI:C0206651
 xref: UMLS_CUI:C1332198
 is_a: DOID:1115 ! sarcoma
@@ -6557,7 +6672,7 @@ subset: NCIthesaurus
 xref: ICDO:8801/3
 xref: MESH:D012509
 xref: NCI:C27005
-xref: SNOMEDCT_US_2022_03_01:9801004
+xref: SNOMEDCT_US_2022_09_01:9801004
 xref: UMLS_CUI:C0205945
 is_a: DOID:1115 ! sarcoma
 
@@ -6584,9 +6699,9 @@ xref: MESH:D018200
 xref: NCI:C34448
 xref: NCI:C3730
 xref: NCI:C8975
-xref: SNOMEDCT_US_2022_03_01:112684005
-xref: SNOMEDCT_US_2022_03_01:63264007
-xref: SNOMEDCT_US_2022_03_01:84427001
+xref: SNOMEDCT_US_2022_09_01:112684005
+xref: SNOMEDCT_US_2022_09_01:63264007
+xref: SNOMEDCT_US_2022_09_01:84427001
 xref: UMLS_CUI:C0007140
 xref: UMLS_CUI:C0206627
 xref: UMLS_CUI:C1334603
@@ -6610,7 +6725,7 @@ xref: NCI:C7943
 xref: NCI:C8092
 xref: OMIM:606243
 xref: ORDO:163699
-xref: SNOMEDCT_US_2022_03_01:88195001
+xref: SNOMEDCT_US_2022_09_01:88195001
 xref: UMLS_CUI:C0206657
 xref: UMLS_CUI:C0279544
 xref: UMLS_CUI:C0279985
@@ -6631,7 +6746,7 @@ synonym: "Giant cell tumour of bone" EXACT []
 synonym: "osteoclastoma" RELATED []
 xref: MESH:D018212
 xref: NCI:C121932
-xref: SNOMEDCT_US_2022_03_01:697970009
+xref: SNOMEDCT_US_2022_09_01:697970009
 xref: UMLS_CUI:C0206638
 
 [Term]
@@ -6645,7 +6760,7 @@ xref: GARD:6369
 xref: ICDO:9749/3
 xref: MESH:D031249
 xref: NCI:C53972
-xref: SNOMEDCT_US_2022_03_01:703711007
+xref: SNOMEDCT_US_2022_09_01:703711007
 xref: UMLS_CUI:C0878675
 
 [Term]
@@ -6657,7 +6772,7 @@ subset: NCIthesaurus
 xref: ICDO:8730/3
 xref: MESH:D018328
 xref: NCI:C3802
-xref: SNOMEDCT_US_2022_03_01:70594002
+xref: SNOMEDCT_US_2022_09_01:70594002
 xref: UMLS_CUI:C0206735
 is_a: DOID:1909 ! melanoma
 
@@ -6670,7 +6785,7 @@ subset: NCIthesaurus
 synonym: "epithelioid melanoma" EXACT []
 xref: ICDO:8771/3
 xref: NCI:C4236
-xref: SNOMEDCT_US_2022_03_01:37138001
+xref: SNOMEDCT_US_2022_09_01:37138001
 xref: UMLS_CUI:C0334443
 is_a: DOID:1909 ! melanoma
 
@@ -6696,8 +6811,8 @@ xref: MESH:D002583
 xref: NCI:C2940
 xref: NCI:C9311
 xref: OMIM:603956
-xref: SNOMEDCT_US_2022_03_01:123841004
-xref: SNOMEDCT_US_2022_03_01:254885005
+xref: SNOMEDCT_US_2022_09_01:123841004
+xref: SNOMEDCT_US_2022_09_01:254885005
 xref: UMLS_CUI:C0007847
 xref: UMLS_CUI:C0007873
 is_a: DOID:120 ! female reproductive organ cancer
@@ -6710,7 +6825,7 @@ subset: DO_cancer_slim
 synonym: "Lipoleiomyoma" EXACT []
 xref: ICDO:8824/0
 xref: MESH:D047708
-xref: SNOMEDCT_US_2022_03_01:128917003
+xref: SNOMEDCT_US_2022_09_01:128917003
 xref: UMLS_CUI:C1266121
 
 [Term]
@@ -6726,7 +6841,7 @@ synonym: "Xanthoma neviforme" EXACT []
 xref: ICDO:9749/1
 xref: MESH:D014972
 xref: NCI:C3451
-xref: SNOMEDCT_US_2022_03_01:71709009
+xref: SNOMEDCT_US_2022_09_01:71709009
 xref: UMLS_CUI:C0043324
 
 [Term]
@@ -6741,7 +6856,7 @@ synonym: "Seminoma, Pure" EXACT []
 xref: ICDO:9061/3
 xref: MESH:D018239
 xref: NCI:C9309
-xref: SNOMEDCT_US_2022_03_01:443675005
+xref: SNOMEDCT_US_2022_09_01:443675005
 xref: UMLS_CUI:C0036631
 is_a: DOID:162 ! cancer
 
@@ -6754,7 +6869,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9060/3
 xref: MESH:D004407
-xref: SNOMEDCT_US_2022_03_01:60718004
+xref: SNOMEDCT_US_2022_09_01:60718004
 xref: UMLS_CUI:C0013377
 is_a: DOID:2394 ! ovarian cancer
 
@@ -6776,7 +6891,7 @@ xref: MESH:D002292
 xref: NCI:C9385
 xref: OMIM:300854
 xref: ORDO:217071
-xref: SNOMEDCT_US_2022_03_01:254915003
+xref: SNOMEDCT_US_2022_09_01:254915003
 xref: UMLS_CUI:C0007134
 is_a: DOID:4451 ! renal carcinoma
 
@@ -6790,7 +6905,7 @@ subset: NCIthesaurus
 synonym: "carcinoma of kidney" EXACT []
 synonym: "kidney carcinoma" EXACT []
 xref: NCI:C9384
-xref: SNOMEDCT_US_2022_03_01:254915003
+xref: SNOMEDCT_US_2022_09_01:254915003
 xref: UMLS_CUI:C1378703
 is_a: DOID:263 ! kidney cancer
 
@@ -6831,7 +6946,7 @@ xref: MESH:D002292
 xref: NCI:C27890
 xref: NCI:C6975
 xref: OMIM:605074
-xref: SNOMEDCT_US_2022_03_01:4797003
+xref: SNOMEDCT_US_2022_09_01:4797003
 xref: UMLS_CUI:C1306837
 xref: UMLS_CUI:C1336078
 is_a: DOID:4450 ! renal cell carcinoma
@@ -6854,7 +6969,7 @@ synonym: "renal clear cell carcinoma" EXACT []
 xref: GARD:9574
 xref: MESH:D002292
 xref: NCI:C4033
-xref: SNOMEDCT_US_2022_03_01:254915003
+xref: SNOMEDCT_US_2022_09_01:254915003
 xref: UMLS_CUI:C0279702
 is_a: DOID:4450 ! renal cell carcinoma
 
@@ -6872,7 +6987,7 @@ synonym: "renal cell carcinoma, chromophobe cell" EXACT []
 xref: GARD:6064
 xref: MESH:D002292
 xref: NCI:C4146
-xref: SNOMEDCT_US_2022_03_01:128667008
+xref: SNOMEDCT_US_2022_09_01:128667008
 xref: UMLS_CUI:C1266042
 is_a: DOID:4450 ! renal cell carcinoma
 
@@ -6916,7 +7031,7 @@ xref: ICDO:8940/0
 xref: MESH:D008949
 xref: NCI:C35691
 xref: OMIM:181030
-xref: SNOMEDCT_US_2022_03_01:8360001
+xref: SNOMEDCT_US_2022_09_01:8360001
 xref: UMLS_CUI:C0026277
 
 [Term]
@@ -6940,7 +7055,7 @@ subset: NCIthesaurus
 xref: ICDO:9240/3
 xref: MESH:D018211
 xref: NCI:C3737
-xref: SNOMEDCT_US_2022_03_01:56565002
+xref: SNOMEDCT_US_2022_09_01:56565002
 xref: UMLS_CUI:C0206637
 is_a: DOID:3371 ! chondrosarcoma
 
@@ -6956,6 +7071,24 @@ xref: UMLS_CUI:C1332982
 is_a: DOID:4545 ! mesenchymal chondrosarcoma
 
 [Term]
+id: DOID:4549
+name: extraskeletal myxoid chondrosarcoma
+namespace: disease_ontology
+alt_id: DOID:6496
+def: "A chondrosarcoma that is located_in exclusively soft tissue and that is characterized by the presence of chondroblast-like cells in a myxoid stroma and a multinodular growth pattern." [url:https\://en.wikipedia.org/wiki/Myxoid_chondrosarcoma, url:https\://pubmed.ncbi.nlm.nih.gov/10564384/, url:https\://www.ncbi.nlm.nih.gov/pubmed/16084955]
+comment: nomenclature update.
+subset: DO_cancer_slim
+synonym: "extraosseous chondrosarcoma" EXACT []
+synonym: "Myxoid extraosseous chondrosarcoma" EXACT []
+xref: ICDO:9231/3
+xref: MESH:C563195
+xref: NCI:C27502
+xref: OMIM:612237
+xref: SNOMEDCT_US_2022_09_01:404079008
+xref: UMLS_CUI:C1275278
+is_a: DOID:3371 ! chondrosarcoma
+
+[Term]
 id: DOID:4556
 name: lung large cell carcinoma
 namespace: disease_ontology
@@ -6964,7 +7097,7 @@ subset: NCIthesaurus
 synonym: "large cell carcinoma of lung" EXACT []
 synonym: "large cell lung carcinoma" EXACT []
 xref: NCI:C4450
-xref: SNOMEDCT_US_2022_03_01:254629004
+xref: SNOMEDCT_US_2022_09_01:254629004
 xref: UMLS_CUI:C0345958
 is_a: DOID:3908 ! lung non-small cell carcinoma
 
@@ -6992,8 +7125,8 @@ xref: GARD:9304
 xref: ICD10CM:C24.9
 xref: ICD9CM:156.9
 xref: MESH:D001661
-xref: SNOMEDCT_US_2022_03_01:126853008
-xref: SNOMEDCT_US_2022_03_01:93688006
+xref: SNOMEDCT_US_2022_09_01:126853008
+xref: SNOMEDCT_US_2022_09_01:93688006
 xref: UMLS_CUI:C0005426
 xref: UMLS_CUI:C0750952
 is_a: DOID:3119 ! gastrointestinal system cancer
@@ -7009,7 +7142,7 @@ xref: ICD10CM:D47.02
 xref: ICDO:9741/1
 xref: MESH:D034721
 xref: NCI:C9286
-xref: SNOMEDCT_US_2022_03_01:70910003
+xref: SNOMEDCT_US_2022_09_01:70910003
 xref: UMLS_CUI:C0272203
 is_a: DOID:349 ! systemic mastocytosis
 
@@ -7021,7 +7154,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9122/0
 xref: NCI:C4296
-xref: SNOMEDCT_US_2022_03_01:56468002
+xref: SNOMEDCT_US_2022_09_01:56468002
 xref: UMLS_CUI:C0334532
 
 [Term]
@@ -7034,7 +7167,7 @@ synonym: "Intramuscular Angioma" EXACT []
 xref: ICDO:9132/0
 xref: MESH:D006391
 xref: NCI:C3699
-xref: SNOMEDCT_US_2022_03_01:54249004
+xref: SNOMEDCT_US_2022_09_01:54249004
 xref: UMLS_CUI:C0205789
 
 [Term]
@@ -7063,8 +7196,8 @@ xref: ICDO:9571/0
 xref: MESH:D018317
 xref: NCI:C4973
 xref: NCI:C6912
-xref: SNOMEDCT_US_2022_03_01:128795001
-xref: SNOMEDCT_US_2022_03_01:404036006
+xref: SNOMEDCT_US_2022_09_01:128795001
+xref: SNOMEDCT_US_2022_09_01:404036006
 xref: UMLS_CUI:C0751691
 xref: UMLS_CUI:C1370657
 is_a: DOID:3193 ! peripheral nerve sheath neoplasm
@@ -7077,7 +7210,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9142/0
 xref: NCI:C4299
-xref: SNOMEDCT_US_2022_03_01:20985003
+xref: SNOMEDCT_US_2022_09_01:20985003
 xref: UMLS_CUI:C0334540
 
 [Term]
@@ -7105,7 +7238,7 @@ synonym: "Blastoma of lung" EXACT []
 xref: ICDO:8972/3
 xref: MESH:D018202
 xref: NCI:C3732
-xref: SNOMEDCT_US_2022_03_01:189815007
+xref: SNOMEDCT_US_2022_09_01:189815007
 xref: UMLS_CUI:C0206629
 is_a: DOID:1324 ! lung cancer
 
@@ -7121,7 +7254,7 @@ xref: ICDO:8973/3
 xref: MESH:C537516
 xref: NCI:C5669
 xref: ORDO:64742
-xref: SNOMEDCT_US_2022_03_01:707670009
+xref: SNOMEDCT_US_2022_09_01:707670009
 xref: UMLS_CUI:C1266144
 is_a: DOID:4765 ! pulmonary blastoma
 
@@ -7139,8 +7272,8 @@ xref: ICDO:9141/0
 xref: MESH:D000794
 xref: NCI:C2874
 xref: NCI:C4488
-xref: SNOMEDCT_US_2022_03_01:254788004
-xref: SNOMEDCT_US_2022_03_01:26810009
+xref: SNOMEDCT_US_2022_09_01:254788004
+xref: SNOMEDCT_US_2022_09_01:26810009
 xref: UMLS_CUI:C0002985
 xref: UMLS_CUI:C0346075
 
@@ -7154,8 +7287,8 @@ synonym: "Diktyoma, malignant" EXACT []
 synonym: "Medulloepithelioma, central nervous system" EXACT []
 xref: ICDO:9501/3
 xref: MESH:D018242
-xref: NCI:C4327
-xref: SNOMEDCT_US_2022_03_01:715903004
+xref: NCI:C66808
+xref: SNOMEDCT_US_2022_09_01:715903004
 xref: UMLS_CUI:C0334596
 is_a: DOID:0060103 ! central nervous system embryonal tumor
 
@@ -7170,7 +7303,7 @@ xref: ICDO:9490/0
 xref: MESH:D005729
 xref: NCI:C3049
 xref: NCI:C42065
-xref: SNOMEDCT_US_2022_03_01:189929007
+xref: SNOMEDCT_US_2022_09_01:189929007
 xref: UMLS_CUI:C0017075
 xref: UMLS_CUI:C1513025
 
@@ -7197,7 +7330,7 @@ xref: ICD10CM:D18.0
 xref: ICDO:9121/0
 xref: MESH:D006392
 xref: NCI:C3086
-xref: SNOMEDCT_US_2022_03_01:67668002
+xref: SNOMEDCT_US_2022_09_01:67668002
 xref: UMLS_CUI:C0018920
 
 [Term]
@@ -7210,7 +7343,7 @@ subset: NCIthesaurus
 xref: GARD:10558
 xref: ICDO:8982/3
 xref: NCI:C7596
-xref: SNOMEDCT_US_2022_03_01:24292006
+xref: SNOMEDCT_US_2022_09_01:24292006
 xref: UMLS_CUI:C0334699
 is_a: DOID:305 ! carcinoma
 
@@ -7226,7 +7359,7 @@ synonym: "WHO grade I Ependymal tumor" EXACT []
 xref: ICDO:9383/1
 xref: MESH:D018315
 xref: NCI:C3795
-xref: SNOMEDCT_US_2022_03_01:4553004
+xref: SNOMEDCT_US_2022_09_01:4553004
 xref: UMLS_CUI:C0206725
 is_a: DOID:0080829 ! low grade glioma
 
@@ -7239,7 +7372,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9425/3
 xref: NCI:C40315
-xref: SNOMEDCT_US_2022_03_01:388600004
+xref: SNOMEDCT_US_2022_09_01:388600004
 xref: UMLS_CUI:C1519086
 is_a: DOID:4851 ! pilocytic astrocytoma
 
@@ -7256,7 +7389,7 @@ xref: GARD:9808
 xref: ICDO:9421/1
 xref: MESH:D001254
 xref: NCI:C4047
-xref: SNOMEDCT_US_2022_03_01:67859002
+xref: SNOMEDCT_US_2022_09_01:67859002
 xref: UMLS_CUI:C0334583
 is_a: DOID:0080830 ! childhood low-grade glioma
 
@@ -7270,7 +7403,7 @@ subset: NCIthesaurus
 synonym: "Pleomorphic Xantho-astrocytoma" EXACT []
 xref: ICDO:9424/3
 xref: NCI:C4323
-xref: SNOMEDCT_US_2022_03_01:189924002
+xref: SNOMEDCT_US_2022_09_01:189924002
 xref: UMLS_CUI:C0334586
 is_a: DOID:0080829 ! low grade glioma
 
@@ -7282,7 +7415,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9442/1
 xref: NCI:C5419
-xref: SNOMEDCT_US_2022_03_01:128909006
+xref: SNOMEDCT_US_2022_09_01:128909006
 xref: UMLS_CUI:C1266178
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -7307,7 +7440,7 @@ subset: NCIthesaurus
 synonym: "Cylindroma" EXACT []
 xref: MESH:D003528
 xref: NCI:C2970
-xref: SNOMEDCT_US_2022_03_01:11671000
+xref: SNOMEDCT_US_2022_09_01:11671000
 xref: UMLS_CUI:C0010606
 is_a: DOID:0050904 ! salivary gland carcinoma
 
@@ -7319,7 +7452,7 @@ def: "A bile duct carcinoma that derives_from epithelial cells of glandular orig
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C27813
-xref: SNOMEDCT_US_2022_03_01:70179006
+xref: SNOMEDCT_US_2022_09_01:70179006
 xref: UMLS_CUI:C1370800
 is_a: DOID:4607 ! biliary tract cancer
 
@@ -7340,7 +7473,7 @@ xref: EFO:0002618
 xref: MESH:C562463
 xref: NCI:C3850
 xref: OMIM:260350
-xref: SNOMEDCT_US_2022_03_01:154475002
+xref: SNOMEDCT_US_2022_09_01:154475002
 xref: UMLS_CUI:C0235974
 is_a: DOID:1793 ! pancreatic cancer
 
@@ -7354,7 +7487,7 @@ subset: NCIthesaurus
 synonym: "Oesophageal adenocarcinoma" EXACT []
 xref: MESH:C562730
 xref: NCI:C4025
-xref: SNOMEDCT_US_2022_03_01:276803003
+xref: SNOMEDCT_US_2022_09_01:276803003
 xref: UMLS_CUI:C0279628
 is_a: DOID:1107 ! esophageal carcinoma
 
@@ -7368,7 +7501,7 @@ synonym: "carcinoma of the Pituitary gland" EXACT []
 xref: ICDO:8272/3
 xref: MESH:D010911
 xref: NCI:C4536
-xref: SNOMEDCT_US_2022_03_01:128665000
+xref: SNOMEDCT_US_2022_09_01:128665000
 xref: UMLS_CUI:C0346300
 is_a: DOID:162 ! cancer
 
@@ -7385,7 +7518,7 @@ synonym: "juvenile carcinoma of the breast" EXACT []
 synonym: "Juvenile Secretory carcinoma of breast" EXACT []
 xref: MESH:C537535
 xref: NCI:C4189
-xref: SNOMEDCT_US_2022_03_01:41919003
+xref: SNOMEDCT_US_2022_09_01:41919003
 xref: UMLS_CUI:C0334371
 is_a: DOID:3458 ! breast adenocarcinoma
 
@@ -7401,7 +7534,7 @@ synonym: "Bronchioloalveolar carcinoma" EXACT []
 synonym: "Minimally Invasive Lung Adenocarcinoma" EXACT []
 xref: MESH:D002282
 xref: NCI:C2923
-xref: SNOMEDCT_US_2022_03_01:307595008
+xref: SNOMEDCT_US_2022_09_01:307595008
 xref: UMLS_CUI:C0007120
 is_a: DOID:3910 ! lung adenocarcinoma
 
@@ -7418,7 +7551,7 @@ xref: GARD:6042
 xref: ICD10CM:C22.1
 xref: MESH:D018281
 xref: NCI:C35417
-xref: SNOMEDCT_US_2022_03_01:109842005
+xref: SNOMEDCT_US_2022_09_01:109842005
 xref: UMLS_CUI:C0345905
 is_a: DOID:4947 ! cholangiocarcinoma
 
@@ -7433,7 +7566,7 @@ synonym: "ampulla of vater cancer" EXACT []
 synonym: "ampullary carcinoma" EXACT []
 synonym: "carcinoma of ampulla of vater" EXACT []
 xref: NCI:C3908
-xref: SNOMEDCT_US_2022_03_01:254609000
+xref: SNOMEDCT_US_2022_09_01:254609000
 xref: UMLS_CUI:C0262401
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -7477,7 +7610,7 @@ xref: ICDO:8160/3
 xref: MESH:D018281
 xref: NCI:C4436
 xref: NCI:C8265
-xref: SNOMEDCT_US_2022_03_01:70179006
+xref: SNOMEDCT_US_2022_09_01:70179006
 xref: UMLS_CUI:C0206698
 xref: UMLS_CUI:C0280725
 is_a: DOID:4896 ! bile duct adenocarcinoma
@@ -7497,7 +7630,7 @@ synonym: "malignant neoplasm of bone marrow" EXACT []
 xref: EFO:0004251
 xref: ICD10CM:D47.1
 xref: MESH:D009196
-xref: SNOMEDCT_US_2022_03_01:128925001
+xref: SNOMEDCT_US_2022_09_01:128925001
 xref: UMLS_CUI:C0027022
 is_a: DOID:2531 ! hematologic cancer
 
@@ -7525,8 +7658,8 @@ xref: MESH:D055728
 xref: NCI:C2862
 xref: NCI:C3248
 xref: OMIM:254450
-xref: SNOMEDCT_US_2022_03_01:128843003
-xref: SNOMEDCT_US_2022_03_01:267572005
+xref: SNOMEDCT_US_2022_09_01:128843003
+xref: SNOMEDCT_US_2022_09_01:267572005
 xref: UMLS_CUI:C0001815
 xref: UMLS_CUI:C0026987
 is_a: DOID:0070004 ! myeloid neoplasm
@@ -7544,7 +7677,7 @@ synonym: "Hepatocellular carcinoma, fibrolamellar" EXACT []
 synonym: "Oncocytic Hepatocellular tumor" EXACT []
 xref: MESH:C537258
 xref: NCI:C4131
-xref: SNOMEDCT_US_2022_03_01:15619004
+xref: SNOMEDCT_US_2022_09_01:15619004
 xref: UMLS_CUI:C0334287
 is_a: DOID:684 ! hepatocellular carcinoma
 
@@ -7557,7 +7690,7 @@ subset: NCIthesaurus
 synonym: "pineal parenchymal tumour of intermediate differentiation" EXACT []
 xref: ICDO:9362/3
 xref: NCI:C6967
-xref: SNOMEDCT_US_2022_03_01:715904005
+xref: SNOMEDCT_US_2022_09_01:715904005
 xref: UMLS_CUI:C1367859
 is_a: DOID:1664 ! pineoblastoma
 
@@ -7604,12 +7737,12 @@ xref: NCI:C3534
 xref: NCI:C3535
 xref: NCI:C4764
 xref: OMIM:133239
-xref: SNOMEDCT_US_2022_03_01:126817006
-xref: SNOMEDCT_US_2022_03_01:187729008
-xref: SNOMEDCT_US_2022_03_01:93656003
-xref: SNOMEDCT_US_2022_03_01:93877002
-xref: SNOMEDCT_US_2022_03_01:93895004
-xref: SNOMEDCT_US_2022_03_01:94119000
+xref: SNOMEDCT_US_2022_09_01:126817006
+xref: SNOMEDCT_US_2022_09_01:187729008
+xref: SNOMEDCT_US_2022_09_01:93656003
+xref: SNOMEDCT_US_2022_09_01:93877002
+xref: SNOMEDCT_US_2022_09_01:93895004
+xref: SNOMEDCT_US_2022_09_01:94119000
 xref: UMLS_CUI:C0014859
 xref: UMLS_CUI:C0153413
 xref: UMLS_CUI:C0153414
@@ -7655,7 +7788,7 @@ xref: GARD:10633
 xref: ICDO:9394/1
 xref: MESH:D004806
 xref: NCI:C3697
-xref: SNOMEDCT_US_2022_03_01:1623000
+xref: SNOMEDCT_US_2022_09_01:1623000
 xref: UMLS_CUI:C0205769
 is_a: DOID:0080829 ! low grade glioma
 
@@ -7670,7 +7803,7 @@ xref: GARD:10632
 xref: ICDO:9384/1
 xref: MESH:D001254
 xref: NCI:C3696
-xref: SNOMEDCT_US_2022_03_01:449799008
+xref: SNOMEDCT_US_2022_09_01:449799008
 xref: UMLS_CUI:C0205768
 is_a: DOID:4843 ! subependymal glioma
 
@@ -7692,7 +7825,7 @@ xref: MESH:D018303
 xref: NCI:C27362
 xref: NCI:C27363
 xref: NCI:C3788
-xref: SNOMEDCT_US_2022_03_01:87191000119100
+xref: SNOMEDCT_US_2022_09_01:87191000119100
 xref: UMLS_CUI:C0206716
 xref: UMLS_CUI:C1332202
 xref: UMLS_CUI:C1332969
@@ -7709,7 +7842,7 @@ synonym: "Pleomorphic leiomyoma" EXACT []
 synonym: "Symplastic leiomyoma" EXACT []
 xref: ICDO:8893/0
 xref: NCI:C4257
-xref: SNOMEDCT_US_2022_03_01:48897006
+xref: SNOMEDCT_US_2022_09_01:48897006
 xref: UMLS_CUI:C0334478
 is_a: DOID:127 ! leiomyoma
 
@@ -7723,7 +7856,7 @@ subset: NCIthesaurus
 xref: ICDO:8890/1
 xref: MESH:D018231
 xref: NCI:C3748
-xref: SNOMEDCT_US_2022_03_01:1157154004
+xref: SNOMEDCT_US_2022_09_01:1157154004
 xref: UMLS_CUI:C0206654
 is_a: DOID:127 ! leiomyoma
 
@@ -7736,7 +7869,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8892/0
 xref: NCI:C4256
-xref: SNOMEDCT_US_2022_03_01:90955001
+xref: SNOMEDCT_US_2022_09_01:90955001
 xref: UMLS_CUI:C0334477
 is_a: DOID:127 ! leiomyoma
 
@@ -7749,7 +7882,7 @@ subset: NCIthesaurus
 xref: ICDO:9550/0
 xref: MESH:D018318
 xref: NCI:C3797
-xref: SNOMEDCT_US_2022_03_01:41252002
+xref: SNOMEDCT_US_2022_09_01:41252002
 xref: UMLS_CUI:C0206728
 is_a: DOID:962 ! neurofibroma
 
@@ -7787,7 +7920,7 @@ subset: NCIthesaurus
 synonym: "malignant Glomus neoplasm" EXACT []
 xref: ICDO:8710/3
 xref: NCI:C4221
-xref: SNOMEDCT_US_2022_03_01:128908003
+xref: SNOMEDCT_US_2022_09_01:128908003
 xref: UMLS_CUI:C1266111
 is_a: DOID:2431 ! glomus tumor
 
@@ -7803,7 +7936,7 @@ xref: GARD:8522
 xref: ICDO:9161/1
 xref: MESH:D018325
 xref: NCI:C3801
-xref: SNOMEDCT_US_2022_03_01:81201000
+xref: SNOMEDCT_US_2022_09_01:81201000
 xref: UMLS_CUI:C0206734
 is_a: DOID:255 ! hemangioma
 
@@ -7817,7 +7950,7 @@ subset: NCIthesaurus
 xref: ICDO:8891/3
 xref: MESH:D007890
 xref: NCI:C3700
-xref: SNOMEDCT_US_2022_03_01:42392001
+xref: SNOMEDCT_US_2022_09_01:42392001
 xref: UMLS_CUI:C0205815
 is_a: DOID:1967 ! leiomyosarcoma
 
@@ -7831,7 +7964,7 @@ subset: NCIthesaurus
 xref: ICDO:8896/3
 xref: MESH:D007890
 xref: NCI:C3701
-xref: SNOMEDCT_US_2022_03_01:189792003
+xref: SNOMEDCT_US_2022_09_01:189792003
 xref: UMLS_CUI:C0205816
 is_a: DOID:1967 ! leiomyosarcoma
 
@@ -7863,7 +7996,7 @@ xref: ICDO:8852/3
 xref: MESH:D018208
 xref: OMIM:613488
 xref: ORDO:99967
-xref: SNOMEDCT_US_2022_03_01:404069006
+xref: SNOMEDCT_US_2022_09_01:404069006
 xref: UMLS_CUI:C0206634
 is_a: DOID:3382 ! liposarcoma
 
@@ -7876,7 +8009,7 @@ subset: NCIthesaurus
 synonym: "adenoma of the bronchus" RELATED []
 synonym: "Bronchial adenoma" EXACT []
 xref: NCI:C3494
-xref: SNOMEDCT_US_2022_03_01:24482001
+xref: SNOMEDCT_US_2022_09_01:24482001
 xref: UMLS_CUI:C0149845
 
 [Term]
@@ -7892,7 +8025,7 @@ xref: KEGG:05222
 xref: MESH:D055752
 xref: NCI:C4917
 xref: OMIM:182280
-xref: SNOMEDCT_US_2022_03_01:254632001
+xref: SNOMEDCT_US_2022_09_01:254632001
 xref: UMLS_CUI:C0149925
 is_a: DOID:3905 ! lung carcinoma
 
@@ -7909,7 +8042,7 @@ xref: ICDO:9040/3
 xref: MESH:D013584
 xref: NCI:C3400
 xref: OMIM:300813
-xref: SNOMEDCT_US_2022_03_01:63211008
+xref: SNOMEDCT_US_2022_09_01:63211008
 xref: UMLS_CUI:C0039101
 is_a: DOID:162 ! cancer
 
@@ -7924,7 +8057,7 @@ synonym: "Ependymal neoplasm of the Spinal Cord" EXACT []
 synonym: "Spinal ependymoma" EXACT []
 xref: ICDO:9391/3
 xref: NCI:C3875
-xref: SNOMEDCT_US_2022_03_01:254949006
+xref: SNOMEDCT_US_2022_09_01:254949006
 xref: UMLS_CUI:C0238432
 is_a: DOID:5074 ! high grade ependymoma
 
@@ -7937,7 +8070,7 @@ subset: NCIthesaurus
 xref: ICDO:9393/3
 xref: MESH:D004806
 xref: NCI:C4319
-xref: SNOMEDCT_US_2022_03_01:112686007
+xref: SNOMEDCT_US_2022_09_01:112686007
 xref: UMLS_CUI:C0334578
 is_a: DOID:0080829 ! low grade glioma
 
@@ -7976,7 +8109,7 @@ synonym: "carcinoma of stomach" EXACT []
 synonym: "gastric carcinoma" EXACT []
 xref: EFO:0000178
 xref: NCI:C4911
-xref: SNOMEDCT_US_2022_03_01:154446008
+xref: SNOMEDCT_US_2022_09_01:154446008
 xref: UMLS_CUI:C0699791
 is_a: DOID:10534 ! stomach cancer
 
@@ -7992,7 +8125,7 @@ synonym: "Epidermoid cell carcinoma of penis" EXACT []
 synonym: "squamous cell carcinoma of penis" RELATED []
 xref: NCI:C6979
 xref: NCI:C7729
-xref: SNOMEDCT_US_2022_03_01:403468003
+xref: SNOMEDCT_US_2022_09_01:403468003
 xref: UMLS_CUI:C0238348
 xref: UMLS_CUI:C1336081
 is_a: DOID:3449 ! penis carcinoma
@@ -8012,7 +8145,7 @@ xref: GARD:8503
 xref: MESH:D000077195
 xref: NCI:C34447
 xref: OMIM:275355
-xref: SNOMEDCT_US_2022_03_01:716659002
+xref: SNOMEDCT_US_2022_09_01:716659002
 xref: UMLS_CUI:C1168401
 is_a: DOID:1542 ! head and neck carcinoma
 
@@ -8057,7 +8190,7 @@ xref: NCI:C8591
 xref: OMIM:273300
 xref: OMIM:300228
 xref: ORDO:3636504
-xref: SNOMEDCT_US_2022_03_01:713577007
+xref: SNOMEDCT_US_2022_09_01:713577007
 xref: UMLS_CUI:C1336708
 is_a: DOID:162 ! cancer
 
@@ -8077,7 +8210,7 @@ xref: ICDO:9080/3
 xref: MESH:D013724
 xref: NCI:C4286
 xref: NCI:C8884
-xref: SNOMEDCT_US_2022_03_01:1157239001
+xref: SNOMEDCT_US_2022_09_01:1157239001
 xref: UMLS_CUI:C0334520
 xref: UMLS_CUI:C0855163
 is_a: DOID:3307 ! teratoma
@@ -8161,7 +8294,7 @@ subset: NCIthesaurus
 synonym: "malignant Giant cell neoplasm of soft Parts" EXACT []
 xref: ICDO:9251/3
 xref: NCI:C8380
-xref: SNOMEDCT_US_2022_03_01:48460009
+xref: SNOMEDCT_US_2022_09_01:48460009
 xref: UMLS_CUI:C0334554
 is_a: DOID:162 ! cancer
 
@@ -8178,8 +8311,8 @@ xref: ICDO:9390/3
 xref: MESH:C562943
 xref: NCI:C4533
 xref: NCI:C4715
-xref: SNOMEDCT_US_2022_03_01:1156471001
-xref: SNOMEDCT_US_2022_03_01:188292007
+xref: SNOMEDCT_US_2022_09_01:1156471001
+xref: SNOMEDCT_US_2022_09_01:188292007
 xref: UMLS_CUI:C0346289
 xref: UMLS_CUI:C0431109
 is_a: DOID:1319 ! brain cancer
@@ -8203,7 +8336,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8857/3
 xref: NCI:C6509
-xref: SNOMEDCT_US_2022_03_01:128883006
+xref: SNOMEDCT_US_2022_09_01:128883006
 xref: UMLS_CUI:C1266130
 is_a: DOID:3382 ! liposarcoma
 
@@ -8216,7 +8349,7 @@ subset: NCIthesaurus
 xref: ICDO:8854/3
 xref: MESH:D008080
 xref: NCI:C3705
-xref: SNOMEDCT_US_2022_03_01:404071006
+xref: SNOMEDCT_US_2022_09_01:404071006
 xref: UMLS_CUI:C0205825
 is_a: DOID:3382 ! liposarcoma
 
@@ -8228,7 +8361,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8855/3
 xref: NCI:C4253
-xref: SNOMEDCT_US_2022_03_01:11073003
+xref: SNOMEDCT_US_2022_09_01:11073003
 xref: UMLS_CUI:C0334472
 is_a: DOID:3382 ! liposarcoma
 
@@ -8241,7 +8374,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "neuroblastoma of Adrenal gland" EXACT []
 xref: NCI:C4827
-xref: SNOMEDCT_US_2022_03_01:281562007
+xref: SNOMEDCT_US_2022_09_01:281562007
 xref: UMLS_CUI:C0559460
 is_a: DOID:162 ! cancer
 
@@ -8254,7 +8387,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "pancreatic acinar cell carcinoma" EXACT []
 xref: NCI:C7977
-xref: SNOMEDCT_US_2022_03_01:783771003
+xref: SNOMEDCT_US_2022_09_01:783771003
 xref: UMLS_CUI:C0279661
 is_a: DOID:4074 ! pancreatic adenocarcinoma
 
@@ -8332,7 +8465,7 @@ synonym: "endometrioid carcinoma of ovary" RELATED []
 synonym: "endometrioid carcinoma ovary" EXACT []
 synonym: "Ovarian endometrioid carcinoma" EXACT []
 xref: NCI:C7979
-xref: SNOMEDCT_US_2022_03_01:254852002
+xref: SNOMEDCT_US_2022_09_01:254852002
 xref: UMLS_CUI:C0346163
 is_a: DOID:4001 ! ovarian carcinoma
 
@@ -8351,7 +8484,7 @@ namespace: disease_ontology
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9231/3
-xref: SNOMEDCT_US_2022_03_01:75622000
+xref: SNOMEDCT_US_2022_09_01:75622000
 xref: UMLS_CUI:C0334551
 is_a: DOID:3371 ! chondrosarcoma
 
@@ -8364,7 +8497,7 @@ subset: NCIthesaurus
 xref: ICDO:9242/3
 xref: MESH:D000077207
 xref: NCI:C6475
-xref: SNOMEDCT_US_2022_03_01:128775007
+xref: SNOMEDCT_US_2022_09_01:128775007
 xref: UMLS_CUI:C1266167
 is_a: DOID:3371 ! chondrosarcoma
 
@@ -8392,15 +8525,16 @@ is_a: DOID:2668 ! mesenchymoma
 id: DOID:5900
 name: meningeal melanocytoma
 namespace: disease_ontology
+def: "A central nervous system benign neoplasm that is characterized as diffuse or multifocal proliferation of uniform nevoid polygonal cells in the leptomeninges." [url:https\://radiopaedia.org/articles/meningeal-melanocytosis?lang=us]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Leptomeningeal melanocytoma" EXACT []
 synonym: "melanocytoma of meninges" EXACT []
 xref: ICDO:8728/1
 xref: NCI:C4662
-xref: SNOMEDCT_US_2022_03_01:128730009
+xref: ORDO:252046
+xref: SNOMEDCT_US_2022_09_01:128730009
 xref: UMLS_CUI:C1266113
-is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:5940
@@ -8413,7 +8547,7 @@ xref: GARD:10872
 xref: ICDO:9540/3
 xref: MESH:D018319
 xref: NCI:C3798
-xref: SNOMEDCT_US_2022_03_01:134324009
+xref: SNOMEDCT_US_2022_09_01:134324009
 xref: UMLS_CUI:C0751690
 is_a: DOID:3193 ! peripheral nerve sheath neoplasm
 
@@ -8542,8 +8676,23 @@ subset: NCIthesaurus
 synonym: "melanoma of the leptomeninges" EXACT []
 xref: ICDO:8720/3
 xref: NCI:C5317
-xref: SNOMEDCT_US_2022_03_01:726420002
+xref: SNOMEDCT_US_2022_09_01:726420002
 xref: UMLS_CUI:C1334386
+is_a: DOID:6086 ! malignant leptomeningeal neoplasm
+
+[Term]
+id: DOID:6086
+name: malignant leptomeningeal neoplasm
+namespace: disease_ontology
+subset: DO_cancer_slim
+subset: NCIthesaurus
+synonym: "leptomeningeal cancer" EXACT []
+synonym: "malignant leptomeningeal tumor" EXACT []
+synonym: "malignant leptomeningeal tumour" EXACT []
+synonym: "malignant tumor of Leptomeninges" EXACT []
+synonym: "malignant tumour of Leptomeninges" EXACT []
+xref: NCI:C8506
+xref: UMLS_CUI:C1334596
 is_a: DOID:3565 ! meningioma
 
 [Term]
@@ -8569,7 +8718,7 @@ xref: GARD:6514
 xref: ICDO:9381/3
 xref: MESH:D018302
 xref: NCI:C4318
-xref: SNOMEDCT_US_2022_03_01:26138003
+xref: SNOMEDCT_US_2022_09_01:26138003
 xref: UMLS_CUI:C0334576
 is_a: DOID:1319 ! brain cancer
 
@@ -8621,7 +8770,7 @@ subset: NCIthesaurus
 synonym: "mixed mullerian sarcoma of uterus" EXACT []
 xref: GARD:12335
 xref: NCI:C42700
-xref: SNOMEDCT_US_2022_03_01:702369008
+xref: SNOMEDCT_US_2022_09_01:702369008
 xref: UMLS_CUI:C0280630
 is_a: DOID:363 ! uterine cancer
 
@@ -8648,7 +8797,7 @@ xref: GARD:10181
 xref: ICDO:8804/3
 xref: MESH:D012509
 xref: NCI:C3714
-xref: SNOMEDCT_US_2022_03_01:782827000
+xref: SNOMEDCT_US_2022_09_01:782827000
 xref: UMLS_CUI:C0205944
 is_a: DOID:162 ! cancer
 
@@ -8705,7 +8854,7 @@ xref: ICD10CM:C96.4
 xref: ICDO:9758/3
 xref: MESH:D054740
 xref: NCI:C9281
-xref: SNOMEDCT_US_2022_03_01:128816008
+xref: SNOMEDCT_US_2022_09_01:128816008
 xref: UMLS_CUI:C1260325
 is_a: DOID:5621 ! histiocytic and dendritic cell cancer
 
@@ -8720,7 +8869,7 @@ synonym: "Inflammatory carcinoma of breast" EXACT []
 synonym: "Mastitis carcinomatosa" EXACT []
 xref: MESH:D058922
 xref: NCI:C4001
-xref: SNOMEDCT_US_2022_03_01:254840009
+xref: SNOMEDCT_US_2022_09_01:254840009
 xref: UMLS_CUI:C0278601
 is_a: DOID:3458 ! breast adenocarcinoma
 
@@ -8746,7 +8895,7 @@ synonym: "B-cell lymphocytic leukemia/small lymphocytic lymphoma" EXACT []
 synonym: "CLL/SLL" EXACT []
 synonym: "ICDO:9823/3" EXACT []
 xref: NCI:C27911
-xref: SNOMEDCT_US_2022_03_01:399607007
+xref: SNOMEDCT_US_2022_09_01:399607007
 xref: UMLS_CUI:C1302547
 is_a: DOID:1040 ! chronic lymphocytic leukemia
 
@@ -8784,6 +8933,33 @@ xref: UMLS_CUI:C1332950
 is_a: DOID:6383 ! childhood brain stem glioma
 
 [Term]
+id: DOID:6457
+name: Cowden syndrome
+namespace: disease_ontology
+alt_id: DOID:3471
+def: "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome, url:http\://rarediseases.info.nih.gov/gard/6202/cowden-syndrome/resources/1]
+comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
+subset: DO_cancer_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Cowden disease" EXACT []
+synonym: "dysplastic Gangliocytoma of Cerebellum" EXACT []
+synonym: "Lhermitte-Duclos disease" EXACT []
+synonym: "multiple hamartoma syndrome" RELATED []
+xref: GARD:6202
+xref: ICDO:9493/0
+xref: MESH:D006223
+xref: NCI:C3076
+xref: NCI:C8419
+xref: OMIM:PS158350
+xref: ORDO:201
+xref: SNOMEDCT_US_2022_09_01:58037000
+xref: SNOMEDCT_US_2022_09_01:67944007
+xref: UMLS_CUI:C0018553
+xref: UMLS_CUI:C0391826
+is_a: DOID:0080191 ! PTEN hamartoma tumor syndrome
+
+[Term]
 id: DOID:6458
 name: cerebellar liponeurocytoma
 namespace: disease_ontology
@@ -8794,7 +8970,7 @@ synonym: "Lipomatous Medulloblastoma" EXACT []
 xref: GARD:10642
 xref: ICDO:9506/1
 xref: NCI:C6905
-xref: SNOMEDCT_US_2022_03_01:734134003
+xref: SNOMEDCT_US_2022_09_01:734134003
 xref: UMLS_CUI:C1370507
 is_a: DOID:1319 ! brain cancer
 
@@ -8843,22 +9019,6 @@ xref: UMLS_CUI:C1332984
 is_a: DOID:5861 ! myxoid chondrosarcoma
 
 [Term]
-id: DOID:6496
-name: extraskeletal myxoid chondrosarcoma
-namespace: disease_ontology
-def: "An extraosseous chondrosarcoma that has_material_basis_in cells derived from transformed cells that produce cartilage and is characterized by a marked abundance of extracellular mucoid (myxoid) matrix." [url:http\://en.wikipedia.org/wiki/Chondrosarcoma, url:http\://en.wikipedia.org/wiki/Myxoid_chondrosarcoma, url:http\://en.wikipedia.org/wiki/Myxoid_tumor, url:https\://www.ncbi.nlm.nih.gov/pubmed/10564384]
-comment: OMIM mapping confirmed by DO. [SN].
-subset: DO_cancer_slim
-subset: NCIthesaurus
-synonym: "Myxoid extraosseous chondrosarcoma" EXACT []
-xref: MESH:C563195
-xref: NCI:C27502
-xref: OMIM:612237
-xref: SNOMEDCT_US_2022_03_01:404079008
-xref: UMLS_CUI:C1275278
-is_a: DOID:3371 ! chondrosarcoma
-
-[Term]
 id: DOID:6511
 name: glandular pattern ovarian yolk sac tumor
 namespace: disease_ontology
@@ -8878,7 +9038,7 @@ subset: NCIthesaurus
 xref: ICDO:9534/0
 xref: MESH:D008579
 xref: NCI:C4332
-xref: SNOMEDCT_US_2022_03_01:73918009
+xref: SNOMEDCT_US_2022_09_01:73918009
 xref: UMLS_CUI:C0334608
 is_a: DOID:3565 ! meningioma
 
@@ -8933,7 +9093,7 @@ synonym: "osseous epithelioid hemangioma" EXACT []
 synonym: "osseous hemangioma" EXACT []
 xref: NCI:C5396
 xref: NCI:C6477
-xref: SNOMEDCT_US_2022_03_01:685021000119103
+xref: SNOMEDCT_US_2022_09_01:685021000119103
 xref: UMLS_CUI:C1332575
 xref: UMLS_CUI:C1332578
 
@@ -8973,7 +9133,7 @@ synonym: "Fibrillary Astrocytic tumors" EXACT []
 xref: ICDO:9420/3
 xref: MESH:D001254
 xref: NCI:C4322
-xref: SNOMEDCT_US_2022_03_01:71314006
+xref: SNOMEDCT_US_2022_09_01:71314006
 xref: UMLS_CUI:C0334582
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -9046,7 +9206,7 @@ xref: GARD:4210
 xref: ICDO:8971/3
 xref: MESH:C537162
 xref: NCI:C4265
-xref: SNOMEDCT_US_2022_03_01:53618008
+xref: SNOMEDCT_US_2022_09_01:53618008
 xref: UMLS_CUI:C0334489
 is_a: DOID:4905 ! pancreatic carcinoma
 
@@ -9058,7 +9218,7 @@ def: "A pancreatic carcinoma that is characterized by its papillary architecture
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C5728
-xref: SNOMEDCT_US_2022_03_01:782697005
+xref: SNOMEDCT_US_2022_09_01:782697005
 xref: UMLS_CUI:C1336029
 is_a: DOID:4905 ! pancreatic carcinoma
 
@@ -9079,7 +9239,7 @@ xref: MESH:D006528
 xref: NCI:C3099
 xref: OMIM:114550
 xref: ORDO:88673
-xref: SNOMEDCT_US_2022_03_01:154469006
+xref: SNOMEDCT_US_2022_09_01:154469006
 xref: UMLS_CUI:C2239176
 is_a: DOID:3571 ! liver cancer
 
@@ -9094,7 +9254,7 @@ xref: ICD10CM:C22.2
 xref: ICDO:8970/3
 xref: MESH:D018197
 xref: NCI:C3728
-xref: SNOMEDCT_US_2022_03_01:109843000
+xref: SNOMEDCT_US_2022_09_01:109843000
 xref: UMLS_CUI:C0206624
 is_a: DOID:3571 ! liver cancer
 
@@ -9118,7 +9278,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8711/1
 xref: NCI:C27496
-xref: SNOMEDCT_US_2022_03_01:703603008
+xref: SNOMEDCT_US_2022_09_01:703603008
 xref: UMLS_CUI:C1333824
 
 [Term]
@@ -9166,7 +9326,7 @@ synonym: "Gemistocytic Astrocytic tumor" EXACT []
 xref: ICDO:9411/3
 xref: MESH:D001254
 xref: NCI:C4321
-xref: SNOMEDCT_US_2022_03_01:73982001
+xref: SNOMEDCT_US_2022_09_01:73982001
 xref: UMLS_CUI:C0334581
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -9192,7 +9352,7 @@ synonym: "Protoplasmic Astrocytic tumor" EXACT []
 xref: ICDO:9410/3
 xref: MESH:D001254
 xref: NCI:C4320
-xref: SNOMEDCT_US_2022_03_01:55094006
+xref: SNOMEDCT_US_2022_09_01:55094006
 xref: UMLS_CUI:C0334580
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -9231,9 +9391,9 @@ synonym: "B-cell lymphocytic neoplasm" EXACT []
 xref: GARD:5877
 xref: MESH:D016393
 xref: NCI:C3457
-xref: SNOMEDCT_US_2022_03_01:109979007
+xref: SNOMEDCT_US_2022_09_01:109979007
 xref: UMLS_CUI:C0079731
-is_a: DOID:0060058 ! lymphoma
+is_a: DOID:0060060 ! non-Hodgkin lymphoma
 
 [Term]
 id: DOID:7095
@@ -9259,7 +9419,7 @@ xref: ICDO:9756/3
 xref: MESH:D054752
 xref: NCI:C6921
 xref: ORDO:86897
-xref: SNOMEDCT_US_2022_03_01:724649000
+xref: SNOMEDCT_US_2022_09_01:724649000
 xref: UMLS_CUI:C1260327
 is_a: DOID:5621 ! histiocytic and dendritic cell cancer
 property_value: exactMatch MESH:D054752 xsd:string
@@ -9282,7 +9442,7 @@ subset: NCIthesaurus
 xref: ICDO:9533/0
 xref: MESH:D008579
 xref: NCI:C4331
-xref: SNOMEDCT_US_2022_03_01:38431002
+xref: SNOMEDCT_US_2022_09_01:38431002
 xref: UMLS_CUI:C0334607
 is_a: DOID:3565 ! meningioma
 
@@ -9296,7 +9456,7 @@ synonym: "Fibroblastic meningioma" EXACT []
 xref: ICDO:9532/0
 xref: MESH:D008579
 xref: NCI:C4330
-xref: SNOMEDCT_US_2022_03_01:511008
+xref: SNOMEDCT_US_2022_09_01:511008
 xref: UMLS_CUI:C0334606
 is_a: DOID:3565 ! meningioma
 
@@ -9310,7 +9470,7 @@ synonym: "Meningotheliomatous meningioma" EXACT []
 xref: ICDO:9531/0
 xref: MESH:D008579
 xref: NCI:C4329
-xref: SNOMEDCT_US_2022_03_01:68944005
+xref: SNOMEDCT_US_2022_09_01:68944005
 xref: UMLS_CUI:C0334605
 is_a: DOID:3565 ! meningioma
 
@@ -9324,7 +9484,7 @@ synonym: "transitional (mixed) meningioma" EXACT []
 xref: ICDO:9537/0
 xref: MESH:D008579
 xref: NCI:C4333
-xref: SNOMEDCT_US_2022_03_01:64967004
+xref: SNOMEDCT_US_2022_09_01:64967004
 xref: UMLS_CUI:C0334611
 is_a: DOID:3565 ! meningioma
 
@@ -9365,7 +9525,7 @@ xref: GARD:10635
 xref: ICDO:9430/3
 xref: MESH:D018302
 xref: NCI:C4324
-xref: SNOMEDCT_US_2022_03_01:48952003
+xref: SNOMEDCT_US_2022_09_01:48952003
 xref: UMLS_CUI:C0334587
 is_a: DOID:3069 ! malignant astrocytoma
 
@@ -9420,7 +9580,7 @@ xref: ICD10CM:D19.9
 xref: ICDO:9054/0
 xref: MESH:D018254
 xref: NCI:C3762
-xref: SNOMEDCT_US_2022_03_01:2348006
+xref: SNOMEDCT_US_2022_09_01:2348006
 xref: UMLS_CUI:C0206675
 is_a: DOID:2645 ! benign mesothelioma
 property_value: exactMatch MESH:D018254 xsd:string
@@ -9447,7 +9607,7 @@ synonym: "malignant mesothelioma of pleura" EXACT []
 xref: ICD10CM:C45.0
 xref: MESH:D000086002
 xref: NCI:C7376
-xref: SNOMEDCT_US_2022_03_01:254645002
+xref: SNOMEDCT_US_2022_09_01:254645002
 xref: UMLS_CUI:C0812413
 is_a: DOID:162 ! cancer
 
@@ -9526,7 +9686,7 @@ synonym: "Intracortical osteosarcoma" EXACT []
 synonym: "Medullary Osteosarcoma" EXACT []
 xref: ICDO:9195/3
 xref: NCI:C35870
-xref: SNOMEDCT_US_2022_03_01:128770002
+xref: SNOMEDCT_US_2022_09_01:128770002
 xref: UMLS_CUI:C1266166
 is_a: DOID:3376 ! bone osteosarcoma
 
@@ -9549,7 +9709,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8800/9
 xref: NCI:C4243
-xref: SNOMEDCT_US_2022_03_01:9395006
+xref: SNOMEDCT_US_2022_09_01:9395006
 xref: UMLS_CUI:C0334451
 is_a: DOID:1115 ! sarcoma
 
@@ -9603,7 +9763,7 @@ xref: ICDO:9510/3
 xref: MESH:D012175
 xref: NCI:C7541
 xref: OMIM:180200
-xref: SNOMEDCT_US_2022_03_01:154553002
+xref: SNOMEDCT_US_2022_09_01:154553002
 xref: UMLS_CUI:C0035335
 is_a: DOID:771 ! retinal cell cancer
 
@@ -9622,7 +9782,7 @@ xref: ICDO:9500/3
 xref: MESH:D009447
 xref: NCI:C3270
 xref: ORDO:635
-xref: SNOMEDCT_US_2022_03_01:432328008
+xref: SNOMEDCT_US_2022_09_01:432328008
 xref: UMLS_CUI:C0027819
 is_a: DOID:162 ! cancer
 
@@ -9730,7 +9890,7 @@ xref: ICD10CM:C96.4
 xref: ICDO:9757/3
 xref: MESH:D054739
 xref: NCI:C9282
-xref: SNOMEDCT_US_2022_03_01:128815007
+xref: SNOMEDCT_US_2022_09_01:715664005
 xref: UMLS_CUI:C1260326
 is_a: DOID:5621 ! histiocytic and dendritic cell cancer
 
@@ -9765,7 +9925,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8713/0
 xref: NCI:C4223
-xref: SNOMEDCT_US_2022_03_01:189745002
+xref: SNOMEDCT_US_2022_09_01:189745002
 xref: UMLS_CUI:C0334422
 
 [Term]
@@ -9826,7 +9986,7 @@ synonym: "oncocytic carcinoma of the thyroid" EXACT []
 xref: MESH:C536913
 xref: NCI:C4946
 xref: OMIM:607464
-xref: SNOMEDCT_US_2022_03_01:423158009
+xref: SNOMEDCT_US_2022_09_01:423158009
 xref: UMLS_CUI:C0749424
 is_a: DOID:3962 ! thyroid gland follicular carcinoma
 
@@ -9834,12 +9994,13 @@ is_a: DOID:3962 ! thyroid gland follicular carcinoma
 id: DOID:8243
 name: meningeal melanomatosis
 namespace: disease_ontology
+def: "A central nervous system melanocytic neoplasm that is characterized as an extra-axial well-encapsulated malignant tumour with diffuse meningeal growth and dark coloration (due to high melanin contents)." [url:https\://neurosurgery.directory/2020/10/04/diffuse-leptomeningeal-melanocytosis/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Leptomeningeal melanomatosis" EXACT []
 xref: ICDO:8728/3
 xref: NCI:C6891
-xref: SNOMEDCT_US_2022_03_01:128731008
+xref: SNOMEDCT_US_2022_09_01:128731008
 xref: UMLS_CUI:C1266114
 is_a: DOID:162 ! cancer
 
@@ -9851,7 +10012,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8901/3
 xref: NCI:C27369
-xref: SNOMEDCT_US_2022_03_01:77455004
+xref: SNOMEDCT_US_2022_09_01:77455004
 xref: UMLS_CUI:C1332211
 is_a: DOID:3250 ! pleomorphic rhabdomyosarcoma
 
@@ -9886,7 +10047,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Infantile fibrosarcoma" EXACT []
 xref: NCI:C4244
-xref: SNOMEDCT_US_2022_03_01:403996004
+xref: SNOMEDCT_US_2022_09_01:403996004
 xref: UMLS_CUI:C0334459
 is_a: DOID:3520 ! childhood fibrosarcoma
 
@@ -9912,8 +10073,8 @@ xref: ICD9CM:148
 xref: ICD9CM:148.3
 xref: MESH:D007012
 xref: NCI:C7190
-xref: SNOMEDCT_US_2022_03_01:93831006
-xref: SNOMEDCT_US_2022_03_01:93968005
+xref: SNOMEDCT_US_2022_09_01:93831006
+xref: SNOMEDCT_US_2022_09_01:93968005
 xref: UMLS_CUI:C0153398
 xref: UMLS_CUI:C0496770
 is_a: DOID:3119 ! gastrointestinal system cancer
@@ -9932,7 +10093,7 @@ xref: ICD10CM:C84.1
 xref: ICD9CM:202.2
 xref: MESH:D012751
 xref: NCI:C3366
-xref: SNOMEDCT_US_2022_03_01:4950009
+xref: SNOMEDCT_US_2022_09_01:4950009
 xref: UMLS_CUI:C0036920
 is_a: DOID:0050749 ! peripheral T-cell lymphoma
 
@@ -9962,7 +10123,7 @@ xref: ICDO:9863/3
 xref: KEGG:05220
 xref: OMIM:608232
 xref: ORDO:521
-xref: SNOMEDCT_US_2022_03_01:154592009
+xref: SNOMEDCT_US_2022_09_01:154592009
 xref: UMLS_CUI:C0023473
 is_a: DOID:1240 ! leukemia
 
@@ -9991,9 +10152,9 @@ xref: ICD9CM:146.5
 xref: ICD9CM:146.6
 xref: ICD9CM:146.7
 xref: NCI:C7398
-xref: SNOMEDCT_US_2022_03_01:187686007
-xref: SNOMEDCT_US_2022_03_01:93933005
-xref: SNOMEDCT_US_2022_03_01:93971002
+xref: SNOMEDCT_US_2022_09_01:187686007
+xref: SNOMEDCT_US_2022_09_01:93933005
+xref: SNOMEDCT_US_2022_09_01:93971002
 xref: UMLS_CUI:C0153382
 xref: UMLS_CUI:C0153388
 xref: UMLS_CUI:C0153389
@@ -10036,7 +10197,7 @@ xref: OMIM:236000
 xref: OMIM:300221
 xref: OMIM:400021
 xref: ORDO:98293
-xref: SNOMEDCT_US_2022_03_01:118599009
+xref: SNOMEDCT_US_2022_09_01:118599009
 xref: UMLS_CUI:C0019829
 is_a: DOID:0060058 ! lymphoma
 property_value: exactMatch MESH:D006689 xsd:string
@@ -10064,7 +10225,7 @@ xref: MESH:D002051
 xref: NCI:C2912
 xref: OMIM:113970
 xref: ORDO:543
-xref: SNOMEDCT_US_2022_03_01:118617000
+xref: SNOMEDCT_US_2022_09_01:118617000
 xref: UMLS_CUI:C0006413
 is_a: DOID:706 ! mature B-cell neoplasm
 
@@ -10084,7 +10245,7 @@ xref: ICDO:9700/3
 xref: MESH:D009182
 xref: NCI:C3246
 xref: OMIM:254400
-xref: SNOMEDCT_US_2022_03_01:118618005
+xref: SNOMEDCT_US_2022_09_01:118618005
 xref: UMLS_CUI:C0026948
 is_a: DOID:0050749 ! peripheral T-cell lymphoma
 
@@ -10100,7 +10261,7 @@ subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of salivary gland" EXACT []
 xref: ICD10CM:C08
 xref: ICD9CM:142.8
-xref: SNOMEDCT_US_2022_03_01:187648003
+xref: SNOMEDCT_US_2022_09_01:187648003
 xref: UMLS_CUI:C0153362
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -10137,7 +10298,7 @@ xref: MESH:C562393
 xref: NCI:C3510
 xref: OMIM:608035
 xref: OMIM:612263
-xref: SNOMEDCT_US_2022_03_01:269577007
+xref: SNOMEDCT_US_2022_09_01:269577007
 xref: UMLS_CUI:C0151779
 is_a: DOID:162 ! cancer
 
@@ -10163,8 +10324,8 @@ xref: ICDO:9950/3
 xref: MESH:D011087
 xref: NCI:C3336
 xref: OMIM:263300
-xref: SNOMEDCT_US_2022_03_01:154644004
-xref: SNOMEDCT_US_2022_03_01:188753004
+xref: SNOMEDCT_US_2022_09_01:154644004
+xref: SNOMEDCT_US_2022_09_01:188753004
 xref: UMLS_CUI:C0032463
 xref: UMLS_CUI:C0152272
 is_a: DOID:2226 ! myeloproliferative neoplasm
@@ -10196,7 +10357,7 @@ xref: KEGG:05221
 xref: MESH:D015470
 xref: NCI:C3171
 xref: OMIM:601626
-xref: SNOMEDCT_US_2022_03_01:17788007
+xref: SNOMEDCT_US_2022_09_01:17788007
 xref: UMLS_CUI:C0023467
 is_a: DOID:1240 ! leukemia
 
@@ -10218,7 +10379,7 @@ xref: ICDO:8936/3
 xref: MESH:D046152
 xref: NCI:C3868
 xref: OMIM:606764
-xref: SNOMEDCT_US_2022_03_01:1187383001
+xref: SNOMEDCT_US_2022_09_01:1187383001
 xref: UMLS_CUI:C0238198
 is_a: DOID:3119 ! gastrointestinal system cancer
 
@@ -10233,7 +10394,7 @@ xref: ICD10CM:C94.3
 xref: ICDO:9742/3
 xref: MESH:D007946
 xref: NCI:C3169
-xref: SNOMEDCT_US_2022_03_01:110002002
+xref: SNOMEDCT_US_2022_09_01:110002002
 xref: UMLS_CUI:C0023461
 is_a: DOID:1240 ! leukemia
 
@@ -10253,8 +10414,8 @@ xref: MESH:D015179
 xref: NCI:C2956
 xref: NCI:C4978
 xref: OMIM:114500
-xref: SNOMEDCT_US_2022_03_01:126837005
-xref: SNOMEDCT_US_2022_03_01:93854002
+xref: SNOMEDCT_US_2022_09_01:126837005
+xref: SNOMEDCT_US_2022_09_01:93854002
 xref: UMLS_CUI:C0009404
 xref: UMLS_CUI:C0346629
 is_a: DOID:3119 ! gastrointestinal system cancer
@@ -10295,12 +10456,12 @@ xref: NCI:C9321
 xref: OMIM:161550
 xref: OMIM:607107
 xref: ORDO:150
-xref: SNOMEDCT_US_2022_03_01:187692001
-xref: SNOMEDCT_US_2022_03_01:187693006
-xref: SNOMEDCT_US_2022_03_01:187700006
-xref: SNOMEDCT_US_2022_03_01:363398003
-xref: SNOMEDCT_US_2022_03_01:93919005
-xref: SNOMEDCT_US_2022_03_01:94078000
+xref: SNOMEDCT_US_2022_09_01:187692001
+xref: SNOMEDCT_US_2022_09_01:187693006
+xref: SNOMEDCT_US_2022_09_01:187700006
+xref: SNOMEDCT_US_2022_09_01:363398003
+xref: SNOMEDCT_US_2022_09_01:93919005
+xref: SNOMEDCT_US_2022_09_01:94078000
 xref: UMLS_CUI:C0153392
 xref: UMLS_CUI:C0153393
 xref: UMLS_CUI:C0153394
@@ -10325,7 +10486,7 @@ xref: ICD9CM:203.1
 xref: ICDO:9733/3
 xref: MESH:D007952
 xref: NCI:C3180
-xref: SNOMEDCT_US_2022_03_01:269630009
+xref: SNOMEDCT_US_2022_09_01:269630009
 xref: UMLS_CUI:C0023484
 is_a: DOID:706 ! mature B-cell neoplasm
 
@@ -10346,7 +10507,7 @@ xref: MESH:D009101
 xref: NCI:C3242
 xref: OMIM:254500
 xref: ORDO:29073
-xref: SNOMEDCT_US_2022_03_01:94705007
+xref: SNOMEDCT_US_2022_09_01:94705007
 xref: UMLS_CUI:C0026764
 is_a: DOID:0070004 ! myeloid neoplasm
 
@@ -10360,7 +10521,7 @@ xref: GARD:7191
 xref: ICDO:9540/0
 xref: MESH:D009455
 xref: NCI:C3272
-xref: SNOMEDCT_US_2022_03_01:404029005
+xref: SNOMEDCT_US_2022_09_01:404029005
 xref: UMLS_CUI:C0027830
 is_a: DOID:3193 ! peripheral nerve sheath neoplasm
 
@@ -10388,7 +10549,7 @@ xref: NCI:C7055
 xref: OMIM:247640
 xref: OMIM:613065
 xref: ORDO:513
-xref: SNOMEDCT_US_2022_03_01:128822004
+xref: SNOMEDCT_US_2022_09_01:128822004
 xref: UMLS_CUI:C0023449
 xref: UMLS_CUI:C1335469
 is_a: DOID:12603 ! acute leukemia
@@ -10405,7 +10566,7 @@ xref: ICD10CM:C95.0
 xref: ICDO:9805/3
 xref: MESH:D015456
 xref: NCI:C4673
-xref: SNOMEDCT_US_2022_03_01:128818009
+xref: SNOMEDCT_US_2022_09_01:128818009
 xref: UMLS_CUI:C0023464
 is_a: DOID:12603 ! acute leukemia
 

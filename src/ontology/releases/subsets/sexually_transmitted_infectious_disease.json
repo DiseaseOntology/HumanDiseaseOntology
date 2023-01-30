@@ -7,13 +7,11 @@
           "val" : "A commensal bacterial infectious disease that results_in infection located_in lymph nodes, has_material_basis_in Chlamydia trachomatis, which is transmitted_by sexual contact, and transmitted_by fomites. The infection has_symptom inguinal lymphadenitis, has_symptom abscesses in the groin area, and has_symptom lymphangitis.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Lymphogranuloma_venereum" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
           "val" : "GARD:9545"
         }, {
           "val" : "MESH:D008219"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:266213004"
         }, {
           "val" : "ICD9CM:099.1"
         }, {
@@ -22,6 +20,8 @@
           "val" : "NCI:C26822"
         }, {
           "val" : "UMLS_CUI:C0024286"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:266213004"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -75,10 +75,8 @@
           "val" : "A syphilis that is characterized as the second stage of syphilis which appears from 2 to 6 months after primary infection, and is marked by lesions especially in the skin but also in organs and tissues, and that lasts from 3 to 12 weeks.",
           "xrefs" : [ "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=secondary+syphilis" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:154382002"
-        }, {
           "val" : "ICD9CM:091.9"
         }, {
           "val" : "MESH:C536773"
@@ -86,6 +84,8 @@
           "val" : "UMLS_CUI:C0149985"
         }, {
           "val" : "NCI:C128413"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:154382002"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -184,11 +184,11 @@
           "val" : "A syphilis that is the first stage of syphilis, marked by the development of a chancre, which is characterized by mononuclear leukocytic infiltration, macrophages, and lymphocytes.",
           "xrefs" : [ "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=primary+syphilis" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:186846005"
-        }, {
           "val" : "UMLS_CUI:C0153139"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:186846005"
         }, {
           "val" : "ICD9CM:091"
         } ],
@@ -256,11 +256,11 @@
           "val" : "A tertiary syphilis that is manifested as aneurysm formation in the ascending aorta, caused by chronic inflammatory destruction of the vasa vasorum, insufficiency of the aortic valve, or narrowing of the coronary arteries.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:111823001"
-        }, {
           "val" : "UMLS_CUI:C0029751"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:111823001"
         }, {
           "val" : "ICD9CM:093.8"
         } ],
@@ -272,13 +272,28 @@
       "type" : "CLASS",
       "lbl" : "cardiovascular syphilis"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0050490",
+      "meta" : {
+        "definition" : {
+          "val" : "A tertiary neurosyphilis that results when chronic meningoencephalitis causes destruction of cortical parenchyma. The infection has_symptom irritability, has_symptom difficulty concentrating, has_symptom deterioration of memory, has_symptom defective judgment, has_symptom headaches, has_symptom insomnia, has_symptom fatigue, and has_symptom lethargy.",
+          "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "parenchymatous neurosyphilis"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_13453",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:186928003"
-        }, {
           "val" : "UMLS_CUI:C0153218"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:186928003"
         }, {
           "val" : "ICD9CM:098.52"
         }, {
@@ -291,21 +306,6 @@
       },
       "type" : "CLASS",
       "lbl" : "gonococcal bursitis"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_0050490",
-      "meta" : {
-        "definition" : {
-          "val" : "A tertiary neurosyphilis that results when chronic meningoencephalitis causes destruction of cortical parenchyma. The infection has_symptom irritability, has_symptom difficulty concentrating, has_symptom deterioration of memory, has_symptom defective judgment, has_symptom headaches, has_symptom insomnia, has_symptom fatigue, and has_symptom lethargy.",
-          "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "parenchymatous neurosyphilis"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_10142",
       "meta" : {
@@ -364,8 +364,10 @@
           "val" : "A primary bacterial infectious disease that is a sexually transmitted infection located in skin of the genitals, has_material_basis_in Haemophilus ducreyi, which is transmitted by sexual contact. The infection has symptom painful and soft ulcers.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Chancroid" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:154391003"
+        }, {
           "val" : "ICD9CM:099.0"
         }, {
           "val" : "GARD:9522"
@@ -375,8 +377,6 @@
           "val" : "UMLS_CUI:C0007947"
         }, {
           "val" : "MESH:D002602"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:154391003"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -437,7 +437,7 @@
           "val" : "A tertiary neurosyphilis that results in slow degeneration of the nerve cells and nerve fibers that carry sensory information to the brain. The infection has symptom intense, stabbing pain in the back and legs that recurs irregularly, has symptom gait ataxia, has symptom hyperesthesia, has symptom paresthesia, has symptom loss of bladder sensation leading to urine retention, has symptom erectile dysfunction.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh", "url:http://www.ninds.nih.gov/disorders/tabes_dorsalis/tabes_dorsalis.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
           "val" : "GARD:8730"
         }, {
@@ -447,7 +447,7 @@
         }, {
           "val" : "UMLS_CUI:C0039223"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:266134000"
+          "val" : "SNOMEDCT_US_2022_09_01:266134000"
         }, {
           "val" : "ICD9CM:094.0"
         }, {
@@ -533,7 +533,7 @@
           "val" : "A tertiary neurosyphilis that results in inflammation located_in arteries of the brain or located_in arteries of spinal cord. The infection has_symptom headache, has_symptom neck stiffness, has_symptom dizziness, has_symptom behavioral abnormalities, has _symptom poor concentration, has_symptom memory loss, has _symptom lassitude, has_symptom insomnia, has_symptom blurred vision, has_symptom weakness and wasting of shoulder-girdle and arm muscles, has_symptom slowly progressive leg weakness with urinary or fecal incontinence or both, and has_symptom paralysis of the legs due to thrombosis of spinal arteries.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -550,7 +550,7 @@
         }, {
           "val" : "ICD9CM:098.51"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:186927008"
+          "val" : "SNOMEDCT_US_2022_09_01:186927008"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -620,7 +620,7 @@
           "val" : "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.",
           "xrefs" : [ "url:http://www.cdc.gov/std/herpes/stdfact-herpes.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
           "val" : "UMLS_CUI:C0019342"
         }, {
@@ -628,7 +628,7 @@
         }, {
           "val" : "MESH:D006558"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:154333002"
+          "val" : "SNOMEDCT_US_2022_09_01:154333002"
         }, {
           "val" : "ICD9CM:054.1"
         } ],
@@ -687,10 +687,8 @@
           "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus, which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Molluscum_contagiosum", "url:http://www.cdc.gov/ncidod/dvrd/molluscum/overview.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:154360009"
-        }, {
           "val" : "NCI:C155872"
         }, {
           "val" : "MESH:D008976"
@@ -700,6 +698,8 @@
           "val" : "ICD10CM:B08.1"
         }, {
           "val" : "UMLS_CUI:C0026393"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:154360009"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -732,15 +732,15 @@
           "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus, which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Hepatitis_B#Transmission", "url:http://www.cdc.gov/hepatitis/HBV/index.htm", "url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "NCI:C3097"
         }, {
           "val" : "MESH:D006509"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:66071002"
-        }, {
           "val" : "EFO:0004197"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:66071002"
         }, {
           "val" : "UMLS_CUI:C0019163"
         } ],
@@ -796,7 +796,7 @@
           "val" : "A primary bacterial infectious disease that results_in infection located_in skin or located_in mucosa of genital tract, has_material_basis_in Klebsiella granulomatis, transmitted by sexual contact or transmitted_by contact with the open sores. The infection has_symptom painless genital ulcers.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Granuloma_inguinale" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
           "val" : "GARD:9532"
         }, {
@@ -804,9 +804,9 @@
         }, {
           "val" : "ICD10CM:A58"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:186947000"
-        }, {
           "val" : "MESH:D006100"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:186947000"
         }, {
           "val" : "ICD9CM:099.2"
         }, {
@@ -835,11 +835,11 @@
           "val" : "A bacterial meningitis that is characterized by inflammation of the tissues covering the brain and spinal cord.",
           "xrefs" : [ "url:https://medlineplus.gov/ency/article/000724.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:14968007"
-        }, {
           "val" : "ICD9CM:094.2"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:14968007"
         }, {
           "val" : "GARD:8731"
         }, {
@@ -924,17 +924,17 @@
           "val" : "A viral infectious disease that results_in infection located_in skin of vagina, cervix, uterus, anus, penis, scrotum, mouth, or throat, has_material_basis_in human papillomaviruses (types 6 and 11), which are transmitted_by direct contact with the skin during oral, genital, or anal sex with an infected partner. The infection has_symptom anogenital warts.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194d.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:302812006"
+        }, {
           "val" : "MESH:D003218"
         }, {
           "val" : "UMLS_CUI:C0554632"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:302812006"
+          "val" : "SNOMEDCT_US_2022_09_01:240542006"
         }, {
           "val" : "NCI:C4820"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:240542006"
         }, {
           "val" : "ICD10CM:A63.0"
         }, {
@@ -986,7 +986,7 @@
           "val" : "A tertiary neurosyphilis that results_in mild meningitis.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
           "val" : "ICD10CM:A52.2"
         }, {
@@ -994,7 +994,7 @@
         }, {
           "val" : "MESH:D009494"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:37754005"
+          "val" : "SNOMEDCT_US_2022_09_01:37754005"
         }, {
           "val" : "ICD9CM:094.3"
         } ],
@@ -1096,7 +1096,7 @@
           "val" : "A tertiary syphilis that results in infection located in brain or located in spinal cord.",
           "xrefs" : [ "url:http://www.merckmanuals.com/professional/sec14/ch194/ch194i.html?qt=latent%20syphylis&alt=sh", "url:http://www.nlm.nih.gov/medlineplus/ency/article/000703.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "MESH:D009494"
         }, {
@@ -1106,7 +1106,7 @@
         }, {
           "val" : "UMLS_CUI:C0027927"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:154384001"
+          "val" : "SNOMEDCT_US_2022_09_01:154384001"
         }, {
           "val" : "NCI:C84935"
         } ],
@@ -1222,11 +1222,11 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:26135000"
+        }, {
           "val" : "ICD9CM:094.81"
         }, {
           "val" : "UMLS_CUI:C0153168"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:26135000"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1554,13 +1554,13 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:186923007"
+        }, {
           "val" : "ICD9CM:098.42"
         }, {
           "val" : "UMLS_CUI:C0153213"
         }, {
           "val" : "ICD10CM:A54.39"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:186923007"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1576,13 +1576,13 @@
           "val" : "A primary bacterial infectious disease that is a sexually transmitted systemic disease, has_material_basis_in Treponema pallidum subsp pallidum, which is transmitted_by sexual contact, transmitted_by blood product transfusion, transmitted_by congenital method from mother to fetus or transmitted_by contact with infectious lesions. If left untreated, produces chancres, rashes, and systemic lesions in a clinical course with three stages continued over many years.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Syphilis", "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syphilis" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
           "val" : "ICD10CM:A51.0"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:736686006"
-        }, {
           "val" : "MESH:D002601"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:736686006"
         }, {
           "val" : "UMLS_CUI:C0007939"
         } ],
@@ -1608,7 +1608,7 @@
         "xrefs" : [ {
           "val" : "ICD10CM:A54.33"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:186924001"
+          "val" : "SNOMEDCT_US_2022_09_01:186924001"
         }, {
           "val" : "ICD9CM:098.43"
         }, {
@@ -1645,8 +1645,10 @@
           "val" : "A syphilis that is characterized as having serologic proof of infection without signs or symptoms of disease.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Syphilis#Latent_syphilis" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:444150000"
+        }, {
           "val" : "MESH:D013592"
         }, {
           "val" : "ICD9CM:097.1"
@@ -1654,8 +1656,6 @@
           "val" : "NCI:C35056"
         }, {
           "val" : "UMLS_CUI:C0039133"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:444150000"
         }, {
           "val" : "ICD10CM:A53.0"
         } ],
@@ -1682,13 +1682,13 @@
           "val" : "A syphilis that is characterized as the third stage of syphilis that develops after the disappearance of the secondary symptoms and is marked by ulcers and gummas under the skin and commonly by involvement of the skeletal, cardiovascular, and nervous systems.",
           "xrefs" : [ "url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tertiary+syphilis" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
+          "val" : "SNOMEDCT_US_2022_09_01:72083004"
+        }, {
           "val" : "ICD10CM:A52"
         }, {
           "val" : "ICD9CM:097.0"
-        }, {
-          "val" : "SNOMEDCT_US_2022_03_01:72083004"
         }, {
           "val" : "UMLS_CUI:C0153188"
         }, {
@@ -1715,11 +1715,11 @@
           "val" : "A primary bacterial infectious disease that is a sexually transmitted infection, located_in uterus, located_in fallopian tube, located_in urethra, located_in mouth, located_in throat, located_in eye or located_in anus, has_material_basis_in Neisseria gonorrhoeae, which is transmitted_by contact with the penis, vagina, mouth, or anus or transmitted_by congenitally from mother to baby during delivery. The infection has_symptom burning sensation during urination, has_symptom discharge from the penis, has_symptom increased vaginal discharge, or has_symptom vaginal bleeding between periods.",
           "xrefs" : [ "url:http://www.cdc.gov/std/gonorrhea/STDFact-gonorrhea.htm" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "NCI:C92950"
+          "val" : "SNOMEDCT_US_2022_09_01:186943001"
         }, {
-          "val" : "SNOMEDCT_US_2022_03_01:186943001"
+          "val" : "NCI:C92950"
         }, {
           "val" : "MESH:D006069"
         }, {
@@ -1758,13 +1758,13 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease", "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:186922002"
-        }, {
           "val" : "ICD10CM:A54.32"
         }, {
           "val" : "UMLS_CUI:C0153212"
         }, {
           "val" : "ICD9CM:098.41"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:186922002"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1801,10 +1801,8 @@
           "val" : "A lice infestation that involves parasitic infestation by pubic lice Pthirus pubis, which are found in the pubic hair, less commonly in eyebrows, eyelashes, beard, mustache, armpit, perianal area, groin, trunk and scalp. The symptoms include itching in the pubic and groin area. Intense itching leads to scratching which can cause sores and secondary bacterial infection of the skin.",
           "xrefs" : [ "url:http://www.cdc.gov/lice/pubic/disease.html" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:71011005"
-        }, {
           "val" : "ICD9CM:132.2"
         }, {
           "val" : "NCI:C35777"
@@ -1812,6 +1810,8 @@
           "val" : "UMLS_CUI:C0030759"
         }, {
           "val" : "ICD10CM:B85.3"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:71011005"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1930,11 +1930,11 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#gram-negative_bacterial_infectious_disease", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "xrefs" : [ {
-          "val" : "SNOMEDCT_US_2022_03_01:186929006"
-        }, {
           "val" : "UMLS_CUI:C0153219"
         }, {
           "val" : "ICD9CM:098.53"
+        }, {
+          "val" : "SNOMEDCT_US_2022_09_01:186929006"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1990,7 +1990,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2022-12-15/subsets/sexually_transmitted_infectious_disease.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-01-30/subsets/sexually_transmitted_infectious_disease.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

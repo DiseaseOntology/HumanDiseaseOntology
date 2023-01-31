@@ -28,7 +28,7 @@ HD = src/ontology/HumanDO
 # 5. Verify logical structure of products with SPARQL queries
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
-release: imports version_imports products verify publish post
+release: imports version_imports test products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
 # This will download all new sources for the imports and may take some time
@@ -106,24 +106,30 @@ $(REFRESH_IMPS):
 report: build/reports/report.tsv
 
 # Report for general issues on doid-edit
-
 .PRECIOUS: build/reports/report.tsv
-build/reports/report.tsv: $(EDIT) | build/robot.jar build/reports
+build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/robot.jar build/reports
 	@echo ""
 	@$(ROBOT) report --input $< \
-	 --profile src/sparql/report/report_profile.txt \
+	 --profile $(word 2,$^) \
 	 --labels true --output $@
-	@echo "Full DO QC report available at $@"
+	@echo "Full doid-edit QC report available at $@"
 	@echo ""
-
-
-.PRECIOUS: build/reports/diff.
-
 
 # Simple reasoning test
 reason: $(EDIT) | build/robot.jar
 	@$(ROBOT) reason --input $<
 	@echo "Reasoning completed successfully!"
+
+# Verify doid-edit.owl
+EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
+
+verify-edit: $(EDIT) | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(EDIT_V_QUERIES) \
+	 --output-dir build/reports
+
 
 # ----------------------------------------
 # BRITISH SYNONYMS
@@ -418,6 +424,8 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 # Count classes, imports, and logical defs from old and new
 
+.PRECIOUS: build/reports/diff.
+
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \
@@ -514,23 +522,15 @@ validate-%: src/ontology/%.obo | $(FASTOBO)
 	@$(FASTOBO) $<
 
 
-EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
 DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
     # We are not reduced to single inheritence in DNC
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
-verify: validate-obo verify-edit verify-do verify-dnc
+verify: validate-obo verify-do verify-dnc
 
 
-# Verify doid-edit.owl
-verify-edit: $(EDIT) | build/robot.jar build/reports/report.tsv
-	@echo "Verifying $< (see build/reports on error)"
-	@$(ROBOT) verify \
-	 --input $< \
-	 --queries $(EDIT_V_QUERIES) \
-	 --output-dir build/reports
 
 # Verify doid.obo
 verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv

@@ -508,15 +508,11 @@ build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
 # Ensure proper OBO structure
 #-------------------------------
 
-validate-obo: validate-$(DO) validate-$(DNC)
+validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
 
-.PHONY: validate-$(DO)
-validate-$(DO): $(DO).obo | $(FASTOBO)
-	$(FASTOBO) $<
+validate-%: src/ontology/%.obo | $(FASTOBO)
+	@$(FASTOBO) $<
 
-.PHONY: validate-$(DNC)
-validate-$(DNC): $(DNC).obo | $(FASTOBO)
-	$(FASTOBO) $<
 
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
@@ -525,7 +521,8 @@ DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 
-verify: verify-edit verify-do verify-dnc
+verify: validate-obo verify-edit verify-do verify-dnc
+
 
 # Verify doid-edit.owl
 verify-edit: $(EDIT) | build/robot.jar build/reports/report.tsv

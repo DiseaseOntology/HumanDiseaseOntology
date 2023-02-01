@@ -7,8 +7,7 @@ WHERE {
 	?class a owl:Class ;
         rdfs:subClassOf* ?branch_iri .
     ?branch_iri rdfs:subClassOf obo:DOID_4 ;
-        rdfs:label ?branch_label .
-    BIND(REPLACE(str(?branch_label), "disease (of|by) *", "") AS ?branch)
+        rdfs:label ?branch .
 }
 GROUP BY ?branch
 ORDER BY ?branch

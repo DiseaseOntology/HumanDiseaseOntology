@@ -514,23 +514,15 @@ build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
 # Ensure proper OBO structure
 #-------------------------------
 
-validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
+verify: validate-obo verify-do verify-dnc
 
+# Using fastobo-validator
+validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
 validate-%: src/ontology/%.obo | $(FASTOBO)
 	@$(FASTOBO) $<
 
-
-V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
-DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
-    # We are not reduced to single inheritence in DNC
-    # Once this is cleaned up, we can change to all DNC verifications
-#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
-
-verify: validate-obo verify-do verify-dnc
-
-
-
 # Verify doid.obo
+V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
 verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
@@ -539,6 +531,10 @@ verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
 	 --output-dir build/reports
 
 # Verify doid-non-classified.obo
+DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
+    # We are not reduced to single inheritence in DNC
+    # Once this is cleaned up, we can change to all DNC verifications
+#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
 verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \

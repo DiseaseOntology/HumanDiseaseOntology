@@ -37,7 +37,7 @@ all: refresh_imports release
 # `make test` is used for Travis integration
 test: reason build/reports/report.tsv verify-edit
 
-build build/reports:
+build build/reports build/reports/temp:
 	mkdir -p $@
 
 # ----------------------------------------
@@ -469,11 +469,20 @@ build/reports/report-diff.txt: last-reports new-reports
 	@python3 src/util/report-diff.py
 	@echo "Diff report between current release and last release available at $@"
 
-# create a count of the various disease branches
-build/reports/branch-count.tsv: $(DNC).owl | build/robot.jar build/reports
-	@echo "Counting all branches..."
-	@python3 src/util/branch_count/branch_count.py $< $@
-	@echo "Branch count available at $@"
+# create a count of asserted and total (asserted + inferred) classes in each branch
+#	doid-edit.owl could be used in place of doid-non-classified (pre-reasoned = same results)
+branch_reports = $(foreach O, doid-non-classified doid, build/reports/temp/branch-count-$(O).tsv)
+$(branch_reports): build/reports/temp/branch-count-%.tsv: src/ontology/%.owl \
+ src/sparql/build/branch-count.rq  | build/robot.jar build/reports/temp
+	@echo "Counting all branches in $<..."
+	@$(ROBOT) query \
+	 --input $< \
+	 --query $(word 2,$^) $@
+
+build/reports/branch-count.tsv: $(branch_reports)
+	@echo "Branch counts available at $@"
+	@echo -e "branch\tasserted\ttotal" > $@
+	@join -t $$'\t' -o $$'\t' <(sed '/^?/d' $< | sort -k1) <(sed '/^?/d' $(word 2,$^) | sort -k1) >> $@
 
 # the following targets are used to build a smaller diff with only removed axioms to review
 build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar

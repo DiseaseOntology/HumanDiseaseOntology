@@ -35,7 +35,7 @@ release: imports version_imports test products verify publish post
 all: refresh_imports release
 
 # `make test` is used for Travis integration
-test: reason build/reports/report.tsv verify-edit
+test: reason report verify-edit
 
 build build/reports build/reports/temp:
 	mkdir -p $@

@@ -390,7 +390,8 @@ REL_REPORTS := $(patsubst src/sparql/DOreports/%.rq, DOreports/%.tsv, \
 	$(wildcard src/sparql/DOreports/*.rq)) \
 
 .PHONY: rel_reports
-rel_reports: $(REL_REPORTS)
+rel_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
+ DOreports/DO-equivalentClass.tsv
 
 DOreports:
 	mkdir $@
@@ -399,6 +400,21 @@ DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports build/robot.jar
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
+
+DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports build/robot.jar
+	@robot export --input $< \
+	 --header "ID|LABEL|SubClass Of [ANON]" \
+	 --export $@
+	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
+	@echo "Created $@"
+
+DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports build/robot.jar
+	@robot export --input $< \
+	 --header "ID|LABEL|Equivalent Class" \
+	 --export $@
+	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
+	@echo "Created $@"
+
 
 # ----------------------------------------
 # RELEASE

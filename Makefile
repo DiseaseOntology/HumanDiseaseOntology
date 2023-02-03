@@ -19,6 +19,7 @@ HD = src/ontology/HumanDO
 # to make a release, use `make release`
 # to update imports, use `make imports`
 # to do both, use `make all`
+# to run QC tests on doid-edit.owl, use `make test`
 
 # Release process:
 # 1. Build import modules (if anything has changed)
@@ -34,8 +35,6 @@ release: imports version_imports test products verify publish post
 # This will download all new sources for the imports and may take some time
 all: refresh_imports release
 
-# `make test` is used for Travis integration
-test: reason report verify-edit
 
 build build/reports build/reports/temp:
 	mkdir -p $@
@@ -102,7 +101,10 @@ $(REFRESH_IMPS):
 # PRE-BUILD TESTS
 # ----------------------------------------
 
-.PHONY: report reason verify-edit
+.PHONY: test report reason verify-edit
+
+# `make test` is used for Github integration
+test: reason report verify-edit
 
 # Report for general issues on doid-edit
 report: build/reports/report.tsv

@@ -123,7 +123,7 @@ reason: $(EDIT) | build/robot.jar
 # Verify doid-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 
-verify-edit: $(EDIT) | build/robot.jar build/reports/report.tsv
+verify-edit: $(EDIT) | build/robot.jar
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
 	 --input $< \

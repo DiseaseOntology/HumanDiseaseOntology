@@ -238,6 +238,11 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/
 	 --select annotation-properties \
 	 --term-file annotations.txt \
 	 --term IAO:0000115 \
+	remove \
+	 --term HP:0003674 \
+	 --term rdfs:label \
+	 --axioms annotation \
+	 --trim false \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # WARNING: NCBITaxon is BIG! This will take time.
@@ -298,6 +303,11 @@ uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt build/ube
 	 --select "UBERON:*" \
 	 --select complement \
 	 --select classes \
+	remove \
+	 --term UBERON:0001062 \
+	 --term rdfs:label \
+	 --axioms annotation \
+	 --trim false \
 	$(call annotate_import,$@,$(word 2,$|))
 
 

@@ -102,10 +102,11 @@ $(REFRESH_IMPS):
 # PRE-BUILD TESTS
 # ----------------------------------------
 
-.PHONY: report
-report: build/reports/report.tsv
+.PHONY: report reason verify-edit
 
 # Report for general issues on doid-edit
+report: build/reports/report.tsv
+
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/robot.jar build/reports
 	@echo ""

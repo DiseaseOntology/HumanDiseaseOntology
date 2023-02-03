@@ -289,7 +289,8 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build
 	$(call annotate_import,$@,$(word 2,$|))
 
 uberon: uberon_import.owl
-uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt build/uberon.version
+uberon_import.owl: build/uberon.owl uberon_terms.txt build/uberon_rm_label.txt \
+ | annotations.txt build/uberon.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \
@@ -304,6 +305,7 @@ uberon_import.owl: build/uberon.owl uberon_terms.txt | annotations.txt build/ube
 	 --select complement \
 	 --select classes \
 	remove \
+	 --term-file $(word 3,$^) \
 	 --term UBERON:0001062 \
 	 --term rdfs:label \
 	 --axioms annotation \
@@ -337,3 +339,6 @@ build/so_variant.owl: build/so.owl
 	remove \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	 --output $@
+
+build/uberon_rm_label.txt: uberon_terms.txt | build
+	@sed -nE 's/^[^U]*(UBERON:[0-9]+).*@REPLACE/\1/p' $< > $@

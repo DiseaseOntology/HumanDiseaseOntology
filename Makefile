@@ -47,7 +47,7 @@ build build/reports build/reports/temp:
 # run `make update_robot` to get a new version of ROBOT
 .PHONY: update_robot
 update_robot:
-	rm -rf build/robot.jar && make build/robot.jar
+	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
 build/robot.jar: | build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.8.3/robot.jar
@@ -80,15 +80,15 @@ MANUAL_IMPS := disdriv eco omim_susc
 
 imports: | build/robot.jar
 	@echo "Checking import modules..."
-	@cd src/ontology/imports && make imports
+	@cd src/ontology/imports && $(MAKE) imports
 
 refresh_imports: | build/robot.jar
 	@echo "Refreshing import modules (this may take some time)..."
-	@cd src/ontology/imports && make refresh_imports
+	@cd src/ontology/imports && $(MAKE) refresh_imports
 
 $(IMPS): | build/robot.jar
 	@echo "Generating $@ import module..."
-	@cd src/ontology/imports && make $@
+	@cd src/ontology/imports && $(MAKE) $@
 
 # Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
 REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))

@@ -201,23 +201,6 @@ TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE := $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
 
-# Set versionIRI for imports & ext.owl (if updated)
-.PHONY: version_imports
-version_imports: | imports build/robot.jar
-	@echo "Updating versionIRI of ext.owl & imports..."
-	@$(ROBOT) annotate \
-	 --input src/ontology/ext.owl \
-	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
-	convert \
-	 --format ofn \
-	 --output src/ontology/ext.owl
-	@for IMP in $(IMPS) $(MANUAL_IMPS); do \
-		$(ROBOT) annotate \
-		 --input src/ontology/imports/$${IMP}_import.owl \
-		 --version-iri "$(RELEASE_PREFIX)imports/$${IMP}_import.owl" \
-		 --output src/ontology/imports/$${IMP}_import.owl ; \
-	 done
-
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason \
 	 --input $< \
@@ -401,6 +384,34 @@ src/DOreports/%.tsv: $(EDIT) src/sparql/build/DOreport-%.rq | src/DOreports buil
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
+
+
+# ----------------------------------------
+# VERSIONING IMPORTS
+# ----------------------------------------
+
+# Set versionIRI for imports & ext.owl (whether updated or not)
+VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
+
+.PHONY: version_imports version_ext $(VERSION_IMPS)
+version_imports: $(VERSION_IMPS) version_ext
+
+version_ext: src/ontology/ext.owl | imports build/robot.jar
+	@$(ROBOT) annotate \
+	 --input $< \
+	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
+	convert \
+	 --format ofn \
+	 --output $<
+	@echo "Updated versionIRI of $<"
+
+$(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | imports build/robot.jar
+	@$(ROBOT) annotate \
+	 --input $< \
+	 --version-iri "$(RELEASE_PREFIX)imports/$(notdir $<)" \
+	 --output $<
+	@echo "Updated versionIRI of $<"
+
 
 # ----------------------------------------
 # RELEASE

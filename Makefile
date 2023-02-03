@@ -18,7 +18,6 @@ HD = src/ontology/HumanDO
 
 # to make a release, use `make release`
 # to update imports, use `make imports`
-# to do both, use `make all`
 # to run QC tests on doid-edit.owl, use `make test`
 
 # Release process:
@@ -29,6 +28,7 @@ HD = src/ontology/HumanDO
 # 5. Verify logical structure of products with SPARQL queries
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
+.PHONY: release all
 release: imports version_imports test products verify publish post
 
 # Only run `make all` if you'd like to refresh imports during the release!
@@ -38,6 +38,7 @@ all: refresh_imports release
 
 build build/reports build/reports/temp:
 	mkdir -p $@
+
 
 # ----------------------------------------
 # ROBOT & FASTOBO

@@ -480,9 +480,11 @@ $(branch_reports): build/reports/temp/branch-count-%.tsv: src/ontology/%.owl \
 	 --query $(word 2,$^) $@
 
 build/reports/branch-count.tsv: $(branch_reports)
+	@join -t $$'\t' -o $$'\t' <(sed '/^?/d' $< | sort -k1) <(sed '/^?/d' $(word 2,$^) | sort -k1) > $@
+	@awk 'BEGIN{ FS=OFS="\t" ; print "branch\tasserted\tinferred\ttotal" } \
+	 {print $$1, $$2, $$3-$$2, $$3}' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Branch counts available at $@"
-	@echo -e "branch\tasserted\ttotal" > $@
-	@join -t $$'\t' -o $$'\t' <(sed '/^?/d' $< | sort -k1) <(sed '/^?/d' $(word 2,$^) | sort -k1) >> $@
+
 
 # the following targets are used to build a smaller diff with only removed axioms to review
 build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar

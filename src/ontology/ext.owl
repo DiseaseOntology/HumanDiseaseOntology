@@ -1,143 +1,298 @@
-Prefix(:=<http://purl.obolibrary.org/obo/doid/obo/ext.owl/>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(doid:=<http://purl.obolibrary.org/obo/doid#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid/obo/ext.owl#"
+     xml:base="http://purl.obolibrary.org/obo/doid/obo/ext.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/obo/ext.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-01-30/ext.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/eco_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/geno_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/ro_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/so_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/symp_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/trans_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl"/>
+    </owl:Ontology>
+    
 
 
-Ontology(<http://purl.obolibrary.org/obo/doid/obo/ext.owl>
-<http://purl.obolibrary.org/obo/doid/releases/2023-01-30/ext.owl>
-Import(<http://purl.obolibrary.org/obo/doid/imports/chebi_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/cl_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/eco_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/foodon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/geno_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ncbitaxon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/omim_susc_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/so_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/symp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/trans_import.owl>)
-Import(<http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl>)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-Declaration(Class(obo:NCBITaxon_1))
-Declaration(Class(obo:UPHENO_0001001))
-Declaration(Class(doid:chebi))
-Declaration(Class(doid:sequence))
-Declaration(ObjectProperty(obo:RO_0002452))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#has_origin>))
-Declaration(AnnotationProperty(obo:OBI_9991118))
-Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
-Declaration(AnnotationProperty(oboInOwl:date))
-Declaration(AnnotationProperty(oboInOwl:default-namespace))
-Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
-Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
-Declaration(AnnotationProperty(oboInOwl:saved-by))
-############################
-#   Annotation Properties
-############################
-
-# Annotation Property: obo:OBI_9991118 (IEDB alternative term)
-
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.iedb.org") obo:IAO_0000115 obo:OBI_9991118 "An alternative term used by the IEDB.")
-AnnotationAssertion(rdfs:label obo:OBI_9991118 "IEDB alternative term")
+    
 
 
-############################
-#   Object Properties
-############################
+    <!-- http://purl.obolibrary.org/obo/OBI_9991118 -->
 
-# Object Property: <http://purl.obolibrary.org/obo/so#has_origin> (has_origin)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/so#has_origin> "has_origin"^^xsd:string)
-
-
-
-############################
-#   Classes
-############################
-
-# Class: obo:CHEBI_24431 (chemical entity)
-
-SubClassOf(obo:CHEBI_24431 doid:chebi)
-
-# Class: obo:CHEBI_50906 (role)
-
-SubClassOf(obo:CHEBI_50906 doid:chebi)
-
-# Class: obo:HP_0000118 (Phenotypic abnormality)
-
-SubClassOf(obo:HP_0000118 obo:UPHENO_0001001)
-
-# Class: obo:NCBITaxon_1 (ncbitaxon)
-
-AnnotationAssertion(oboInOwl:id obo:NCBITaxon_1 "NCBITaxon:1")
-AnnotationAssertion(rdfs:label obo:NCBITaxon_1 "ncbitaxon"^^xsd:string)
-
-# Class: obo:NCBITaxon_10239 (Viruses)
-
-SubClassOf(obo:NCBITaxon_10239 obo:NCBITaxon_1)
-
-# Class: obo:NCBITaxon_131567 (cellular organisms)
-
-SubClassOf(obo:NCBITaxon_131567 obo:NCBITaxon_1)
-
-# Class: obo:SO_0000110 (sequence_feature)
-
-SubClassOf(obo:SO_0000110 doid:sequence)
-
-# Class: obo:SO_0000400 (sequence_attribute)
-
-SubClassOf(obo:SO_0000400 doid:sequence)
-
-# Class: obo:SO_0001060 (sequence_variant)
-
-SubClassOf(obo:SO_0001060 doid:sequence)
-
-# Class: obo:SO_0001260 (sequence_collection)
-
-SubClassOf(obo:SO_0001260 doid:sequence)
-
-# Class: obo:UPHENO_0001001 (phenotype)
-
-AnnotationAssertion(rdfs:label obo:UPHENO_0001001 "phenotype"^^xsd:string)
-
-# Class: doid:chebi (chebi)
-
-AnnotationAssertion(rdfs:label doid:chebi "chebi"^^xsd:string)
-
-# Class: doid:sequence (sequence)
-
-AnnotationAssertion(rdfs:label doid:sequence "sequence"^^xsd:string)
-SubClassOf(doid:sequence owl:Thing)
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_9991118">
+        <obo:IAO_0000115>An alternative term used by the IEDB.</obo:IAO_0000115>
+        <rdfs:label>IEDB alternative term</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBI_9991118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An alternative term used by the IEDB.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.iedb.org</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
 
 
-AnnotationAssertion(oboInOwl:id obo:CL_0000000 "CL:0000000")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:GENO_0000146 "X-linked dominant inheritance"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:GENO_0000146 "GENO:0000146"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:GENO_0000148 "GENO:0000148"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:GENO_0000149 "X-linked recessive inheritance"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:GENO_0000149 "GENO:0000149"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:GENO_0000150 "GENO:0000150"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:HP_0003674 "onset"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "2019-nCoV")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "HCoV-19"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "Human coronavirus 2019"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "SARS-2"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "SARS-CoV-2"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "SARS2"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "Wuhan coronavirus")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:NCBITaxon_2697049 "Wuhan seafood market pneumonia virus"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomy"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0001463 "thumb"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0001893 "cerebrum"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0002387 "foot"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0002389 "finger"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:UBERON_0002398 "hand"^^xsd:string)
-)
+    <!-- http://www.geneontology.org/formats/oboInOwl#auto-generated-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002452 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002452"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/so#has_origin -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/so#has_origin">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_origin</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24431 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#chebi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50906 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50906">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#chebi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1">
+        <oboInOwl:id>NCBITaxon:1</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbitaxon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10239 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000110 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#sequence"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000400 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000400">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#sequence"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001060 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#sequence"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001260 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/doid#sequence"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UPHENO_0001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0001001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#chebi -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/doid#chebi">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#sequence -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/doid#sequence">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0000000">
+        <oboInOwl:id>CL:0000000</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000146">
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-linked dominant inheritance</oboInOwl:hasExactSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENO:0000146</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000148">
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENO:0000148</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000149">
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENO:0000149</oboInOwl:id>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-linked recessive inheritance</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000150">
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENO:0000150</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HP_0003674">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onset</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2697049">
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wuhan seafood market pneumonia virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Wuhan coronavirus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human coronavirus 2019</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-2</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCoV-19</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2019-nCoV</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS2</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0001062">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0001463">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thumb</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0001893">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cerebrum</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002387">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">foot</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002389">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">finger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002398">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hand</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+

@@ -40,8 +40,13 @@ build build/reports build/reports/temp:
 	mkdir -p $@
 
 
+
+##########################################
+## SOFTWARE SETUP
+##########################################
+
 # ----------------------------------------
-# ROBOT & FASTOBO
+# ROBOT
 # ----------------------------------------
 
 # run `make update_robot` to get a new version of ROBOT
@@ -54,6 +59,10 @@ build/robot.jar: | build
 
 ROBOT := java -jar build/robot.jar
 
+# ----------------------------------------
+# FASTOBO
+# ----------------------------------------
+
 # fastobo is used to validate OBO structure
 FASTOBO := build/fastobo-validator
 
@@ -64,43 +73,9 @@ $(FASTOBO): build/fastobo-validator.zip
 	cd build && unzip $(notdir $<) fastobo-validator
 
 
-# ----------------------------------------
-# BUILDING IMPORTS
-# ----------------------------------------
-
-# Import update options (each can be executed here or from the src/ontology/imports dir):
-# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
-# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
-# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
-# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
-
-IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
-# define imports updated manually, solely for versioning
-MANUAL_IMPS := disdriv eco omim_susc
-
-imports: | build/robot.jar
-	@echo "Checking import modules..."
-	@cd src/ontology/imports && $(MAKE) imports
-
-refresh_imports: | build/robot.jar
-	@echo "Refreshing import modules (this may take some time)..."
-	@cd src/ontology/imports && $(MAKE) refresh_imports
-
-$(IMPS): | build/robot.jar
-	@echo "Generating $@ import module..."
-	@cd src/ontology/imports && $(MAKE) $@
-
-# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
-REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
-$(REFRESH_IMPS):
-	@cd src/ontology/imports && $(MAKE) $@
-
-.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
-
-
-# ----------------------------------------
-# PRE-BUILD TESTS
-# ----------------------------------------
+##########################################
+## PRE-BUILD TESTS
+##########################################
 
 .PHONY: test report reason verify-edit
 
@@ -135,6 +110,10 @@ verify-edit: $(EDIT) | build/robot.jar
 	 --output-dir build/reports
 
 
+##########################################
+## UPDATE DATA IN DOID-EDIT.OWL
+##########################################
+
 # ----------------------------------------
 # BRITISH SYNONYMS
 # ----------------------------------------
@@ -168,7 +147,6 @@ add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 	&& mv doid-edit.ofn $(EDIT)
 	@echo "British synonyms added to $(EDIT)!"
 
-
 # ----------------------------------------
 # AUTO-ADD TO INFECTIOUS DISEASE SUBSET
 # ----------------------------------------
@@ -190,9 +168,43 @@ infectious_disease_slim: $(EDIT) src/sparql/build/infectious_disease_not_slim.rq
 	 --output $<
 
 
-# ----------------------------------------
-# RELEASE
-# ----------------------------------------
+##########################################
+## BUILDING IMPORTS
+##########################################
+
+# Import update options (each can be executed here or from the src/ontology/imports dir):
+# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
+# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
+# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
+# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
+
+IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+# define imports updated manually, solely for versioning
+MANUAL_IMPS := disdriv eco omim_susc
+
+imports: | build/robot.jar
+	@echo "Checking import modules..."
+	@cd src/ontology/imports && $(MAKE) imports
+
+refresh_imports: | build/robot.jar
+	@echo "Refreshing import modules (this may take some time)..."
+	@cd src/ontology/imports && $(MAKE) refresh_imports
+
+$(IMPS): | build/robot.jar
+	@echo "Generating $@ import module..."
+	@cd src/ontology/imports && $(MAKE) $@
+
+# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
+REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
+$(REFRESH_IMPS):
+	@cd src/ontology/imports && $(MAKE) $@
+
+.PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
+
+
+##########################################
+## RELEASE PRODUCTS
+##########################################
 
 products: subsets human merged DOreports
 
@@ -200,6 +212,10 @@ products: subsets human merged DOreports
 TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE := $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
+
+# ----------------------------------------
+# DOID
+# ----------------------------------------
 
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason \
@@ -385,9 +401,8 @@ src/DOreports/%.tsv: $(EDIT) src/sparql/build/DOreport-%.rq | src/DOreports buil
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
-
 # ----------------------------------------
-# VERSIONING IMPORTS
+# VERSION IMPORTS
 # ----------------------------------------
 
 # Set versionIRI for imports & ext.owl (whether updated or not)
@@ -412,9 +427,8 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | imports build/ro
 	 --output $<
 	@echo "Updated versionIRI of $<"
 
-
 # ----------------------------------------
-# RELEASE
+# RELEASE COPY
 # ----------------------------------------
 
 # Copy the latest release to the releases directory
@@ -433,9 +447,43 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 	@echo "Published to src/ontology/releases"
 	@echo ""
 
-# ----------------------------------------
-# POST-BUILD REPORT
-# ----------------------------------------
+
+##########################################
+## Ensure proper OBO structure
+##########################################
+
+verify: validate-obo verify-do verify-dnc
+
+# Using fastobo-validator
+validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
+validate-%: src/ontology/%.obo | $(FASTOBO)
+	@$(FASTOBO) $<
+
+# Verify doid.obo
+V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
+verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(V_QUERIES) \
+	 --output-dir build/reports
+
+# Verify doid-non-classified.obo
+DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
+    # We are not reduced to single inheritence in DNC
+    # Once this is cleaned up, we can change to all DNC verifications
+#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
+verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
+	@echo "Verifying $< (see build/reports on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(V_QUERIES) $(DNC_V_QUERIES) \
+	 --output-dir build/reports
+
+
+##########################################
+## POST-BUILD REPORT
+##########################################
 
 # Count classes, imports, and logical defs from old and new
 
@@ -526,35 +574,3 @@ xref_counts: $(X_IN_DO)
 build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
 	@echo "Querying for $(notdir $(basename $@)) (see $@)..."
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
-
-#-------------------------------
-# Ensure proper OBO structure
-#-------------------------------
-
-verify: validate-obo verify-do verify-dnc
-
-# Using fastobo-validator
-validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
-validate-%: src/ontology/%.obo | $(FASTOBO)
-	@$(FASTOBO) $<
-
-# Verify doid.obo
-V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
-verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
-	@echo "Verifying $< (see build/reports on error)"
-	@$(ROBOT) verify \
-	 --input $< \
-	 --queries $(V_QUERIES) \
-	 --output-dir build/reports
-
-# Verify doid-non-classified.obo
-DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
-    # We are not reduced to single inheritence in DNC
-    # Once this is cleaned up, we can change to all DNC verifications
-#DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
-verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
-	@echo "Verifying $< (see build/reports on error)"
-	@$(ROBOT) verify \
-	 --input $< \
-	 --queries $(V_QUERIES) $(DNC_V_QUERIES) \
-	 --output-dir build/reports

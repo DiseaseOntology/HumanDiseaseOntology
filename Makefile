@@ -36,7 +36,7 @@ release: imports version_imports test products verify publish post
 all: refresh_imports release
 
 
-build build/reports build/reports/temp:
+build build/update build/reports build/reports/temp:
 	mkdir -p $@
 
 
@@ -123,26 +123,27 @@ verify-edit: $(EDIT) | build/robot.jar
 
 # Script and pipeline adapted from https://github.com/obophenotype/human-phenotype-ontology
 
-build/british_english_dictionary.csv: | build
+build/update/british_english_dictionary.csv: | build/update
 	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
 
-build/synonyms.csv: $(EDIT) src/sparql/build/doid_synonyms.rq | build/robot.jar
+build/update/synonyms.csv: $(EDIT) src/sparql/update/doid_synonyms.rq | build/robot.jar build/update
 	@echo "Retrieving DO synonyms..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/labels.csv: $(EDIT) src/sparql/build/doid_labels.rq | build/robot.jar
+build/update/labels.csv: $(EDIT) src/sparql/update/doid_labels.rq | build/robot.jar build/update
 	@echo "Retrieving DO labels..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/be_synonyms.csv: src/util/compute_british_synonyms.py build/labels.csv build/synonyms.csv \
-build/british_english_dictionary.csv
+build/be_synonyms.csv: src/util/compute_british_synonyms.py \
+ build/update/labels.csv build/update/synonyms.csv \
+ build/update/british_english_dictionary.csv
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
-build/british_synonyms.owl: $(EDIT) build/be_synonyms.csv | build/robot.jar
+build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | build/robot.jar
 	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
 
-add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
+add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.jar
 	@$(ROBOT) merge --input $< --input $(word 2,$^) --collapse-import-closure false --output doid-edit.ofn \
 	&& mv doid-edit.ofn $(EDIT)
 	@echo "British synonyms added to $(EDIT)!"
@@ -151,20 +152,20 @@ add_british_synonyms: $(EDIT) build/british_synonyms.owl | build/robot.jar
 # AUTO-ADD TO INFECTIOUS DISEASE SUBSET
 # ----------------------------------------
 
-infectious_disease_slim: $(EDIT) src/sparql/build/infectious_disease_not_slim.rq | build/robot.jar
+infectious_disease_slim: $(EDIT) src/sparql/update/infectious_disease_not_slim.rq | build/robot.jar build/update
 	@$(ROBOT) reason --input $< \
 	query \
-	 --query $(word 2,$^) build/infectious_disease_not_slim.tsv
+	 --query $(word 2,$^) build/update/infectious_disease_not_slim.tsv
 	@( \
 		set -e ; \
-		if [ $$(wc -l build/infectious_disease_not_slim.tsv | awk '{print $$1}') -gt "0" ]; then \
-			sed '1s/.*/ID\tsubset\nID\tAI oboInOwl:inSubset/' build/infectious_disease_not_slim.tsv | \
+		if [ $$(wc -l build/update/infectious_disease_not_slim.tsv | awk '{print $$1}') -gt "0" ]; then \
+			sed '1s/.*/ID\tsubset\nID\tAI oboInOwl:inSubset/' build/update/infectious_disease_not_slim.tsv | \
 			 sed 's/<//' | \
 			 sed 's|>|\thttp://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim|' > build/infectious_disease_template.tsv ; \
 			$(ROBOT) template \
 			 --merge-before \
 			 --input $< \
-			 --template build/infectious_disease_template.tsv \
+			 --template build/update/infectious_disease_template.tsv \
 			convert \
 			 --format ofn \
 			 --output $< ; \

@@ -88,9 +88,11 @@ report: build/reports/report.tsv
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/robot.jar build/reports
 	@echo ""
-	@$(ROBOT) report --input $< \
+	@$(ROBOT) report \
+	 --input $< \
 	 --profile $(word 2,$^) \
-	 --labels true --output $@
+	 --labels true \
+	 --output $@
 	@echo "Full doid-edit QC report available at $@"
 	@echo ""
 
@@ -144,16 +146,21 @@ build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | build/
 	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
 
 add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.jar
-	@$(ROBOT) merge --input $< --input $(word 2,$^) --collapse-import-closure false --output doid-edit.ofn \
-	&& mv doid-edit.ofn $(EDIT)
-	@echo "British synonyms added to $(EDIT)!"
+	@$(ROBOT) merge \
+	 --input $< \
+	 --input $(word 2,$^) \
+	 --collapse-import-closure false \
+	 --output doid-edit.ofn \
+	&& mv doid-edit.ofn $^
+	@echo "British synonyms added to $^"
 
 # ----------------------------------------
 # AUTO-ADD TO INFECTIOUS DISEASE SUBSET
 # ----------------------------------------
 
 infectious_disease_slim: $(EDIT) src/sparql/update/infectious_disease_not_slim.rq | build/robot.jar build/update
-	@$(ROBOT) reason --input $< \
+	@$(ROBOT) reason \
+	 --input $< \
 	query \
 	 --query $(word 2,$^) build/update/infectious_disease_not_slim.tsv
 	@( \
@@ -370,7 +377,8 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
 	annotate \
 	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
-	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" --output $@
+	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
+	 --output $@
 	@echo "Created $@"
 
 src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
@@ -380,14 +388,17 @@ src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
 	annotate \
 	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
-	convert --output $@
+	convert \
+	 --output $@
 	@echo "Created $@"
 
 src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
-	@$(ROBOT) annotate --input $< \
+	@$(ROBOT) annotate \
+	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
-	convert --output $@
+	convert \
+	 --output $@
 	@echo "Created $@"
 
 # ----------------------------------------
@@ -563,7 +574,8 @@ build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
 	@$(ROBOT) diff \
 	 --left $< \
 	 --right $(word 2,$^) \
-	 --labels true --output $@
+	 --labels true \
+	 --output $@
 
 build/reports/missing-axioms.txt: src/util/parse-diff.py build/robot.diff | build/reports
 	@python3 $^ $@

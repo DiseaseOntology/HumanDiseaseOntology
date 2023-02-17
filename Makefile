@@ -402,14 +402,16 @@ DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports build/robot.jar
 	@echo "Created $@"
 
 DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports build/robot.jar
-	@robot export --input $< \
+	@robot export \
+	 --input $< \
 	 --header "ID|LABEL|SubClass Of [ANON]" \
 	 --export $@
 	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
 DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports build/robot.jar
-	@robot export --input $< \
+	@robot export \
+	 --input $< \
 	 --header "ID|LABEL|Equivalent Class" \
 	 --export $@
 	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@

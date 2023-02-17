@@ -97,8 +97,15 @@ build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/r
 	@echo ""
 
 # Simple reasoning test
-reason: $(EDIT) | build/robot.jar
-	@$(ROBOT) reason --input $<
+reason: build/update/doid-edit-reasoned.owl
+
+build/update/doid-edit-reasoned.owl: $(EDIT) | build/robot.jar build/update
+	@$(ROBOT) reason \
+	 --input $< \
+	 --create-new-ontology false \
+	 --annotate-inferred-axioms false \
+	 --exclude-duplicate-axioms true \
+	 --output $@
 	@echo "Reasoning completed successfully!"
 
 # Verify doid-edit.owl

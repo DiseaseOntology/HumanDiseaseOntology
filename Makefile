@@ -162,31 +162,43 @@ add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.ja
 	@echo "British synonyms added to $^"
 
 # ----------------------------------------
-# AUTO-ADD TO INFECTIOUS DISEASE SUBSET
+# AUTO-ADD SUBSETS
 # ----------------------------------------
 
-infectious_disease_slim: $(EDIT) src/sparql/update/infectious_disease_not_slim.rq | build/robot.jar build/update
-	@$(ROBOT) reason \
+SUB_AUTO := $(patsubst src/sparql/update/%.rq, update_%, \
+	$(wildcard src/sparql/update/*_slim.rq))
+
+.PHONY: update_slims $(SUB_AUTO)
+update_slims: $(SUB_AUTO)
+
+# so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
+#	easier to keep one rule for all slim templates at the moment; may change
+#	this if multiple slims don't need reasoned file.
+build/update/%-template.tsv: build/update/doid-edit-reasoned.owl src/sparql/update/%.rq | \
+ build/robot.jar build/update
+	@echo "Building template with classes missing from $*..."
+	@$(ROBOT) query \
 	 --input $< \
-	query \
-	 --query $(word 2,$^) build/update/infectious_disease_not_slim.tsv
-	@( \
-		set -e ; \
-		if [ $$(wc -l build/update/infectious_disease_not_slim.tsv | awk '{print $$1}') -gt "0" ]; then \
-			sed '1s/.*/ID\tsubset\nID\tAI oboInOwl:inSubset/' build/update/infectious_disease_not_slim.tsv | \
-			 sed 's/<//' | \
-			 sed 's|>|\thttp://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim|' > build/infectious_disease_template.tsv ; \
-			$(ROBOT) template \
-			 --merge-before \
-			 --input $< \
-			 --template build/update/infectious_disease_template.tsv \
-			convert \
-			 --format ofn \
-			 --output $< ; \
-			echo "Updated DO_infectious_disease_slim in $<" ; \
-		else echo "DO_infectious_disease_slim already up-to-date, skipping..." ; \
-		fi \
-	)
+	 --query $(word 2,$^) build/update/$*-missing.tsv
+	@sed '1s/.*/ID\tsubset\nID\tAI oboInOwl:inSubset/' build/update/$*-missing.tsv | \
+	 sed -E 's|<(.+)>|\1\tdoid:$*|' > build/update/$*-template.tsv
+	@rm build/update/$*-missing.tsv
+
+$(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
+	@if [ $$(awk 'END{print NR}' $(word 2,$^)) -gt "0" ]; then \
+		$(ROBOT) template \
+		 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
+		 --input $< \
+		 --template $(word 2,$^) \
+		 --collapse-import-closure false \
+		 --merge-after \
+		 --output build/update/doid-edit-reas-$*.ofn \
+		convert \
+		 --format ofn \
+		 --output $< ; \
+		echo "$* UPDATED in $<" ; \
+	else echo "$* ALREADY UP-TO-DATE, skipping..." ; \
+	fi
 
 
 ##########################################

@@ -239,7 +239,7 @@ $(REFRESH_IMPS):
 ## RELEASE PRODUCTS
 ##########################################
 
-products: subsets human merged rel_reports
+products: subsets human merged release_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -428,8 +428,8 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 REL_REPORTS := $(patsubst src/sparql/DOreports/%.rq, DOreports/%.tsv, \
 	$(wildcard src/sparql/DOreports/*.rq)) \
 
-.PHONY: rel_reports
-rel_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
+.PHONY: release_reports
+release_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
  DOreports/DO-equivalentClass.tsv
 
 DOreports:

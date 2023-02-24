@@ -239,7 +239,7 @@ $(REFRESH_IMPS):
 ## RELEASE PRODUCTS
 ##########################################
 
-products: subsets human merged DOreports
+products: subsets human merged rel_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -420,23 +420,42 @@ src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
+
 # ----------------------------------------
-# DOreports
+# DOreports (publicly available)
 # ----------------------------------------
 
-DO_REPORTS := $(patsubst src/sparql/build/DOreport-%.rq, src/DOreports/%.tsv, \
-	$(wildcard src/sparql/build/DOreport-*.rq))
+REL_REPORTS := $(patsubst src/sparql/DOreports/%.rq, DOreports/%.tsv, \
+	$(wildcard src/sparql/DOreports/*.rq)) \
 
-.PHONY: DOreports
-DOreports: $(DO_REPORTS)
+.PHONY: rel_reports
+rel_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
+ DOreports/DO-equivalentClass.tsv
 
-src/DOreports:
+DOreports:
 	mkdir $@
 
-src/DOreports/%.tsv: $(EDIT) src/sparql/build/DOreport-%.rq | src/DOreports build/robot.jar
+DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports build/robot.jar
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
+
+DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports build/robot.jar
+	@robot export \
+	 --input $< \
+	 --header "ID|LABEL|SubClass Of [ANON]" \
+	 --export $@
+	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
+	@echo "Created $@"
+
+DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports build/robot.jar
+	@robot export \
+	 --input $< \
+	 --header "ID|LABEL|Equivalent Class" \
+	 --export $@
+	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
+	@echo "Created $@"
+
 
 # ----------------------------------------
 # VERSION IMPORTS
@@ -529,8 +548,7 @@ verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \
-      build/reports/hp-do-overlap.csv \
-      xref_counts
+      build/reports/hp-do-overlap.csv
 
 # Get the last build of DO from IRI
 # .PHONY: build/doid-last.owl
@@ -605,10 +623,3 @@ build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | build/rob
 
 build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
 	@python3 $^ $@
-
-# Counts from "extra" *inDO queries
-X_IN_DO := $(foreach Q,$(shell ls src/sparql/extra/*DO.rq),build/reports/$(notdir $(basename $(Q))).csv)
-xref_counts: $(X_IN_DO)
-build/reports/%DO.csv: $(DM).owl src/sparql/extra/%DO.rq | build/robot.jar
-	@echo "Querying for $(notdir $(basename $@)) (see $@)..."
-	@$(ROBOT) query --input $< --query $(word 2,$^) $@

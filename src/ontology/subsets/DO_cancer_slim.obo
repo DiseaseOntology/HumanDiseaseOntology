@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: doid/releases/2023-01-30/subsets/DO_cancer_slim.obo
+data-version: doid/releases/2023-02-27/subsets/DO_cancer_slim.obo
 ontology: doid/subsets/DO_cancer_slim.obo
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/DOID_0081281> \"DOID_0081281\")\n)
 
@@ -29,6 +29,7 @@ namespace: disease_ontology
 def: "A myelodysplastic/myeloproliferative neoplasm that is characterized by the uncontrolled growth of monocytes." [url:https\://rarediseases.org/rare-diseases/juvenile-myelomonocytic-leukemia/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:9884
 xref: ICD10CM:C93.3
@@ -47,6 +48,7 @@ namespace: disease_ontology
 def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C3184]
 subset: DO_cancer_slim
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adult T-cell leukemia" EXACT []
 synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
@@ -100,6 +102,7 @@ name: diffuse large B-cell lymphoma
 namespace: disease_ontology
 def: "A B-cell lymphoma that is a cancer of B cells presenting as an aggressive tumour which can arise in virtually any part of the body." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C148392, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "DLBCL" EXACT []
 xref: GARD:3178
 xref: ICDO:9680/3
@@ -115,6 +118,7 @@ name: mantle cell lymphoma
 namespace: disease_ontology
 def: "A B-cell lymphocytic neoplasm due to CD5 positive antigen-naive pregerminal center B-cell within the mantle zone that surrounds normal germinal center follicles." [url:http\://en.wikipedia.org/wiki/Mantle_cell_lymphoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:6969
 xref: ICDO:9673/3
 xref: MESH:D020522
@@ -123,25 +127,12 @@ created_by: lschriml
 creation_date: 2012-09-18T02:00:45Z
 
 [Term]
-id: DOID:0050747
-name: lymphoplasmacytic lymphoma
-namespace: disease_ontology
-def: "A B-cell lymphocytic neoplasm characterized by an uncontrolled increase of B-cells." [url:http\://en.wikipedia.org/wiki/Lymphoplasmacytic_lymphoma]
-comment: Xref MGI.
-subset: DO_cancer_slim
-subset: DO_rare_slim
-subset: NCIthesaurus
-xref: ICDO:9671/3
-is_a: DOID:707 ! B-cell lymphoma
-created_by: lschriml
-creation_date: 2012-09-18T02:00:45Z
-
-[Term]
 id: DOID:0050748
-name: marginal zone B-cell lymphoma
+name: marginal zone lymphoma
 namespace: disease_ontology
-def: "A B-cell lymphoma that is characterized by initial formation in the marginal zones of lymph tissue." [url:http\://en.wikipedia.org/wiki/Marginal_zone_B-cell_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=562554]
+def: "A B-cell lymphoma arising from the marginal zone of lymphoid tissues that is characterized by  the presence of small to medium sized atypical lymphocytes." [url:http\://en.wikipedia.org/wiki/Marginal_zone_B-cell_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=562554]
 subset: DO_cancer_slim
+synonym: "marginal zone B-cell lymphoma" EXACT []
 synonym: "marginal zone lymphoma" EXACT []
 xref: ICDO:9699/3
 xref: MESH:D018442
@@ -155,6 +146,7 @@ name: peripheral T-cell lymphoma
 namespace: disease_ontology
 def: "A mature T-cell and NK-cell lymphoma includes a group of T-cell lymphomas that develop away from the thymus." [url:http\://en.wikipedia.org/wiki/Peripheral_T-cell_lymphoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:7368
 is_a: DOID:0050743 ! mature T-cell and NK-cell lymphoma
 created_by: lschriml
@@ -181,6 +173,7 @@ name: pheochromocytoma
 namespace: disease_ontology
 def: "An endocrine organ benign neoplasm that arises within the adrenal medulla, releasing epinephrines and norepinephrines hormones that cause either episodic or persistent high blood pressure." [url:https\://en.wikipedia.org/wiki/Pheochromocytoma, url:https\://rarediseases.info.nih.gov/diseases/7385/pheochromocytoma, url:https\://www.mayoclinic.org/diseases-conditions/pheochromocytoma/symptoms-causes/syc-20355367, url:https\://www.omim.org/entry/171300]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "phaeochromocytoma" EXACT []
 xref: GARD:7385
 xref: ICDO:8700/3
@@ -221,6 +214,7 @@ namespace: disease_ontology
 def: "A gastrointestinal system disease that is characterized by predisposition to hamartomatous benign polyps in the gastrointestinal tract, specifically in the stomach, small intestine, colon, and rectum." [url:http\://ghr.nlm.nih.gov/condition/juvenile-polyposis-syndrome, url:http\://www.cancer.net/cancer-types/juvenile-polyposis-syndrome, url:http\://www.ncbi.nlm.nih.gov/books/NBK1469/]
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 xref: GARD:3065
 xref: MESH:C537702
 xref: OMIM:174900
@@ -256,6 +250,7 @@ name: oral squamous cell carcinoma
 namespace: disease_ontology
 def: "An oral cavity cancer that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "mouth squamous cell carcinoma" EXACT []
 xref: GARD:7263
 is_a: DOID:3119 ! gastrointestinal system cancer
@@ -280,6 +275,7 @@ name: follicular lymphoma
 namespace: disease_ontology
 def: "A B-cell lymphoma that is characterized as an indolent non-Hodgkin's lymphoma and has_material_basis_in follicle center B-cells (centrocytes and centroblasts)." [url:http\://en.wikipedia.org/wiki/Follicular_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=428287]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:2356
 xref: ICDO:9690/3
 xref: MESH:D008224
@@ -304,6 +300,7 @@ name: ameloblastoma
 namespace: disease_ontology
 def: "A cell type benign neoplasm that has_material_basis_in odontogenic epithelium." [url:http\://en.wikipedia.org/wiki/Ameloblastoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:5747
 xref: ICDO:9310/0
 xref: MESH:D000564
@@ -373,6 +370,7 @@ def: "An infratentorial cancer that is located_in the lower part of the brain an
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "brain medulloblastoma" EXACT []
 synonym: "CNS PNET" EXACT []
@@ -424,6 +422,7 @@ name: inflammatory myofibroblastic tumor
 namespace: disease_ontology
 def: "A mesenchymal cell neoplasm that has_material_basis_in myofibroblastic cells admixed with inflammatory cells." [url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2689747/, url:https\://www.ncbi.nlm.nih.gov/pubmed/23091756]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:7146
 is_a: DOID:162 ! cancer
 created_by: lschriml
@@ -445,6 +444,7 @@ name: myelodysplastic syndrome
 namespace: disease_ontology
 def: "A bone marrow cancer that is characterized by under production of white blood cells, red blood cells and platelets." [url:http\://en.wikipedia.org/wiki/Myelodysplastic_syndrome, url:http\://www.cancer.gov/dictionary?CdrID=45266]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:7132
 xref: ICDO:9989/3
 xref: MESH:D009190
@@ -466,7 +466,7 @@ synonym: "mucosa-associated lymphoid tissue lymphoma" EXACT []
 xref: ICDO:9699/3
 xref: NCI:C3898
 xref: OMIM:137245
-is_a: DOID:0050748 ! marginal zone B-cell lymphoma
+is_a: DOID:0050748 ! marginal zone lymphoma
 created_by: lschriml
 creation_date: 2014-10-13T14:17:40Z
 
@@ -768,6 +768,7 @@ namespace: disease_ontology
 def: "A lymphoma that is characterized as any kind of lymphoma except Hodgkin's lymphoma." [url:http\://en.wikipedia.org/wiki/Non-Hodgkin_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=45148]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: ICDO:9591/3
 xref: MESH:D008228
 xref: NCI:C3211
@@ -983,6 +984,7 @@ namespace: disease_ontology
 alt_id: DOID:8747
 def: "A myelodysplastic myeloproliferative neoplasm characterized by the principal involvement of the neutrophil series with leukocytosis and multilineage dysplasia. The neoplastic cells do not have a Philadelphia chromosome or the BCR/ABL fusion gene." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.08e&ns=NCI_Thesaurus&code=C3519, url:https\://www.ncbi.nlm.nih.gov/pubmed/29226717]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "aCML" EXACT []
 synonym: "atypical chronic myeloid leukaemia" EXACT []
@@ -1007,6 +1009,7 @@ name: transient myeloproliferative syndrome
 namespace: disease_ontology
 def: "A myeloproliferative neoplasm characterized by leukocytosis in newborns with Down syndrome." [url:https\://www.cancer.gov/publications/dictionaries/cancer-terms/def/792759, url:https\://www.ncbi.nlm.nih.gov/pubmed/6229618]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "MST" EXACT []
 synonym: "TAM" EXACT []
 synonym: "transient abnormal myelopoiesis" EXACT []
@@ -1021,18 +1024,24 @@ is_a: DOID:2226 ! myeloproliferative neoplasm
 
 [Term]
 id: DOID:0060901
-name: Waldenstroem's macroglobulinemia
+name: lymphoplasmacytic lymphoma
 namespace: disease_ontology
-def: "A lymphoplasmacytic lymphoma characterized by the accumulation of monoclonal cells in the bone marrow and peripheral lymphoid tissues, and associated with the production of serum immunoglobulin M (IgM) monoclonal protein." [url:http\://www.orpha.net/consor/cgi-bin/Disease_Search.php?lng=EN&data_id=10313, url:https\://www.ncbi.nlm.nih.gov/pubmed/10632755]
+alt_id: DOID:0050747
+def: "A B-cell lymphoma characterized by the accumulation of monoclonal cells in the bone marrow and peripheral lymphoid tissues, and associated with the production of serum immunoglobulin M (IgM) monoclonal protein." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10632755]
+comment: Lymphoplasmacytic lymphoma, also known as Waldenstrom macroglobulinemia.
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "lymphoplasmacytic lymphoma with IgM gammopathy" EXACT []
+synonym: "Waldenstroem's macroglobulinemia" EXACT []
 synonym: "Waldenstrom Macroglobulinemia" EXACT []
 xref: GARD:7872
 xref: ICD10CM:C88.0
 xref: ICD9CM:273.3
+xref: ICDO:9671/3
 xref: MESH:D008258
 xref: NCI:C115212
+xref: NCI:C3212
 xref: NCI:C80307
 xref: OMIM:153600
 xref: OMIM:610430
@@ -1040,7 +1049,7 @@ xref: ORDO:33226
 xref: SNOMEDCT_US_2022_09_01:35562000
 xref: UMLS_CUI:C0024419
 xref: UMLS_CUI:C2936755
-is_a: DOID:0050747 ! lymphoplasmacytic lymphoma
+is_a: DOID:707 ! B-cell lymphoma
 property_value: exactMatch MESH:D008258 xsd:string
 
 [Term]
@@ -1057,6 +1066,7 @@ name: childhood hepatocellular carcinoma
 namespace: disease_ontology
 def: "A hepatocellular carcinoma that occurs in children and is characterized by a distinct etiological predisposition, biological behavior, and lower frequency of cirrhosis as compared to adult hepatocellular carcinoma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17714939, url:https\://www.ncbi.nlm.nih.gov/pubmed/28144610, url:https\://www.ncbi.nlm.nih.gov/pubmed/30254403]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "pediatric hepatocellular carcinoma" EXACT []
 xref: GARD:9331
@@ -1084,6 +1094,7 @@ name: systemic Epstein-Barr virus positive T-cell lymphoma of childhood
 namespace: disease_ontology
 def: "A childhood lymphoma that is characterized by monoclonal expansion of Epstein-Barr virus-positive T cells with an activated cytotoxic phenotype in tissues or peripheral blood." [url:https\://en.wikipedia.org/wiki/Epstein-Barr_virus-associated_lymphoproliferative_diseases, url:https\://www.ncbi.nlm.nih.gov/pubmed/30931288]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "EBV-positive T-cell lymphoproliferative disorder of childhood" EXACT []
 synonym: "systemic EBV-positive T-cell lymphoma of childhood" EXACT []
@@ -1099,6 +1110,7 @@ name: malignant childhood adrenal gland pheochromocytoma
 namespace: disease_ontology
 def: "An adrenal gland pheochromocytoma that is characterized by rare chromaffin cell tumors which secrete catecholamines, and has a higher prevalence of hereditary factors and metastatis in children than adults." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28324046, url:https\://www.ncbi.nlm.nih.gov/pubmed/28752085]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "malignant pediatric adrenal gland pheochromocytoma" EXACT []
 xref: GARD:9368
@@ -1122,6 +1134,7 @@ name: melanoma in congenital melanocytic nevus
 namespace: disease_ontology
 def: "A skin melanoma that arises from a congenital melanocytic nevus." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27517357, url:https\://www.ncbi.nlm.nih.gov/pubmed/28078671]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Malignant melanoma in congenital melanocytic nevus" EXACT []
 synonym: "melanocytic nevi" EXACT []
@@ -1137,6 +1150,7 @@ name: fibrous dysplasia
 namespace: disease_ontology
 def: "A bone remodeling disease that results_in the destruction of normal bone and replacing it with fibrous bone tissue." [url:http\://en.wikipedia.org/wiki/Fibrous_dysplasia_of_bone, url:http\://orthoinfo.aaos.org/topic.cfm?topic=a00083, url:http\://www.mayoclinic.com/health/fibrous-dysplasia/DS00991, url:http\://www.nlm.nih.gov/medlineplus/ency/article/001234.htm]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:6444
 xref: ICDO:8818/0
 
@@ -1225,6 +1239,7 @@ name: chronic myelomonocytic leukemia
 namespace: disease_ontology
 def: "A chronic leukemia characterized by monocytosis, increased monocytes in the bone marrow, variable degrees of dysplasia, but an absence of immature granulocytes in the blood." [url:https\://en.wikipedia.org/wiki/Chronic_myelomonocytic_leukemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/30367269, url:https\://www.ncbi.nlm.nih.gov/pubmed/31093889]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:8225
 xref: ICDO:9945/3
@@ -1247,6 +1262,7 @@ name: PTEN hamartoma tumor syndrome
 namespace: disease_ontology
 def: "A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene." [url:https\://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/22628360]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:12800
 
 [Term]
@@ -1263,6 +1279,7 @@ name: primary mediastinal B-cell lymphoma
 namespace: disease_ontology
 def: "A diffuse large B-cell lymphoma that is is characterized by a diffuse proliferation of medium to large B-cells associated with sclerosis." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28318892]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "Large cell lymphoma of the mediastinum" EXACT []
 synonym: "Mediastinal diffuse large-cell lymphoma with sclerosis" EXACT []
 synonym: "Primary mediastinal clear cell lymphoma of B-cell type" EXACT []
@@ -1358,6 +1375,7 @@ name: dedifferentiated liposarcoma
 namespace: disease_ontology
 def: "A liposarcoma that is characterized as a high-grade tumor that occurs when a lower-grade tumor changes and creates new high-grade cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6211889/, url:https\://www.ncbi.nlm.nih.gov/pubmed/26645460]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: ICDO:8858/3
 xref: NCI:C3704
 xref: ORDO:99970
@@ -1369,6 +1387,7 @@ name: myxofibrosarcoma
 namespace: disease_ontology
 def: "A sarcoma that arises from the soft tissue and is characterized by the presence of spindle-shaped cells, cellular pleomorphism, thin-walled blood vessels, fibrous septa, and myxoid stroma." [url:https\://www.mayoclinic.org/diseases-conditions/myxofibrosarcoma/cdc-20387740, url:https\://www.ncbi.nlm.nih.gov/pubmed/27591498]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "fibromyxoid sarcoma" EXACT []
 xref: ICDO:8811/3
 xref: NCI:C6496
@@ -1828,6 +1847,7 @@ name: RELA fusion-positive ependymoma
 namespace: disease_ontology
 def: "A supratentorial ependymoma that has_material_basis_in presence of a RELA fusion gene." [url:https\://www.pathologyoutlines.com/topic/cnstumorependymomarelafusion.html]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "C11orf95 fusion-positive supratentorial ependymoma" EXACT []
 synonym: "Supratentorial C11ORF95-RELA fused ependymoma" EXACT []
 xref: ICDO:9396/3
@@ -1849,6 +1869,7 @@ name: solitary fibrous tumor/hemangiopericytoma
 namespace: disease_ontology
 def: "A connective tissue cancer that is characterized as the combination of solitary fibrous tumors and hemangiopericytomas." [url:https\://pubmed.ncbi.nlm.nih.gov/29521591/, url:https\://thejns.org/view/journals/j-neurosurg/130/2/article-p418.xml, url:https\://www.sciencedirect.com/science/article/pii/S221475191830183X]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: ICDO:8815/1
 xref: ORDO:2126
 is_a: DOID:162 ! cancer
@@ -2108,6 +2129,7 @@ name: acute myeloid leukemia without maturation
 namespace: disease_ontology
 def: "An acute myeloid leukemia that is characterized by blasts without evidence of significant maturation in the neutrophilic lineage." [url:https\://wiki.clinicalflow.com/aml-acute-myelogenous-leukemia-without-maturation-m1]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:526
 xref: ICD10CM:C92.0
 xref: ICDO:9873/3
@@ -2585,6 +2607,7 @@ name: angioimmunoblastic T-cell lymphoma
 namespace: disease_ontology
 def: "A peripheral T-cell lymphoma characterized by autoimmune features and poor prognosis." [url:https\://rarediseases.org/rare-diseases/angioimmunoblastic-t-cell-lymphoma/, url:https\://www.lymphoma.org/aboutlymphoma/nhl/aitl/, url:https\://www.ncbi.nlm.nih.gov/pubmed/22700722]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:11973
 xref: ICD10CM:C86.5
@@ -2603,6 +2626,7 @@ name: nodular malignant melanoma
 namespace: disease_ontology
 def: "A melanoma that is characterized as highly aggressive and manifests as a uniform blue-black, blue-red, or amelanotic nodule." [url:http\://en.wikipedia.org/wiki/Nodular_melanoma, url:http\://www.clevelandclinicmeded.com/medicalpubs/diseasemanagement/dermatology/cutaneous-malignant-melanoma/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "nodular melanoma" EXACT []
 xref: GARD:9961
@@ -2661,6 +2685,7 @@ comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "hereditary prostate cancer" EXACT []
@@ -2819,6 +2844,7 @@ subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "gastric cancer" EXACT []
@@ -2870,6 +2896,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "bladder cancer" EXACT []
@@ -2951,6 +2978,7 @@ def: "An organ system cancer that arises in the head or neck region. This region
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_MGI_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "head and neck neoplasm" EXACT []
@@ -3031,6 +3059,7 @@ id: DOID:12689
 name: acoustic neuroma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Vestibular Neurilemmoma" EXACT []
 synonym: "Vestibular schwannoma" EXACT []
@@ -3149,6 +3178,7 @@ def: "A syndrome that is characterized by the growth of numerous noncancerous tu
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Bourneville's disease" EXACT []
 synonym: "cerebral sclerosis" EXACT []
@@ -3183,6 +3213,7 @@ namespace: disease_ontology
 alt_id: DOID:5654
 def: "A uterine cancer that is located_in tissues lining the uterus." [url:http\://www.cancer.gov/dictionary?CdrID=444987]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "endometrial Ca" EXACT []
 synonym: "endometrial neoplasm" EXACT []
@@ -3237,6 +3268,7 @@ name: lymphangioma
 namespace: disease_ontology
 def: "A benign vascular tumor that is composed of dilated lymphatic channels." [url:https\://en.wikipedia.org/wiki/Lymphangioma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "benign lymphangioma" EXACT []
 synonym: "Congenital lymphangioma" EXACT []
@@ -3352,6 +3384,7 @@ name: pineoblastoma
 namespace: disease_ontology
 def: "A pineal gland neoplasm located_in the brain." [url:http\://en.wikipedia.org/wiki/Pinealoblastoma, url:https\://www.ncbi.nlm.nih.gov/pubmed/28327927]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Pineal PNET" EXACT []
 xref: GARD:9369
@@ -3386,6 +3419,7 @@ namespace: disease_ontology
 alt_id: DOID:5512
 def: "A carcinoma that derives_from squamous epithelial cells." [url:http\://en.wikipedia.org/wiki/Squamous_cell_carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "epidermoid carcinoma" EXACT []
 synonym: "malignant squamous cell tumor" EXACT []
@@ -3422,6 +3456,7 @@ name: ocular melanoma
 namespace: disease_ontology
 def: "An ocular cancer that has_material_basis_in melanocytes and is located_in the eye." [url:http\://www.cancer.gov/dictionary?CdrID=269467]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "eye melanoma" EXACT []
 synonym: "intraocular melanoma" EXACT []
 synonym: "melanoma of eye" EXACT []
@@ -3575,6 +3610,7 @@ name: pancreatic endocrine carcinoma
 namespace: disease_ontology
 def: "An islet cell tumor that has_material_basis_in epithelial cells." [url:http\://en.wikipedia.org/wiki/Carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "carcinoma of endocrine pancreas" EXACT []
 synonym: "Islet cell carcinoma" EXACT []
@@ -3678,6 +3714,7 @@ name: leiomyosarcoma
 namespace: disease_ontology
 def: "A smooth muscle cancer that can arise almost anywhere in the body, but is most common in the uterus, abdomen, or pelvis." [url:http\://www.cancer.gov/dictionary/?CdrID=46027]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Leiomyosarcomas" EXACT []
 xref: GARD:6880
@@ -3794,6 +3831,7 @@ def: "A brain cancer that is usually located in the brain, but can occur anywher
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "AT/RT" RELATED []
 synonym: "atypical teratoid rhabdoid tumour" EXACT []
@@ -3983,6 +4021,7 @@ id: DOID:2411
 name: granular cell tumor
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "neoplasm of granular cell" EXACT []
 xref: GARD:9618
@@ -3998,6 +4037,7 @@ name: gangliocytoma
 namespace: disease_ontology
 def: "A central nervous system benign neoplasm that has_material_basis_in mature neurons, and is classified by the absence of neoplastic glial cells." [url:https\://link.springer.com/chapter/10.1007/978-1-4419-1062-2_18, url:https\://radiopaedia.org/articles/gangliocytoma, url:https\://rarediseases.info.nih.gov/diseases/10638/gangliocytoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "gangliocytoma of central nervous system" EXACT []
 xref: GARD:10638
@@ -4200,6 +4240,7 @@ name: chondroma
 namespace: disease_ontology
 def: "A cell type benign neoplasm that is a cartilaginous tumor encapsulated with a lobular growing pattern." [url:http\://en.wikipedia.org/wiki/Chondroma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "central Chondroma" EXACT []
 xref: GARD:6052
@@ -4230,6 +4271,7 @@ namespace: disease_ontology
 alt_id: DOID:3661
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "childhood choroid plexus papilloma" EXACT []
 xref: GARD:4214
@@ -4276,6 +4318,7 @@ namespace: disease_ontology
 alt_id: DOID:5372
 def: "A hemangiopericytic tumor that is a soft tissue sarcoma and originates in the pericytes in the walls of capillaries." [url:http\://en.wikipedia.org/wiki/Hemangiopericytoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Haemangiopericytic meningioma" EXACT []
 synonym: "hemangiopericytoma, malignant" EXACT []
@@ -4335,6 +4378,7 @@ name: chondroblastoma
 namespace: disease_ontology
 def: "A connective tissue benign neoplasm that derives_from chondroblasts and begins in cartilage at the ends of long bones (thighbone, shinbone, humerus) close to the joints." [url:https\://www.hopkinsmedicine.org/health/conditions-and-diseases/chondroblastoma, url:https\://www.ncbi.nlm.nih.gov/books/NBK536947/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chondroblastoma of bone" EXACT []
 xref: GARD:6047
@@ -4413,6 +4457,7 @@ namespace: disease_ontology
 alt_id: DOID:3995
 def: "A carcinoma that derives_from transitional epithelial cells." [url:http\://en.wikipedia.org/wiki/Transitional_cell_carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "transitional carcinoma" EXACT []
 synonym: "transitional cell neoplasm" RELATED []
@@ -4434,6 +4479,7 @@ id: DOID:2679
 name: dysembryoplastic neuroepithelial tumor
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Dysembryoplastic Neuroepithelial neoplasm" EXACT []
 synonym: "dysembryoplastic neuroepithelial tumour" EXACT []
@@ -4550,6 +4596,7 @@ name: hairy cell leukemia
 namespace: disease_ontology
 def: "A chronic lymphocytic leukemia that is characterized by over production of B cells (lymphocytes) by the bone marrow where the B cells appear hairy under a microscope." [url:https\://en.wikipedia.org/wiki/Hairy_cell_leukemia, url:https\://www.mayoclinic.org/diseases-conditions/hairy-cell-leukemia/symptoms-causes/syc-20372956, url:https\://www.ncbi.nlm.nih.gov/pubmed/30723113]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:6560
 xref: ICD10CM:C91.4
@@ -4649,6 +4696,7 @@ namespace: disease_ontology
 alt_id: DOID:0050618
 def: "A sex cord-gonadal stromal tumor characterized by variable proportions of Sertoli cells, Leydig cells, primitive gonadal stroma and/or heterologous elements located_in the ovaries and testicles." [url:https\://en.wikipedia.org/wiki/Sertoli–Leydig_cell_tumour]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:9967
 xref: MESH:D018310
 xref: SNOMEDCT_US_2022_09_01:34110004
@@ -4777,6 +4825,7 @@ alt_id: DOID:3075
 alt_id: DOID:3080
 def: "A malignant astrocytoma characterized by the presence of small areas of necrotizing tissue that is surrounded by anaplastic cells as well as the presence of hyperplastic blood vessels, and that has_material_basis_in abnormally proliferating cells derives_from multiple cell types including astrocytes and oligondroctyes." [url:http\://cancergenome.nih.gov/cancersselected/glioblastomamultiforme, url:http\://en.wikipedia.org/wiki/Glioblastoma_multiforme, url:https\://www.ncbi.nlm.nih.gov/pubmed/20129251, url:https\://www.ncbi.nlm.nih.gov/pubmed/23029035]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adult glioblastoma multiforme" EXACT []
 synonym: "GBM" EXACT []
@@ -4855,6 +4904,7 @@ name: gliosarcoma
 namespace: disease_ontology
 def: "A gliomablastoma that is characterized by a biphasic tissue pattern with alternating areas displaying glial and mesenchymal differentiation." [url:https\://en.wikipedia.org/wiki/Gliosarcoma, url:https\://www.cancer.gov/rare-brain-spine-tumor/tumors/gliosarcoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Glioblastoma with sarcomatous component" EXACT []
 xref: GARD:5653
@@ -4900,6 +4950,7 @@ name: anaplastic astrocytoma
 namespace: disease_ontology
 def: "A malignant astrocytoma that is characterized by cells with regular, round to oval nuclei." [url:http\://en.wikipedia.org/wiki/Anaplastic_astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=45591]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "grade III Astrocytic tumor" EXACT []
 synonym: "grade III astrocytoma" EXACT []
@@ -4915,6 +4966,7 @@ id: DOID:3081
 name: cystic lymphangioma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cystic Hygroma" EXACT []
 xref: GARD:6234
@@ -5023,6 +5075,7 @@ name: oligodendroglioma
 namespace: disease_ontology
 alt_id: DOID:3182
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "oligodendroglial neoplasm" EXACT []
 synonym: "oligodendroglial tumor" EXACT []
@@ -5293,6 +5346,7 @@ namespace: disease_ontology
 alt_id: DOID:5676
 def: "An embryonal cancer that is a type of germ cell tumour that is located_in the ovaries or located_in the testes." [url:http\://en.wikipedia.org/wiki/Embryonal_carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "primary extragonadal embryonal carcinoma" EXACT []
 xref: GARD:5140
@@ -5360,6 +5414,7 @@ namespace: disease_ontology
 alt_id: DOID:3682
 def: "A lung disease that is characterized by progressive cystic destruction of the lung and lymphatic abnormalities, frequently associated with renal angiomyolipomas." [url:https\://pubmed.ncbi.nlm.nih.gov/31610670/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "lung lymphangioleiomyomatosis" EXACT []
 synonym: "lymphangiomyomatosis" EXACT []
@@ -5381,6 +5436,7 @@ alt_id: DOID:183
 def: "A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin." [url:http\://en.wikipedia.org/wiki/Osteosarcoma, url:http\://www.cancer.gov/dictionary?cdrid=45395]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "bone tissue neoplasm" EXACT []
 synonym: "Osteogenic sarcoma" EXACT []
@@ -5406,6 +5462,7 @@ alt_id: DOID:156
 alt_id: DOID:3509
 def: "A connective tissue cancer that has_material_basis_in fibrous connective tissue and characterized by the presence of immature proliferating fibroblasts or undifferentiated anaplastic spindle cells in a storiform pattern." [url:http\://en.wikipedia.org/wiki/Fibrosarcoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Fibrocytic tumor" EXACT []
 synonym: "fibrosarcoma of soft tissue" EXACT []
@@ -5472,6 +5529,7 @@ alt_id: DOID:4980
 def: "A connective tissue cancer that has_material_basis_in neural crest cells derives_from undeveloped, undifferentiated neuroectoderm." [url:http\://en.wikipedia.org/wiki/Primitive_neuroectodermal_tumor, url:http\://www.cancer.gov/dictionary?cdrid=383924]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Ewing's family localized tumor" EXACT []
 synonym: "Ewing's sarcoma/peripheral primitive neuroectodermal tumor" EXACT []
@@ -5516,6 +5574,7 @@ alt_id: DOID:3370
 def: "A bone sarcoma that has_material_basis_in cells derived from transformed cells that produce cartilage." [url:http\://en.wikipedia.org/wiki/Chondrosarcoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Cartilaginous cancer" EXACT []
 synonym: "chondrosarcoma of bone" EXACT []
@@ -5582,6 +5641,7 @@ namespace: disease_ontology
 alt_id: DOID:3939
 def: "A connective tissue cancer that arises in fat cells in deep soft tissue retroperitoneum and the extremities." [url:http\://en.wikipedia.org/wiki/Liposarcoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "lipomatous cancer" EXACT []
 xref: GARD:6913
@@ -5667,6 +5727,7 @@ id: DOID:349
 name: systemic mastocytosis
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "SMCD - systemic mast cell disease" EXACT []
 synonym: "systemic tissue mast cell disease" EXACT []
@@ -5697,6 +5758,7 @@ namespace: disease_ontology
 def: "A fibrosarcoma that is located_in the dermis laryer of the skin and that begins as a hard nodule and grows slowly." [url:http\://en.wikipedia.org/wiki/Dermatofibrosarcoma_protuberans, url:http\://www.cancer.gov/dictionary?CdrID=44276]
 comment: MESH:C538219 added from NeuroDevNet [WAK].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:9569
 xref: ICDO:8832/1
 xref: MESH:D018223
@@ -5744,6 +5806,7 @@ name: pseudomyxoma peritonei
 namespace: disease_ontology
 def: "An appendix cancer that is characterized by progressive accumulation of mucus-secreting tumor cells within the abdomen and pelvis." [url:http\://en.wikipedia.org/wiki/Pseudomyxoma_peritonei, url:http\://www.cancer.gov/dictionary?CdrID=44256, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/843/viewAbstract, url:https\://www.ncbi.nlm.nih.gov/pubmed/14567019]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "mucinous Ascites" EXACT []
 xref: GARD:7488
@@ -5764,6 +5827,7 @@ alt_id: DOID:3567
 alt_id: DOID:4750
 def: "A central nervous system cancer that are manifested in the central nervous system and arise from the arachnoid cap cells of the arachnoid villi in the meninges." [url:http\://en.wikipedia.org/wiki/Meningioma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "meningeal neoplasm" EXACT []
@@ -5849,6 +5913,7 @@ name: choriocarcinoma
 namespace: disease_ontology
 def: "A placenta cancer that has_material_basis_in trophoblastic cells." [url:https\://en.wikipedia.org/wiki/Choriocarcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chorioepithelioma" EXACT []
 xref: GARD:6059
@@ -5966,6 +6031,7 @@ name: rhabdoid cancer
 namespace: disease_ontology
 def: "A childhood kidney neoplasm that is located_in the kidney, liver, muscle, heart, lung, soft tissues, skin and central nervous system." [url:https\://rarediseases.info.nih.gov/diseases/7572/rhabdoid-tumor]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "malignant rhabdoid tumour" EXACT []
 synonym: "Rhabdoid sarcoma" EXACT []
@@ -5994,6 +6060,7 @@ id: DOID:369
 name: olfactory neuroblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Asthesioneuroblastoma" EXACT []
 synonym: "Esthesioneuroblastoma" EXACT []
@@ -6090,11 +6157,17 @@ is_a: DOID:1107 ! esophageal carcinoma
 id: DOID:3774
 name: chordoid glioma
 namespace: disease_ontology
+alt_id: DOID:3773
+def: "A high grade glioma that is characterized by the presence of epithelioid cells which express GFAP, and mucinous stroma which contains lymphoplasmacytic infiltrates." [url:https\://pubmed.ncbi.nlm.nih.gov/28315998/, url:https\://www.frontiersin.org/articles/10.3389/fonc.2020.00502/full]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "Chordoid glioma of 3rd Ventricle" EXACT []
+synonym: "Chordoid glioma of third ventricle" EXACT []
+synonym: "third ventricle chordoid glioma" EXACT []
 xref: ICDO:9444/1
 xref: NCI:C5592
+xref: ORDO:251674
 xref: SNOMEDCT_US_2022_09_01:128789002
 xref: UMLS_CUI:C1322252
 is_a: DOID:3070 ! high grade glioma
@@ -6104,6 +6177,7 @@ id: DOID:3840
 name: craniopharyngioma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "neoplasm of Rathke's Pouch" EXACT []
 xref: GARD:10486
@@ -6149,6 +6223,7 @@ name: large cell medulloblastoma
 namespace: disease_ontology
 def: "A medulloblastoma that is characterized by cells that are larger than would be normally expected." [url:http\://en.wikipedia.org/wiki/Large_cell]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Anaplastic medulloblastoma" EXACT []
 xref: ICDO:9474/3
@@ -6283,6 +6358,7 @@ alt_id: DOID:3909
 alt_id: DOID:4826
 def: "A lung non-small cell carcinoma that derives_from epithelial cells of glandular origin." [url:http\://cancergenome.nih.gov/cancersselected/lungadenocarcinoma, url:http\://en.wikipedia.org/wiki/Adenocarcinoma, url:http\://en.wikipedia.org/wiki/Adenocarcinoma_of_the_lung]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adenocarcinoma of lung" RELATED []
 synonym: "bronchogenic lung adenocarcinoma" EXACT []
@@ -6303,6 +6379,7 @@ name: adrenocortical carcinoma
 namespace: disease_ontology
 def: "An adrenal cortex cancer that forms in the outer layer of tissue of the adrenal gland and that has_material_basis_in abnormally proliferating cells derives_from epithelial cells." [url:http\://cancergenome.nih.gov/cancersselected/AdrenocorticalCarcinoma, url:http\://www.cancer.gov/cancertopics/types/adrenocortical]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Adrenal cortical carcinoma" EXACT []
 synonym: "carcinoma of the Adrenal cortex" EXACT []
@@ -6363,6 +6440,7 @@ id: DOID:3965
 name: Merkel cell carcinoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Trabecular adenocarcinoma" EXACT []
 synonym: "trabecular carcinoma" EXACT []
@@ -6392,6 +6470,7 @@ namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer abd arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Papillary carcinoma of the Thyroid gland" EXACT []
 xref: GARD:12027
@@ -6483,6 +6562,7 @@ alt_id: DOID:4382
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "alveolar childhood rhabdomyosarcoma" EXACT []
 xref: GARD:4701
@@ -6603,6 +6683,7 @@ name: endometrial stromal sarcoma
 namespace: disease_ontology
 def: "An endometrial stromal tumor that has_material_basis_in connective tissue." [url:https\://en.wikipedia.org/wiki/Endometrial_stromal_sarcoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "endometrial stromal sarcoma, high grade" EXACT []
 synonym: "ESS" EXACT []
@@ -6716,6 +6797,7 @@ alt_id: DOID:5318
 def: "A soft tissue cancer that is a slow growing tumor of an unknown origin that effects children and effects young adults." [url:http\://en.wikipedia.org/wiki/Alveolar_soft_part_sarcoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:5654
 xref: ICDO:9581/3
@@ -6755,6 +6837,7 @@ name: Erdheim-Chester disease
 namespace: disease_ontology
 def: "A non-Langerhans-cell histiocytosis that is characterized by the proliferation in the tissues of lipid-laden macrophages and the presence of multinucleated giant cells. It results in sclerosis of the long bones and failure of the affected organs." [url:https\://medlineplus.gov/genetics/condition/erdheim-chester-disease/, url:https\://rarediseases.org/rare-diseases/erdheim-chester-disease/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:6369
 xref: ICDO:9749/3
@@ -6880,6 +6963,7 @@ namespace: disease_ontology
 def: "A renal carcinoma that has_material_basis_in the lining of the proximal convoluted renal tubule of the kidney." [url:http\://en.wikipedia.org/wiki/Renal_cell_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=661352]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adenocarcinoma of kidney" EXACT []
 synonym: "hypernephroma" EXACT []
@@ -6925,6 +7009,7 @@ id: DOID:4455
 name: hereditary renal cell carcinoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 xref: GARD:9571
 is_a: DOID:4450 ! renal cell carcinoma
 
@@ -6936,6 +7021,7 @@ alt_id: DOID:8063
 def: "A renal cell carcinoma that is characterized by the development of multiple, bilateral papillary renal tumors." [url:http\://cancergenome.nih.gov/cancersselected/kidneypapillary, url:http\://www.omim.org/entry/605074]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Chromophil carcinoma of kidney" EXACT []
 synonym: "papillary kidney carcinoma" EXACT []
@@ -6958,6 +7044,7 @@ namespace: disease_ontology
 def: "A renal cell carcinoma that has_material_basis_in cells that appear very pale or clear when examined under microscope." [url:http\://www.cancer.gov/dictionary?CdrID=45063, url:https\://cancergenome.nih.gov/cancersselected/kidneyclearcell]
 comment: MESH:C538445 added from NeuroDevNet [WAK].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Clear cell carcinoma of kidney" EXACT []
 synonym: "clear cell kidney carcinoma" EXACT []
@@ -6979,6 +7066,7 @@ name: chromophobe renal cell carcinoma
 namespace: disease_ontology
 def: "A renal cell carcinoma that has_material_basis_in chromophobe cell that appear pale when viewed under microscope, but that are larger and display different features than clear cells." [url:http\://www.cancer.org/acs/groups/cid/documents/webcontent/003107-pdf.pdf, url:https\://rarediseases.info.nih.gov/diseases/6064/chromophobe-renal-cell-carcinoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "chromophobe adenocarcinoma" EXACT []
 synonym: "Chromophobe carcinoma of kidney" EXACT []
@@ -7119,6 +7207,7 @@ namespace: disease_ontology
 alt_id: DOID:8092
 def: "A hepatobiliary system cancer that results_in malignant growth located_in the gallbladder or located_in the bile duct." [url:http\://en.wikipedia.org/wiki/Biliary_tract_cancer]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "malignant tumour of biliary tract" EXACT []
 xref: GARD:5924
 xref: GARD:9304
@@ -7189,6 +7278,7 @@ name: perineurioma
 namespace: disease_ontology
 alt_id: DOID:8371
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "soft tissue Perineurioma" EXACT []
 xref: GARD:12698
@@ -7248,6 +7338,7 @@ name: pleuropulmonary blastoma
 namespace: disease_ontology
 def: "A pulmonary blastoma that derives_from the lung or pleural cavity." [url:https\://www.ncbi.nlm.nih.gov/pubmed/30480950]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:8757
 xref: ICDO:8973/3
@@ -7339,6 +7430,7 @@ name: myoepithelial carcinoma
 namespace: disease_ontology
 def: "A carcinoma that derives_from myoepithelial cells." [url:http\://www.diagnosticpathology.org/content/3/1/7]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:10558
 xref: ICDO:8982/3
@@ -7382,6 +7474,7 @@ name: pilocytic astrocytoma
 namespace: disease_ontology
 def: "A childhood low-grade glioma that is characterized by cells that look like fibers when viewed under a microscope and is located_in the brain." [url:http\://en.wikipedia.org/wiki/Pilocytic_astrocytoma, url:http\://www.cancer.gov/dictionary?CdrID=44341]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "grade I Astrocytic tumor" EXACT []
 synonym: "Piloid astrocytoma" EXACT []
@@ -7544,6 +7637,7 @@ name: intrahepatic cholangiocarcinoma
 namespace: disease_ontology
 def: "A cholangiocarcinoma that arises from the intrahepatic bile duct epithelium in any site of the intrahepatic biliary tree." [url:https\://www.dana-farber.org/intrahepatic-cholangiocarcinoma/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Intrahepatic bile duct carcinoma" EXACT []
 synonym: "peripheral Cholangiocarcinoma" EXACT []
@@ -7642,6 +7736,7 @@ alt_id: DOID:5737
 def: "A myeloid neoplasm that is located in the bone marrow which results in bone marrow being replaced by fibrous (scar) tissue." [url:http\://en.wikipedia.org/wiki/Myelofibrosis]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Agnogenic myeloid metaplasia" EXACT []
 synonym: "Aleukemic myelosis" EXACT []
@@ -7668,7 +7763,7 @@ is_a: DOID:0070004 ! myeloid neoplasm
 id: DOID:5015
 name: fibrolamellar carcinoma
 namespace: disease_ontology
-def: "A hepatocellular carcinoma characterized microscopically by laminated fibrous layers interspersed between the tumour cells. The polygonal, deeply eosinophilic tumor cells arise in non-cirrhotic livers." [url:http\://www.nejm.org/doi/full/10.1056/NEJMra1001683, url:https\://en.wikipedia.org/wiki/Fibrolamellar_hepatocellular_carcinoma, url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C4131&ns=NCI_Thesaurus, url:https\://rarediseases.info.nih.gov/diseases/9396/fibrolamellar-carcinoma]
+def: "A hepatocellular carcinoma characterized microscopically by laminated fibrous layers interspersed between the tumour cells. The polygonal, deeply eosinophilic tumor cells arise in non-cirrhotic livers." [url:http\://www.nejm.org/doi/full/10.1056/NEJMra1001683, url:https\://en.wikipedia.org/wiki/Fibrolamellar_hepatocellular_carcinoma]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -7677,6 +7772,7 @@ synonym: "Hepatocellular carcinoma, fibrolamellar" EXACT []
 synonym: "Oncocytic Hepatocellular tumor" EXACT []
 xref: MESH:C537258
 xref: NCI:C4131
+xref: ORDO:401920
 xref: SNOMEDCT_US_2022_09_01:15619004
 xref: UMLS_CUI:C0334287
 is_a: DOID:684 ! hepatocellular carcinoma
@@ -7707,6 +7803,7 @@ def: "A gastrointestinal system cancer that is located_in the esophagus." [url:h
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
 synonym: "Ca lower third oesophagus" EXACT []
@@ -7783,6 +7880,7 @@ id: DOID:5075
 name: myxopapillary ependymoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:10633
 xref: ICDO:9394/1
@@ -7797,6 +7895,7 @@ id: DOID:5077
 name: subependymal giant cell astrocytoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "SEGA" EXACT []
 xref: GARD:10632
@@ -7815,6 +7914,7 @@ alt_id: DOID:5606
 alt_id: DOID:5607
 def: "A cell type benign neoplasm that has_material_basis_in glial-type cells." [url:http\://en.wikipedia.org/wiki/Ganglioglioma, url:http\://www.stjude.org/stjude/v/index.jsp?vgnextoid=7e0d061585f70110VgnVCM1000001e0215acRCRD]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adult ganglioglioma" EXACT []
 synonym: "childhood ganglioglioma" EXACT []
@@ -7929,6 +8029,7 @@ id: DOID:5241
 name: hemangioblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Capillary Hemangioblastoma" EXACT []
 xref: GARD:8232
@@ -7990,6 +8091,7 @@ namespace: disease_ontology
 def: "A liposarcoma that is characterized by the presence of a hypocellular spindle cell proliferation set in a myxoid background and has_material_basis_in chromosomal translocations." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8913727]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "Myxoid/round cell liposarcoma" EXACT []
 xref: GARD:7157
 xref: ICDO:8852/3
@@ -8036,6 +8138,7 @@ namespace: disease_ontology
 def: "A synovium cancer which develops in the synovial membrane of the joints." [url:http\://en.wikipedia.org/wiki/Synovial_sarcoma, url:http\://www.cancer.gov/dictionary?cdrid=44626]
 comment: Xref MGI.
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:7721
 xref: ICDO:9040/3
@@ -8137,6 +8240,7 @@ namespace: disease_ontology
 def: "A head and neck carcinoma that has_material_basis_in squamous cells that line the moist, mucosal surfaces inside the head and neck." [url:http\://en.wikipedia.org/wiki/Head_and_neck_cancer#Squamous_cell_carcinoma, url:http\://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck, url:http\://www.cancer.gov/dictionary?CdrID=597171]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "carcinoma of the head and neck" EXACT []
 synonym: "squamous cell carcinoma of the head and neck" EXACT []
@@ -8305,6 +8409,7 @@ namespace: disease_ontology
 alt_id: DOID:5647
 def: "A choroid plexus cancer that has_material_basis_in epithelial cells of the choroid plexus." [url:http\://en.wikipedia.org/wiki/Carcinoma, url:http\://en.wikipedia.org/wiki/Choroid_plexus_carcinoma, url:http\://www.cancer.gov/dictionary?CdrID=45963]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:8238
 xref: ICDO:9390/3
@@ -8527,6 +8632,7 @@ name: meningeal melanocytoma
 namespace: disease_ontology
 def: "A central nervous system benign neoplasm that is characterized as diffuse or multifocal proliferation of uniform nevoid polygonal cells in the leptomeninges." [url:https\://radiopaedia.org/articles/meningeal-melanocytosis?lang=us]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Leptomeningeal melanocytoma" EXACT []
 synonym: "melanocytoma of meninges" EXACT []
@@ -8541,6 +8647,7 @@ id: DOID:5940
 name: malignant peripheral nerve sheath tumor
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "malignant neoplasm of the peripheral nerve Sheath" EXACT []
 xref: GARD:10872
@@ -8712,6 +8819,7 @@ name: gliomatosis cerebri
 namespace: disease_ontology
 def: "A brain cancer that is characterized by a pattern of diffuse infiltration of the brain that affect various areas of the cerebral lobes and has_material_basis_in abnormally proliferating cells, derives_from glial cells." [url:https\://en.wikipedia.org/wiki/Gliomatosis_cerebri, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545748/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Astrocytosis cerebri" EXACT []
 xref: GARD:6514
@@ -8766,6 +8874,7 @@ name: uterine carcinosarcoma
 namespace: disease_ontology
 def: "A uterine body mixed cancer that has_material_basis_in both endometrial carcinoma and sarcoma." [url:http\://cancergenome.nih.gov/cancersselected/UterineCarcinosarcoma, url:http\://en.wikipedia.org/wiki/Carcinosarcoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "mixed mullerian sarcoma of uterus" EXACT []
 xref: GARD:12335
@@ -8780,6 +8889,7 @@ name: ovarian small cell carcinoma
 namespace: disease_ontology
 def: "An ovarian carcinoma that is an undifferentiated neoplasm composed of primitive-appearing cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3858994/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:10411
 xref: NCI:C27390
@@ -8791,6 +8901,7 @@ name: epithelioid sarcoma
 namespace: disease_ontology
 def: "A connective tissue cancer that is characterized by the presence of epithelioid cells forming nodular patterns and has_material_basis_in mesenchymal tissue." [url:https\://en.wikipedia.org/wiki/Epithelioid_sarcoma, url:https\://www.mayoclinic.org/diseases-conditions/epithelioid-sarcoma/cdc-20392420]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "epithelioid cell sarcoma" EXACT []
 xref: GARD:10181
@@ -8905,6 +9016,7 @@ name: acral lentiginous melanoma
 namespace: disease_ontology
 def: "A skin melanoma that is characterized by slow growth of a small pigmented spot on the skin with a clearly defined edge, surrounded by normal-appearing skin and occurs on occurs on non hair-bairing surfaces including hands and feet, subungual sites, and fingers or toes." [url:http\://en.wikipedia.org/wiki/Acral_lentiginous_melanoma, url:http\://en.wikipedia.org/wiki/Lentigo, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1352575/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "acral lentiginous melanoma, malignant" EXACT []
 synonym: "malignant acral lentiginous melanoma" EXACT []
 xref: GARD:9570
@@ -8915,6 +9027,7 @@ id: DOID:6383
 name: childhood brain stem glioma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "pediatric glioma of the Brainstem" EXACT []
 xref: GARD:9306
@@ -8965,6 +9078,7 @@ name: cerebellar liponeurocytoma
 namespace: disease_ontology
 def: "A cerebellum cancer that is characterized by consistent neuronal, variable astrocytic and focal lipomatous differentiation." [url:https\://pubmed.ncbi.nlm.nih.gov/33964714/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Lipomatous Medulloblastoma" EXACT []
 xref: GARD:10642
@@ -9143,6 +9257,7 @@ name: desmoplastic small round cell tumor
 namespace: disease_ontology
 def: "A sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass." [url:https\://en.wikipedia.org/wiki/Desmoplastic_small-round-cell_tumor, url:https\://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/desmoplastic-small-round-cell-tumors]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 synonym: "desmoplastic small round-cell neoplasm" EXACT []
 xref: GARD:6265
 xref: ICDO:8806/3
@@ -9201,6 +9316,7 @@ id: DOID:6823
 name: pancreatoblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:4210
 xref: ICDO:8971/3
@@ -9230,6 +9346,7 @@ alt_id: DOID:5005
 def: "A liver carcinoma that has_material_basis_in undifferentiated hepatocytes and located_in the liver." [url:http\://cancergenome.nih.gov/cancersselected/LiverHepatocellularCarcinoma, url:http\://en.wikipedia.org/wiki/Hepatocellular_carcinoma, url:http\://www.omim.org/entry/114550]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Hepatoma" EXACT []
 xref: EFO:0000182
@@ -9248,6 +9365,7 @@ id: DOID:687
 name: hepatoblastoma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:2657
 xref: ICD10CM:C22.2
@@ -9386,6 +9504,7 @@ name: B-cell lymphoma
 namespace: disease_ontology
 def: "A non-Hodgkin lymphoma that has_material_basis_in B cells." [url:http\://en.wikipedia.org/wiki/B-cell_lymphoma]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-cell lymphocytic neoplasm" EXACT []
 xref: GARD:5877
@@ -9412,6 +9531,7 @@ name: Langerhans cell sarcoma
 namespace: disease_ontology
 def: "A histiocytic and dendritic cell cancer that derives from the lymph nodes, derives from the skin, derives from the liver, derives from the spleen and derives from bones." [url:http\://en.wikipedia.org/wiki/Langerhans_cell_sarcoma, url:https\://pubmed.ncbi.nlm.nih.gov/25805533/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:10491
 xref: ICD10CM:C96.4
@@ -9520,6 +9640,7 @@ name: astroblastoma
 namespace: disease_ontology
 def: "A malignant astrocytoma that is characterized by tumor cells with characteristics suggestive of an astrocytic origin (positive for GFAP), arranged perivascularly." [url:https\://www.futuremedicine.com/doi/full/10.2217/cns-2018-0012, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5910607/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:10635
 xref: ICDO:9430/3
@@ -9754,6 +9875,7 @@ namespace: disease_ontology
 def: "A retinal cell cancer and malignant neoplasm of retina and neuroblastoma and neuroendocrine tumors that derives_from the tissues of the retina." [url:http\://www.cancer.gov/cancertopics/types/retinoblastoma]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "neuroblastoma of Retina" EXACT []
 synonym: "RB" EXACT []
@@ -10060,6 +10182,7 @@ alt_id: DOID:8532
 alt_id: DOID:9160
 def: "A pharynx cancer that is located_in the hypopharynx." [url:http\://en.wikipedia.org/wiki/Hypopharynx]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Hypopharyngeal cancer" EXACT []
 synonym: "malignant Hypopharyngeal tumor" EXACT []
@@ -10085,6 +10208,7 @@ name: Sezary's disease
 namespace: disease_ontology
 alt_id: DOID:8790
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Sezary disease" EXACT []
 synonym: "Sezary syndrome" EXACT []
@@ -10107,6 +10231,7 @@ def: "A myeloid leukemia that is characterized by over production of white blood
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "chronic granulocytic leukaemia" EXACT []
 synonym: "chronic granulocytic leukemia" EXACT []
@@ -10210,6 +10335,7 @@ namespace: disease_ontology
 def: "A mature B-cell neoplasm of B-cells found in the germinal center." [url:http\://en.wikipedia.org/wiki/Burkitt%27s_lymphoma, url:http\://www.cancer.gov/dictionary?CdrID=45203]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Burkitt lymphoma/leukaemia" EXACT []
 synonym: "Burkitt's Lymphoma" EXACT []
@@ -10236,6 +10362,7 @@ namespace: disease_ontology
 alt_id: DOID:8737
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "mycosis fungoides lymphoma" EXACT []
 xref: GARD:3863
@@ -10341,6 +10468,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute myeloblastic leukaemia" EXACT []
 synonym: "acute myeloblastic leukemia" EXACT []
@@ -10367,6 +10495,7 @@ name: gastrointestinal stromal tumor
 namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "GANT" EXACT []
 synonym: "gastrointestinal stromal tumour" EXACT []
@@ -10476,6 +10605,7 @@ name: plasma cell leukemia
 namespace: disease_ontology
 def: "A plasma cell neoplasm that is characterized by the presence of a circulating clonal plasma cell count that exceeds 2x10^9/L or is 20% of the leukocyte differential count." [url:https\://en.wikipedia.org/wiki/Plasma_cell_leukemia, url:https\://rarediseases.info.nih.gov/diseases/9373/index, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6349791/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "plasma cell leukaemia" EXACT []
 synonym: "plasmacytic leukaemia" EXACT []
@@ -10497,6 +10627,7 @@ namespace: disease_ontology
 def: "A myeloid neoplasm that is located_in the plasma cells in bone marrow." [url:http\://en.wikipedia.org/wiki/Multiple_myeloma, url:http\://www.cancer.gov/dictionary?CdrID=411384]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "myeloma" EXACT []
 xref: EFO:0001378
@@ -10516,6 +10647,7 @@ id: DOID:962
 name: neurofibroma
 namespace: disease_ontology
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:7191
 xref: ICDO:9540/0

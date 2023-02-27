@@ -11,6 +11,17 @@
 
 ## 2023 Releases
 
+### [v2023-02-27](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-02-27)
+
+DO February 2023 release: 11,216 disease terms. This release included the addition of new disease terms, definitions and nomenclature updates, and review and updates of rare diseases in the DO, including lymphoma nomenclature updates; the addition of new disease terms: breast implant illness; neurodevelopmental disorder with poor growth, spastic tetraplegia, and hearing loss; myoclonic-atonic epilepsy; oxoglutarate dehydrogenase deficiency; and neurodevelopmental disorder with regression, abnormal movements, loss of speech, and seizures. And the addition of a new DOreport for DO's cancer branch: new DO-ICDO-anatomy DOreport.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-02-27/src/ontology/doid-merged.obo) | |
+
 ### [v2023-01-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-01-30)
 
 DO's January 2023 release includes 11,207 disease terms, with 8,820 (78.7%) textual definitions. 26 new disease terms, 76 new definitions. This release includes a new DO_infectious_disease_slim; updated xrefs from our bi-annual UMLS update, including all SNOMED_CT xrefs to the latest release; the annotation of trinucleotide repeat expansion disorders, digenic and polygenic disease annotations, a revised VEXAS syndrome, the addition of bronchopulmonary dysplasia and intellectual developmental disorder with ocular anomalies and distinctive facial features, numerous CNS neoplasm terms and their associated ICDO codes.

@@ -1,0 +1,18 @@
+# Ensure that no comments have xrefs (may be accidental definition mistakes)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?entity ?comment (GROUP_CONCAT(?comment_xref; SEPARATOR="|") AS ?comment_xrefs)
+WHERE {
+	?entity rdfs:comment ?comment .
+
+	?blank owl:annotatedSource ?entity ;
+		owl:annotatedProperty rdfs:comment ;
+		owl:annotatedTarget ?comment ;
+		oboInOwl:hasDbXref ?comment_xref .
+
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+}
+GROUP BY ?entity ?comment

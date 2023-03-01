@@ -1,0 +1,14 @@
+# verify all 'has symptom' axioms use SYMP
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?not_symptom
+WHERE {
+    ?anonymous a owl:Restriction ;
+        owl:onProperty obo:RO_0002452 ;
+        owl:someValuesFrom ?not_symptom .
+
+    FILTER(isBlank(?anonymous))
+    FILTER(!isBlank(?not_symptom) && !CONTAINS(str(?not_symptom), "SYMP"))
+}

@@ -4,7 +4,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?not_symptom
+SELECT ?class ?type ?not_symptom
 WHERE {
     ?anonymous a owl:Restriction ;
         owl:onProperty obo:RO_0002452 ;
@@ -12,4 +12,10 @@ WHERE {
 
     FILTER(isBlank(?anonymous))
     FILTER(!isBlank(?not_symptom) && !CONTAINS(str(?not_symptom), "SYMP"))
+
+    OPTIONAL {
+        VALUES ?type { rdfs:subClassOf owl:equivalentClass }
+        ?class a owl:Class ;
+            ?type ?anonymous .
+    }
 }

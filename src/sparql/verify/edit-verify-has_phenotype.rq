@@ -4,7 +4,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?not_phenotype
+SELECT ?class ?type ?not_phenotype
 WHERE {
     ?anonymous a owl:Restriction ;
         owl:onProperty obo:RO_0002200 ;
@@ -12,4 +12,10 @@ WHERE {
 
     FILTER(isBlank(?anonymous))
     FILTER(!isBlank(?not_phenotype) && !CONTAINS(str(?not_phenotype), "HP_"))
+
+    OPTIONAL {
+        VALUES ?type { rdfs:subClassOf owl:equivalentClass }
+        ?class a owl:Class ;
+            ?type ?anonymous .
+    }
 }

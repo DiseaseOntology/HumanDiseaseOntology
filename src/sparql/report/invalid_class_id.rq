@@ -10,7 +10,11 @@ WHERE {
 	FILTER NOT EXISTS { ?entity owl:deprecated ?any . }
 
 	# capture & compare entity/id numbers
-	BIND(REPLACE(str(?value), ":", "_") AS ?oio_id)
-	BIND(REPLACE(str(?entity), ".*[/#]", "") AS ?iri_id)
-	FILTER (str(?iri_id) != str(?oio_id))
+	BIND(
+		REPLACE(
+			REPLACE(str(?entity), ".*[/#]", ""),
+			"_", ":"
+		) AS ?iri_id
+	)
+	FILTER (?value != ?iri_id)
 }

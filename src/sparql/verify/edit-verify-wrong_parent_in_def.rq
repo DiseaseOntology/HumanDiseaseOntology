@@ -1,0 +1,19 @@
+# verify all definitions include label of asserted parent
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?class ?parents ?def
+WHERE {
+    {
+        SELECT ?class (GROUP_CONCAT(?parent_label; SEPARATOR = "|") AS ?parents)
+        WHERE {
+            ?class rdfs:subClassOf ?parent_iri .
+            ?parent_iri rdfs:label ?parent_label .
+        } GROUP BY ?class
+    }
+
+    ?class obo:IAO_0000115 ?def .
+    FILTER(!REGEX(?def, ?parents))
+}

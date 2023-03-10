@@ -118,6 +118,20 @@ verify-edit: $(EDIT) | build/robot.jar
 	 --queries $(EDIT_V_QUERIES) \
 	 --output-dir build/reports
 
+# Verify of doid-edit.owl that should be run quarterly (not part of release)
+QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
+
+quarterly_test: build/reports/quarterly_tests.csv
+build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
+	@echo "Verifying $< (see $@ on error)"
+	@$(ROBOT) verify \
+	 --input $< \
+	 --queries $(QUARTER_V_QUERIES) \
+	 --output-dir build/reports/temp
+	@for f in build/reports/temp/quarter-verify-*.csv; \
+	 do cat -- "$$f"; printf "\n"; done > $@
+	@rm build/reports/temp/quarter-verify-*.csv
+
 
 ##########################################
 ## UPDATE DATA IN DOID-EDIT.OWL

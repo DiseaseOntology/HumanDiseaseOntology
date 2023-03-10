@@ -129,9 +129,13 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 	 --queries $(QUARTER_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir build/reports/temp
-	@for f in build/reports/temp/quarter-verify-*.csv; \
-	 do cat -- "$$f"; printf "\n"; done > $@
-	@rm build/reports/temp/quarter-verify-*.csv
+	@awk 'BEGIN { OFS = FS = "," } ; { \
+		if (FNR == 1) { \
+			gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
+			if (NR == 1) { print "test", $$0 } else { print "\ntest", $$0 } \
+		} \
+		else { print FILENAME, $$0 } \
+	 }' build/reports/temp/quarter-verify-*.csv > build/reports/quarterly_tests.csv
 
 
 ##########################################

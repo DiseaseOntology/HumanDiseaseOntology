@@ -127,6 +127,7 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(QUARTER_V_QUERIES) \
+	 --fail-on-violation false \
 	 --output-dir build/reports/temp
 	@for f in build/reports/temp/quarter-verify-*.csv; \
 	 do cat -- "$$f"; printf "\n"; done > $@

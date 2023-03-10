@@ -132,9 +132,10 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 	@awk 'BEGIN { OFS = FS = "," } ; { \
 		if (FNR == 1) { \
 			gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
-			if (NR == 1) { print "test", $$0 } else { print "\ntest", $$0 } \
+			if (NR != 1) { print "" } ; \
+			print "TEST: " FILENAME "\n", $$0 \
 		} \
-		else { print FILENAME, $$0 } \
+		else { print $$0 } \
 	 }' build/reports/temp/quarter-verify-*.csv > build/reports/quarterly_tests.csv
 
 

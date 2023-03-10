@@ -4,7 +4,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?class ?parents ?def
+SELECT ?id ?label ?parents ?def
 WHERE {
     {
         SELECT ?class (GROUP_CONCAT(?parent_label; SEPARATOR = "|") AS ?parents)
@@ -14,6 +14,8 @@ WHERE {
         } GROUP BY ?class
     }
 
-    ?class obo:IAO_0000115 ?def .
+    ?class obo:IAO_0000115 ?def ;
+        oboInOwl:id ?id ;
+        rdfs:label ?label .
     FILTER(!REGEX(?def, ?parents))
 }

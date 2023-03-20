@@ -70,7 +70,7 @@ build/fastobo-validator.zip: | build
 	curl -Lk -o $@ https://github.com/fastobo/fastobo-validator/releases/latest/download/fastobo-validator_null_x86_64-apple-darwin.zip
 
 $(FASTOBO): build/fastobo-validator.zip
-	cd build && unzip $(notdir $<) fastobo-validator
+	cd build && unzip -DD $(notdir $<) fastobo-validator
 
 
 ##########################################

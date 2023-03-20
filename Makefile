@@ -562,9 +562,6 @@ verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
 ##########################################
 
 # Count classes, imports, and logical defs from old and new
-
-.PRECIOUS: build/reports/diff.
-
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \

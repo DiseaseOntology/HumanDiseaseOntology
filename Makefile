@@ -277,8 +277,9 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --annotate-inferred-axioms false \
 	 --exclude-duplicate-axioms true \
 	annotate \
-	 --annotation oboInOwl:date "$(TS)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --annotation oboInOwl:date "$(TS)" \
+	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -313,6 +314,7 @@ $(DO)-base.owl: $(EDIT) | build/robot.jar
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -327,8 +329,8 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --input $< \
 	 --collapse-import-closure true \
 	annotate \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -366,6 +368,7 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $@
 	@cp $@ $(HD).owl
 	@echo "Created $@"
@@ -383,6 +386,7 @@ $(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $(basename $@)-temp.obo
 	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
 	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@

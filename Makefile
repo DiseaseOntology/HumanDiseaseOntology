@@ -317,6 +317,10 @@ $(DO).json: $(DO).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
+# ----------------------------------------
+# DOID-BASE
+# ----------------------------------------
+
 $(DO)-base.owl: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove \
 	 --input $< \
@@ -327,6 +331,14 @@ $(DO)-base.owl: $(EDIT) | build/robot.jar
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $@
+	@echo "Created $@"
+
+$(DO)-base.obo: $(DO)-base.owl | build/robot.jar
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
+	@echo "Created $@"
+
+$(DO)-base.json: $(DO)-base.owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
 # ----------------------------------------

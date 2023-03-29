@@ -385,10 +385,12 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 
 $(DNC).obo: $(DNC).owl | build/robot.jar
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
+	@cp $@ $(HD).obo
 	@echo "Created $@"
 
 $(DNC).json: $(DNC).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@
+	@cp $@ $(HD).json
 	@echo "Created $@"
 
 # ----------------------------------------

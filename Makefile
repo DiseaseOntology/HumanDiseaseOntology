@@ -266,6 +266,32 @@ TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE := $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := "$(OBO)doid/releases/$(DATE)/"
 
+# standardized .obo creation;
+#	args = output,input,version-iri,ontology-iri (optional, use "" to keep from input file)
+define build_obo
+	@ONT_IRI=$(4) ; \
+	 ONT_IRI=$${ONT_IRI:+"--ontology-iri $(4)"} ; \
+	$(ROBOT) query \
+	 --input $(2) \
+	 --update src/sparql/build/remove-ref-type.ru \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
+	remove \
+	 --select imports \
+	 --trim true \
+	annotate \
+	 --version-iri $(3) \
+	 $${ONT_IRI} \
+	convert \
+	 --output $(1)
+    @grep -v ^owl-axioms $(1) | \
+     grep -v ^date | \
+     perl -lpe 'print "date: $(TS)" if $$. == 3' > $(1).tmp.obo && \
+	 mv $(1).tmp.obo $(1)
+endef
+
+
 # ----------------------------------------
 # DOID
 # ----------------------------------------
@@ -283,23 +309,8 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DO).obo: $(DO).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
-	@$(ROBOT) remove \
-	 --input $< \
-	 --select imports \
-	 --trim true \
-	remove \
-	 --select "parents equivalents" \
-	 --select "anonymous" \
-	query \
-	 --update $(word 2,$^) \
-	annotate \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --output $(basename $@)-temp.obo
-	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
-	grep -v ^date | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3'  > $@
-	@rm $(basename $@)-temp.obo
+$(DO).obo: $(DO).owl | build/robot.jar
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
 	@echo "Created $@"
 
 $(DO).json: $(DO).owl | build/robot.jar
@@ -334,21 +345,8 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DM).obo: $(DM).owl src/sparql/build/remove-ref-type.ru | build/robot.jar
-	@$(ROBOT) query \
-	 --input $< \
-	 --update $(word 2,$^) \
-	remove \
-	 --select "parents equivalents" \
-	 --select "anonymous" \
-	annotate \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --output $(basename $@)-temp.obo
-	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
-	grep -v ^date | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
-	@rm $(basename $@)-temp.obo
+$(DM).obo: $(DM).owl | build/robot.jar
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
 
 # ----------------------------------------
@@ -373,27 +371,9 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	@cp $@ $(HD).owl
 	@echo "Created $@"
 
-$(DNC).obo: $(EDIT) src/sparql/build/remove-ref-type.ru | build/robot.jar
-	@$(ROBOT) remove \
-	 --input $< \
-	 --select imports \
-	 --trim true \
-	remove \
-	 --select "parents equivalents" \
-	 --select "anonymous" \
-	query \
-	 --update $(word 2,$^) \
-	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --annotation owl:versionInfo "$(DATE)" \
-	 --output $(basename $@)-temp.obo
-	@grep -v ^owl-axioms $(basename $@)-temp.obo | \
-	perl -lpe 'print "date: $(TS)" if $$. == 3' > $@
-	@cp $@ $(HD).obo
-	@rm $(basename $@)-temp.obo
+$(DNC).obo: $(DNC).owl | build/robot.jar
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
-
 
 $(DNC).json: $(DNC).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@
@@ -425,14 +405,7 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	@echo "Created $@"
 
 src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
-	@$(ROBOT) query \
-	 --input $< \
-	 --update src/sparql/build/remove-ref-type.ru \
-	annotate \
-	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
-	 --ontology-iri "$(OBO)doid/subsets/$(notdir $@)" \
-	convert \
-	 --output $@
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)subsets/$(notdir $@)","$(OBO)doid/subsets/$(notdir $(basename $@))")
 	@echo "Created $@"
 
 src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar

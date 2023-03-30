@@ -12,6 +12,7 @@ EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/
 
 # Other products
+DB = src/ontology/doid-base
 DM = src/ontology/doid-merged
 DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
@@ -259,7 +260,8 @@ $(REFRESH_IMPS):
 ## RELEASE PRODUCTS
 ##########################################
 
-products: subsets human merged release_reports
+.PHONY: products
+products: primary human merged base subsets release_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -296,6 +298,9 @@ endef
 # DOID
 # ----------------------------------------
 
+.PHONY: primary
+primary: $(DO).owl $(DO).obo $(DO).json
+
 $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	@$(ROBOT) reason \
 	 --input $< \
@@ -321,7 +326,10 @@ $(DO).json: $(DO).owl | build/robot.jar
 # DOID-BASE
 # ----------------------------------------
 
-$(DO)-base.owl: $(EDIT) | build/robot.jar
+.PHONY: base
+base: $(DB).owl $(DB).obo $(DB).json
+
+$(DB).owl: $(EDIT) | build/robot.jar
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -333,11 +341,11 @@ $(DO)-base.owl: $(EDIT) | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DO)-base.obo: $(DO)-base.owl | build/robot.jar
+$(DB).obo: $(DB).owl | build/robot.jar
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
 
-$(DO)-base.json: $(DO)-base.owl | build/robot.jar
+$(DB).json: $(DB).owl | build/robot.jar
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
@@ -345,7 +353,8 @@ $(DO)-base.json: $(DO)-base.owl | build/robot.jar
 # DOID-MERGED
 # ----------------------------------------
 
-merged: $(DM).owl $(DM).obo
+.PHONY: merged
+merged: $(DM).owl $(DM).obo $(DM).json
 
 $(DM).owl: $(DO).owl | build/robot.jar
 	@$(ROBOT) merge \
@@ -369,6 +378,7 @@ $(DM).json: $(DM).owl | build/robot.jar
 # HUMANDO
 # ----------------------------------------
 
+.PHONY: human
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
 $(DNC).owl: $(EDIT) | build/robot.jar
@@ -410,6 +420,7 @@ OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))
 JSON_SUBS = $(foreach N,$(SUBS),$(addsuffix .json, $(N)))
 
+.PHONY: subsets
 subsets: $(OWL_SUBS) $(OBO_SUBS) $(JSON_SUBS)
 
 $(OWL_SUBS): $(DNC).owl | build/robot.jar
@@ -506,12 +517,12 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | imports build/ro
 
 .PHONY: publish
 publish: $(DO).owl $(DO).obo $(DO).json\
- $(DO)-base.owl\
+ $(DB).owl\
  $(DM).owl $(DM).obo\
  $(DNC).owl $(DNC).obo $(DNC).json\
  subsets
 	@cp $(DO).* src/ontology/releases
-	@cp $(DO)-base.owl src/ontology/releases
+	@cp $(DB).owl src/ontology/releases
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases
 	@cp -r src/ontology/subsets src/ontology/releases

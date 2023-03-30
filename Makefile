@@ -531,14 +531,19 @@ publish: $(DO).owl $(DO).obo $(DO).json\
 
 
 ##########################################
-## Ensure proper OBO structure
+## VERIFY build products
 ##########################################
+
+.PHONY: verify validate-obo verify-do verify-dnc validate-doid \
+ validate-doid-merged validate-doid-non-classified validate-doid-base
 
 verify: validate-obo verify-do verify-dnc
 
 # Using fastobo-validator
-validate-obo: validate-doid validate-doid-merged validate-doid-non-classified
-validate-%: src/ontology/%.obo | $(FASTOBO)
+OBO_V := $(patsubst src/ontology/%.obo,validate-%,$(wildcard src/ontology/*.obo))
+validate-obo: validate-doid validate-doid-merged validate-doid-non-classified \
+ validate-doid-base
+$(OBO_V): validate-%: src/ontology/%.obo | $(FASTOBO)
 	@$(FASTOBO) $<
 
 # Verify doid.obo

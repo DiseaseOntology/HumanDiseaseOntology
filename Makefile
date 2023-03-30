@@ -361,6 +361,10 @@ $(DM).obo: $(DM).owl | build/robot.jar
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
 
+$(DM).json: $(DM).owl | build/robot.jar
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
+
 # ----------------------------------------
 # HUMANDO
 # ----------------------------------------

@@ -252,13 +252,17 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
-	 --upper-term NCBITaxon:10239 \
-	 --upper-term NCBITaxon:131567 \
+	 --upper-term NCBITaxon:1 \
 	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
 	 --select annotation-properties\
 	 --term-file annotations.txt \
+	remove \
+	 --term NCBITaxon:1 \
+	 --term rdfs:label \
+	 --axioms annotation \
+	 --trim false \
 	$(call annotate_import,$@,$(word 2,$|))
 
 ro: ro_import.owl

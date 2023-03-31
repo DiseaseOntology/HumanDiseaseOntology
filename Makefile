@@ -497,8 +497,6 @@ version_ext: src/ontology/ext.owl | imports build/robot.jar
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
-	convert \
-	 --format ofn \
 	 --output $<
 	@echo "Updated versionIRI of $<"
 

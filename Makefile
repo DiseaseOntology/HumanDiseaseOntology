@@ -78,7 +78,7 @@ $(FASTOBO): build/fastobo-validator.zip
 ## PRE-BUILD TESTS
 ##########################################
 
-.PHONY: test report reason verify-edit
+.PHONY: test report reason verify-edit quarterly_test
 
 # `make test` is used for Github integration
 test: reason report verify-edit

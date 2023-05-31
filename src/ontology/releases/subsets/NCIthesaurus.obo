@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-03-31/subsets/NCIthesaurus.obo
-date: 31:03:2023 13:36
+data-version: doid/releases/2023-05-31/subsets/NCIthesaurus.obo
+date: 31:05:2023 10:50
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -3574,6 +3574,7 @@ synonym: "bullous type ichthyosis" EXACT []
 synonym: "ichthyosis bullosa of Siemens" EXACT []
 synonym: "superficial epidermolytic ichthyosis" EXACT []
 xref: GARD:2966
+xref: ICD10CM:Q80.3
 xref: MESH:D053560
 xref: NCI:C84777
 xref: OMIM:146800
@@ -13725,7 +13726,6 @@ xref: ICD10CM:E76.3
 xref: ICD9CM:277.5
 xref: MESH:D009083
 xref: NCI:C61259
-xref: OMIM:252700
 xref: OMIM:PS607014
 xref: ORDO:79213
 xref: SNOMEDCT_US_2022_09_01:267452003
@@ -19445,7 +19445,7 @@ is_a: DOID:12960 ! acrocephalosyndactylia
 id: DOID:14717
 name: centronuclear myopathy
 namespace: disease_ontology
-def: "A myopathy characterized by abnormally located  nuclei in skeletal muscle cells. The nuclei are located in the center of the cell, instead of their normal location at the periphery." [url:http\://en.wikipedia.org/wiki/Centronuclear_myopathy, url:http\://ghr.nlm.nih.gov/condition/centronuclear-myopathy]
+def: "A congenital structural myopathy characterized by abnormally located nuclei in skeletal muscle cells. The nuclei are located in the center of the cell, instead of their normal location at the periphery." [url:http\://en.wikipedia.org/wiki/Centronuclear_myopathy, url:http\://ghr.nlm.nih.gov/condition/centronuclear-myopathy]
 comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -19461,7 +19461,7 @@ xref: ORDO:69186
 xref: ORDO:69189
 xref: SNOMEDCT_US_2022_09_01:193223007
 xref: UMLS_CUI:C0175709
-is_a: DOID:423 ! myopathy
+is_a: DOID:422 ! congenital structural myopathy
 
 [Term]
 id: DOID:14720
@@ -22566,6 +22566,7 @@ is_a: DOID:4 ! disease
 id: DOID:1984
 name: rectal benign neoplasm
 namespace: disease_ontology
+def: "An intestinal benign neoplasm located_in the rectum." [url:https\://www.ncbi.nlm.nih.gov/books/NBK6994/]
 subset: NCIthesaurus
 synonym: "neoplasm of rectum" EXACT []
 synonym: "Rectal tumor" EXACT []
@@ -23191,19 +23192,17 @@ is_a: DOID:1294 ! vulva carcinoma
 id: DOID:2106
 name: myotonia congenita
 namespace: disease_ontology
-def: "A muscle tissue disease that is characterised by slow muscle relaxation associated with hyperexcitation of the muscle fibres." [url:http\://rarediseases.org/rare-diseases/myotonia-congenita/, url:http\://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=614]
+alt_id: DOID:0080100
+def: "A muscle tissue disease that is characterised by slow muscle relaxation associated with hyperexcitation of the muscle fibres." [url:http\://rarediseases.org/rare-diseases/myotonia-congenita/, url:http\://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=614, url:https\://medlineplus.gov/genetics/condition/myotonia-congenita/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Congenital myotonia, autosomal dominant form" EXACT []
-synonym: "Thomsen disease" EXACT []
-synonym: "Thomsen's disease" EXACT []
+synonym: "Batten Turner congenital myopathy" EXACT []
+synonym: "Thomsen and Becker disease" EXACT []
 xref: GARD:12301
 xref: ICD9CM:359.22
 xref: MESH:D009224
 xref: NCI:C84912
-xref: OMIM:160800
-xref: OMIM:255700
 xref: ORDO:614
 xref: UMLS_CUI:C0027127
 is_a: DOID:17 ! musculoskeletal system disease
@@ -24918,14 +24917,16 @@ is_a: DOID:6195 ! conjunctivitis
 id: DOID:2477
 name: motor peripheral neuropathy
 namespace: disease_ontology
+def: "A neuropathy that is characterized by inflammation or degeneration of the peripheral motor nerves." [url:https\://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy]
 subset: NCIthesaurus
 synonym: "Hereditary motor and sensory neuropathy" EXACT []
 synonym: "HSMN" EXACT []
 synonym: "HSMN - Hereditary sensory and motor neuropathy" EXACT []
 synonym: "neuropathic muscular atrophy" EXACT []
+synonym: "Peripheral Motor Neuropathy" EXACT []
 xref: ICD10CM:G60.0
 xref: MESH:D015417
-xref: NCI:C75467
+xref: NCI:C3500
 xref: SNOMEDCT_US_2022_09_01:128202008
 xref: UMLS_CUI:C0027888
 is_a: DOID:870 ! neuropathy
@@ -25048,7 +25049,7 @@ is_a: DOID:10937 ! impulse control disorder
 id: DOID:2512
 name: nevoid basal cell carcinoma syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by multiple early-onset basal cell carcinoma, multiple jaw keratocysts and skeletal abnormalities that has_material_basis_in heterozygous mutation in either PTCH1, PTCH2, or SUFU on chromosome 9q22, 1p32, or 10q24-q25, respectively." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19533801, url:https\://www.ncbi.nlm.nih.gov/pubmed/8658145, url:https\://www.ncbi.nlm.nih.gov/pubmed/9931336]
+def: "A syndrome characterized by multiple early-onset basal cell carcinoma, multiple jaw keratocysts and skeletal abnormalities." [url:https\://medlineplus.gov/genetics/condition/gorlin-syndrome/, url:https\://pubmed.ncbi.nlm.nih.gov/11932998/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -25059,7 +25060,7 @@ xref: GARD:7166
 xref: MEDDRA:10062804
 xref: MESH:D001478
 xref: NCI:C2892
-xref: OMIM:109400
+xref: OMIM:PS109400
 xref: ORDO:377
 xref: SNOMEDCT_US_2022_09_01:69408002
 xref: UMLS_CUI:C0004779
@@ -29734,7 +29735,7 @@ is_a: DOID:2730 ! epidermolysis bullosa
 id: DOID:3210
 name: Pelizaeus-Merzbacher disease
 namespace: disease_ontology
-def: "A hypomyelinating leukodystrophy characterized by impaired myelin formation, nystagmus, spastic quadriplegia, ataxia, and developmental delay that has_material_basis_in mutation in the PLP1 gene on chromosome Xq22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15627202, url:https\://www.ncbi.nlm.nih.gov/pubmed/2773936, url:https\://www.ncbi.nlm.nih.gov/pubmed/3476455]
+def: "A hypomyelinating leukodystrophy characterized by impaired myelin formation, nystagmus, spastic quadriplegia, ataxia, and developmental delay that has_material_basis_in mutation in the PLP1 gene on chromosome Xq22." [url:https\://www.ncbi.nlm.nih.gov/books/NBK560522/, url:https\://www.ncbi.nlm.nih.gov/pubmed/15627202, url:https\://www.ncbi.nlm.nih.gov/pubmed/2773936, url:https\://www.ncbi.nlm.nih.gov/pubmed/3476455]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "diffuse familial brain sclerosis" EXACT []
@@ -31972,12 +31973,13 @@ is_a: DOID:6713 ! cerebrovascular disease
 
 [Term]
 id: DOID:3529
-name: central core disease
+name: congenital myopathy 1A
 namespace: disease_ontology
-def: "A congenital structural myopathy that is characterized by motor developmental delay and signs of mild proximal weakness most pronounced in the hip girdle musculature and that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the ryanodine receptor-1 gene (RYR1) on chromosome 19q13." [url:https\://medlineplus.gov/genetics/condition/central-core-disease/, url:https\://pubmed.ncbi.nlm.nih.gov/23553484/]
+def: "A congenital myopathy that is characterized by muscle weakness primarily affecting the proximal muscles of the lower limbs beginning in infancy or early childhood, although later onset of symptoms has been reported and that has_material_basis_in heterozygous mutation in the ryanodine receptor-1 gene (RYR1) on chromosome 19q13. Heterozygous mutation in the RYR1 gene also causes susceptibility to malignant hyperthermia-1 (MHS1), patients with CMYP1A are at risk for MHS. Biallelic mutations in the RYR1 gene cause autosomal recessive CMYP1B, which shows overlapping features, but is typically more severe." [url:https\://medlineplus.gov/genetics/condition/central-core-disease/, url:https\://pubmed.ncbi.nlm.nih.gov/23553484/, url:https\://pubmed.ncbi.nlm.nih.gov/34627702/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "central core disease" EXACT []
 synonym: "central core myopathy" EXACT []
 xref: GARD:6014
 xref: ICD10CM:G71.29
@@ -31987,7 +31989,7 @@ xref: OMIM:117000
 xref: ORDO:597
 xref: SNOMEDCT_US_2022_09_01:43152001
 xref: UMLS_CUI:C0751951
-is_a: DOID:422 ! congenital structural myopathy
+is_a: DOID:423 ! myopathy
 
 [Term]
 id: DOID:3534
@@ -34801,7 +34803,7 @@ is_a: DOID:3969 ! thyroid gland papillary carcinoma
 id: DOID:3969
 name: thyroid gland papillary carcinoma
 namespace: disease_ontology
-def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer abd arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
+def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer and arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_rare_slim
@@ -36255,6 +36257,7 @@ is_a: DOID:2151 ! malignant ovarian surface epithelial-stromal neoplasm
 id: DOID:422
 name: congenital structural myopathy
 namespace: disease_ontology
+def: "A myopathy that is characterized by hypotonia, muscle weakness, and delayed development of motor skills." [url:https\://pubmed.ncbi.nlm.nih.gov/23897157/]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 xref: MESH:D020914
@@ -38597,18 +38600,16 @@ is_a: DOID:3565 ! meningioma
 id: DOID:4603
 name: epidermolytic hyperkeratosis
 namespace: disease_ontology
-comment: OMIM mapping confirmed by DO. [SN].
+def: "An ichthyosis that is characterized by generalized erythema, skin blisters and skin fragility, manifested at birth." [url:https\://dermnetnz.org/topics/epidermolytic-ichthyosis, url:https\://medlineplus.gov/genetics/condition/epidermolytic-hyperkeratosis/]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "bullous congenital ichthyosiform erythroderma" EXACT []
 synonym: "Bullous ichthyosiform erythroderma" EXACT []
+synonym: "epidermolytic ichthyosis" EXACT []
 synonym: "Epidermolytic palmoplantar hyperkeratosis" EXACT []
-xref: GARD:1039
-xref: ICD10CM:Q80.3
 xref: MESH:D017488
 xref: NCI:C62569
-xref: OMIM:113800
-xref: SNOMEDCT_US_2022_09_01:20512000
+xref: OMIM:PS113800
 xref: UMLS_CUI:C0079153
 is_a: DOID:37 ! skin disease
 
@@ -43786,7 +43787,7 @@ is_a: DOID:3918 ! pancreatic cystadenoma
 id: DOID:5408
 name: Paget's disease of bone
 namespace: disease_ontology
-def: "A bone formation disease that has_material_basis_in hyperactive osteoclast which results_in abnormal osteoblast bone formation located_in skull, located_in pelvis, located_in vertebral column, located_in set of limbs." [url:http\://en.wikipedia.org/wiki/Paget%27s_disease_of_bone, url:http\://orthoinfo.aaos.org/topic.cfm?topic=A00076, url:http\://www.mayoclinic.com/health/pagets-disease-of-bone/DS00485, url:http\://www.nlm.nih.gov/medlineplus/pagetsdiseaseofbone.html]
+def: "A bone formation disease that has_material_basis_in hyperactive osteoclast which results_in abnormal osteoblast bone formation located_in skull, located_in pelvis, located_in vertebral column, located_in set of limbs." [url:http\://en.wikipedia.org/wiki/Paget%27s_disease_of_bone, url:http\://orthoinfo.aaos.org/topic.cfm?topic=A00076, url:http\://www.mayoclinic.com/health/pagets-disease-of-bone/DS00485, url:http\://www.nlm.nih.gov/medlineplus/pagetsdiseaseofbone.html, url:https\://pubmed.ncbi.nlm.nih.gov/37180975/]
 comment: Xref MGI.\nMESH:C538098 added from NeuroDevNet [WAK].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -43800,9 +43801,7 @@ xref: GARD:8615
 xref: ICD10CM:M88
 xref: MESH:D010001
 xref: NCI:C3292
-xref: OMIM:167250
-xref: OMIM:602080
-xref: OMIM:606263
+xref: OMIM:PS167250
 xref: ORDO:280110
 xref: SNOMEDCT_US_2022_09_01:2089002
 xref: UMLS_CUI:C0029401
@@ -49833,13 +49832,14 @@ is_a: DOID:4205 ! cerebellum cancer
 
 [Term]
 id: DOID:6459
-name: lipoma of the rectum
+name: rectal lipoma
 namespace: disease_ontology
+def: "A rectal benign neoplasm that has_material_basis_in fat tissue." [url:https\://pubmed.ncbi.nlm.nih.gov/22084744/]
 subset: NCIthesaurus
-synonym: "Lipoma of rectum" EXACT []
+synonym: "lipoma of the rectum" EXACT []
 xref: NCI:C5551
 xref: UMLS_CUI:C1335684
-is_a: DOID:6460 ! large intestine lipoma
+is_a: DOID:1984 ! rectal benign neoplasm
 
 [Term]
 id: DOID:646
@@ -52864,10 +52864,12 @@ is_a: DOID:4054 ! prostate sarcoma
 
 [Term]
 id: DOID:7160
-name: rectum leiomyoma
+name: rectal leiomyoma
 namespace: disease_ontology
+def: "A rectal benign neoplasm that has_material_basis_in smooth muscle tissue." [url:https\://pubmed.ncbi.nlm.nih.gov/29657702]
 subset: NCIthesaurus
 synonym: "leiomyoma of rectum" EXACT []
+synonym: "rectum leiomyoma" EXACT []
 xref: NCI:C5552
 xref: UMLS_CUI:C1335682
 is_a: DOID:1984 ! rectal benign neoplasm

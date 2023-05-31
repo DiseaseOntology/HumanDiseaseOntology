@@ -4337,8 +4337,8 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_3191",
       "meta" : {
         "definition" : {
-          "val" : "A congenital structural myopathy characterized by generally non-progressive muscle weakness of varying severity; certain muscle fibers show the presence of rod-like structures called nemaline bodies.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nemaline_myopathy", "url:http://ghr.nlm.nih.gov/condition/nemaline-myopathy", "url:https://www.rarediseases.org/rare-disease-information/rare-diseases/byID/151/viewAbstract" ]
+          "val" : "A congenital myopathy characterized by generally non-progressive muscle weakness of varying severity and problems with the tone and contraction of skeletal muscles. The muscle cells contain abnormal clumps of threadlike material called nemaline bodies.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Nemaline_myopathy", "url:http://ghr.nlm.nih.gov/condition/nemaline-myopathy", "url:https://www.mda.org/disease/congenital-myopathies/types/nemaline-myopathy", "url:https://www.rarediseases.org/rare-disease-information/rare-diseases/byID/151/viewAbstract" ]
         },
         "comments" : [ "Xref MGI." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -4360,6 +4360,10 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Nemaline body disease",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "rod body disease",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -4460,6 +4464,28 @@
       "type" : "CLASS",
       "lbl" : "cerebral palsy"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_422",
+      "meta" : {
+        "definition" : {
+          "val" : "A myopathy that is characterized by hypotonia, muscle weakness, and delayed development of motor skills.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/23897157/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "MESH:D020914"
+        }, {
+          "val" : "NCI:C84648"
+        }, {
+          "val" : "UMLS_CUI:C0752282"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "congenital structural myopathy"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_543",
       "meta" : {
         "definition" : {
@@ -4524,24 +4550,6 @@
       },
       "type" : "CLASS",
       "lbl" : "D-2-hydroxyglutaric aciduria"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_422",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "xrefs" : [ {
-          "val" : "MESH:D020914"
-        }, {
-          "val" : "NCI:C84648"
-        }, {
-          "val" : "UMLS_CUI:C0752282"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "congenital structural myopathy"
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14702",
       "meta" : {
@@ -4989,7 +4997,7 @@
       "id" : "http://purl.obolibrary.org/obo/DOID_14717",
       "meta" : {
         "definition" : {
-          "val" : "A myopathy characterized by abnormally located  nuclei in skeletal muscle cells. The nuclei are located in the center of the cell, instead of their normal location at the periphery.",
+          "val" : "A congenital structural myopathy characterized by abnormally located nuclei in skeletal muscle cells. The nuclei are located in the center of the cell, instead of their normal location at the periphery.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Centronuclear_myopathy", "url:http://ghr.nlm.nih.gov/condition/centronuclear-myopathy" ]
         },
         "comments" : [ "Xref MGI." ],
@@ -5162,6 +5170,14 @@
           "val" : "ORDO:33069"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "DEE6A",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "developmental and epileptic encephalopathy 6A",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "severe myoclonic epilepsy of infancy",
           "xrefs" : [ ]
@@ -7661,7 +7677,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_14717",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_423"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_422"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080422",
       "pred" : "is_a",
@@ -7683,13 +7699,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1289"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3191",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_422"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_680",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1289"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3191",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_423"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060108",
       "pred" : "is_a",
@@ -7944,7 +7960,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-03-31/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-05-31/subsets/DO_FlyBase_slim.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

@@ -11,6 +11,17 @@
 
 ## 2023 Releases
 
+### [v2023-05-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-05-31)
+
+This release includes 11,314 disease terms and 8,942 textual definitions (79.0%) with added definitions, xrefs, new DO terms and revised classifications. Included are updates for bradyopsia, NBCCS - nevoid basal cell carcinoma syndrome, leukoencephalopathy with vanishing white matter, developmental and epileptic encephalopathy, hypomyelinating leukodystrophy, epidermolytic hyperkeratosis, autosomal recessive spinocerebellar ataxia, Paget's disease of bone, spastic quadriplegic cerebral palsy, spinal muscular atrophy and various myopathies. Added diseases include acrocardiofacial syndrome, Hengel-Maroofian-Schols syndrome, early onset progressive encephalopathy with brain atrophy and thin corpus callosum, Luo-Schoch-Yamamoto syndrome and Pierpont syndrome, along with many others.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-05-31/src/ontology/doid-merged.obo) | |
+
 ### [v2023-03-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-03-31)
 
 This release includes 11,224 disease terms, 8,846 textual definitions, 724 EQ axioms and 8,124 SubClassOf axioms; an increase of 8 new disease terms, 10 new definitions, 2 EQs, 33 SubClassOf axioms. This release included updating of disease names, synonyms and xrefs and associated phenotypes, updates of classifications for frontotemporal dementia, major depressive disorder and related classes and updated COPD definitions, chronic granulomatous, and  glycogen storage diseases and hypoglycemia disease annotations and the addition of an axiom to define prion disease, progeria disease subtypes, chronic granulomatous disease 5.

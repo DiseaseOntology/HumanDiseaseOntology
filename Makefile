@@ -78,7 +78,7 @@ $(FASTOBO): build/fastobo-validator.zip
 ## PRE-BUILD TESTS
 ##########################################
 
-.PHONY: test report reason verify-edit quarterly_test
+.PHONY: test report reason verify-edit quarterly_test diff_axioms
 
 # `make test` is used for Github integration
 test: reason report verify-edit
@@ -138,6 +138,22 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 		} \
 		else { print $$0 } \
 	 }' build/reports/temp/quarter-verify-*.csv > build/reports/quarterly_tests.csv
+
+diff_axioms: build/reports/axiom.diff
+build/reports/axiom.diff: build/reports/temp/axiom-last.tsv build/reports/temp/axiom-new.tsv
+	@git diff -U0 --word-diff --no-index $^ > $@ || true
+
+build/reports/temp/axiom-last.tsv: $(EDIT) | build/reports/temp
+	@$(ROBOT) export \
+	 --input $(DO).owl \
+	 --header "ID|Equivalent Class|SubClass Of [ANON]" \
+	 --export $@
+
+build/reports/temp/axiom-new.tsv: $(EDIT) | build/reports/temp
+	@$(ROBOT) export \
+	 --input $< \
+	 --header "ID|Equivalent Class|SubClass Of [ANON]" \
+	 --export $@
 
 
 ##########################################

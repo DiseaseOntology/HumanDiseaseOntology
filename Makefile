@@ -56,7 +56,7 @@ update_robot:
 	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.8.3/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar
 
 ROBOT := java -jar build/robot.jar
 

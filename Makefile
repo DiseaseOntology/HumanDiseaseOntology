@@ -417,6 +417,7 @@ $(DB).owl: $(EDIT) | check_robot
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --annotation oboInOwl:date "$(TS)" \
 	 --annotation owl:versionInfo "$(DATE)" \
 	 --output $@
 	@echo "Created $@"

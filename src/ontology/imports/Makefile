@@ -9,14 +9,12 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 
-IMPORT_OBO := ro
-IMPORT_OWL := cl foodon geno hp so uberon symp trans
+IMPORT_OWL := cl foodon geno hp ro so uberon symp trans
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
 
-IMPORTS := $(IMPORT_OBO) $(IMPORT_OWL) $(IMPORT_OWL_GZ)
+IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
 SOURCES := $(addprefix build/, \
-	$(addsuffix .obo,$(IMPORT_OBO)) \
 	$(addsuffix .owl,$(IMPORT_OWL)) \
 	$(addsuffix .owl.gz,$(IMPORT_OWL_GZ)) \
 )
@@ -97,11 +95,6 @@ $(SOURCES): | build
 # ----------------------------------------
 
 .SECONDARY: $(addprefix build/,$(addsuffix .version,$(IMPORTS)))
-$(patsubst %,build/%.version,$(IMPORT_OBO)): %.version: %.obo
-	@$(ROBOT) convert --input $< --format owl --output $@.tmp
-	@grep "owl:versionIRI" $@.tmp | sed -E 's/.*"([^"]+)\.owl".*/\1\.obo/' > $@
-	@rm $@.tmp
-
 # second sed cmd added to standardize weird Foodon versionIRI
 $(patsubst %,build/%.version,$(IMPORT_OWL)): %.version: %.owl
 	@grep "owl:versionIRI" $< | sed -E 's/.*"([^"]+)".*/\1/' | \
@@ -266,7 +259,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	$(call annotate_import,$@,$(word 2,$|))
 
 ro: ro_import.owl
-ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt build/ro.version
+ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version
 	@$(call announce_version,$@,$(word 2,$|))
 	@$(ROBOT) extract \
 	 --input $< \

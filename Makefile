@@ -56,7 +56,7 @@ update_robot:
 	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.8.3/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -78,7 +78,7 @@ $(FASTOBO): build/fastobo-validator.zip
 ## PRE-BUILD TESTS
 ##########################################
 
-.PHONY: test report reason verify-edit
+.PHONY: test report reason verify-edit quarterly_test
 
 # `make test` is used for Github integration
 test: reason report verify-edit

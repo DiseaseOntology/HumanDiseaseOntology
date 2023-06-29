@@ -122,8 +122,8 @@ verify-edit: $(EDIT) | build/robot.jar
 # Verify of doid-edit.owl that should be run quarterly (not part of release)
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 
-quarterly_test: build/reports/quarterly_tests.csv
-build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
+quarterly_test: build/reports/quarterly_test.csv
+build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
 	@echo "Verifying $< (see $@ on error)"
 	@$(ROBOT) verify \
 	 --input $< \
@@ -137,7 +137,7 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 			print "TEST: " FILENAME ; print $$0 \
 		} \
 		else { print $$0 } \
-	 }' build/reports/temp/quarter-verify-*.csv > build/reports/quarterly_tests.csv
+	 }' build/reports/temp/quarter-verify-*.csv > $@
 
 
 ##########################################
@@ -220,6 +220,30 @@ $(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 		echo "$* UPDATED in $<" ; \
 	else echo "$* ALREADY UP-TO-DATE, skipping..." ; \
 	fi
+
+# ----------------------------------------
+# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_options to list)
+# ----------------------------------------
+
+FIX := $(basename $(notdir $(wildcard src/sparql/update/fix_*.ru)))
+
+.PHONY: fix_options fix_data $(FIX)
+fix_options:
+	@echo "The following can be used to 'fix' data:$$(printf '\n- %s' $(FIX))"
+	@echo "To run all use: fix_data"
+
+fix_data: $(FIX)
+
+$(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
+ build/robot.jar src/sparql/update/doid-edit_prefixes.json
+	@$(ROBOT) \
+	 --add-prefixes $(word 2,$|) \
+	query \
+	 --input $< \
+	 --update $(word 2,$^) \
+	 --output doid-edit.ofn \
+	&& mv doid-edit.ofn $<
+	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
 
 
 ##########################################

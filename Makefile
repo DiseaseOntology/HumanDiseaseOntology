@@ -225,13 +225,20 @@ $(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 # FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)
 # ----------------------------------------
 
-FIX := $(basename $(notdir $(wildcard src/sparql/update/fix_*.ru)))
+FIX_FILES := $(wildcard src/sparql/update/fix_*.ru)
+FIX := $(basename $(notdir $(FIX_FILES)))
 
 .PHONY: fix_cmds fix_data $(FIX)
-fix_cmds:
-	@echo "The following can be used to 'fix' data:$$(printf '\n- %s' $(FIX))"
-	@echo "To run all use: fix_data"
 
+# reports possible commands with description from first line of SPARQL update file
+fix_cmds:
+	@echo -e "\n\nThe following make rules can be used to 'fix' data:\n"
+	@for f in $(FIX_FILES); do \
+		printf -- '- %s:\t%s\n' $$(basename $$f .ru) "$$(sed '1s/# //;q' $$f )" ; \
+	 done
+	@echo -e "\nTo run all use: fix_data\n\n"
+
+# run all fix_cmds
 fix_data: $(FIX)
 
 $(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \

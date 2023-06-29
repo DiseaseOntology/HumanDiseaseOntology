@@ -1,8 +1,5 @@
-# Add "the" and "gene" to abbreviated genes in definitions missing them
+# reformat definition gene symbols as "the <symbol> gene"
 # NOTE: excludes definitions with locus, allele and region in them to prevent adding redundant "gene" to them
-# Execute with ROBOT 1.9.4 as
-# robot --add-prefixes src/sparql/doid-edit_prefixes.json query -i src/ontology/doid-edit.owl --update ../../DO_dev/sparql/update/DO-def_format_gene.ru -o tmp.ofn && robot convert -i tmp.ofn -o tmp2.ofn && mv tmp2.ofn src/ontology/doid-edit.owl && rm tmp.ofn
-
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
 DELETE { 

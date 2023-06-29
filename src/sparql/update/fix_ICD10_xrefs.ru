@@ -1,4 +1,4 @@
-# Replaces 'ICD10:' prefix with expected 'ICD10CM:' prefix
+# replace 'ICD10' prefix with 'ICD10CM'
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 DELETE { ?class oboInOwl:hasDbXref ?xref . }

@@ -7,7 +7,7 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 PREFIX doid: <http://purl.obolibrary.org/obo/doid#>
 
-SELECT ?class
+SELECT DISTINCT ?class
 WHERE {
     ?class a owl:Class ;
         oboInOwl:hasDbXref ?xref .

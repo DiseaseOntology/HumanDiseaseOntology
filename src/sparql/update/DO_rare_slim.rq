@@ -10,7 +10,9 @@ PREFIX doid: <http://purl.obolibrary.org/obo/doid#>
 SELECT ?class
 WHERE {
     ?class a owl:Class ;
-        oboInOwl:hasDbXref ?xref .
+        rdfs:subClassOf* ?rare_class .
+    ?rare_class oboInOwl:hasDbXref ?xref .
+
     FILTER(REGEX(str(?xref), "GARD|ORDO"))
     FILTER NOT EXISTS { ?class oboInOwl:inSubset doid:DO_rare_slim . }
     FILTER NOT EXISTS { ?class owl:deprecated ?any . }

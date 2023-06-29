@@ -122,8 +122,8 @@ verify-edit: $(EDIT) | build/robot.jar
 # Verify of doid-edit.owl that should be run quarterly (not part of release)
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 
-quarterly_test: build/reports/quarterly_tests.csv
-build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
+quarterly_test: build/reports/quarterly_test.csv
+build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
 	@echo "Verifying $< (see $@ on error)"
 	@$(ROBOT) verify \
 	 --input $< \
@@ -137,7 +137,7 @@ build/reports/quarterly_tests.csv: $(EDIT) | build/robot.jar build/reports/temp
 			print "TEST: " FILENAME ; print $$0 \
 		} \
 		else { print $$0 } \
-	 }' build/reports/temp/quarter-verify-*.csv > build/reports/quarterly_tests.csv
+	 }' build/reports/temp/quarter-verify-*.csv > $@
 
 
 ##########################################

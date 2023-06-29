@@ -221,6 +221,30 @@ $(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	else echo "$* ALREADY UP-TO-DATE, skipping..." ; \
 	fi
 
+# ----------------------------------------
+# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_options to list)
+# ----------------------------------------
+
+FIX := $(basename $(notdir $(wildcard src/sparql/update/fix_*.ru)))
+
+.PHONY: fix_options fix_data $(FIX)
+fix_options:
+	@echo "The following can be used to 'fix' data:$$(printf '\n- %s' $(FIX))"
+	@echo "To run all use: fix_data"
+
+fix_data: $(FIX)
+
+$(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
+ build/robot.jar src/sparql/update/doid-edit_prefixes.json
+	@$(ROBOT) \
+	 --add-prefixes $(word 2,$|) \
+	query \
+	 --input $< \
+	 --update $(word 2,$^) \
+	 --output doid-edit.ofn \
+	&& mv doid-edit.ofn $<
+	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
+
 
 ##########################################
 ## BUILDING IMPORTS

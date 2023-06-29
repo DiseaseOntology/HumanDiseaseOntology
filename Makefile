@@ -222,13 +222,13 @@ $(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	fi
 
 # ----------------------------------------
-# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_options to list)
+# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)
 # ----------------------------------------
 
 FIX := $(basename $(notdir $(wildcard src/sparql/update/fix_*.ru)))
 
-.PHONY: fix_options fix_data $(FIX)
-fix_options:
+.PHONY: fix_cmds fix_data $(FIX)
+fix_cmds:
 	@echo "The following can be used to 'fix' data:$$(printf '\n- %s' $(FIX))"
 	@echo "To run all use: fix_data"
 

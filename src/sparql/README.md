@@ -5,6 +5,7 @@ This directory contains SPARQL queries use for the DO release process, verificat
 * `build`: queries used for the DO release process and post-build reporting with [robot query](http://robot.obolibrary.org/verify)
 * `extra`: extra queries for one-off reporting purposes (e.g., symptoms in DO, terms with more than one NCI xref, etc.)
 * `report`: queries used for [robot report](http://robot.obolibrary.org/report)
+* `update`: queries used to auto-update data in the ontology (e.g. fix typos, update slims, etc.)
 * `verify`: queries used for [robot verify](http://robot.obolibrary.org/verify)
 
 When you `make release` or `make test`, all outputs will be generated in the `build` directory for review. If `verify` returns results, the build will fail. All verification queries are also ran in our Travis CI.

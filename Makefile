@@ -30,16 +30,14 @@ HD = src/ontology/HumanDO
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: imports version_imports test products verify publish post
+release: version_imports test products verify publish post
 
-# Only run `make all` if you'd like to refresh imports during the release!
-# This will download all new sources for the imports and may take some time
-all: refresh_imports release
-
+# Only run `make all` if you'd like to update imports to the latest version
+#	during the release!
+all: imports release
 
 build build/update build/reports build/reports/temp:
 	mkdir -p $@
-
 
 
 ##########################################
@@ -524,14 +522,14 @@ VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 .PHONY: version_imports version_ext $(VERSION_IMPS)
 version_imports: $(VERSION_IMPS) version_ext
 
-version_ext: src/ontology/ext.owl | imports build/robot.jar
+version_ext: src/ontology/ext.owl | build/robot.jar
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
 	 --output $<
 	@echo "Updated versionIRI of $<"
 
-$(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | imports build/robot.jar
+$(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | build/robot.jar
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)imports/$(notdir $<)" \

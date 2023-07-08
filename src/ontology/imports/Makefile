@@ -56,7 +56,7 @@ $(REFRESH_IMPORTS):
 	@$(MAKE) $(IMP_REFRESH)
 	$(eval IMP_REFRESH="")
 
-build:
+build build/last build/last/src:
 	mkdir $@
 
 
@@ -114,12 +114,19 @@ endef
 # ----------------------------------------
 
 # Download source if not present or a newer version is available
+# NOTE: Existing source is moved to build/last for possible diff (not yet implemented)
 # MAKE NOTE: Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
-$(SOURCE_OWL): build/%.owl: build/%.version | build
+$(SOURCE_OWL): build/%.owl: build/%.version | build build/last/src
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last/src ; \
+	 fi
 	@echo "DOWNLOADING $@..."
 	@curl -Lk $(OBO)$(notdir $@) > $@
 
-$(SOURCE_OWL_GZ): build/%.owl.gz: build/%.version | build
+$(SOURCE_OWL_GZ): build/%.owl.gz: build/%.version | build build/last/src
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last/src ; \
+	 fi
 	@echo "DOWNLOADING $@..."
 	@curl -Lk $(OBO)$(notdir $@) > $@
 

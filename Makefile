@@ -50,9 +50,9 @@ build build/update build/reports build/reports/temp:
 # ROBOT
 # ----------------------------------------
 
-# run `make update_robot` to get a new version of ROBOT
-.PHONY: update_robot
-update_robot:
+# run `make refresh_robot` to ensure correct version of ROBOT
+.PHONY: refresh_robot
+refresh_robot:
 	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
 build/robot.jar: | build

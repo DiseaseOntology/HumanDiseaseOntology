@@ -261,9 +261,9 @@ $(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
 # 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
 # 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
-IMPS := chebi cl foodon geno hp ncbitaxon ro so symp trans uberon
+IMPS := chebi cl eco foodon geno hp ncbitaxon ro so symp trans uberon
 # define imports updated manually, solely for versioning
-MANUAL_IMPS := disdriv eco omim_susc
+MANUAL_IMPS := disdriv omim_susc
 
 imports: | build/robot.jar
 	@echo "Checking import modules..."

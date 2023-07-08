@@ -23,7 +23,7 @@ ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 # 2. `make versions` - Update only <import>.version files in imports/build
 # 3. `make sources` - Update versions and source files in imports/build
 
-IMPORT_OWL := cl foodon geno hp ro so uberon symp trans
+IMPORT_OWL := cl eco foodon geno hp ro so symp trans uberon
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
 IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
@@ -231,6 +231,25 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version \
 	 --select complement \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
+	$(call annotate_import,$@,$(word 2,$|))
+
+# NOTE: Unlike other imports, build drops intermediate ECO classes
+eco: eco_import.owl
+eco_import.owl: build/eco.owl eco_terms.txt | annotations.txt build/eco.version \
+ build/last
+	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
+	@$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --intermediates minimal \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --select complement \
+	 --select annotation-properties \
+	 --term-file annotations.txt \
+	 --term IAO:0000115 \
+	 --term oboInOwl:hasDbXref \
 	$(call annotate_import,$@,$(word 2,$|))
 
 foodon: foodon_import.owl

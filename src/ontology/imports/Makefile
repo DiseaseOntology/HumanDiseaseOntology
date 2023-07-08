@@ -9,26 +9,36 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 
+# Import update options (each can be executed here or from the src/ontology/imports dir)
+# PRIMARY COMMANDS
+# 1. `make imports` - Make all imports, updating if newer versions exist.
+# 2. `make <import name>` - Make specified import, updating if a newer version exists.
+# SECONDARY COMMANDS (these should rarely be needed)
+# 3. `make refresh_imports` - Remove imports/build directory and make all imports from newly downloaded source files.
+# 4. `make refresh_<import name>` - Remove source file from imports/build directory and make import from newly downloaded source file.
+# * For import names see IMPORT_OWL and IMPORT_OWL_GZ variables below
+
+# Other commands (primarily exist for debugging)
+# 1. `make clean` - Remove imports/build directory
+# 2. `make versions` - Update only <import>.version files in imports/build
+# 3. `make sources` - Update versions and source files in imports/build
+
 IMPORT_OWL := cl foodon geno hp ro so uberon symp trans
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
-
 IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
-SOURCES := $(addprefix build/, \
-	$(addsuffix .owl,$(IMPORT_OWL)) \
-	$(addsuffix .owl.gz,$(IMPORT_OWL_GZ)) \
-)
 
-# Import update options (each can be executed here or from the src/ontology/imports dir):
-# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
-# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
-# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
-# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
+SOURCE_OWL := $(addprefix build/, $(addsuffix .owl,$(IMPORT_OWL)))
+SOURCE_OWL_GZ := $(addprefix build/, $(addsuffix .owl.gz,$(IMPORT_OWL_GZ)))
+SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 
-# To refresh all source ontologies, use `make refresh_imports`
+VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
 imports: $(IMPORTS)
+
 sources: $(SOURCES)
+
+versions: $(VERSIONS)
 
 clean:
 	rm -rf build
@@ -96,25 +106,47 @@ endef
 # DOWNLOAD IMPORTS (SOURCES)
 # ----------------------------------------
 
-# Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
-# WARNING: Sources are ONLY downloaded when file doesn't exist. To re-download
-#	source files, use the make refresh commands.
-$(SOURCES): | build
-	curl -Lk $(OBO)$(notdir $@) > $@
+# Download source if not present or a newer version is available
+# MAKE NOTE: Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
+$(SOURCE_OWL): build/%.owl: build/%.version | build
+	@echo "DOWNLOADING $@..."
+	@curl -Lk $(OBO)$(notdir $@) > $@
+
+$(SOURCE_OWL_GZ): build/%.owl.gz: build/%.version | build
+	@echo "DOWNLOADING $@..."
+	@curl -Lk $(OBO)$(notdir $@) > $@
 
 
 # ----------------------------------------
-# CAPTURE versionIRIs
+# CAPTURE LATEST versionIRIs
 # ----------------------------------------
 
-# Save versionIRI from DOWNLOADED import sources in build dir to
-#	<import>.version for comparison with <import>_import.owl
-.SECONDARY: $(addprefix build/,$(addsuffix .version,$(IMPORTS)))
-$(patsubst %,build/%.version,$(IMPORT_OWL)): %.version: %.owl
-	@cat $< | $(extract_versionIRI) > $@
+# Update <import>.version if newer version available (always run)
+FORCE:
 
-$(patsubst %,build/%.version,$(IMPORT_OWL_GZ)):%.version: %.owl.gz
-	@gzcat $< | $(extract_versionIRI) > $@
+$(patsubst %,build/%.version,$(IMPORT_OWL)): FORCE | build
+	@SRC=$(basename $@).owl ; \
+	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | $(extract_versionIRI)) ; \
+	 if [[ -f $@ && -f $${SRC} ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
+
+$(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
+	@SRC=$(basename $@).owl.gz ; \
+	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | gzcat | $(extract_versionIRI)) ; \
+	 if [[ -f $@ && -f $${SRC} ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
 
 
 # ----------------------------------------

@@ -32,12 +32,13 @@ WHERE {
 			}
 		}
 	}
-	?root rdfs:label ?import_root .
+	?root rdfs:label ?import_root_iri .
 
 	?class a owl:Class ;
 		rdfs:subClassOf* ?root .
 	FILTER(!isBlank(?class) && !CONTAINS(STR(?class), "doid"))
 	BIND(STRBEFORE(STRAFTER(STR(?class), "obo/"), "_") AS ?namespace)
+	BIND(str(?import_root_iri) AS ?import_root)
 }
 GROUP BY ?import_root ?namespace
 ORDER BY ?import_root ?namespace

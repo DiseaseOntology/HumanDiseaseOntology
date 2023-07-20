@@ -9,28 +9,36 @@ SHELL := bash
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 
-IMPORT_OBO := ro
-IMPORT_OWL := cl foodon geno hp so uberon symp trans
+# Import update options (each can be executed here or from the src/ontology/imports dir)
+# PRIMARY COMMANDS
+# 1. `make imports` - Make all imports, updating if newer versions exist.
+# 2. `make <import name>` - Make specified import, updating if a newer version exists.
+# SECONDARY COMMANDS (these should rarely be needed)
+# 3. `make refresh_imports` - Remove imports/build directory and make all imports from newly downloaded source files.
+# 4. `make refresh_<import name>` - Remove source file from imports/build directory and make import from newly downloaded source file.
+# * For import names see IMPORT_OWL and IMPORT_OWL_GZ variables below
+
+# Other commands (primarily exist for debugging)
+# 1. `make clean` - Remove imports/build directory
+# 2. `make versions` - Update only <import>.version files in imports/build
+# 3. `make sources` - Update versions and source files in imports/build
+
+IMPORT_OWL := cl eco foodon geno hp ro so symp trans uberon
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
+IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
 
-IMPORTS := $(IMPORT_OBO) $(IMPORT_OWL) $(IMPORT_OWL_GZ)
-SOURCES := $(addprefix build/, \
-	$(addsuffix .obo,$(IMPORT_OBO)) \
-	$(addsuffix .owl,$(IMPORT_OWL)) \
-	$(addsuffix .owl.gz,$(IMPORT_OWL_GZ)) \
-)
+SOURCE_OWL := $(addprefix build/, $(addsuffix .owl,$(IMPORT_OWL)))
+SOURCE_OWL_GZ := $(addprefix build/, $(addsuffix .owl.gz,$(IMPORT_OWL_GZ)))
+SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 
-# Import update options (each can be executed here or from the src/ontology/imports dir):
-# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
-# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
-# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
-# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
-
-# To refresh all source ontologies, use `make refresh_imports`
+VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
 imports: $(IMPORTS)
+
 sources: $(SOURCES)
+
+versions: $(VERSIONS)
 
 clean:
 	rm -rf build
@@ -48,8 +56,8 @@ $(REFRESH_IMPORTS):
 	@$(MAKE) $(IMP_REFRESH)
 	$(eval IMP_REFRESH="")
 
-build:
-	mkdir $@
+build build/last build/last/src:
+	mkdir -p $@
 
 
 # ----------------------------------------
@@ -80,35 +88,79 @@ define announce_version
 	fi ;
 endef
 
+# Extracts versionIRI from pre-opened OWL files (works for local & remote files)
+# NOTES:
+# 1. Reads stdin ONLY to versionIRI -> req'd to avoid long read time of
+#	large files (e.g. chebi).
+# 2. The last `sed` replaces a custom XML entity (used in foodon) with the OBO
+#	URI it represents (i.e. '&obo;' -> 'http://purl.obolibrary.org/obo/'),
+#	see https://www.w3schools.com/xml/xml_dtd_entities.asp for bkgd info.
+define extract_versionIRI
+	sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
+	sed -E 's/.*"([^"]+)".*/\1/' | \
+	sed 's|&obo;|http://purl.obolibrary.org/obo/|'
+endef
+
+# Save *_import.owl before update for comparison
+define save_last
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last ; \
+	 fi
+endef
+
 
 # ----------------------------------------
 # DOWNLOAD IMPORTS (SOURCES)
 # ----------------------------------------
 
-# Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
-# WARNING: Sources are ONLY downloaded when file doesn't exist. To re-download
-#	source files, use the make refresh commands.
-$(SOURCES): | build
-	curl -Lk $(OBO)$(notdir $@) > $@
+# Download source if not present or a newer version is available
+# NOTE: Existing source is moved to build/last for possible diff (not yet implemented)
+# MAKE NOTE: Targets are explicit to avoid grouped execution & prevent ambiguity (of implicit rules).
+$(SOURCE_OWL): build/%.owl: build/%.version | build build/last/src
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last/src ; \
+	 fi
+	@echo "DOWNLOADING $@..."
+	@curl -Lk $(OBO)$(notdir $@) > $@
+
+$(SOURCE_OWL_GZ): build/%.owl.gz: build/%.version | build build/last/src
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last/src ; \
+	 fi
+	@echo "DOWNLOADING $@..."
+	@curl -Lk $(OBO)$(notdir $@) > $@
 
 
 # ----------------------------------------
-# CAPTURE versionIRIs
+# CAPTURE LATEST versionIRIs
 # ----------------------------------------
 
-.SECONDARY: $(addprefix build/,$(addsuffix .version,$(IMPORTS)))
-$(patsubst %,build/%.version,$(IMPORT_OBO)): %.version: %.obo
-	@$(ROBOT) convert --input $< --format owl --output $@.tmp
-	@grep "owl:versionIRI" $@.tmp | sed -E 's/.*"([^"]+)\.owl".*/\1\.obo/' > $@
-	@rm $@.tmp
+# Update <import>.version if newer version available (always run)
+FORCE:
 
-# second sed cmd added to standardize weird Foodon versionIRI
-$(patsubst %,build/%.version,$(IMPORT_OWL)): %.version: %.owl
-	@grep "owl:versionIRI" $< | sed -E 's/.*"([^"]+)".*/\1/' | \
-	sed 's|&obo;|http://purl.obolibrary.org/obo/|' > $@
+$(patsubst %,build/%.version,$(IMPORT_OWL)): FORCE | build
+	@SRC=$(basename $@).owl ; \
+	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | $(extract_versionIRI)) ; \
+	 if [[ -f $@ && -f $${SRC} ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
 
-$(patsubst %,build/%.version,$(IMPORT_OWL_GZ)):%.version: %.owl.gz
-	@gzcat $< | sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | sed -E 's/.*"([^"]+)".*/\1/' > $@
+$(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
+	@SRC=$(basename $@).owl.gz ; \
+	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | gzcat | $(extract_versionIRI)) ; \
+	 if [[ -f $@ && -f $${SRC} ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
 
 
 # ----------------------------------------
@@ -116,8 +168,9 @@ $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)):%.version: %.owl.gz
 # ----------------------------------------
 
 symp: symp_import.owl
-symp_import.owl: build/symp.owl | build/symp.version
+symp_import.owl: build/symp.owl | build/symp.version build/last
 	@$(call announce_version,$@,$|)
+	@$(save_last)
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -126,8 +179,9 @@ symp_import.owl: build/symp.owl | build/symp.version
 	$(call annotate_import,$@,$|)
 
 trans: trans_import.owl
-trans_import.owl: build/trans.owl | build/trans.version
+trans_import.owl: build/trans.owl | build/trans.version build/last
 	@$(call announce_version,$@,$|)
+	@$(save_last)
 	@$(ROBOT) remove \
 	--input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -141,8 +195,10 @@ trans_import.owl: build/trans.owl | build/trans.version
 # ----------------------------------------
 
 chebi: chebi_import.owl
-chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt build/chebi.version
+chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt \
+ build/chebi.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -156,8 +212,10 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt build/che
 	$(call annotate_import,$@,$(word 2,$|))
 
 cl: cl_import.owl
-cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version
+cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version \
+ build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -175,9 +233,30 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version
 	 --term-file annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
-foodon: foodon_import.owl
-foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt build/foodon.version
+# NOTE: Unlike other imports, build drops intermediate ECO classes
+eco: eco_import.owl
+eco_import.owl: build/eco.owl eco_terms.txt | annotations.txt build/eco.version \
+ build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
+	@$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --intermediates minimal \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --select complement \
+	 --select annotation-properties \
+	 --term-file annotations.txt \
+	 --term IAO:0000115 \
+	 --term oboInOwl:hasDbXref \
+	$(call annotate_import,$@,$(word 2,$|))
+
+foodon: foodon_import.owl
+foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt \
+ build/foodon.version build/last
+	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) merge \
 	 --input $< \
 	extract \
@@ -201,8 +280,10 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt build/foo
 	$(call annotate_import,$@,$(word 2,$|))
 
 geno: geno_import.owl
-geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt build/geno.version
+geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt \
+ build/geno.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -219,8 +300,10 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt build/geno.vers
 
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
-hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/hp.version
+hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
+ build/hp.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -247,8 +330,10 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/
 
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
-ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt build/ncbitaxon.version
+ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | \
+ annotations.txt build/ncbitaxon.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -266,23 +351,27 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	$(call annotate_import,$@,$(word 2,$|))
 
 ro: ro_import.owl
-ro_import.owl: build/ro.obo ro_terms.txt | annotations.txt build/ro.version
+ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version \
+ build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
-	 --select annotation-properties\
+	 --select annotation-properties \
 	 --term-file annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # The SO import contains only the sequence_variant branch plus a few terms
 # from sequence_feature. See IMPORT INTERMEDIATES below for more details.
 so: so_import.owl
-so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build/so.version
+so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt \
+ build/so.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) merge \
 	 --input $< \
 	 --input $(word 2,$^) \
@@ -294,8 +383,9 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build
 
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt build/uberon_rm_label.txt \
- | annotations.txt build/uberon.version
+ | annotations.txt build/uberon.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \

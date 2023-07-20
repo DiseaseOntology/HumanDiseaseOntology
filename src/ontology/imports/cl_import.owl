@@ -8,8 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-06-29/imports/cl_import.owl"/>
-        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/cl/releases/2023-01-09/cl.owl</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/cl/releases/2023-07-20/cl.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -95,8 +95,18 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000025 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000675"/>
         <rdfs:label>egg cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000540"/>
+        <rdfs:label>neural crest derived neuron</rdfs:label>
     </owl:Class>
     
 
@@ -470,6 +480,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>exocrine cell</rdfs:label>
     </owl:Class>
     
@@ -497,7 +508,9 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000163 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000163">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>endocrine cell</rdfs:label>
     </owl:Class>
     
@@ -507,7 +520,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000165">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000163"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000393"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000527"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000540"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000710"/>
         <rdfs:label>neuroendocrine cell</rdfs:label>
     </owl:Class>
@@ -517,6 +531,7 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000166 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000029"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000568"/>
         <rdfs:label>chromaffin cell</rdfs:label>
     </owl:Class>
@@ -536,7 +551,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000174">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000163"/>
         <rdfs:label>steroid hormone secreting cell</rdfs:label>
     </owl:Class>
     
@@ -578,7 +592,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000187">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000183"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000393"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
         <rdfs:label>muscle cell</rdfs:label>
     </owl:Class>
@@ -707,6 +720,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000219"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000325"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>phagocyte</rdfs:label>
     </owl:Class>
     
@@ -859,30 +873,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CL_0000387 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000387">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000519"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
-        <rdfs:label>hemocyte (sensu Arthropoda)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CL_0000393 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000393">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000211"/>
         <rdfs:label>electrically responsive cell</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CL_0000398 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000398">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000387"/>
-        <rdfs:label>polygonal cell</rdfs:label>
     </owl:Class>
     
 
@@ -901,6 +896,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000408">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000015"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000300"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>male gamete</rdfs:label>
     </owl:Class>
     
@@ -937,6 +933,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000442">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>follicular dendritic cell</rdfs:label>
     </owl:Class>
     
@@ -1015,7 +1012,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000467">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000163"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000167"/>
         <rdfs:label>adrenocorticotropic hormone secreting cell</rdfs:label>
     </owl:Class>
@@ -1075,15 +1071,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000511">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000154"/>
         <rdfs:label>androgen binding protein secreting cell</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CL_0000519 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000519">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
-        <rdfs:label>phagocyte (sensu Nematoda and Protostomia)</rdfs:label>
     </owl:Class>
     
 
@@ -1210,7 +1197,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000167"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_2000004"/>
         <rdfs:label>chromophil cell of anterior pituitary gland</rdfs:label>
     </owl:Class>
@@ -1270,6 +1256,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000670">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000039"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000219"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>primordial germ cell</rdfs:label>
     </owl:Class>
     
@@ -1413,7 +1400,6 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000988 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000988">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
         <rdfs:label>hematopoietic cell</rdfs:label>
     </owl:Class>
@@ -1612,7 +1598,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002303">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000529"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0005012"/>
         <rdfs:label>pigmented ciliary epithelial cell</rdfs:label>
     </owl:Class>
     
@@ -1641,7 +1626,6 @@
     <!-- http://purl.obolibrary.org/obo/CL_0002320 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002320">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
         <rdfs:label>connective tissue cell</rdfs:label>
     </owl:Class>
@@ -1660,7 +1644,7 @@
     <!-- http://purl.obolibrary.org/obo/CL_0002371 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002371">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000548"/>
         <rdfs:label>somatic cell</rdfs:label>
     </owl:Class>
     
@@ -1682,15 +1666,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000068"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000077"/>
         <rdfs:label>seminiferous tubule epithelial cell</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CL_0005012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0005012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000067"/>
-        <rdfs:label>multi-ciliated epithelial cell</rdfs:label>
     </owl:Class>
     
 
@@ -1793,6 +1768,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_2000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
         <oboInOwl:id>CL:2000004</oboInOwl:id>
         <rdfs:label>pituitary gland cell</rdfs:label>
     </owl:Class>

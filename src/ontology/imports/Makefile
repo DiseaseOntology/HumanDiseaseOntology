@@ -57,7 +57,7 @@ $(REFRESH_IMPORTS):
 	$(eval IMP_REFRESH="")
 
 build build/last build/last/src:
-	mkdir $@
+	mkdir -p $@
 
 
 # ----------------------------------------

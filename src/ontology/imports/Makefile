@@ -101,6 +101,13 @@ define extract_versionIRI
 	sed 's|&obo;|http://purl.obolibrary.org/obo/|'
 endef
 
+# Save *_import.owl before update for comparison
+define save_last
+	@if [[ -f $@ ]]; then \
+		mv $@ build/last ; \
+	 fi
+endef
+
 
 # ----------------------------------------
 # DOWNLOAD IMPORTS (SOURCES)
@@ -154,8 +161,9 @@ $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
 # ----------------------------------------
 
 symp: symp_import.owl
-symp_import.owl: build/symp.owl | build/symp.version
+symp_import.owl: build/symp.owl | build/symp.version build/last
 	@$(call announce_version,$@,$|)
+	@$(save_last)
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -164,8 +172,9 @@ symp_import.owl: build/symp.owl | build/symp.version
 	$(call annotate_import,$@,$|)
 
 trans: trans_import.owl
-trans_import.owl: build/trans.owl | build/trans.version
+trans_import.owl: build/trans.owl | build/trans.version build/last
 	@$(call announce_version,$@,$|)
+	@$(save_last)
 	@$(ROBOT) remove \
 	--input $< \
 	 --select "owl:deprecated='true'^^xsd:boolean" \
@@ -179,8 +188,10 @@ trans_import.owl: build/trans.owl | build/trans.version
 # ----------------------------------------
 
 chebi: chebi_import.owl
-chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt build/chebi.version
+chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt \
+ build/chebi.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -194,8 +205,10 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt build/che
 	$(call annotate_import,$@,$(word 2,$|))
 
 cl: cl_import.owl
-cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version
+cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version \
+ build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -214,8 +227,10 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version
 	$(call annotate_import,$@,$(word 2,$|))
 
 foodon: foodon_import.owl
-foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt build/foodon.version
+foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt \
+ build/foodon.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) merge \
 	 --input $< \
 	extract \
@@ -239,8 +254,10 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt build/foo
 	$(call annotate_import,$@,$(word 2,$|))
 
 geno: geno_import.owl
-geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt build/geno.version
+geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt \
+ build/geno.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -257,8 +274,10 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt build/geno.vers
 
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
-hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/hp.version
+hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
+ build/hp.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -285,8 +304,10 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt build/
 
 # WARNING: NCBITaxon is BIG! This will take time.
 ncbitaxon: ncbitaxon_import.owl
-ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.txt build/ncbitaxon.version
+ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | \
+ annotations.txt build/ncbitaxon.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
@@ -304,23 +325,27 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | annotations.t
 	$(call annotate_import,$@,$(word 2,$|))
 
 ro: ro_import.owl
-ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version
+ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version \
+ build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \
 	 --lower-terms $(word 2,$^) \
 	remove \
 	 --select complement \
-	 --select annotation-properties\
+	 --select annotation-properties \
 	 --term-file annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # The SO import contains only the sequence_variant branch plus a few terms
 # from sequence_feature. See IMPORT INTERMEDIATES below for more details.
 so: so_import.owl
-so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build/so.version
+so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt \
+ build/so.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) merge \
 	 --input $< \
 	 --input $(word 2,$^) \
@@ -332,8 +357,9 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt build
 
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt build/uberon_rm_label.txt \
- | annotations.txt build/uberon.version
+ | annotations.txt build/uberon.version build/last
 	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
 	@$(ROBOT) extract \
 	 --input $< \
 	 --method mireot \

@@ -11,6 +11,19 @@
 
 ## 2023 Releases
 
+### [v2023-07-20](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-07-20)
+
+This release of the Human Disease Ontology includes 11,367 disease classes, 8,996 with textual definitions (79.1%). Updates include revision and addition to disease classifications for carpal tunnel syndromes, mitochondrial complex V deficiency diseases, hereditary spastic paraplegias, xanthinuria diseases, and cone-rod dystrophies, along with corrections to spelling and ICD10CM cross-references.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2023-06-29...v2023-07-20
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-20/src/ontology/doid-merged.obo) | |
+
 ### [v2023-06-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-06-29)
 
 DO's June 2023 release. Includes 11,349 disease terms, the addition of 35 new diseases, 42 new SubClassOf axioms. This release includes reformatting of gene symbols in definitions, the addition of mtDNA depletion syndrome subtypes 16-20, retinal macular dystrophy and subtypes, sorbitol dehydrogenase deficiency with peripheral neuropathy, hyperphosphatasia with impaired intellectual development syndrome subtypes, revised nemaline classification and COX deficiency classification, new digenic disease annotations.

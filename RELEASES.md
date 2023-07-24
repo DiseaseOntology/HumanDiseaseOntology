@@ -11,6 +11,17 @@
 
 ## 2023 Releases
 
+### [v2023-07-24](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-07-24)
+
+Minor fix to inheritance information in two textual definitions.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-07-24/src/ontology/doid-merged.obo) | |
+
 ### [v2023-07-20](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-07-20)
 
 This release of the Human Disease Ontology includes 11,367 disease classes, 8,996 with textual definitions (79.1%). Updates include revision and addition to disease classifications for carpal tunnel syndromes, mitochondrial complex V deficiency diseases, hereditary spastic paraplegias, xanthinuria diseases, and cone-rod dystrophies, along with corrections to spelling and ICD10CM cross-references.

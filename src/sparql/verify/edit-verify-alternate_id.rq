@@ -1,0 +1,17 @@
+# verify that active disease IRIs/IDs are not listed as alternate IDs
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?id ?label ?alt_id_not_dep ?alt_id_label
+WHERE {
+    ?class oboInOwl:id ?id ;
+        oboInOwl:hasAlternativeId ?alt_id_not_dep .
+
+    ?alt_class oboInOwl:id ?alt_id_not_dep .
+    FILTER NOT EXISTS { ?alt_class owl:deprecated ?dep. }
+    
+    OPTIONAL { ?class rdfs:label ?label . }
+    OPTIONAL { ?alt_class rdfs:label ?alt_id_label . }
+}

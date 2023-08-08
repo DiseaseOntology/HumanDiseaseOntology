@@ -14,4 +14,6 @@ WHERE {
     
     OPTIONAL { ?class rdfs:label ?label . }
     OPTIONAL { ?alt_class rdfs:label ?alt_id_label . }
+
+    FILTER NOT EXISTS { ?class owl:deprecated ?any . }
 }

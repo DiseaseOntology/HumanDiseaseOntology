@@ -11,6 +11,27 @@
 
 ## 2023 Releases
 
+### [v2023-08-08](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-08-08)
+
+This release includes a major fix to recently added diseases. Five diseases were added in the June 2023 release with _duplicate_ IRIs matching historically obsoleted diseases (pre-2015). These diseases with duplicate IRIs have been deleted and re-added with new, unique IRIs as follows:
+
+- **disabling pansclerotic morphea**, DOID:0080002 -> DOID:0081373
+- **nemaline myopathy 5B**, DOID:0080003 -> DOID:0081374
+- **nemaline myopathy 5C**, DOID:0080004 -> DOID:0081375
+- **sorbitol dehydrogenase deficiency with peripheral neuropathy**, DOID:0080025 -> DOID:0081376
+- **COX deficiency, benign infantile mitochondrial myopathy**, DOID:0080035 -> DOID:0081377
+
+If at all possible, use _THIS_ release instead of the June and July releases (v2023-06-29, v2023-07-20, & v2023-07-24).
+
+_We apologize for any inconvenience this may have caused._
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-08-08/src/ontology/doid-merged.obo) | |
+
 ### [v2023-07-24](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-07-24)
 
 Minor fix to inheritance information in two textual definitions.

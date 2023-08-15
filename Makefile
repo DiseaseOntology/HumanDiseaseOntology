@@ -141,7 +141,8 @@ build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
 				print "TEST: " FILENAME ; print $$0 \
 			} \
 			else { print $$0 } \
-		}' $$TMP_FILES > $@ ; \
+		}' $$TMP_FILES > $@ && \
+		rm -f $$TMP_FILES ; \
 		echo "--> See $@ for errors" ; \
 	 fi ;
 
@@ -654,8 +655,10 @@ build/reports/report-diff.txt: last-reports new-reports
 # create a count of asserted and total (asserted + inferred) classes in each branch
 #	doid-edit.owl could be used in place of doid-non-classified (pre-reasoned = same results)
 branch_reports = $(foreach O, doid-non-classified doid, build/reports/temp/branch-count-$(O).tsv)
+
+.INTERMEDIATE: $(branch_reports)
 $(branch_reports): build/reports/temp/branch-count-%.tsv: src/ontology/%.owl \
- src/sparql/build/branch-count.rq  | build/robot.jar build/reports/temp
+ src/sparql/build/branch-count.rq | build/robot.jar build/reports/temp
 	@echo "Counting all branches in $<..."
 	@$(ROBOT) query \
 	 --input $< \

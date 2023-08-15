@@ -36,13 +36,17 @@ release: version_imports test products verify publish post
 #	during the release!
 all: imports release
 
+
+##########################################
+## SETUP
+##########################################
+
+.PHONY: clean
+clean:
+	rm -rf build
+
 build build/update build/reports build/reports/temp:
 	mkdir -p $@
-
-
-##########################################
-## SOFTWARE SETUP
-##########################################
 
 # ----------------------------------------
 # ROBOT

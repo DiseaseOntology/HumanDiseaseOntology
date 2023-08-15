@@ -126,20 +126,24 @@ QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 
 quarterly_test: build/reports/quarterly_test.csv
 build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
-	@echo "Verifying $< (see $@ on error)"
+	@echo "Verifying $<..."
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(QUARTER_V_QUERIES) \
 	 --fail-on-violation false \
-	 --output-dir build/reports/temp
-	@awk 'BEGIN { OFS = FS = "," } ; { \
-		if (FNR == 1) { \
-			gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
-			if (NR != 1) { print "" } ; \
-			print "TEST: " FILENAME ; print $$0 \
-		} \
-		else { print $$0 } \
-	 }' build/reports/temp/quarter-verify-*.csv > $@
+	 --output-dir $(word 2,$|)
+	@TMP_FILES=$$(find $(word 2,$|) -name "quarter-verify-*.csv") ; \
+	 if [ "$$TMP_FILES" ]; then \
+		awk 'BEGIN { OFS = FS = "," } ; { \
+			if (FNR == 1) { \
+				gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
+				if (NR != 1) { print "" } ; \
+				print "TEST: " FILENAME ; print $$0 \
+			} \
+			else { print $$0 } \
+		}' $$TMP_FILES > $@ ; \
+		echo "--> See $@ for errors" ; \
+	 fi ;
 
 
 ##########################################

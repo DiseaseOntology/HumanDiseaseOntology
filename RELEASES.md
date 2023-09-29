@@ -11,6 +11,17 @@
 
 ## 2023 Releases
 
+### [v2023-09-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-09-28)
+
+This release of the Human Disease Ontology includes 11,373 disease classes, 9,003 with textual definitions (79.2%). Updates include revised mappings based on UMLS 2023AA; the addition of early-onset epilepsy 2 & 3, Yoon-Bellen neurodevelopmental syndrome, NEDDFAC, SCAN3 and updates to other SCAN diseases; revision of viral infectious diseases to incorporate official viral nomenclature changes from ICTV; reactivation of Epstein-Barr virus infectious disease; and various definition updates & corrections.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-09-28/src/ontology/doid-merged.obo) | |
+
 ### [v2023-08-08](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-08-08)
 
 This release includes a major fix to recently added diseases. Five diseases were added in the June 2023 release with _duplicate_ IRIs matching historically obsoleted diseases (pre-2015). These diseases with duplicate IRIs have been deleted and re-added with new, unique IRIs as follows:

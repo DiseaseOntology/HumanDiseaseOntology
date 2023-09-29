@@ -190,14 +190,16 @@ add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.ja
 	@echo "British synonyms added to $^"
 
 # ----------------------------------------
-# AUTO-ADD SUBSETS
+# AUTO-UPDATE SUBSETS
 # ----------------------------------------
 
-SUB_AUTO := $(patsubst src/sparql/update/subsets/%.rq, update_%, \
+SUB_ADD := $(patsubst src/sparql/update/subsets/%.rq, update_%, \
 	$(wildcard src/sparql/update/subsets/*.rq))
+SUB_AUTO := $(patsubst src/sparql/update/subsets/%.ru, update_%, \
+	$(wildcard src/sparql/update/subsets/*.ru))
 
-.PHONY: update_slims $(SUB_AUTO)
-update_slims: $(SUB_AUTO)
+.PHONY: update_slims $(SUB_ADD) $(SUB_AUTO)
+update_slims: $(SUB_ADD) $(SUB_AUTO)
 
 # so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
 #	easier to keep one rule for all slim templates at the moment; may change
@@ -212,7 +214,7 @@ build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
 	 sed -E 's|<(.+)>|\1\tdoid:$*|' > build/update/$*-template.tsv
 	@rm build/update/$*-missing.tsv
 
-$(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
+$(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	@if [ $$(awk 'END{print NR}' $(word 2,$^)) -gt "0" ]; then \
 		$(ROBOT) template \
 		 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
@@ -227,6 +229,18 @@ $(SUB_AUTO): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 		echo "$* UPDATED in $<" ; \
 	else echo "$* ALREADY UP-TO-DATE, skipping..." ; \
 	fi
+
+$(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | build/robot.jar \
+ src/sparql/update/doid-edit_prefixes.json
+	@echo "UPDATING $* subset in $<..."
+	@$(ROBOT) \
+	 --add-prefixes $(word 2,$|) \
+	query \
+	 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
+	 --input $< \
+	 --update $(word 2,$^) \
+	 --output tmp.ofn && \
+	mv tmp.ofn $<
 
 # ----------------------------------------
 # FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)

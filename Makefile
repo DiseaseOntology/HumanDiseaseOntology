@@ -193,8 +193,8 @@ add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.ja
 # AUTO-ADD SUBSETS
 # ----------------------------------------
 
-SUB_AUTO := $(patsubst src/sparql/update/%.rq, update_%, \
-	$(wildcard src/sparql/update/*_slim.rq))
+SUB_AUTO := $(patsubst src/sparql/update/subsets/%.rq, update_%, \
+	$(wildcard src/sparql/update/subsets/*.rq))
 
 .PHONY: update_slims $(SUB_AUTO)
 update_slims: $(SUB_AUTO)
@@ -202,8 +202,8 @@ update_slims: $(SUB_AUTO)
 # so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
 #	easier to keep one rule for all slim templates at the moment; may change
 #	this if multiple slims don't need reasoned file.
-build/update/%-template.tsv: build/update/doid-edit-reasoned.owl src/sparql/update/%.rq | \
- build/robot.jar build/update
+build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
+ src/sparql/update/subsets/%.rq | build/robot.jar build/update
 	@echo "Building template with classes missing from $*..."
 	@$(ROBOT) query \
 	 --input $< \

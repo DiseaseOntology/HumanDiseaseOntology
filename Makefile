@@ -206,7 +206,7 @@ update_slims: $(SUB_ADD) $(SUB_AUTO)
 #	this if multiple slims don't need reasoned file.
 build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
  src/sparql/update/subsets/%.rq | build/robot.jar build/update
-	@echo "Building template with classes missing from $*..."
+	@echo "CHECKING $* subset for missing classes..."
 	@$(ROBOT) query \
 	 --input $< \
 	 --query $(word 2,$^) build/update/$*-missing.tsv
@@ -216,18 +216,18 @@ build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
 
 $(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	@if [ $$(awk 'END{print NR}' $(word 2,$^)) -gt "0" ]; then \
+		echo "UPDATING in $<..." ; \
 		$(ROBOT) template \
 		 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
 		 --input $< \
 		 --template $(word 2,$^) \
 		 --collapse-import-closure false \
-		 --merge-after \
-		 --output build/update/doid-edit-reas-$*.ofn \
+		 --merge-before \
 		convert \
 		 --format ofn \
 		 --output $< ; \
-		echo "$* UPDATED in $<" ; \
-	else echo "$* ALREADY UP-TO-DATE, skipping..." ; \
+		echo " -> See $(word 2,$^) for additions" ; \
+	else echo " -> Already up-to-date" ; \
 	fi
 
 $(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | build/robot.jar \

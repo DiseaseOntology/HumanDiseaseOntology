@@ -231,16 +231,27 @@ $(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	fi
 
 $(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | build/robot.jar \
- src/sparql/update/doid-edit_prefixes.json
+ src/sparql/update/doid-edit_prefixes.json build/update
 	@echo "UPDATING $* subset in $<..."
-	@$(ROBOT) \
+	@NEW_DE=build/update/$*.ofn ; \
+	$(ROBOT) \
 	 --add-prefixes $(word 2,$|) \
 	query \
-	 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
 	 --input $< \
 	 --update $(word 2,$^) \
-	 --output tmp.ofn && \
-	mv tmp.ofn $<
+	 --output $$NEW_DE \
+	&& $(ROBOT) diff \
+	 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
+	 --left $< \
+	 --right $$NEW_DE \
+	 --format pretty \
+	 --output build/update/$*-report.txt \
+	&& $(ROBOT) convert \
+	 --input $$NEW_DE \
+	 --format ofn \
+	 --output $< \
+	&& rm $$NEW_DE
+	@echo " -> See build/update/$*-report.txt for changes"
 
 # ----------------------------------------
 # FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)

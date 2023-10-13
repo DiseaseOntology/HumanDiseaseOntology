@@ -17,6 +17,9 @@ DM = src/ontology/doid-merged
 DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
 
+# Set the ROBOT version to use
+ROBOT_VRS = 1.9.4
+
 # to make a release, use `make release`
 # to update imports, use `make imports`
 # to run QC tests on doid-edit.owl, use `make test`
@@ -52,15 +55,29 @@ build build/update build/reports build/reports/temp:
 # ROBOT
 # ----------------------------------------
 
-# run `make refresh_robot` to ensure correct version of ROBOT
+# ROBOT is automatically updated
+ROBOT := java -jar build/robot.jar
+
+.PHONY: check_robot
+check_robot:
+	@if [[ -f build/robot.jar ]]; then \
+		VRS=$$($(ROBOT) --version) ; \
+		if [[ "$$VRS" != *"$(ROBOT_VRS)"* ]]; then \
+			echo "Updating ROBOT from version $$VRS to $(ROBOT_VRS)..." ; \
+			rm -rf build/robot.jar && $(MAKE) build/robot.jar ; \
+		fi ; \
+	else \
+		echo "Downloading ROBOT version $(ROBOT_VRS)..." ; \
+		$(MAKE) build/robot.jar ; \
+	fi
+
+# run `make refresh_robot` if ROBOT is not working correctly
 .PHONY: refresh_robot
 refresh_robot:
 	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar
-
-ROBOT := java -jar build/robot.jar
+	@curl -L -o $@ https://github.com/ontodev/robot/releases/download/v$(ROBOT_VRS)/robot.jar
 
 # ----------------------------------------
 # FASTOBO
@@ -89,7 +106,7 @@ test: reason report verify-edit
 report: build/reports/report.tsv
 
 .PRECIOUS: build/reports/report.tsv
-build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/robot.jar build/reports
+build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_robot build/reports
 	@echo ""
 	@$(ROBOT) report \
 	 --input $< \
@@ -102,7 +119,7 @@ build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | build/r
 # Simple reasoning test
 reason: build/update/doid-edit-reasoned.owl
 
-build/update/doid-edit-reasoned.owl: $(EDIT) | build/robot.jar build/update
+build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \
@@ -114,7 +131,7 @@ build/update/doid-edit-reasoned.owl: $(EDIT) | build/robot.jar build/update
 # Verify doid-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 
-verify-edit: $(EDIT) | build/robot.jar
+verify-edit: $(EDIT) | check_robot
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
 	 --input $< \
@@ -125,7 +142,7 @@ verify-edit: $(EDIT) | build/robot.jar
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 
 quarterly_test: build/reports/quarterly_test.csv
-build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
+build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 	@echo "Verifying $<..."
 	@$(ROBOT) verify \
 	 --input $< \
@@ -163,11 +180,11 @@ build/reports/quarterly_test.csv: $(EDIT) | build/robot.jar build/reports/temp
 build/update/british_english_dictionary.csv: | build/update
 	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
 
-build/update/synonyms.csv: $(EDIT) src/sparql/update/doid_synonyms.rq | build/robot.jar build/update
+build/update/synonyms.csv: $(EDIT) src/sparql/update/doid_synonyms.rq | check_robot build/update
 	@echo "Retrieving DO synonyms..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/update/labels.csv: $(EDIT) src/sparql/update/doid_labels.rq | build/robot.jar build/update
+build/update/labels.csv: $(EDIT) src/sparql/update/doid_labels.rq | check_robot build/update
 	@echo "Retrieving DO labels..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
@@ -177,10 +194,10 @@ build/be_synonyms.csv: src/util/compute_british_synonyms.py \
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
-build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | build/robot.jar
+build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | check_robot
 	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
 
-add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | build/robot.jar
+add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | check_robot
 	@$(ROBOT) merge \
 	 --input $< \
 	 --input $(word 2,$^) \
@@ -205,7 +222,7 @@ update_slims: $(SUB_ADD) $(SUB_AUTO)
 #	easier to keep one rule for all slim templates at the moment; may change
 #	this if multiple slims don't need reasoned file.
 build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
- src/sparql/update/subsets/%.rq | build/robot.jar build/update
+ src/sparql/update/subsets/%.rq | check_robot build/update
 	@echo "CHECKING $* subset for missing classes..."
 	@$(ROBOT) query \
 	 --input $< \
@@ -214,7 +231,7 @@ build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
 	 sed -E 's|<(.+)>|\1\tdoid:$*|' > build/update/$*-template.tsv
 	@rm build/update/$*-missing.tsv
 
-$(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
+$(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | check_robot
 	@if [ $$(awk 'END{print NR}' $(word 2,$^)) -gt "0" ]; then \
 		echo "UPDATING in $<..." ; \
 		$(ROBOT) template \
@@ -230,7 +247,7 @@ $(SUB_ADD): update_%: $(EDIT) build/update/%-template.tsv | build/robot.jar
 	else echo " -> Already up-to-date" ; \
 	fi
 
-$(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | build/robot.jar \
+$(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | check_robot \
  src/sparql/update/doid-edit_prefixes.json build/update
 	@echo "UPDATING $* subset in $<..."
 	@NEW_DE=build/update/$*.ofn ; \
@@ -274,7 +291,7 @@ fix_cmds:
 fix_data: $(FIX)
 
 $(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
- build/robot.jar src/sparql/update/doid-edit_prefixes.json
+ check_robot src/sparql/update/doid-edit_prefixes.json
 	@$(ROBOT) \
 	 --add-prefixes $(word 2,$|) \
 	query \
@@ -299,15 +316,15 @@ IMPS := chebi cl eco foodon geno hp ncbitaxon ro so symp trans uberon
 # define imports updated manually, solely for versioning
 MANUAL_IMPS := disdriv omim_susc
 
-imports: | build/robot.jar
+imports: | check_robot
 	@echo "Checking import modules..."
 	@cd src/ontology/imports && $(MAKE) imports
 
-refresh_imports: | build/robot.jar
+refresh_imports: | check_robot
 	@echo "Refreshing import modules (this may take some time)..."
 	@cd src/ontology/imports && $(MAKE) refresh_imports
 
-$(IMPS): | build/robot.jar
+$(IMPS): | check_robot
 	@echo "Generating $@ import module..."
 	@cd src/ontology/imports && $(MAKE) $@
 
@@ -364,7 +381,7 @@ endef
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
+$(DO).owl: $(EDIT) build/reports/report.tsv | check_robot
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \
@@ -377,11 +394,11 @@ $(DO).owl: $(EDIT) build/reports/report.tsv | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DO).obo: $(DO).owl | build/robot.jar
+$(DO).obo: $(DO).owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
 	@echo "Created $@"
 
-$(DO).json: $(DO).owl | build/robot.jar
+$(DO).json: $(DO).owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
@@ -392,7 +409,7 @@ $(DO).json: $(DO).owl | build/robot.jar
 .PHONY: base
 base: $(DB).owl $(DB).obo $(DB).json
 
-$(DB).owl: $(EDIT) | build/robot.jar
+$(DB).owl: $(EDIT) | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -404,11 +421,11 @@ $(DB).owl: $(EDIT) | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DB).obo: $(DB).owl | build/robot.jar
+$(DB).obo: $(DB).owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
 
-$(DB).json: $(DB).owl | build/robot.jar
+$(DB).json: $(DB).owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
@@ -419,7 +436,7 @@ $(DB).json: $(DB).owl | build/robot.jar
 .PHONY: merged
 merged: $(DM).owl $(DM).obo $(DM).json
 
-$(DM).owl: $(DO).owl | build/robot.jar
+$(DM).owl: $(DO).owl | check_robot
 	@$(ROBOT) merge \
 	 --input $< \
 	 --collapse-import-closure true \
@@ -429,11 +446,11 @@ $(DM).owl: $(DO).owl | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-$(DM).obo: $(DM).owl | build/robot.jar
+$(DM).obo: $(DM).owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@echo "Created $@"
 
-$(DM).json: $(DM).owl | build/robot.jar
+$(DM).json: $(DM).owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"
 
@@ -444,7 +461,7 @@ $(DM).json: $(DM).owl | build/robot.jar
 .PHONY: human
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(EDIT) | build/robot.jar
+$(DNC).owl: $(EDIT) | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -460,12 +477,12 @@ $(DNC).owl: $(EDIT) | build/robot.jar
 	@cp $@ $(HD).owl
 	@echo "Created $@"
 
-$(DNC).obo: $(DNC).owl | build/robot.jar
+$(DNC).obo: $(DNC).owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","$(OBO)doid/$(notdir $(basename $@))")
 	@cp $@ $(HD).obo
 	@echo "Created $@"
 
-$(DNC).json: $(DNC).owl | build/robot.jar
+$(DNC).json: $(DNC).owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@cp $@ $(HD).json
 	@echo "Created $@"
@@ -486,7 +503,7 @@ JSON_SUBS = $(foreach N,$(SUBS),$(addsuffix .json, $(N)))
 .PHONY: subsets
 subsets: $(OWL_SUBS) $(OBO_SUBS) $(JSON_SUBS)
 
-$(OWL_SUBS): $(DNC).owl | build/robot.jar
+$(OWL_SUBS): $(DNC).owl | check_robot
 	@$(ROBOT) filter \
 	 --input $< \
 	 --select "oboInOwl:inSubset=<$(OBO)doid#$(basename $(notdir $@))> annotations" \
@@ -496,11 +513,11 @@ $(OWL_SUBS): $(DNC).owl | build/robot.jar
 	 --output $@
 	@echo "Created $@"
 
-src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | build/robot.jar
+src/ontology/subsets/%.obo: src/ontology/subsets/%.owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)subsets/$(notdir $@)","$(OBO)doid/subsets/$(notdir $(basename $@))")
 	@echo "Created $@"
 
-src/ontology/subsets/%.json: src/ontology/subsets/%.owl | build/robot.jar
+src/ontology/subsets/%.json: src/ontology/subsets/%.owl | check_robot
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)subsets/$(notdir $@)" \
@@ -524,12 +541,12 @@ release_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
 DOreports:
 	mkdir $@
 
-DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports build/robot.jar
+DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports check_robot
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
-DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports build/robot.jar
+DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports check_robot
 	@robot export \
 	 --input $< \
 	 --header "ID|LABEL|SubClass Of [ANON]" \
@@ -537,7 +554,7 @@ DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports build/robot.jar
 	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
-DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports build/robot.jar
+DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports check_robot
 	@robot export \
 	 --input $< \
 	 --header "ID|LABEL|Equivalent Class" \
@@ -556,14 +573,14 @@ VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 .PHONY: version_imports version_ext $(VERSION_IMPS)
 version_imports: $(VERSION_IMPS) version_ext
 
-version_ext: src/ontology/ext.owl | build/robot.jar
+version_ext: src/ontology/ext.owl | check_robot
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
 	 --output $<
 	@echo "Updated versionIRI of $<"
 
-$(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | build/robot.jar
+$(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
 	@$(ROBOT) annotate \
 	 --input $< \
 	 --version-iri "$(RELEASE_PREFIX)imports/$(notdir $<)" \
@@ -609,7 +626,7 @@ $(OBO_V): validate-%: src/ontology/%.obo | $(FASTOBO)
 
 # Verify doid.obo
 V_QUERIES := $(wildcard src/sparql/verify/verify-*.rq)
-verify-do: $(DO).obo | build/robot.jar build/reports/report.tsv
+verify-do: $(DO).obo | check_robot build/reports/report.tsv
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
 	 --input $< \
@@ -621,7 +638,7 @@ DNC_V_QUERIES := src/sparql/verify/dnc-verify-connectivity.rq
     # We are not reduced to single inheritence in DNC
     # Once this is cleaned up, we can change to all DNC verifications
 #DNC_V_QUERIES := $(wildcard src/sparql/dnc-verify-*.rq)
-verify-dnc: $(DNC).obo | build/robot.jar build/reports/report.tsv
+verify-dnc: $(DNC).obo | check_robot build/reports/report.tsv
 	@echo "Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
 	 --input $< \
@@ -641,13 +658,13 @@ post: build/reports/report-diff.txt \
 
 # Get the last build of DO from IRI
 # .PHONY: build/doid-last.owl
-build/doid-last.owl: | build/robot.jar
+build/doid-last.owl: | check_robot
 	@$(ROBOT) merge \
 	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
 	 --collapse-import-closure true \
 	 --output $@
 
-build/reports/doid-diff.html: build/doid-last.owl $(DM).owl | build/robot.jar build/reports
+build/reports/doid-diff.html: build/doid-last.owl $(DM).owl | check_robot build/reports
 	@$(ROBOT) diff --left $< --right $(word 2, $^) --format html --output $@
 	@echo "Generated DOID diff report at $@"
 
@@ -657,7 +674,7 @@ QUERIES := $(wildcard src/sparql/build/*-report.rq)
 # target names for previous release reports
 LAST_REPORTS := $(foreach Q,$(QUERIES), build/reports/$(basename $(notdir $(Q)))-last.tsv)
 last-reports: $(LAST_REPORTS)
-build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-last.owl | build/robot.jar build/reports
+build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-last.owl | check_robot build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -666,7 +683,7 @@ build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-last.owl | build/robo
 # target names for current release reports
 NEW_REPORTS := $(foreach Q,$(QUERIES), build/reports/$(basename $(notdir $(Q)))-new.tsv)
 new-reports: $(NEW_REPORTS)
-build/reports/%-new.tsv: src/sparql/build/%.rq $(DM).owl | build/robot.jar build/reports
+build/reports/%-new.tsv: src/sparql/build/%.rq $(DM).owl | check_robot build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -683,7 +700,7 @@ branch_reports = $(foreach O, doid-non-classified doid, build/reports/temp/branc
 
 .INTERMEDIATE: $(branch_reports)
 $(branch_reports): build/reports/temp/branch-count-%.tsv: src/ontology/%.owl \
- src/sparql/build/branch-count.rq | build/robot.jar build/reports/temp
+ src/sparql/build/branch-count.rq | check_robot build/reports/temp
 	@echo "Counting all branches in $<..."
 	@$(ROBOT) query \
 	 --input $< \
@@ -697,7 +714,7 @@ build/reports/branch-count.tsv: $(branch_reports)
 
 
 # the following targets are used to build a smaller diff with only removed axioms to review
-build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
+build/robot.diff: build/doid-last.owl $(DM).owl | check_robot
 	@echo "Comparing axioms in previous release to current release"
 	@$(ROBOT) diff \
 	 --left $< \
@@ -708,7 +725,7 @@ build/robot.diff: build/doid-last.owl $(DM).owl | build/robot.jar
 build/reports/missing-axioms.txt: src/util/parse-diff.py build/robot.diff | build/reports
 	@python3 $^ $@
 
-build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | build/robot.jar
+build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | check_robot
 	@echo "Finding overlap between HP and DO terms..."
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 

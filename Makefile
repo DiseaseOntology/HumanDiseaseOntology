@@ -18,7 +18,7 @@ DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
 
 # Set the ROBOT version to use
-ROBOT_VRS = 1.9.4
+ROBOT_VRS = 1.9.5
 
 # to make a release, use `make release`
 # to update imports, use `make imports`

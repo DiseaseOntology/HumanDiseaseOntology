@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-09-28/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-10-21/subsets/DO_FlyBase_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050155",
@@ -2467,9 +2467,6 @@
         "comments" : [ "OMIM mapping submitted by NeuroDevNet. [LS]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "MENTAL RETARDATION, AUTOSOMAL RECESSIVE 15"
-        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "mental retardation"
         } ],
@@ -6477,28 +6474,12 @@
       "lbl" : "neurofibromatosis",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
+        "comments" : [ "This disease may be obsoleted in the future. Diseases previously classified as neurofibromatosis 2 (DOID:0111252) and neurofibromatosis 3 (DOID:0070480 and DOID:0070481) have been reclassified by international consensus as subclasses of schwannomatosis. For details refer to definition sources for neurofibromatosis 1 (DOID:0111253)." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "Acoustic neurofibromatosis"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Recklinghausen's neurofibromatosis"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "central Neurofibromatosis"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "peripheral Neurofibromatosis"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "von Reklinghausen disease"
-        } ],
         "xrefs" : [ {
           "val" : "GARD:10420"
         }, {
-          "val" : "ICD10CM:Q85.00"
+          "val" : "ICD10CM:Q85.0"
         }, {
           "val" : "ICD9CM:237.7"
         }, {
@@ -6506,11 +6487,13 @@
         }, {
           "val" : "NCI:C6727"
         }, {
-          "val" : "ORDO:93921"
+          "val" : "ORDO:634518"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:154642000"
+          "val" : "SNOMEDCT_US_2023_03_01:19133005"
         }, {
           "val" : "UMLS_CUI:C0162678"
+        }, {
+          "val" : "UMLS_CUI:C0495632"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -6524,6 +6507,36 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ORDO:634518"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:10420"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:Q85.0"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:237.7"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D017253"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C6727"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "SNOMEDCT_US_2023_03_01:19133005"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0162678"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0495632"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+          "val" : "ICD10CM:Q85.00"
         } ]
       }
     }, {

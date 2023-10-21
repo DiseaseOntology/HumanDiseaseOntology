@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-09-28/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-10-21/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -99,9 +99,21 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
     
 
 
@@ -4753,6 +4765,28 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_0081244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
+        <obo:IAO_0000115>A pituitary cancer that is characterized by features of Cushing disease, with elevated blood ACTH levels and hypercortisolism arising within the fetal anterior pituitary and associated with DICER1 mutations.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:8273/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C155304</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Pituitary Gland Blastoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081244</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">pituitary blastoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081244"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pituitary cancer that is characterized by features of Cushing disease, with elevated blood ACTH levels and hypercortisolism arising within the fetal anterior pituitary and associated with DICER1 mutations.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35291028/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_0081245 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081245">
@@ -6866,6 +6900,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasExactSynonym xml:lang="en">malignant neoplasm of thyroid gland</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">malignant tumour of thyroid gland</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">neoplasm of thyroid gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>thyroid gland cancer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">thyroid neoplasm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:1781</oboInOwl:id>
@@ -6873,7 +6908,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
-        <rdfs:label>thyroid gland cancer</rdfs:label>
+        <rdfs:label>thyroid cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1781"/>
@@ -9470,6 +9505,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3192">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_2001"/>
         <obo:IAO_0000115>A neuroma that is characterized as a benign nerve sheath tumor that is composed of Schwann cells.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>DOID:955</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICDO:9560/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009442</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3269</oboInOwl:hasDbXref>
@@ -9519,24 +9555,44 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3204 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3204">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3192"/>
+        <obo:IAO_0000115>A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:Q85.03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:237.73</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICDO:9560/1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:C536641</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C6557</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:162091</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:615670</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIM:PS162091</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:93921</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:781641005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C1335929</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">Schwannomatosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SWN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>neurilemmomatosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>neurinomatosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3204</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <rdfs:comment>Xref MGI.
-OMIM mapping confirmed by DO. [SN].</rdfs:comment>
-        <rdfs:label>neurilemmomatosis</rdfs:label>
+        <rdfs:label>schwannomatosis</rdfs:label>
+        <skos:broadMatch>ORDO:634518</skos:broadMatch>
+        <skos:exactMatch>ICD10CM:Q85.03</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:237.73</skos:exactMatch>
+        <skos:exactMatch>ICDO:9560/1</skos:exactMatch>
+        <skos:exactMatch>MESH:C536641</skos:exactMatch>
+        <skos:exactMatch>NCI:C6557</skos:exactMatch>
+        <skos:exactMatch>OMIM:PS162091</skos:exactMatch>
+        <skos:exactMatch>ORDO:93921</skos:exactMatch>
+        <skos:exactMatch>SNOMEDCT_US_2023_03_01:781641005</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C1335929</skos:exactMatch>
+        <skos:narrowMatch>ORDO:634492</skos:narrowMatch>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3204"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35674741/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -9595,6 +9651,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <owl:annotatedTarget>A skeletal muscle cancer that arise from skeletal muscle progenitors.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Rhabdomyosarcoma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9425116/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9621,17 +9678,27 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3246"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3247"/>
+        <obo:IAO_0000115>A rhabdomyosarcoma that is characterized by the presence of whorls of spindle cells forming a storiform pattern. In children it usually arises in the paratesticular region. In adults it usually arises from the deep soft tissues in the head and neck.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:8912/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C6519</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:404055006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C1266134</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Sclerosing rhabdomyosarcoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spindle Cell/Sclerosing Rhabdomyosarcoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Synonym Rhabdomyosarcoma, spindle cell/sclerosing type</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3260</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>spindle cell rhabdomyosarcoma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3260"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A rhabdomyosarcoma that is characterized by the presence of whorls of spindle cells forming a storiform pattern. In children it usually arises in the paratesticular region. In adults it usually arises from the deep soft tissues in the head and neck.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/34958505/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -18546,5 +18613,5 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
 

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-09-28/subsets/DO_rare_slim.obo
-date: 28:09:2023 23:34
+data-version: doid/releases/2023-10-21/subsets/DO_rare_slim.obo
+date: 21:10:2023 13:16
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -6252,10 +6252,12 @@ namespace: disease_ontology
 def: "A Galloway-Mowat syndrome that has_material_basis_in homozygous mutation in the WDR73 gene on chromosome 15q25." [url:https\://en.wikipedia.org/wiki/Galloway_Mowat_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/26123727/]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "autosomal recessive spinocerebellar ataxia 5" EXACT []
 synonym: "Galloway syndrome" EXACT []
 synonym: "microcephaly, hiatal hernia and nephrotic syndrome" EXACT []
 synonym: "nephrosis-microcephaly syndrome" EXACT []
 synonym: "nephrosis-neuronal dysmigration syndrome" EXACT []
+synonym: "SCAR5" EXACT []
 xref: OMIM:251300
 is_a: DOID:0080694 ! Galloway-Mowat syndrome
 created_by: elvira
@@ -12728,6 +12730,28 @@ xref: OMIM:213000
 xref: ORDO:2246
 
 [Term]
+id: DOID:0070475
+name: renal medullary carcinoma
+namespace: disease_ontology
+def: "A renal cell carcinoma that develops in the renal medulla." [url:https\://pubmed.ncbi.nlm.nih.gov/28697319/]
+subset: DO_rare_slim
+synonym: "kidney medullary carcinoma" EXACT []
+synonym: "medullary carcinoma of the kidney" EXACT []
+synonym: "medullary renal cell carcinoma" EXACT []
+synonym: "RMC" EXACT []
+xref: GARD:13175
+xref: NCI:C7572
+xref: ORDO:319319
+xref: SNOMEDCT_US_2023_10_01:765095002
+xref: UMLS_CUI:C4049328
+is_a: DOID:4450 ! renal cell carcinoma
+property_value: exactMatch "GARD:13175" xsd:string
+property_value: exactMatch "NCI:C7572" xsd:string
+property_value: exactMatch "ORDO:319319" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_10_01:765095002" xsd:string
+property_value: exactMatch "UMLS_CUI:C4049328" xsd:string
+
+[Term]
 id: DOID:0080016
 name: spina bifida
 namespace: disease_ontology
@@ -13014,6 +13038,7 @@ name: autosomal recessive spinocerebellar ataxia 7
 namespace: disease_ontology
 def: "An autosomal recessive cerebellar ataxia that is characterized by onset of progressive gait difficulties, eye movement abnormalities, and dysarthria in the first or second decade of life and that has_material_basis_in compound heterozygous mutation in the TPP1 gene on chromosome 11p15." [url:https\://ghr.nlm.nih.gov/gene/TPP1, url:https\://www.ncbi.nlm.nih.gov/pubmed/26224725]
 subset: DO_rare_slim
+synonym: "SCAR7" EXACT []
 xref: GARD:12232
 xref: OMIM:609270
 is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
@@ -23481,19 +23506,25 @@ xref: UMLS_CUI:C0795902
 
 [Term]
 id: DOID:0111252
-name: neurofibromatosis 2
+name: vestibular schwannomatosis
 namespace: disease_ontology
-def: "A neurofibromatosis characterized by usually bilateral tumors of the eighth cranial nerve, meningiomas of the brain, and schwannomas of the dorsal roots of the spinal cord that has_material_basis_in heterozygous of mutation in NF2 on 22q12.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19476995, url:https\://www.ncbi.nlm.nih.gov/pubmed/8379998]
+def: "A schwannomatosis characterized by bilateral vestibular schwannomas or a combination of unilateral vestibular schwannomas, non-vestibular schwannomas, meningiomas, ependymomas, and specific eye abnormalities that has_material_basis_in heterozygous mutation in the NF2 gene on chromosome 22q12.2. Eye abnormalities include juvenile subcapsular or cortical cataract, epiretinal membrane in a person less than 40 years old, and retinal hamartoma. This disease has been revised by international consensus. It was previously referred to as neurofibromatosis 2." [url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
 subset: DO_rare_slim
 synonym: "ACN" EXACT []
+synonym: "acoustic neurofibromatosis" EXACT []
 synonym: "BANF" EXACT []
 synonym: "bilateral acoustic neurinoma" EXACT []
 synonym: "bilateral acoustic neurofibromatosis" EXACT []
 synonym: "bilateral acoustic schwannomas" EXACT []
 synonym: "central neurofibromatosis" EXACT []
 synonym: "familial acoustic neuromas" EXACT []
+synonym: "neurofibromatosis 2" EXACT []
 synonym: "neurofibromatosis type II" EXACT []
 synonym: "NF2" EXACT []
+synonym: "NF2-related schwannomatosis" EXACT []
+synonym: "schwannomatosis 3" EXACT []
+synonym: "SWN3" EXACT []
+synonym: "SWNV" EXACT []
 xref: GARD:7193
 xref: ICD10CM:Q85.02
 xref: ICD9CM:237.72
@@ -23501,32 +23532,47 @@ xref: MESH:D016518
 xref: NCI:C3274
 xref: OMIM:101000
 xref: ORDO:637
-xref: SNOMEDCT_US_2023_03_01:700060008
+xref: SNOMEDCT_US_2023_03_01:92503002
 xref: UMLS_CUI:C0027832
-is_a: DOID:8712 ! neurofibromatosis
+property_value: exactMatch "GARD:7193" xsd:string
+property_value: exactMatch "ICD10CM:Q85.02" xsd:string
+property_value: exactMatch "ICD9CM:237.72" xsd:string
+property_value: exactMatch "MESH:D016518" xsd:string
+property_value: exactMatch "NCI:C3274" xsd:string
+property_value: exactMatch "OMIM:101000" xsd:string
+property_value: exactMatch "ORDO:637" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:92503002" xsd:string
+property_value: exactMatch "UMLS_CUI:C0027832" xsd:string
+property_value: narrowMatch "ORDO:634475" xsd:string
 
 [Term]
 id: DOID:0111253
 name: neurofibromatosis 1
 namespace: disease_ontology
-def: "A neurofibromatosis classically characterized by cafe-au-lait spots, Lisch nodules in the eye, and fibromatous tumors of the skin or in some cases by a high load of spinal tumors that has_material_basis_in heterozygous mutation in NF1 on 17q11.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19117870, url:https\://www.ncbi.nlm.nih.gov/pubmed/8825042]
+def: "A neurofibromatosis characterized by multiple cafe-au-lait macules, skin fold freckling, neurofibromas, optic gliomas, Lisch nodules or choroidal abnormalities in the eye, or a specific bone abnormality that has_material_basis_in the NF1 gene on chromosome 17q11.2. Bone abnormalities include a distinctive osseous lesion such as sphenoid dysplasia, anterolateral bowing of the tibia, or pseudarthrosis of a long bone." [url:https\://pubmed.ncbi.nlm.nih.gov/34012067/, url:https\://pubmed.ncbi.nlm.nih.gov/35698197/]
 subset: DO_rare_slim
-synonym: "familial spinal neurofibromatosis" EXACT []
-synonym: "FSNF" EXACT []
 synonym: "neurofibromatosis type I" EXACT []
 synonym: "NF1" EXACT []
 synonym: "Peripheral Neurofibromatosis" EXACT []
+synonym: "Recklinghausen's neurofibromatosis" EXACT []
 synonym: "von Recklinghausen Disease" EXACT []
 xref: ICD10CM:Q85.01
 xref: ICD9CM:237.71
 xref: MESH:D009456
 xref: NCI:C3273
 xref: OMIM:162200
-xref: OMIM:162210
 xref: ORDO:636
 xref: SNOMEDCT_US_2023_03_01:92824003
 xref: UMLS_CUI:C0027831
 is_a: DOID:8712 ! neurofibromatosis
+property_value: exactMatch "ICD10CM:Q85.01" xsd:string
+property_value: exactMatch "ICD9CM:237.71" xsd:string
+property_value: exactMatch "MESH:D009456" xsd:string
+property_value: exactMatch "NCI:C3273" xsd:string
+property_value: exactMatch "OMIM:162200" xsd:string
+property_value: exactMatch "ORDO:636" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:92824003" xsd:string
+property_value: exactMatch "UMLS_CUI:C0027831" xsd:string
 
 [Term]
 id: DOID:0111254
@@ -27395,7 +27441,7 @@ xref: OMIM:601331
 id: DOID:0111683
 name: neurofibromatosis-Noonan syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by neurofibromatosis and manifestations of Noonan syndrome, including short stature, ptosis, midface hypoplasia, webbed neck, learning disabilities, and muscle weakness, that has_material_basis_in heterozygous mutation in NF1 on chromosome 17q11.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12707950, url:https\://www.ncbi.nlm.nih.gov/pubmed/2411134]
+def: "A RASopathy characterized by neurofibromatosis and manifestations of Noonan syndrome including short stature, ptosis, midface hypoplasia, webbed neck, learning disabilities, and muscle weakness that has_material_basis_in heterozygous mutation in NF1 on chromosome 17q11.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12707950, url:https\://www.ncbi.nlm.nih.gov/pubmed/2411134]
 subset: DO_rare_slim
 synonym: "neurofibromatosis type 1-Noonan syndrome" EXACT []
 synonym: "neurofibromatosis with Noonan phenotype" EXACT []
@@ -27407,6 +27453,12 @@ xref: OMIM:601321
 xref: ORDO:638
 xref: SNOMEDCT_US_2023_03_01:715344006
 xref: UMLS_CUI:C2931482
+property_value: exactMatch "GARD:372" xsd:string
+property_value: exactMatch "MESH:C537393" xsd:string
+property_value: exactMatch "OMIM:601321" xsd:string
+property_value: exactMatch "ORDO:638" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:715344006" xsd:string
+property_value: exactMatch "UMLS_CUI:C2931482" xsd:string
 
 [Term]
 id: DOID:0111684
@@ -37219,7 +37271,6 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "familial hyperaldosteronism type I" EXACT []
-synonym: "glucocorticoid-remediable aldosteronism" EXACT []
 synonym: "glucocorticoid-suppressible hyperaldosteronism" EXACT []
 synonym: "GRA" EXACT []
 synonym: "GRS" EXACT []
@@ -48060,23 +48111,29 @@ namespace: disease_ontology
 alt_id: DOID:14750
 alt_id: DOID:8711
 alt_id: DOID:9137
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+comment: This disease may be obsoleted in the future. Diseases previously classified as neurofibromatosis 2 (DOID:0111252) and neurofibromatosis 3 (DOID:0070480 and DOID:0070481) have been reclassified by international consensus as subclasses of schwannomatosis. For details refer to definition sources for neurofibromatosis 1 (DOID:0111253).
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Acoustic neurofibromatosis" EXACT []
-synonym: "central Neurofibromatosis" EXACT []
-synonym: "peripheral Neurofibromatosis" EXACT []
-synonym: "Recklinghausen's neurofibromatosis" EXACT []
-synonym: "von Reklinghausen disease" EXACT []
 xref: GARD:10420
-xref: ICD10CM:Q85.00
+xref: ICD10CM:Q85.0
 xref: ICD9CM:237.7
 xref: MESH:D017253
 xref: NCI:C6727
-xref: ORDO:93921
-xref: SNOMEDCT_US_2023_03_01:154642000
+xref: ORDO:634518
+xref: SNOMEDCT_US_2023_03_01:19133005
 xref: UMLS_CUI:C0162678
+xref: UMLS_CUI:C0495632
+property_value: broadMatch "ORDO:634518" xsd:string
+property_value: exactMatch "GARD:10420" xsd:string
+property_value: exactMatch "ICD10CM:Q85.0" xsd:string
+property_value: exactMatch "ICD9CM:237.7" xsd:string
+property_value: exactMatch "MESH:D017253" xsd:string
+property_value: exactMatch "NCI:C6727" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:19133005" xsd:string
+property_value: exactMatch "UMLS_CUI:C0162678" xsd:string
+property_value: exactMatch "UMLS_CUI:C0495632" xsd:string
+property_value: narrowMatch "ICD10CM:Q85.00" xsd:string
 
 [Term]
 id: DOID:8736

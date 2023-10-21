@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-09-28/subsets/NCIthesaurus.obo
-date: 28:09:2023 23:34
+data-version: doid/releases/2023-10-21/subsets/NCIthesaurus.obo
+date: 21:10:2023 13:17
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -2810,10 +2810,12 @@ namespace: disease_ontology
 def: "A Galloway-Mowat syndrome that has_material_basis_in homozygous mutation in the WDR73 gene on chromosome 15q25." [url:https\://en.wikipedia.org/wiki/Galloway_Mowat_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/26123727/]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "autosomal recessive spinocerebellar ataxia 5" EXACT []
 synonym: "Galloway syndrome" EXACT []
 synonym: "microcephaly, hiatal hernia and nephrotic syndrome" EXACT []
 synonym: "nephrosis-microcephaly syndrome" EXACT []
 synonym: "nephrosis-neuronal dysmigration syndrome" EXACT []
+synonym: "SCAR5" EXACT []
 xref: OMIM:251300
 is_a: DOID:225 ! syndrome
 created_by: elvira
@@ -4477,7 +4479,7 @@ subset: NCIthesaurus
 xref: NCI:C5265
 xref: SNOMEDCT_US_2023_03_01:278051002
 xref: UMLS_CUI:C1336753
-is_a: DOID:1781 ! thyroid gland cancer
+is_a: DOID:1781 ! thyroid cancer
 
 [Term]
 id: DOID:10016
@@ -6675,7 +6677,6 @@ comment: OMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "mental retardation" RELATED []
-synonym: "MENTAL RETARDATION, AUTOSOMAL RECESSIVE 15" EXACT []
 xref: NCI:C84392
 xref: SNOMEDCT_US_2023_03_01:1855002
 xref: UMLS_CUI:C0025362
@@ -17550,7 +17551,6 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "familial hyperaldosteronism type I" EXACT []
-synonym: "glucocorticoid-remediable aldosteronism" EXACT []
 synonym: "glucocorticoid-suppressible hyperaldosteronism" EXACT []
 synonym: "GRA" EXACT []
 synonym: "GRS" EXACT []
@@ -21306,7 +21306,7 @@ is_a: DOID:1287 ! cardiovascular system disease
 
 [Term]
 id: DOID:1781
-name: thyroid gland cancer
+name: thyroid cancer
 namespace: disease_ontology
 alt_id: DOID:10008
 def: "An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
@@ -21317,6 +21317,7 @@ subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of thyroid gland" EXACT []
 synonym: "malignant tumour of thyroid gland" EXACT []
 synonym: "neoplasm of thyroid gland" EXACT []
+synonym: "thyroid gland cancer" EXACT []
 synonym: "Thyroid gland neoplasm" EXACT []
 synonym: "thyroid neoplasm" EXACT []
 xref: ICD10CM:C73
@@ -29593,6 +29594,7 @@ is_a: DOID:331 ! central nervous system disease
 id: DOID:3192
 name: neurilemmoma
 namespace: disease_ontology
+alt_id: DOID:955
 def: "A neuroma that is characterized as a benign nerve sheath tumor that is composed of Schwann cells." [url:https\://en.wikipedia.org/wiki/Schwannoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -29693,21 +29695,35 @@ is_a: DOID:3192 ! neurilemmoma
 
 [Term]
 id: DOID:3204
-name: neurilemmomatosis
+name: schwannomatosis
 namespace: disease_ontology
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+def: "A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors." [url:https\://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html, url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "Schwannomatosis" EXACT []
+synonym: "neurilemmomatosis" EXACT []
+synonym: "neurinomatosis" EXACT []
+synonym: "SWN" EXACT []
 xref: ICD10CM:Q85.03
 xref: ICD9CM:237.73
+xref: ICDO:9560/1
 xref: MESH:C536641
 xref: NCI:C6557
-xref: OMIM:162091
-xref: OMIM:615670
+xref: OMIM:PS162091
+xref: ORDO:93921
 xref: SNOMEDCT_US_2023_03_01:781641005
 xref: UMLS_CUI:C1335929
-is_a: DOID:3192 ! neurilemmoma
+is_a: DOID:225 ! syndrome
+property_value: broadMatch "ORDO:634518" xsd:string
+property_value: exactMatch "ICD10CM:Q85.03" xsd:string
+property_value: exactMatch "ICD9CM:237.73" xsd:string
+property_value: exactMatch "ICDO:9560/1" xsd:string
+property_value: exactMatch "MESH:C536641" xsd:string
+property_value: exactMatch "NCI:C6557" xsd:string
+property_value: exactMatch "OMIM:PS162091" xsd:string
+property_value: exactMatch "ORDO:93921" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:781641005" xsd:string
+property_value: exactMatch "UMLS_CUI:C1335929" xsd:string
+property_value: narrowMatch "ORDO:634492" xsd:string
 
 [Term]
 id: DOID:3205
@@ -29932,7 +29948,7 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 id: DOID:3247
 name: rhabdomyosarcoma
 namespace: disease_ontology
-def: "A skeletal muscle cancer that arise from skeletal muscle progenitors." [url:http\://en.wikipedia.org/wiki/Rhabdomyosarcoma]
+def: "A skeletal muscle cancer that arise from skeletal muscle progenitors." [url:http\://en.wikipedia.org/wiki/Rhabdomyosarcoma, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC9425116/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8900/3
@@ -30052,13 +30068,17 @@ is_a: DOID:178 ! vascular disease
 id: DOID:3260
 name: spindle cell rhabdomyosarcoma
 namespace: disease_ontology
+def: "A rhabdomyosarcoma that is characterized by the presence of whorls of spindle cells forming a storiform pattern. In children it usually arises in the paratesticular region. In adults it usually arises from the deep soft tissues in the head and neck." [url:https\://pubmed.ncbi.nlm.nih.gov/34958505/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Sclerosing rhabdomyosarcoma" EXACT []
+synonym: "Spindle Cell/Sclerosing Rhabdomyosarcoma" EXACT []
+synonym: "Synonym Rhabdomyosarcoma, spindle cell/sclerosing type" EXACT []
 xref: ICDO:8912/3
 xref: NCI:C6519
 xref: SNOMEDCT_US_2023_03_01:404055006
 xref: UMLS_CUI:C1266134
-is_a: DOID:3246 ! embryonal rhabdomyosarcoma
+is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
 id: DOID:3261
@@ -34789,7 +34809,7 @@ xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
 xref: UMLS_CUI:C0549473
-is_a: DOID:1781 ! thyroid gland cancer
+is_a: DOID:1781 ! thyroid cancer
 
 [Term]
 id: DOID:3965
@@ -38180,7 +38200,7 @@ subset: NCIthesaurus
 synonym: "sarcoma of the Thyroid gland" EXACT []
 xref: NCI:C6041
 xref: UMLS_CUI:C1336756
-is_a: DOID:1781 ! thyroid gland cancer
+is_a: DOID:1781 ! thyroid cancer
 
 [Term]
 id: DOID:4517
@@ -48522,6 +48542,8 @@ is_a: DOID:4114 ! uterine body mixed cancer
 id: DOID:6175
 name: mediastinal neurilemmoma
 namespace: disease_ontology
+alt_id: DOID:7922
+def: "A neurilemmoma located_in the mediastinum." [url:https\://pubmed.ncbi.nlm.nih.gov/25992358]
 subset: NCIthesaurus
 synonym: "Schwannoma of mediastinum" EXACT []
 xref: NCI:C6643
@@ -55917,22 +55939,26 @@ is_a: DOID:1140 ! spinal canal and spinal cord meningioma
 
 [Term]
 id: DOID:7921
-name: benign mediastinal psammomatous neurilemmoma
+name: mediastinal psammomatous neurilemmoma
 namespace: disease_ontology
+def: "A mediastinal neurilemmoma characterized by the presence of psammoma bodies." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6636]
 subset: NCIthesaurus
+synonym: "benign mediastinal psammomatous neurilemmoma" EXACT []
 synonym: "benign Psammomatous Schwannoma of mediastinum" EXACT []
 xref: NCI:C6636
 xref: UMLS_CUI:C1332513
-is_a: DOID:7922 ! benign mediastinal neurilemmoma
+is_a: DOID:6175 ! mediastinal neurilemmoma
 
 [Term]
 id: DOID:7922
-name: benign mediastinal neurilemmoma
+name: obsolete benign mediastinal neurilemmoma
 namespace: disease_ontology
+comment: Duplicate disease (NCI).
 subset: NCIthesaurus
 synonym: "benign Schwannoma of mediastinum" EXACT []
 xref: NCI:C6625
-is_a: DOID:3192 ! neurilemmoma
+is_obsolete: true
+replaced_by: DOID:6175
 
 [Term]
 id: DOID:7926
@@ -59530,24 +59556,30 @@ namespace: disease_ontology
 alt_id: DOID:14750
 alt_id: DOID:8711
 alt_id: DOID:9137
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+comment: This disease may be obsoleted in the future. Diseases previously classified as neurofibromatosis 2 (DOID:0111252) and neurofibromatosis 3 (DOID:0070480 and DOID:0070481) have been reclassified by international consensus as subclasses of schwannomatosis. For details refer to definition sources for neurofibromatosis 1 (DOID:0111253).
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Acoustic neurofibromatosis" EXACT []
-synonym: "central Neurofibromatosis" EXACT []
-synonym: "peripheral Neurofibromatosis" EXACT []
-synonym: "Recklinghausen's neurofibromatosis" EXACT []
-synonym: "von Reklinghausen disease" EXACT []
 xref: GARD:10420
-xref: ICD10CM:Q85.00
+xref: ICD10CM:Q85.0
 xref: ICD9CM:237.7
 xref: MESH:D017253
 xref: NCI:C6727
-xref: ORDO:93921
-xref: SNOMEDCT_US_2023_03_01:154642000
+xref: ORDO:634518
+xref: SNOMEDCT_US_2023_03_01:19133005
 xref: UMLS_CUI:C0162678
+xref: UMLS_CUI:C0495632
 is_a: DOID:225 ! syndrome
+property_value: broadMatch "ORDO:634518" xsd:string
+property_value: exactMatch "GARD:10420" xsd:string
+property_value: exactMatch "ICD10CM:Q85.0" xsd:string
+property_value: exactMatch "ICD9CM:237.7" xsd:string
+property_value: exactMatch "MESH:D017253" xsd:string
+property_value: exactMatch "NCI:C6727" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:19133005" xsd:string
+property_value: exactMatch "UMLS_CUI:C0162678" xsd:string
+property_value: exactMatch "UMLS_CUI:C0495632" xsd:string
+property_value: narrowMatch "ICD10CM:Q85.00" xsd:string
 
 [Term]
 id: DOID:8717

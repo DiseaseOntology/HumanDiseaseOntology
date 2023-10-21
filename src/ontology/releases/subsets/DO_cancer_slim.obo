@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-09-28/subsets/DO_cancer_slim.obo
-date: 28:09:2023 23:34
+data-version: doid/releases/2023-10-21/subsets/DO_cancer_slim.obo
+date: 21:10:2023 13:16
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -2257,6 +2257,17 @@ xref: NCI:C82427
 is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
+id: DOID:0081244
+name: pituitary blastoma
+namespace: disease_ontology
+def: "A pituitary cancer that is characterized by features of Cushing disease, with elevated blood ACTH levels and hypercortisolism arising within the fetal anterior pituitary and associated with DICER1 mutations." [url:https\://pubmed.ncbi.nlm.nih.gov/35291028/]
+subset: DO_cancer_slim
+synonym: "Pituitary Gland Blastoma" EXACT []
+xref: ICDO:8273/3
+xref: NCI:C155304
+is_a: DOID:162 ! cancer
+
+[Term]
 id: DOID:0081245
 name: cauda equina neuroendocrine tumor
 namespace: disease_ontology
@@ -3473,7 +3484,7 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:1781
-name: thyroid gland cancer
+name: thyroid cancer
 namespace: disease_ontology
 alt_id: DOID:10008
 def: "An endocrine gland cancer located in the thryoid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
@@ -3484,6 +3495,7 @@ subset: TopNodes_DOcancerslim
 synonym: "malignant neoplasm of thyroid gland" EXACT []
 synonym: "malignant tumour of thyroid gland" EXACT []
 synonym: "neoplasm of thyroid gland" EXACT []
+synonym: "thyroid gland cancer" EXACT []
 synonym: "Thyroid gland neoplasm" EXACT []
 synonym: "thyroid neoplasm" EXACT []
 xref: ICD10CM:C73
@@ -5123,6 +5135,7 @@ is_a: DOID:0060108 ! brain glioma
 id: DOID:3192
 name: neurilemmoma
 namespace: disease_ontology
+alt_id: DOID:955
 def: "A neuroma that is characterized as a benign nerve sheath tumor that is composed of Schwann cells." [url:https\://en.wikipedia.org/wiki/Schwannoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
@@ -5149,21 +5162,34 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:3204
-name: neurilemmomatosis
+name: schwannomatosis
 namespace: disease_ontology
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
+def: "A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors." [url:https\://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html, url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "Schwannomatosis" EXACT []
+synonym: "neurilemmomatosis" EXACT []
+synonym: "neurinomatosis" EXACT []
+synonym: "SWN" EXACT []
 xref: ICD10CM:Q85.03
 xref: ICD9CM:237.73
+xref: ICDO:9560/1
 xref: MESH:C536641
 xref: NCI:C6557
-xref: OMIM:162091
-xref: OMIM:615670
+xref: OMIM:PS162091
+xref: ORDO:93921
 xref: SNOMEDCT_US_2023_03_01:781641005
 xref: UMLS_CUI:C1335929
-is_a: DOID:3192 ! neurilemmoma
+property_value: broadMatch "ORDO:634518" xsd:string
+property_value: exactMatch "ICD10CM:Q85.03" xsd:string
+property_value: exactMatch "ICD9CM:237.73" xsd:string
+property_value: exactMatch "ICDO:9560/1" xsd:string
+property_value: exactMatch "MESH:C536641" xsd:string
+property_value: exactMatch "NCI:C6557" xsd:string
+property_value: exactMatch "OMIM:PS162091" xsd:string
+property_value: exactMatch "ORDO:93921" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:781641005" xsd:string
+property_value: exactMatch "UMLS_CUI:C1335929" xsd:string
+property_value: narrowMatch "ORDO:634492" xsd:string
 
 [Term]
 id: DOID:3246
@@ -5188,7 +5214,7 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 id: DOID:3247
 name: rhabdomyosarcoma
 namespace: disease_ontology
-def: "A skeletal muscle cancer that arise from skeletal muscle progenitors." [url:http\://en.wikipedia.org/wiki/Rhabdomyosarcoma]
+def: "A skeletal muscle cancer that arise from skeletal muscle progenitors." [url:http\://en.wikipedia.org/wiki/Rhabdomyosarcoma, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC9425116/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8900/3
@@ -5216,13 +5242,17 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 id: DOID:3260
 name: spindle cell rhabdomyosarcoma
 namespace: disease_ontology
+def: "A rhabdomyosarcoma that is characterized by the presence of whorls of spindle cells forming a storiform pattern. In children it usually arises in the paratesticular region. In adults it usually arises from the deep soft tissues in the head and neck." [url:https\://pubmed.ncbi.nlm.nih.gov/34958505/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Sclerosing rhabdomyosarcoma" EXACT []
+synonym: "Spindle Cell/Sclerosing Rhabdomyosarcoma" EXACT []
+synonym: "Synonym Rhabdomyosarcoma, spindle cell/sclerosing type" EXACT []
 xref: ICDO:8912/3
 xref: NCI:C6519
 xref: SNOMEDCT_US_2023_03_01:404055006
 xref: UMLS_CUI:C1266134
-is_a: DOID:3246 ! embryonal rhabdomyosarcoma
+is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
 id: DOID:3275
@@ -6440,7 +6470,7 @@ xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
 xref: UMLS_CUI:C0549473
-is_a: DOID:1781 ! thyroid gland cancer
+is_a: DOID:1781 ! thyroid cancer
 
 [Term]
 id: DOID:3965

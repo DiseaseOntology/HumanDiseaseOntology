@@ -1,4 +1,7 @@
+<!-- badges: start -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10030384.svg)](https://doi.org/10.5281/zenodo.10030384)
 [![Build Status](https://github.com/DiseaseOntology/HumanDiseaseOntology/workflows/DOID%20CI/badge.svg)](https://github.com/DiseaseOntology/HumanDiseaseOntology/actions)
+<!-- badges: end -->
 
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO).

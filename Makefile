@@ -33,7 +33,7 @@ ROBOT_VRS = 1.9.5
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: version_imports test products verify publish post
+release: version_edit test version_imports products verify publish post
 
 # Only run `make all` if you'd like to update imports to the latest version
 #	during the release!
@@ -565,13 +565,21 @@ DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports check_robot
 
 
 # ----------------------------------------
-# VERSION IMPORTS
+# VERSION INPUT FILES (DOID-EDIT.OWL & IMPORTS)
 # ----------------------------------------
 
 # Set versionIRI for imports & ext.owl (whether updated or not)
 VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 
-.PHONY: version_imports version_ext $(VERSION_IMPS)
+.PHONY: version_edit version_imports version_ext $(VERSION_IMPS)
+version_edit: | check_robot
+	@$(ROBOT) annotate \
+	 --input $(EDIT) \
+	 --version-iri "$(RELEASE_PREFIX)doid.owl" \
+	 --output $(EDIT).ofn \
+	&& mv $(EDIT).ofn $(EDIT)
+	@echo "Updated versionIRI of $(EDIT)"
+
 version_imports: $(VERSION_IMPS) version_ext
 
 version_ext: src/ontology/ext.owl | check_robot

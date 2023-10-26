@@ -6,6 +6,7 @@ SHELL := bash
 .DELETE_ON_ERROR:
 .SUFFIXES:
 .SECONDARY:
+.NOTPARALLEL:
 
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
@@ -19,6 +20,8 @@ HD = src/ontology/HumanDO
 
 # Set the ROBOT version to use
 ROBOT_VRS = 1.9.5
+
+# ***NEVER run make commands in parallel (do NOT use the -j flag)***
 
 # to make a release, use `make release`
 # to update imports, use `make imports`

@@ -16,7 +16,7 @@ We value every :sparkles:contribution:sparkles:.&nbsp;&nbsp;&nbsp; Thank you! :c
 
 ## 1. Introduction
 
-The goal of this document is to make contributing to data in the Disease Ontology _easy_ :muscle:, for both beginners and experts. All suggestions for improvement and requests for new data are welcome. The inclusion of supporting documentation (when available) and author ORCiD IDs for attribution, are also highly appreciated :pray:.
+The goal of this document is to make contributing to data in the Human Disease Ontology (DO) _easy_ :muscle:, for both beginners and experts. All suggestions for improvement and requests for new data are welcome. The inclusion of supporting documentation (when available) and author ORCiD IDs for attribution, are also highly appreciated :pray:.
 
 If you have a request or suggestion regarding the display or functionality of disease-ontology.org, please [contact us](#4-contact-information) directly.
 
@@ -32,25 +32,31 @@ Pull requests (PRs) are generally harder to create and harder to review with cur
 
 ### 2.2. Issue Templates
 
-[Issue templates](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new/choose) have been created to streamline the contribution process. Each identifies the information required and simply optional/helpful. Use them when you can.
+A number of [Issue templates](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new/choose) have been created to streamline the contribution process. Each type identifies requested information to enable our team to address the issue, along with additional information that would be helpful to include. We request that users utilize the Issue Templates.
 
-:clock10: Your time is valuable, we won't judge the format of your contributions. :point_up: _Remember, something is always better than nothing_.
+:clock10: Your time is valuable, we won't judge the format of your contributions. :point_up: _Remember, something is always better than nothing_. Please include your ORCiD ID with your request, so that we can recognize your contribution on our contributors page.
 
-**Templates:**
+**Templates:To Request or Suggest: **
 
-1. [Request a new disease term]()
-2. [Suggest missing mapping(s) or cross-reference(s)]()
-3. [Specify incorrect mapping(s) or cross-reference(s)]()
-4. [Suggest a simple correction (no need for supporting research)]()
-5. [Suggest data correction for a single disease]()
-6. [Suggest data correction for multiple diseases]()
-7. [Request classification update/review]()
+1. [A new disease term or subtype]()
+2. [Revising a disease name]()
+3. [Merging two disease terms]()
+4. [Obsoleting a disease term]()
+5. [A classification update/review]()
+6. [Cross-reference mappings]()
+7. [Synonyms or acronyms]() 
+8. [Typos or grammatical errors]()
+9. [Definition updates]()
+10. [Axiom additions or revisions]()
+11. [SPARQL queries]()
+12. [Faceted DO-KB searches]()
+13. [Downloading ML-ready datasets]()
 
 If you have suggestions for new or existing templates, please use a [blank issue](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new) or [contact us](#4-contact-information) directly.
 
 ## 3. What to Expect from Us
 
-Always expect a cordial and timely response. When requests are straightforward and accepted, expect the issue to be implemented and closed with little, if any, additional comment. When issues are complex or expanded upon, we may provide or request further information in the issue to support or outline decision-making. **Discussion is welcome**, it aids curation and decision-making, but _don't feel obligated to reply_. If for some reason changes suggested or requested will _not_ be implemented, we will explain why at the time we close an issue. If you disagree or just feel a desire to comment further, please do!
+Always expect a cordial and timely response. When requests are straightforward and accepted, expect the issue to be implemented and closed with little, if any, additional back and forth comments. When issues are complex or expanded upon, we may provide or request further information on the issue to support or outline decision-making. **Discussions are always welcome**, it aids curation and decision-making, but _don't feel obligated to reply_. If for some reason changes suggested or requested will _not_ be implemented, we will explain why in a comment posted to the issue. If you disagree or just feel a desire to comment further, please do!
 
 ## 4. Contact Information
 
@@ -58,8 +64,9 @@ If you have questions or need further assistance, please feel free to reach out 
 
 - By email: [Lynn](mailto:lschriml@som.umaryland.edu), [Allen](mailto:allenbaron@som.umaryland.edu), or [Claudia](mailto:csbjohnson@som.umaryland.edu)
 - Using the contact form at [disease-ontology.org](https://disease-ontology.org/outreach/contact-us)
-- Via the Human Disease Ontology Slack channel ([join](https://join.slack.com/t/humandiseaseontology/shared_invite/zt-25vj64myc-h~DOMTJ_iNyyZnPhlDmJFA))
+- Via the Human Disease Ontology public Slack channel ([join](https://join.slack.com/t/humandiseaseontology/shared_invite/zt-25vj64myc-h~DOMTJ_iNyyZnPhlDmJFA))
 - Via Twitter ([@diseaseontology](https://twitter.com/diseaseontology))
+- Via Facebook (Disease Ontology](https://www.facebook.com/diseaseontology)
 
 Thank you for your interest in contributing to the Human Disease Ontology. Your contributions play a vital role in maintaining this valuable resource for the scientific and medical community.
 
@@ -67,27 +74,28 @@ Thank you for your interest in contributing to the Human Disease Ontology. Your 
 
 ## 5. Additional Information
 
-For those new to the Disease Ontology, or just wishing to better understand how it's organized or what's in it :wink:.
+For those new to the Human Disease Ontology, or just wishing to better understand how it's organized or what's in it :wink:.
 
 ### Curation
 
-Curation of the ontology follows established procedures and patterns that are outlined on the disease-ontology.org [Curation page](https://disease-ontology.org/curation). However, diseases are not static entities :grey_exclamation:, requiring continuous update and improvement. To suggest changes to patterns or procedures governing data in the Disease Ontology, please open a [blank issue](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new) or [contact us](#4-contact-information) directly.
+Curation of the ontology follows established procedures and patterns that are outlined on the disease-ontology.org [Curation page](https://disease-ontology.org/curation). However, diseases are not static entities :grey_exclamation:, requiring continuous updates and revisions to incorporate new knowledge. To suggest changes to patterns or procedures governing data in the Human Disease Ontology, please open a [blank issue](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new) or [contact us](#4-contact-information) directly.
 
 ### Data in the Ontology
 
-- Diseases are organized hierarchically using multiple disease [classifications](https://www.britannica.com/science/human-disease/Classifications-of-diseases), with the primary being etiological (by cause). This multi-classification makes the DO a directed acyclic graph.
-- The following data is required for each disease:
+- Diseases are organized hierarchically based on their etiology (or cause), when known, [classification](https://www.britannica.com/science/human-disease/Classifications-of-diseases),in a directed acyclic graph [(DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) providing a conceptual representation of the relatedness of human diseases.
+  
+- In the Human Disease Ontology, each disease record includes:
   - **Uniform Resource Identifier (URI)**: A persistent, web-accessible URL and ID (example: http://purl.obolibrary.org/obo/DOID_4).
   - **label**: The current, active disease name (example: 'syndrome').
-  - **ID**: A short version of the URI using the prefix 'DOID' (example: DOID:4).
+  - **ID**: A short version of the URI using the approved, [OBO Foundry](https://obofoundry.org/ontology/doid.html) prefix 'DOID' (example: DOID:4).
   - **OBO namespace**: The namespace assigned to the DO by the OBO Foundry ('disease_ontology').
   - **parent/superclass**: One or more curator-asserted, direct disease-to-disease relationship(s) using `rdfs:subClassOf` in OWL or `is_a` in OBO files (example: the parent of ['syndrome'](https://disease-ontology.org/?id=DOID:225) is 'disease').
 - Additional data which may be available for a disease, includes:
-  - **definition**: A human-readable text definition. Most diseases have definitions. All definitions have supporting sources (specified as xrefs).
-  - **synonym(s)**: Zero or more alternate names for a disease. These include historical and alternate names, acronyms, etc. and may be exact, narrow, broad, or related in nature.
-  - **xref(s)**: Zero or more cross-references to other medical vocabularies (e.g. OMIM, GARD, UMLS, etc.).
-  - **skos mapping(s)**: Similar to cross-references but organized by the nature of the mapping using the [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/) (i.e. exact, close, narrow, broad, or related).
-  - **logical statements**: Zero or more curator-asserted disease-to-feature relationships using terms from other ontologies (onset, anatomy, taxonomy, cell, etc.).
-  - **deprecated**: A boolean indicating whether a disease has been deprecated, or no longer active. Only present on inactive disease terms.
-  - **alternate ID(s)**: Zero or more alternate IDs for equivalent diseases that have been deprecated. Deprecated terms pre-dating the use of OWL (<2015) may not be present in current ontology files.
-  - **term_replaced_by**: The term to use instead of this one; only present on deprecated terms.
+  - **definition**: A human-readable text definition, written by a DO curator. Most DO diseases have textraul definitions. All definitions have supporting sources (specified as xrefs).
+  - **synonym(s)**: Alternate names for a disease. These include historical and alternate names or acronyms,and may be exact, narrow, broad, or related in nature, denoted by [Skos[(https://www.w3.org/2009/08/skos-reference/skos.html) annotations.
+  - **xref(s)**: Cross-references to other clinical vocabularies (e.g. NCI thesaurus, OMIM, Orphanet, GARD, UMLS, SNOMED_CT, ICD).
+  - **skos mapping(s)**: Denoting the level of similarity between the DO term and the cross-reference ID, organized by the nature of the mapping using the [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/) (e.g., exact, close, narrow, broad, or related).
+  - **logical statements**: Curator-asserted disease-to-feature relationships using terms from ontologies imports (phenotoype, cell type, age of onset, anatomy, taxonomy, cell, symptom, transmission method, sequence variant type).
+  - **deprecated**: A boolean utilized to indicate whether a disease has been deprecated, or no longer active. Only present on obsoleted or merged disease terms. These terms are included in the DO ontology files, but are not shown on the DO website.
+  - **alternate ID(s)**: Alternate IDs for diseases that have been merged into another DOID. DOIDs for merged or obsoleted terms pre-dating the use of OWL (<2015) may not be present in current ontology files, but can be found in the DO's [Sourceforge repository](https://sourceforge.net/projects/diseaseontology/files/).
+  - **term_replaced_by**: For an obsoleted or merged term, an annotation that is utilized to denote the term that was merged into.

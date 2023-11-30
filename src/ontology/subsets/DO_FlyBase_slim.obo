@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-10-21/subsets/DO_FlyBase_slim.obo
-date: 21:10:2023 13:16
+data-version: doid/releases/2023-11-30/subsets/DO_FlyBase_slim.obo
+date: 30:11:2023 10:18
 ontology: doid/subsets/DO_FlyBase_slim
 
 [Term]
@@ -701,7 +701,7 @@ creation_date: 2011-07-22T12:42:50Z
 id: DOID:0060160
 name: childhood spinal muscular atrophy
 namespace: disease_ontology
-def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
+def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -2678,6 +2678,7 @@ namespace: disease_ontology
 def: "A mitochondrial metabolism disease that is characterized by deficiency of cytochrome c oxidase, myopathy, hepatomegaly, hypertrophic cardiomyopathy, lactic acidosis, and Leigh syndrome, and is caused by mutations related to oxidative phosphorylation." [url:https\://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders, url:https\://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/26846578]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "MITOCHONDRIAL COMPLEX IV DEFICIENCY" EXACT []
 xref: GARD:48
@@ -2807,6 +2808,7 @@ namespace: disease_ontology
 def: "A prion disease characterized by adult onset of memory loss, dementia, ataxia, and pathologic deposition of amyloid-like plaques in the brain." [url:http\://en.wikipedia.org/wiki/Gerstmann-Str%C3%A4ussler-Scheinker_syndrome, url:http\://en.wikipedia.org/wiki/Gerstmann-straussler-scheinker_disease, url:http\://www.cdc.gov/ncidod/dvrd/prions/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Gerstmann-Straussler-Scheinker disease" EXACT []
@@ -3051,6 +3053,7 @@ name: prion disease
 namespace: disease_ontology
 def: "A brain disease that is characterized by brain damage resulting from the abnormal folding, clumping and accumulation of cellular proteins in the brain induced by prion proteins." [url:http\://en.wikipedia.org/wiki/Prion, url:http\://www.cdc.gov/ncidod/dvrd/prions/]
 subset: DO_FlyBase_slim
+subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Prion disease pathway" EXACT []
 synonym: "prion induced disorder" EXACT []
@@ -3391,15 +3394,19 @@ is_a: DOID:2978 ! carbohydrate metabolic disorder
 
 [Term]
 id: DOID:9452
-name: fatty liver disease
+name: steatotic liver disease
 namespace: disease_ontology
 alt_id: DOID:9451
-def: "A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in liver cells via the process of steatosis." [url:http\://en.wikipedia.org/wiki/Fatty_liver]
+def: "A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in at least 5% of hepatocytes." [url:https\://pubmed.ncbi.nlm.nih.gov/27099587/, url:https\://pubmed.ncbi.nlm.nih.gov/37364816/]
 comment: PRISM.
 subset: DO_FlyBase_slim
 synonym: "alcoholic fatty liver" EXACT []
+synonym: "cryptogenic steatotic liver disease" NARROW []
 synonym: "Fatty change of liver" EXACT []
+synonym: "fatty liver disease" EXACT []
 synonym: "hepatic lipidosis" EXACT []
+synonym: "hepatic steatosis" EXACT []
+synonym: "SLD" EXACT []
 synonym: "Steatosis of liver" EXACT []
 xref: ICD10CM:K70.0
 xref: ICD9CM:571.0

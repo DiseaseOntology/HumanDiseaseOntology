@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-10-21/subsets/DO_cancer_slim.obo
-date: 21:10:2023 13:16
+data-version: doid/releases/2023-11-30/subsets/DO_cancer_slim.obo
+date: 30:11:2023 10:18
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -588,11 +588,11 @@ creation_date: 2014-10-21T12:38:23Z
 id: DOID:0050925
 name: small intestine carcinoid neuroendocrine tumor
 namespace: disease_ontology
-def: "A small intestine cancer that has_material_basis_in cells of the neuroendocrine system." [url:http\://en.wikipedia.org/wiki/Carcinoid]
+def: "A neuroendocrine tumor that has_material_basis_in cells of the neuroendocrine system and that is located in the small intestine." [url:http\://en.wikipedia.org/wiki/Carcinoid]
 subset: DO_cancer_slim
 synonym: "intestinal carcinoid tumour" BROAD []
 xref: OMIM:114900
-is_a: DOID:3119 ! gastrointestinal system cancer
+is_a: DOID:169 ! neuroendocrine tumor
 created_by: lschriml
 creation_date: 2014-10-21T12:58:08Z
 
@@ -4085,11 +4085,16 @@ is_a: DOID:162 ! cancer
 id: DOID:2436
 name: glomangioma
 namespace: disease_ontology
+def: "A benign perivascular tumor that is a morphologic variant of the glomus tumor characterized by the presence of dilated veins, surrounded by small clusters of glomus cells. Glomangiomas are most often present in patients with multiple lesions." [url:https\://pubmed.ncbi.nlm.nih.gov/21163162/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "Glomuvenous Malformation" EXACT []
 xref: ICDO:8712/0
 xref: MESH:D005918
 xref: NCI:C4222
+xref: OMIM:138000
+xref: ORDO:83454
 xref: SNOMEDCT_US_2023_03_01:7429002
 xref: UMLS_CUI:C0334421
 
@@ -4354,15 +4359,16 @@ is_a: DOID:162 ! cancer
 id: DOID:2640
 name: struma ovarii
 namespace: disease_ontology
-def: "An ovarian germ cell monodermal and highly specialized teratoma that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26374222]
+alt_id: DOID:5209
+def: "An ovarian benign neoplasm that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25640097, url:https\://www.ncbi.nlm.nih.gov/pubmed/26374222]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "benign struma ovarii" RELATED []
 xref: ICDO:9090/0
 xref: MESH:D013330
 xref: NCI:C7468
 xref: SNOMEDCT_US_2023_03_01:24327009
 xref: UMLS_CUI:C0038478
-is_a: DOID:2394 ! ovarian cancer
 
 [Term]
 id: DOID:2645
@@ -5166,6 +5172,7 @@ name: schwannomatosis
 namespace: disease_ontology
 def: "A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors." [url:https\://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html, url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "neurilemmomatosis" EXACT []
 synonym: "neurinomatosis" EXACT []

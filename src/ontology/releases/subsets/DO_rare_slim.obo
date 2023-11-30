@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-10-21/subsets/DO_rare_slim.obo
-date: 21:10:2023 13:16
+data-version: doid/releases/2023-11-30/subsets/DO_rare_slim.obo
+date: 30:11:2023 10:18
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -492,6 +492,7 @@ name: fatal familial insomnia
 namespace: disease_ontology
 def: "A prion disease that is characterized by insomnia, hallucinations, dementia and death, located_in the brain." [url:https\://en.wikipedia.org/wiki/Fatal_familial_insomnia]
 comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:6429
@@ -1056,7 +1057,7 @@ xref: UMLS_CUI:C0265962
 id: DOID:0050475
 name: Weill-Marchesani syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by short stature, bachycephaly and other facial abnormalities, brachydactyly, joint stiffness and distinctive ocular abnormalities." [url:http\://en.wikipedia.org/wiki/Weill-Marchesani_syndrome, url:http\://ghr.nlm.nih.gov/condition/weill-marchesani-syndrome]
+def: "A syndrome characterized by short stature, brachycephaly and other facial abnormalities, brachydactyly, joint stiffness and distinctive ocular abnormalities." [url:http\://en.wikipedia.org/wiki/Weill-Marchesani_syndrome, url:http\://ghr.nlm.nih.gov/condition/weill-marchesani-syndrome]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -1326,14 +1327,23 @@ xref: ORDO:450
 
 [Term]
 id: DOID:0050553
-name: JMP syndrome
+name: proteasome-associated autoinflammatory syndrome 1
 namespace: disease_ontology
-def: "A syndrome that is characterized by childhood onset of joint stiffness and severe contractures of the hands and feet, erythematous skin lesions with subsequent development of severe lipodystrophy that has_material_basis_in homozygous or compound heterozygous mutation in the PSMB8 gene on chromosome 6p21.32." [url:http\://www.eurekalert.org/pub_releases/2010-12/usmc-rig120110.php, url:https\://www.ncbi.nlm.nih.gov/pubmed/21129723]
+def: "A proteasome-associated autoinflammatory syndrome that is characterized by early childhood onset of annular erythematous plaques on the face and extremities with subsequent development of partial lipodystrophy and laboratory evidence of immune dysregulation and that has_material_basis_in homozygous mutation in the PSMB8 gene on chromosome 6p21 or a heterozygous mutation in the PSMB8 gene and a heterozygous mutation in either the PSMA3 gene on chromosome 14q23 or in the PSMB4 gene on chromosome 1q21." [url:https\://pubmed.ncbi.nlm.nih.gov/21129723/, url:https\://pubmed.ncbi.nlm.nih.gov/21852578/, url:https\://pubmed.ncbi.nlm.nih.gov/21881205/]
 subset: DO_rare_slim
+synonym: "CANDLE" EXACT []
+synonym: "chronic atypical neutrophilic dermatosis with lipodystrophy and elevated temperature syndrome" EXACT []
+synonym: "JMP syndrome" EXACT []
 synonym: "JOINT CONTRACTURES, MUSCULAR ATROPHY, MICROCYTIC ANEMIA, AND PANNICULITIS-INDUCED LIPODYSTROPHY" EXACT []
+synonym: "Nakajo-Nishimura syndrome" EXACT []
+synonym: "NKJO" EXACT []
+synonym: "PRAAS1" EXACT []
 xref: GARD:10988
+xref: GARD:3916
+xref: GARD:3917
 xref: OMIM:256040
 xref: ORDO:324999
+is_a: DOID:0060913 ! proteosome-associated autoinflammatory syndrome
 
 [Term]
 id: DOID:0050557
@@ -1547,6 +1557,18 @@ xref: OMIM:610189
 xref: OMIM:613615
 xref: OMIM:PS266900
 xref: ORDO:3156
+
+[Term]
+id: DOID:0050579
+name: glycogen storage disease XV
+namespace: disease_ontology
+def: "A glycogen storage disease characterized by muscle weakness and cardiac abnormalities caused and has_material_basis_in mutation in the GYG1 gene that encodes glycogenin-1." [url:https\://www.omim.org/entry/613507]
+subset: DO_rare_slim
+synonym: "Glycogen storage disease 15" EXACT []
+synonym: "glycogen storage disease type XV" EXACT []
+synonym: "Glycogen storage disease with severe cardiomyopathy due to glycogenin deficiency" EXACT []
+xref: OMIM:613507
+xref: ORDO:263297
 
 [Term]
 id: DOID:0050580
@@ -2469,9 +2491,25 @@ synonym: "fatal infantile COX deficiency" EXACT []
 synonym: "fatal infantile cytochrome C oxidase deficiency" EXACT []
 synonym: "fatal infantile encephalocardiomyopathy" EXACT []
 xref: ORDO:1561
-is_a: DOID:700 ! mitochondrial metabolism disease
+xref: UMLS_CUI:C4273730
+is_a: DOID:3762 ! cytochrome-c oxidase deficiency disease
+property_value: exactMatch "ORDO:1561" xsd:string
+property_value: exactMatch "UMLS_CUI:C4273730" xsd:string
 created_by: lschriml
 creation_date: 2012-05-22T01:03:41Z
+
+[Term]
+id: DOID:0050729
+name: Chanarin-Dorfman syndrome
+namespace: disease_ontology
+def: "A lipid storage disease that is characterized by accumulation of triglycerides in the cytoplasm of leukocytes, muscle, liver, fibroblasts, and other tissues." [url:http\://en.wikipedia.org/wiki/Chanarin-Dorfman_syndrome]
+subset: DO_rare_slim
+synonym: "neutral lipid storage disease" EXACT []
+xref: GARD:3979
+xref: OMIM:275630
+xref: ORDO:98907
+created_by: lschriml
+creation_date: 2012-07-17T12:31:48Z
 
 [Term]
 id: DOID:0050730
@@ -2563,6 +2601,26 @@ def: "An autosomal recessive cerebellar ataxia that is characterized by progress
 subset: DO_rare_slim
 xref: GARD:9283
 xref: OMIM:208920
+is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
+created_by: lschriml
+creation_date: 2013-01-16T01:07:02Z
+
+[Term]
+id: DOID:0050755
+name: spinocerebellar ataxia with axonal neuropathy 2
+namespace: disease_ontology
+def: "An autosomal recessive cerebellar ataxia that is characterized by the onset of ataxia between age three and thirty including axonal sensorimotor neuropathy, cerebellar atrophy and elevated alpha-fetoprotein that has_material_basis_in homozygous or compound heterozygous mutation in the SETX gene on chromosome 9q34.13. Oculomotor apraxia is common, but not universal." [url:https\://pubmed.ncbi.nlm.nih.gov/19696032/, url:https\://pubmed.ncbi.nlm.nih.gov/23786967/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1154/]
+subset: DO_rare_slim
+synonym: "AOA2" EXACT []
+synonym: "ataxia with oculomotor apraxia type 2" EXACT []
+synonym: "autosomal recessive spinocerebellar ataxia 1" EXACT []
+synonym: "autosomal recessive spinocerebellar ataxia with axonal neuropathy 2" EXACT []
+synonym: "SCAN2" EXACT []
+synonym: "SCAR1" EXACT []
+synonym: "spinocerebellar ataxia with axonal neuropathy type 2" EXACT []
+xref: GARD:12860
+xref: OMIM:606002
+xref: ORDO:64753
 is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
 created_by: lschriml
 creation_date: 2013-01-16T01:07:02Z
@@ -3022,6 +3080,23 @@ xref: SNOMEDCT_US_2023_03_01:718573009
 xref: UMLS_CUI:C1860212
 created_by: lschriml
 creation_date: 2013-11-20T03:01:06Z
+
+[Term]
+id: DOID:0050797
+name: peroxisomal acyl-CoA oxidase deficiency
+namespace: disease_ontology
+def: "A peroxisomal disease that is characterized by hypotonia and seizures in the neonatal period and neurological regression in early infancy." [url:http\://www.omim.org/entry/264470, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=2971, url:https\://www.ncbi.nlm.nih.gov/pubmed/11815777, url:https\://www.ncbi.nlm.nih.gov/pubmed/17458872, url:https\://www.ncbi.nlm.nih.gov/pubmed/18536048]
+subset: DO_rare_slim
+synonym: "Peroxisomal acyl-coenzyme A oxidase" EXACT []
+xref: GARD:4543
+xref: MESH:C536662
+xref: NCI:C170437
+xref: OMIM:264470
+xref: ORDO:2971
+xref: SNOMEDCT_US_2023_03_01:238069004
+xref: UMLS_CUI:C1849678
+created_by: lschriml
+creation_date: 2013-11-21T10:47:41Z
 
 [Term]
 id: DOID:0050799
@@ -4017,7 +4092,7 @@ creation_date: 2011-08-26T11:17:14Z
 id: DOID:0060160
 name: childhood spinal muscular atrophy
 namespace: disease_ontology
-def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
+def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -11221,7 +11296,7 @@ is_a: DOID:14330 ! Parkinson's disease
 id: DOID:0060894
 name: early-onset Parkinson's disease
 namespace: disease_ontology
-def: "A Parkinson's disease characterized by onset of motor symptoms early than typically seen, usually prior to 50 years of age." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25904081]
+def: "A Parkinson's disease characterized by onset of motor symptoms earlier than typically seen, usually prior to 50 years of age." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25904081]
 subset: DO_rare_slim
 synonym: "early-onset Parkinson disease" EXACT []
 xref: ORDO:391411
@@ -11283,6 +11358,15 @@ xref: GARD:11003
 xref: ICD10CM:N11.8
 xref: OMIM:614817
 xref: ORDO:401996
+
+[Term]
+id: DOID:0060913
+name: proteosome-associated autoinflammatory syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by early onset, dermatitis, dysregulation of the immune response and variable features of recurrent fever, joint contractures, lipodystrophy, hepatosplenomegaly, anemia and calcifications." [url:https\://pubmed.ncbi.nlm.nih.gov/25521013/]
+subset: DO_rare_slim
+xref: OMIM:PS256040
+xref: ORDO:324977
 
 [Term]
 id: DOID:0070026
@@ -11696,7 +11780,7 @@ xref: SNOMEDCT_US_2021_09_01:236806004
 id: DOID:0070197
 name: distal myopathy 1
 namespace: disease_ontology
-def: "A distal muscular dystrophy characterized by autosomal dominant inheritance that has_material_basis_in mutation in the MYH7 gene on chromosome 14q11." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15322983, url:https\://www.ncbi.nlm.nih.gov/pubmed/7847377]
+def: "A distal myopathy that is characterized by autosomal dominant inheritance that has_material_basis_in mutation in the MYH7 gene on chromosome 14q11.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15322983, url:https\://www.ncbi.nlm.nih.gov/pubmed/7847377]
 subset: DO_rare_slim
 synonym: "Distal myopathy type 1" EXACT []
 synonym: "Gowers disease" EXACT []
@@ -11712,7 +11796,7 @@ is_a: DOID:11720 ! distal myopathy
 id: DOID:0070198
 name: Miyoshi muscular dystrophy
 namespace: disease_ontology
-def: "A distal muscular dystrophy characterized by autosomal recessive inheritance of distal muscle weakness in the upper and lower limbs that spares the intrinsic muscles of the hands and has onset in young adulthood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/3942856]
+def: "A distal myopathy that is characterized by autosomal recessive inheritance of distal muscle weakness in the upper and lower limbs that spares the intrinsic muscles of the hands and has onset in young adulthood." [url:https\://www.ncbi.nlm.nih.gov/pubmed/3942856]
 subset: DO_rare_slim
 synonym: "Miyoshi myopathy" EXACT []
 xref: GARD:9676
@@ -12730,6 +12814,189 @@ xref: OMIM:213000
 xref: ORDO:2246
 
 [Term]
+id: DOID:0070367
+name: leukoencephalopathy with vanishing white matter 5
+namespace: disease_ontology
+def: "A leukoencephalopathy with vanishing white matter that has_material_basis_in homozygous or compound heterozygous mutation in the EIF2B5 gene on chromosome 3q27." [url:https\://pubmed.ncbi.nlm.nih.gov/12325082/, url:https\://pubmed.ncbi.nlm.nih.gov/34745209/, url:https\://www.omim.org/entry/620315]
+comment: 'Cree leukoencephalopathy' synonym included in this subtype because of genetic link. The severity of this disease remains variable [JAB].
+subset: DO_rare_slim
+synonym: "Cree leukoencephalopathy" EXACT []
+xref: OMIM:620315
+xref: ORDO:99854
+is_a: DOID:0060868 ! leukoencephalopathy with vanishing white matter
+property_value: exactMatch "OMIM:620315" xsd:string
+property_value: exactMatch "ORDO:99854" xsd:string
+
+[Term]
+id: DOID:0070419
+name: acrocardiofacial syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by split-hand/split-foot malformation, facial anomalies, cleft lip/palate, congenital heart defect, genital anomalies, and intellectual deficit." [url:https\://pubmed.ncbi.nlm.nih.gov/20920258]
+subset: DO_rare_slim
+synonym: "cleft palate, cardiac defect, genital anomalies, and ectrodactyly" EXACT []
+synonym: "cleft palate-cardiac defect-genital anomalies-ectrodactyly syndrome" EXACT []
+xref: GARD:1167
+xref: MESH:C563936
+xref: OMIM:600460
+xref: ORDO:2008
+
+[Term]
+id: DOID:0070423
+name: early onset progressive encephalopathy with brain atrophy and thin corpus callosum
+namespace: disease_ontology
+def: "An autosomal recessive intellectual developmental disorder characterized by onset at birth or in infancy of developmental delay, intellectual disability, seizures, secondary hypomyelination, cerebral atrophy, and thin corpus callosum that has_material_basis_in homozygous or compound heterozygous mutation in the TBCD gene on chromosome 17q25." [url:https\://pubmed.ncbi.nlm.nih.gov/27666370/, url:https\://pubmed.ncbi.nlm.nih.gov/27666374/, url:https\://pubmed.ncbi.nlm.nih.gov/36527993/]
+subset: DO_rare_slim
+synonym: "early-onset progressive encephalopathy with brain atrophy and thin corpus callosum" EXACT []
+synonym: "PEBAT" EXACT []
+xref: OMIM:617193
+xref: ORDO:496641
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+
+[Term]
+id: DOID:0070424
+name: combined oxidative phosphorylation deficiency 44
+namespace: disease_ontology
+def: "A combined oxidative phosphorylation deficiency that has_material_basis_in homozygous or compound heterozygous mutation in the FASTKD2 gene on chromosome 2q33." [url:https\://pubmed.ncbi.nlm.nih.gov/31944455/, url:https\://pubmed.ncbi.nlm.nih.gov/36531759/]
+subset: DO_rare_slim
+synonym: "COXPD44" EXACT []
+xref: OMIM:618855
+xref: ORDO:166105
+is_a: DOID:0060286 ! combined oxidative phosphorylation deficiency
+property_value: exactMatch "OMIM:618855" xsd:string
+property_value: exactMatch "ORDO:166105" xsd:string
+
+[Term]
+id: DOID:0070431
+name: hyperphosphatasia with impaired intellectual development syndrome
+namespace: disease_ontology
+def: "An autosomal recessive intellectual developmental disorder characterized by hyperphosphatasia and intellectual disability. Distinctive facial features including hypertelorism, long palpebral fissures, a nose with a broad bridge and a rounded tip, downturned corners of the mouth, and a thin upper lip are also often observed." [url:https\://medlineplus.gov/genetics/condition/mabry-syndrome/, url:https\://pubmed.ncbi.nlm.nih.gov/26219719/]
+subset: DO_rare_slim
+synonym: "HPMRS" EXACT []
+synonym: "hyperphosphatasia with mental retardation syndrome" EXACT []
+synonym: "Mabry disease" EXACT []
+synonym: "Mabry syndrome" EXACT []
+xref: MESH:C565495
+xref: OMIM:PS239300
+xref: ORDO:247262
+xref: SNOMEDCT_US_2023_03_01:33982008
+xref: UMLS_CUI:C1855923
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: exactMatch "OMIM:PS239300" xsd:string
+property_value: exactMatch "ORDO:247262" xsd:string
+property_value: exactMatch "UMLS_CUI:C1855923" xsd:string
+
+[Term]
+id: DOID:0070439
+name: North Carolina macular dystrophy
+namespace: disease_ontology
+def: "A retinal macular dystrophy characterized by limited drusen, larger confluent drusen, or severe colobomatous-like chorioretinal atrophy in the central macular region present at birth that are nonprogressive that has_material_basis_in heterozygous mutation in a DNase I hypersensitivity site on chromosome 6q16 upstream of the PRDM13 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/36243009]
+subset: DO_rare_slim
+synonym: "central areolar pigment epithelial dystrophy" EXACT []
+synonym: "central retinal pigment epithelial dystrophy" EXACT []
+synonym: "MCDR1" EXACT []
+synonym: "NCMD" EXACT []
+synonym: "progressive foveal dystrophy" EXACT []
+synonym: "retinal macular dystrophy 1" EXACT []
+xref: GARD:9179
+xref: MESH:C537835
+xref: NCI:C168999
+xref: OMIM:136550
+xref: ORDO:75327
+xref: SNOMEDCT_US_2023_03_01:312925009
+xref: UMLS_CUI:C0730294
+is_a: DOID:4448 ! macular degeneration
+property_value: exactMatch "GARD:9179" xsd:string
+property_value: exactMatch "MESH:C537835" xsd:string
+property_value: exactMatch "OMIM:136550" xsd:string
+property_value: exactMatch "ORDO:75327" xsd:string
+property_value: exactMatch "UMLS_CUI:C0730294" xsd:string
+
+[Term]
+id: DOID:0070442
+name: paroxysmal nonkinesigenic dyskinesia 3
+namespace: disease_ontology
+def: "A dystonia characterized by epilepsy and attacks of dystonic or choreathetotic movements, which may coexist or occur singly, that has_material_basis_in heterozygous mutation in the KCNMA1 gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/15937479/, url:https\://pubmed.ncbi.nlm.nih.gov/26195193/]
+subset: DO_rare_slim
+synonym: "generalized epilepsy and paroxysmal dyskinesia" EXACT []
+xref: OMIM:609446
+xref: ORDO:79137
+property_value: exactMatch "OMIM:609446" xsd:string
+property_value: exactMatch "ORDO:79137" xsd:string
+
+[Term]
+id: DOID:0070452
+name: xanthinuria type I
+namespace: disease_ontology
+def: "A xanthinuria characterized by isolated deficiency of xanthine dehydrogenase that has_material_basis_in homozygous or compound heterozygous mutation in the XDH gene on chromosome 2p23." [url:https\://pubmed.ncbi.nlm.nih.gov/9153281/]
+subset: DO_rare_slim
+synonym: "XAN1" EXACT []
+xref: GARD:5621
+xref: MESH:C562584
+xref: OMIM:278300
+xref: ORDO:93601
+xref: SNOMEDCT_US_2023_03_01:836343001
+xref: UMLS_CUI:C0268118
+is_a: DOID:0060236 ! xanthinuria
+
+[Term]
+id: DOID:0070453
+name: xanthinuria type II
+namespace: disease_ontology
+def: "A xanthinuria characterized by deficiency of xanthine dehydrogenase and aldehyde oxidase that has_material_basis_in homozygous or compound heterozygous mutation in the MOCOS gene on chromosome 18q12." [url:https\://pubmed.ncbi.nlm.nih.gov/11302742/, url:https\://pubmed.ncbi.nlm.nih.gov/23203137/]
+subset: DO_rare_slim
+synonym: "XAN2" EXACT []
+xref: GARD:5620
+xref: MESH:C566358
+xref: OMIM:603592
+xref: ORDO:93602
+xref: UMLS_CUI:C1863688
+is_a: DOID:0060236 ! xanthinuria
+
+[Term]
+id: DOID:0070470
+name: chromosome 1p36.33 duplication syndrome
+namespace: disease_ontology
+def: "A chromosomal duplication syndrome characterized by cardiomyopathy, corneal clouding or cataracts, hyperlactacidemia, and perinatal death that has_material_basis_in heterozygous duplication within the ATAD3 gene cluster, including the ATAD3A, ATAD3B, and ATAD3C genes, on chromosome 1p36.33 resulting in ATAD3A/ATAD3C gene fusion. Hypotonia, encephalopathy, seizures, and white matter abnormalities are also common." [url:https\://pubmed.ncbi.nlm.nih.gov/32004445/, url:https\://pubmed.ncbi.nlm.nih.gov/33575671/]
+subset: DO_rare_slim
+synonym: "CHROMOSOME 1p36.33 DUPLICATION SYNDROME, ATAD3 GENE CLUSTER, AUTOSOMAL DOMINANT" EXACT []
+xref: OMIM:618815
+xref: ORDO:656279
+xref: UMLS_CUI:C5394150
+property_value: exactMatch "OMIM:618815" xsd:string
+property_value: exactMatch "ORDO:656279" xsd:string
+property_value: exactMatch "UMLS_CUI:C5394150" xsd:string
+
+[Term]
+id: DOID:0070473
+name: Zaki syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by developmental delay, progressive microcephaly, short stature, and dysmorphic features including sparse scalp hair, cupped ears, wide nose and mouth, short philtrum, and high-arched palate that has_material_basis_in homozygous or compound heterozygous mutation in the WLS gene on chromosome 1p31.3. Additional variable features may include ocular, skeletal, cardiac, and renal anomalies." [url:https\://pubmed.ncbi.nlm.nih.gov/34587386/, url:https\://pubmed.ncbi.nlm.nih.gov/37005218/]
+subset: DO_rare_slim
+xref: OMIM:619648
+property_value: exactMatch "OMIM:619648" xsd:string
+
+[Term]
+id: DOID:0070474
+name: childhood-onset neurodegeneration with brain atrophy
+namespace: disease_ontology
+def: "A neurodegenerative disease characterized by loss of motor and cognitive skills between ages 2 and 7 years with progressive cerebral and cerebellar atrophy, resulting in the inability to walk, absence of language, and profound intellectual disability, that has_material_basis_in heterozygous mutation in the UBTF gene on chromosome 17q21.31." [url:https\://pubmed.ncbi.nlm.nih.gov/28777933/]
+subset: DO_rare_slim
+synonym: "childhood-onset motor and cognitive regression syndrome with extrapyramidal movement disorder" EXACT []
+synonym: "CONDBA" EXACT []
+xref: GARD:13658
+xref: OMIM:617672
+xref: ORDO:500180
+xref: SNOMEDCT_US_2023_03_01:1167373005
+xref: UMLS_CUI:C4540086
+xref: UMLS_CUI:C5567227
+property_value: exactMatch "GARD:13658" xsd:string
+property_value: exactMatch "OMIM:617672" xsd:string
+property_value: exactMatch "ORDO:500180" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:1167373005" xsd:string
+property_value: exactMatch "UMLS_CUI:C4540086" xsd:string
+property_value: exactMatch "UMLS_CUI:C5567227" xsd:string
+
+[Term]
 id: DOID:0070475
 name: renal medullary carcinoma
 namespace: disease_ontology
@@ -12750,6 +13017,90 @@ property_value: exactMatch "NCI:C7572" xsd:string
 property_value: exactMatch "ORDO:319319" xsd:string
 property_value: exactMatch "SNOMEDCT_US_2023_10_01:765095002" xsd:string
 property_value: exactMatch "UMLS_CUI:C4049328" xsd:string
+
+[Term]
+id: DOID:0070476
+name: diphthamide deficiency syndrome
+namespace: disease_ontology
+def: "An inherited metabolic disorder characterized by global developmental delay, short stature, dysmorphic craniofacial features, and sparse hair that has_material_basis_in deficient diphthamidylation of the eukaryotic translation Elongation Factor 2 protein (gene: EEF2)." [url:https\://pubmed.ncbi.nlm.nih.gov/32576952/, url:https\://pubmed.ncbi.nlm.nih.gov/35482014/]
+subset: DO_rare_slim
+synonym: "craniofacial dysplasia-short stature-ectodermal anomalies-intellectual disability syndrome" EXACT []
+synonym: "DEDSSH" EXACT []
+synonym: "developmental delay with short stature, dysmorphic facial features, and sparse hair" EXACT []
+xref: OMIM:PS616901
+xref: ORDO:459061
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "OMIM:PS616901" xsd:string
+property_value: exactMatch "ORDO:459061" xsd:string
+
+[Term]
+id: DOID:0070484
+name: Legius syndrome
+namespace: disease_ontology
+def: "A RASopathy characterized by multiple cafe-au-lait macules and possible skin fold freckling without neurofibromas, optic gliomas, or Lisch nodules that has_material_basis_in heterozygous mutation in the SPRED1 gene on chromosome 15q14." [url:https\://pubmed.ncbi.nlm.nih.gov/34012067/]
+subset: DO_rare_slim
+synonym: "LGSS" EXACT []
+synonym: "neurofibromatosis type 1-like syndrome" EXACT []
+synonym: "NF1-like syndrome" EXACT []
+xref: GARD:10714
+xref: MESH:C548032
+xref: NCI:C176941
+xref: OMIM:611431
+xref: ORDO:137605
+xref: SNOMEDCT_US_2023_03_01:703541007
+xref: UMLS_CUI:C1969623
+property_value: exactMatch "GARD:10714" xsd:string
+property_value: exactMatch "MESH:C548032" xsd:string
+property_value: exactMatch "NCI:C176941" xsd:string
+property_value: exactMatch "OMIM:611431" xsd:string
+property_value: exactMatch "ORDO:137605" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:703541007" xsd:string
+property_value: exactMatch "UMLS_CUI:C1969623" xsd:string
+
+[Term]
+id: DOID:0070489
+name: classic dopamine transporter deficiency syndrome
+namespace: disease_ontology
+def: "A dopamine transporter deficiency syndrome characterized by infantile onset of chorea, dystonia, ballismus, and orolingual dyskinesia followed by progressive parkinsonism-dystonia that has_material_basis_in homozygous or compound heterozygous mutation in the SLC6A3 gene on chromosome 5p15.33. Another distinct feature is an elevated homovanillic acid to hydroxyindoleacetic acid ratio in cerebrospinal fluid." [url:https\://pubmed.ncbi.nlm.nih.gov/37443770/, url:https\://www.ncbi.nlm.nih.gov/books/NBK442323/]
+subset: DO_rare_slim
+synonym: "classic DTDS" EXACT []
+synonym: "infantile parkinsonism-dystonia 1" EXACT []
+synonym: "PKDYS1" EXACT []
+xref: GARD:10484
+xref: MESH:C567730
+xref: NCI:C129866
+xref: OMIM:613135
+xref: ORDO:238455
+xref: SNOMEDCT_US_2023_03_01:722763000
+xref: UMLS_CUI:C2751067
+property_value: broadMatch "OMIM:PS613135" xsd:string
+property_value: exactMatch "GARD:10484" xsd:string
+property_value: exactMatch "MESH:C567730" xsd:string
+property_value: exactMatch "NCI:C129866" xsd:string
+property_value: exactMatch "OMIM:613135" xsd:string
+property_value: exactMatch "ORDO:238455" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:722763000" xsd:string
+property_value: exactMatch "UMLS_CUI:C2751067" xsd:string
+
+[Term]
+id: DOID:0070490
+name: infantile parkinsonism-dystonia 2
+namespace: disease_ontology
+def: "A movement disease characterized by parkinsonism, dystonia, poor fine motor skills, and autonomic dysfunction including abnormal sweating, cold extremities, and poor sleep that has_material_basis_in homozygous mutation in the SLC18A2 gene on chromosome 10q25.3." [url:https\://pubmed.ncbi.nlm.nih.gov/23363473/]
+subset: DO_rare_slim
+synonym: "Brain dopamine-serotonin vesicular transport disease" EXACT []
+synonym: "PKDYS2" EXACT []
+xref: GARD:13594
+xref: OMIM:618049
+xref: SNOMEDCT_US_2023_03_01:717942003
+xref: UMLS_CUI:C4303546
+xref: UMLS_CUI:C4747991
+property_value: broadMatch "OMIM:PS613135" xsd:string
+property_value: exactMatch "GARD:13594" xsd:string
+property_value: exactMatch "OMIM:618049" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:717942003" xsd:string
+property_value: exactMatch "UMLS_CUI:C4303546" xsd:string
+property_value: exactMatch "UMLS_CUI:C4747991" xsd:string
 
 [Term]
 id: DOID:0080016
@@ -13498,6 +13849,7 @@ synonym: "glycosylphosphatidylinositol biosynthesis defect 4" EXACT []
 xref: GARD:12777
 xref: OMIM:300868
 xref: ORDO:300496
+is_a: DOID:0080503 ! multiple congenital anomalies-hypotonia-seizures syndrome
 
 [Term]
 id: DOID:0080143
@@ -14315,6 +14667,16 @@ xref: ORDO:79255
 is_a: DOID:3322 ! GM1 gangliosidosis
 
 [Term]
+id: DOID:0080503
+name: multiple congenital anomalies-hypotonia-seizures syndrome
+namespace: disease_ontology
+def: "A lipid metabolism disorder that is characterized by severe global developmental delay, hypotonia, and early-onset seizures, associated with multiple cardiac, genitourinary, and gastrointestinal congenital anomalies." [url:https\://www.ncbi.nlm.nih.gov/pubmed/29974678]
+subset: DO_rare_slim
+xref: GARD:12781
+xref: OMIM:PS614080
+xref: ORDO:280633
+
+[Term]
 id: DOID:0080519
 name: PAPA syndrome
 namespace: disease_ontology
@@ -14785,7 +15147,7 @@ xref: ORDO:427
 id: DOID:0080627
 name: alopecia-mental retardation syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by loss of hair on the scalp, absence of eyebrows, eyelashes, and axillary and pubic hair, and mild to severe mental retardation." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17451405]
+def: "A syndrome that is characterized by loss of hair on the scalp, eyebrows, eyelashes, axillas and pubic hair, in addition to mild to severe intellectual disability." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17451405]
 subset: DO_rare_slim
 xref: GARD:612
 xref: OMIM:PS203650
@@ -15066,7 +15428,7 @@ xref: ORDO:85192
 id: DOID:0080722
 name: Kenny-Caffey syndrome type 1
 namespace: disease_ontology
-def: "A Kenny-Caffey syndrome that has_material_basis_in mutation in the gene encoding tubulin-specific chaperone E." [url:https\://pubmed.ncbi.nlm.nih.gov/9806825/]
+def: "A Kenny-Caffey syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the TBCE gene, encoding tubulin-specific chaperone E, on chromosome 1q42." [url:https\://pubmed.ncbi.nlm.nih.gov/9806825/]
 subset: DO_rare_slim
 xref: GARD:8367
 xref: OMIM:244460
@@ -15547,7 +15909,7 @@ namespace: disease_ontology
 def: "A steroid inherited metabolic disorder that is characterized by combined deficiency of P450C17 and P450C21 and accumulation of steroid metabolites and that has_material_basis_in homozygous or compound heterozygous mutations in the POR gene, which encodes cytochrome p450 oxidoreductase, on chromosome 7q11.2." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1419/]
 subset: DO_rare_slim
 xref: GARD:12664
-xref: NCI:131302
+xref: NCI:C131302
 xref: OMIM:613571
 
 [Term]
@@ -16308,6 +16670,279 @@ xref: GARD:7111
 xref: OMIM:618469
 xref: ORDO:2990
 is_a: DOID:0080110 ! contractures, pterygia, and spondylocarpotarsal fusion syndrome
+
+[Term]
+id: DOID:0081326
+name: oxoglutarate dehydrogenase deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder that is characterized by infantile and pediatric onset basal ganglia-associated movement disorders, hypotonia, developmental delays, ataxia, and seizures and that has_material_basis_in homozygous mutation in the oxoglutarate dehydrogenase gene (OGDH) on chromosome 7p13." [url:https\://pubmed.ncbi.nlm.nih.gov/32383294/]
+subset: DO_rare_slim
+synonym: "alpha-ketoglutarate dehydrogenase deficiency" EXACT []
+synonym: "Oxoglutaric aciduria" EXACT []
+xref: GARD:617
+xref: OMIM:203740
+xref: ORDO:31
+is_a: DOID:9252 ! amino acid metabolic disorder
+
+[Term]
+id: DOID:0081329
+name: glycogen storage disease I
+namespace: disease_ontology
+def: "A glycogen storage disease that is characterized by severe hypoglycemia and hepatomegaly caused by the accumulation of glycogen. Affected individuals exhibit growth retardation, delayed puberty, lactic acidemia, hyperlipidemia, hyperuricemia, and in adults a high incidence of hepatic adenomas." [url:https\://en.wikipedia.org/wiki/Glycogen_storage_disease_type_I, url:https\://www.ncbi.nlm.nih.gov/books/NBK1312/, url:https\://www.omim.org/entry/232200#33]
+subset: DO_rare_slim
+synonym: "deficiency of glucose-6-phosphatase" EXACT []
+synonym: "Glycogen storage disease 1" EXACT []
+synonym: "glycogen storage disease type I" EXACT []
+synonym: "glycogenosis type I" EXACT []
+synonym: "von Gierke disease" EXACT []
+synonym: "von Gierke's disease" EXACT []
+xref: ICD10CM:E74.01
+xref: MESH:D005953
+xref: NCI:C84733
+xref: ORDO:364
+xref: SNOMEDCT_US_2023_03_01:7265005
+xref: UMLS_CUI:C0017920
+
+[Term]
+id: DOID:0081333
+name: Wiedemann-Rautenstrauch syndrome
+namespace: disease_ontology
+def: "A progeroid syndrome that is characterized by intrauterine growth retardation, failure to thrive, short stature, a progeroid appearance, hypotonia, and variable mental impairment and that has_material_basis_in compound heterozygous mutation in the POLR3A gene on chromosome 10q22." [url:https\://medlineplus.gov/genetics/condition/wiedemann-rautenstrauch-syndrome/, url:https\://pubmed.ncbi.nlm.nih.gov/23696134/]
+subset: DO_rare_slim
+synonym: "Neonatal progeroid syndrome" EXACT []
+synonym: "PROGEROID SYNDROME, NEONATAL" EXACT []
+xref: GARD:330
+xref: OMIM:264090
+xref: ORDO:3455
+
+[Term]
+id: DOID:0081334
+name: Nestor-Guillermo progeria syndrome
+namespace: disease_ontology
+def: "A progeroid syndrome that is characterized by lipoatrophy, osteoporosis, and very severe osteolysis. Patients have no cardiovascular impairment, diabetes mellitus, or hypertriglyceridemia, but suffer profound skeletal abnormalities that affect their quality of life and that has_material_basis_in homozygous mutation in the BANF1 gene on chromosome 11q13. Onset is after 2 years of age." [url:https\://pubmed.ncbi.nlm.nih.gov/32783369/]
+subset: DO_rare_slim
+synonym: "Progeria syndrome, childhood-onset, with osteolysis" EXACT []
+xref: GARD:11008
+xref: OMIM:614008
+xref: ORDO:280576
+
+[Term]
+id: DOID:0081341
+name: congenital myopathy 5
+namespace: disease_ontology
+def: "A congenital myopathy that is characterized by the onset of muscle weakness in infancy manifest as neonatal hypotonia, delayed motor development, and often distal contractures and that has_material_basis_in homozygous or compound heterozygous mutation in the gene encoding titin (TTN) on chromosome 2q31." [url:https\://pubmed.ncbi.nlm.nih.gov/24105469/]
+subset: DO_rare_slim
+synonym: "congenital myopathy-5 with cardiomyopathy" EXACT []
+synonym: "Salih myopathy" EXACT []
+xref: OMIM:611705
+xref: ORDO:289377
+
+[Term]
+id: DOID:0081346
+name: congenital myopathy 14
+namespace: disease_ontology
+def: "A congenital myopathy that is characterized by onset of severe muscle weakness apparent at birth and sometimes in utero and that has_material_basis_in homozygous mutation in the MYL1 gene on chromosome 2q32. Affected infants have difficulty breathing independently and usually require mechanical ventilation for variable lengths of time." [url:https\://pubmed.ncbi.nlm.nih.gov/30215711/]
+subset: DO_rare_slim
+xref: OMIM:618414
+xref: ORDO:544602
+
+[Term]
+id: DOID:0081356
+name: spinal muscular atrophy, Jokela type
+namespace: disease_ontology
+def: "A spinal muscular atrophy that is characterized by adult-onset of muscle cramps and fasciculations affecting the proximal and distal muscles of the upper and lower limbs and that has_material_basis_in heterozygous mutation in the CHCHD10 gene on chromosome 22q11." [url:https\://pubmed.ncbi.nlm.nih.gov/36158221/, url:https\://www.ncbi.nlm.nih.gov/books/NBK304142/]
+subset: DO_rare_slim
+xref: OMIM:615048
+xref: ORDO:276435
+is_a: DOID:12377 ! spinal muscular atrophy
+
+[Term]
+id: DOID:0081357
+name: isolated mitochondrial myopathy
+namespace: disease_ontology
+def: "A mitochondrial myopathy that is characterized by onset of proximal lower limb weakness and exercise intolerance in the first decade of life and that has_material_basis_in heterozygous mutation in the CHCHD10 gene on chromosome 22q11." [url:https\://pubmed.ncbi.nlm.nih.gov/35700042/]
+subset: DO_rare_slim
+synonym: "Autosomal dominant mitochondrial myopathy with exercise intolerance" EXACT []
+xref: OMIM:616209
+xref: ORDO:457050
+
+[Term]
+id: DOID:0081358
+name: epidermolytic hyperkeratosis 1
+namespace: disease_ontology
+def: "An epidermolytic hyperkeratosis that is characterized in adulthood by warty flexural hyperkeratosis with fewer erosions and blisters and that usually presents at birth with erythema and blistering and that has_material_basis_in heterozygous mutation in the keratin-1 gene (KRT1) on chromosome 12q13." [url:https\://pubmed.ncbi.nlm.nih.gov/11531804/]
+subset: DO_rare_slim
+xref: OMIM:113800
+xref: ORDO:312
+is_a: DOID:4603 ! epidermolytic hyperkeratosis
+
+[Term]
+id: DOID:0081362
+name: Pierpont syndrome
+namespace: disease_ontology
+def: "An autosomal dominant intellectual developmental disorder that is characteried by distinctive facial characteristics, especially when smiling, plantar fat pads, and other limb anomalies and that has_material_basis_in heterozygous mutation in the TBL1XR1 gene on chromosome 3q26." [url:https\://pubmed.ncbi.nlm.nih.gov/26769062/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC8077337/]
+subset: DO_rare_slim
+synonym: "Plantar lipomatosis-facial dysmorphism-developmental delay syndrome" EXACT []
+synonym: "Plantar lipomatosis-unusual facies-developmental delay syndrome" EXACT []
+xref: OMIM:602342
+xref: ORDO:487825
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+
+[Term]
+id: DOID:0081363
+name: distal myopathy with rimmed vacuoles
+namespace: disease_ontology
+def: "A distal myopathy that is characterized by adult onset of muscle weakness affecting the distal upper and lower limbs, which may result in walking difficulties, as well as proximal weakness of the shoulder girdle muscles and that has_material_basis_in by heterozygous mutation in the SQSTM1 gene on chromosome 5q35." [url:https\://pubmed.ncbi.nlm.nih.gov/25114083/, url:https\://pubmed.ncbi.nlm.nih.gov/26208961/, url:https\://pubmed.ncbi.nlm.nih.gov/33125541/, url:https\://pubmed.ncbi.nlm.nih.gov/37188302/, url:https\://pubmed.ncbi.nlm.nih.gov/37205240/]
+subset: DO_rare_slim
+xref: OMIM:617158
+xref: ORDO:602
+is_a: DOID:11720 ! distal myopathy
+
+[Term]
+id: DOID:0081368
+name: Paget's disease of bone 5
+namespace: disease_ontology
+def: "A Paget's disease of bone that is characterized by short stature, progressive long bone deformities, fractures, vertebral collapse, skull enlargement, and hyperostosis with progressive deafness and that has_material_basis_in osteoprotegerin deficiency caused by homozygous or compound heterozygous mutation in the TNFRSF11B gene on chromosome 8q24." [url:https\://pubmed.ncbi.nlm.nih.gov/25108083/]
+subset: DO_rare_slim
+synonym: "Familial osteoectasia" EXACT []
+synonym: "Hereditary hyperphosphatasia" EXACT []
+synonym: "Hyperostosis corticalis deformans juvenilis" EXACT []
+synonym: "Juvenile Paget disease" EXACT []
+synonym: "Paget disease of bone-5" EXACT []
+xref: GARD:2831
+xref: OMIM:239000
+xref: ORDO:2801
+is_a: DOID:5408 ! Paget's disease of bone
+
+[Term]
+id: DOID:0081370
+name: LADD syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by defects in the tear-producing lacrimal system, ear problems, dental abnormalities, and deformities of the fingers." [url:https\://medlineplus.gov/genetics/condition/lacrimo-auriculo-dento-digital-syndrome/]
+subset: DO_rare_slim
+synonym: "Lacrimo-auriculo-dento-digital (LADD) syndrome" EXACT []
+synonym: "lacrimoauriculodentodigital syndrome" EXACT []
+xref: OMIM:PS149730
+xref: ORDO:2363
+
+[Term]
+id: DOID:0081377
+name: COX deficiency, benign infantile mitochondrial myopathy
+namespace: disease_ontology
+def: "A cytochrome-c oxidase deficiency disease characterized by localization to tissues of the skeletal muscles." [url:https\://rarediseases.org/rare-diseases/cytochrome-c-oxidase-deficiency/]
+subset: DO_rare_slim
+synonym: "Isolated cytochrome C oxidase deficiency" EXACT []
+xref: GARD:48
+xref: ORDO:254905
+xref: UMLS_CUI:C5779825
+is_a: DOID:3762 ! cytochrome-c oxidase deficiency disease
+
+[Term]
+id: DOID:0081383
+name: ataxia-oculomotor apraxia type 4
+namespace: disease_ontology
+def: "An autosomal recessive cerebellar ataxia that is characterized by onset of dystonia and ataxia in the first decade and that has_material_basis_in homozygous or compound heterozygous mutation in the PNKP gene on chromosome 19q13." [url:https\://pubmed.ncbi.nlm.nih.gov/25728773/]
+subset: DO_rare_slim
+xref: GARD:13111
+xref: OMIM:616267
+xref: ORDO:459033
+is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
+
+[Term]
+id: DOID:0081384
+name: ataxia-telangiectasia-like disorder-1
+namespace: disease_ontology
+def: "An autosomal recessive cerebellar ataxia that is characterized clinically by progressive cerebellar degeneration resulting in ataxia and oculomotor apraxia and that has_material_basis_in homozygous or compound heterozygous mutation in the MRE11A gene (MRE11) on chromosome 11q21." [url:https\://pubmed.ncbi.nlm.nih.gov/10612394/]
+subset: DO_rare_slim
+xref: OMIM:604391
+xref: ORDO:251347
+is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
+
+[Term]
+id: DOID:0081385
+name: ataxia-telangiectasia-like disorder-2
+namespace: disease_ontology
+def: "An autosomal recessive cerebellar ataxia that is characterized by developmental delay, ataxia, and sensorineural hearing loss and that has_material_basis_in homozygous mutation in the PCNA gene on chromosome 20p12." [url:https\://pubmed.ncbi.nlm.nih.gov/24911150/]
+subset: DO_rare_slim
+synonym: "PCNA-related progressive neurodegenerative photosensitivity syndrome" EXACT []
+xref: OMIM:615919
+xref: ORDO:438134
+is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
+
+[Term]
+id: DOID:0081386
+name: TANGO2-related metabolic encephalopathy and arrythmias
+namespace: disease_ontology
+def: "A syndrome that is characterized by episodic metabolic degeneration affecting skeletal muscle, cardiac muscle, and the nervous system and that has_material_basis_in homozygous or compound heterozygous mutation in the TANGO2 gene on chromosome 22q11." [url:https\://pubmed.ncbi.nlm.nih.gov/26805782/, url:https\://www.ncbi.nlm.nih.gov/books/NBK476443/]
+subset: DO_rare_slim
+synonym: "metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration" EXACT []
+synonym: "TANGO2 deficiency" EXACT []
+xref: GARD:13423
+xref: OMIM:616878
+xref: ORDO:480864
+
+[Term]
+id: DOID:0081388
+name: primary progressive aphasia
+namespace: disease_ontology
+def: "A frontotemporal dementia that characterized by the progressive onset of language impairments, and gradual deterioration of these abilities over time, associated with atrophy of the language network of the brain, including frontal, temporal, and parietal regions of the left hemisphere. It is caused by a loss of tissue (atrophy) in the area of the brain that is responsible for producing language." [url:https\://pubmed.ncbi.nlm.nih.gov/21325651/, url:https\://pubmed.ncbi.nlm.nih.gov/29392464/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6993834/]
+subset: DO_rare_slim
+xref: GARD:8541
+xref: ORDO:95432
+is_a: DOID:9255 ! frontotemporal dementia
+
+[Term]
+id: DOID:0081389
+name: logopenic progressive aphasia
+namespace: disease_ontology
+def: "A primary progressive aphasia that is characterized by language disturbance, including difficulty making or understanding speech. It is a type of primary progressive aphasia. Affected individuals have slow, hesitant speech due to difficulty retrieving the correct words, names, or numbers." [url:https\://pubmed.ncbi.nlm.nih.gov/21325651/]
+subset: DO_rare_slim
+synonym: "Logopenic primary progressive aphasia" EXACT []
+synonym: "logopenic variant PPA" EXACT []
+xref: GARD:10791
+xref: ORDO:250831
+is_a: DOID:0081388 ! primary progressive aphasia
+
+[Term]
+id: DOID:0081390
+name: progressive non-fluent aphasia
+namespace: disease_ontology
+def: "A primary progressive aphasia that is characterized by agrammatism, laborious speech, alexia, and agraphia, frequently accompanied by apraxia of speech." [url:https\://pubmed.ncbi.nlm.nih.gov/32047619/]
+subset: DO_rare_slim
+synonym: "Agramatic variant of primary progressive aphasia" EXACT []
+synonym: "nonfluent agrammatic PPA" EXACT []
+xref: GARD:10793
+xref: ORDO:100070
+is_a: DOID:0081388 ! primary progressive aphasia
+
+[Term]
+id: DOID:0081391
+name: semantic dementia
+namespace: disease_ontology
+def: "A primary progressive aphasia that is characterized by the progressive, amodal and profound loss of semantic knowledge and behavioral abnormalities, attributable to the degeneration of the anterior temporal lobes." [url:https\://pubmed.ncbi.nlm.nih.gov/28019640/]
+subset: DO_rare_slim
+synonym: "semantic variant of primary progressive aphasia" EXACT []
+synonym: "semantic variant PPA" EXACT []
+xref: GARD:10792
+xref: ORDO:100069
+is_a: DOID:0081388 ! primary progressive aphasia
+
+[Term]
+id: DOID:0081392
+name: corticobasal degeneration syndrome
+namespace: disease_ontology
+def: "A frontotemporal dementia that characterized by the loss of cognitive functions such as the ability to think, remember, or reason to the point that it interferes with a person's daily life and activities." [url:https\://pubmed.ncbi.nlm.nih.gov/34316603/]
+subset: DO_rare_slim
+xref: ORDO:454887
+is_a: DOID:9255 ! frontotemporal dementia
+
+[Term]
+id: DOID:0081394
+name: Caroli syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by the presence of associated congenital hepatic fibrosis and that is associated with autosomal recessive polycystic kidney disease." [url:https\://pubmed.ncbi.nlm.nih.gov/29643536/, url:https\://pubmed.ncbi.nlm.nih.gov/30020679/, url:https\://www.ncbi.nlm.nih.gov/books/NBK513307/]
+subset: DO_rare_slim
+xref: GARD:6002
 
 [Term]
 id: DOID:0090001
@@ -17123,6 +17758,7 @@ id: DOID:0090103
 name: Huntington's disease-like 1
 namespace: disease_ontology
 def: "A prion disease that is characterized by a phenocopy of Huntington disease (unwanted choreatic movements, behavioral and psychiatric disturbances and dementia) that has_material_basis_in autosomal dominant inheritance of 8 extra octapeptide repeats in the prion protein (PRNP) gene on chromosome 20p13." [url:https\://ghr.nlm.nih.gov/condition/huntington-disease-like-syndrome, url:https\://www.omim.org/entry/603218]
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 synonym: "autosomal dominant Huntington-like neurodegenerative disorder" EXACT []
 synonym: "early-onset prion disease with prominent psychiatric features" EXACT []
@@ -21132,9 +21768,9 @@ is_a: DOID:2476 ! hereditary spastic paraplegia
 
 [Term]
 id: DOID:0110817
-name: hereditary spastic paraplegia 72
+name: hereditary spastic paraplegia 72A
 namespace: disease_ontology
-def: "A hereditary spastic paraplegia that has_material_basis_in mutation in the REEP2 gene on chromosome 5q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24388663]
+def: "A hereditary spastic paraplegia that has_material_basis_in a heterozygous mutation in the REEP2 gene on chromosome 5q31.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24388663]
 subset: DO_rare_slim
 synonym: "autosomal spastic paraplegia type 72" EXACT []
 synonym: "SPG72" EXACT []
@@ -21516,6 +22152,22 @@ synonym: "HPLH4" EXACT []
 xref: GARD:9929
 xref: OMIM:603552
 is_a: DOID:0050120 ! hemophagocytic lymphohistiocytosis
+
+[Term]
+id: DOID:0110936
+name: nemaline myopathy 5A
+namespace: disease_ontology
+def: "A nemaline myopathy that has_material_basis_in autosomal recessive inheritance of a homozygous mutation in the TNNT1 gene on chromosome 19q13, with infantile onset." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10952871]
+subset: DO_rare_slim
+synonym: "Amish nemaline myopathy" EXACT []
+synonym: "ANM" EXACT []
+synonym: "NEM5" EXACT []
+synonym: "nemaline myopathy 5, Amish type" EXACT []
+xref: GARD:8334
+xref: MESH:C538397
+xref: OMIM:605355
+xref: ORDO:98902
+is_a: DOID:3191 ! nemaline myopathy
 
 [Term]
 id: DOID:0110937
@@ -22547,6 +23199,7 @@ synonym: "familial PCCD" EXACT []
 synonym: "familial progressive heart block" EXACT []
 synonym: "hereditary bundle branch defect" EXACT []
 synonym: "PFHB" EXACT []
+xref: OMIM:115080
 xref: OMIM:PS113900
 xref: ORDO:871
 
@@ -22569,7 +23222,7 @@ is_a: DOID:2861 ! congenital nonspherocytic hemolytic anemia
 id: DOID:0111078
 name: tibial muscular dystrophy
 namespace: disease_ontology
-def: "A distal muscular dystrophy characterized by autosomal dominant inheritance of late-onset muscular dystrophy beginning in the anterior comparment of the legs that has_material_basis_in heterozygous mutation in the TTN gene on chromosome 2q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12145747, url:https\://www.ncbi.nlm.nih.gov/pubmed/196233, url:https\://www.ncbi.nlm.nih.gov/pubmed/8503797]
+def: "A distal myopathy that is characterized by autosomal dominant inheritance of late-onset muscular dystrophy beginning in the anterior comparment of the legs that has_material_basis_in heterozygous mutation in the gene encoding the giant skeletal muscle protein titin (TTN) on chromosome 2q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12145747, url:https\://www.ncbi.nlm.nih.gov/pubmed/196233, url:https\://www.ncbi.nlm.nih.gov/pubmed/8503797]
 subset: DO_rare_slim
 synonym: "distal titinopathy" EXACT []
 synonym: "Finnish tibial muscular dystrophy" EXACT []
@@ -23014,6 +23667,7 @@ subset: DO_rare_slim
 synonym: "French Canadian type COX deficiency" EXACT []
 synonym: "French Canadian type cytochrome c oxidase deficiency" EXACT []
 synonym: "French Canadian type Leigh syndrome" EXACT []
+synonym: "mitochondrial complex IV deficiency nuclear type 5" EXACT []
 synonym: "Saguenay Lac saint Jean type COX deficiency" EXACT []
 synonym: "Saguenay Lac saint Jean type Leigh syndrome" EXACT []
 xref: GARD:8370
@@ -23022,7 +23676,7 @@ xref: OMIM:220111
 xref: ORDO:70472
 xref: SNOMEDCT_US_2023_03_01:718219002
 xref: UMLS_CUI:C1857355
-is_a: DOID:700 ! mitochondrial metabolism disease
+is_a: DOID:3762 ! cytochrome-c oxidase deficiency disease
 
 [Term]
 id: DOID:0111181
@@ -23064,10 +23718,11 @@ is_a: DOID:0060178 ! familial hemiplegic migraine
 
 [Term]
 id: DOID:0111187
-name: distal muscular dystrophy with anterior tibial onset
+name: distal myopathy with anterior tibial onset
 namespace: disease_ontology
-def: "A distal muscular dystrophy characterized by onset at 14-28 years of age starting first in the anterior tibial muscles and involving both upper and lower proximal muscles that has_material_basis_in homozygous or compound heterozygous mutation in DYSF on 2p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11198284, url:https\://www.ncbi.nlm.nih.gov/pubmed/9731526]
+def: "A distal myopathy that is characterized by onset at 14-28 years of age starting first in the anterior tibial muscles and involving both upper and lower proximal muscles that has_material_basis_in homozygous mutation in the gene encoding dysferlin (DYSF) on chromosome 2p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11198284, url:https\://www.ncbi.nlm.nih.gov/pubmed/9731526]
 subset: DO_rare_slim
+synonym: "distal muscular dystrophy with anterior tibial onset" EXACT []
 synonym: "DMAT" EXACT []
 xref: OMIM:606768
 xref: ORDO:178400
@@ -23098,11 +23753,11 @@ is_a: DOID:0080307 ! myofibrillar myopathy
 
 [Term]
 id: DOID:0111189
-name: distal muscular dystrophy 3
+name: distal myopathy 3
 namespace: disease_ontology
-def: "A distal muscular dystrophy that has significant linkage to 2 distinct regions on chromosomes 8p22-q11 and 12q13-q22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12847162, url:https\://www.ncbi.nlm.nih.gov/pubmed/15036327]
+def: "A distal myopathy that is characterized by adult onset of slowly progressive distal muscular weakness and atrophy affecting the upper and lower limbs, leading to difficulties using the hands and walking difficulties and that has significant linkage to 2 distinct regions on chromosomes 8p22-q11 and 12q13-q22 and that has_material_basis_in heterozygous mutation in the HNRNPA1 gene on chromosome 12q13." [url:https\://pubmed.ncbi.nlm.nih.gov/34722876/, url:https\://www.ncbi.nlm.nih.gov/pubmed/12847162, url:https\://www.ncbi.nlm.nih.gov/pubmed/15036327]
 subset: DO_rare_slim
-synonym: "distal myopathy 3" EXACT []
+synonym: "distal muscular dystrophy 3" EXACT []
 synonym: "distal myopathy type 3" EXACT []
 synonym: "MPD3" EXACT []
 xref: OMIM:610099
@@ -23111,12 +23766,12 @@ is_a: DOID:11720 ! distal myopathy
 
 [Term]
 id: DOID:0111190
-name: distal muscular dystrophy 4
+name: distal myopathy 4
 namespace: disease_ontology
-def: "A distal muscular dystrophy that has_material_basis_in heterozygous mutation in FLNC on 7q32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21620354]
+def: "A distal myopathy that has_material_basis_in heterozygous mutation in FLNC on 7q32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21620354]
 subset: DO_rare_slim
 synonym: "distal ABD-filaminopathy" EXACT []
-synonym: "distal myopathy 4" EXACT []
+synonym: "distal muscular dystrophy 4" EXACT []
 synonym: "distal myopathy with posterior leg and anterior hand involvement" EXACT []
 synonym: "MPD4" EXACT []
 xref: OMIM:614065
@@ -23125,10 +23780,11 @@ is_a: DOID:11720 ! distal myopathy
 
 [Term]
 id: DOID:0111191
-name: distal muscular dystrophy Tateyama type
+name: distal myopathy Tateyama type
 namespace: disease_ontology
-def: "A distal muscular dystrophy that has_material_basis_in heterozygous mutation in CAV3 on 3p25." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11805270]
+def: "A distal myopathy that has_material_basis_in heterozygous mutation in the caveolin-3 gene (CAV3) on chromosome 3p25." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11805270]
 subset: DO_rare_slim
+synonym: "distal muscular dystrophy Tateyama type" EXACT []
 xref: OMIM:614321
 xref: ORDO:488650
 is_a: DOID:11720 ! distal myopathy
@@ -23534,6 +24190,7 @@ xref: OMIM:101000
 xref: ORDO:637
 xref: SNOMEDCT_US_2023_03_01:92503002
 xref: UMLS_CUI:C0027832
+is_a: DOID:3204 ! schwannomatosis
 property_value: exactMatch "GARD:7193" xsd:string
 property_value: exactMatch "ICD10CM:Q85.02" xsd:string
 property_value: exactMatch "ICD9CM:237.72" xsd:string
@@ -29335,7 +29992,7 @@ xref: ORDO:169100
 id: DOID:0111970
 name: immunodeficiency 10
 namespace: disease_ontology
-def: "A T cell and NK cell immunodeficiency characterized by onset in childhood of recurrent infections due to defective T- and NK-cell function that has_material_basis_in homozygous or compound heterozygous mutation in the STIM1 gene on chromosome 11p15.4." [url:https\://pubmed.ncbi.nlm.nih.gov/26560041/]
+def: "A T cell and NK cell immunodeficiency characterized by onset in childhood of recurrent infections due to defective T- and NK-cell function that has_material_basis_in homozygous mutation in the STIM1 gene on chromosome 11p15.4." [url:https\://pubmed.ncbi.nlm.nih.gov/26560041/]
 subset: DO_rare_slim
 synonym: "CID due to STIM1 deficiency" EXACT []
 synonym: "combined immunodeficiency due to STIM1 deficiency" EXACT []
@@ -29351,7 +30008,7 @@ xref: UMLS_CUI:C2748557
 id: DOID:0111976
 name: immunodeficiency 9
 namespace: disease_ontology
-def: "A T cell deficiency characterized by early onset of recurrent infections due to defective T-cell activation, ectodermal dysplasia, and congenital myopathy that has_material_basis_in homozygous or compound heterozygous mutation in the ORAI1 gene on chromosome 12q24.31." [url:https\://pubmed.ncbi.nlm.nih.gov/16582901/, url:https\://pubmed.ncbi.nlm.nih.gov/20004786/]
+def: "A T cell deficiency characterized by early onset of recurrent infections due to defective T-cell activation, ectodermal dysplasia, and congenital myopathy that has_material_basis_in homozygous or compound heterozygous mutation in the ORAI1 gene, which encodes a subunit of the plasma membrane calcium channel CRAC, on chromosome 12q24.31." [url:https\://pubmed.ncbi.nlm.nih.gov/16582901/, url:https\://pubmed.ncbi.nlm.nih.gov/20004786/]
 subset: DO_rare_slim
 synonym: "CID due to ORAI1 deficiency" EXACT []
 synonym: "combined immunodeficiency due to ORAI1 deficiency" EXACT []
@@ -33813,6 +34470,7 @@ synonym: "Miyoshi muscular dystrophy" EXACT []
 xref: ICD10CM:G71.09
 xref: MESH:D049310
 xref: NCI:C84675
+xref: OMIM:PS160500
 xref: ORDO:399096
 xref: ORDO:5448
 xref: ORDO:59135
@@ -34108,6 +34766,7 @@ id: DOID:11949
 name: Creutzfeldt-Jakob disease
 namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -34543,22 +35202,15 @@ xref: UMLS_CUI:C0009447
 id: DOID:12185
 name: otosclerosis
 namespace: disease_ontology
-def: "An otitis interna characterized by an abnormal bone growth in the middle ear." [url:http\://en.wikipedia.org/wiki/Otosclerosis, url:http\://www.merckmanuals.com/professional/ear_nose_and_throat_disorders/middle_ear_and_tympanic_membrane_disorders/otosclerosis.html?qt=otosclerosis&alt=sh]
-comment: Xref MGI.
+def: "An otitis interna characterized by isolated endochondral bone sclerosis of the labyrinthine capsule." [url:http\://en.wikipedia.org/wiki/Otosclerosis, url:http\://www.merckmanuals.com/professional/ear_nose_and_throat_disorders/middle_ear_and_tympanic_membrane_disorders/otosclerosis.html?qt=otosclerosis&alt=sh]
+comment: Xref MGI, ICD10 code updated to H80.
 subset: DO_rare_slim
 xref: EFO:0004213
 xref: ICD10CM:H80.80
 xref: ICD9CM:387.8
-xref: OMIM:166800
-xref: OMIM:605727
-xref: OMIM:608244
-xref: OMIM:608484
-xref: OMIM:611571
-xref: OMIM:611572
-xref: OMIM:612096
-xref: OMIM:615589
+xref: OMIM:PS166800
 xref: ORDO:2794
-xref: SNOMEDCT_US_2023_03_01:194382008
+xref: SNOMEDCT_US_2023_11_01:11543004
 xref: UMLS_CUI:C0029696
 property_value: exactMatch "MESH:D010040" xsd:string
 
@@ -35986,7 +36638,7 @@ is_a: DOID:10591 ! pre-eclampsia
 id: DOID:13137
 name: Werdnig-Hoffmann disease
 namespace: disease_ontology
-def: "A childhood spinal muscular atrophy that is a severe form and is characterized by muscle weakness onset from birth to six months of age, the inability to sit unassisted." [url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=10700541]
+def: "A childhood spinal muscular atrophy that is a severe form and is characterized by muscle weakness onset from birth to six months of age, the inability to sit unassisted and that has_material_basis_in a mutation or deletion in the telomeric copy of the SMN gene, known as SMN1, on chromosome 5q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=10700541]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -40571,6 +41223,23 @@ xref: NCI:C6934
 xref: SNOMEDCT_US_2021_09_01:128919000
 
 [Term]
+id: DOID:2436
+name: glomangioma
+namespace: disease_ontology
+def: "A benign perivascular tumor that is a morphologic variant of the glomus tumor characterized by the presence of dilated veins, surrounded by small clusters of glomus cells. Glomangiomas are most often present in patients with multiple lesions." [url:https\://pubmed.ncbi.nlm.nih.gov/21163162/]
+subset: DO_cancer_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Glomuvenous Malformation" EXACT []
+xref: ICDO:8712/0
+xref: MESH:D005918
+xref: NCI:C4222
+xref: OMIM:138000
+xref: ORDO:83454
+xref: SNOMEDCT_US_2023_03_01:7429002
+xref: UMLS_CUI:C0334421
+
+[Term]
 id: DOID:2449
 name: acromegaly
 namespace: disease_ontology
@@ -41145,6 +41814,17 @@ xref: OMIM:232600
 xref: ORDO:368
 xref: SNOMEDCT_US_2023_03_01:55912009
 xref: UMLS_CUI:C0017924
+
+[Term]
+id: DOID:2749
+name: glycogen storage disease Ia
+namespace: disease_ontology
+def: "A glycogen storage disease I that has_material_basis_in homozygous or compound heterozygous mutation in the G6PC gene, which encodes glucose-6-phosphatase (G6Pase), on chromosome 17q21." [url:http\://en.wikipedia.org/wiki/Glycogen_storage_disease_type_I, url:https\://pubmed.ncbi.nlm.nih.gov/8211187/]
+subset: DO_rare_slim
+xref: GARD:7864
+xref: OMIM:232200
+xref: ORDO:79258
+is_a: DOID:0081329 ! glycogen storage disease I
 
 [Term]
 id: DOID:2750
@@ -42089,6 +42769,38 @@ xref: SNOMEDCT_US_2023_03_01:75072002
 xref: UMLS_CUI:C0206157
 
 [Term]
+id: DOID:3204
+name: schwannomatosis
+namespace: disease_ontology
+def: "A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors." [url:https\://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html, url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
+subset: DO_cancer_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "neurilemmomatosis" EXACT []
+synonym: "neurinomatosis" EXACT []
+synonym: "SWN" EXACT []
+xref: ICD10CM:Q85.03
+xref: ICD9CM:237.73
+xref: ICDO:9560/1
+xref: MESH:C536641
+xref: NCI:C6557
+xref: OMIM:PS162091
+xref: ORDO:93921
+xref: SNOMEDCT_US_2023_03_01:781641005
+xref: UMLS_CUI:C1335929
+property_value: broadMatch "ORDO:634518" xsd:string
+property_value: exactMatch "ICD10CM:Q85.03" xsd:string
+property_value: exactMatch "ICD9CM:237.73" xsd:string
+property_value: exactMatch "ICDO:9560/1" xsd:string
+property_value: exactMatch "MESH:C536641" xsd:string
+property_value: exactMatch "NCI:C6557" xsd:string
+property_value: exactMatch "OMIM:PS162091" xsd:string
+property_value: exactMatch "ORDO:93921" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:781641005" xsd:string
+property_value: exactMatch "UMLS_CUI:C1335929" xsd:string
+property_value: narrowMatch "ORDO:634492" xsd:string
+
+[Term]
 id: DOID:3209
 name: junctional epidermolysis bullosa
 namespace: disease_ontology
@@ -42244,6 +42956,20 @@ xref: OMIM:186700
 xref: ORDO:3280
 xref: SNOMEDCT_US_2023_03_01:155020007
 xref: UMLS_CUI:C0039144
+
+[Term]
+id: DOID:3282
+name: thymoma type B
+namespace: disease_ontology
+def: "A thymoma that is an epithelial neoplasm arising from the thymus. It may be associated with myasthenia gravis, pure red cell aplasia, and hypogammaglobulinemia." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC9964105/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "dendritic cell thymoma" EXACT []
+synonym: "epithelioid Thymoma" EXACT []
+xref: NCI:C7114
+xref: ORDO:263317
+xref: SNOMEDCT_US_2023_03_01:1144924007
+xref: UMLS_CUI:C1328042
 
 [Term]
 id: DOID:3292
@@ -43115,7 +43841,7 @@ xref: OMIM:256000
 xref: ORDO:506
 xref: SNOMEDCT_US_2023_03_01:29570005
 xref: UMLS_CUI:C0023264
-is_a: DOID:700 ! mitochondrial metabolism disease
+is_a: DOID:3762 ! cytochrome-c oxidase deficiency disease
 
 [Term]
 id: DOID:3663
@@ -43218,6 +43944,24 @@ xref: NCI:C99025
 xref: ORDO:745
 xref: SNOMEDCT_US_2023_03_01:76407009
 xref: UMLS_CUI:C0398625
+
+[Term]
+id: DOID:3762
+name: cytochrome-c oxidase deficiency disease
+namespace: disease_ontology
+def: "A mitochondrial metabolism disease that is characterized by deficiency of cytochrome c oxidase, myopathy, hepatomegaly, hypertrophic cardiomyopathy, lactic acidosis, and Leigh syndrome, and is caused by mutations related to oxidative phosphorylation." [url:https\://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders, url:https\://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/26846578]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_FlyBase_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "MITOCHONDRIAL COMPLEX IV DEFICIENCY" EXACT []
+xref: GARD:48
+xref: MESH:D030401
+xref: NCI:C98910
+xref: OMIM:PS220110
+xref: SNOMEDCT_US_2023_03_01:237991006
+xref: UMLS_CUI:C0268237
+is_a: DOID:700 ! mitochondrial metabolism disease
 
 [Term]
 id: DOID:3764
@@ -44009,6 +44753,7 @@ namespace: disease_ontology
 def: "A prion disease characterized by adult onset of memory loss, dementia, ataxia, and pathologic deposition of amyloid-like plaques in the brain." [url:http\://en.wikipedia.org/wiki/Gerstmann-Str%C3%A4ussler-Scheinker_syndrome, url:http\://en.wikipedia.org/wiki/Gerstmann-straussler-scheinker_disease, url:http\://www.cdc.gov/ncidod/dvrd/prions/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Gerstmann-Straussler-Scheinker disease" EXACT []
@@ -46437,6 +47182,7 @@ xref: UMLS_CUI:C1370507
 id: DOID:648
 name: kuru
 namespace: disease_ontology
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 synonym: "kuru encephalopathy" EXACT []
 xref: GARD:7617

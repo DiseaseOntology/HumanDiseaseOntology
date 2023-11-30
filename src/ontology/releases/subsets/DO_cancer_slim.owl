@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-10-21/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-11-30/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -1318,8 +1318,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050925 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050925">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3119"/>
-        <obo:IAO_0000115>A small intestine cancer that has_material_basis_in cells of the neuroendocrine system.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_169"/>
+        <obo:IAO_0000115>A neuroendocrine tumor that has_material_basis_in cells of the neuroendocrine system and that is located in the small intestine.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-10-21T12:58:08Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>intestinal carcinoid tumour</oboInOwl:hasBroadSynonym>
@@ -1332,7 +1332,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050925"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A small intestine cancer that has_material_basis_in cells of the neuroendocrine system.</owl:annotatedTarget>
+        <owl:annotatedTarget>A neuroendocrine tumor that has_material_basis_in cells of the neuroendocrine system and that is located in the small intestine.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Carcinoid</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -7845,17 +7845,28 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2436 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2436">
+        <obo:IAO_0000115>A benign perivascular tumor that is a morphologic variant of the glomus tumor characterized by the presence of dilated veins, surrounded by small clusters of glomus cells. Glomangiomas are most often present in patients with multiple lesions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:8712/0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D005918</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4222</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIM:138000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:83454</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:7429002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0334421</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Glomuvenous Malformation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:2436</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>glomangioma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2436"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A benign perivascular tumor that is a morphologic variant of the glomus tumor characterized by the presence of dilated veins, surrounded by small clusters of glomus cells. Glomangiomas are most often present in patients with multiple lesions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/21163162/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -8249,14 +8260,15 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2640 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2640">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_2394"/>
-        <obo:IAO_0000115>An ovarian germ cell monodermal and highly specialized teratoma that is composed either exclusively or predominantly of thyroid tissue.</obo:IAO_0000115>
+        <obo:IAO_0000115>An ovarian benign neoplasm that is composed either exclusively or predominantly of thyroid tissue.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>DOID:5209</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICDO:9090/0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D013330</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C7468</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:24327009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0038478</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>benign struma ovarii</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>DOID:2640</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
@@ -8265,7 +8277,9 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2640"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An ovarian germ cell monodermal and highly specialized teratoma that is composed either exclusively or predominantly of thyroid tissue.</owl:annotatedTarget>
+        <owl:annotatedTarget>An ovarian benign neoplasm that is composed either exclusively or predominantly of thyroid tissue.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/25640097</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/26374222</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9571,6 +9585,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3204</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>schwannomatosis</rdfs:label>
         <skos:broadMatch>ORDO:634518</skos:broadMatch>

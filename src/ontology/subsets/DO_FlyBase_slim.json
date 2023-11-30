@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-10-21/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-11-30/subsets/DO_FlyBase_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050155",
@@ -1473,7 +1473,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood.",
+          "val" : "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -5512,7 +5512,7 @@
           "xrefs" : [ "url:https://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders", "url:https://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency", "url:https://www.ncbi.nlm.nih.gov/pubmed/26846578" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "MITOCHONDRIAL COMPLEX IV DEFICIENCY"
@@ -5762,7 +5762,7 @@
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Gerstmann-Str%C3%A4ussler-Scheinker_syndrome", "url:http://en.wikipedia.org/wiki/Gerstmann-straussler-scheinker_disease", "url:http://www.cdc.gov/ncidod/dvrd/prions/" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Gerstmann-Straussler-Scheinker disease"
@@ -6256,7 +6256,7 @@
           "val" : "A brain disease that is characterized by brain damage resulting from the abnormal folding, clumping and accumulation of cellular proteins in the brain induced by prion proteins.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Prion", "url:http://www.cdc.gov/ncidod/dvrd/prions/" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Prion disease pathway"
@@ -6960,12 +6960,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_9452",
-      "lbl" : "fatty liver disease",
+      "lbl" : "steatotic liver disease",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in liver cells via the process of steatosis.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Fatty_liver" ]
+          "val" : "A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in at least 5% of hepatocytes.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/27099587/", "url:https://pubmed.ncbi.nlm.nih.gov/37364816/" ]
         },
         "comments" : [ "PRISM." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
@@ -6974,13 +6974,25 @@
           "val" : "Fatty change of liver"
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "SLD"
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "Steatosis of liver"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "alcoholic fatty liver"
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "fatty liver disease"
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "hepatic lipidosis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "hepatic steatosis"
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "cryptogenic steatotic liver disease"
         } ],
         "xrefs" : [ {
           "val" : "ICD10CM:K70.0"

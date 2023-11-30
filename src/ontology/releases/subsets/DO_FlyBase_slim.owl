@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-10-21/subsets/DO_FlyBase_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-11-30/subsets/DO_FlyBase_slim.owl"/>
     </owl:Ontology>
     
 
@@ -72,6 +72,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
     
 
 
@@ -1482,7 +1488,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_12377"/>
-        <obo:IAO_0000115>A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood.</obo:IAO_0000115>
+        <obo:IAO_0000115>A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene.</obo:IAO_0000115>
         <oboInOwl:created_by>lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-29T01:15:14Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>GARD:7674</oboInOwl:hasDbXref>
@@ -1502,7 +1508,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060160"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood.</owl:annotatedTarget>
+        <owl:annotatedTarget>A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4732,6 +4738,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3762</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment>OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label>cytochrome-c oxidase deficiency disease</rdfs:label>
@@ -4945,6 +4952,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:4249</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment>OMIM mapping confirmed by DO. [SN].</rdfs:comment>
@@ -5359,6 +5367,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:649</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>prion disease</rdfs:label>
     </owl:Class>
@@ -5920,7 +5929,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9452">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3211"/>
-        <obo:IAO_0000115>A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in liver cells via the process of steatosis.</obo:IAO_0000115>
+        <obo:IAO_0000115>A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in at least 5% of hepatocytes.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:9451</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:K70.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:571.0</oboInOwl:hasDbXref>
@@ -5932,21 +5941,26 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasDbXref>UMLS_CUI:C0015695</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0015696</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Fatty change of liver</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SLD</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Steatosis of liver</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">alcoholic fatty liver</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fatty liver disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">hepatic lipidosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hepatic steatosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>cryptogenic steatotic liver disease</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:9452</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
         <rdfs:comment>PRISM.</rdfs:comment>
-        <rdfs:label>fatty liver disease</rdfs:label>
+        <rdfs:label>steatotic liver disease</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_9452"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in liver cells via the process of steatosis.</owl:annotatedTarget>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Fatty_liver</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A lipid storage disease characterized by the accumulation of large vacuoles of triglyceride fat in at least 5% of hepatocytes.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/27099587/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/37364816/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

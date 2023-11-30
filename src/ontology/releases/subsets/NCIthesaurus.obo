@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-10-21/subsets/NCIthesaurus.obo
-date: 21:10:2023 13:17
+data-version: doid/releases/2023-11-30/subsets/NCIthesaurus.obo
+date: 30:11:2023 10:18
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -431,6 +431,7 @@ name: fatal familial insomnia
 namespace: disease_ontology
 def: "A prion disease that is characterized by insomnia, hallucinations, dementia and death, located_in the brain." [url:https\://en.wikipedia.org/wiki/Fatal_familial_insomnia]
 comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:6429
@@ -1042,7 +1043,7 @@ is_a: DOID:37 ! skin disease
 id: DOID:0050475
 name: Weill-Marchesani syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by short stature, bachycephaly and other facial abnormalities, brachydactyly, joint stiffness and distinctive ocular abnormalities." [url:http\://en.wikipedia.org/wiki/Weill-Marchesani_syndrome, url:http\://ghr.nlm.nih.gov/condition/weill-marchesani-syndrome]
+def: "A syndrome characterized by short stature, brachycephaly and other facial abnormalities, brachydactyly, joint stiffness and distinctive ocular abnormalities." [url:http\://en.wikipedia.org/wiki/Weill-Marchesani_syndrome, url:http\://ghr.nlm.nih.gov/condition/weill-marchesani-syndrome]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -1848,7 +1849,7 @@ creation_date: 2011-08-22T11:23:09Z
 id: DOID:0060160
 name: childhood spinal muscular atrophy
 namespace: disease_ontology
-def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
+def: "A spinal muscular atrophy that is associated with the survival of motor neuron protein in childhood and that has_material_basis_in variation in the SMN gene." [url:http\://en.wikipedia.org/wiki/Survival_motor_neuron_spinal_muscular_atrophy]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -10782,6 +10783,7 @@ synonym: "Miyoshi muscular dystrophy" EXACT []
 xref: ICD10CM:G71.09
 xref: MESH:D049310
 xref: NCI:C84675
+xref: OMIM:PS160500
 xref: ORDO:399096
 xref: ORDO:5448
 xref: ORDO:59135
@@ -11435,6 +11437,7 @@ id: DOID:11949
 name: Creutzfeldt-Jakob disease
 namespace: disease_ontology
 comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -12640,7 +12643,7 @@ id: DOID:12376
 name: juvenile spinal muscular atrophy
 namespace: disease_ontology
 alt_id: DOID:13161
-def: "A childhood spinal muscular atrophy that has age of onset after 18 months and is characterized by muscle weakness after early childhood and the ability to stand and walk." [url:https\://ghr.nlm.nih.gov/condition/spinal-muscular-atrophy]
+def: "A childhood spinal muscular atrophy that has age of onset after 18 months and is characterized by muscle weakness after early childhood and the ability to stand and walk and that has_material_basis_in homozygous or compound heterozygous mutation in the SMN1 gene on chromosome 5q13." [url:https\://ghr.nlm.nih.gov/condition/spinal-muscular-atrophy]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Kugelberg-Welander disease" EXACT []
@@ -14745,7 +14748,7 @@ is_a: DOID:10591 ! pre-eclampsia
 id: DOID:13137
 name: Werdnig-Hoffmann disease
 namespace: disease_ontology
-def: "A childhood spinal muscular atrophy that is a severe form and is characterized by muscle weakness onset from birth to six months of age, the inability to sit unassisted." [url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=10700541]
+def: "A childhood spinal muscular atrophy that is a severe form and is characterized by muscle weakness onset from birth to six months of age, the inability to sit unassisted and that has_material_basis_in a mutation or deletion in the telomeric copy of the SMN gene, known as SMN1, on chromosome 5q13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=10700541]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -24756,11 +24759,16 @@ is_a: DOID:2436 ! glomangioma
 id: DOID:2436
 name: glomangioma
 namespace: disease_ontology
+def: "A benign perivascular tumor that is a morphologic variant of the glomus tumor characterized by the presence of dilated veins, surrounded by small clusters of glomus cells. Glomangiomas are most often present in patients with multiple lesions." [url:https\://pubmed.ncbi.nlm.nih.gov/21163162/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "Glomuvenous Malformation" EXACT []
 xref: ICDO:8712/0
 xref: MESH:D005918
 xref: NCI:C4222
+xref: OMIM:138000
+xref: ORDO:83454
 xref: SNOMEDCT_US_2023_03_01:7429002
 xref: UMLS_CUI:C0334421
 is_a: DOID:5238 ! benign perivascular tumor
@@ -25891,15 +25899,17 @@ is_a: DOID:3850 ! hemangiopericytic tumor
 id: DOID:2640
 name: struma ovarii
 namespace: disease_ontology
-def: "An ovarian germ cell monodermal and highly specialized teratoma that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26374222]
+alt_id: DOID:5209
+def: "An ovarian benign neoplasm that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25640097, url:https\://www.ncbi.nlm.nih.gov/pubmed/26374222]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "benign struma ovarii" RELATED []
 xref: ICDO:9090/0
 xref: MESH:D013330
 xref: NCI:C7468
 xref: SNOMEDCT_US_2023_03_01:24327009
 xref: UMLS_CUI:C0038478
-is_a: DOID:2641 ! ovarian germ cell monodermal and highly specialized teratoma
+is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:2641
@@ -29699,6 +29709,7 @@ name: schwannomatosis
 namespace: disease_ontology
 def: "A RASopathy characterized by the development of schwannomas or hybrid nerve sheath tumors." [url:https\://health.ucdavis.edu/mindinstitute/clinic/genomic-medicine/RASclinic.html, url:https\://pubmed.ncbi.nlm.nih.gov/35674741/]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "neurilemmomatosis" EXACT []
 synonym: "neurinomatosis" EXACT []
@@ -30273,6 +30284,7 @@ id: DOID:3282
 name: thymoma type B
 namespace: disease_ontology
 def: "A thymoma that is an epithelial neoplasm arising from the thymus. It may be associated with myasthenia gravis, pure red cell aplasia, and hypogammaglobulinemia." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC9964105/]
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "dendritic cell thymoma" EXACT []
 synonym: "epithelioid Thymoma" EXACT []
@@ -33634,6 +33646,7 @@ namespace: disease_ontology
 def: "A mitochondrial metabolism disease that is characterized by deficiency of cytochrome c oxidase, myopathy, hepatomegaly, hypertrophic cardiomyopathy, lactic acidosis, and Leigh syndrome, and is caused by mutations related to oxidative phosphorylation." [url:https\://en.wikipedia.org/wiki/Cytochrome_c_oxidase#Genetic_defects_and_disorders, url:https\://ghr.nlm.nih.gov/condition/cytochrome-c-oxidase-deficiency, url:https\://www.ncbi.nlm.nih.gov/pubmed/26846578]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "MITOCHONDRIAL COMPLEX IV DEFICIENCY" EXACT []
 xref: GARD:48
@@ -36514,6 +36527,7 @@ namespace: disease_ontology
 def: "A prion disease characterized by adult onset of memory loss, dementia, ataxia, and pathologic deposition of amyloid-like plaques in the brain." [url:http\://en.wikipedia.org/wiki/Gerstmann-Str%C3%A4ussler-Scheinker_syndrome, url:http\://en.wikipedia.org/wiki/Gerstmann-straussler-scheinker_disease, url:http\://www.cdc.gov/ncidod/dvrd/prions/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Gerstmann-Straussler-Scheinker disease" EXACT []
@@ -42468,16 +42482,7 @@ synonym: "Struma ovarii, malignant" EXACT []
 xref: NCI:C4291
 xref: SNOMEDCT_US_2023_03_01:18854008
 xref: UMLS_CUI:C0334525
-is_a: DOID:2640 ! struma ovarii
-
-[Term]
-id: DOID:5209
-name: benign struma ovarii
-namespace: disease_ontology
-def: "An ovarian benign neoplasm struma ovarii that is not cancerous and that is composed either exclusively or predominantly of thyroid tissue." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25640097]
-comment: Obsoleted xrefs (version): NCI:C40012 (29.08d), UMLS_CUI:C1511104 (2023AA).
-subset: NCIthesaurus
-is_a: DOID:4 ! disease
+is_a: DOID:2641 ! ovarian germ cell monodermal and highly specialized teratoma
 
 [Term]
 id: DOID:5212
@@ -44629,7 +44634,7 @@ is_a: DOID:1542 ! head and neck carcinoma
 id: DOID:5521
 name: keratinizing squamous cell carcinoma
 namespace: disease_ontology
-def: "A squamous cell carcinoma that presents as single, isolated cells with bizzare cytoplasmic shapes, intense cytoplasmic eosinophilia, and intensely hyperchromatic, angular nuclei in a background of necrotic and keratinous debris." [url:http\://books.google.com/books?id=TQju7e__pRIC&pg=PA1132&lpg=PA1132&dq#v=onepage&q&f=false]
+def: "A squamous cell carcinoma that presents as single, isolated cells with bizarre cytoplasmic shapes, intense cytoplasmic eosinophilia, and intensely hyperchromatic, angular nuclei in a background of necrotic and keratinous debris." [url:http\://books.google.com/books?id=TQju7e__pRIC&pg=PA1132&lpg=PA1132&dq#v=onepage&q&f=false]
 subset: NCIthesaurus
 synonym: "keratinizing epidermoid carcinoma" EXACT []
 synonym: "squamous cell carcinoma, keratinizing" EXACT []
@@ -50021,6 +50026,7 @@ name: prion disease
 namespace: disease_ontology
 def: "A brain disease that is characterized by brain damage resulting from the abnormal folding, clumping and accumulation of cellular proteins in the brain induced by prion proteins." [url:http\://en.wikipedia.org/wiki/Prion, url:http\://www.cdc.gov/ncidod/dvrd/prions/]
 subset: DO_FlyBase_slim
+subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Prion disease pathway" EXACT []
 synonym: "prion induced disorder" EXACT []
@@ -57023,7 +57029,7 @@ is_a: DOID:4995 ! cervical adenomyoma
 id: DOID:8179
 name: cervical atypical polypoid adenomyoma
 namespace: disease_ontology
-def: "A cervical adenomyoma that is aumor of endometrium, lower uterine segment and endocervix and is characterized by atypical complex glands with squamous metaplasia mixed with myofibromatous stroma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23805464]
+def: "A cervical adenomyoma that is tumor of endometrium, lower uterine segment and endocervix and is characterized by atypical complex glands with squamous metaplasia mixed with myofibromatous stroma." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23805464]
 subset: NCIthesaurus
 xref: NCI:C40234
 xref: UMLS_CUI:C1516409
@@ -63823,6 +63829,7 @@ id: DOID:9909
 name: hordeolum
 namespace: disease_ontology
 def: "An eyelid disease that is characterized by an infection of the sebaceous glands at the base of the eyelashes. Styes are generally caused by a Staphylococcus aureus bacterial infection." [url:http\://en.wikipedia.org/wiki/Hordeolum]
+subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Boil of eyelid" EXACT []
 synonym: "Furuncle of eyelid" EXACT []

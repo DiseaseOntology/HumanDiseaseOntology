@@ -12,6 +12,19 @@
 
 ## 2023 Releases
 
+### [v2023-11-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-11-30)
+
+This release of the Human Disease Ontology includes 11,432 disease classes, 9,071 with textual definitions (79.3%). New diseases include mito complex 4 disease subtypes, Caroli syndrome, dopamine transporter deficiency syndromes, Zaki syndrome, chromosome 1p36.33 duplication syndrome, digenic diseases, and cerebellar ataxia disease subtypes. Revisions have been made to steatotic liver disease and NAFLD to match recent international consensus, dystal myopathies, and frontotemporal dementias.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2023-10-21...v2023-11-30
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-11-30/src/ontology/doid-merged.obo) | |
+
 ### [v2023-10-21](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-10-21)
 
 This DO release includes 11,386 diseases, 8,276 SubClassOf and 726 EQ axioms. This release includes the addition of 13 disease terms, 19  definitions, 25 SubClassOf axioms and 1 EQ axiom. New and revised content includes: added synonyms for autosomal recessive spinocerebellar ataxia; the addition of autosomal recessive spinocerebellar ataxia, amyotrophic lateral sclerosis subtypes; revised classifications for schwannomatosis and neurofibromatosis, rhabdomyosarcoma,;the addition of new disease terms: Legius syndrome and Watson syndrome, diphthamide deficiency syndrome and subtypes, renal medullary carcinoma; augmentation of the DO_cancer_slim, updated nomenclature for thyroid cancer and a revised NCIthesaurus slim, produced programmatically based on NCI xrefs or skis mappings.

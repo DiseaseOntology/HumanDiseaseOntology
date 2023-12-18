@@ -60,11 +60,11 @@ For those new to the Human Disease Ontology, or just wishing to better understan
 
 ### Curation
 
-Curation of the ontology follows established procedures and patterns that are outlined on the disease-ontology.org [Curation page](https://disease-ontology.org/curation). However, diseases are not static entities :grey_exclamation:, requiring continuous updates and revisions to incorporate new knowledge. To suggest changes to patterns or procedures governing data in the Human Disease Ontology, please open a [blank issue](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new) or [contact us](#4-contact-information) directly.
+Curation of the ontology follows established procedures and patterns that are outlined on the disease-ontology.org [Curation page](https://disease-ontology.org/curation). However, diseases are not static entities! Continuous updates and revisions are required to incorporate new knowledge. To suggest changes to design patterns or procedures governing data in the Human Disease Ontology, please open a [blank issue](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/new) or [contact us](#4-contact-information) directly.
 
 ### Data in the Ontology
 
-- Diseases are organized hierarchically based on their etiology (or cause), when known, [classification](https://www.britannica.com/science/human-disease/Classifications-of-diseases), in a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) providing a conceptual representation of the relatedness of human diseases.
+- Diseases are organized hierarchically based on their etiology (or cause, one of many possible [classifications](https://www.britannica.com/science/human-disease/Classifications-of-diseases)), in a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) providing a conceptual representation of the relatedness of human diseases.
   
 - In the Human Disease Ontology, each disease record includes:
   - **Uniform Resource Identifier (URI)**: A persistent, web-accessible URL and ID (example: `http://purl.obolibrary.org/obo/DOID_4`).

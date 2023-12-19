@@ -8,8 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-11-30/imports/cl_import.owl"/>
-        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/cl/releases/2023-10-19/cl.owl</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/cl_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/cl/releases/2023-12-05/cl.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -27,7 +27,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
+        <rdfs:label>id</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -328,6 +330,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000518"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
+        <rdfs:label>mononuclear phagocyte</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000115">
@@ -399,7 +411,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000136">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000325"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002320"/>
-        <rdfs:label>fat cell</rdfs:label>
+        <rdfs:label>adipocyte</rdfs:label>
     </owl:Class>
     
 
@@ -708,8 +720,8 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000235 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000113"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000145"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000766"/>
         <rdfs:label>macrophage</rdfs:label>
     </owl:Class>
@@ -946,9 +958,9 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000451">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000113"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000145"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
         <rdfs:label>dendritic cell</rdfs:label>
     </owl:Class>
     
@@ -1045,6 +1057,16 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000511">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000154"/>
         <rdfs:label>androgen binding protein secreting cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000518 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000518">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000255"/>
+        <rdfs:label>phagocyte (sensu Vertebrata)</rdfs:label>
     </owl:Class>
     
 

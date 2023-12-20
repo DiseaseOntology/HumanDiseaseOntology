@@ -12,6 +12,19 @@
 
 ## 2023 Releases
 
+### [v2023-12-20](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-12-20)
+
+This release of the Human Disease Ontology includes 11,454 disease classes, 9,093 with textual definitions (79.4%). Revisions have been made to sarcomas and rare diseases. New diseases include Schinzel Giedion Syndrome, inflammatory poikiloderma with hair abnormalities and acral keratoses (LIPHAK syndrome), polyhydramnios, megalencephaly, and symptomatic epilepsy (PMSE syndrome), Mitchell syndrome, and a number of rare neurodevelopmental syndromes.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2023-11-30...v2023-12-20
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2023-12-20/src/ontology/doid-merged.obo) | |
+
 ### [v2023-11-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2023-11-30)
 
 This release of the Human Disease Ontology includes 11,432 disease classes, 9,071 with textual definitions (79.3%). New diseases include mito complex 4 disease subtypes, Caroli syndrome, dopamine transporter deficiency syndromes, Zaki syndrome, chromosome 1p36.33 duplication syndrome, digenic diseases, and cerebellar ataxia disease subtypes. Revisions have been made to steatotic liver disease and NAFLD to match recent international consensus, dystal myopathies, and frontotemporal dementias.

@@ -304,6 +304,39 @@ $(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
 	&& mv doid-edit.ofn $<
 	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
 
+# ----------------------------------------
+# XREFs
+# ----------------------------------------
+
+XREF_AUTO := $(patsubst src/sparql/update/xrefs/%.ru, update_%, \
+	$(wildcard src/sparql/update/xrefs/*.ru))
+
+.PHONY: update_xrefs $(XREF_AUTO)
+update_xrefs: $(XREF_AUTO)
+
+$(XREF_AUTO): update_%: $(EDIT) src/sparql/update/xrefs/%.ru | check_robot \
+ src/sparql/update/doid-edit_prefixes.json build/update
+	@echo "UPDATING $* xrefs in $<..."
+	@NEW_DE=build/update/$*.ofn ; \
+	$(ROBOT) \
+	 --add-prefixes $(word 2,$|) \
+	query \
+	 --input $< \
+	 --update $(word 2,$^) \
+	 --output $$NEW_DE \
+	&& $(ROBOT) diff \
+	 --prefix "doid: http://purl.obolibrary.org/obo/doid#" \
+	 --left $< \
+	 --right $$NEW_DE \
+	 --format pretty \
+	 --output build/update/$*-report.txt \
+	&& $(ROBOT) convert \
+	 --input $$NEW_DE \
+	 --format ofn \
+	 --output $< \
+	&& rm $$NEW_DE
+	@echo " -> See build/update/$*-report.txt for changes"
+
 
 ##########################################
 ## BUILDING IMPORTS

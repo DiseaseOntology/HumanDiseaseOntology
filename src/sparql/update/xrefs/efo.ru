@@ -9,7 +9,7 @@ WHERE {
 		GRAPH <http://www.ebi.ac.uk/efo/> {
 			?efo a owl:Class ;
 				owl:deprecated ?any .
-			BIND( CONCAT( "EFO:", STRAFTER( str(?efo), "_" ) ) AS ?efo_id )
+			BIND( CONCAT( "EFO:", STRAFTER( str(?efo), "EFO_" ) ) AS ?efo_id )
 		}
 	}
 

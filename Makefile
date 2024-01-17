@@ -274,38 +274,7 @@ $(SUB_AUTO): update_%: $(EDIT) src/sparql/update/subsets/%.ru | check_robot \
 	@echo " -> See build/update/$*-report.txt for changes"
 
 # ----------------------------------------
-# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)
-# ----------------------------------------
-
-FIX_FILES := $(wildcard src/sparql/update/fix_*.ru)
-FIX := $(basename $(notdir $(FIX_FILES)))
-
-.PHONY: fix_cmds fix_data $(FIX)
-
-# reports possible commands with description from first line of SPARQL update file
-fix_cmds:
-	@echo -e "\n\nThe following make rules can be used to 'fix' data:\n"
-	@for f in $(FIX_FILES); do \
-		printf -- '- %s:\t%s\n' $$(basename $$f .ru) "$$(sed '1s/# //;q' $$f )" ; \
-	 done
-	@echo -e "\nTo run all use: fix_data\n\n"
-
-# run all fix_cmds
-fix_data: $(FIX)
-
-$(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
- check_robot src/sparql/update/doid-edit_prefixes.json
-	@$(ROBOT) \
-	 --add-prefixes $(word 2,$|) \
-	query \
-	 --input $< \
-	 --update $(word 2,$^) \
-	 --output doid-edit.ofn \
-	&& mv doid-edit.ofn $<
-	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
-
-# ----------------------------------------
-# XREFs
+# AUTO-UPDATE XREFs
 # ----------------------------------------
 
 XREF_AUTO := $(patsubst src/sparql/update/xrefs/%.ru, update_%, \
@@ -336,6 +305,37 @@ $(XREF_AUTO): update_%: $(EDIT) src/sparql/update/xrefs/%.ru | check_robot \
 	 --output $< \
 	&& rm $$NEW_DE
 	@echo " -> See build/update/$*-report.txt for changes"
+
+# ----------------------------------------
+# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)
+# ----------------------------------------
+
+FIX_FILES := $(wildcard src/sparql/update/fix_*.ru)
+FIX := $(basename $(notdir $(FIX_FILES)))
+
+.PHONY: fix_cmds fix_data $(FIX)
+
+# reports possible commands with description from first line of SPARQL update file
+fix_cmds:
+	@echo -e "\n\nThe following make rules can be used to 'fix' data:\n"
+	@for f in $(FIX_FILES); do \
+		printf -- '- %s:\t%s\n' $$(basename $$f .ru) "$$(sed '1s/# //;q' $$f )" ; \
+	 done
+	@echo -e "\nTo run all use: fix_data\n\n"
+
+# run all fix_cmds
+fix_data: $(FIX)
+
+$(FIX): fix_%: $(EDIT) src/sparql/update/fix_%.ru | \
+ check_robot src/sparql/update/doid-edit_prefixes.json
+	@$(ROBOT) \
+	 --add-prefixes $(word 2,$|) \
+	query \
+	 --input $< \
+	 --update $(word 2,$^) \
+	 --output doid-edit.ofn \
+	&& mv doid-edit.ofn $<
+	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
 
 
 ##########################################

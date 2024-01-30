@@ -128,6 +128,7 @@ build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
 	 --create-new-ontology false \
 	 --annotate-inferred-axioms false \
 	 --exclude-duplicate-axioms true \
+	 --equivalent-classes-allowed "asserted-only" \
 	 --output $@
 	@echo "Reasoning completed successfully!"
 

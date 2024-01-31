@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2023-12-20/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-01-31/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -2450,11 +2450,12 @@
         <oboInOwl:hasExactSynonym>kidney medullary carcinoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>medullary carcinoma of the kidney</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>medullary renal cell carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>renal medullary carcinoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0070475</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
-        <rdfs:label xml:lang="en">renal medullary carcinoma</rdfs:label>
+        <rdfs:label xml:lang="en">SMARCB1-deficient renal medullary carcinoma</rdfs:label>
         <skos:exactMatch>GARD:13175</skos:exactMatch>
         <skos:exactMatch>NCI:C7572</skos:exactMatch>
         <skos:exactMatch>ORDO:319319</skos:exactMatch>
@@ -2467,6 +2468,8 @@
         <owl:annotatedTarget>A renal cell carcinoma that develops in the renal medulla.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/28697319/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35853783/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36645398/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4910,10 +4913,31 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_0081249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <obo:IAO_0000115>A small cell sarcoma that is characterized by the absence of EWSR1 rearrangement and the presence of small round malignant cells with a small amount of cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C165671</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>EWSR1-Negative Small Blue Round Cell Tumor</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081249</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">EWSR1-negative small round cell tumor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081249"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A small cell sarcoma that is characterized by the absence of EWSR1 rearrangement and the presence of small round malignant cells with a small amount of cytoplasm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/28346326/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_0081250 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081250">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081249"/>
         <obo:IAO_0000115>An EWSERI-negative small round cell tumor that is characterized by a recurrent translocation involving the CIC gene on chromosome 19 and either DUX4 gene on chromosome 4 or DUX4L gene on chromosome 10. The translocation results in either CIC-DUX4, t(4;19)(q35;q13) or CIC-DUX4L, t(10;19)(q26;q13) fusions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9367/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C120224</oboInOwl:hasDbXref>
@@ -5542,6 +5566,371 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_0081402 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081402">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <obo:IAO_0000115>A small cell sarcoma that is characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm and the presence of BCOR genetic alterations.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:9368/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C178465</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>BCOR-Rearranged Sarcoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081402</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">sarcoma with BCOR genetic alterations</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081402"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A small cell sarcoma that is characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm and the presence of BCOR genetic alterations.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35730501/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081403 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081403">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081402"/>
+        <obo:IAO_0000115>A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR internal tandem duplication.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C178468</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081403</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">BCOR ITD sarcoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081403"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR internal tandem duplication.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081404 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081404">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081402"/>
+        <obo:IAO_0000115>A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR-CCNB3 fusion gene.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C178466</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081404</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">BCOR-CCNB3 sarcoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081404"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR-CCNB3 fusion gene.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081405 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081405">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081402"/>
+        <obo:IAO_0000115>A sarcoma with BCOR genetic alterations that occurs during childhood.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C189007</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081405</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">childhood sarcoma with BCOR genetic alterations</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081405"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sarcoma with BCOR genetic alterations that occurs during childhood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081406 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081406">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <obo:IAO_0000115>A small cell sarcoma that is characterized by the presence of EWSR1 or FUS fusions involving partners unrelated to the ETS gene family.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:9366/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C178459</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Ewing-Like Sarcoma or Round Cell Sarcoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Round Cell Sarcoma with EWSR1::non-ETS Fusion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081406</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">round cell sarcoma with EWSR1-non-ETS fusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081406"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A small cell sarcoma that is characterized by the presence of EWSR1 or FUS fusions involving partners unrelated to the ETS gene family.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35430129/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081407">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081406"/>
+        <obo:IAO_0000115>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by EWSR1-non-ETS fusion that occurs during childhood.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C189003</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081407</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">childhood round cell sarcoma with EWSR1-non-ETS fusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081407"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by EWSR1-non-ETS fusion that occurs during childhood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081408 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081408">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081406"/>
+        <obo:IAO_0000115>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-NFATC2 gene fusion.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C178460</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081408</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">round cell sarcoma with EWSR1-NFATC2 gene fusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081408"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-NFATC2 gene fusion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/35430129/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081406"/>
+        <obo:IAO_0000115>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-PATZ1 gene fusion.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C178461</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081409</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">round cell sarcoma with EWSR1-PATZ1 gene fusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081409"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-PATZ1 gene fusion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/30379650/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081410 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081410">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081406"/>
+        <obo:IAO_0000115>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of FUS-NFATC2 gene fusion.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C178462</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081410</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">round cell sarcoma with FUS-NFATC2 gene fusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081410"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of FUS-NFATC2 gene fusion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/31078563/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081411">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080630"/>
+        <obo:IAO_0000115>A B-lymphoblastic leukemia/lymphoma that is associated with PAX5 P80R mutation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C199260</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081411</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">B acute lymphoblastic leukemia with PAX5 P80R mutation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081411"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A B-lymphoblastic leukemia/lymphoma that is associated with PAX5 P80R mutation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/30510083/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/32463891/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36241730/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081412 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081412">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080630"/>
+        <obo:IAO_0000115>A B lymphoblastic leukemia/lymphoma that is associated with DUX4 gene rearrangement.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C199232</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081412</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">B acute lymphoblastic leukemia with DUX4 rearrangement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081412"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A B lymphoblastic leukemia/lymphoma that is associated with DUX4 gene rearrangement.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36602820/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081413 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081413">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4450"/>
+        <obo:IAO_0000115>A renal cell carcinoma that is characterized by papillary, alveolar and nested growth patterns with clear and eosinophilic cells and that is associated with translocations/gene fusions involving members of the MiT family of transcription factors.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:8311/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C154494</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>MiT Family Translocation-Associated Renal Cell Carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>MiT family translocation renal cell carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081413</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">renal cell carcinoma with MiT translocations</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081413"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A renal cell carcinoma that is characterized by papillary, alveolar and nested growth patterns with clear and eosinophilic cells and that is associated with translocations/gene fusions involving members of the MiT family of transcription factors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/25758327/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/31382581/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36672892/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/37060647/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081414 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081414">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081413"/>
+        <obo:IAO_0000115>A renal cell carcinoma with MiT translocations that is characterized by the presence of the chromosomal translocation t(6;11) which fuses the TFEB transcription factor gene, located on chromosome 6, with the MALAT1 gene, located on chromosome 11.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C37210</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1-TFEB</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1::TFEB</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>t(6;11) Renal Cell Carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>t(6;11);(p21;q12) Renal Cell Carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081414</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">TFEB-rearranged renal cell carcinoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081414"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A renal cell carcinoma with MiT translocations that is characterized by the presence of the chromosomal translocation t(6;11) which fuses the TFEB transcription factor gene, located on chromosome 6, with the MALAT1 gene, located on chromosome 11.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36830782/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081415 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081415">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081413"/>
+        <obo:IAO_0000115>A renal cell carcinoma with MiT translocations that is characterized by the presence of different translocations involving the chromosome Xp11.2 and that result in the creation of gene fusions involving the TFE3 gene.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C27891</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Renal Cell Carcinoma Associated with Xp11.2 Translocations/TFE3 Gene Fusions</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Xp11 Translocation Renal Cell Carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081415</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">TFE3-rearranged renal cell carcinoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081415"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A renal cell carcinoma with MiT translocations that is characterized by the presence of different translocations involving the chromosome Xp11.2 and that result in the creation of gene fusions involving the TFE3 gene.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/38104891/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081416 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081416">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081413"/>
+        <obo:IAO_0000115>A renal cell carcinoma with MiT translocations that is characterized by a TFE3 or TFEB-rearranged renal cell carcinoma that occurs during childhood.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C189242</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081416</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">childhood renal cell carcinoma with MiT translocations</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081416"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A renal cell carcinoma with MiT translocations that is characterized by a TFE3 or TFEB-rearranged renal cell carcinoma that occurs during childhood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/37528880/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081417 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081417">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3302"/>
+        <obo:IAO_0000115>A chordoma that is characterized by loss of SMARCB1 expression and that is composed of sheets or nests of malignant epithelioid cells with abundant eosinophilic cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:9370/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C177898</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081417</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">poorly differentiated chordoma</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081417"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chordoma that is characterized by loss of SMARCB1 expression and that is composed of sheets or nests of malignant epithelioid cells with abundant eosinophilic cytoplasm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29483606/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/34482218/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081418 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081418">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_263"/>
+        <obo:IAO_0000115>A kidney sarcoma that is characterized by a proliferation of anaplastic spindle cells with bizarre, pleomorphic nuclei and atypical mitotic figures.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICDO:8802/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C154496</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0081418</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <rdfs:label xml:lang="en">anaplastic sarcoma of the kidney</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0081418"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A kidney sarcoma that is characterized by a proliferation of anaplastic spindle cells with bizarre, pleomorphic nuclei and atypical mitotic figures.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/17895746/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/27006300/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/28862265/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_0111147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0111147">
@@ -5741,6 +6130,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=445079</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.genome.gov/Genetic-Disorders/Prostate-Cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6705,6 +7095,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Mammary</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/types/breast</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/breastcancer.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.genome.gov/Genetic-Disorders/Breast-Cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7622,6 +8013,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
         <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=44237</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.genome.gov/Genetic-Disorders/Colon-Cancer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9349,7 +9741,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_3098 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3098">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1115"/>
+        <obo:IAO_0000115>A sarcoma characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:8803/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018228</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3746</oboInOwl:hasDbXref>
@@ -9361,6 +9754,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>small cell sarcoma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sarcoma characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36202860/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -10049,21 +10448,19 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:hasDbXref>NCI:C3192</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4248</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4502</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:151900</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:115227001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:154612003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:254830006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0023798</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0206631</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0346118</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">LIPOMATOSIS, FAMILIAL MULTIPLE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Lipomatous neoplasm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Lipomatous tumor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">benign lipomatous tumor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">benign tumor of Adipose tissue</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">multiple lipomatosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">tumor of adipose tissue</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>multiple lipomatosis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>DOID:3315</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
@@ -10116,7 +10513,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3347">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
-        <obo:IAO_0000115>A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin.</obo:IAO_0000115>
+        <obo:IAO_0000115>A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin. It usually involves bones and less frequently extraosseous sites. It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:183</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:7284</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:9180/3</oboInOwl:hasDbXref>
@@ -10143,7 +10540,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3347"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin.</owl:annotatedTarget>
+        <owl:annotatedTarget>A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin. It usually involves bones and less frequently extraosseous sites. It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus).</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
@@ -10389,6 +10786,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3376">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3347"/>
+        <obo:IAO_0000115>An osteosarcoma that is an usually aggressive malignant bone-forming mesenchymal neoplasm arising from the bone. It may arise de novo or from a pre-existing lesion of the bone. Pain and a palpable mass are the most frequent clinical sign and symptom. It may spread to other anatomic sites, particularly the lungs.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8580</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NCI:C53707</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:307576001</oboInOwl:hasDbXref>
@@ -10401,6 +10799,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>bone osteosarcoma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3376"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An osteosarcoma that is an usually aggressive malignant bone-forming mesenchymal neoplasm arising from the bone. It may arise de novo or from a pre-existing lesion of the bone. Pain and a palpable mass are the most frequent clinical sign and symptom. It may spread to other anatomic sites, particularly the lungs.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://my.clevelandclinic.org/health/diseases/15041-osteosarcoma</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -11877,7 +12281,6 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_11054"/>
         <obo:IAO_0000115>A urinary bladder cancer that has_material_basis_in abnormally proliferating cells derives_from epithelial cells.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>EFO:0000292</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4912</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:269607003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0699885</oboInOwl:hasDbXref>
@@ -16347,8 +16750,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_6785 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6785">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1115"/>
-        <obo:IAO_0000115>A sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3098"/>
+        <obo:IAO_0000115>A small cell sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:6265</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:8806/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C8300</oboInOwl:hasDbXref>
@@ -16362,7 +16765,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_6785"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.</owl:annotatedTarget>
+        <owl:annotatedTarget>A small cell sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Desmoplastic_small-round-cell_tumor</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/desmoplastic-small-round-cell-tumors</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -16966,9 +17369,11 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_7297 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_7297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3347"/>
+        <obo:IAO_0000115>An extraosseous osteosarcoma that arises from the soft tissue and occurs during childhood.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NCI:C27376</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C1332968</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Childhood Extraskeletal Osteosarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">pediatric extraskeletal Osteosarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:7297</oboInOwl:id>
@@ -16976,6 +17381,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>childhood extraosseous osteosarcoma</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_7297"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An extraosseous osteosarcoma that arises from the soft tissue and occurs during childhood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/18214458/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2023-12-20/subsets/DO_cancer_slim.obo
-date: 20:12:2023 09:39
+data-version: doid/releases/2024-01-31/subsets/DO_cancer_slim.obo
+date: 31:01:2024 10:39
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -1146,14 +1146,15 @@ is_a: DOID:8923 ! skin melanoma
 
 [Term]
 id: DOID:0070475
-name: renal medullary carcinoma
+name: SMARCB1-deficient renal medullary carcinoma
 namespace: disease_ontology
-def: "A renal cell carcinoma that develops in the renal medulla." [url:https\://pubmed.ncbi.nlm.nih.gov/28697319/]
+def: "A renal cell carcinoma that develops in the renal medulla." [url:https\://pubmed.ncbi.nlm.nih.gov/28697319/, url:https\://pubmed.ncbi.nlm.nih.gov/35853783/, url:https\://pubmed.ncbi.nlm.nih.gov/36645398/]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 synonym: "kidney medullary carcinoma" EXACT []
 synonym: "medullary carcinoma of the kidney" EXACT []
 synonym: "medullary renal cell carcinoma" EXACT []
+synonym: "renal medullary carcinoma" EXACT []
 synonym: "RMC" EXACT []
 xref: GARD:13175
 xref: NCI:C7572
@@ -2335,6 +2336,16 @@ xref: ICDO:9361/1
 xref: NCI:C6966
 
 [Term]
+id: DOID:0081249
+name: EWSR1-negative small round cell tumor
+namespace: disease_ontology
+def: "A small cell sarcoma that is characterized by the absence of EWSR1 rearrangement and the presence of small round malignant cells with a small amount of cytoplasm." [url:https\://pubmed.ncbi.nlm.nih.gov/28346326/]
+subset: DO_cancer_slim
+synonym: "EWSR1-Negative Small Blue Round Cell Tumor" EXACT []
+xref: NCI:C165671
+is_a: DOID:3098 ! small cell sarcoma
+
+[Term]
 id: DOID:0081250
 name: CIC-rearranged sarcoma
 namespace: disease_ontology
@@ -2343,7 +2354,7 @@ subset: DO_cancer_slim
 synonym: "Capicua transcriptional repressor (CIC)-rearranged sarcoma" EXACT []
 xref: ICDO:9367/3
 xref: NCI:C120224
-is_a: DOID:3098 ! small cell sarcoma
+is_a: DOID:0081249 ! EWSR1-negative small round cell tumor
 
 [Term]
 id: DOID:0081251
@@ -2641,6 +2652,175 @@ xref: NCI:C186610
 is_a: DOID:1319 ! brain cancer
 
 [Term]
+id: DOID:0081402
+name: sarcoma with BCOR genetic alterations
+namespace: disease_ontology
+def: "A small cell sarcoma that is characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm and the presence of BCOR genetic alterations." [url:https\://pubmed.ncbi.nlm.nih.gov/35730501/, url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
+subset: DO_cancer_slim
+synonym: "BCOR-Rearranged Sarcoma" EXACT []
+xref: ICDO:9368/3
+xref: NCI:C178465
+is_a: DOID:3098 ! small cell sarcoma
+
+[Term]
+id: DOID:0081403
+name: BCOR ITD sarcoma
+namespace: disease_ontology
+def: "A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR internal tandem duplication." [url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
+subset: DO_cancer_slim
+xref: NCI:C178468
+is_a: DOID:0081402 ! sarcoma with BCOR genetic alterations
+
+[Term]
+id: DOID:0081404
+name: BCOR-CCNB3 sarcoma
+namespace: disease_ontology
+def: "A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR-CCNB3 fusion gene." [url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
+subset: DO_cancer_slim
+xref: NCI:C178466
+is_a: DOID:0081402 ! sarcoma with BCOR genetic alterations
+
+[Term]
+id: DOID:0081405
+name: childhood sarcoma with BCOR genetic alterations
+namespace: disease_ontology
+def: "A sarcoma with BCOR genetic alterations that occurs during childhood." [url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
+subset: DO_cancer_slim
+xref: NCI:C189007
+is_a: DOID:0081402 ! sarcoma with BCOR genetic alterations
+
+[Term]
+id: DOID:0081406
+name: round cell sarcoma with EWSR1-non-ETS fusion
+namespace: disease_ontology
+def: "A small cell sarcoma that is characterized by the presence of EWSR1 or FUS fusions involving partners unrelated to the ETS gene family." [url:https\://pubmed.ncbi.nlm.nih.gov/35430129/]
+subset: DO_cancer_slim
+synonym: "Ewing-Like Sarcoma or Round Cell Sarcoma" EXACT []
+synonym: "Round Cell Sarcoma with EWSR1::non-ETS Fusion" EXACT []
+xref: ICDO:9366/3
+xref: NCI:C178459
+is_a: DOID:3098 ! small cell sarcoma
+
+[Term]
+id: DOID:0081407
+name: childhood round cell sarcoma with EWSR1-non-ETS fusion
+namespace: disease_ontology
+def: "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by EWSR1-non-ETS fusion that occurs during childhood." [url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
+subset: DO_cancer_slim
+xref: NCI:C189003
+is_a: DOID:0081406 ! round cell sarcoma with EWSR1-non-ETS fusion
+
+[Term]
+id: DOID:0081408
+name: round cell sarcoma with EWSR1-NFATC2 gene fusion
+namespace: disease_ontology
+def: "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-NFATC2 gene fusion." [url:https\://pubmed.ncbi.nlm.nih.gov/35430129/]
+subset: DO_cancer_slim
+xref: NCI:C178460
+is_a: DOID:0081406 ! round cell sarcoma with EWSR1-non-ETS fusion
+
+[Term]
+id: DOID:0081409
+name: round cell sarcoma with EWSR1-PATZ1 gene fusion
+namespace: disease_ontology
+def: "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-PATZ1 gene fusion." [url:https\://pubmed.ncbi.nlm.nih.gov/30379650/]
+subset: DO_cancer_slim
+xref: NCI:C178461
+is_a: DOID:0081406 ! round cell sarcoma with EWSR1-non-ETS fusion
+
+[Term]
+id: DOID:0081410
+name: round cell sarcoma with FUS-NFATC2 gene fusion
+namespace: disease_ontology
+def: "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of FUS-NFATC2 gene fusion." [url:https\://pubmed.ncbi.nlm.nih.gov/31078563/]
+subset: DO_cancer_slim
+xref: NCI:C178462
+is_a: DOID:0081406 ! round cell sarcoma with EWSR1-non-ETS fusion
+
+[Term]
+id: DOID:0081411
+name: B acute lymphoblastic leukemia with PAX5 P80R mutation
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma that is associated with PAX5 P80R mutation." [url:https\://pubmed.ncbi.nlm.nih.gov/30510083/, url:https\://pubmed.ncbi.nlm.nih.gov/32463891/, url:https\://pubmed.ncbi.nlm.nih.gov/36241730/]
+subset: DO_cancer_slim
+xref: NCI:C199260
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0081412
+name: B acute lymphoblastic leukemia with DUX4 rearrangement
+namespace: disease_ontology
+def: "A B lymphoblastic leukemia/lymphoma that is associated with DUX4 gene rearrangement." [url:https\://pubmed.ncbi.nlm.nih.gov/36602820/]
+subset: DO_cancer_slim
+xref: NCI:C199232
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+
+[Term]
+id: DOID:0081413
+name: renal cell carcinoma with MiT translocations
+namespace: disease_ontology
+def: "A renal cell carcinoma that is characterized by papillary, alveolar and nested growth patterns with clear and eosinophilic cells and that is associated with translocations/gene fusions involving members of the MiT family of transcription factors." [url:https\://pubmed.ncbi.nlm.nih.gov/25758327/, url:https\://pubmed.ncbi.nlm.nih.gov/31382581/, url:https\://pubmed.ncbi.nlm.nih.gov/36672892/, url:https\://pubmed.ncbi.nlm.nih.gov/37060647/]
+subset: DO_cancer_slim
+synonym: "MiT family translocation renal cell carcinoma" EXACT []
+synonym: "MiT Family Translocation-Associated Renal Cell Carcinoma" EXACT []
+xref: ICDO:8311/3
+xref: NCI:C154494
+is_a: DOID:4450 ! renal cell carcinoma
+
+[Term]
+id: DOID:0081414
+name: TFEB-rearranged renal cell carcinoma
+namespace: disease_ontology
+def: "A renal cell carcinoma with MiT translocations that is characterized by the presence of the chromosomal translocation t(6;11) which fuses the TFEB transcription factor gene, located on chromosome 6, with the MALAT1 gene, located on chromosome 11." [url:https\://pubmed.ncbi.nlm.nih.gov/36830782/]
+subset: DO_cancer_slim
+synonym: "Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1-TFEB" EXACT []
+synonym: "Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1::TFEB" EXACT []
+synonym: "t(6;11) Renal Cell Carcinoma" EXACT []
+synonym: "t(6;11);(p21;q12) Renal Cell Carcinoma" EXACT []
+xref: NCI:C37210
+is_a: DOID:0081413 ! renal cell carcinoma with MiT translocations
+
+[Term]
+id: DOID:0081415
+name: TFE3-rearranged renal cell carcinoma
+namespace: disease_ontology
+def: "A renal cell carcinoma with MiT translocations that is characterized by the presence of different translocations involving the chromosome Xp11.2 and that result in the creation of gene fusions involving the TFE3 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/38104891/]
+subset: DO_cancer_slim
+synonym: "Renal Cell Carcinoma Associated with Xp11.2 Translocations/TFE3 Gene Fusions" EXACT []
+synonym: "Xp11 Translocation Renal Cell Carcinoma" EXACT []
+xref: NCI:C27891
+is_a: DOID:0081413 ! renal cell carcinoma with MiT translocations
+
+[Term]
+id: DOID:0081416
+name: childhood renal cell carcinoma with MiT translocations
+namespace: disease_ontology
+def: "A renal cell carcinoma with MiT translocations that is characterized by a TFE3 or TFEB-rearranged renal cell carcinoma that occurs during childhood." [url:https\://pubmed.ncbi.nlm.nih.gov/37528880/]
+subset: DO_cancer_slim
+xref: NCI:C189242
+is_a: DOID:0081413 ! renal cell carcinoma with MiT translocations
+
+[Term]
+id: DOID:0081417
+name: poorly differentiated chordoma
+namespace: disease_ontology
+def: "A chordoma that is characterized by loss of SMARCB1 expression and that is composed of sheets or nests of malignant epithelioid cells with abundant eosinophilic cytoplasm." [url:https\://pubmed.ncbi.nlm.nih.gov/29483606/, url:https\://pubmed.ncbi.nlm.nih.gov/34482218/]
+subset: DO_cancer_slim
+xref: ICDO:9370/3
+xref: NCI:C177898
+is_a: DOID:3302 ! chordoma
+
+[Term]
+id: DOID:0081418
+name: anaplastic sarcoma of the kidney
+namespace: disease_ontology
+def: "A kidney sarcoma that is characterized by a proliferation of anaplastic spindle cells with bizarre, pleomorphic nuclei and atypical mitotic figures." [url:https\://pubmed.ncbi.nlm.nih.gov/17895746/, url:https\://pubmed.ncbi.nlm.nih.gov/27006300/, url:https\://pubmed.ncbi.nlm.nih.gov/28862265/]
+subset: DO_cancer_slim
+xref: ICDO:8802/3
+xref: NCI:C154496
+is_a: DOID:263 ! kidney cancer
+
+[Term]
 id: DOID:0111147
 name: angioimmunoblastic T-cell lymphoma
 namespace: disease_ontology
@@ -2719,7 +2899,7 @@ id: DOID:10283
 name: prostate cancer
 namespace: disease_ontology
 alt_id: DOID:514
-def: "A male reproductive organ cancer that is located_in the prostate." [url:http\://www.cancer.gov/dictionary?CdrID=445079]
+def: "A male reproductive organ cancer that is located_in the prostate." [url:http\://www.cancer.gov/dictionary?CdrID=445079, url:https\://www.genome.gov/Genetic-Disorders/Prostate-Cancer]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
@@ -3355,7 +3535,7 @@ name: breast cancer
 namespace: disease_ontology
 alt_id: DOID:1648
 alt_id: DOID:4241
-def: "A thoracic cancer that originates in the mammary gland." [url:http\://en.wikipedia.org/wiki/Breast_cancer, url:http\://en.wikipedia.org/wiki/Mammary, url:http\://www.cancer.gov/cancertopics/types/breast, url:http\://www.nlm.nih.gov/medlineplus/breastcancer.html]
+def: "A thoracic cancer that originates in the mammary gland." [url:http\://en.wikipedia.org/wiki/Breast_cancer, url:http\://en.wikipedia.org/wiki/Mammary, url:http\://www.cancer.gov/cancertopics/types/breast, url:http\://www.nlm.nih.gov/medlineplus/breastcancer.html, url:https\://www.genome.gov/Genetic-Disorders/Breast-Cancer]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
@@ -3931,7 +4111,7 @@ is_a: DOID:263 ! kidney cancer
 id: DOID:219
 name: colon cancer
 namespace: disease_ontology
-def: "A colorectal cancer that is located_in the colon." [url:http\://www.cancer.gov/dictionary?CdrID=44237]
+def: "A colorectal cancer that is located_in the colon." [url:http\://www.cancer.gov/dictionary?CdrID=44237, url:https\://www.genome.gov/Genetic-Disorders/Colon-Cancer]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 subset: TopNodes_DOcancerslim
@@ -5030,6 +5210,7 @@ is_a: DOID:1475 ! lymphangioma
 id: DOID:3098
 name: small cell sarcoma
 namespace: disease_ontology
+def: "A sarcoma characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm." [url:https\://pubmed.ncbi.nlm.nih.gov/36202860/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:8803/3
@@ -5037,7 +5218,7 @@ xref: MESH:D018228
 xref: NCI:C3746
 xref: SNOMEDCT_US_2023_03_01:73506006
 xref: UMLS_CUI:C0206652
-is_a: DOID:162 ! cancer
+is_a: DOID:1115 ! sarcoma
 
 [Term]
 id: DOID:3112
@@ -5452,10 +5633,9 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "benign lipomatous tumor" EXACT []
 synonym: "benign tumor of Adipose tissue" EXACT []
-synonym: "LIPOMATOSIS, FAMILIAL MULTIPLE" EXACT []
 synonym: "Lipomatous neoplasm" EXACT []
 synonym: "Lipomatous tumor" EXACT []
-synonym: "multiple lipomatosis" EXACT []
+synonym: "multiple lipomatosis" RELATED []
 synonym: "tumor of adipose tissue" EXACT []
 xref: ICD10CM:D17
 xref: ICD10CM:D17.9
@@ -5466,7 +5646,6 @@ xref: MESH:D018205
 xref: NCI:C3192
 xref: NCI:C4248
 xref: NCI:C4502
-xref: OMIM:151900
 xref: SNOMEDCT_US_2023_03_01:115227001
 xref: SNOMEDCT_US_2023_03_01:154612003
 xref: SNOMEDCT_US_2023_03_01:254830006
@@ -5500,7 +5679,7 @@ id: DOID:3347
 name: osteosarcoma
 namespace: disease_ontology
 alt_id: DOID:183
-def: "A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin." [url:http\://en.wikipedia.org/wiki/Osteosarcoma, url:http\://www.cancer.gov/dictionary?cdrid=45395]
+def: "A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin. It usually involves bones and less frequently extraosseous sites. It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus)." [url:http\://en.wikipedia.org/wiki/Osteosarcoma, url:http\://www.cancer.gov/dictionary?cdrid=45395]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_rare_slim
@@ -5692,6 +5871,7 @@ id: DOID:3376
 name: bone osteosarcoma
 namespace: disease_ontology
 alt_id: DOID:8580
+def: "An osteosarcoma that is an usually aggressive malignant bone-forming mesenchymal neoplasm arising from the bone. It may arise de novo or from a pre-existing lesion of the bone. Pain and a palpable mass are the most frequent clinical sign and symptom. It may spread to other anatomic sites, particularly the lungs." [url:https\://my.clevelandclinic.org/health/diseases/15041-osteosarcoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Osteosarcoma of bone" EXACT []
@@ -6601,7 +6781,6 @@ def: "A urinary bladder cancer that has_material_basis_in abnormally proliferati
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "carcinoma of urinary bladder" EXACT []
-xref: EFO:0000292
 xref: NCI:C4912
 xref: SNOMEDCT_US_2023_03_01:269607003
 xref: UMLS_CUI:C0699885
@@ -9323,14 +9502,14 @@ is_a: DOID:3069 ! malignant astrocytoma
 id: DOID:6785
 name: desmoplastic small round cell tumor
 namespace: disease_ontology
-def: "A sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass." [url:https\://en.wikipedia.org/wiki/Desmoplastic_small-round-cell_tumor, url:https\://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/desmoplastic-small-round-cell-tumors]
+def: "A small cell sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass." [url:https\://en.wikipedia.org/wiki/Desmoplastic_small-round-cell_tumor, url:https\://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/desmoplastic-small-round-cell-tumors]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 synonym: "desmoplastic small round-cell neoplasm" EXACT []
 xref: GARD:6265
 xref: ICDO:8806/3
 xref: NCI:C8300
-is_a: DOID:1115 ! sarcoma
+is_a: DOID:3098 ! small cell sarcoma
 
 [Term]
 id: DOID:6786
@@ -9695,12 +9874,14 @@ is_a: DOID:6052 ! central nervous system childhood germ cell tumor
 id: DOID:7297
 name: childhood extraosseous osteosarcoma
 namespace: disease_ontology
+def: "An extraosseous osteosarcoma that arises from the soft tissue and occurs during childhood." [url:https\://pubmed.ncbi.nlm.nih.gov/18214458/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Childhood Extraskeletal Osteosarcoma" EXACT []
 synonym: "pediatric extraskeletal Osteosarcoma" EXACT []
 xref: NCI:C27376
 xref: UMLS_CUI:C1332968
-is_a: DOID:162 ! cancer
+is_a: DOID:3347 ! osteosarcoma
 
 [Term]
 id: DOID:7305

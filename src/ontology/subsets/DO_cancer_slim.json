@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2023-12-20/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-01-31/subsets/DO_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -2423,12 +2423,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0070475",
-      "lbl" : "renal medullary carcinoma",
+      "lbl" : "SMARCB1-deficient renal medullary carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
           "val" : "A renal cell carcinoma that develops in the renal medulla.",
-          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/28697319/" ]
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/28697319/", "url:https://pubmed.ncbi.nlm.nih.gov/35853783/", "url:https://pubmed.ncbi.nlm.nih.gov/36645398/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "synonyms" : [ {
@@ -2443,6 +2443,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "medullary renal cell carcinoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "renal medullary carcinoma"
         } ],
         "xrefs" : [ {
           "val" : "GARD:13175"
@@ -4911,6 +4914,28 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081249",
+      "lbl" : "EWSR1-negative small round cell tumor",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A small cell sarcoma that is characterized by the absence of EWSR1 rearrangement and the presence of small round malignant cells with a small amount of cytoplasm.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/28346326/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "EWSR1-Negative Small Blue Round Cell Tumor"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCI:C165671"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0081250",
       "lbl" : "CIC-rearranged sarcoma",
       "type" : "CLASS",
@@ -5567,6 +5592,360 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081402",
+      "lbl" : "sarcoma with BCOR genetic alterations",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A small cell sarcoma that is characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm and the presence of BCOR genetic alterations.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/35730501/", "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "BCOR-Rearranged Sarcoma"
+        } ],
+        "xrefs" : [ {
+          "val" : "ICDO:9368/3"
+        }, {
+          "val" : "NCI:C178465"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081403",
+      "lbl" : "BCOR ITD sarcoma",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR internal tandem duplication.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C178468"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081404",
+      "lbl" : "BCOR-CCNB3 sarcoma",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sarcoma with BCOR genetic alterations that is characterized by the presence of BCOR-CCNB3 fusion gene.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C178466"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081405",
+      "lbl" : "childhood sarcoma with BCOR genetic alterations",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sarcoma with BCOR genetic alterations that occurs during childhood.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C189007"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081406",
+      "lbl" : "round cell sarcoma with EWSR1-non-ETS fusion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A small cell sarcoma that is characterized by the presence of EWSR1 or FUS fusions involving partners unrelated to the ETS gene family.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/35430129/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Ewing-Like Sarcoma or Round Cell Sarcoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Round Cell Sarcoma with EWSR1::non-ETS Fusion"
+        } ],
+        "xrefs" : [ {
+          "val" : "ICDO:9366/3"
+        }, {
+          "val" : "NCI:C178459"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081407",
+      "lbl" : "childhood round cell sarcoma with EWSR1-non-ETS fusion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by EWSR1-non-ETS fusion that occurs during childhood.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C189003"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081408",
+      "lbl" : "round cell sarcoma with EWSR1-NFATC2 gene fusion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-NFATC2 gene fusion.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/35430129/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C178460"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081409",
+      "lbl" : "round cell sarcoma with EWSR1-PATZ1 gene fusion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of EWSR1-PATZ1 gene fusion.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/30379650/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C178461"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081410",
+      "lbl" : "round cell sarcoma with FUS-NFATC2 gene fusion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A round cell sarcoma with EWSR1-non-ETS fusion that is characterized by the presence of FUS-NFATC2 gene fusion.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/31078563/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C178462"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081411",
+      "lbl" : "B acute lymphoblastic leukemia with PAX5 P80R mutation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A B-lymphoblastic leukemia/lymphoma that is associated with PAX5 P80R mutation.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/30510083/", "url:https://pubmed.ncbi.nlm.nih.gov/32463891/", "url:https://pubmed.ncbi.nlm.nih.gov/36241730/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C199260"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081412",
+      "lbl" : "B acute lymphoblastic leukemia with DUX4 rearrangement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A B lymphoblastic leukemia/lymphoma that is associated with DUX4 gene rearrangement.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36602820/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C199232"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081413",
+      "lbl" : "renal cell carcinoma with MiT translocations",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A renal cell carcinoma that is characterized by papillary, alveolar and nested growth patterns with clear and eosinophilic cells and that is associated with translocations/gene fusions involving members of the MiT family of transcription factors.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/25758327/", "url:https://pubmed.ncbi.nlm.nih.gov/31382581/", "url:https://pubmed.ncbi.nlm.nih.gov/36672892/", "url:https://pubmed.ncbi.nlm.nih.gov/37060647/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MiT Family Translocation-Associated Renal Cell Carcinoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "MiT family translocation renal cell carcinoma"
+        } ],
+        "xrefs" : [ {
+          "val" : "ICDO:8311/3"
+        }, {
+          "val" : "NCI:C154494"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081414",
+      "lbl" : "TFEB-rearranged renal cell carcinoma",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A renal cell carcinoma with MiT translocations that is characterized by the presence of the chromosomal translocation t(6;11) which fuses the TFEB transcription factor gene, located on chromosome 6, with the MALAT1 gene, located on chromosome 11.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36830782/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1-TFEB"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Renal Cell Carcinoma with t(6;11);(p21;q12); MALAT1::TFEB"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "t(6;11) Renal Cell Carcinoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "t(6;11);(p21;q12) Renal Cell Carcinoma"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCI:C37210"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081415",
+      "lbl" : "TFE3-rearranged renal cell carcinoma",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A renal cell carcinoma with MiT translocations that is characterized by the presence of different translocations involving the chromosome Xp11.2 and that result in the creation of gene fusions involving the TFE3 gene.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/38104891/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Renal Cell Carcinoma Associated with Xp11.2 Translocations/TFE3 Gene Fusions"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Xp11 Translocation Renal Cell Carcinoma"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCI:C27891"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081416",
+      "lbl" : "childhood renal cell carcinoma with MiT translocations",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A renal cell carcinoma with MiT translocations that is characterized by a TFE3 or TFEB-rearranged renal cell carcinoma that occurs during childhood.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/37528880/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "NCI:C189242"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081417",
+      "lbl" : "poorly differentiated chordoma",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A chordoma that is characterized by loss of SMARCB1 expression and that is composed of sheets or nests of malignant epithelioid cells with abundant eosinophilic cytoplasm.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/29483606/", "url:https://pubmed.ncbi.nlm.nih.gov/34482218/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:9370/3"
+        }, {
+          "val" : "NCI:C177898"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0081418",
+      "lbl" : "anaplastic sarcoma of the kidney",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A kidney sarcoma that is characterized by a proliferation of anaplastic spindle cells with bizarre, pleomorphic nuclei and atypical mitotic figures.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/17895746/", "url:https://pubmed.ncbi.nlm.nih.gov/27006300/", "url:https://pubmed.ncbi.nlm.nih.gov/28862265/" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "xrefs" : [ {
+          "val" : "ICDO:8802/3"
+        }, {
+          "val" : "NCI:C154496"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0111147",
       "lbl" : "angioimmunoblastic T-cell lymphoma",
       "type" : "CLASS",
@@ -5709,7 +6088,7 @@
       "meta" : {
         "definition" : {
           "val" : "A male reproductive organ cancer that is located_in the prostate.",
-          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=445079" ]
+          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=445079", "url:https://www.genome.gov/Genetic-Disorders/Prostate-Cancer" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
@@ -6988,7 +7367,7 @@
       "meta" : {
         "definition" : {
           "val" : "A thoracic cancer that originates in the mammary gland.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Breast_cancer", "url:http://en.wikipedia.org/wiki/Mammary", "url:http://www.cancer.gov/cancertopics/types/breast", "url:http://www.nlm.nih.gov/medlineplus/breastcancer.html" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Breast_cancer", "url:http://en.wikipedia.org/wiki/Mammary", "url:http://www.cancer.gov/cancertopics/types/breast", "url:http://www.nlm.nih.gov/medlineplus/breastcancer.html", "url:https://www.genome.gov/Genetic-Disorders/Breast-Cancer" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_RAD_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
@@ -8180,7 +8559,7 @@
       "meta" : {
         "definition" : {
           "val" : "A colorectal cancer that is located_in the colon.",
-          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=44237" ]
+          "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=44237", "url:https://www.genome.gov/Genetic-Disorders/Colon-Cancer" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
         "xrefs" : [ {
@@ -10459,6 +10838,10 @@
       "lbl" : "small cell sarcoma",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A sarcoma characterized by the presence of small round or elongated malignant cells with a small amount of cytoplasm.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/36202860/" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "ICDO:8803/3"
@@ -11302,9 +11685,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "LIPOMATOSIS, FAMILIAL MULTIPLE"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "Lipomatous neoplasm"
         }, {
           "pred" : "hasExactSynonym",
@@ -11317,10 +11697,10 @@
           "val" : "benign tumor of Adipose tissue"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "multiple lipomatosis"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "tumor of adipose tissue"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "multiple lipomatosis"
         } ],
         "xrefs" : [ {
           "val" : "ICD10CM:D17"
@@ -11340,8 +11720,6 @@
           "val" : "NCI:C4248"
         }, {
           "val" : "NCI:C4502"
-        }, {
-          "val" : "OMIM:151900"
         }, {
           "val" : "SNOMEDCT_US_2023_03_01:115227001"
         }, {
@@ -11418,7 +11796,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin.",
+          "val" : "A bone sarcoma that is located_in bone that has_material_basis_in cells of mesenchymal origin. It usually involves bones and less frequently extraosseous sites. It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus).",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Osteosarcoma", "url:http://www.cancer.gov/dictionary?cdrid=45395" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
@@ -11821,6 +12199,10 @@
       "lbl" : "bone osteosarcoma",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An osteosarcoma that is an usually aggressive malignant bone-forming mesenchymal neoplasm arising from the bone. It may arise de novo or from a pre-existing lesion of the bone. Pain and a palpable mass are the most frequent clinical sign and symptom. It may spread to other anatomic sites, particularly the lungs.",
+          "xrefs" : [ "url:https://my.clevelandclinic.org/health/diseases/15041-osteosarcoma" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -13652,8 +14034,6 @@
           "val" : "carcinoma of urinary bladder"
         } ],
         "xrefs" : [ {
-          "val" : "EFO:0000292"
-        }, {
           "val" : "NCI:C4912"
         }, {
           "val" : "SNOMEDCT_US_2023_03_01:269607003"
@@ -19012,7 +19392,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.",
+          "val" : "A small cell sarcoma that is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass.",
           "xrefs" : [ "url:https://en.wikipedia.org/wiki/Desmoplastic_small-round-cell_tumor", "url:https://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/desmoplastic-small-round-cell-tumors" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
@@ -19711,8 +20091,15 @@
       "lbl" : "childhood extraosseous osteosarcoma",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An extraosseous osteosarcoma that arises from the soft tissue and occurs during childhood.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/18214458/" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Childhood Extraskeletal Osteosarcoma"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "pediatric extraskeletal Osteosarcoma"
         } ],
@@ -22580,9 +22967,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3371"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_0081250",
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081249",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081250",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081249"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0081251",
       "pred" : "is_a",
@@ -22663,6 +23054,74 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0081316",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1319"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081402",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081403",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081402"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081404",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081402"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081405",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081402"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081406",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081407",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081408",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081409",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081410",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081411",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081412",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0080630"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081413",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_4450"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081414",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081413"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081415",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081413"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081416",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0081413"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081417",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3302"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0081418",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_263"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0111147",
       "pred" : "is_a",
@@ -23050,7 +23509,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3098",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1115"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3112",
       "pred" : "is_a",
@@ -24042,7 +24501,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6785",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1115"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3098"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6786",
       "pred" : "is_a",
@@ -24150,7 +24609,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7297",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3347"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_7305",
       "pred" : "is_a",

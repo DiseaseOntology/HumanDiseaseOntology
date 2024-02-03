@@ -1,0 +1,6 @@
+# Identify strings tagged with non-EN language
+SELECT ?subject ?property ?object
+WHERE {
+	?subject ?property ?object .
+	FILTER( lang(?object) NOT IN ("en", "") )
+}

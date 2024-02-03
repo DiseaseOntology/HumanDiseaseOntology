@@ -1,6 +1,12 @@
 # Identify strings tagged with non-EN language
+# --> uses langMatches to exclude all 'en'-based language tags
 SELECT ?subject ?property ?object
 WHERE {
 	?subject ?property ?object .
-	FILTER( lang(?object) NOT IN ("en", "") )
+	#FILTER( isLiteral(?object) && lang(?object) NOT IN ("en", "") )
+	FILTER(
+		isLiteral(?object)
+		 && langMatches( lang(?object), "en")
+		 && lang(?object) != ""
+	)
 }

@@ -1,0 +1,13 @@
+# Count string lang tags by property
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property ?lang (COUNT(?object) AS ?cnt)
+WHERE {
+	?subject ?property ?object .
+	# limit to strings (+\- lang tags)
+	FILTER(datatype(?object) IN (xsd:string, rdf:langString))
+	BIND(lang(?object) AS ?lang)
+}
+GROUP BY ?property ?lang
+ORDER BY ?property ?lang ?cnt

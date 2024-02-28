@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-01-31/subsets/DO_FlyBase_slim.obo
-date: 31:01:2024 10:39
+data-version: doid/releases/2024-02-28/subsets/DO_FlyBase_slim.obo
+date: 28:02:2024 13:04
 ontology: doid/subsets/DO_FlyBase_slim
 
 [Term]
@@ -170,6 +170,7 @@ namespace: disease_ontology
 def: "A childhood spinal muscular atrophy that is characterized by progressive muscular weakness and respiratory failure, develops in children between the ages of 6 and 12 months and drastically reduces length of life, and has_material_basis_in mutations in the SMN1 or SMN2 genes that are required for the survival of motor neurons." [url:https\://rarediseases.info.nih.gov/diseases/4945/spinal-muscular-atrophy-type-2]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: NCIthesaurus
 synonym: "MUSCULAR ATROPHY, SPINAL, INFANTILE CHRONIC FORM" EXACT []
 synonym: "MUSCULAR ATROPHY, SPINAL, INTERMEDIATE TYPE" EXACT []
 synonym: "SMA II" EXACT []
@@ -337,7 +338,6 @@ name: alcohol dependence
 namespace: disease_ontology
 def: "A substance dependence that is characterized by tolerance, withdrawal symptoms, increasing use, persistent desire to decrease consumption, time spent obtaining or recovering from alcohol caused by a physical and psychological dependence on alcohol." [url:https\://en.wikipedia.org/wiki/Alcohol_dependence]
 subset: DO_FlyBase_slim
-subset: NCIthesaurus
 synonym: "alcoholism" EXACT []
 xref: KEGG:05034
 xref: OMIM:103780
@@ -2234,6 +2234,7 @@ def: "A paraplegia that is characterized by progressive stiffness and contractio
 comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "familial spastic paraplegia" EXACT []
 synonym: "French settlement disease" EXACT []
 synonym: "hereditary spastic paraparesis" EXACT []
@@ -2323,18 +2324,18 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "long Q-T syndrome" EXACT []
 synonym: "LQT" EXACT []
-synonym: "Romano-Ward syndrome" EXACT []
+synonym: "Romano-Ward syndrome" NARROW []
 xref: GARD:6922
 xref: ICD10CM:I45.81
 xref: ICD9CM:426.82
 xref: MESH:D008133
 xref: NCI:C34786
 xref: OMIM:PS192500
-xref: ORDO:101016
 xref: ORDO:768
 xref: SNOMEDCT_US_2023_03_01:9651007
 xref: UMLS_CUI:C0023976
 is_a: DOID:0050700 ! cardiomyopathy
+property_value: narrowMatch "ORDO:101016" xsd:string
 
 [Term]
 id: DOID:2914
@@ -3327,6 +3328,7 @@ subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
 subset: DO_RAD_slim
+subset: NCIthesaurus
 xref: ICD10CM:C18.9
 xref: KEGG:05210
 xref: MESH:D015179

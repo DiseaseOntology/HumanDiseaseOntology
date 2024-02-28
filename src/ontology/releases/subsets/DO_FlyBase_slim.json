@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-01-31/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-02-28/subsets/DO_FlyBase_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050155",
@@ -324,7 +324,7 @@
           "xrefs" : [ "url:https://rarediseases.info.nih.gov/diseases/4945/spinal-muscular-atrophy-type-2" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "MUSCULAR ATROPHY, SPINAL, INFANTILE CHRONIC FORM"
@@ -673,7 +673,7 @@
           "val" : "A substance dependence that is characterized by tolerance, withdrawal symptoms, increasing use, persistent desire to decrease consumption, time spent obtaining or recovering from alcohol caused by a physical and psychological dependence on alcohol.",
           "xrefs" : [ "url:https://en.wikipedia.org/wiki/Alcohol_dependence" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "alcoholism"
@@ -4610,7 +4610,7 @@
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Familial_spastic_paraplegia" ]
         },
         "comments" : [ "Xref MGI." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "French settlement disease"
@@ -4794,10 +4794,10 @@
           "val" : "LQT"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Romano-Ward syndrome"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "long Q-T syndrome"
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "Romano-Ward syndrome"
         } ],
         "xrefs" : [ {
           "val" : "GARD:6922"
@@ -4812,8 +4812,6 @@
         }, {
           "val" : "OMIM:PS192500"
         }, {
-          "val" : "ORDO:101016"
-        }, {
           "val" : "ORDO:768"
         }, {
           "val" : "SNOMEDCT_US_2023_03_01:9651007"
@@ -4826,6 +4824,9 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+          "val" : "ORDO:101016"
         } ]
       }
     }, {
@@ -6825,7 +6826,7 @@
           "xrefs" : [ "url:http://www.cancer.gov/dictionary?CdrID=444983" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_RAD_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_RAD_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
           "val" : "ICD10CM:C18.9"
         }, {

@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_infectious_disease_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-01-31/subsets/DO_infectious_disease_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-02-28/subsets/DO_infectious_disease_slim.owl"/>
     </owl:Ontology>
     
 
@@ -759,7 +759,6 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_GXD_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment>DO:wk</rdfs:comment>
         <rdfs:label>disease by infectious agent</rdfs:label>
     </owl:Class>
@@ -2945,6 +2944,59 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_0070527 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0070527">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050338"/>
+        <obo:IAO_0000115>A primary bacterial infectious disease that has_material_basis_in Borrelia miyamotoi, which is transmitted_by the blacklegged tick (Ixodes scapularis), the western blacklegged tick (Ixodes pacificus), the taiga tick (Ixodes persulcatus), or the castor bean tick (Ixodes ricinus). The infection has_symptom fever, headache, chills, muscle pain, joint pain, asthenia, fatigue and nausea, and rarely relapses.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:713014002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C4076531</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>BMD</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hard tick-borne relapsing fever</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0070527</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <rdfs:label xml:lang="en">Borrelia miyamotoi disease</rdfs:label>
+        <skos:exactMatch>SNOMEDCT_US_2023_03_01:713014002</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C4076531</skos:exactMatch>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0070527"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A primary bacterial infectious disease that has_material_basis_in Borrelia miyamotoi, which is transmitted_by the blacklegged tick (Ixodes scapularis), the western blacklegged tick (Ixodes pacificus), the taiga tick (Ixodes persulcatus), or the castor bean tick (Ixodes ricinus). The infection has_symptom fever, headache, chills, muscle pain, joint pain, asthenia, fatigue and nausea, and rarely relapses.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36113496/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36839539</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0070528 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0070528">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050340"/>
+        <obo:IAO_0000115>An opportunistic bacterial infectious disease characterized by necrotizing pneumonia, acute respiratory distress syndrome, and bacteremia that has_material_basis_in Burkholderia cepacia complex, which is transmitted_by contact transmission, droplet spread transmission, vehicle-borne fomite transmission, and vehicle-borne ingestion transmission.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>CS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0070528</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <rdfs:comment>This disease occurs primarily in patients with cystic fibrosis. Cases have been seen where the disease develops years after initial infection.</rdfs:comment>
+        <rdfs:label xml:lang="en">cepacia syndrome</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0070528"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An opportunistic bacterial infectious disease characterized by necrotizing pneumonia, acute respiratory distress syndrome, and bacteremia that has_material_basis_in Burkholderia cepacia complex, which is transmitted_by contact transmission, droplet spread transmission, vehicle-borne fomite transmission, and vehicle-borne ingestion transmission.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/15463897/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/33214785/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/36815622/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/hai/organisms/bcepacia.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_0080159 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080159">
@@ -3076,6 +3128,7 @@
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080600</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">COVID-19</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3629,11 +3682,13 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10112">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_10113"/>
         <obo:IAO_0000115>A trypanosomiasis that results from infection by Trypanosoma brucei and gambiense, which is transmitted by the bite of an infected tsetse fly (Glossina spp). The symptoms include fever, headache, joint pain, itching, confusion, sensory disturbances, poor coordination and sleep disturbances.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:7826</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B56</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:086.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05143</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D014353</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84541</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:3385</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:27031003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0041228</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">African sleeping sickness</oboInOwl:hasExactSynonym>
@@ -3641,6 +3696,7 @@
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:10112</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label>sleeping sickness</rdfs:label>
@@ -3668,7 +3724,7 @@
         <oboInOwl:hasDbXref>ICD9CM:086</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MEDDRA:10044707</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D014352</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:266205000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:78940002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0041227</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:10113</oboInOwl:id>
@@ -6500,8 +6556,10 @@
         <oboInOwl:hasDbXref>GARD:6030</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:086.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05142</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:186817003</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0007932</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D014355</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:3386</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:77506005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0041234</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Chagas&apos; disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">chagas&apos; disease with digestive system involvement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">chagas&apos; disease with nervous system involvement</oboInOwl:hasExactSynonym>
@@ -6575,6 +6633,7 @@
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:12155</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label>lymphocytic choriomeningitis</rdfs:label>
     </owl:Class>
@@ -6872,6 +6931,7 @@
         <oboInOwl:hasDbXref>ICD9CM:084</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008288</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C34797</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:673</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:154374002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0024530</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">induced malaria</oboInOwl:hasExactSynonym>
@@ -6934,6 +6994,7 @@
         <oboInOwl:id>DOID:12385</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>shigellosis</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7352,7 +7413,6 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:id>DOID:12750</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>cyclosporiasis</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7989,6 +8049,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasDbXref>ICD10CM:P37.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D014125</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C50503</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:858</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:268875000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0040560</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Toxoplasmosis - congen.</oboInOwl:hasExactSynonym>
@@ -8455,7 +8516,7 @@ DO has these as distinct diseases.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_13768">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_883"/>
-        <obo:IAO_0000115>A parasitic helminthiasis infectious disease that involves parasitic infection of the liver, pancreas and gall bladder by Opisthorchis viverrini or Opisthorchis felineus. The symptoms include dyspepsia, abdominal pain, diarrhea, constipation, hepatomegaly, cholangitis, cholecystitis, and chlolangiocarcinoma.</obo:IAO_0000115>
+        <obo:IAO_0000115>A parasitic helminthiasis infectious disease that involves parasitic infection of the liver, pancreas and gall bladder by Opisthorchis viverrini or Opisthorchis felineus. The symptoms include dyspepsia, abdominal pain, diarrhea, constipation, hepatomegaly, cholangitis, cholecystitis, and cholangiocarcinoma.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:9746</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B66.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:121.0</oboInOwl:hasDbXref>
@@ -8472,7 +8533,7 @@ DO has these as distinct diseases.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_13768"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A parasitic helminthiasis infectious disease that involves parasitic infection of the liver, pancreas and gall bladder by Opisthorchis viverrini or Opisthorchis felineus. The symptoms include dyspepsia, abdominal pain, diarrhea, constipation, hepatomegaly, cholangitis, cholecystitis, and chlolangiocarcinoma.</owl:annotatedTarget>
+        <owl:annotatedTarget>A parasitic helminthiasis infectious disease that involves parasitic infection of the liver, pancreas and gall bladder by Opisthorchis viverrini or Opisthorchis felineus. The symptoms include dyspepsia, abdominal pain, diarrhea, constipation, hepatomegaly, cholangitis, cholecystitis, and cholangiocarcinoma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Opisthorchiasis</oboInOwl:hasDbXref>
@@ -10234,6 +10295,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:id>DOID:2312</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#gram-positive_bacterial_infectious_disease"/>
         <rdfs:label>nocardiosis</rdfs:label>
     </owl:Class>
@@ -10573,6 +10635,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:2938</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>Epstein-Barr virus infectious disease</rdfs:label>
         <skos:exactMatch>MESH:D020031</skos:exactMatch>
         <skos:exactMatch>NCI:C38759</skos:exactMatch>
@@ -10795,6 +10858,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:321</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment>OMIM mapping confirmed by DO. [LS].</rdfs:comment>
         <rdfs:label>tropical spastic paraparesis</rdfs:label>
     </owl:Class>
@@ -12942,6 +13006,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:8566</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label>herpes simplex</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13614,6 +13679,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:8867</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease"/>
         <rdfs:label>molluscum contagiosum</rdfs:label>
     </owl:Class>
@@ -13848,6 +13914,7 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasDbXref>ICD9CM:085</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D007896</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C34767</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:507</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:266206004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0023281</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -13988,7 +14055,6 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasDbXref>OMIM:608207</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:611381</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:611382</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ORDO:507</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:48115004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0023290</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Infection by visceral leishmaniasis</oboInOwl:hasExactSynonym>
@@ -14475,12 +14541,14 @@ DO has these as distinct diseases.</rdfs:comment>
         <oboInOwl:hasDbXref>ICD10CM:A07.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:136.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012523</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:54368</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:88905005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0036231</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Sarcosporidiosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:9640</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <rdfs:label>sarcocystosis</rdfs:label>
     </owl:Class>
     <owl:Axiom>

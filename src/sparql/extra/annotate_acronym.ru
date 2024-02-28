@@ -8,8 +8,12 @@ INSERT {
 	oboInOwl:hasSynonymType a owl:AnnotationProperty ;
 		rdfs:label "has_synonym_type" .
 
+	oboInOwl:SynonymTypeProperty a owl:AnnotationProperty ;
+		rdfs:label "synonym_type_property" .
+
 	obo:OMO_0003012 a owl:AnnotationProperty ;
-		rdfs:label "acronym" .
+		rdfs:label "acronym" ;
+		rdfs:subPropertyOf oboInOwl:SynonymTypeProperty .
 	
 	[] a owl:Axiom ;
 		owl:annotatedSource ?class ;

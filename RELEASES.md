@@ -12,6 +12,17 @@
 
 ## 2024 Releases
 
+### [v2024-03-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-03-28)
+
+This release includes 11,537 disease terms; 8,419 SubClassOf axioms. The addition of 26 new disease terms. This month the DO was updated, we added Peroxisome biogenesis disorder and dystonia subtypes, reclassified Zellweger syndrome subtypes, updated frontotemporal dementia and/or amyotrophic lateral sclerosis and Ohdo syndrome subtype nomenclature, added neurodevelopmental disorder with poor growth and behavioral abnormalities, Stolerman neurodevelopmental syndrome, Nicolaides-Baraitser syndrome, blepharophimosis-impaired intellectual development syndrome, and microcephaly-micromelia syndrome and microcephaly, short stature, Halperin-Birk syndrome and limb abnormalities; revised Lisch epithelial corneal dystrophy.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-03-28/src/ontology/doid-merged.obo) | |
+
 ### [v2024-02-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-02-28)
 
 This release of the Human Disease Ontology includes 11,511 disease classes, 9,160 with textual definitions (79.6%). Diseases that have been revised and/or expanded include CACNA1C-related diseases, long QT syndromes, LAL-D, ARVC, autosomal recessive distal hereditary motor neuronopathy 8, Pick's disease, hyper IgM syndromes, hypoparathyroidism, parasitic protozoa infectious diseases, and Canavan disease. New diseases include 'syndromic X-linked intellectual developmental disorder bain type', SPATCCM, ACM subtypes, 'neurodevelopmental disorder with microcephaly, epilepsy, and brain atrophy', 'developmental delay, dysmorphic facies, and brain anomalies', and 'infantile hypotonia with psychomotor retardation and characteristic facies-3'.

@@ -1,0 +1,20 @@
+# Get xrefs for a set of specified DOIDs (specified by ID, as string)
+# Example: All ICD9, ICD10, & SNOMED xrefs for 'disease' and disease branch
+# terms.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX DOID: <http://purl.obolibrary.org/obo/DOID_>
+
+SELECT ?id ?label ?xref
+WHERE {
+	VALUES ?id {
+		"DOID:4"  "DOID:0014667"  "DOID:0050117"  "DOID:630"  "DOID:0080015"
+		"DOID:225" "DOID:150"  "DOID:14566"  "DOID:7"
+	}
+	?class oboInOwl:id ?id ;
+		rdfs:label ?label ;
+		oboInOwl:hasDbXref ?xref .
+	FILTER( REGEX(?xref, "^(ICD9|ICD10|SNOMED)") )
+	FILTER NOT EXISTS { ?class owl:deprecated true }
+}

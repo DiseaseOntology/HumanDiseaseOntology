@@ -1,0 +1,17 @@
+# Get xrefs for a set of related DOIDs (all ancestors of specified disease)
+# Example: All ICD9, ICD10, & SNOMED xrefs for 'bipolar I disorder' and all
+# ancestors.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX DOID: <http://purl.obolibrary.org/obo/DOID_>
+
+SELECT ?id ?label ?xref
+WHERE {
+	?class oboInOwl:id ?id ;
+		rdfs:label ?label ;
+		oboInOwl:hasDbXref ?xref ;
+		^rdfs:subClassOf* DOID:14042 .
+	FILTER( REGEX(?xref, "^(ICD9|ICD10|SNOMED)") )
+	FILTER NOT EXISTS { ?class owl:deprecated true }
+}

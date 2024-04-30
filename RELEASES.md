@@ -12,6 +12,17 @@
 
 ## 2024 Releases
 
+### [v2024-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-04-30)
+
+The DO's April 2024 release includes: 11,550 human disease terms. This release includes classification revisions for anemia, and B-cell lymphoma; the addition of  genes to additional DOID definitions; the addition of disease subtypes for: cone-rod dystrophy; amelogenesis imperfecta, anemia, Ullrich congenital muscular dystrophy and autosomal recessive intellectual developmental disorder 82; the addition of new DOIDs: interstitial lung disease, large B-cell lymphoma, hyperimmunoglobulinemia D periodic fever syndrome, and PFAPA syndrome.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-04-30/src/ontology/doid-merged.obo) | |
+
 ### [v2024-03-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-03-28)
 
 This release includes 11,537 disease terms; 8,419 SubClassOf axioms. The addition of 26 new disease terms. This month the DO was updated, we added Peroxisome biogenesis disorder and dystonia subtypes, reclassified Zellweger syndrome subtypes, updated frontotemporal dementia and/or amyotrophic lateral sclerosis and Ohdo syndrome subtype nomenclature, added neurodevelopmental disorder with poor growth and behavioral abnormalities, Stolerman neurodevelopmental syndrome, Nicolaides-Baraitser syndrome, blepharophimosis-impaired intellectual development syndrome, and microcephaly-micromelia syndrome and microcephaly, short stature, Halperin-Birk syndrome and limb abnormalities; revised Lisch epithelial corneal dystrophy.

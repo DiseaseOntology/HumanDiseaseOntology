@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-03-28/subsets/NCIthesaurus.obo
-date: 28:03:2024 18:17
+data-version: doid/releases/2024-04-30/subsets/NCIthesaurus.obo
+date: 30:04:2024 11:49
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -109,14 +109,15 @@ is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
 id: DOID:0050156
-name: idiopathic pulmonary fibrosis
+name: interstitial lung disease 2
 namespace: disease_ontology
-def: "A pulmonary fibrosis that is characterized by scarring of the lung." [url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
+def: "An interstitial lung disease pulmonary fibrosis that is characterized by scarring of the lung and that has_material_basis_in heterozygous mutation in the SFTPA2 gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cryptogenic fibrosing alveolitis" EXACT []
 synonym: "FIBROCYSTIC PULMONARY DYSPLASIA" EXACT []
+synonym: "idiopathic pulmonary fibrosis" EXACT []
 synonym: "IDIOPATHIC PULMONARY FIBROSIS, FAMILIAL" EXACT []
 xref: EFO:0000768
 xref: GARD:8609
@@ -127,7 +128,7 @@ xref: NCI:C35716
 xref: OMIM:178500
 xref: SNOMEDCT_US_2023_03_01:28168000
 xref: UMLS_CUI:C1800706
-is_a: DOID:3770 ! pulmonary fibrosis
+is_a: DOID:3082 ! interstitial lung disease
 
 [Term]
 id: DOID:0050157
@@ -1503,12 +1504,13 @@ creation_date: 2012-09-18T01:57:40Z
 id: DOID:0050745
 name: diffuse large B-cell lymphoma
 namespace: disease_ontology
-def: "A B-cell lymphoma that is a cancer of B cells presenting as an aggressive tumour which can arise in virtually any part of the body." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C148392, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
+def: "A large B-cell lymphoma that is consisting of medium-sized to large B cells with a diffuse growth pattern." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C148392, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "DLBCL" EXACT []
 xref: GARD:3178
+xref: ICD11:2A81.Z
 xref: ICDO:9680/3
 xref: MESH:D016403
 xref: NCI:C80280
@@ -5494,13 +5496,13 @@ is_a: DOID:3905 ! lung carcinoma
 id: DOID:0080779
 name: plasmablastic lymphoma
 namespace: disease_ontology
-def: "A diffuse large B-cell lymphoma that is characterized by the presence of large neoplastic cells resembling B-immunoblasts which have the immunophenotypic profile of plasma cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6467349/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC7430862/]
+def: "A large B-cell lymphoma that is characterized by the presence of large neoplastic cells resembling B-immunoblasts which have the immunophenotypic profile of plasma cells." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6467349/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC7430862/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9735/3
 xref: MESH:D000069293
 xref: NCI:C7224
-is_a: DOID:0050745 ! diffuse large B-cell lymphoma
+is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
 id: DOID:0080780
@@ -5892,7 +5894,7 @@ is_a: DOID:0050745 ! diffuse large B-cell lymphoma
 id: DOID:0081004
 name: high-grade B-cell lymphoma double-hit/triple-hit
 namespace: disease_ontology
-def: "A B-cell lymphoma that is characterized by the abnormal rearrangement of two genes, MYC gene and either BCL2 or BCL6 genes." [url:https\://pubmed.ncbi.nlm.nih.gov/29475959/]
+def: "A large B-cell lymphoma that is characterized by the abnormal rearrangement of two genes, MYC gene and either BCL2 or BCL6 genes." [url:https\://pubmed.ncbi.nlm.nih.gov/29475959/]
 subset: NCIthesaurus
 synonym: "HGBL-DH/TH" EXACT []
 synonym: "High Grade B-Cell Lymphoma with MYC and BCL2 or BCL6 Rearrangements" EXACT []
@@ -6660,7 +6662,7 @@ is_a: DOID:0081307 ! lymphomatoid granulomatosis
 id: DOID:0081311
 name: intravascular large B-cell lymphoma
 namespace: disease_ontology
-def: "A B-cell lymphoma that is characterized by the presence of lymphoma cells exclusively in the lumina of small vessels, particularly capillaries." [url:https\://ashpublications.org/blood/article/132/15/1561/39314/Intravascular-large-B-cell-lymphoma-a-chameleon]
+def: "A large B-cell lymphoma that is characterized by the presence of lymphoma cells exclusively in the lumina of small vessels, particularly capillaries." [url:https\://ashpublications.org/blood/article/132/15/1561/39314/Intravascular-large-B-cell-lymphoma-a-chameleon]
 subset: NCIthesaurus
 xref: ICDO:9712/3
 xref: NCI:C4342
@@ -10067,7 +10069,7 @@ name: thalassemia
 namespace: disease_ontology
 alt_id: DOID:12242
 alt_id: DOID:12243
-def: "A hemolytic anemia characterized by decreased synthesis of one or more hemoglobin polypeptide chains." [url:https\://www.genome.gov/Genetic-Disorders/Thalassemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/11283697]
+def: "A microcytic anemia characterized by decreased synthesis of one or more hemoglobin polypeptide chains." [url:https\://www.genome.gov/Genetic-Disorders/Thalassemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/11283697]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -10082,7 +10084,7 @@ xref: MESH:D013789
 xref: NCI:C35069
 xref: SNOMEDCT_US_2023_03_01:191192008
 xref: UMLS_CUI:C0039730
-is_a: DOID:583 ! hemolytic anemia
+is_a: DOID:2355 ! anemia
 
 [Term]
 id: DOID:10261
@@ -12641,7 +12643,7 @@ name: sickle cell anemia
 namespace: disease_ontology
 alt_id: DOID:12924
 alt_id: DOID:13024
-def: "A blood protein disease that is characterized by low number of red blood cells, repeated infections, and periodic episodes of pain, resulting from atypical hemoglobin molecules called hemoglobin S, which can distort red blood cells into a sickle, or crescent, shape." [url:https\://en.wikipedia.org/wiki/Sickle_cell_disease, url:https\://ghr.nlm.nih.gov/condition/sickle-cell-disease, url:https\://www.nhlbi.nih.gov/health-topics/sickle-cell-disease]
+def: "A sickle cell disease that is characterized by the replacement of both of the beta-globin subunits in hemoglobin with hemoglobin S, resulting in a low number of red blood cells, repeated infections, and periodic episodes of pain." [url:https\://en.wikipedia.org/wiki/Sickle_cell_disease, url:https\://ghr.nlm.nih.gov/condition/sickle-cell-disease, url:https\://www.nhlbi.nih.gov/health-topics/sickle-cell-disease]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -12650,8 +12652,10 @@ synonym: "haemoglobin SC disease" EXACT []
 synonym: "Hb SC disease" EXACT []
 synonym: "Hb-S/Hb-C disease" EXACT []
 synonym: "Hb-SS disease without crisis" EXACT []
+synonym: "HbSS disease" EXACT []
 synonym: "Hemoglobin S disease without crisis" EXACT []
 synonym: "hemoglobin SC disease" EXACT []
+synonym: "homozygous sickle cell disease" EXACT []
 synonym: "sickle cell anaemia" EXACT []
 synonym: "Sickle-cell/Hb-C disease without crisis" EXACT []
 xref: GARD:8614
@@ -12663,7 +12667,6 @@ xref: MESH:D000755
 xref: MESH:D006450
 xref: NCI:C34383
 xref: NCI:C34676
-xref: OMIM:603903
 xref: ORDO:232
 xref: SNOMEDCT_US_2023_03_01:154798006
 xref: SNOMEDCT_US_2023_03_01:35434009
@@ -12991,12 +12994,16 @@ is_a: DOID:2921 ! glomerulonephritis
 
 [Term]
 id: DOID:1098
-name: fetal erythroblastosis
+name: hemolytic disease of the fetus
 namespace: disease_ontology
+def: "A microcytic anemia that is characterized by Rho(D) incompatibility, which may develop when a woman with Rh-negative blood is impregnated by an individual with Rh-positive blood and conceives a fetus with Rh-positive blood, sometimes resulting in hemolysis." [url:https\://www.ncbi.nlm.nih.gov/books/NBK557423/]
 subset: NCIthesaurus
+synonym: "alloimmune HDFN" EXACT []
 synonym: "EF - Erythroblastosis foetalis" EXACT []
 synonym: "erythroblastosis fetalis" EXACT []
+synonym: "fetal erythroblastosis" EXACT []
 synonym: "Haemolytic disease due to rhesus isoimmunisation" EXACT []
+synonym: "Hemolytic disease of the fetus and newborn" EXACT []
 synonym: "rhesus isoimmunisation of the newborn" EXACT []
 xref: ICD10CM:P55
 xref: ICD9CM:773
@@ -13927,6 +13934,7 @@ is_a: DOID:8432 ! polycythemia
 id: DOID:11243
 name: anemia of prematurity
 namespace: disease_ontology
+def: "A neonatal anemia that is characterized by anemia experienced by preterm infants in the early postnatal weeks." [url:https\://pubmed.ncbi.nlm.nih.gov/20463861/, url:https\://www.nature.com/articles/s41372-021-00992-0]
 subset: NCIthesaurus
 xref: ICD10CM:P61.2
 xref: ICD9CM:776.6
@@ -15661,6 +15669,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:11759
 name: hypochromic anemia
 namespace: disease_ontology
+def: "An anemia that is characterized by a decrease in the ratio of the weight of hemoglobin to the volume of the erythrocyte. As a result, the red cells have an area of central pallor which is increased in size. The leading cause is iron deficiency." [url:https\://en.wikipedia.org/wiki/Hypochromic_anemia]
 subset: NCIthesaurus
 synonym: "ANEMIA HYPOCHROMIC" EXACT []
 xref: ICD10CM:D50
@@ -17582,7 +17591,7 @@ is_a: DOID:1245 ! vulva cancer
 id: DOID:12449
 name: aplastic anemia
 namespace: disease_ontology
-def: "An anemia that is characterized by a deficiency of red blood cells, white blood cells and platelets produced by bone marrow." [url:http\://en.wikipedia.org/wiki/Aplastic_anemia, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/aplastic/]
+def: "A normocytic anemia that is characterized by a deficiency of red blood cells, white blood cells and platelets produced by bone marrow." [url:http\://en.wikipedia.org/wiki/Aplastic_anemia, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/aplastic/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -17594,7 +17603,7 @@ xref: NCI:C2870
 xref: OMIM:609135
 xref: SNOMEDCT_US_2023_03_01:154807001
 xref: UMLS_CUI:C0002874
-is_a: DOID:2355 ! anemia
+is_a: DOID:720 ! normocytic anemia
 
 [Term]
 id: DOID:1245
@@ -20223,7 +20232,7 @@ is_a: DOID:1294 ! vulva carcinoma
 id: DOID:1339
 name: Diamond-Blackfan anemia
 namespace: disease_ontology
-def: "A congenital hypoplastic anemia that is characterized by anemia (low red blood cell counts) with decreased erythroid progenitors in the bone marrow and has_material_basis_insufficient levels of red blood cells due to bone marrow dysfunction." [url:http\://en.wikipedia.org/wiki/Diamond%E2%80%93Blackfan_anemia, url:http\://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia, url:http\://www.cdc.gov/ncbddd/dba/, url:http\://www.omim.org/entry/105650]
+def: "A pure red-cell aplasia that is characterized by anemia (low red blood cell counts) with decreased erythroid progenitors in the bone marrow and has_material_basis_insufficient levels of red blood cells due to bone marrow dysfunction." [url:http\://en.wikipedia.org/wiki/Diamond%E2%80%93Blackfan_anemia, url:http\://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia, url:http\://www.cdc.gov/ncbddd/dba/, url:http\://www.omim.org/entry/105650]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -20235,7 +20244,7 @@ xref: MESH:D029503
 xref: NCI:C61236
 xref: OMIM:PS105650
 xref: ORDO:124
-is_a: DOID:12449 ! aplastic anemia
+is_a: DOID:1340 ! pure red-cell aplasia
 
 [Term]
 id: DOID:13399
@@ -20268,6 +20277,7 @@ is_a: DOID:119 ! vaginal cancer
 id: DOID:1340
 name: pure red-cell aplasia
 namespace: disease_ontology
+def: "A congenital hypoplastic anemia that is characterized by a normocytic normochromic anemia with severe reticulocytopenia and marked reduction or absence of erythroid precursors from the bone marrow." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6142432/]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "primary red cell aplasia" EXACT []
@@ -20823,6 +20833,7 @@ is_a: DOID:0050619 ! paranasal sinus cancer
 id: DOID:13576
 name: twin-to-twin transfusion syndrome
 namespace: disease_ontology
+def: "A neonatal anemia that is characterized by an increased number of arteriovenous anastomoses deep in the placenta. These capillary connections occur in the cotyledon portion of the placenta. Unidirectional flow can occur in these arteriovenous anastomoses and result in shunting of blood towards one twin and away from the other when the arteriovenous anastomoses are unbalanced." [url:https\://www.nationwidechildrens.org/conditions/twin-to-twin-transfusion-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK563133/]
 subset: NCIthesaurus
 synonym: "Fetal blood loss from fetal hemorrhage into co-twin" EXACT []
 synonym: "Fetal hemorrhage into co-twin" EXACT []
@@ -29290,6 +29301,7 @@ property_value: exactMatch "MESH:D000740" xsd:string
 id: DOID:2361
 name: macrocytic anemia
 namespace: disease_ontology
+def: "An anemia that is characterized by the production of abnormally large red blood cells and mean corpuscular volume (MCV) (more than 100 fL)." [url:https\://my.clevelandclinic.org/health/diseases/23017-macrocytic-anemia]
 subset: NCIthesaurus
 synonym: "ANEMIA MACROCYTIC" EXACT []
 synonym: "Macrocytic anaemia" EXACT []
@@ -33058,7 +33070,7 @@ is_a: DOID:2921 ! glomerulonephritis
 
 [Term]
 id: DOID:2987
-name: familial mediterranean fever
+name: familial Mediterranean fever
 namespace: disease_ontology
 def: "An autoimmune disease characterized by recurrent episodes of fever and acute inflammation of the membranes lining the abdomen, joints and lungs; that has_material_basis_in mutations in the MEFV gene, which encodes the protein pyrin." [url:http\://en.wikipedia.org/wiki/Familial_Mediterranean_fever, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/127/viewAbstract]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
@@ -33791,6 +33803,7 @@ xref: GARD:13336
 xref: ICD10CM:J84.9
 xref: MESH:D017563
 xref: NCI:C164315
+xref: OMIM:PS619611
 xref: SNOMEDCT_US_2023_03_01:64667001
 xref: UMLS_CUI:C0206062
 is_a: DOID:850 ! lung disease
@@ -51981,6 +51994,7 @@ is_a: DOID:3700 ! uterine ligament adenocarcinoma
 id: DOID:583
 name: hemolytic anemia
 namespace: disease_ontology
+def: "A normocytic anemia that is characterized by the rate of descruction of red blood cells exceeding the rate than they can be made." [url:https\://www.hopkinsmedicine.org/health/conditions-and-diseases/hemolytic-anemia]
 comment: OMIM mapping confirmed by DO. [SN].\nOMIM mapping by NeuroDevNet. [LS].
 subset: NCIthesaurus
 synonym: "ANEMIA HEMOLYTIC" EXACT []
@@ -58085,7 +58099,7 @@ is_a: DOID:3829 ! pituitary adenoma
 id: DOID:718
 name: autoimmune hemolytic anemia
 namespace: disease_ontology
-def: "An autoimmune disease of blood that is characterized by deficient red blood cells caused by auto-antibodies." [url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia] {comment="sn:IEDB"}
+def: "A hemolytic anemia that is characterized by deficient red blood cells caused by auto-antibodies." [url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -58176,8 +58190,10 @@ is_a: DOID:1357 ! maxillary sinus cancer
 id: DOID:720
 name: normocytic anemia
 namespace: disease_ontology
+def: "An anemia that is characterized by circulating red blood cells that are the same size and have a normal red color and a mean corpuscular volume (MCV) between 80 and 100 fL." [url:https\://www.ncbi.nlm.nih.gov/books/NBK565880]
 subset: NCIthesaurus
 synonym: "ANEMIA NORMOCYTIC" EXACT []
+synonym: "Normocytic normochromic anemia" EXACT []
 xref: NCI:C35142
 xref: SNOMEDCT_US_2023_03_01:300980002
 xref: UMLS_CUI:C0085577
@@ -65423,7 +65439,7 @@ is_a: DOID:2462 ! retinal vascular disease
 id: DOID:8955
 name: sideroblastic anemia
 namespace: disease_ontology
-def: "An aplastic anemia where the bone marrow produces ringed sideroblasts rather than healthy red blood cells (erythrocytes)." [url:http\://en.wikipedia.org/wiki/Sideroblastic_anemia]
+def: "A microcytic anemia where the bone marrow produces ringed sideroblasts rather than healthy red blood cells (erythrocytes)." [url:http\://en.wikipedia.org/wiki/Sideroblastic_anemia]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "ANEMIA SIDEROBLASTIC" EXACT []
@@ -65436,7 +65452,7 @@ xref: NCI:C36078
 xref: OMIM:PS300751
 xref: SNOMEDCT_US_2023_03_01:154810008
 xref: UMLS_CUI:C0002896
-is_a: DOID:12449 ! aplastic anemia
+is_a: DOID:2355 ! anemia
 
 [Term]
 id: DOID:8970

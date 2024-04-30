@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-03-28/subsets/DO_rare_slim.obo
-date: 28:03:2024 18:17
+data-version: doid/releases/2024-04-30/subsets/DO_rare_slim.obo
+date: 30:04:2024 11:49
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -114,14 +114,15 @@ is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
 id: DOID:0050156
-name: idiopathic pulmonary fibrosis
+name: interstitial lung disease 2
 namespace: disease_ontology
-def: "A pulmonary fibrosis that is characterized by scarring of the lung." [url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
+def: "An interstitial lung disease pulmonary fibrosis that is characterized by scarring of the lung and that has_material_basis_in heterozygous mutation in the SFTPA2 gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cryptogenic fibrosing alveolitis" EXACT []
 synonym: "FIBROCYSTIC PULMONARY DYSPLASIA" EXACT []
+synonym: "idiopathic pulmonary fibrosis" EXACT []
 synonym: "IDIOPATHIC PULMONARY FIBROSIS, FAMILIAL" EXACT []
 xref: EFO:0000768
 xref: GARD:8609
@@ -1367,13 +1368,12 @@ is_a: DOID:9884 ! muscular dystrophy
 id: DOID:0050558
 name: Ullrich congenital muscular dystrophy
 namespace: disease_ontology
-def: "A congenital muscular dystrophy that is characterized by muscle weakness and respiratory depression and has_material_basis_in mutation in the COL6A1, COL6A2 and COL6A3 that produce components of type VI collagen." [url:https\://en.wikipedia.org/wiki/Ullrich_congenital_muscular_dystrophy]
-comment: OMIM mapping confirmed by DO. [SN].
+def: "A congenital muscular dystrophy that is characterized by congenital weakness, hypotonia, proximal joint contractures, marked hyperlaxity of the distal joints, with a loss of ambulation (if achieved) and uniform respiratory insufficiency during childhood that has_material_basis_in mutations in COL6A1, COL6A2 and  COL6A3 genes." [url:https\://en.wikipedia.org/wiki/Ullrich_congenital_muscular_dystrophy]
 subset: DO_rare_slim
 synonym: "ULLRICH DISEASE" EXACT []
 synonym: "Ullrich scleroatonic muscular dystrophy" EXACT []
 xref: GARD:4769
-xref: OMIM:254090
+xref: ORDO:75840
 is_a: DOID:0050557 ! congenital muscular dystrophy
 
 [Term]
@@ -1726,7 +1726,7 @@ is_a: DOID:1395 ! schistosomiasis
 id: DOID:0050601
 name: ADULT syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by light pigmentation with excessive freckling, sparse hair involving the scalp and axilla, lacrimal duct stenosis or atresia, onychodysplasia, hypodontia or early loss of permanent teeth, athelia or hypoplastic nipples, and breast hypoplasia, has_material_basis_in a mutation in TP63." [url:https\://pubmed.ncbi.nlm.nih.gov/16114047/]
+def: "A syndrome that is characterized by light pigmentation with excessive freckling, sparse hair involving the scalp and axilla, lacrimal duct stenosis or atresia, onychodysplasia, hypodontia or early loss of permanent teeth, athelia or hypoplastic nipples, and breast hypoplasia, has_material_basis_in heterozygous mutation in the TP63 gene on chromosome 3q28." [url:https\://pubmed.ncbi.nlm.nih.gov/16114047/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "acro-dermato-ungual-lacrimal-tooth syndrome" EXACT []
@@ -1827,7 +1827,7 @@ xref: OMIM:300600
 id: DOID:0050631
 name: Allan-Herndon-Dudley syndrome
 namespace: disease_ontology
-def: "A syndrome that has_material_basis_in mutation at is in the gene encoding the monocarboxylate transporter-8 which alters the structure and function of the SLC16A2 protein which is then unable to transport the thyroid triiodothyronine (T3) hormone into nerve cells of the developing brain affecting normal brain development resulting in intellectual disability and problems with movement." [url:http\://ghr.nlm.nih.gov/condition/allan-herndon-dudley-syndrome, url:http\://omim.org/entry/300523]
+def: "A syndrome that has_material_basis_in mutation in the MCT8 gene on chromosome Xq13." [url:http\://ghr.nlm.nih.gov/condition/allan-herndon-dudley-syndrome, url:http\://omim.org/entry/300523]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "AHDS" EXACT []
@@ -2285,7 +2285,7 @@ xref: OMIM:186580
 id: DOID:0050679
 name: blue cone monochromacy
 namespace: disease_ontology
-def: "An achromatopsia that is characterized by severely impaired color discrimination, low visual acuity, nystagmus, photophobia due to the absence of functional long wavelength-sensitive and medium wavelength-sensitive cones in the retina and has_material_basis_in recessive X-linked inheritance." [url:http\://omim.org/entry/303700, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=16]
+def: "An achromatopsia that is characterized by severely impaired color discrimination, low visual acuity, nystagmus, photophobia due to the absence of functional long wavelength-sensitive and medium wavelength-sensitive cones in the retina and has_material_basis_in alteration in the red (OPN1LW) and green (OPN1MW) visual pigment gene cluster on chromosome Xq28 or in the locus control region for the red and green pigment genes, located adjacent to and 5-prime of the pigment gene cluster." [url:http\://omim.org/entry/303700, url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=16]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 xref: GARD:917
@@ -2548,12 +2548,13 @@ creation_date: 2012-08-10T01:08:47Z
 id: DOID:0050745
 name: diffuse large B-cell lymphoma
 namespace: disease_ontology
-def: "A B-cell lymphoma that is a cancer of B cells presenting as an aggressive tumour which can arise in virtually any part of the body." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C148392, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
+def: "A large B-cell lymphoma that is consisting of medium-sized to large B cells with a diffuse growth pattern." [url:http\://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma, url:https\://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C148392, url:https\://www.ncbi.nlm.nih.gov/pubmed/28487884]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "DLBCL" EXACT []
 xref: GARD:3178
+xref: ICD11:2A81.Z
 xref: ICDO:9680/3
 xref: MESH:D016403
 xref: NCI:C80280
@@ -4446,7 +4447,7 @@ creation_date: 2014-09-16T14:21:07Z
 id: DOID:0060199
 name: amyotrophic lateral sclerosis type 7
 namespace: disease_ontology
-def: "An amyotrophic lateral sclerosis that has_material_basis_in mutation in loci on chromosome 20." [url:http\://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis, url:http\://omim.org/entry/608031]
+def: "An amyotrophic lateral sclerosis that has_material_basis_in mutation in SOD1 gene on chromosome 20." [url:http\://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis, url:http\://omim.org/entry/608031]
 subset: DO_rare_slim
 synonym: "ALS7" EXACT []
 synonym: "amyotrophic lateral sclerosis 7" EXACT []
@@ -5581,10 +5582,11 @@ creation_date: 2015-02-05T09:58:47Z
 id: DOID:0060289
 name: Ohdo syndrome
 namespace: disease_ontology
-def: "A syndrome that is characterized by blepharophimosis, ptosis, dental hypoplasia, hearing impairment and intellectual disability." [url:http\://www.orpha.net/consor/cgi-bin/Disease_Search.php?lng=EN&data_id=2489&Disease_Disease_Search_diseaseGroup=Ohdo-syndrome&Disease_Disease_Search_diseaseType=Pat&Disease%28s%29/group%20of%20diseases=Blepharophimosis-intellectual-disability-syndrome--Ohdo-type--Ohdo-syndrome-&title=Blepharophimosis-intellectual-disability-syndrome--Ohdo-type--Ohdo-syndrome-&search=Disease_Search_Simple]
+def: "A syndrome that is characterized by blepharophimosis, ptosis, dental hypoplasia, hearing impairment and intellectual disability." [url:https\://rarediseases.info.nih.gov/diseases/3348/disease]
 comment: NT MGI.
 subset: DO_rare_slim
 synonym: "Ohdo blepharophimosis syndrome" EXACT []
+xref: GARD:3348
 xref: MESH:C536232
 xref: OMIM:249620
 xref: OMIM:300895
@@ -5635,7 +5637,7 @@ creation_date: 2015-02-05T10:12:23Z
 id: DOID:0060292
 name: X-linked chondrodysplasia punctata 1
 namespace: disease_ontology
-def: "A chondrodysplasia punctata that is characterized by maxillary hypoplasia, stippled chondrodystrophy, flat nasal tip and short columella, has_material_basis_in X-linked recessive inheritance, has_material_basis_in deficiency of arylsulfatase E. and is associated with associated with vitamin K-related teratogenicity." [url:https\://en.wikipedia.org/wiki/X-linked_recessive_chondrodysplasia_punctata]
+def: "A chondrodysplasia punctata that is characterized by maxillary hypoplasia, stippled chondrodystrophy, flat nasal tip and short columella, and that has_material_basis_in a mutation in the ARSE gene on chromosome Xp22." [url:https\://en.wikipedia.org/wiki/X-linked_recessive_chondrodysplasia_punctata]
 comment: NT MGI.
 subset: DO_rare_slim
 synonym: "chondrodystrophia calcificans congenita" EXACT []
@@ -7219,7 +7221,7 @@ creation_date: 2015-10-02T15:43:05Z
 id: DOID:0060432
 name: chromosome 17p13.3 duplication syndrome
 namespace: disease_ontology
-def: "A chromosomal duplication syndrome that has_material_basis_in duplication of the chromosome 17p13.3 region." [url:https\://pubmed.ncbi.nlm.nih.gov/19136950/]
+def: "A chromosomal duplication syndrome that has_material_basis_in the PAFAH1B1 and/or the YWHAE  gene on chromosome 17p13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/19136950/]
 subset: DO_rare_slim
 synonym: "17p13.3 duplication syndrome" EXACT []
 synonym: "17p13.3 microduplication syndrome" EXACT []
@@ -11381,7 +11383,8 @@ namespace: disease_ontology
 def: "A Parkinson's disease characterized by onset of motor symptoms earlier than typically seen, usually prior to 50 years of age." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25904081]
 subset: DO_rare_slim
 synonym: "early-onset Parkinson disease" EXACT []
-xref: ORDO:391411
+synonym: "Young-onset Parkinson disease" EXACT []
+xref: ORDO:2828
 is_a: DOID:14330 ! Parkinson's disease
 
 [Term]
@@ -14538,7 +14541,7 @@ xref: ORDO:93545
 id: DOID:0080210
 name: primary mediastinal B-cell lymphoma
 namespace: disease_ontology
-def: "A diffuse large B-cell lymphoma that is is characterized by a diffuse proliferation of medium to large B-cells associated with sclerosis." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28318892]
+def: "A large B-cell lymphoma that is is characterized by a diffuse proliferation of medium to large B-cells associated with sclerosis." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28318892]
 subset: DO_cancer_slim
 subset: DO_rare_slim
 synonym: "Large cell lymphoma of the mediastinum" EXACT []
@@ -14546,7 +14549,7 @@ synonym: "Mediastinal diffuse large-cell lymphoma with sclerosis" EXACT []
 synonym: "Primary mediastinal clear cell lymphoma of B-cell type" EXACT []
 xref: ICD10CM:C85.2
 xref: ORDO:98838
-is_a: DOID:0050745 ! diffuse large B-cell lymphoma
+is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
 id: DOID:0080213
@@ -17897,7 +17900,7 @@ xref: ORDO:53583
 
 [Term]
 id: DOID:0090045
-name: childhood onset GLUT1 deficiency syndrome 2
+name: childhood-onset GLUT1 deficiency syndrome 2
 namespace: disease_ontology
 def: "A dystonia that is characterized by paroxysmal exercise-induced dyskinesia involving transient abnormal involuntary movements in the exercised limbs, and that has_material_basis_in autosomal dominant inheritance of heterozygous mutation in the solute carrier family 2 member 1 (SLC2A1) gene on chromosome 1p34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26336901, url:https\://www.omim.org/entry/612126]
 subset: DO_rare_slim
@@ -32724,7 +32727,7 @@ name: thalassemia
 namespace: disease_ontology
 alt_id: DOID:12242
 alt_id: DOID:12243
-def: "A hemolytic anemia characterized by decreased synthesis of one or more hemoglobin polypeptide chains." [url:https\://www.genome.gov/Genetic-Disorders/Thalassemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/11283697]
+def: "A microcytic anemia characterized by decreased synthesis of one or more hemoglobin polypeptide chains." [url:https\://www.genome.gov/Genetic-Disorders/Thalassemia, url:https\://www.ncbi.nlm.nih.gov/pubmed/11283697]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -33880,7 +33883,7 @@ name: sickle cell anemia
 namespace: disease_ontology
 alt_id: DOID:12924
 alt_id: DOID:13024
-def: "A blood protein disease that is characterized by low number of red blood cells, repeated infections, and periodic episodes of pain, resulting from atypical hemoglobin molecules called hemoglobin S, which can distort red blood cells into a sickle, or crescent, shape." [url:https\://en.wikipedia.org/wiki/Sickle_cell_disease, url:https\://ghr.nlm.nih.gov/condition/sickle-cell-disease, url:https\://www.nhlbi.nih.gov/health-topics/sickle-cell-disease]
+def: "A sickle cell disease that is characterized by the replacement of both of the beta-globin subunits in hemoglobin with hemoglobin S, resulting in a low number of red blood cells, repeated infections, and periodic episodes of pain." [url:https\://en.wikipedia.org/wiki/Sickle_cell_disease, url:https\://ghr.nlm.nih.gov/condition/sickle-cell-disease, url:https\://www.nhlbi.nih.gov/health-topics/sickle-cell-disease]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -33889,8 +33892,10 @@ synonym: "haemoglobin SC disease" EXACT []
 synonym: "Hb SC disease" EXACT []
 synonym: "Hb-S/Hb-C disease" EXACT []
 synonym: "Hb-SS disease without crisis" EXACT []
+synonym: "HbSS disease" EXACT []
 synonym: "Hemoglobin S disease without crisis" EXACT []
 synonym: "hemoglobin SC disease" EXACT []
+synonym: "homozygous sickle cell disease" EXACT []
 synonym: "sickle cell anaemia" EXACT []
 synonym: "Sickle-cell/Hb-C disease without crisis" EXACT []
 xref: GARD:8614
@@ -33902,7 +33907,6 @@ xref: MESH:D000755
 xref: MESH:D006450
 xref: NCI:C34383
 xref: NCI:C34676
-xref: OMIM:603903
 xref: ORDO:232
 xref: SNOMEDCT_US_2023_03_01:154798006
 xref: SNOMEDCT_US_2023_03_01:35434009
@@ -36185,7 +36189,7 @@ is_a: DOID:0081055 ! central diabetes insipidus
 id: DOID:12449
 name: aplastic anemia
 namespace: disease_ontology
-def: "An anemia that is characterized by a deficiency of red blood cells, white blood cells and platelets produced by bone marrow." [url:http\://en.wikipedia.org/wiki/Aplastic_anemia, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/aplastic/]
+def: "A normocytic anemia that is characterized by a deficiency of red blood cells, white blood cells and platelets produced by bone marrow." [url:http\://en.wikipedia.org/wiki/Aplastic_anemia, url:http\://www.nhlbi.nih.gov/health/health-topics/topics/aplastic/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -37595,7 +37599,7 @@ xref: UMLS_CUI:C0002892
 id: DOID:1339
 name: Diamond-Blackfan anemia
 namespace: disease_ontology
-def: "A congenital hypoplastic anemia that is characterized by anemia (low red blood cell counts) with decreased erythroid progenitors in the bone marrow and has_material_basis_insufficient levels of red blood cells due to bone marrow dysfunction." [url:http\://en.wikipedia.org/wiki/Diamond%E2%80%93Blackfan_anemia, url:http\://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia, url:http\://www.cdc.gov/ncbddd/dba/, url:http\://www.omim.org/entry/105650]
+def: "A pure red-cell aplasia that is characterized by anemia (low red blood cell counts) with decreased erythroid progenitors in the bone marrow and has_material_basis_insufficient levels of red blood cells due to bone marrow dysfunction." [url:http\://en.wikipedia.org/wiki/Diamond%E2%80%93Blackfan_anemia, url:http\://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia, url:http\://www.cdc.gov/ncbddd/dba/, url:http\://www.omim.org/entry/105650]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -37607,12 +37611,13 @@ xref: MESH:D029503
 xref: NCI:C61236
 xref: OMIM:PS105650
 xref: ORDO:124
-is_a: DOID:12449 ! aplastic anemia
+is_a: DOID:1340 ! pure red-cell aplasia
 
 [Term]
 id: DOID:1340
 name: pure red-cell aplasia
 namespace: disease_ontology
+def: "A congenital hypoplastic anemia that is characterized by a normocytic normochromic anemia with severe reticulocytopenia and marked reduction or absence of erythroid precursors from the bone marrow." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC6142432/]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "primary red cell aplasia" EXACT []
@@ -42960,7 +42965,7 @@ is_a: DOID:2921 ! glomerulonephritis
 
 [Term]
 id: DOID:2987
-name: familial mediterranean fever
+name: familial Mediterranean fever
 namespace: disease_ontology
 def: "An autoimmune disease characterized by recurrent episodes of fever and acute inflammation of the membranes lining the abdomen, joints and lungs; that has_material_basis_in mutations in the MEFV gene, which encodes the protein pyrin." [url:http\://en.wikipedia.org/wiki/Familial_Mediterranean_fever, url:https\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/127/viewAbstract]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
@@ -43195,6 +43200,7 @@ xref: GARD:13336
 xref: ICD10CM:J84.9
 xref: MESH:D017563
 xref: NCI:C164315
+xref: OMIM:PS619611
 xref: SNOMEDCT_US_2023_03_01:64667001
 xref: UMLS_CUI:C0206062
 
@@ -48333,7 +48339,7 @@ xref: UMLS_CUI:C0038013
 id: DOID:718
 name: autoimmune hemolytic anemia
 namespace: disease_ontology
-def: "An autoimmune disease of blood that is characterized by deficient red blood cells caused by auto-antibodies." [url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia] {comment="sn:IEDB"}
+def: "A hemolytic anemia that is characterized by deficient red blood cells caused by auto-antibodies." [url:http\://en.wikipedia.org/wiki/Autoimmune_hemolytic_anemia] {comment="sn:IEDB"}
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -49768,7 +49774,7 @@ xref: UMLS_CUI:C0272126
 id: DOID:8955
 name: sideroblastic anemia
 namespace: disease_ontology
-def: "An aplastic anemia where the bone marrow produces ringed sideroblasts rather than healthy red blood cells (erythrocytes)." [url:http\://en.wikipedia.org/wiki/Sideroblastic_anemia]
+def: "A microcytic anemia where the bone marrow produces ringed sideroblasts rather than healthy red blood cells (erythrocytes)." [url:http\://en.wikipedia.org/wiki/Sideroblastic_anemia]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "ANEMIA SIDEROBLASTIC" EXACT []
@@ -49781,7 +49787,6 @@ xref: NCI:C36078
 xref: OMIM:PS300751
 xref: SNOMEDCT_US_2023_03_01:154810008
 xref: UMLS_CUI:C0002896
-is_a: DOID:12449 ! aplastic anemia
 
 [Term]
 id: DOID:8970

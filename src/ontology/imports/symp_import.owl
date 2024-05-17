@@ -8,11 +8,12 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:symp="http://purl.obolibrary.org/obo/symp#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/symp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-04-30/imports/symp_import.owl"/>
-        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/symp/releases/2022-11-30/symp.owl</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/symp_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/symp/releases/2024-05-17/symp.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -432,6 +433,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000410"/>
         <obo:IAO_0000115>A neurological and physiological symptom that is characterized by a chronic feeling of emptiness, sadness, or inability to feel pleasure that may appear to happen for no clear reason.  Additionally one may experience feelings of hopelessness, pessimism, irritability, frustration, or restlessness, guilt, worthlessness and thoughts of death or suicide.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MESH:D003863</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000022</oboInOwl:id>
         <rdfs:label>depression</rdfs:label>
@@ -3055,10 +3057,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000293">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000030"/>
+        <obo:IAO_0000115>A paralysis that is characterized by a weakness or the inability to move on one side of the body.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000293</oboInOwl:id>
         <rdfs:label>hemiparesis</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000293"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A paralysis that is characterized by a weakness or the inability to move on one side of the body.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.stroke.org/en/about-stroke/effects-of-stroke/physical-effects-of-stroke/physical-impact/hemiparesis</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -3078,11 +3087,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000180"/>
+        <obo:IAO_0000115>hepatic abscess is a liver symptom characterized by a pus-filled mass in the liver that can develop from injury to the liver or an intraabdominal infection disseminated from the portal circulation.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>hepatic abscesses</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000295</oboInOwl:id>
         <rdfs:label>hepatic abscess</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000295"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>hepatic abscess is a liver symptom characterized by a pus-filled mass in the liver that can develop from injury to the liver or an intraabdominal infection disseminated from the portal circulation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK538230/#:~:text=A%20liver%20abscess%20is%20defined,caused%20by%20parasites%20and%20fungi.</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -3802,11 +3818,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000349">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000030"/>
+        <obo:IAO_0000115>A paralysis that is characterized by a complete, or partial, loss of function of the lower half of the body with involvement of both legs that is usually due to injury or disease of the spinal cord in the thoracic or lumbar region.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000349</oboInOwl:id>
         <rdfs:comment>doid/symp duplicate</rdfs:comment>
         <rdfs:label>paraplegia</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000349"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A paralysis that is characterized by a complete, or partial, loss of function of the lower half of the body with involvement of both legs that is usually due to injury or disease of the spinal cord in the thoracic or lumbar region.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/paraplegia</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4120,10 +4143,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000030"/>
+        <obo:IAO_0000115>A paralysis that is characterized by a complete or severe weakness of the muscles of respiration.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000371</oboInOwl:id>
         <rdfs:label>respiratory paralysis</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000371"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A paralysis that is characterized by a complete or severe weakness of the muscles of respiration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/mesh/68012133</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4779,10 +4809,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000421">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000146"/>
+        <obo:IAO_0000115>hematochezia is a feces and droppings symptom characterized by the passage of fresh blood per anus, usually in or with stools.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SYMP:0000421</oboInOwl:id>
         <rdfs:label>hematochezia</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000421"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>hematochezia is a feces and droppings symptom characterized by the passage of fresh blood per anus, usually in or with stools.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK411/#A2794</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -6883,6 +6920,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000544">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000030"/>
+        <obo:IAO_0000115>A paralysis that is characterized by a loss of some, or all, muscle control in a limb, and which lasts for only a short time (i.e. is temporary).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD9CM_2005:781.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0159034</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0284133</oboInOwl:hasDbXref>
@@ -6890,6 +6928,13 @@
         <oboInOwl:id>SYMP:0000544</oboInOwl:id>
         <rdfs:label>transient paralysis of limb</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000544"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A paralysis that is characterized by a loss of some, or all, muscle control in a limb, and which lasts for only a short time (i.e. is temporary).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://dictionary.cambridge.org/us/dictionary/english/transient</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.spinalcord.com/blog/what-causes-temporary-paralysis</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -13862,5 +13907,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
 

@@ -1,0 +1,17 @@
+# Ensure that no OMIM prefixed xrefs or skos mappings exist
+# (all OMIM xrefs should use MIM as prefix)
+
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?entity ?mapping_type ?mapping
+WHERE {
+	VALUES ?mapping_type {
+		oboInOwl:hasDbXref
+		skos:exactMatch skos:narrowMatch skos:broadMatch skos:relatedMatch
+		skos:closeMatch
+	}
+	?entity ?mapping_type ?mapping .
+	FILTER(CONTAINS(str(?entity), "DOID_"))
+	FILTER(CONTAINS(?mapping, "OMIM"))
+}

@@ -1,5 +1,5 @@
 <!-- badges: start -->
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10030384.svg)](https://doi.org/10.5281/zenodo.10030384)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10030383.svg)](https://doi.org/10.5281/zenodo.10030383)
 [![Build Status](https://github.com/DiseaseOntology/HumanDiseaseOntology/workflows/DOID%20CI/badge.svg)](https://github.com/DiseaseOntology/HumanDiseaseOntology/actions)
 <!-- badges: end -->
 
@@ -11,9 +11,9 @@ DO OBO and OWL files are available in our GitHub repository. The DO provides bot
 DO website: http://www.disease-ontology.org
 
 DO production has moved to OWL (November 2015).
-DO's SVN repository has been retired. 
+DO's SVN repository has been retired.
 
-A tutorial describing DO's editorial activities is available at: 
+A tutorial describing DO's editorial activities is available at:
 https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md
 
 Documentation on [Disease Ontology web site](http://disease-ontology.org).

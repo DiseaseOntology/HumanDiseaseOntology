@@ -12,6 +12,24 @@
 
 ## 2024 Releases
 
+### [v2024-05-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-05-29)
+
+In this release of the Human Disease Ontology, all cross-references to OMIM in all files have had their prefixes changed from 'OMIM' to 'MIM' to align with OMIM. _Prefixes will stably remain 'MIM' going forward. We apologize for any inconvenience this may cause._
+
+There are now 11,575  disease classes, 9,237 with textual definitions (79.8%) in the ontology with revisions and additions to amino acid metabolic disorders, polycystic kidney diseases, galactosemias, hypotrichosis, episodic ataxias, Loeys-Dietz syndromes, orofaciodigital syndrome, and holoprosencephalies.
+
+## What's Changed
+* Implement OMIM-to-MIM prefix change requested by OMIM by @allenbaron in https://github.com/DiseaseOntology/HumanDiseaseOntology/pull/1334
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-04-30...v2024-05-29
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-05-29/src/ontology/doid-merged.obo) | |
+
 ### [v2024-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-04-30)
 
 The DO's April 2024 release includes: 11,550 human disease terms. This release includes classification revisions for anemia, and B-cell lymphoma; the addition of  genes to additional DOID definitions; the addition of disease subtypes for: cone-rod dystrophy; amelogenesis imperfecta, anemia, Ullrich congenital muscular dystrophy and autosomal recessive intellectual developmental disorder 82; the addition of new DOIDs: interstitial lung disease, large B-cell lymphoma, hyperimmunoglobulinemia D periodic fever syndrome, and PFAPA syndrome.

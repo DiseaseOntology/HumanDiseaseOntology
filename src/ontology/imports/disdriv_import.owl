@@ -11,10 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-04-30/imports/disdriv_import.owl"/>
-        <dc:description>Drivers of human diseases including environmental, maternal and social exposures.</dc:description>
-        <dc:title>Disease Drivers</dc:title>
-        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/disdriv/releases/2023-12-15/disdriv.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -34,6 +32,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <obo:IAO_0000115>The official definition.</obo:IAO_0000115>
+        <rdfs:label>definition</rdfs:label>
     </owl:AnnotationProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -145,46 +144,20 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdfs:label>part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdfs:label>has part</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
-        <rdfs:label>has role</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <rdfs:label xml:lang="en">lead</rdfs:label>
+    </owl:Class>
     
 
 
@@ -219,6 +192,15 @@
         <owl:annotatedTarget>A chemical compound, or part thereof, which causes the onset of an allergic reaction by interacting with any of the molecular pathways involved in an allergy.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_9513 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_9513">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <rdfs:label xml:lang="en">thalidomide</rdfs:label>
+    </owl:Class>
     
 
 

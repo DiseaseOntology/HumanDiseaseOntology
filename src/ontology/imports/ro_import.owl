@@ -7,8 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-04-30/imports/ro_import.owl"/>
-        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/ro/releases/2023-08-18/ro.owl</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/ro_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/ro/releases/2024-04-24/ro.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -115,6 +115,7 @@
     <!-- http://purl.obolibrary.org/obo/RO_0002202 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002202">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002254"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002258"/>
         <rdfs:label xml:lang="en">develops from</rdfs:label>
     </owl:ObjectProperty>
@@ -144,6 +145,15 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002244">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
         <rdfs:label>related via exposure to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002254 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002254">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002258"/>
+        <rdfs:label xml:lang="en">has developmental contribution from</rdfs:label>
     </owl:ObjectProperty>
     
 

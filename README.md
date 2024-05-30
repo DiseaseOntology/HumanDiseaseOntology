@@ -6,18 +6,19 @@
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO).
 
-## Upcoming Change REMINDER!
-_Starting with the next release_ of the Human Disease Ontology (expected at the end of May), the prefix for **OMIM cross-references and susceptibilities** will be 'MIM', not 'OMIM'. For details refer to https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1301. A set of test release files, equivalent to the February DO release with these changes implemented in all production files, is available at https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/mim_test_release/src/ontology.
+## Announcements
+**_NOW LIVE in the [May 2024 release](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2024-05-29)_** -- The prefix for **OMIM cross-references and susceptibilities** is now 'MIM', not 'OMIM', in the Human Disease Ontology. For details refer to https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1301.
 
-**_Acronym annotations NOT included_** - DO will start annotating acronyms in a later release (possibly as early as June). A set of test release files, equivalent to the February DO release with _some_ acronyms annotated in all production files, is available at https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/acronym_test/src/ontology.
+**_Upcoming Change REMINDER: Acronym annotations COMING SOON!_** -- DO will start annotating acronyms in an upcoming release (possibly as early as June). A set of test release files, equivalent to the February DO release with _some_ acronyms annotated in all production files, is available at https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/acronym_test/src/ontology.
 
----
-DO OBO and OWL files are available in our GitHub repository. The DO provides both the asserted DO is_a hierarchy and inferred versions of our ontology files. [Please review our README file for details.](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README_DO_Files)
+
+## Details
+
+DO OBO and OWL files are available in our GitHub repository. The DO provides both the asserted DO is_a hierarchy and inferred versions of our ontology files. [Please review our file README for details.](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README_DO_Files)
 
 DO website: http://www.disease-ontology.org
 
-DO production has moved to OWL (November 2015).
-DO's SVN repository has been retired.
+DO curation and production moved to OWL, git, and GitHub in November 2015. DO's [SVN repository on Sourceforge.net](https://sourceforge.net/projects/diseaseontology/) has been retired but is still available for historical reference.
 
 A tutorial describing DO's editorial activities is available at:
 https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md

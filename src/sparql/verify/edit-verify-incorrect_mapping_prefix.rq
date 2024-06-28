@@ -1,4 +1,4 @@
-# Ensure that no OMIM prefixed xrefs or skos mappings exist
+# Ensure that no unexpected prefixes are used for xrefs or skos mappings exist
 # (all OMIM xrefs should use MIM as prefix)
 
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
@@ -13,5 +13,10 @@ WHERE {
 	}
 	?entity ?mapping_type ?mapping .
 	FILTER(CONTAINS(str(?entity), "DOID_"))
-	FILTER(CONTAINS(?mapping, "OMIM"))
+	FILTER(
+		!REGEX(
+			?mapping,
+			 "^(EFO|GARD|ICD(9|10)CM|ICD11|ICDO|KEGG|MEDDRA|MESH|MIM|NCI|ORDO|UMLS_CUI|SNOMEDCT_US_202[0-9]_[0-9]{2}_[0-9]{2}):"
+		)
+	)
 }

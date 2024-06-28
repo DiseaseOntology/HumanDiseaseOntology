@@ -12,6 +12,19 @@
 
 ## 2024 Releases
 
+### [v2024-06-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-06-28)
+
+This release of the Human Disease Ontology includes 11,598 disease classes, 9,265 with textual definitions (79.9%). Diseases that have been revised and/or expanded include thyroid carcinomas, polycystic liver diseases, primary pigmented nodular adrenocortical diseases, Robinow syndromes, WHIM syndromes, and renal hypomagnesemias. The acquired metabolic diseases auto-brewery syndrome and bladder fermentation syndrome have been added and a number of UMLS and related mappings have been revised and updated. An issue with idiopathic pulmonary fibrosis that arose in the previous release has also been fixed (issue #1341).
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-05-29...v2024-06-28
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-06-28/src/ontology/doid-merged.obo) | |
+
 ### [v2024-05-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-05-29)
 
 In this release of the Human Disease Ontology, all cross-references to OMIM in all files have had their prefixes changed from 'OMIM' to 'MIM' to align with OMIM. _Prefixes will stably remain 'MIM' going forward. We apologize for any inconvenience this may cause._

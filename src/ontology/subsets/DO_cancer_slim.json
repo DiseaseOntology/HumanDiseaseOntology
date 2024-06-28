@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-05-29/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-06-28/subsets/DO_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -2864,7 +2864,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080522",
-      "lbl" : "thyroid gland anaplastic carcinoma",
+      "lbl" : "anaplastic thyroid carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -2874,7 +2874,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "anaplastic thyroid carcinoma"
+          "val" : "thyroid gland anaplastic carcinoma"
         } ],
         "xrefs" : [ {
           "val" : "NCI:C3878"
@@ -2904,7 +2904,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080525",
-      "lbl" : "differentiated thyroid gland carcinoma",
+      "lbl" : "differentiated high-grade thyroid carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -2912,6 +2912,10 @@
           "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C7153&ns=ncit" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "differentiated thyroid gland carcinoma"
+        } ],
         "xrefs" : [ {
           "val" : "NCI:C7153"
         } ],
@@ -7696,7 +7700,7 @@
       "meta" : {
         "definition" : {
           "val" : "An endocrine gland cancer located in the thyroid gland located in the neck below the thyroid cartilage.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Thyroid_gland" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Thyroid_gland", "url:https://pubmed.ncbi.nlm.nih.gov/35288841/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
         "synonyms" : [ {
@@ -13819,7 +13823,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3962",
-      "lbl" : "thyroid gland follicular carcinoma",
+      "lbl" : "follicular thyroid carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -13842,9 +13846,13 @@
           "val" : "Thyroid adenocarcinoma"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "follicular thyroid carcinoma"
+          "val" : "thyroid gland follicular carcinoma"
         } ],
         "xrefs" : [ {
+          "val" : "ICD11:2D10.0"
+        }, {
+          "val" : "ICDO:8330/3"
+        }, {
           "val" : "MESH:D018263"
         }, {
           "val" : "MIM:188470"
@@ -13871,6 +13879,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Thyroid carcinoma"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "head and neck cancer, Thyroid"
         } ],
@@ -13918,28 +13929,8 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_3968",
-      "lbl" : "papillary follicular thyroid adenocarcinoma",
-      "type" : "CLASS",
-      "meta" : {
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "xrefs" : [ {
-          "val" : "MESH:D018265"
-        }, {
-          "val" : "NCI:C7380"
-        }, {
-          "val" : "SNOMEDCT_US_2023_03_01:189643000"
-        }, {
-          "val" : "UMLS_CUI:C0206683"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3969",
-      "lbl" : "thyroid gland papillary carcinoma",
+      "lbl" : "papillary thyroid carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -13951,9 +13942,19 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Papillary carcinoma of the Thyroid gland"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Papillary carcinoma of thyroid"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "thyroid gland papillary carcinoma"
         } ],
         "xrefs" : [ {
           "val" : "GARD:12027"
+        }, {
+          "val" : "ICD11:2D10.1"
+        }, {
+          "val" : "ICDO:8260/3"
         }, {
           "val" : "MESH:D000077273"
         }, {
@@ -13972,17 +13973,20 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3973",
-      "lbl" : "thyroid gland medullary carcinoma",
+      "lbl" : "medullary thyroid carcinoma",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
           "val" : "A thyroid gland carcinoma that has_material_basis_in parafollicular cells.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Medullary_thyroid_cancer" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Medullary_thyroid_cancer", "url:https://www.ncbi.nlm.nih.gov/books/NBK459354/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Medullary carcinoma of the Thyroid gland"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Parafollicular cell carcinoma"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Ultimobranchial thyroid tumor"
@@ -13991,9 +13995,11 @@
           "val" : "Ultimobranchial thyroid tumour"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "medullary thyroid carcinoma"
+          "val" : "thyroid gland medullary carcinoma"
         } ],
         "xrefs" : [ {
+          "val" : "ICDO:8345/3"
+        }, {
           "val" : "MESH:C536914"
         }, {
           "val" : "NCI:C3879"
@@ -21103,7 +21109,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8161",
-      "lbl" : "thyroid gland Hurthle cell carcinoma",
+      "lbl" : "oncocytic carcinoma of the thyroid",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -21114,9 +21120,17 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "oncocytic carcinoma of the thyroid"
+          "val" : "Oncocytic (Hurthle-cell) carcinoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Thyroid Gland Oncocytic Carcinoma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "thyroid gland Hurthle cell carcinoma"
         } ],
         "xrefs" : [ {
+          "val" : "ICDO:8290/3"
+        }, {
           "val" : "MESH:C536913"
         }, {
           "val" : "MIM:607464"
@@ -23925,13 +23939,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_3968",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_3969"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3969",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0080525"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_3969",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_3112"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_3973",
       "pred" : "is_a",

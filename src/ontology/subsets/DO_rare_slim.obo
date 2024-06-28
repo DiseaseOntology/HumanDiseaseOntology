@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-05-29/subsets/DO_rare_slim.obo
-date: 29:05:2024 13:57
+data-version: doid/releases/2024-06-28/subsets/DO_rare_slim.obo
+date: 28:06:2024 13:19
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -114,9 +114,9 @@ is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
 id: DOID:0050156
-name: interstitial lung disease 2
+name: idiopathic pulmonary fibrosis
 namespace: disease_ontology
-def: "An interstitial lung disease pulmonary fibrosis that is characterized by scarring of the lung and that has_material_basis_in heterozygous mutation in the SFTPA2 gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
+def: "A pulmonary fibrosis that is characterized by scarring of the lung characterized by  stiffness in the lungs and makes it difficult to breathe." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.ncbi.nlm.nih.gov/books/NBK448162/, url:https\://www.nhlbi.nih.gov/health/idiopathic-pulmonary-fibrosis, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -129,7 +129,6 @@ xref: GARD:8609
 xref: ICD10CM:J84.112
 xref: ICD9CM:516.31
 xref: MESH:D054990
-xref: MIM:178500
 xref: NCI:C35716
 xref: SNOMEDCT_US_2023_03_01:28168000
 xref: UMLS_CUI:C1800706
@@ -389,21 +388,17 @@ id: DOID:0050428
 name: nonepidermolytic palmoplantar keratoderma
 namespace: disease_ontology
 def: "A palmoplantar keratosis characterized by a well-demarcated, symmetric keratoderma located_in palms and located_in soles." [url:http\://en.wikipedia.org/wiki/Palmoplantar_keratoderma]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
-subset: NCIthesaurus
 synonym: "diffuse nonepidermolytic palmomplantar keratoderma" EXACT []
+synonym: "NEPPK" EXACT []
 synonym: "Thost-Unna Syndrome" EXACT []
 synonym: "tylosis" EXACT []
 synonym: "Unna-Thost Syndrome" EXACT []
-xref: MESH:D015776
-xref: MIM:600962
-xref: NCI:C3147
-xref: ORDO:2337
-xref: SNOMEDCT_US_2023_03_01:81206005
-xref: UMLS_CUI:C0022584
-xref: UMLS_CUI:C3489771
+xref: MESH:C563422
+xref: UMLS_CUI:C1833030
 is_a: DOID:3390 ! palmoplantar keratosis
+property_value: exactMatch "MESH:C563422" xsd:string
+property_value: exactMatch "UMLS_CUI:C1833030" xsd:string
 
 [Term]
 id: DOID:0050429
@@ -2889,7 +2884,7 @@ creation_date: 2013-04-04T11:28:16Z
 id: DOID:0050779
 name: hydrolethalus syndrome
 namespace: disease_ontology
-def: "A syndrome characterized by mulitple fetal developmental defects including polydactyly and central nervous system malformations that results from a single amino acid mutation of D211G of the HYLS1 gene which plays a central role in cilia formation." [url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1017280/?page=1, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2751977/#B33, url:https\://www.ncbi.nlm.nih.gov/pubmed/15843405]
+def: "A syndrome characterized by multiple fetal developmental defects including polydactyly and central nervous system malformations that results from a single amino acid mutation of D211G of the HYLS1 gene which plays a central role in cilia formation." [url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC1017280/?page=1, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2751977/#B33, url:https\://www.ncbi.nlm.nih.gov/pubmed/15843405]
 comment: Xref MGI.
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -4005,7 +4000,7 @@ xref: UMLS_CUI:C0024305
 id: DOID:0060061
 name: primary cutaneous T-cell non-Hodgkin lymphoma
 namespace: disease_ontology
-def: "A non-Hodgkin's lymphoma that has_material_basis_in a mutation of T cells." [url:http\://en.wikipedia.org/wiki/Cutaneous_T-cell_lymphoma]
+def: "A peripheral T-cell lymphoma that has_material_basis_in a mutation of T cells." [url:http\://en.wikipedia.org/wiki/Cutaneous_T-cell_lymphoma]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cutaneous T cell lymphoma" EXACT []
@@ -5409,16 +5404,17 @@ namespace: disease_ontology
 def: "An adrenal cortex disease characterized by small to normal sized adrenal glands containing multiple small cortical pigmented nodules." [url:https\://www.ncbi.nlm.nih.gov/pubmed/2212318]
 comment: NT MGI.
 subset: DO_rare_slim
+synonym: "PPNAD" EXACT []
 xref: GARD:10906
-xref: MESH:C566469
-xref: MESH:C566472
-xref: MIM:610475
-xref: MIM:610489
-xref: MIM:614190
-xref: MIM:615830
-xref: ORDO:189439
-xref: UMLS_CUI:C1864846
-xref: UMLS_CUI:C1864851
+xref: MIM:PS610489
+xref: ORDO:647772
+xref: UMLS_CUI:C4304832
+xref: UMLS_CUI:C5816750
+property_value: exactMatch "GARD:10906" xsd:string
+property_value: exactMatch "MIM:PS610489" xsd:string
+property_value: exactMatch "ORDO:647772" xsd:string
+property_value: exactMatch "UMLS_CUI:C4304832" xsd:string
+property_value: exactMatch "UMLS_CUI:C5816750" xsd:string
 created_by: emitraka
 creation_date: 2015-02-04T16:01:02Z
 
@@ -5948,6 +5944,33 @@ xref: UMLS_CUI:C0023487
 is_a: DOID:9119 ! acute myeloid leukemia
 created_by: emitraka
 creation_date: 2015-02-24T16:50:50Z
+
+[Term]
+id: DOID:0060327
+name: omphalocele
+namespace: disease_ontology
+def: "A physical disorder characterized by a defect in the development of the abdominal wall muscles, resulting in the intestines, liver and other organs to remain outside of the abdomen in a sac." [url:http\://en.wikipedia.org/wiki/Omphalocele, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000994.htm]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "exomphalos" EXACT []
+synonym: "omphalocoele" EXACT []
+xref: ICD10CM:Q79.2
+xref: ICD9CM:756.72
+xref: NCI:C98997
+xref: ORDO:660
+xref: SNOMEDCT_US_2023_03_01:5867007
+xref: UMLS_CUI:C0795690
+property_value: broadMatch "MESH:D006554" xsd:string
+property_value: exactMatch "ICD10CM:Q79.2" xsd:string
+property_value: exactMatch "ICD9CM:756.72" xsd:string
+property_value: exactMatch "NCI:C98997" xsd:string
+property_value: exactMatch "ORDO:660" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:5867007" xsd:string
+property_value: exactMatch "UMLS_CUI:C0795690" xsd:string
+property_value: narrowMatch "MIM:164750" xsd:string
+property_value: narrowMatch "MIM:310980" xsd:string
+created_by: emitraka
+creation_date: 2015-02-25T17:54:05Z
 
 [Term]
 id: DOID:0060329
@@ -8283,7 +8306,7 @@ xref: MIM:610965
 
 [Term]
 id: DOID:0060591
-name: WHIM syndrome
+name: WHIM syndrome 1
 namespace: disease_ontology
 def: "An immunodeficiency disease that is characterized by neutropenia, hypogammaglobulinemia, and extensive human papillomavirus infection and that has_material_basis_in heterozygous mutation in the CXCR4 gene on chromosome 2q22." [url:https\://en.wikipedia.org/wiki/WHIM_syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/10767001]
 subset: DO_rare_slim
@@ -11448,6 +11471,160 @@ xref: MIM:PS256040
 xref: ORDO:324977
 
 [Term]
+id: DOID:0060935
+name: infantile hypotonia with psychomotor retardation and characteristic facies-3
+namespace: disease_ontology
+def: "An autosomal recessive intellectual developmental disorder characterized by very poor, if any, psychomotor development, poor speech, inability to walk independently and onset at birth or in early infancy that has_material_basis_in homozygous or compound heterozygous mutation in the TBCK gene on chromosome 4q24." [url:https\://pubmed.ncbi.nlm.nih.gov/27040691/, url:https\://pubmed.ncbi.nlm.nih.gov/27040692/, url:https\://pubmed.ncbi.nlm.nih.gov/30103036/]
+subset: DO_rare_slim
+synonym: "HYPOTONIA, INFANTILE, WITH PSYCHOMOTOR RETARDATION AND CHARACTERISTIC FACIES 3" EXACT []
+synonym: "IHPRF3" EXACT []
+synonym: "TBCK-related intellectual disability syndrome" EXACT []
+xref: MIM:616900
+xref: ORDO:488632
+xref: UMLS_CUI:C5567480
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+
+[Term]
+id: DOID:0060936
+name: dystonia 28, childhood-onset
+namespace: disease_ontology
+def: "A dystonia characterized by onset of progressive dystonia in the first decade of life resulting in gait upper limbs, neck, and orofacial region difficulties, elongated face with bulbous nose, some have abnormal eye movements and potential delayed motor and/or cognitive development with mild intellectual disability that has_material_basis_in heterozygous mutation in the KMT2B gene on chromosome 19p13." [url:https\://pubmed.ncbi.nlm.nih.gov/27839873/, url:https\://pubmed.ncbi.nlm.nih.gov/27992417/]
+subset: DO_rare_slim
+synonym: "DYSTONIA 28, CHILDHOOD-ONSET" EXACT []
+synonym: "DYT28" EXACT []
+xref: ICD10CM:G24.8
+xref: MIM:617284
+xref: ORDO:589618
+xref: UMLS_CUI:C4310633
+
+[Term]
+id: DOID:0060941
+name: interstitial lung disease 1
+namespace: disease_ontology
+def: "An interstitial lung disease characterized by a progressive remodeling of the alveolar interstitium that has_material_basis_in heterozygous mutation in the SFTPA1 gene on chromosome 10q22." [url:https\://academic.oup.com/hmg/article/25/8/1457/2384565, url:https\://pubmed.ncbi.nlm.nih.gov/30854216/]
+subset: DO_rare_slim
+synonym: "Idiopathic pulmonary fibrosis" EXACT []
+xref: GARD:8609
+xref: MIM:619611
+xref: ORDO:2032
+is_a: DOID:3082 ! interstitial lung disease
+
+[Term]
+id: DOID:0060945
+name: amelogenesis imperfecta type 1K
+namespace: disease_ontology
+def: "An amelogenesis imperfecta characterized by hypoplastic enamel of all teeth that has_material_basis_in heterozygous mutation in the SP6 gene on chromosome 17q21." [url:https\://pubmed.ncbi.nlm.nih.gov/33652941/]
+subset: DO_rare_slim
+xref: GARD:5791
+xref: MIM:620104
+xref: ORDO:88661
+is_a: DOID:2187 ! amelogenesis imperfecta
+
+[Term]
+id: DOID:0060948
+name: Ullrich congenital muscular dystrophy 2
+namespace: disease_ontology
+def: "An Ullrich congenital muscular dystrophy characterized by joint hypermobility, proximal contractures, and muscle weakness precluding ambulation that has_material_basis_in homozygous mutation in the COL12A1 gene on chromosome 6q." [url:https\://pubmed.ncbi.nlm.nih.gov/24334604/]
+subset: DO_rare_slim
+xref: GARD:4769
+xref: MIM:616470
+xref: ORDO:75840
+is_a: DOID:0050558 ! Ullrich congenital muscular dystrophy
+
+[Term]
+id: DOID:0060949
+name: 3-hydroxyisobutryl-CoA hydrolase deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder characterized by severely delayed psychomotor development, neurodegeneration, increased lactic acid, and brain lesions in the basal ganglia  that has_material_basis_in homozygous or compound heterozygous mutation in the HIBCH gene on chromosome 2q32." [url:https\://pubmed.ncbi.nlm.nih.gov/24299452/]
+subset: DO_rare_slim
+synonym: "HIBCH deficiency" EXACT []
+synonym: "Methacrylic aciduria" EXACT []
+synonym: "Valine metabolic defect" EXACT []
+xref: GARD:13202
+xref: MIM:250620
+xref: ORDO:88639
+is_a: DOID:9252 ! amino acid metabolic disorder
+
+[Term]
+id: DOID:0060953
+name: ZTTK syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by delayed psychomotor development and intellectual disability that has_material_basis_in heterozygous mutation in the SON gene on chromosome 21q22." [url:https\://pubmed.ncbi.nlm.nih.gov/27545680/]
+subset: DO_rare_slim
+synonym: "Zhu-Tokita-Takenouchi-Kim syndrome" EXACT []
+synonym: "ZTTK MULTIPLE CONGENITAL ANOMALIES-MENTAL RETARDATION SYNDROME" EXACT []
+xref: GARD:13489
+xref: MIM:617140
+xref: ORDO:500150
+xref: UMLS_CUI:C4310696
+
+[Term]
+id: DOID:0060958
+name: orofaciodigital syndrome XIV
+namespace: disease_ontology
+def: "An orofaciodigital syndrome that is characterized by severe microcephaly, trigonocephaly, severe intellectual disability and micropenis, in addition to oral, facial and digital malformations (gingival frenulae, lingual hamartomas, cleft/lobulated tongue, cleft palate, telecanthus, up-slanting palpebral fissures, microretrognathia, postaxial polydactyly of hands and duplication of hallux) that has_material_basis_in homozygous or compound heterozygous mutation in the C2CD3 gene on chromosome 11q13." [url:https\://pubmed.ncbi.nlm.nih.gov/24997988/]
+subset: DO_rare_slim
+xref: GARD:13655
+xref: MIM:615948
+xref: ORDO:434179
+
+[Term]
+id: DOID:0060959
+name: orofaciodigital syndrome II
+namespace: disease_ontology
+def: "An orofaciodigital syndrome that is characterized by cleft lip/palate, lobulated tongue with nodules, dental anomalies including tooth agenesis, maxillary hypoplasia, conductive hearing loss, and poly-, syn-, and brachydactyly that has_material_basis_in compound heterozygous mutation in the NEK1 gene on chromosome 4q33." [url:https\://pubmed.ncbi.nlm.nih.gov/27530628/]
+subset: DO_rare_slim
+synonym: "Mohr syndrome" EXACT []
+synonym: "Oral-facial-digital syndrome type 2" EXACT []
+xref: GARD:3701
+xref: MIM:252100
+xref: ORDO:2751
+
+[Term]
+id: DOID:0060961
+name: orofaciodigital syndrome XVIII
+namespace: disease_ontology
+def: "An orofaciodigital syndrome that is characterized by short stature, brachymesophalangy, pre- and postaxial polysyndactyly, and stocky femoral necks, as well as oral anomalies and dysmorphic facial features  that has_material_basis_in homozygous mutation in the IFT57 gene on chromosome 3q13." [url:https\://pubmed.ncbi.nlm.nih.gov/27060890/]
+subset: DO_rare_slim
+synonym: "Oral-facial-digital syndrome type 18" EXACT []
+synonym: "Oral-facial-digital syndrome with short stature and brachymesophalangy" EXACT []
+synonym: "Orofaciodigital syndrome type 18" EXACT []
+xref: MIM:617927
+xref: ORDO:508501
+
+[Term]
+id: DOID:0060963
+name: dystonia, DOPA-responsive
+namespace: disease_ontology
+def: "A dystonia characterized by generalized dystonia, diurnal fluctuation of symptoms, and a dramatic therapeutic response to L-dopa that has_material_basis_in heterozygous mutation in the gene encoding GTP cyclohydrolase I (GCH1; 600225) on chromosome 14q13." [url:https\://pubmed.ncbi.nlm.nih.gov/17111153/]
+subset: DO_rare_slim
+synonym: "Autosomal dominant Segawa syndrome" EXACT []
+synonym: "DOPA-RESPONSIVE DYSTONIA, AUTOSOMAL DOMINANT" EXACT []
+synonym: "DYSTONIA, DOPA-RESPONSIVE, AUTOSOMAL DOMINANT" EXACT []
+synonym: "DYSTONIA, PROGRESSIVE, WITH DIURNAL VARIATION" EXACT []
+synonym: "DYSTONIA-PARKINSONISM WITH DIURNAL FLUCTUATION" EXACT []
+synonym: "GTPCH1-deficient dopa-responsive dystonia" EXACT []
+synonym: "GTPCH1-deficient DRD" EXACT []
+synonym: "Hereditary progressive dystonia with marked diurnal fluctuation" EXACT []
+synonym: "HPD with marked diurnal fluctuation" EXACT []
+xref: ICD10CM:G24.1
+xref: MIM:128230
+xref: ORDO:98808
+
+[Term]
+id: DOID:0060969
+name: galactosemia 4
+namespace: disease_ontology
+def: "A galactosemia characterized by persistent congenital galactosemia due to deficiency of the enzyme galactose mutarotase that has_material_basis_in homozygous or compound heterozygous mutation in the GALM gene on chromosome 2p22." [url:https\://pubmed.ncbi.nlm.nih.gov/30451973/]
+subset: DO_rare_slim
+synonym: "Galactose mutarotase deficiency" EXACT []
+synonym: "Galactosemia type 4" EXACT []
+synonym: "GALM deficiency" EXACT []
+xref: MIM:618881
+xref: ORDO:570422
+is_a: DOID:9870 ! galactosemia
+
+[Term]
 id: DOID:0070026
 name: Revesz syndrome
 namespace: disease_ontology
@@ -11695,7 +11872,7 @@ is_a: DOID:3144 ! cutis laxa
 id: DOID:0070144
 name: autosomal recessive cutis laxa type I
 namespace: disease_ontology
-def: "A cutis laxa characterized by wrinkled, redundant and sagging inelastic skin and severe systemic manifestations particulary in the lungs, vasculature, and gastrointestinal and genitourinary systems." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19401719]
+def: "A cutis laxa characterized by wrinkled, redundant and sagging inelastic skin and severe systemic manifestations particularly in the lungs, vasculature, and gastrointestinal and genitourinary systems." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19401719]
 subset: DO_rare_slim
 synonym: "autosomal recessive cutis laxa type 1" EXACT []
 xref: GARD:8480
@@ -13433,6 +13610,26 @@ property_value: exactMatch "SNOMEDCT_US_2023_03_01:782754006" xsd:string
 property_value: exactMatch "UMLS_CUI:C5190596" xsd:string
 
 [Term]
+id: DOID:0070534
+name: arrhythmogenic left ventricular cardiomyopathy
+namespace: disease_ontology
+def: "An intrinsic cardiomyopathy characterized by hypokinetic, non-dilated, fibrotic or fibrofatty left ventricular myocardium and ventricular arrhythmias with a right bundle branch block pattern, with limited to no involvement of the right ventricle." [url:https\://pubmed.ncbi.nlm.nih.gov/31637441/]
+subset: DO_rare_slim
+synonym: "ALVC" EXACT []
+synonym: "left ventricular ACM" EXACT []
+synonym: "left-dominant arrhythmogenic cardiomyopathy" EXACT []
+xref: ORDO:293888
+
+[Term]
+id: DOID:0070535
+name: arrhythmogenic biventricular cardiomyopathy
+namespace: disease_ontology
+def: "An intrinsic cardiomyopathy characterized by hypokinetic, non-dilated, fibrotic or fibrofatty replacement in both the left and right ventricular myocardium, with ventricular arrhythmias with left and right bundle branch block patterns." [url:https\://pubmed.ncbi.nlm.nih.gov/31637441/]
+subset: DO_rare_slim
+synonym: "biventricular ACM" EXACT []
+xref: ORDO:293899
+
+[Term]
 id: DOID:0070537
 name: spastic tetraplegia, thin corpus callosum, and progressive microcephaly
 namespace: disease_ontology
@@ -13455,6 +13652,7 @@ name: syndromic X-linked intellectual developmental disorder bain type
 namespace: disease_ontology
 def: "A syndromic X-linked syndromic intellectual disability characterized by delayed psychomotor development, impaired intellectual development with behavioral abnormalities, and musculoskeletal and growth abnormalities that has_material_basis_in heterozygous mutation in the HNRNPH2 gene on chromosome Xq22.1." [url:https\://pubmed.ncbi.nlm.nih.gov/27545675/, url:https\://pubmed.ncbi.nlm.nih.gov/37372334/, url:https\://www.ncbi.nlm.nih.gov/books/NBK584018/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "HNRNPH2-related neurodevelopmental disorder" EXACT []
 synonym: "HNRNPH2-RNDD" EXACT []
 synonym: "Mental Retardation, X-linked, Syndrome, Bain Type" EXACT []
@@ -13467,6 +13665,239 @@ property_value: exactMatch "GARD:13442" xsd:string
 property_value: exactMatch "MIM:300986" xsd:string
 property_value: exactMatch "NCI:C183311" xsd:string
 property_value: exactMatch "UMLS_CUI:C4310814" xsd:string
+
+[Term]
+id: DOID:0070540
+name: mitochondrial short-chain enoyl-CoA hydratase 1 deficiency
+namespace: disease_ontology
+def: "A mitochondrial metabolism disease characterized by a spectrum of phenotypes including delayed psychomotor development, neurodegeneration, increased lactic acid, brain lesions in the basal ganglia, and dystonia that has material basis in homozygous or compound heterozygous mutation in the ECHS1 gene on chromosome 10q26.3." [url:https\://pubmed.ncbi.nlm.nih.gov/25125611/, url:https\://www.ncbi.nlm.nih.gov/books/NBK542806/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "ECHS1D" EXACT []
+xref: GARD:13019
+xref: MIM:616277
+xref: NCI:C174218
+xref: ORDO:653880
+xref: UMLS_CUI:C4225391
+is_a: DOID:700 ! mitochondrial metabolism disease
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "GARD:13019" xsd:string
+property_value: exactMatch "MIM:616277" xsd:string
+property_value: exactMatch "NCI:C174218" xsd:string
+property_value: exactMatch "ORDO:653880" xsd:string
+property_value: exactMatch "UMLS_CUI:C4225391" xsd:string
+
+[Term]
+id: DOID:0070541
+name: 3-hydroxy-3-methylglutaryl-CoA lyase deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder characterized by metabolic acidosis without ketonuria, hypoglycemia, and a characteristic pattern of elevated urinary organic acid metabolites, including 3-hydroxy-3-methylglutaric, 3-methylglutaric, and 3-hydroxyisovaleric acids that has_material_basis_in homozygous or compound heterozygous mutation in the HMGCL gene on chromosome 1p36.11." [url:https\://pubmed.ncbi.nlm.nih.gov/3128690/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "3-hydroxy-3-methylglutaryl-coenzyme A lyase deficiency" EXACT []
+synonym: "HL deficiency" RELATED []
+synonym: "HMG-CoA lyase deficiency" EXACT []
+synonym: "HMGCL deficiency" EXACT []
+synonym: "HMGCLD" EXACT []
+synonym: "hydroxymethylglutaric aciduria" EXACT []
+xref: GARD:8387
+xref: MESH:C538324
+xref: MIM:246450
+xref: NCI:C84523
+xref: ORDO:20
+xref: UMLS_CUI:C0268601
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "GARD:8387" xsd:string
+property_value: exactMatch "MESH:C538324" xsd:string
+property_value: exactMatch "MIM:246450" xsd:string
+property_value: exactMatch "NCI:C84523" xsd:string
+property_value: exactMatch "ORDO:20" xsd:string
+property_value: exactMatch "UMLS_CUI:C0268601" xsd:string
+
+[Term]
+id: DOID:0070542
+name: neurodevelopmental disorder with spastic paraplegia and microcephaly
+namespace: disease_ontology
+def: "An amino acid metabolic disorder characterized delayed psychomotor development with delayed walking, moderately to severely impaired intellectual development, and poor or absent speech that has_material_basis_in homozygous or compound heterozygous mutation in the GPT2 gene on chromosome 16q11.2. Postnatal microcephaly and spastic paraplegia are also common." [url:https\://pubmed.ncbi.nlm.nih.gov/29882329/, url:https\://pubmed.ncbi.nlm.nih.gov/31471722/]
+subset: DO_rare_slim
+synonym: "autosomal recessive mental retardation 49" EXACT []
+synonym: "glutamate pyruvate transaminase 2 deficiency" EXACT []
+synonym: "GPT2 deficiency" EXACT []
+synonym: "MRT49" EXACT []
+synonym: "NEDSPM" EXACT []
+xref: MIM:616281
+xref: ORDO:477673
+xref: UMLS_CUI:C4225388
+xref: UMLS_CUI:C5567787
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "MIM:616281" xsd:string
+property_value: exactMatch "ORDO:477673" xsd:string
+property_value: exactMatch "UMLS_CUI:C4225388" xsd:string
+property_value: exactMatch "UMLS_CUI:C5567787" xsd:string
+
+[Term]
+id: DOID:0070544
+name: congenital glutamine deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder characterized by onset at birth of encephalopathy, lack of normal development, seizures, and hypotonia associated with variable brain abnormalities that has_material_basis_in homozygous mutation in the GLUL gene on chromosome 1q25.3." [url:https\://pubmed.ncbi.nlm.nih.gov/21353613/]
+subset: DO_rare_slim
+synonym: "congenital systemic glutamine synthase deficiency" EXACT []
+synonym: "GLND" EXACT []
+xref: GARD:9848
+xref: MIM:610015
+xref: ORDO:71278
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "GARD:9848" xsd:string
+property_value: exactMatch "MIM:610015" xsd:string
+property_value: exactMatch "ORDO:71278" xsd:string
+
+[Term]
+id: DOID:0070546
+name: primary pigmented nodular adrenocortical disease 1
+namespace: disease_ontology
+def: "A primary pigmented nodular adrenocortical disease that has_material_basis_in heterozygous mutation in the PRKAR1A gene on chromosome 17q24.2." [url:https\://pubmed.ncbi.nlm.nih.gov/12213893/]
+subset: DO_rare_slim
+synonym: "PPNAD1" EXACT []
+xref: MESH:C566469
+xref: MIM:610489
+xref: UMLS_CUI:C1864846
+is_a: DOID:0060280 ! primary pigmented nodular adrenocortical disease
+property_value: exactMatch "MESH:C566469" xsd:string
+property_value: exactMatch "MIM:610489" xsd:string
+property_value: exactMatch "UMLS_CUI:C1864846" xsd:string
+
+[Term]
+id: DOID:0070547
+name: primary pigmented nodular adrenocortical disease 2
+namespace: disease_ontology
+def: "A primary pigmented nodular adrenocortical disease that has_material_basis_in heterozygous mutation in the PDE11A gene on chromosome 2q31.2." [url:https\://pubmed.ncbi.nlm.nih.gov/16767104/]
+subset: DO_rare_slim
+synonym: "PPNAD2" EXACT []
+xref: MESH:C566472
+xref: MIM:610475
+xref: UMLS_CUI:C1864851
+is_a: DOID:0060280 ! primary pigmented nodular adrenocortical disease
+property_value: exactMatch "MESH:C566472" xsd:string
+property_value: exactMatch "MIM:610475" xsd:string
+property_value: exactMatch "UMLS_CUI:C1864851" xsd:string
+
+[Term]
+id: DOID:0070548
+name: primary pigmented nodular adrenocortical disease 3
+namespace: disease_ontology
+def: "A primary pigmented nodular adrenocortical disease that has_material_basis_in heterozygous mutation in the PDE8B gene on chromosome 5q13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/18272904/]
+subset: DO_rare_slim
+synonym: "PPNAD3" EXACT []
+xref: MIM:614190
+is_a: DOID:0060280 ! primary pigmented nodular adrenocortical disease
+property_value: exactMatch "MIM:614190" xsd:string
+
+[Term]
+id: DOID:0070549
+name: primary pigmented nodular adrenocortical disease 4
+namespace: disease_ontology
+def: "A primary pigmented nodular adrenocortical disease that has_material_basis_in duplication on chromosome 19p13 that includes the PRKACA gene." [url:https\://pubmed.ncbi.nlm.nih.gov/24571724, url:https\://pubmed.ncbi.nlm.nih.gov/25924874/]
+subset: DO_rare_slim
+synonym: "chromosome 19p13 duplication syndrome" EXACT []
+synonym: "PPNAD4" EXACT []
+xref: MIM:615830
+is_a: DOID:0060280 ! primary pigmented nodular adrenocortical disease
+property_value: exactMatch "MIM:615830" xsd:string
+
+[Term]
+id: DOID:0070550
+name: KRT1-related nonepidermolytic palmoplantar keratoderma
+namespace: disease_ontology
+def: "A nonepidermolytic palmoplantar keratoderma that has_material_basis_in heterozygous mutation in the KRT1 gene on chromosome 12q13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/12406346/, url:https\://pubmed.ncbi.nlm.nih.gov/7528239/]
+subset: DO_rare_slim
+synonym: "KRT1-related NEPPK" EXACT []
+xref: GARD:5186
+xref: MIM:600962
+xref: ORDO:530838
+xref: UMLS_CUI:C5680142
+is_a: DOID:0050428 ! nonepidermolytic palmoplantar keratoderma
+property_value: exactMatch "GARD:5186" xsd:string
+property_value: exactMatch "MIM:600962" xsd:string
+property_value: exactMatch "ORDO:530838" xsd:string
+property_value: exactMatch "UMLS_CUI:C5680142" xsd:string
+
+[Term]
+id: DOID:0070551
+name: epidermolytic palmoplantar keratoderma 2
+namespace: disease_ontology
+def: "An epidermolytic palmoplantar keratoderma that has_material_basis_in heterozygous mutation in the KRT1 gene on chromosome 12q13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/11286630/, url:https\://pubmed.ncbi.nlm.nih.gov/37122192/]
+subset: DO_rare_slim
+synonym: "EPPK2" EXACT []
+xref: MIM:620411
+is_a: DOID:0080223 ! epidermolytic palmoplantar keratoderma
+property_value: exactMatch "MIM:620411" xsd:string
+
+[Term]
+id: DOID:0070552
+name: epidermolytic palmoplantar keratoderma 1
+namespace: disease_ontology
+def: "An epidermolytic palmoplantar keratoderma that has_material_basis_in heterozygous mutation in the KRT9 gene on chromosome 17q12.2." [url:https\://pubmed.ncbi.nlm.nih.gov/12192490/, url:https\://pubmed.ncbi.nlm.nih.gov/30666268]
+subset: DO_rare_slim
+synonym: "EPPK1" EXACT []
+xref: MIM:144200
+is_a: DOID:0080223 ! epidermolytic palmoplantar keratoderma
+property_value: exactMatch "MIM:144200" xsd:string
+
+[Term]
+id: DOID:0070553
+name: focal palmoplantar and gingival keratosis
+namespace: disease_ontology
+def: "A palmoplantar keratosis characterized by hyperkeratosis on the weight-bearing areas of the soles, pressure-related areas of the palms, and the labial- and lingual-attached gingiva." [url:https\://pubmed.ncbi.nlm.nih.gov/133736/, url:https\://pubmed.ncbi.nlm.nih.gov/15761417/, url:https\://pubmed.ncbi.nlm.nih.gov/33262878/]
+subset: DO_rare_slim
+synonym: "focal palmoplantar and gingival hyperkeratosis syndrome" EXACT []
+xref: GARD:3098
+xref: MESH:C536157
+xref: MIM:148730
+xref: ORDO:2200
+xref: UMLS_CUI:C1835650
+is_a: DOID:3390 ! palmoplantar keratosis
+property_value: exactMatch "GARD:3098" xsd:string
+property_value: exactMatch "MESH:C536157" xsd:string
+property_value: exactMatch "MIM:148730" xsd:string
+property_value: exactMatch "ORDO:2200" xsd:string
+property_value: exactMatch "UMLS_CUI:C1835650" xsd:string
+
+[Term]
+id: DOID:0070554
+name: palmoplantar keratoderma and woolly hair
+namespace: disease_ontology
+def: "A nonepidermolytic palmoplantar keratoderma characterized by striate palmoplantar keratoderma, sparse and woolly hair, leukonychia, and the absence of cardiomyopathy symptoms or findings on echocardiography and electrocardiogram that has_material_basis_in homozygous mutation in the KANK2 gene on chromosome 19p13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/24671081/, url:https\://pubmed.ncbi.nlm.nih.gov/35283492]
+subset: DO_rare_slim
+synonym: "keratoderma with woolly hair type IV" EXACT []
+synonym: "PPKWH" EXACT []
+synonym: "woolly hair-palmoplantar keratoderma syndrome type 4" EXACT []
+xref: MIM:616099
+xref: ORDO:420686
+xref: UMLS_CUI:C4015202
+xref: UMLS_CUI:C4706686
+is_a: DOID:0050428 ! nonepidermolytic palmoplantar keratoderma
+property_value: exactMatch "MIM:616099" xsd:string
+property_value: exactMatch "ORDO:420686" xsd:string
+property_value: exactMatch "UMLS_CUI:C4015202" xsd:string
+property_value: exactMatch "UMLS_CUI:C4706686" xsd:string
+
+[Term]
+id: DOID:0070555
+name: Nagashima-type palmoplantar keratosis
+namespace: disease_ontology
+def: "A nonepidermolytic palmoplantar keratoderma characterized by mild, well-demarcated, diffuse erythematous hyperkeratosis that is nonprogressive after the second decade of life which extends onto the dorsal surfaces of the palms and feet and the Achilles tendon area, with a high frequency of hyperhidrosis on the palms and soles and without flexion contractures or constricting bands that has_material_basis_in homozygous or compound heterozygous mutation in the SERPINB7 gene on chromosome 18q21.33." [url:https\://pubmed.ncbi.nlm.nih.gov/24207119/, url:https\://pubmed.ncbi.nlm.nih.gov/24773080/, url:https\://pubmed.ncbi.nlm.nih.gov/35178744/]
+subset: DO_rare_slim
+synonym: "NPPK" EXACT []
+synonym: "palmoplantar keratoderma nagashima type" EXACT []
+synonym: "PPKN" EXACT []
+xref: MIM:615598
+xref: ORDO:140966
+xref: UMLS_CUI:C3810072
+is_a: DOID:0050428 ! nonepidermolytic palmoplantar keratoderma
+property_value: exactMatch "MIM:615598" xsd:string
+property_value: exactMatch "ORDO:140966" xsd:string
+property_value: exactMatch "UMLS_CUI:C3810072" xsd:string
 
 [Term]
 id: DOID:0080016
@@ -14566,6 +14997,25 @@ xref: MESH:C535720
 xref: MIM:223400
 
 [Term]
+id: DOID:0080217
+name: lysosomal acid lipase deficiency
+namespace: disease_ontology
+def: "A lipid storage disease characterized by dyslipidemia and accumulation of cholesteryl esters and triglycerides within various organs that has_material_basis_in homozygous or compound heterozygous mutation in the LIPA gene on chromosome 10q23.31." [url:https\://medlineplus.gov/genetics/condition/lysosomal-acid-lipase-deficiency/, url:https\://www.ncbi.nlm.nih.gov/books/NBK395569/]
+subset: DO_rare_slim
+synonym: "LAL deficiency" EXACT []
+synonym: "LAL-D" EXACT []
+xref: GARD:12097
+xref: ICD10CM:E75.5
+xref: MIM:PS278000
+xref: ORDO:275761
+xref: UMLS_CUI:C5574740
+property_value: broadMatch "ICD10CM:E75.5" xsd:string
+property_value: exactMatch "GARD:12097" xsd:string
+property_value: exactMatch "MIM:PS278000" xsd:string
+property_value: exactMatch "ORDO:275761" xsd:string
+property_value: exactMatch "UMLS_CUI:C5574740" xsd:string
+
+[Term]
 id: DOID:0080218
 name: primary spontaneous pneumothorax
 namespace: disease_ontology
@@ -14592,10 +15042,21 @@ name: epidermolytic palmoplantar keratoderma
 namespace: disease_ontology
 def: "A palmoplantar keratosis that is characterized by marked hyperkeratosis on the surface of palms and soles." [url:https\://www.ncbi.nlm.nih.gov/pubmed/7544663]
 subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "EPPK" EXACT []
 xref: GARD:2826
-xref: MIM:144200
+xref: MESH:D053546
+xref: MIM:PS144200
+xref: NCI:C84693
 xref: ORDO:2199
+xref: UMLS_CUI:C1721006
 is_a: DOID:3390 ! palmoplantar keratosis
+property_value: exactMatch "GARD:2826" xsd:string
+property_value: exactMatch "MESH:D053546" xsd:string
+property_value: exactMatch "MIM:PS144200" xsd:string
+property_value: exactMatch "NCI:C84693" xsd:string
+property_value: exactMatch "ORDO:2199" xsd:string
+property_value: exactMatch "UMLS_CUI:C1721006" xsd:string
 
 [Term]
 id: DOID:0080224
@@ -15903,6 +16364,17 @@ xref: GARD:9744
 xref: MIM:209700
 xref: ORDO:79100
 is_a: DOID:1697 ! ichthyosis
+
+[Term]
+id: DOID:0080762
+name: autosomal recessive limb-girdle muscular dystrophy type 2Z
+namespace: disease_ontology
+def: "An autosomal recessive limb-girdle muscular dystrophy that is characterized by young-adult onset of slowly progressive proximal upper and lower limb muscle weakness and atrophy and that has_material_basis_in homozygous mutation in the POGLUT1 gene on chromosome 3q13." [url:https\://pubmed.ncbi.nlm.nih.gov/27807076/, url:https\://pubmed.ncbi.nlm.nih.gov/31897643/]
+subset: DO_rare_slim
+synonym: "limb-girdle muscular dystrophy 21" EXACT []
+xref: MIM:617232
+xref: ORDO:480682
+is_a: DOID:0110274 ! autosomal recessive limb-girdle muscular dystrophy
 
 [Term]
 id: DOID:0080763
@@ -17384,6 +17856,93 @@ synonym: "DEPDC5-related epilepsy" EXACT []
 xref: GARD:13295
 xref: MIM:PS604364
 xref: ORDO:98820
+
+[Term]
+id: DOID:0081431
+name: microcephaly, short stature, and limb abnormalities
+namespace: disease_ontology
+def: "An osteochondrodysplasia that is characterized by intrauterine growth retardation, microcephaly, variable short stature, and limb abnormalities mainly affecting the upper limb and radial ray and that has_material_basis_in homozygous or compound heterozygous mutation in the DONSON gene on chromosome 21q22. Biallelic mutation in the DONSON gene can also cause microcephaly-micromelia syndrome, a more severe disorder that usually results in intrauterine or perinatal death." [url:https\://pubmed.ncbi.nlm.nih.gov/28191891/]
+subset: DO_rare_slim
+synonym: "DONSON-related microcephaly-short stature-limb abnormalities spectrum" EXACT []
+xref: MIM:617604
+xref: ORDO:572761
+
+[Term]
+id: DOID:0081432
+name: microcephaly-micromelia syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by intrauterine growth retardation (IUGR), marked microcephaly, craniosynostosis, and severe malformation of the limbs, especially the arms and that has_material_basis_in homozygous mutation in the DONSON gene on chromosome 21q22. Biallelic mutation in the DONSON gene can also cause microcephaly, short stature, and limb abnormalities, a less severe disorder." [url:https\://pubmed.ncbi.nlm.nih.gov/28630177/]
+subset: DO_rare_slim
+xref: MIM:251230
+xref: ORDO:572768
+
+[Term]
+id: DOID:0081441
+name: Nicolaides-Baraitser syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by severely impaired intellectual development, early-onset seizures, short stature, dysmorphic facial features, and sparse hair and that has_material_basis_in heterozygous mutation in the SMARCA2 gene on chromosome 9p24." [url:https\://pubmed.ncbi.nlm.nih.gov/19606471/, url:https\://www.ncbi.nlm.nih.gov/books/NBK321516/]
+subset: DO_rare_slim
+synonym: "Intellectual disability-sparse hair-brachydactyly syndrome" EXACT []
+synonym: "SPARSE HAIR-IMPAIRED INTELLECTUAL DEVELOPMENT SYNDROME" EXACT []
+xref: GARD:270
+xref: MIM:601358
+xref: ORDO:3051
+
+[Term]
+id: DOID:0081442
+name: blepharophimosis-impaired intellectual development syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by a distinct facial appearance with blepharophimosis and global development delay and that has_material_basis_in heterozygous mutation in the SMARCA2 gene on chromosome 9p24." [url:https\://pubmed.ncbi.nlm.nih.gov/32694869/]
+subset: DO_rare_slim
+synonym: "SMARCA2-related blepharophimosis-intellectual disability syndrome" EXACT []
+xref: MIM:619293
+xref: ORDO:637013
+
+[Term]
+id: DOID:0081446
+name: dimethylglycine dehydrogenase deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder that is characterized by a fish-like odor, chronic fatigue, and increased level of the muscle form of creatine kinase in serum and that has_material_basis_in homozygous mutation in the DMGDH on chromosome 5q14." [url:https\://pubmed.ncbi.nlm.nih.gov/10102904/, url:https\://pubmed.ncbi.nlm.nih.gov/11231903/]
+subset: DO_rare_slim
+synonym: "DMG dehydrogenase deficiency" EXACT []
+xref: MIM:605850
+xref: ORDO:243343
+is_a: DOID:9252 ! amino acid metabolic disorder
+
+[Term]
+id: DOID:0081450
+name: hyperimmunoglobulinemia D periodic fever syndrome
+namespace: disease_ontology
+def: "A hyperimmunoglobulin syndrome that is characterized as periodic fever from early infancy accompanied by elevated serum C-reactive protein and that has_material_basis_in homozygous or compound heterozygous mutation in the gene encoding mevalonate kinase (MVK) on chromosome 12q24." [url:https\://pubmed.ncbi.nlm.nih.gov/22041426/]
+subset: DO_rare_slim
+synonym: "HYPER-IgD SYNDROME" EXACT []
+xref: GARD:2788
+xref: MIM:260920
+xref: ORDO:343
+
+[Term]
+id: DOID:0081451
+name: PFAPA syndrome
+namespace: disease_ontology
+def: "An autoimmune disease that is characterized by recurrent febrile episodes associated with aphthous stomatitis, pharyngitis and cervical adenitis." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356195/]
+subset: DO_rare_slim
+synonym: "Marshall syndrome with periodic fever" EXACT []
+synonym: "Periodic fever-aphtous stomatitis-pharyngitis-adenopathy syndrome" EXACT []
+xref: GARD:5657
+xref: ORDO:42642
+
+[Term]
+id: DOID:0081453
+name: Dent disease 1
+namespace: disease_ontology
+def: "A Dent disease that is characterized by manifestations of complex proximal tubule dysfunction with low-molecular-weight proteinuria, hypercalciuria, nephrolithiasis, nephrocalcinosis, and progressive renal failure and that has_material_basis_in  mutation in the CLCN5 gene on chromosome Xp11. Extra-renal involvement is absent." [url:https\://pubmed.ncbi.nlm.nih.gov/32248351/, url:https\://www.ncbi.nlm.nih.gov/books/NBK99494/]
+subset: DO_rare_slim
+xref: MESH:C538212
+xref: MIM:300009
+xref: ORDO:93622
+xref: SNOMEDCT_US_2023_03_01:717789008
+xref: UMLS_CUI:C1848336
+is_a: DOID:0050699 ! Dent disease
 
 [Term]
 id: DOID:0090001
@@ -21319,7 +21878,7 @@ is_a: DOID:14503 ! neuronal ceroid lipofuscinosis
 id: DOID:0110733
 name: neuronal ceroid lipofuscinosis 9
 namespace: disease_ontology
-def: "A neuronal ceroid lipofuscinosis that is characterized by juvenile-onset of progressive vision loss, progressive ataxia and seziures." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15349861]
+def: "A neuronal ceroid lipofuscinosis that is characterized by juvenile-onset of progressive vision loss, progressive ataxia and seizures." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15349861]
 subset: DO_rare_slim
 synonym: "CLN9" EXACT []
 xref: GARD:6618
@@ -23678,7 +24237,7 @@ is_a: DOID:2861 ! congenital nonspherocytic hemolytic anemia
 id: DOID:0111078
 name: tibial muscular dystrophy
 namespace: disease_ontology
-def: "A distal myopathy that is characterized by autosomal dominant inheritance of late-onset muscular dystrophy beginning in the anterior comparment of the legs that has_material_basis_in heterozygous mutation in the gene encoding the giant skeletal muscle protein titin (TTN) on chromosome 2q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12145747, url:https\://www.ncbi.nlm.nih.gov/pubmed/196233, url:https\://www.ncbi.nlm.nih.gov/pubmed/8503797]
+def: "A distal myopathy that is characterized by autosomal dominant inheritance of late-onset muscular dystrophy beginning in the anterior compartment of the legs that has_material_basis_in heterozygous mutation in the gene encoding the giant skeletal muscle protein titin (TTN) on chromosome 2q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12145747, url:https\://www.ncbi.nlm.nih.gov/pubmed/196233, url:https\://www.ncbi.nlm.nih.gov/pubmed/8503797]
 subset: DO_rare_slim
 synonym: "distal titinopathy" EXACT []
 synonym: "Finnish tibial muscular dystrophy" EXACT []
@@ -25131,7 +25690,7 @@ xref: UMLS_CUI:C1864723
 id: DOID:0111330
 name: combined saposin deficiency
 namespace: disease_ontology
-def: "A sphingolipidosis characterized by absence of expression of both isoforms of PSAP (SAP1 and SAP2) resulting in hepatosplenomegaly and severe neurological disease that has_material_basis_in homozygous or coumpound heterozygous mutation in PSAP on 10q22.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11309366, url:https\://www.ncbi.nlm.nih.gov/pubmed/1371116]
+def: "A sphingolipidosis characterized by absence of expression of both isoforms of PSAP (SAP1 and SAP2) resulting in hepatosplenomegaly and severe neurological disease that has_material_basis_in homozygous or compound heterozygous mutation in PSAP on 10q22.1." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11309366, url:https\://www.ncbi.nlm.nih.gov/pubmed/1371116]
 subset: DO_rare_slim
 synonym: "combined SAP deficiency" EXACT []
 synonym: "encephalopathy due to prosaposin deficiency" EXACT []
@@ -28830,8 +29389,16 @@ subset: DO_rare_slim
 synonym: "diffuse palmoplantar keratoderma, Bothnian type" EXACT []
 synonym: "PPKB" EXACT []
 xref: GARD:1862
+xref: MESH:C536173
 xref: MIM:600231
+xref: ORDO:2337
+xref: UMLS_CUI:C1838359
 is_a: DOID:0050428 ! nonepidermolytic palmoplantar keratoderma
+property_value: exactMatch "GARD:1862" xsd:string
+property_value: exactMatch "MESH:C536173" xsd:string
+property_value: exactMatch "MIM:600231" xsd:string
+property_value: exactMatch "ORDO:2337" xsd:string
+property_value: exactMatch "UMLS_CUI:C1838359" xsd:string
 
 [Term]
 id: DOID:0111708
@@ -35822,7 +36389,7 @@ xref: UMLS_CUI:C0011311
 id: DOID:12217
 name: Lewy body dementia
 namespace: disease_ontology
-def: "A dementia that is characterized by the development of abnormal proteinaceous (alpha-synuclein) cytoplasmic inclusions, called Lewy bodies, throughout the brain that results in progressive decline in mental abilities." [url:http\://en.wikipedia.org/wiki/Dementia_with_Lewy_bodies, url:http\://www.mayoclinic.org/diseases-conditions/lewy-body-dementia/basics/definition/CON-20025038]
+def: "A dementia that is characterized by the development of abnormal proteinaceous (alpha-synuclein) cytoplasmic inclusions, called Lewy bodies, throughout the brain that results in progressive decline in mental abilities that has_material_basis_in accumulation of alpha-synuclein, SCNA, (protein). The causal mutation might be in SCNA or SCNB or some other gene(s) but the end result is always accumulation of SCNA in Lewy bodies." [url:http\://en.wikipedia.org/wiki/Dementia_with_Lewy_bodies, url:http\://www.mayoclinic.org/diseases-conditions/lewy-body-dementia/basics/definition/CON-20025038]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -39220,6 +39787,7 @@ xref: NCI:C61271
 xref: ORDO:75233
 xref: SNOMEDCT_US_2023_03_01:82500001
 xref: UMLS_CUI:C0043208
+is_a: DOID:0080217 ! lysosomal acid lipase deficiency
 property_value: broadMatch "ICD10CM:E75.5" xsd:string
 property_value: exactMatch "MIM:620151" xsd:string
 property_value: exactMatch "ORDO:75233" xsd:string
@@ -39300,6 +39868,29 @@ xref: NCI:C85070
 xref: ORDO:816
 xref: SNOMEDCT_US_2023_03_01:111303009
 xref: UMLS_CUI:C0037231
+
+[Term]
+id: DOID:14502
+name: cholesterol ester storage disease
+namespace: disease_ontology
+def: "A lysosomal acid lipase deficiency characterized by onset in childhood or later of progressive accumulation of cholesteryl esters and triglycerides primarily in the liver and spleen." [url:https\://medlineplus.gov/genetics/condition/lysosomal-acid-lipase-deficiency/, url:https\://www.ncbi.nlm.nih.gov/books/NBK395569/]
+subset: DO_rare_slim
+synonym: "CESD" EXACT []
+synonym: "partial cholesterol ester hydrolase deficiency" EXACT []
+synonym: "partial LAL deficiency" EXACT []
+synonym: "partial LIPA deficiency" EXACT []
+synonym: "partial lysosomal acid lipase deficiency" EXACT []
+xref: GARD:12099
+xref: MESH:D015217
+xref: MIM:278000
+xref: ORDO:75234
+xref: SNOMEDCT_US_2023_03_01:57218003
+xref: UMLS_CUI:C0008384
+is_a: DOID:0080217 ! lysosomal acid lipase deficiency
+property_value: exactMatch "GARD:12099" xsd:string
+property_value: exactMatch "MESH:D015217" xsd:string
+property_value: exactMatch "MIM:278000" xsd:string
+property_value: exactMatch "ORDO:75234" xsd:string
 
 [Term]
 id: DOID:14503
@@ -44827,11 +45418,21 @@ synonym: "HNPCC - hereditary nonpolyposis colon cancer" EXACT []
 xref: GARD:9905
 xref: MESH:D003123
 xref: MIM:PS120435
-xref: NCI:C120083
+xref: NCI:C8494
 xref: ORDO:144
 xref: SNOMEDCT_US_2023_03_01:700064004
 xref: UMLS_CUI:C0009405
-xref: UMLS_CUI:C1333990
+xref: UMLS_CUI:C4552100
+property_value: broadMatch "NCI:C120083" xsd:string
+property_value: broadMatch "ORDO:443909" xsd:string
+property_value: broadMatch "UMLS_CUI:C1333990" xsd:string
+property_value: exactMatch "GARD:9905" xsd:string
+property_value: exactMatch "MESH:D003123" xsd:string
+property_value: exactMatch "MIM:PS120435" xsd:string
+property_value: exactMatch "NCI:C8494" xsd:string
+property_value: exactMatch "ORDO:144" xsd:string
+property_value: exactMatch "UMLS_CUI:C0009405" xsd:string
+property_value: exactMatch "UMLS_CUI:C4552100" xsd:string
 
 [Term]
 id: DOID:3890
@@ -45009,7 +45610,7 @@ is_a: DOID:4159 ! skin cancer
 
 [Term]
 id: DOID:3969
-name: thyroid gland papillary carcinoma
+name: papillary thyroid carcinoma
 namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer and arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
@@ -45017,7 +45618,11 @@ subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Papillary carcinoma of the Thyroid gland" EXACT []
+synonym: "Papillary carcinoma of thyroid" EXACT []
+synonym: "thyroid gland papillary carcinoma" EXACT []
 xref: GARD:12027
+xref: ICD11:2D10.1
+xref: ICDO:8260/3
 xref: MESH:D000077273
 xref: MIM:188550
 xref: NCI:C4035

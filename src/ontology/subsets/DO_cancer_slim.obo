@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-05-29/subsets/DO_cancer_slim.obo
-date: 29:05:2024 13:57
+data-version: doid/releases/2024-06-28/subsets/DO_cancer_slim.obo
+date: 28:06:2024 13:19
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -1375,12 +1375,12 @@ is_a: DOID:0050905 ! inflammatory myofibroblastic tumor
 
 [Term]
 id: DOID:0080522
-name: thyroid gland anaplastic carcinoma
+name: anaplastic thyroid carcinoma
 namespace: disease_ontology
 def: "A thyroid gland carcinoma that is composed of undifferentiated cells." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28707679]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "anaplastic thyroid carcinoma" EXACT []
+synonym: "thyroid gland anaplastic carcinoma" EXACT []
 xref: NCI:C3878
 is_a: DOID:3963 ! thyroid gland carcinoma
 
@@ -1396,11 +1396,12 @@ is_a: DOID:3963 ! thyroid gland carcinoma
 
 [Term]
 id: DOID:0080525
-name: differentiated thyroid gland carcinoma
+name: differentiated high-grade thyroid carcinoma
 namespace: disease_ontology
 def: "A thyroid gland adenocarcinoma characterized by extensive evidence of follicular cell differentiation." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C7153&ns=ncit]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "differentiated thyroid gland carcinoma" EXACT []
 xref: NCI:C7153
 is_a: DOID:0080524 ! thyroid gland adenocarcinoma
 
@@ -3822,7 +3823,7 @@ id: DOID:1781
 name: thyroid cancer
 namespace: disease_ontology
 alt_id: DOID:10008
-def: "An endocrine gland cancer located in the thyroid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
+def: "An endocrine gland cancer located in the thyroid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland, url:https\://pubmed.ncbi.nlm.nih.gov/35288841/]
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: NCIthesaurus
@@ -6795,7 +6796,7 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:3962
-name: thyroid gland follicular carcinoma
+name: follicular thyroid carcinoma
 namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that has_material_basis_in follicular cells." [url:http\://en.wikipedia.org/wiki/Follicular_thyroid_cancer]
 comment: OMIM mapping confirmed by DO. [SN].
@@ -6804,14 +6805,16 @@ subset: NCIthesaurus
 synonym: "Follicular adenocarcinoma" EXACT []
 synonym: "Follicular adenocarcinoma, well differentiated" EXACT []
 synonym: "Follicular carcinoma" EXACT []
-synonym: "follicular thyroid carcinoma" EXACT []
 synonym: "Thyroid adenocarcinoma" EXACT []
+synonym: "thyroid gland follicular carcinoma" EXACT []
+xref: ICD11:2D10.0
+xref: ICDO:8330/3
 xref: MESH:D018263
 xref: MIM:188470
 xref: NCI:C8054
 xref: SNOMEDCT_US_2023_03_01:255028004
 xref: UMLS_CUI:C0206682
-is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
+is_a: DOID:0080525 ! differentiated high-grade thyroid carcinoma
 
 [Term]
 id: DOID:3963
@@ -6821,6 +6824,7 @@ def: "A thyroid gland cancer that has_material_basis_in epithelial cells." [url:
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "head and neck cancer, Thyroid" EXACT []
+synonym: "Thyroid carcinoma" EXACT []
 xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
@@ -6844,20 +6848,8 @@ xref: UMLS_CUI:C0302182
 is_a: DOID:162 ! cancer
 
 [Term]
-id: DOID:3968
-name: papillary follicular thyroid adenocarcinoma
-namespace: disease_ontology
-subset: DO_cancer_slim
-subset: NCIthesaurus
-xref: MESH:D018265
-xref: NCI:C7380
-xref: SNOMEDCT_US_2023_03_01:189643000
-xref: UMLS_CUI:C0206683
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
-
-[Term]
 id: DOID:3969
-name: thyroid gland papillary carcinoma
+name: papillary thyroid carcinoma
 namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer and arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
@@ -6865,25 +6857,32 @@ subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Papillary carcinoma of the Thyroid gland" EXACT []
+synonym: "Papillary carcinoma of thyroid" EXACT []
+synonym: "thyroid gland papillary carcinoma" EXACT []
 xref: GARD:12027
+xref: ICD11:2D10.1
+xref: ICDO:8260/3
 xref: MESH:D000077273
 xref: MIM:188550
 xref: NCI:C4035
 xref: SNOMEDCT_US_2023_03_01:255029007
 xref: UMLS_CUI:C0238463
-is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
+is_a: DOID:0080525 ! differentiated high-grade thyroid carcinoma
+is_a: DOID:3112 ! papillary adenocarcinoma
 
 [Term]
 id: DOID:3973
-name: thyroid gland medullary carcinoma
+name: medullary thyroid carcinoma
 namespace: disease_ontology
-def: "A thyroid gland carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer]
+def: "A thyroid gland carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/books/NBK459354/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Medullary carcinoma of the Thyroid gland" EXACT []
-synonym: "medullary thyroid carcinoma" EXACT []
+synonym: "Parafollicular cell carcinoma" EXACT []
+synonym: "thyroid gland medullary carcinoma" EXACT []
 synonym: "Ultimobranchial thyroid tumor" EXACT []
 synonym: "Ultimobranchial thyroid tumour" EXACT []
+xref: ICDO:8345/3
 xref: MESH:C536914
 xref: NCI:C3879
 xref: SNOMEDCT_US_2023_03_01:255032005
@@ -10523,19 +10522,22 @@ is_a: DOID:6053 ! childhood germ cell cancer
 
 [Term]
 id: DOID:8161
-name: thyroid gland Hurthle cell carcinoma
+name: oncocytic carcinoma of the thyroid
 namespace: disease_ontology
 def: "A thyroid gland follicular carcinoma that is characterized by the presence of large cells with eosinophilic granular cytoplasm and pleomorphic nuclei with prominent, eosinophilic nucleoli." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4946]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "oncocytic carcinoma of the thyroid" EXACT []
+synonym: "Oncocytic (Hurthle-cell) carcinoma" EXACT []
+synonym: "thyroid gland Hurthle cell carcinoma" EXACT []
+synonym: "Thyroid Gland Oncocytic Carcinoma" EXACT []
+xref: ICDO:8290/3
 xref: MESH:C536913
 xref: MIM:607464
 xref: NCI:C4946
 xref: SNOMEDCT_US_2023_03_01:423158009
 xref: UMLS_CUI:C0749424
-is_a: DOID:3962 ! thyroid gland follicular carcinoma
+is_a: DOID:3962 ! follicular thyroid carcinoma
 
 [Term]
 id: DOID:8243

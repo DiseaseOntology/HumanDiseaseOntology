@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-05-29/subsets/NCIthesaurus.obo
-date: 29:05:2024 13:57
+data-version: doid/releases/2024-06-28/subsets/NCIthesaurus.obo
+date: 28:06:2024 13:19
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -109,9 +109,9 @@ is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
 id: DOID:0050156
-name: interstitial lung disease 2
+name: idiopathic pulmonary fibrosis
 namespace: disease_ontology
-def: "An interstitial lung disease pulmonary fibrosis that is characterized by scarring of the lung and that has_material_basis_in heterozygous mutation in the SFTPA2 gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
+def: "A pulmonary fibrosis that is characterized by scarring of the lung characterized by  stiffness in the lungs and makes it difficult to breathe." [url:https\://pubmed.ncbi.nlm.nih.gov/32855221/, url:https\://www.ncbi.nlm.nih.gov/books/NBK448162/, url:https\://www.nhlbi.nih.gov/health/idiopathic-pulmonary-fibrosis, url:https\://www.pulmonaryfibrosis.org/life-with-pf/about-ipf]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -124,11 +124,10 @@ xref: GARD:8609
 xref: ICD10CM:J84.112
 xref: ICD9CM:516.31
 xref: MESH:D054990
-xref: MIM:178500
 xref: NCI:C35716
 xref: SNOMEDCT_US_2023_03_01:28168000
 xref: UMLS_CUI:C1800706
-is_a: DOID:3082 ! interstitial lung disease
+is_a: DOID:3770 ! pulmonary fibrosis
 
 [Term]
 id: DOID:0050157
@@ -305,27 +304,6 @@ xref: ORDO:910
 xref: SNOMEDCT_US_2023_03_01:44600005
 xref: UMLS_CUI:C0043346
 is_a: DOID:225 ! syndrome
-
-[Term]
-id: DOID:0050428
-name: nonepidermolytic palmoplantar keratoderma
-namespace: disease_ontology
-def: "A palmoplantar keratosis characterized by a well-demarcated, symmetric keratoderma located_in palms and located_in soles." [url:http\://en.wikipedia.org/wiki/Palmoplantar_keratoderma]
-comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
-subset: DO_rare_slim
-subset: NCIthesaurus
-synonym: "diffuse nonepidermolytic palmomplantar keratoderma" EXACT []
-synonym: "Thost-Unna Syndrome" EXACT []
-synonym: "tylosis" EXACT []
-synonym: "Unna-Thost Syndrome" EXACT []
-xref: MESH:D015776
-xref: MIM:600962
-xref: NCI:C3147
-xref: ORDO:2337
-xref: SNOMEDCT_US_2023_03_01:81206005
-xref: UMLS_CUI:C0022584
-xref: UMLS_CUI:C3489771
-is_a: DOID:161 ! keratosis
 
 [Term]
 id: DOID:0050429
@@ -2055,7 +2033,7 @@ is_a: DOID:0060058 ! lymphoma
 id: DOID:0060061
 name: primary cutaneous T-cell non-Hodgkin lymphoma
 namespace: disease_ontology
-def: "A non-Hodgkin's lymphoma that has_material_basis_in a mutation of T cells." [url:http\://en.wikipedia.org/wiki/Cutaneous_T-cell_lymphoma]
+def: "A peripheral T-cell lymphoma that has_material_basis_in a mutation of T cells." [url:http\://en.wikipedia.org/wiki/Cutaneous_T-cell_lymphoma]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cutaneous T cell lymphoma" EXACT []
@@ -2951,15 +2929,19 @@ name: umbilical hernia
 namespace: disease_ontology
 def: "A intestinal disease characterized by the protrusion by part of the intestine though an opening in the abdominal muscles." [url:http\://www.mayoclinic.org/diseases-conditions/umbilical-hernia/basics/definition/con-20025630, url:https\://en.wikipedia.org/wiki/Umbilical_hernia]
 subset: NCIthesaurus
-xref: ICD10CM:Q79.2
-xref: ICD9CM:756.72
-xref: MESH:D006554
-xref: NCI:C98997
+xref: ICD10CM:K42
+xref: ICD9CM:553.1
+xref: NCI:C118375
 xref: SNOMEDCT_US_2023_03_01:49324006
-xref: SNOMEDCT_US_2023_03_01:5867007
-xref: UMLS_CUI:C0795690
-xref: UMLS_CUI:C1306503
+xref: UMLS_CUI:C0019322
 is_a: DOID:5295 ! intestinal disease
+property_value: broadMatch "MESH:D006554" xsd:string
+property_value: exactMatch "ICD10CM:K42" xsd:string
+property_value: exactMatch "ICD9CM:553.1" xsd:string
+property_value: exactMatch "NCI:C118375" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:49324006" xsd:string
+property_value: exactMatch "UMLS_CUI:C0019322" xsd:string
+property_value: narrowMatch "ICD9CM:551.1" xsd:string
 created_by: emitraka
 creation_date: 2015-02-25T15:58:35Z
 
@@ -3003,18 +2985,26 @@ id: DOID:0060327
 name: omphalocele
 namespace: disease_ontology
 def: "A physical disorder characterized by a defect in the development of the abdominal wall muscles, resulting in the intestines, liver and other organs to remain outside of the abdomen in a sac." [url:http\://en.wikipedia.org/wiki/Omphalocele, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000994.htm]
+subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "exomphalos" EXACT []
 synonym: "omphalocoele" EXACT []
 xref: ICD10CM:Q79.2
 xref: ICD9CM:756.72
-xref: MESH:D006554
-xref: MIM:164750
 xref: NCI:C98997
-xref: SNOMEDCT_US_2023_03_01:49324006
+xref: ORDO:660
 xref: SNOMEDCT_US_2023_03_01:5867007
 xref: UMLS_CUI:C0795690
-xref: UMLS_CUI:C1306503
 is_a: DOID:4 ! disease
+property_value: broadMatch "MESH:D006554" xsd:string
+property_value: exactMatch "ICD10CM:Q79.2" xsd:string
+property_value: exactMatch "ICD9CM:756.72" xsd:string
+property_value: exactMatch "NCI:C98997" xsd:string
+property_value: exactMatch "ORDO:660" xsd:string
+property_value: exactMatch "SNOMEDCT_US_2023_03_01:5867007" xsd:string
+property_value: exactMatch "UMLS_CUI:C0795690" xsd:string
+property_value: narrowMatch "MIM:164750" xsd:string
+property_value: narrowMatch "MIM:310980" xsd:string
 created_by: emitraka
 creation_date: 2015-02-25T17:54:05Z
 
@@ -3548,7 +3538,7 @@ is_a: DOID:12531 ! von Willebrand's disease
 
 [Term]
 id: DOID:0060591
-name: WHIM syndrome
+name: WHIM syndrome 1
 namespace: disease_ontology
 def: "An immunodeficiency disease that is characterized by neutropenia, hypogammaglobulinemia, and extensive human papillomavirus infection and that has_material_basis_in heterozygous mutation in the CXCR4 gene on chromosome 2q22." [url:https\://en.wikipedia.org/wiki/WHIM_syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/10767001]
 subset: DO_rare_slim
@@ -4327,6 +4317,24 @@ xref: UMLS_CUI:C0398739
 is_a: DOID:5212 ! congenital disorder of glycosylation
 
 [Term]
+id: DOID:0070271
+name: Lynch syndrome 1
+namespace: disease_ontology
+def: "A Lynch syndrome that has_material_basis_in heterozygous mutations in the MSH2 gene on chromosome 2p21-p16." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8261515, url:https\://www.ncbi.nlm.nih.gov/pubmed/8574961]
+subset: NCIthesaurus
+synonym: "familial nonpolyposis colon cancer type 1" EXACT []
+synonym: "FCC1" EXACT []
+synonym: "hereditary nonpolyposis colorectal cancer type 1" EXACT []
+synonym: "HNPCC1" EXACT []
+xref: MIM:120435
+xref: NCI:C6725
+xref: UMLS_CUI:C2936783
+is_a: DOID:3883 ! Lynch syndrome
+property_value: exactMatch "MIM:120435" xsd:string
+property_value: exactMatch "NCI:C6725" xsd:string
+property_value: exactMatch "UMLS_CUI:C2936783" xsd:string
+
+[Term]
 id: DOID:0070313
 name: thiamine deficiency disease
 namespace: disease_ontology
@@ -4629,6 +4637,75 @@ property_value: exactMatch "SNOMEDCT_US_2023_03_01:18899000" xsd:string
 property_value: exactMatch "UMLS_CUI:C0265227" xsd:string
 
 [Term]
+id: DOID:0070538
+name: syndromic X-linked intellectual developmental disorder bain type
+namespace: disease_ontology
+def: "A syndromic X-linked syndromic intellectual disability characterized by delayed psychomotor development, impaired intellectual development with behavioral abnormalities, and musculoskeletal and growth abnormalities that has_material_basis_in heterozygous mutation in the HNRNPH2 gene on chromosome Xq22.1." [url:https\://pubmed.ncbi.nlm.nih.gov/27545675/, url:https\://pubmed.ncbi.nlm.nih.gov/37372334/, url:https\://www.ncbi.nlm.nih.gov/books/NBK584018/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "HNRNPH2-related neurodevelopmental disorder" EXACT []
+synonym: "HNRNPH2-RNDD" EXACT []
+synonym: "Mental Retardation, X-linked, Syndrome, Bain Type" EXACT []
+synonym: "MRXSB" EXACT []
+xref: GARD:13442
+xref: MIM:300986
+xref: NCI:C183311
+xref: UMLS_CUI:C4310814
+is_a: DOID:1059 ! intellectual disability
+property_value: exactMatch "GARD:13442" xsd:string
+property_value: exactMatch "MIM:300986" xsd:string
+property_value: exactMatch "NCI:C183311" xsd:string
+property_value: exactMatch "UMLS_CUI:C4310814" xsd:string
+
+[Term]
+id: DOID:0070540
+name: mitochondrial short-chain enoyl-CoA hydratase 1 deficiency
+namespace: disease_ontology
+def: "A mitochondrial metabolism disease characterized by a spectrum of phenotypes including delayed psychomotor development, neurodegeneration, increased lactic acid, brain lesions in the basal ganglia, and dystonia that has material basis in homozygous or compound heterozygous mutation in the ECHS1 gene on chromosome 10q26.3." [url:https\://pubmed.ncbi.nlm.nih.gov/25125611/, url:https\://www.ncbi.nlm.nih.gov/books/NBK542806/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "ECHS1D" EXACT []
+xref: GARD:13019
+xref: MIM:616277
+xref: NCI:C174218
+xref: ORDO:653880
+xref: UMLS_CUI:C4225391
+is_a: DOID:655 ! inherited metabolic disorder
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "GARD:13019" xsd:string
+property_value: exactMatch "MIM:616277" xsd:string
+property_value: exactMatch "NCI:C174218" xsd:string
+property_value: exactMatch "ORDO:653880" xsd:string
+property_value: exactMatch "UMLS_CUI:C4225391" xsd:string
+
+[Term]
+id: DOID:0070541
+name: 3-hydroxy-3-methylglutaryl-CoA lyase deficiency
+namespace: disease_ontology
+def: "An amino acid metabolic disorder characterized by metabolic acidosis without ketonuria, hypoglycemia, and a characteristic pattern of elevated urinary organic acid metabolites, including 3-hydroxy-3-methylglutaric, 3-methylglutaric, and 3-hydroxyisovaleric acids that has_material_basis_in homozygous or compound heterozygous mutation in the HMGCL gene on chromosome 1p36.11." [url:https\://pubmed.ncbi.nlm.nih.gov/3128690/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "3-hydroxy-3-methylglutaryl-coenzyme A lyase deficiency" EXACT []
+synonym: "HL deficiency" RELATED []
+synonym: "HMG-CoA lyase deficiency" EXACT []
+synonym: "HMGCL deficiency" EXACT []
+synonym: "HMGCLD" EXACT []
+synonym: "hydroxymethylglutaric aciduria" EXACT []
+xref: GARD:8387
+xref: MESH:C538324
+xref: MIM:246450
+xref: NCI:C84523
+xref: ORDO:20
+xref: UMLS_CUI:C0268601
+is_a: DOID:9252 ! amino acid metabolic disorder
+property_value: exactMatch "GARD:8387" xsd:string
+property_value: exactMatch "MESH:C538324" xsd:string
+property_value: exactMatch "MIM:246450" xsd:string
+property_value: exactMatch "NCI:C84523" xsd:string
+property_value: exactMatch "ORDO:20" xsd:string
+property_value: exactMatch "UMLS_CUI:C0268601" xsd:string
+
+[Term]
 id: DOID:0080016
 name: spina bifida
 namespace: disease_ontology
@@ -4903,6 +4980,28 @@ xref: NCI:C8863
 is_a: DOID:707 ! B-cell lymphoma
 
 [Term]
+id: DOID:0080223
+name: epidermolytic palmoplantar keratoderma
+namespace: disease_ontology
+def: "A palmoplantar keratosis that is characterized by marked hyperkeratosis on the surface of palms and soles." [url:https\://www.ncbi.nlm.nih.gov/pubmed/7544663]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "EPPK" EXACT []
+xref: GARD:2826
+xref: MESH:D053546
+xref: MIM:PS144200
+xref: NCI:C84693
+xref: ORDO:2199
+xref: UMLS_CUI:C1721006
+is_a: DOID:161 ! keratosis
+property_value: exactMatch "GARD:2826" xsd:string
+property_value: exactMatch "MESH:D053546" xsd:string
+property_value: exactMatch "MIM:PS144200" xsd:string
+property_value: exactMatch "NCI:C84693" xsd:string
+property_value: exactMatch "ORDO:2199" xsd:string
+property_value: exactMatch "UMLS_CUI:C1721006" xsd:string
+
+[Term]
 id: DOID:0080326
 name: familial hypertrophic cardiomyopathy
 namespace: disease_ontology
@@ -4989,12 +5088,12 @@ is_a: DOID:3908 ! lung non-small cell carcinoma
 
 [Term]
 id: DOID:0080522
-name: thyroid gland anaplastic carcinoma
+name: anaplastic thyroid carcinoma
 namespace: disease_ontology
 def: "A thyroid gland carcinoma that is composed of undifferentiated cells." [url:https\://www.ncbi.nlm.nih.gov/pubmed/28707679]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "anaplastic thyroid carcinoma" EXACT []
+synonym: "thyroid gland anaplastic carcinoma" EXACT []
 xref: NCI:C3878
 is_a: DOID:3963 ! thyroid gland carcinoma
 
@@ -5010,11 +5109,12 @@ is_a: DOID:3963 ! thyroid gland carcinoma
 
 [Term]
 id: DOID:0080525
-name: differentiated thyroid gland carcinoma
+name: differentiated high-grade thyroid carcinoma
 namespace: disease_ontology
 def: "A thyroid gland adenocarcinoma characterized by extensive evidence of follicular cell differentiation." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C7153&ns=ncit]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "differentiated thyroid gland carcinoma" EXACT []
 xref: NCI:C7153
 is_a: DOID:0080524 ! thyroid gland adenocarcinoma
 
@@ -6927,6 +7027,67 @@ subset: NCIthesaurus
 xref: ICDO:8802/3
 xref: NCI:C154496
 is_a: DOID:4242 ! kidney sarcoma
+
+[Term]
+id: DOID:0081457
+name: intrathyroid thymic carcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma composed of groups of carcinoma cells with thymic epithelial differentiation." [url:https\://pubmed.ncbi.nlm.nih.gov/37925863/]
+subset: NCIthesaurus
+synonym: "Carcinoma showing thymus-like differentiation" EXACT []
+synonym: "Carcinoma showing thymus-like element" EXACT []
+synonym: "CASTLE" EXACT []
+synonym: "Intrathyroid thymic carcinoma" EXACT []
+synonym: "Thyroid_Gland_Carcinoma_Showing_Thymus-Like_Differentiation" EXACT []
+xref: ICDO:8589/3
+xref: NCI:C46106
+is_a: DOID:3963 ! thyroid gland carcinoma
+
+[Term]
+id: DOID:0081458
+name: thyroid gland cribriform morular carcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma that is characterized by the presence of cribriform, trabecular, follicular, papillary, and solid growth patterns and squamoid morulae formation." [url:https\://pubmed.ncbi.nlm.nih.gov/35882545/]
+subset: NCIthesaurus
+synonym: "CMTC" EXACT []
+synonym: "Cribriform Morular Thyroid Gland Carcinoma" EXACT []
+synonym: "Cribriform-Morular Variant Thyroid Gland Papillary Cancer" EXACT []
+synonym: "Cribriform-Morular Variant Thyroid Gland Papillary Carcinoma" EXACT []
+synonym: "Thyroid Gland Cribriform Morular Carcinoma" EXACT []
+xref: NCI:C126408
+is_a: DOID:3963 ! thyroid gland carcinoma
+
+[Term]
+id: DOID:0081459
+name: thyroid gland mixed medullary and follicular cell-derived carcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma containing a medullary carcinoma component that is immunohistochemically positive for calcitonin, and follicular cell-derived carcinoma component that is immunohistochemically positive for thyroglobulin." [url:https\://pubmed.ncbi.nlm.nih.gov/20574174/]
+subset: NCIthesaurus
+synonym: "mixed medullary and follicular cell-derived carcinomas" EXACT []
+xref: NCI:C46104
+is_a: DOID:3963 ! thyroid gland carcinoma
+
+[Term]
+id: DOID:0081460
+name: thyroid gland mucinous carcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma that is characterized by the presence of clusters of malignant epithelial cells associated with abundant extracellular mucin deposition." [url:https\://pubmed.ncbi.nlm.nih.gov/24466763/]
+subset: NCIthesaurus
+xref: NCI:C156267
+is_a: DOID:3963 ! thyroid gland carcinoma
+
+[Term]
+id: DOID:0081461
+name: thyroid gland spindle epithelial tumor with thymus-like elements
+namespace: disease_ontology
+def: "A thyroid gland carcinoma that is characterized by a lobulated architectural pattern and the presence of a biphasic cellular population composed of spindle epithelial cells and glandular cells." [url:https\://pubmed.ncbi.nlm.nih.gov/21085772/]
+subset: NCIthesaurus
+synonym: "SETTLE" EXACT []
+synonym: "Spindle Epithelial Tumor with Thymus-Like Elements" EXACT []
+synonym: "Thyroid Gland Spindle Cell Tumor with Thymus-Like Differentiation" EXACT []
+synonym: "Thyroid Gland Spindle Epithelial Tumor with Thymus-Like Elements" EXACT []
+xref: NCI:C46105
+is_a: DOID:3963 ! thyroid gland carcinoma
 
 [Term]
 id: DOID:0090019
@@ -16853,7 +17014,7 @@ is_a: DOID:780 ! placenta disease
 id: DOID:12217
 name: Lewy body dementia
 namespace: disease_ontology
-def: "A dementia that is characterized by the development of abnormal proteinaceous (alpha-synuclein) cytoplasmic inclusions, called Lewy bodies, throughout the brain that results in progressive decline in mental abilities." [url:http\://en.wikipedia.org/wiki/Dementia_with_Lewy_bodies, url:http\://www.mayoclinic.org/diseases-conditions/lewy-body-dementia/basics/definition/CON-20025038]
+def: "A dementia that is characterized by the development of abnormal proteinaceous (alpha-synuclein) cytoplasmic inclusions, called Lewy bodies, throughout the brain that results in progressive decline in mental abilities that has_material_basis_in accumulation of alpha-synuclein, SCNA, (protein). The causal mutation might be in SCNA or SCNB or some other gene(s) but the end result is always accumulation of SCNA in Lewy bodies." [url:http\://en.wikipedia.org/wiki/Dementia_with_Lewy_bodies, url:http\://www.mayoclinic.org/diseases-conditions/lewy-body-dementia/basics/definition/CON-20025038]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -26076,7 +26237,7 @@ id: DOID:1781
 name: thyroid cancer
 namespace: disease_ontology
 alt_id: DOID:10008
-def: "An endocrine gland cancer located in the thyroid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland]
+def: "An endocrine gland cancer located in the thyroid gland located in the neck below the thyroid cartilage." [url:http\://en.wikipedia.org/wiki/Thyroid_gland, url:https\://pubmed.ncbi.nlm.nih.gov/35288841/]
 subset: DO_cancer_slim
 subset: DO_CFDE_slim
 subset: NCIthesaurus
@@ -26834,12 +26995,13 @@ is_a: DOID:2994 ! germ cell cancer
 id: DOID:1919
 name: Lesch-Nyhan syndrome
 namespace: disease_ontology
-def: "A purine-pyrimidine metabolic disorder characterized by mental retardation, spastic cerebral palsy, choreoathetosis, uric acid urinary stones, and self-destructive biting of fingers and lips that has_material_basis_in mutation in the hypoxanthine guanine phosphoribosyltransferase (HPRT) gene on chromosome Xq26." [url:https\://pubmed.ncbi.nlm.nih.gov/31182398/]
+def: "A purine-pyrimidine metabolic disorder characterized by mental retardation, spastic cerebral palsy, choreoathetosis, uric acid urinary stones, and self-destructive biting of fingers and lips that has_material_basis_in mutation in the HPRT1 gene on chromosome Xq26." [url:https\://pubmed.ncbi.nlm.nih.gov/31182398/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Complete hypoxanthine-guanine phosphoribosyltransferase deficiency" EXACT []
 synonym: "deficiency of IMP pyrophosphorylase" EXACT []
 synonym: "HG-PRT deficiency" EXACT []
+synonym: "HPRT1 deficiency" EXACT []
 synonym: "hypoxanthine guanine phosphoribosyltransferase deficiency" EXACT []
 synonym: "Hypoxanthine-guanine phosphoribosyltransferase deficiency" EXACT []
 synonym: "Hypoxanthine-guanine-phosphoribosyltransferase deficiency" EXACT []
@@ -38711,7 +38873,7 @@ is_a: DOID:121 ! vaginal disease
 id: DOID:3770
 name: pulmonary fibrosis
 namespace: disease_ontology
-def: "An interstitial lung disease that is characterized by destruction, scarring, and thickening of the interstitial lung tissues and progressive pulmonary function loss in a restrictive pattern, has_symptom progressive shortness of breath, fatigue, and chronic cough, possibly has_material_basis_in exposure to certain chemicals, autoimmune conditions, and radiation." [url:https\://www.sciencedirect.com/science/article/pii/S0954611106004331]
+def: "An interstitial lung disease that is characterized by destruction, scarring, and thickening of the interstitial lung tissues and progressive pulmonary function loss in a restrictive pattern, has_symptom progressive shortness of breath, fatigue, and chronic cough, possibly has_material_basis_in exposure to certain chemicals, autoimmune conditions, and radiation. It can be caused by inhaling hazardous chemicals, certain diseases, medication and genetics or unknown causes." [url:https\://www.lung.org/lung-health-diseases/lung-disease-lookup/pulmonary-fibrosis, url:https\://www.sciencedirect.com/science/article/pii/S0954611106004331]
 subset: NCIthesaurus
 synonym: "Fibrosis of lung" EXACT []
 xref: MESH:D011658
@@ -39364,12 +39526,22 @@ synonym: "HNPCC - hereditary nonpolyposis colon cancer" EXACT []
 xref: GARD:9905
 xref: MESH:D003123
 xref: MIM:PS120435
-xref: NCI:C120083
+xref: NCI:C8494
 xref: ORDO:144
 xref: SNOMEDCT_US_2023_03_01:700064004
 xref: UMLS_CUI:C0009405
-xref: UMLS_CUI:C1333990
+xref: UMLS_CUI:C4552100
 is_a: DOID:225 ! syndrome
+property_value: broadMatch "NCI:C120083" xsd:string
+property_value: broadMatch "ORDO:443909" xsd:string
+property_value: broadMatch "UMLS_CUI:C1333990" xsd:string
+property_value: exactMatch "GARD:9905" xsd:string
+property_value: exactMatch "MESH:D003123" xsd:string
+property_value: exactMatch "MIM:PS120435" xsd:string
+property_value: exactMatch "NCI:C8494" xsd:string
+property_value: exactMatch "ORDO:144" xsd:string
+property_value: exactMatch "UMLS_CUI:C0009405" xsd:string
+property_value: exactMatch "UMLS_CUI:C4552100" xsd:string
 
 [Term]
 id: DOID:3890
@@ -39752,7 +39924,7 @@ is_a: DOID:397 ! restrictive cardiomyopathy
 
 [Term]
 id: DOID:3962
-name: thyroid gland follicular carcinoma
+name: follicular thyroid carcinoma
 namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that has_material_basis_in follicular cells." [url:http\://en.wikipedia.org/wiki/Follicular_thyroid_cancer]
 comment: OMIM mapping confirmed by DO. [SN].
@@ -39761,14 +39933,16 @@ subset: NCIthesaurus
 synonym: "Follicular adenocarcinoma" EXACT []
 synonym: "Follicular adenocarcinoma, well differentiated" EXACT []
 synonym: "Follicular carcinoma" EXACT []
-synonym: "follicular thyroid carcinoma" EXACT []
 synonym: "Thyroid adenocarcinoma" EXACT []
+synonym: "thyroid gland follicular carcinoma" EXACT []
+xref: ICD11:2D10.0
+xref: ICDO:8330/3
 xref: MESH:D018263
 xref: MIM:188470
 xref: NCI:C8054
 xref: SNOMEDCT_US_2023_03_01:255028004
 xref: UMLS_CUI:C0206682
-is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
+is_a: DOID:0080525 ! differentiated high-grade thyroid carcinoma
 
 [Term]
 id: DOID:3963
@@ -39778,6 +39952,7 @@ def: "A thyroid gland cancer that has_material_basis_in epithelial cells." [url:
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "head and neck cancer, Thyroid" EXACT []
+synonym: "Thyroid carcinoma" EXACT []
 xref: EFO:0002892
 xref: MESH:D013964
 xref: NCI:C4815
@@ -39794,7 +39969,7 @@ synonym: "Trabecular Follicular carcinoma" EXACT []
 xref: NCI:C46095
 xref: SNOMEDCT_US_2023_03_01:72174007
 xref: UMLS_CUI:C0334327
-is_a: DOID:3962 ! thyroid gland follicular carcinoma
+is_a: DOID:3962 ! follicular thyroid carcinoma
 
 [Term]
 id: DOID:3965
@@ -39813,20 +39988,8 @@ xref: UMLS_CUI:C0302182
 is_a: DOID:3451 ! skin carcinoma
 
 [Term]
-id: DOID:3968
-name: papillary follicular thyroid adenocarcinoma
-namespace: disease_ontology
-subset: DO_cancer_slim
-subset: NCIthesaurus
-xref: MESH:D018265
-xref: NCI:C7380
-xref: SNOMEDCT_US_2023_03_01:189643000
-xref: UMLS_CUI:C0206683
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
-
-[Term]
 id: DOID:3969
-name: thyroid gland papillary carcinoma
+name: papillary thyroid carcinoma
 namespace: disease_ontology
 def: "A differentiated thyroid gland carcinoma that is characterized by the small mushroom shape of the tumor which has a stem attached to the epithelial layer and arises from the follicular cells of the thyroid gland." [url:http\://cancergenome.nih.gov/cancersselected/thyroid, url:http\://en.wikipedia.org/wiki/Papillary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/pubmed/21455196]
 comment: OMIM mapping confirmed by DO. [SN].
@@ -39834,13 +39997,18 @@ subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Papillary carcinoma of the Thyroid gland" EXACT []
+synonym: "Papillary carcinoma of thyroid" EXACT []
+synonym: "thyroid gland papillary carcinoma" EXACT []
 xref: GARD:12027
+xref: ICD11:2D10.1
+xref: ICDO:8260/3
 xref: MESH:D000077273
 xref: MIM:188550
 xref: NCI:C4035
 xref: SNOMEDCT_US_2023_03_01:255029007
 xref: UMLS_CUI:C0238463
-is_a: DOID:0080525 ! differentiated thyroid gland carcinoma
+is_a: DOID:0080525 ! differentiated high-grade thyroid carcinoma
+is_a: DOID:3112 ! papillary adenocarcinoma
 
 [Term]
 id: DOID:397
@@ -39865,15 +40033,17 @@ is_a: DOID:0050700 ! cardiomyopathy
 
 [Term]
 id: DOID:3973
-name: thyroid gland medullary carcinoma
+name: medullary thyroid carcinoma
 namespace: disease_ontology
-def: "A thyroid gland carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer]
+def: "A thyroid gland carcinoma that has_material_basis_in parafollicular cells." [url:http\://en.wikipedia.org/wiki/Medullary_thyroid_cancer, url:https\://www.ncbi.nlm.nih.gov/books/NBK459354/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "Medullary carcinoma of the Thyroid gland" EXACT []
-synonym: "medullary thyroid carcinoma" EXACT []
+synonym: "Parafollicular cell carcinoma" EXACT []
+synonym: "thyroid gland medullary carcinoma" EXACT []
 synonym: "Ultimobranchial thyroid tumor" EXACT []
 synonym: "Ultimobranchial thyroid tumour" EXACT []
+xref: ICDO:8345/3
 xref: MESH:C536914
 xref: NCI:C3879
 xref: SNOMEDCT_US_2023_03_01:255032005
@@ -52404,16 +52574,21 @@ is_a: DOID:4693 ! nerve plexus neoplasm
 
 [Term]
 id: DOID:5914
-name: nonencapsulated sclerosing carcinoma
+name: diffuse sclerosing papillary thyroid carcinoma
 namespace: disease_ontology
+def: "A papillary thyroid carcinoma that is characterized by diffuse infiltration of the thyroid gland by malignant follicular cells, squamous metaplasia, stromal fibrosis, and lymphocytic infiltration." [url:https\://pubmed.ncbi.nlm.nih.gov/36546348/, url:https\://pubmed.ncbi.nlm.nih.gov/36995892/]
 subset: NCIthesaurus
+synonym: "Diffuse sclerosing papillary thyroid cancer (DSPTC)" EXACT []
+synonym: "diffuse sclerosing PTC" EXACT []
+synonym: "Diffuse Sclerosing Variant Thyroid Gland Papillary Carcinoma" EXACT []
+synonym: "nonencapsulated sclerosing carcinoma" EXACT []
 synonym: "Nonencapsulated Sclerosing neoplasm" EXACT []
 synonym: "Papillary carcinoma, diffuse sclerosing" EXACT []
 xref: ICDO:8350/3
 xref: NCI:C7427
 xref: SNOMEDCT_US_2023_03_01:62681000
 xref: UMLS_CUI:C0334330
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
+is_a: DOID:3969 ! papillary thyroid carcinoma
 
 [Term]
 id: DOID:5916
@@ -57650,28 +57825,39 @@ is_a: DOID:5410 ! pulmonary neuroendocrine tumor
 id: DOID:7086
 name: multicentric papillary thyroid carcinoma
 namespace: disease_ontology
+def: "A papillary thyroid carcinoma arising in the thyroid gland from multiple foci." [url:https\://pubmed.ncbi.nlm.nih.gov/30884463/]
 subset: NCIthesaurus
+synonym: "Multifocal papillary thyroid carcinoma (PTC)" EXACT []
 xref: NCI:C37304
 xref: UMLS_CUI:C1334817
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
+is_a: DOID:3969 ! papillary thyroid carcinoma
 
 [Term]
 id: DOID:7088
-name: columnar cell variant papillary carcinoma
+name: columnar cell papillary thyroid carcinoma
 namespace: disease_ontology
+def: "A papillary thyroid carcinoma that is characterized by the presence of pseudostratified malignant follicular cells." [url:https\://pubmed.ncbi.nlm.nih.gov/33783022/]
 subset: NCIthesaurus
+synonym: "Columnar cell PTC" EXACT []
+synonym: "Columnar cell variant (CCV)" EXACT []
+synonym: "columnar cell variant papillary carcinoma" EXACT []
+xref: ICDO:8344/3
 xref: NCI:C35830
 xref: UMLS_CUI:C1333120
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
+is_a: DOID:3969 ! papillary thyroid carcinoma
 
 [Term]
 id: DOID:7089
-name: tall cell variant papillary carcinoma
+name: tall cell papillary thyroid carcinoma
 namespace: disease_ontology
+def: "A papillary thyroid carcinoma that is characterized by the presence of tall malignant follicular cells, arranged in papillary and trabecular patterns." [url:https\://pubmed.ncbi.nlm.nih.gov/32701516/]
 subset: NCIthesaurus
+synonym: "Tall cell PTC" EXACT []
+synonym: "tall cell variant papillary carcinoma" EXACT []
+synonym: "Tall Cell Variant Thyroid Gland Papillary Carcinoma" EXACT []
 xref: NCI:C35558
 xref: UMLS_CUI:C1336695
-is_a: DOID:3969 ! thyroid gland papillary carcinoma
+is_a: DOID:3969 ! papillary thyroid carcinoma
 
 [Term]
 id: DOID:709
@@ -62015,19 +62201,22 @@ is_a: DOID:626 ! complement deficiency
 
 [Term]
 id: DOID:8161
-name: thyroid gland Hurthle cell carcinoma
+name: oncocytic carcinoma of the thyroid
 namespace: disease_ontology
 def: "A thyroid gland follicular carcinoma that is characterized by the presence of large cells with eosinophilic granular cytoplasm and pleomorphic nuclei with prominent, eosinophilic nucleoli." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4946]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "oncocytic carcinoma of the thyroid" EXACT []
+synonym: "Oncocytic (Hurthle-cell) carcinoma" EXACT []
+synonym: "thyroid gland Hurthle cell carcinoma" EXACT []
+synonym: "Thyroid Gland Oncocytic Carcinoma" EXACT []
+xref: ICDO:8290/3
 xref: MESH:C536913
 xref: MIM:607464
 xref: NCI:C4946
 xref: SNOMEDCT_US_2023_03_01:423158009
 xref: UMLS_CUI:C0749424
-is_a: DOID:3962 ! thyroid gland follicular carcinoma
+is_a: DOID:3962 ! follicular thyroid carcinoma
 
 [Term]
 id: DOID:8162
@@ -62523,7 +62712,7 @@ is_a: DOID:3350 ! mesenchymal cell neoplasm
 id: DOID:8307
 name: early invasive cervical adenocarcinoma
 namespace: disease_ontology
-def: "A cervical adenocarcinoma that is characterized by tumor cells that are identical to those in adenocarcinoma in situ (ACIS) and mcroscopic findings that suggest invasion." [url:https\://www.uptodate.com/contents/invasive-cervical-adenocarcinoma]
+def: "A cervical adenocarcinoma that is characterized by tumor cells that are identical to those in adenocarcinoma in situ (ACIS) and microscopic findings that suggest invasion." [url:https\://www.uptodate.com/contents/invasive-cervical-adenocarcinoma]
 subset: NCIthesaurus
 xref: NCI:C36096
 xref: UMLS_CUI:C1333369

@@ -106,7 +106,7 @@ $(FASTOBO): build/fastobo-validator.zip
 test: reason report verify-edit
 
 # Report for general issues on doid-edit
-report: build/reports/report.tsv
+report: build/reports/report-obo.tsv build/reports/report.tsv
 
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_robot build/reports
@@ -116,7 +116,16 @@ build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_r
 	 --profile $(word 2,$^) \
 	 --labels true \
 	 --output $@
-	@echo "Full doid-edit QC report available at $@"
+	@echo "doid-edit QC report available at $@"
+	@echo ""
+
+build/reports/report-obo.tsv: $(EDIT) | check_robot build/reports
+	@echo ""
+	@$(ROBOT) report \
+	 --input $< \
+	 --labels true \
+	 --output $@
+	@echo "OBO dashboard QC report available at $@"
 	@echo ""
 
 # Simple reasoning test
@@ -418,7 +427,7 @@ endef
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT) build/reports/report.tsv | check_robot
+$(DO).owl: $(EDIT) | check_robot report
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \

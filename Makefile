@@ -104,29 +104,26 @@ $(FASTOBO): build/fastobo-validator.zip
 
 # `make test` is used for Github integration
 test: reason report verify-edit
+	@echo ""
 
 # Report for general issues on doid-edit
 report: build/reports/report-obo.tsv build/reports/report.tsv
 
 .PRECIOUS: build/reports/report.tsv
 build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_robot build/reports
-	@echo ""
+	@echo -e "\n## doid-edit QC report\nFull report at $@"
 	@$(ROBOT) report \
 	 --input $< \
 	 --profile $(word 2,$^) \
 	 --labels true \
 	 --output $@
-	@echo "doid-edit QC report available at $@"
-	@echo ""
 
 build/reports/report-obo.tsv: $(EDIT) | check_robot build/reports
-	@echo ""
+	@echo -e "\n## OBO dashboard QC report\nFull report at $@"
 	@$(ROBOT) report \
 	 --input $< \
 	 --labels true \
 	 --output $@
-	@echo "OBO dashboard QC report available at $@"
-	@echo ""
 
 # Simple reasoning test
 reason: build/update/doid-edit-reasoned.owl
@@ -139,13 +136,13 @@ build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
 	 --exclude-duplicate-axioms true \
 	 --equivalent-classes-allowed "asserted-only" \
 	 --output $@
-	@echo "Reasoning completed successfully!"
+	@echo -e "\n## Reasoning completed successfully!"
 
 # Verify doid-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 
 verify-edit: $(EDIT) | check_robot
-	@echo "Verifying $< (see build/reports on error)"
+	@echo -e "\n## Verifying $< (see build/reports on error)"
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(EDIT_V_QUERIES) \
@@ -427,7 +424,7 @@ endef
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT) | check_robot report
+$(DO).owl: $(EDIT) | check_robot test
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \

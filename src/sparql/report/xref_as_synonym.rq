@@ -1,0 +1,22 @@
+# Ensure that xrefs are not entered as synonyms
+#	regex pattern is relaxed somewhat from true CURIE match to identify
+#	slightly malformed xrefs
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property {
+		oboInOwl:hasExactSynonym
+		oboInOwl:hasNarrowSynonym
+		oboInOwl:hasBroadSynonym
+		oboInOwl:hasRelatedSynonym
+	}
+	?entity a owl:Class ;
+		?property ?value .
+	FILTER(REGEX(?value, "^[ A-Za-z0-9_.-]+:[^\\s]+$"))
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+}

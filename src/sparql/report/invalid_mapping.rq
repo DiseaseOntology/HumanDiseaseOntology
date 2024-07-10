@@ -1,0 +1,20 @@
+# Ensure valid mappings
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property ?value WHERE {
+	VALUES ?property {
+		skos:exactMatch
+		skos:closeMatch
+		skos:broadMatch
+		skos:narrowMatch
+		skos:relatedMatch
+	}
+	?entity ?property ?value .
+	FILTER (!regex(?value, "^[A-Za-z_][A-Za-z0-9_.-]*[A-Za-z0-9_]:[^\\s]+$"))
+	FILTER (!isBlank(?entity))
+}
+ORDER BY ?entity

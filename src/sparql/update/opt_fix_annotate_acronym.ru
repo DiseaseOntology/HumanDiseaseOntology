@@ -1,4 +1,4 @@
-# auto-annotate acronyms
+# Annotate acronyms (i.e. 1-2 letters, then 0-6 capital letters/numbers)
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
@@ -14,7 +14,7 @@ INSERT {
 	obo:OMO_0003012 a owl:AnnotationProperty ;
 		rdfs:label "acronym" ;
 		rdfs:subPropertyOf oboInOwl:SynonymTypeProperty .
-	
+
 	[] a owl:Axiom ;
 		owl:annotatedSource ?class ;
 		owl:annotatedProperty oboInOwl:hasExactSynonym ;
@@ -23,6 +23,13 @@ INSERT {
  }
 WHERE {
     ?class oboInOwl:hasExactSynonym ?syn .
-	FILTER( REGEX( ?syn, "^[A-Z0-9]+$" ) )
+	FILTER(REGEX(?syn, "^[A-Za-z][A-Z0-9]{1,7}$"))
     FILTER NOT EXISTS { ?class owl:deprecated true }
+	FILTER NOT EXISTS {
+		[] a owl:Axiom ;
+			owl:annotatedSource ?class ;
+			owl:annotatedProperty oboInOwl:hasExactSynonym ;
+			owl:annotatedTarget ?syn ;
+			oboInOwl:hasSynonymType obo:OMO_0003012 .
+	}
 }

@@ -12,6 +12,85 @@
 
 ## 2024 Releases
 
+### [v2024-07-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-07-31)
+
+This release of the Human Disease Ontology includes 11,612 disease classes, 9,280 with textual definitions (79.9%). Diseases that have been revised and/or expanded include CAMRQ syndrome, mosaic variegated aneuploidy syndromes, Fanconi anemia complementation groups, mal de Meleda, common cold, scarlet fever, Machado-Joseph disease, hematopoietic system disease, palmoplantar keratosis, glucose metabolism diseases, and polycystic liver diseases.
+
+_Additionally_, synonyms that are considered **acronyms**, including initialisms & alphebetisms as defined in the new OBO Metadata Ontology acronym ([OMO:0003012](http://purl.obolibrary.org/obo/OMO_0003012)) annotation property, have been annotated as such. All acronyms remain synonyms with no change to their synonym type relationships (exact, broad, narrow, related). Instead, an additional annotation has been applied to the disease-synonym type-synonym triples as an owl:Axiom.
+
+<details>
+
+<summary><h3>Examples of acronym annotations & how to access them</h3></summary>
+
+#### OBO format _(e.g. doid.obo)_
+'Lambert-Eaton myasthenic syndrome' (DOID:0050214) 'LEMS' acronym
+```
+[Term]
+...
+synonym: "Lambert-Eaton syndrome" EXACT []
+synonym: "LEMS" EXACT OMO:0003012 []
+...
+```
+
+
+#### RDF/XML _(e.g. doid.owl)_
+'drug-induced lupus erythematosus' (DOID:0040093) 'DILE' acronym 
+```
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0040093"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">DILE</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
+    </owl:Axiom>
+```
+
+#### OWL Functional Syntax _(e.g. doid-edit.owl)_
+'Polyomavirus-associated nephropathy' (DOID:0040086) 'PVAN' acronym
+```
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:DOID_0040086 "PVAN"@en)
+```
+
+### Extracting acronyms with SPARQL
+```SPARQL
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?class ?label ?synonym_type ?acronym
+WHERE {
+  VALUES ?synonym_type {
+    oboInOwl:hasExactSynonym oboInOwl:hasBroadSynonym
+        oboInOwl:hasNarrowSynonym oboInOwl:hasRelatedSynonym
+  }
+
+  ?class a owl:Class ;
+    rdfs:label ?label ;
+    ?synonym_type ?acronym .
+
+  [] a owl:Axiom ;
+    owl:annotatedSource ?class ;
+    owl:annotatedProperty ?synonym_type ;
+    owl:annotatedTarget ?acronym ;
+    oboInOwl:hasSynonymType obo:OMO_0003012 .
+}
+```
+
+_Additional SPARQL queries for extracting acronyms can be found at https://github.com/DiseaseOntology/SPARQLqueries/tree/main/Datasets/Synonyms._
+
+</details>
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-06-28...v2024-07-31
+
+_Discussion regarding how acronyms are to be annotated across OBO ontologies can be found at https://github.com/information-artifact-ontology/ontology-metadata/issues/135._
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-07-31/src/ontology/doid-merged.obo) | |
+
 ### [v2024-06-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-06-28)
 
 This release of the Human Disease Ontology includes 11,598 disease classes, 9,265 with textual definitions (79.9%). Diseases that have been revised and/or expanded include thyroid carcinomas, polycystic liver diseases, primary pigmented nodular adrenocortical diseases, Robinow syndromes, WHIM syndromes, and renal hypomagnesemias. The acquired metabolic diseases auto-brewery syndrome and bladder fermentation syndrome have been added and a number of UMLS and related mappings have been revised and updated. An issue with idiopathic pulmonary fibrosis that arose in the previous release has also been fixed (issue #1341).

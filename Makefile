@@ -609,7 +609,7 @@ DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports check_robot
 	@echo "Created $@"
 
 DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports check_robot
-	@robot export \
+	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|LABEL|SubClass Of [ANON]" \
 	 --export $@
@@ -617,7 +617,7 @@ DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports check_robot
 	@echo "Created $@"
 
 DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports check_robot
-	@robot export \
+	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|LABEL|Equivalent Class" \
 	 --export $@

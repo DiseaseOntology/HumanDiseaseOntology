@@ -109,7 +109,7 @@ test: reason report verify-edit
 # Report for general issues on doid-edit
 report: build/reports/report-obo.tsv build/reports/report.tsv
 
-.PRECIOUS: build/reports/report.tsv
+.PRECIOUS: build/reports/report.tsv build/reports/report-obo.tsv
 build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_robot build/reports
 	@echo -e "\n## doid-edit QC report\nFull report at $@"
 	@$(ROBOT) report \

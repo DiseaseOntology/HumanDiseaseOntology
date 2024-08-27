@@ -7,9 +7,18 @@
 Repository for the Human Disease Ontology (DO).
 
 ## Announcements
-**_NOW LIVE in the [May 2024 release](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2024-05-29)_** -- The prefix for **OMIM cross-references and susceptibilities** is now 'MIM', not 'OMIM', in the Human Disease Ontology. For details refer to https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1301.
+- **_LIVE as of the [May 2024 release](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2024-05-29)_** -- The prefix for **OMIM cross-references and susceptibilities** is now 'MIM', not 'OMIM', in the Human Disease Ontology. For details refer to https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1301.
 
-**_Upcoming Change REMINDER: Acronym annotations COMING SOON!_** -- DO will start annotating acronyms in an upcoming release (possibly as early as June). A set of test release files, equivalent to the February DO release with _some_ acronyms annotated in all production files, is available at https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/acronym_test/src/ontology.
+- **_LIVE as of the [July 2024 release](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2024-07-31)_** -- **Acronyms** are now annotated in the DO. For background information refer to https://github.com/information-artifact-ontology/ontology-metadata/issues/135. Note: Acronyms retain their synonym scope (exact, narrow, etc.). This is an additional annotation using `owl:Axiom`, `oboInOwl:hasSynonymType` and the new synonym type `OMO:0003012` (acronym), e.g.
+
+```owl
+<owl:Axiom>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0040093"/>
+	<owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+	<owl:annotatedTarget xml:lang="en">DIL</owl:annotatedTarget>
+	<oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
+</owl:Axiom>
+```
 
 
 ## Details

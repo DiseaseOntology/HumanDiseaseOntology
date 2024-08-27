@@ -17,18 +17,23 @@ INSERT {
 
 	[] a owl:Axiom ;
 		owl:annotatedSource ?class ;
-		owl:annotatedProperty oboInOwl:hasExactSynonym ;
+		owl:annotatedProperty ?synonym_scope ;
 		owl:annotatedTarget ?syn ;
 		oboInOwl:hasSynonymType obo:OMO_0003012 .
- }
+}
 WHERE {
-    ?class oboInOwl:hasExactSynonym ?syn .
+	VALUES ?synonym_scope {
+		oboInOwl:hasExactSynonym oboInOwl:hasRelatedSynonym
+		oboInOwl:hasBroadSynonym oboInOwl:hasNarrowSynonym
+	}
+
+	?class ?synonym_scope ?syn .
 	FILTER(REGEX(?syn, "^[A-Za-z][A-Z0-9]{1,7}$"))
-    FILTER NOT EXISTS { ?class owl:deprecated true }
+	FILTER NOT EXISTS { ?class owl:deprecated true }
 	FILTER NOT EXISTS {
 		[] a owl:Axiom ;
 			owl:annotatedSource ?class ;
-			owl:annotatedProperty oboInOwl:hasExactSynonym ;
+			owl:annotatedProperty ?synonym_scope ;
 			owl:annotatedTarget ?syn ;
 			oboInOwl:hasSynonymType obo:OMO_0003012 .
 	}

@@ -18,8 +18,9 @@ DM = src/ontology/doid-merged
 DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
 
-# Set the ROBOT version to use
+# Set the software versions to use
 ROBOT_VRS = 1.9.5
+FASTOBO_VRS = 0.4.6
 
 # ***NEVER run make commands in parallel (do NOT use the -j flag)***
 
@@ -66,7 +67,7 @@ check_robot:
 	@if [[ -f build/robot.jar ]]; then \
 		VRS=$$($(ROBOT) --version) ; \
 		if [[ "$$VRS" != *"$(ROBOT_VRS)"* ]]; then \
-			echo "Updating ROBOT from version $$VRS to $(ROBOT_VRS)..." ; \
+			printf "\e[1;37mUpdating\e[0m from $$VRS to $(ROBOT_VRS)...\n" ; \
 			rm -rf build/robot.jar && $(MAKE) build/robot.jar ; \
 		fi ; \
 	else \
@@ -89,11 +90,36 @@ build/robot.jar: | build
 # fastobo is used to validate OBO structure
 FASTOBO := build/fastobo-validator
 
-build/fastobo-validator.zip: | build
-	curl -Lk -o $@ https://github.com/fastobo/fastobo-validator/releases/latest/download/fastobo-validator_null_x86_64-apple-darwin.zip
+.PHONY: check_fastobo
+check_fastobo:
+	@if [[ -f $(FASTOBO) ]]; then \
+		VRS=$$($(FASTOBO) --version) ; \
+		if [[ "$$VRS" != *"$(FASTOBO_VRS)"* ]]; then \
+			printf "\e[1;37mUpdating\e[0m from $$VRS to $(FASTOBO_VRS)...\n" ; \
+			rm -rf build/fastobo-validator && $(MAKE) $(FASTOBO) ; \
+		fi ; \
+	else \
+		printf "\e[1;37mDownloading\e[0m fastobo-validator version $(FASTOBO_VRS)...\n" ; \
+		$(MAKE) $(FASTOBO) ; \
+	fi
 
-$(FASTOBO): build/fastobo-validator.zip
-	cd build && unzip -DD $(notdir $<) fastobo-validator
+$(FASTOBO): | build
+	@if [[ $$(uname -m) == 'x86_64' ]]; then \
+		curl -Lk -o build/fastobo-validator.zip https://github.com/fastobo/fastobo-validator/releases/download/v$(FASTOBO_VRS)/fastobo-validator_null_x86_64-apple-darwin.zip ; \
+		cd build && unzip -DD fastobo-validator.zip fastobo-validator && rm fastobo-validator.zip ; \
+	else \
+		if [[ $$(command -v cargo) != *"cargo" ]]; then \
+			printf "\e[1;33mWARNING:\e[0m fastobo-validator must be built from source on ARM64 machines\n" ; \
+			printf " --> Install the Rust programming language, then repeat desired make command\n" ; \
+			printf "\e[1;33mSKIPPING\e[0m fastobo-validator install\n\n" ; \
+		else \
+			echo "fastobo-validator must be built from source on ARM64 machines, one moment..." ; \
+			cargo install --quiet --root $(dir $@) \
+				--git "https://github.com/fastobo/fastobo-validator/" \
+				--tag "v$(FASTOBO_VRS)" fastobo-validator && \
+			mv build/bin/fastobo-validator $@ && rm -d build/bin ; \
+		fi ; \
+	fi
 
 
 ##########################################
@@ -691,7 +717,7 @@ verify: validate-obo verify-do verify-dnc
 OBO_V := $(patsubst src/ontology/%.obo,validate-%,$(wildcard src/ontology/*.obo))
 validate-obo: validate-doid validate-doid-merged validate-doid-non-classified \
  validate-doid-base
-$(OBO_V): validate-%: src/ontology/%.obo | $(FASTOBO)
+$(OBO_V): validate-%: src/ontology/%.obo | check_fastobo
 	@$(FASTOBO) $<
 
 # Verify doid.obo

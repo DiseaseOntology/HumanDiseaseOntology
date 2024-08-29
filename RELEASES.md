@@ -12,6 +12,29 @@
 
 ## 2024 Releases
 
+### [v2024-08-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-08-29)
+
+This release of the Human Disease Ontology includes 11,644 disease classes, 9,315 with textual definitions (80.0%). Diseases that have been revised and/or added include spermatogenic failure subtypes, polycystic liver diseases, dialysis disequilibrium syndrome, and anterior horn cell disease. 'disease has location' (anatomy) axioms have been added to various diseases.
+
+Additionally, 4 diseases have been obsoleted. Annotations should be replaced by existing terms as follows:
+
+
+obsoleted | replaced by
+-- | --
+'dilated cardiomyopathy 3B' (DOID:0081164) | 'X-linked dilated cardiomyopathy' (DOID:0110461)
+'interleukin-7 receptor alpha deficiency' (DOID:0060015) | 'severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-positive, Nk cell-positive' (DOID:0090014)
+'dystonia, DOPA-responsive' (DOID:0060963) | 'dopa-responsive dystonia' (DOID:0090043; _previously 'dystonia 5'_)
+'autosomal dominant nonsyndromic deafness 52' (DOID:0110578) | 'autosomal dominant nonsyndromic deafness 15' (DOID:0110546)
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-07-31...v2024-08-29
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-08-29/src/ontology/doid-merged.obo) | |
+
 ### [v2024-07-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-07-31)
 
 This release of the Human Disease Ontology includes 11,612 disease classes, 9,280 with textual definitions (79.9%). Diseases that have been revised and/or expanded include CAMRQ syndrome, mosaic variegated aneuploidy syndromes, Fanconi anemia complementation groups, mal de Meleda, common cold, scarlet fever, Machado-Joseph disease, hematopoietic system disease, palmoplantar keratosis, glucose metabolism diseases, and polycystic liver diseases.
@@ -34,14 +57,14 @@ synonym: "LEMS" EXACT OMO:0003012 []
 
 
 #### RDF/XML _(e.g. doid.owl)_
-'drug-induced lupus erythematosus' (DOID:0040093) 'DILE' acronym 
+'drug-induced lupus erythematosus' (DOID:0040093) 'DILE' acronym
 ```
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0040093"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget xml:lang="en">DILE</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
-    </owl:Axiom>
+<owl:Axiom>
+<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0040093"/>
+<owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+<owl:annotatedTarget xml:lang="en">DILE</owl:annotatedTarget>
+<oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
+</owl:Axiom>
 ```
 
 #### OWL Functional Syntax _(e.g. doid-edit.owl)_
@@ -59,20 +82,20 @@ PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 SELECT ?class ?label ?synonym_type ?acronym
 WHERE {
-  VALUES ?synonym_type {
-    oboInOwl:hasExactSynonym oboInOwl:hasBroadSynonym
-        oboInOwl:hasNarrowSynonym oboInOwl:hasRelatedSynonym
-  }
+VALUES ?synonym_type {
+oboInOwl:hasExactSynonym oboInOwl:hasBroadSynonym
+oboInOwl:hasNarrowSynonym oboInOwl:hasRelatedSynonym
+}
 
-  ?class a owl:Class ;
-    rdfs:label ?label ;
-    ?synonym_type ?acronym .
+?class a owl:Class ;
+rdfs:label ?label ;
+?synonym_type ?acronym .
 
-  [] a owl:Axiom ;
-    owl:annotatedSource ?class ;
-    owl:annotatedProperty ?synonym_type ;
-    owl:annotatedTarget ?acronym ;
-    oboInOwl:hasSynonymType obo:OMO_0003012 .
+[] a owl:Axiom ;
+owl:annotatedSource ?class ;
+owl:annotatedProperty ?synonym_type ;
+owl:annotatedTarget ?acronym ;
+oboInOwl:hasSynonymType obo:OMO_0003012 .
 }
 ```
 

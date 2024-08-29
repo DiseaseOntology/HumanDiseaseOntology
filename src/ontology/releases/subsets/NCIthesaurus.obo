@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-07-31/subsets/NCIthesaurus.obo
-date: 31:07:2024 13:09
+data-version: doid/releases/2024-08-29/subsets/NCIthesaurus.obo
+date: 29:08:2024 14:10
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -117,7 +117,6 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "cryptogenic fibrosing alveolitis" EXACT []
 synonym: "FIBROCYSTIC PULMONARY DYSPLASIA" EXACT []
-synonym: "idiopathic pulmonary fibrosis" EXACT []
 synonym: "IDIOPATHIC PULMONARY FIBROSIS, FAMILIAL" EXACT []
 xref: EFO:0000768
 xref: GARD:8609
@@ -309,7 +308,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:0050429
 name: Hailey-Hailey disease
 namespace: disease_ontology
-def: "A pemphigus that is characterized by recurring blistering most commonly occurring in the folds of the skin and has_material_basis_in mutations in the ATP2C1 gene that result in loss of adhesion within the skin." [url:https\://rarediseases.org/rare-diseases/hailey-hailey-disease/]
+def: "A pemphigus that is characterized by recurring blistering most commonly occurring in the folds of the skin, particularly the groin and axillary regions, and has_material_basis_in mutations in the ATP2C1 gene that result in loss of adhesion within the skin. Other sites of the body, such as the neck, perianal, and submammary regions, may likewise be affected." [url:https\://rarediseases.org/rare-diseases/hailey-hailey-disease/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -7233,15 +7232,11 @@ namespace: disease_ontology
 def: "A polycystic kidney disease characterized by the presence of multiple cysts located_in the kidney resulting from ciliopathy that disrupts the function of primary cilium, inherited in an autosomal recessive fashion." [url:https\://rarediseases.info.nih.gov/diseases/8378/autosomal-recessive-polycystic-kidney-disease]
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "ARPKD" EXACT OMO:0003012 []
-synonym: "PKHD1" EXACT OMO:0003012 []
-synonym: "Polycystic Kidney and Hepatic Disease 1" EXACT []
-synonym: "Polycystic Kidney Disease, Infantile, Type I" EXACT []
+synonym: "AR-PKD" EXACT OMO:0003012 []
 xref: GARD:8378
 xref: ICD10CM:Q61.1
 xref: ICD9CM:753.14
 xref: MESH:D017044
-xref: MIM:263200
 xref: NCI:C84579
 xref: ORDO:731
 xref: SNOMEDCT_US_2023_03_01:28770003
@@ -7429,7 +7424,7 @@ def: "An autosomal dominant distal hereditary motor neuronopathy that is charact
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "autosomal dominant distal juvenile spinal muscular atrophy type 1" EXACT []
-synonym: "dHMN1" EXACT []
+synonym: "dHMN1" EXACT OMO:0003012 []
 synonym: "distal hereditary motor neuronopathy type 1" EXACT []
 synonym: "distal hereditary motor neuropathy type I" EXACT []
 synonym: "HMN I" EXACT OMO:0003012 []
@@ -7889,7 +7884,7 @@ namespace: disease_ontology
 def: "A congenital dyserythropoietic anemia characterized by mild to severe anemia, bi- and multinucleated erythroblasts in bone marrow, jaundice and splenomegaly and may lead to liver iron overload and gallstones that has_material_basis_in homozygous or compound heterozygous mutation in the SEC23B gene on chromosome 20p11.23." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19561605]
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "CDA II" EXACT []
+synonym: "CDA II" EXACT OMO:0003012 []
 synonym: "CDA type 2" EXACT []
 synonym: "CDA type II" EXACT []
 synonym: "CDAN2" EXACT OMO:0003012 []
@@ -10523,8 +10518,8 @@ def: "A leukemia that develops slowly." [url:http\://www.nlm.nih.gov/medlineplus
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult chronic leukemia" RELATED []
-synonym: "CLL" RELATED []
-synonym: "CML" RELATED []
+synonym: "CLL" RELATED OMO:0003012 []
+synonym: "CML" RELATED OMO:0003012 []
 xref: NCI:C3483
 is_a: DOID:1240 ! leukemia
 
@@ -12345,7 +12340,7 @@ subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
-synonym: "WEE" RELATED []
+synonym: "WEE" RELATED OMO:0003012 []
 xref: GARD:7888
 xref: ICD10CM:A83.1
 xref: ICD9CM:062.1
@@ -20174,7 +20169,7 @@ def: "A macrocytic anemia that is characterized by inhibition of DNA synthesis d
 comment: Xref MGI.
 subset: NCIthesaurus
 synonym: "Grasbeck-Imerslund syndrome" EXACT []
-synonym: "IGS" RELATED []
+synonym: "IGS" RELATED OMO:0003012 []
 synonym: "Imerslund-Grasbeck syndrome" EXACT []
 synonym: "megaloblastic anaemia" EXACT []
 synonym: "MGA1 Norwegian type" EXACT []
@@ -28084,7 +28079,8 @@ subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "AT/RT" RELATED []
+synonym: "AT/RT" EXACT OMO:0003012 []
+synonym: "ATRT" EXACT OMO:0003012 []
 synonym: "atypical teratoid rhabdoid tumour" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumor" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumour" EXACT []
@@ -54752,7 +54748,7 @@ def: "A viral infectious disease that involves reactivation of JC polyomavirus i
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "PML" RELATED []
+synonym: "PML" RELATED OMO:0003012 []
 xref: GARD:7468
 xref: ICD10CM:A81.2
 xref: ICD9CM:046.3
@@ -57917,7 +57913,7 @@ property_value: exactMatch "MESH:D054752" xsd:string
 id: DOID:7147
 name: ankylosing spondylitis
 namespace: disease_ontology
-def: "A bone inflammation disease that results_in inflammation in the joints of the spine and pelvis. The disease has_symptom pain, has_symptom stiffness in the spine, has_symptom stiffness in the neck, has_symptom stiffness in the hips, has_symptom stiffness in the jaw and has_symptom stiffness in the rib cage." [url:http\://en.wikipedia.org/wiki/Ankylosing_spondylitis, url:http\://www.mayoclinic.com/health/ankylosing-spondylitis/DS00483, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000420.htm, url:http\://www.spondylitis.org/about/as.aspx] {comment="ls:IEDB"}
+def: "An arthritis that results_in inflammation in the joints of the spine and pelvis. The disease has_symptom pain, has_symptom stiffness in the spine, has_symptom stiffness in the neck, has_symptom stiffness in the hips, has_symptom stiffness in the jaw and has_symptom stiffness in the rib cage." [url:http\://en.wikipedia.org/wiki/Ankylosing_spondylitis, url:http\://www.mayoclinic.com/health/ankylosing-spondylitis/DS00483, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000420.htm, url:http\://www.spondylitis.org/about/as.aspx] {comment="ls:IEDB"}
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Bekhterev syndrome" EXACT []
@@ -57933,7 +57929,7 @@ xref: NCI:C84564
 xref: ORDO:825
 xref: SNOMEDCT_US_2023_03_01:156619005
 xref: UMLS_CUI:C0038013
-is_a: DOID:65 ! connective tissue disease
+is_a: DOID:848 ! arthritis
 
 [Term]
 id: DOID:7148
@@ -65489,7 +65485,7 @@ subset: NCIthesaurus
 synonym: "ADPKD" EXACT OMO:0003012 []
 synonym: "Congenital biliary ectasias" EXACT []
 synonym: "POLYCYSTIC KIDNEY AND HEPATIC DISEASE 1" EXACT []
-xref: GARD:7419
+xref: GARD:10413
 xref: ICD10CM:Q61.3
 xref: ICD9CM:753.12
 xref: MESH:D007690

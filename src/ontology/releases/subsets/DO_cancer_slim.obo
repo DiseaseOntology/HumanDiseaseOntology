@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-07-31/subsets/DO_cancer_slim.obo
-date: 31:07:2024 13:08
+data-version: doid/releases/2024-08-29/subsets/DO_cancer_slim.obo
+date: 29:08:2024 14:10
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -1980,7 +1980,7 @@ namespace: disease_ontology
 def: "A central nervous system neuroblastoma that is characterized by FOXR2 activation and that is composed of small, round cells with hyperchromatic nuclei surrounded by a clear halo." [url:https\://link.springer.com/article/10.1007%2Fs10014-020-00370-2, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC7350623/]
 subset: DO_cancer_slim
 synonym: "central nervous system neuroblastoma with FOXR2 activation" EXACT []
-synonym: "CNS NB-FOXR2" EXACT []
+synonym: "CNS NB-FOXR2" EXACT OMO:0003012 []
 synonym: "CNS neuroblastoma, FOXR2-activated" EXACT []
 xref: ICDO:9500/3
 is_a: DOID:162 ! cancer
@@ -3103,8 +3103,8 @@ def: "A leukemia that develops slowly." [url:http\://www.nlm.nih.gov/medlineplus
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "adult chronic leukemia" RELATED []
-synonym: "CLL" RELATED []
-synonym: "CML" RELATED []
+synonym: "CLL" RELATED OMO:0003012 []
+synonym: "CML" RELATED OMO:0003012 []
 xref: NCI:C3483
 is_a: DOID:1240 ! leukemia
 
@@ -4188,7 +4188,8 @@ subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "AT/RT" RELATED []
+synonym: "AT/RT" EXACT OMO:0003012 []
+synonym: "ATRT" EXACT OMO:0003012 []
 synonym: "atypical teratoid rhabdoid tumour" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumor" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumour" EXACT []

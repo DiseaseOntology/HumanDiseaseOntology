@@ -53,7 +53,7 @@ all: imports release
 clean:
 	rm -rf build
 
-build build/update build/reports build/reports/temp:
+build build/update build/reports build/reports/temp build/translations:
 	mkdir -p $@
 
 # ----------------------------------------
@@ -429,7 +429,7 @@ $(REFRESH_IMPS):
 ##########################################
 
 .PHONY: products
-products: primary human merged base subsets release_reports
+products: primary human merged base international subsets release_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -581,6 +581,75 @@ $(DNC).json: $(DNC).owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@cp $@ $(HD).json
 	@echo "Created $@"
+
+
+# ----------------------------------------
+# LANGUAGE / INTERNATIONAL
+# ----------------------------------------
+
+LANGDIR := src/ontology/translations
+LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-*.tsv)))
+LANG_OWL = $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
+
+.PHONY: international $(LANGS)
+international: $(addprefix $(DO)-international,.owl .obo .json) \
+	$(addprefix $(DM)-international,.owl .obo .json)
+
+$(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
+	$(addprefix $(DM)-%,.owl .obo .json)
+
+## DOID FILES
+$(DO)-%.owl build/translations/doid-%.owl: $(LANGDIR)/doid-%.tsv  | build/translations check_robot
+	@$(ROBOT) template \
+	 --input $< \
+	 --template $(word 2,$^) \
+	 --merge-after \
+	 --output build/translations/doid-$*.owl \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $(DO)-$*.owl
+	@echo "Created $(DO)-$*.owl"
+
+$(DO)-international.owl: $(DO).owl $(LANG_OWL) | check_robot
+	@INPUTS=($^) ; \
+	 INPUTS=("$${INPUTS[@]/#/--input }") ; \
+	$(ROBOT) merge \
+	 $${INPUTS} \
+	 --collapse-import-closure false
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
+
+$(DO)-%.obo: $(DO)-%.owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	@echo "Created $@"
+
+$(DO)-%.json: $(DO)-%.owl | check_robot
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
+
+## MERGED FILES
+$(DM)-%.owl: $(DO)-%.owl | check_robot
+	@$(ROBOT) merge \
+	 --input $< \
+	 --collapse-import-closure true \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
+
+$(DM)-%.obo: $(DM)-%.owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	@echo "Created $@"
+
+$(DM)-%.json: $(DM)-%.owl | check_robot
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
+
 
 # ----------------------------------------
 # SUBSETS

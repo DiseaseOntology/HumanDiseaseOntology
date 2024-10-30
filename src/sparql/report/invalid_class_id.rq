@@ -1,20 +1,30 @@
-# identifies IDs that were mistyped and do not match the class
+# identifies IDs that 1) do not match the class URI, 2) are not in the expected
+# format, or 3) are missing
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 SELECT DISTINCT ?entity ?property ?value
 WHERE {
 	VALUES ?property { oboInOwl:id }
-	?entity a owl:Class ;
-		 ?property ?value .
+	?entity a owl:Class .
+	FILTER (!isBlank(?entity))
 	FILTER NOT EXISTS { ?entity owl:deprecated ?any . }
 
-	# capture & compare entity/id numbers
-	BIND(
-		REPLACE(
-			REPLACE(str(?entity), ".*[/#]", ""),
-			"_", ":"
-		) AS ?iri_id
+	OPTIONAL {
+		?entity ?property ?value .
+
+		# capture & compare entity/id numbers
+		BIND(
+			REPLACE(
+				REPLACE(str(?entity), ".*[/#]", ""),
+				"_", ":"
+			) AS ?iri_id
+		)
+	}
+
+	FILTER (
+		?value != ?iri_id ||
+		!REGEX(?value, "^DOID:\\d{1,7}$") ||
+		NOT EXISTS { ?entity ?property ?value }
 	)
-	FILTER (?value != ?iri_id)
 }

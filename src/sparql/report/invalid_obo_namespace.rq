@@ -1,0 +1,15 @@
+# identify obo namespace not equal to "disease_ontology" or missing
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+  VALUES ?property { oboInOwl:hasOBONamespace }
+  ?entity a owl:Class .
+  FILTER (!isBlank(?entity))
+
+  OPTIONAL { ?entity ?property ?value }
+  FILTER(
+    str(?value) != "disease_ontology" || NOT EXISTS { ?entity ?property ?value }
+  )
+}

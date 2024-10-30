@@ -1,0 +1,29 @@
+# return all entities with more than one annotation type that where only one is
+# allowed
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+  {
+    SELECT ?entity ?property (COUNT(?val) AS ?count)
+	    (GROUP_CONCAT(DISTINCT ?val;separator="    |    ") AS ?comments_delimited)
+    WHERE {
+      VALUES (?property ?type) {
+        (oboInOwl:id "IDs")
+        (rdfs:comment "comments")
+        # not needed, already in default OBO tests
+        # (rdfs:label "labels")
+        # (obo:IAO_0000115 "definitions")
+      }
+      ?entity ?property ?val .
+      FILTER NOT EXISTS { ?entity owl:deprecated true }
+    }
+    GROUP BY ?entity ?property
+    HAVING (?count > 1)
+  }
+
+  BIND(CONCAT(?type, " (", str(?count), "): ", ?comments_delimited) AS ?value)
+}

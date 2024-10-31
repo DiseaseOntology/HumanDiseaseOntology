@@ -582,7 +582,8 @@ $(DNC).json: $(DNC).owl | check_robot
 SUB_NAMES = DO_AGR_slim DO_cancer_slim DO_FlyBase_slim DO_GXD_slim DO_IEDB_slim DO_MGI_slim\
  DO_rare_slim DO_RAD_slim DO_CFDE_slim GOLD NCIthesaurus TopNodes_DOcancerslim gram-negative_bacterial_infectious_disease\
  gram-positive_bacterial_infectious_disease sexually_transmitted_infectious_disease\
- tick-borne_infectious_disease zoonotic_infectious_disease DO_infectious_disease_slim
+ tick-borne_infectious_disease zoonotic_infectious_disease DO_infectious_disease_slim \
+ DO_childhood_cancer_slim
 SUBS = $(foreach N,$(SUB_NAMES),$(addprefix src/ontology/subsets/, $(N)))
 OWL_SUBS = $(foreach N,$(SUBS),$(addsuffix .owl, $(N)))
 OBO_SUBS = $(foreach N,$(SUBS),$(addsuffix .obo, $(N)))

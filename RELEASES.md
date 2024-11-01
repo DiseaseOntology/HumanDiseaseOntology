@@ -13,6 +13,25 @@
 
 ## 2024 Releases
 
+### [v2024-11-01](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-11-01)
+
+This release of the Human Disease Ontology includes 11,684 disease classes, 9,358 with textual definitions (80.0%).
+
+Diseases that have been revised and/or updated with additional subtypes include glycine encephalopathies, FACS, mitochondrial trifunctional protein deficiencies, autosomal dominant isolated macrothrombocytopenias, poor metabolism of thiopurines, retinitis pigmentosa 17, and Axenfeld-Rieger syndrome. 
+
+New diseases include APLAID, striatal degeneration 2, congenital amegakaryocytic thrombocytopenia 2, and rhabdoid tumor predisposition syndrome with subtypes.
+
+This release also includes a new subset focused on childhood cancers `DO_childhood_cancer_slim` and a minor change to the DO_MGI_slim, as well as, expanded chest-related anatomical and onset logical axioms.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-09-27...v2024-11-01
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-01/src/ontology/doid-merged.obo) | |
+
 ### [v2024-09-27](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-09-27)
 
 This release of the Human Disease Ontology includes 11,670 disease classes, 9,341 with textual definitions (80.0%).

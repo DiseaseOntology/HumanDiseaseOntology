@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-09-27/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-11-01/subsets/DO_FlyBase_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050155",
@@ -1431,9 +1431,12 @@
       "meta" : {
         "definition" : {
           "val" : "A benign neoplasm that is classified by the organ system from which it is arising from.",
-          "xrefs" : [ "url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.07d&code=C367" ]
+          "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3677" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "NCI:C3677"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "lschriml"
@@ -1962,7 +1965,7 @@
       "meta" : {
         "definition" : {
           "val" : "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35.",
-          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/23687351", "url:https://www.omim.org/entry/601419" ]
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/23687351" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "synonyms" : [ {
@@ -3597,7 +3600,7 @@
       "meta" : {
         "definition" : {
           "val" : "A synucleinopathy that has_material_basis_in degeneration of the central nervous system that often impairs motor skills, speech, and other functions.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Parkinson%27s_disease", "url:https://pubmed.ncbi.nlm.nih.gov/26474316/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5877503/" ]
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Parkinson%27s_disease", "url:https://pubmed.ncbi.nlm.nih.gov/26474316/", "url:https://www.ncbi.nlm.nih.gov/articles/PMC5877503/" ]
         },
         "comments" : [ "Xref MGI.\nOMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -3644,7 +3647,7 @@
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Machado%E2%80%93Joseph_disease", "url:http://omim.org/entry/109150", "url:http://rarediseases.org/rare-disease-information/rare-diseases/byID/110/viewAbstract" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "Azorean disease"
@@ -4468,7 +4471,6 @@
           "val" : "A brain cancer that is usually located in the brain, but can occur anywhere in the central nervous system.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Atypical_teratoid_rhabdoid_tumor" ]
         },
-        "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
@@ -4493,14 +4495,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "atypical teratoid rhabdoid tumour"
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "rhabdoid tumor predisposition syndrome"
         } ],
         "xrefs" : [ {
           "val" : "ICDO:9508/3"
-        }, {
-          "val" : "MIM:609322"
         }, {
           "val" : "NCI:C6906"
         }, {
@@ -4513,6 +4510,9 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "MIM:609322"
         } ]
       }
     }, {
@@ -5005,7 +5005,7 @@
           "val" : "An inherited metabolic disorder that affect the catabolism and anabolism of carbohydrates.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Inborn_errors_of_carbohydrate_metabolism" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "disorder of carbohydrate transport and metabolism"
@@ -6063,7 +6063,7 @@
       "meta" : {
         "definition" : {
           "val" : "A movement disease that is characterized by involuntary muscle contractions causing repetitive or twisting movements.",
-          "xrefs" : [ "url:https://rarediseases.org/rare-diseases/dystonia/", "url:https://www.mayoclinic.org/diseases-conditions/dystonia/symptoms-causes/syc-20350480", "url:https://www.ninds.nih.gov/disorders/patient-caregiver-education/fact-sheets/dystonias-fact-sheet" ]
+          "xrefs" : [ "url:https://rarediseases.org/rare-diseases/dystonia/", "url:https://www.mayoclinic.org/diseases-conditions/dystonia/symptoms-causes/syc-20350480" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {

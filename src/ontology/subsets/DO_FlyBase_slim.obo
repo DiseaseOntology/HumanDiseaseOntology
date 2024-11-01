@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-09-27/subsets/DO_FlyBase_slim.obo
-date: 27:09:2024 15:17
+data-version: doid/releases/2024-11-01/subsets/DO_FlyBase_slim.obo
+date: 01:11:2024 13:10
 ontology: doid/subsets/DO_FlyBase_slim
 
 [Term]
@@ -677,8 +677,10 @@ is_a: DOID:2914 ! immune system disease
 id: DOID:0060085
 name: organ system benign neoplasm
 namespace: disease_ontology
-def: "A benign neoplasm that is classified by the organ system from which it is arising from." [url:http\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.07d&code=C367]
+def: "A benign neoplasm that is classified by the organ system from which it is arising from." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3677]
 subset: DO_FlyBase_slim
+subset: NCIthesaurus
+xref: NCI:C3677
 is_a: DOID:14566 ! disease of cellular proliferation
 created_by: lschriml
 creation_date: 2011-07-14T12:12:23Z
@@ -922,7 +924,7 @@ id: DOID:0080092
 name: myofibrillar myopathy 1
 namespace: disease_ontology
 alt_id: DOID:0110286
-def: "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23687351, url:https\://www.omim.org/entry/601419]
+def: "A myofibrillar myopathy that has_material_basis_in heterozygous, homozygous, or compound heterozygous mutation in the desmin gene on chromosome 2q35." [url:https\://www.ncbi.nlm.nih.gov/pubmed/23687351]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 synonym: "autosomal recessive limb-girdle muscular dystrophy type 2R" EXACT []
@@ -1720,7 +1722,7 @@ is_a: DOID:5614 ! eye disease
 id: DOID:14330
 name: Parkinson's disease
 namespace: disease_ontology
-def: "A synucleinopathy that has_material_basis_in degeneration of the central nervous system that often impairs motor skills, speech, and other functions." [url:http\://en.wikipedia.org/wiki/Parkinson%27s_disease, url:https\://pubmed.ncbi.nlm.nih.gov/26474316/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5877503/]
+def: "A synucleinopathy that has_material_basis_in degeneration of the central nervous system that often impairs motor skills, speech, and other functions." [url:http\://en.wikipedia.org/wiki/Parkinson%27s_disease, url:https\://pubmed.ncbi.nlm.nih.gov/26474316/, url:https\://www.ncbi.nlm.nih.gov/articles/PMC5877503/]
 comment: Xref MGI.\nOMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -1746,6 +1748,7 @@ namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by slow degeneration of the hindbrain and has_material_basis_in expansion of CAG triplet repeats (glutamine) in the ATXN3 gene." [url:http\://en.wikipedia.org/wiki/Machado%E2%80%93Joseph_disease, url:http\://omim.org/entry/109150, url:http\://rarediseases.org/rare-disease-information/rare-diseases/byID/110/viewAbstract]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Azorean disease" EXACT []
 synonym: "MJD" EXACT OMO:0003012 []
@@ -2151,7 +2154,6 @@ id: DOID:2129
 name: atypical teratoid rhabdoid tumor
 namespace: disease_ontology
 def: "A brain cancer that is usually located in the brain, but can occur anywhere in the central nervous system." [url:http\://en.wikipedia.org/wiki/Atypical_teratoid_rhabdoid_tumor]
-comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -2162,15 +2164,14 @@ synonym: "atypical teratoid rhabdoid tumour" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumor" EXACT []
 synonym: "Atypical teratoid/rhabdoid tumour" EXACT []
 synonym: "Rhabdoid tumor of the CNS" EXACT []
-synonym: "rhabdoid tumor predisposition syndrome" RELATED []
 synonym: "Rhabdoid tumour of the CNS" EXACT []
 xref: ICDO:9508/3
-xref: MIM:609322
 xref: NCI:C6906
 xref: ORDO:99966
 xref: SNOMEDCT_US_2023_03_01:128792003
 xref: UMLS_CUI:C1266184
 is_a: DOID:1319 ! brain cancer
+property_value: relatedMatch "MIM:609322" xsd:string
 
 [Term]
 id: DOID:231
@@ -2417,6 +2418,8 @@ alt_id: DOID:9434
 def: "An inherited metabolic disorder that affect the catabolism and anabolism of carbohydrates." [url:http\://en.wikipedia.org/wiki/Inborn_errors_of_carbohydrate_metabolism]
 subset: DO_CFDE_slim
 subset: DO_FlyBase_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "disorder of carbohydrate transport and metabolism" EXACT []
 synonym: "inborn carbohydrate metabolism disorder" EXACT []
 synonym: "inborn errors of carbohydrate metabolism" EXACT []
@@ -2942,7 +2945,7 @@ id: DOID:543
 name: dystonia
 namespace: disease_ontology
 alt_id: DOID:544
-def: "A movement disease that is characterized by involuntary muscle contractions causing repetitive or twisting movements." [url:https\://rarediseases.org/rare-diseases/dystonia/, url:https\://www.mayoclinic.org/diseases-conditions/dystonia/symptoms-causes/syc-20350480, url:https\://www.ninds.nih.gov/disorders/patient-caregiver-education/fact-sheets/dystonias-fact-sheet]
+def: "A movement disease that is characterized by involuntary muscle contractions causing repetitive or twisting movements." [url:https\://rarediseases.org/rare-diseases/dystonia/, url:https\://www.mayoclinic.org/diseases-conditions/dystonia/symptoms-causes/syc-20350480]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "dystonic disease" EXACT []

@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-09-27/subsets/DO_MGI_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2024-11-01/subsets/DO_MGI_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050117",
@@ -11,7 +11,7 @@
       "meta" : {
         "definition" : {
           "val" : "A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.",
-          "xrefs" : [ "url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=14.10d&code=C26726" ]
+          "xrefs" : [ "url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26726" ]
         },
         "comments" : [ "DO:wk" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_GXD_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
@@ -69,6 +69,30 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "DOID:9696"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0050686",
+      "lbl" : "organ system cancer",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cancer that is classified based on the organ it starts in.",
+          "xrefs" : [ "url:https://www.cancer.gov/types/by-body-location" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim" ],
+        "xrefs" : [ {
+          "val" : "MESH:D009371"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "snadendla"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2011-06-13T03:28:33Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -355,45 +379,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_11934",
-      "lbl" : "head and neck cancer",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.",
-          "xrefs" : [ "url:http://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&codlan=1&codcol=70&codcch=9", "url:http://en.wikipedia.org/wiki/Head_and_neck_cancer", "url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck", "url:http://www.cancer.gov/dictionary?CdrID=257519" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_CFDE_slim", "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "head and neck neoplasm"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "head and neck tumours"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "head/neck neoplasm"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "tumor of head and neck"
-        } ],
-        "xrefs" : [ {
-          "val" : "GARD:12425"
-        }, {
-          "val" : "MESH:D006258"
-        }, {
-          "val" : "NCI:C3077"
-        }, {
-          "val" : "SNOMEDCT_US_2023_03_01:255055008"
-        }, {
-          "val" : "UMLS_CUI:C0018671"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1287",
       "lbl" : "cardiovascular system disease",
       "type" : "CLASS",
@@ -546,37 +531,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_1725",
-      "lbl" : "peritoneum cancer",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An organ system cancer that is located in the peritoneum.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Peritoneal_cancer" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim" ],
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "cancer of peritoneum"
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "peritoneal neoplasm"
-        } ],
-        "xrefs" : [ {
-          "val" : "ICD10CM:C48.1"
-        }, {
-          "val" : "ICD9CM:158.8"
-        }, {
-          "val" : "SNOMEDCT_US_2023_03_01:187808008"
-        }, {
-          "val" : "UMLS_CUI:C0153466"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_18",
       "lbl" : "urinary system disease",
       "type" : "CLASS",
@@ -678,6 +632,34 @@
           "val" : "SNOMEDCT_US_2023_03_01:154782004"
         }, {
           "val" : "UMLS_CUI:C0041806"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_3463",
+      "lbl" : "breast disease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease of anatomical entity that is located_in the breast.",
+          "xrefs" : [ "url:http://www.nlm.nih.gov/medlineplus/breastdiseases.html" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_MGI_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:N64.9"
+        }, {
+          "val" : "ICD9CM:610-612.99"
+        }, {
+          "val" : "MESH:D001941"
+        }, {
+          "val" : "NCI:C26709"
+        }, {
+          "val" : "SNOMEDCT_US_2023_03_01:79604008"
+        }, {
+          "val" : "UMLS_CUI:C0006145"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -968,6 +950,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_10983",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_225"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_5875",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0050686"
     } ]
   } ]
 }

@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_MGI_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-09-27/subsets/DO_MGI_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2024-11-01/subsets/DO_MGI_slim.owl"/>
     </owl:Ontology>
     
 
@@ -152,7 +152,28 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
-        <oboInOwl:hasDbXref>url:http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=14.10d&amp;code=C26726</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C26726</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050686 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050686">
+        <obo:IAO_0000115 xml:lang="en">A cancer that is classified based on the organ it starts in.</obo:IAO_0000115>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-13T03:28:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>MESH:D009371</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:0050686</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <rdfs:label xml:lang="en">organ system cancer</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050686"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A cancer that is classified based on the organ it starts in.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.cancer.gov/types/by-body-location</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -469,45 +490,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/DOID_11934 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11934">
-        <obo:IAO_0000115 xml:lang="en">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>GARD:12425</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MESH:D006258</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI:C3077</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:255055008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0018671</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">head and neck neoplasm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">head and neck tumours</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">head/neck neoplasm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">tumor of head and neck</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:11934</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_CFDE_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
-        <rdfs:label xml:lang="en">head and neck cancer</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11934"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">An organ system cancer that arises in the head or neck region. This region includes the nasal cavity, sinuses, lips, mouth, salivary glands, throat, or larynx.</owl:annotatedTarget>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007641"/>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://apps.who.int/bookorders/anglais/detart1.jsp?sesslan=1&amp;codlan=1&amp;codcol=70&amp;codcch=9</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Head_and_neck_cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/cancertopics/factsheet/Sites-Types/head-and-neck</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cancer.gov/dictionary?CdrID=257519</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/DOID_1287 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1287">
@@ -674,32 +656,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/DOID_1725 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1725">
-        <obo:IAO_0000115 xml:lang="en">An organ system cancer that is located in the peritoneum.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>ICD10CM:C48.1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICD9CM:158.8</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:187808008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0153466</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">cancer of peritoneum</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">peritoneal neoplasm</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>DOID:1725</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
-        <rdfs:label xml:lang="en">peritoneum cancer</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1725"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">An organ system cancer that is located in the peritoneum.</owl:annotatedTarget>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Peritoneal_cancer</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/DOID_18 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_18">
@@ -813,9 +769,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_3463 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3463">
+        <obo:IAO_0000115 xml:lang="en">A disease of anatomical entity that is located_in the breast.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICD10CM:N64.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9CM:610-612.99</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D001941</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C26709</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:79604008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0006145</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>DOID:3463</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:label xml:lang="en">breast disease</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_3463"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A disease of anatomical entity that is located_in the breast.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007644"/>
+        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/breastdiseases.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_5875 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5875">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050686"/>
         <obo:IAO_0000115 xml:lang="en">A thoracic cancer located_in the retroperitoneal space in the abdominal cavity behind the peritoneum.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12340</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9860</oboInOwl:hasAlternativeId>

@@ -1,0 +1,26 @@
+# Return all classes that are part of the urinary or reproductive system with
+# their respective parents and the anatomical system/subsystems they belong to.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX DOID: <http://purl.obolibrary.org/obo/DOID_>
+
+SELECT ?id ?label ?anat_system ?anat_subsystem ?parent
+WHERE {
+    ?class oboInOwl:id ?id ;
+        rdfs:label ?label ;
+        rdfs:subClassOf ?parent ;
+        rdfs:subClassOf* ?anat_subsystem_uri .
+
+    ?anat_subsystem_uri rdfs:label ?anat_subsystem ;
+        rdfs:subClassOf ?anat_system_uri .
+
+    ?anat_system_uri rdfs:label ?anat_system ;
+        rdfs:subClassOf DOID:7 .
+
+    FILTER( !isBlank( ?parent ) )
+	# DOID:15 is 'reproductive system disease', DOID:18 is 'urinary system disease'
+	# DOID:2277 is 'gonadal disease' and is currently outside these systems as an 'endocrine system disease'
+    FILTER( ?anat_system_uri IN ( DOID:15, DOID:18 ) || ?anat_subsystem_uri = DOID:2277 )
+    FILTER NOT EXISTS { ?class owl:deprecated ?any . }
+}

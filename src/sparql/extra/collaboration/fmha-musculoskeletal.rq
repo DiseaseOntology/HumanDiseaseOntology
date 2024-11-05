@@ -1,0 +1,25 @@
+# Return all classes that are part of the musculoskeletal system with
+# their respective parents and the anatomical system/subsystems they belong to.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX DOID: <http://purl.obolibrary.org/obo/DOID_>
+
+SELECT ?id ?label ?anat_system ?anat_subsystem ?parent
+WHERE {
+    ?class oboInOwl:id ?id ;
+        rdfs:label ?label ;
+        rdfs:subClassOf ?parent ;
+        rdfs:subClassOf* ?anat_subsystem_uri .
+
+    ?anat_subsystem_uri rdfs:label ?anat_subsystem ;
+        rdfs:subClassOf ?anat_system_uri .
+
+    ?anat_system_uri rdfs:label ?anat_system ;
+        rdfs:subClassOf DOID:7 .
+
+    FILTER( !isBlank( ?parent ) )
+	# DOID:17 is 'musculoskeletal system disease'
+    FILTER( ?anat_system_uri = DOID:17 )
+    FILTER NOT EXISTS { ?class owl:deprecated ?any . }
+}

@@ -1,0 +1,45 @@
+name: "Request New Disease(s)"
+description: "Request one or more new disease(s)"
+title: "New Disease Request: [Disease Name]"
+labels: ["new disease"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please include your name and ORCiD identifier:**
+  - type: input
+    id: name
+    attributes:
+      label: "Name"
+  - type: input
+    id: orcid
+    attributes:
+      label: "ORCiD ID"
+  - type: input
+    id: disease_name
+    attributes:
+      label: "Disease Name"
+  - type: textarea
+    id: synonyms
+    attributes:
+      label: "Synonyms"
+  - type: textarea
+    id: references
+    attributes:
+      label: "References"
+  - type: textarea
+    id: definition
+    attributes:
+      label: "Definition (optional)"
+  - type: input
+    id: parent
+    attributes:
+      label: "Parent (optional)"
+  - type: textarea
+    id: cross_references
+    attributes:
+      label: "Cross-references or terms from other medical vocabularies (optional)"
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "Additional Information"

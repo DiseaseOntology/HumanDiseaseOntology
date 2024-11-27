@@ -13,11 +13,37 @@
 
 ## 2024 Releases
 
+### [v2024-11-27](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-11-27)
+
+This release of the Human Disease Ontology includes 11,708 disease classes, 9,383 with textual definitions (80.1%).
+
+New diseases include autoinflammatory syndrome, ring chromosome syndromes, and new subtypes for AML, B-ALL, congenital amegakaryocytic thrombocytopenia, advanced sleep phase syndrome, sideroblastic anemia, craniosynostosis, and ovarian dysgenesis.
+
+Disease classifications have been revised to fix malignant mesotheliomas and to reclassify autoinflammatory syndromes under this new term including: proteosome-associated autoinflammatory syndrome, congenital amegakaryocytic thrombocytopenia, familial Behcet-like autoinflammatory syndrome, familial cold autoinflammatory syndrome, familial Mediterranean fever, and TNF receptor-associated periodic syndrome.
+
+Additional revisions include the definitions of MASLD, MetALD, and congenital disorder of deglycosylation; added cross-references for B-ALL subtypes; and updated definition sources to replace inaccessible sources.
+
+### Obsoleted disease(s)
+ID | label | term replaced by
+--- | --- | ---
+DOID:0080546 | non-alcoholic fatty liver | metabolic dysfunction-associated steatotic liver disease (DOID:0080208)
+
+</br>
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2024-11-01...v2024-11-27
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2024-11-27/src/ontology/doid-merged.obo) | |
+
 ### [v2024-11-01](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-11-01)
 
 This release of the Human Disease Ontology includes 11,684 disease classes, 9,358 with textual definitions (80.0%).
 
-Diseases that have been revised and/or updated with additional subtypes include glycine encephalopathies, FACS, mitochondrial trifunctional protein deficiencies, autosomal dominant isolated macrothrombocytopenias, poor metabolism of thiopurines, retinitis pigmentosa 17, and Axenfeld-Rieger syndrome. 
+Diseases that have been revised and/or updated with additional subtypes include glycine encephalopathies, FACS, mitochondrial trifunctional protein deficiencies, autosomal dominant isolated macrothrombocytopenias, poor metabolism of thiopurines, retinitis pigmentosa 17, and Axenfeld-Rieger syndrome.
 
 New diseases include APLAID, striatal degeneration 2, congenital amegakaryocytic thrombocytopenia 2, and rhabdoid tumor predisposition syndrome with subtypes.
 

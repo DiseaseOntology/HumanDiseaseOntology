@@ -1,0 +1,24 @@
+# Ensure correct use synonym type annotation property - WARN level
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value WHERE {
+	VALUES ?syn_scope {
+		oboInOwl:hasExactSynonym
+		oboInOwl:hasBroadSynonym
+		oboInOwl:hasNarrowSynonym
+		oboInOwl:hasRelatedSynonym
+	}
+	?entity ?syn_scope ?value .
+
+	[] a owl:Axiom ;
+		owl:annotatedSource ?entity ;
+		owl:annotatedProperty ?syn_scope ;
+		owl:annotatedTarget ?value ;
+		?property obo:OMO_0003012 .
+	FILTER(?property != oboInOwl:hasSynonymType)
+}
+ORDER BY ?entity

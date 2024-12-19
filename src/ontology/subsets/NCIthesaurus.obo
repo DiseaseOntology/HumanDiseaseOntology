@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2024-11-27/subsets/NCIthesaurus.obo
-date: 27:11:2024 11:43
+data-version: doid/releases/2024-12-18/subsets/NCIthesaurus.obo
+date: 18:12:2024 20:34
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -4396,7 +4396,7 @@ is_a: DOID:684 ! hepatocellular carcinoma
 id: DOID:0070323
 name: childhood acute myeloid leukemia
 namespace: disease_ontology
-def: "A childhood leukemia that is characterized by the rapid growth of abnormal white blood cells that accumulate in the bone marrow and interfere with the production of normal blood cells." [url:http\://www.danafarberbostonchildrens.org/conditions/leukemia-and-lymphoma/acute-myelogenous-leukemia.aspx, url:https\://en.wikipedia.org/wiki/Acute_myeloid_leukemia, url:https\://www.cancer.gov/types/leukemia/patient/child-aml-treatment-pdq]
+def: "A childhood acute myeloid leukemia that is characterized by the rapid growth of abnormal white blood cells that accumulate in the bone marrow and interfere with the production of normal blood cells." [url:http\://www.danafarberbostonchildrens.org/conditions/leukemia-and-lymphoma/acute-myelogenous-leukemia.aspx, url:https\://en.wikipedia.org/wiki/Acute_myeloid_leukemia, url:https\://www.cancer.gov/types/leukemia/patient/child-aml-treatment-pdq]
 subset: DO_cancer_slim
 subset: DO_childhood_cancer_slim
 subset: NCIthesaurus
@@ -4405,7 +4405,7 @@ synonym: "paediatric acute myeloid leukaemia" EXACT []
 synonym: "pediatric acute myeloid leukemia" EXACT []
 xref: ICDO:9861/3
 xref: NCI:C9160
-is_a: DOID:7757 ! childhood leukemia
+is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
 id: DOID:0070325
@@ -8145,7 +8145,7 @@ is_a: DOID:12801 ! mucopolysaccharidosis III
 
 [Term]
 id: DOID:0111400
-name: congenital dyserythropoietic anemia type IV
+name: congenital dyserythropoietic anemia type IVa
 namespace: disease_ontology
 def: "A congenital dyserythropoietic anemia characterized by ineffective erythropoiesis and hemolysis resulting in anemia and abnormal erythroblast morphology that has_material_basis_in heterozygous mutation in the KLF1 gene on chromosome 19p13.13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21055716]
 subset: DO_rare_slim
@@ -13648,6 +13648,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:11111
 name: hydronephrosis
 namespace: disease_ontology
+def: "An urinary system disease that is characterized by swelling of one or both kidneys due to incomplete voiding of urine." [url:https\://my.clevelandclinic.org/health/diseases/15417-hydronephrosis, url:https\://pubmed.ncbi.nlm.nih.gov/39690090/]
 subset: NCIthesaurus
 xref: ICD10CM:N13.30
 xref: ICD9CM:591
@@ -13655,7 +13656,7 @@ xref: MESH:D006869
 xref: NCI:C26796
 xref: SNOMEDCT_US_2023_03_01:155866001
 xref: UMLS_CUI:C0020295
-is_a: DOID:5200 ! urinary tract obstruction
+is_a: DOID:18 ! urinary system disease
 
 [Term]
 id: DOID:11119
@@ -18454,7 +18455,6 @@ xref: ICD9CM:448.0
 xref: MESH:D013683
 xref: MIM:187300
 xref: MIM:600376
-xref: MIM:601101
 xref: MIM:615506
 xref: NCI:C35064
 xref: ORDO:774
@@ -41311,10 +41311,11 @@ is_a: DOID:419 ! scleroderma
 id: DOID:4183
 name: pseudopseudohypoparathyroidism
 namespace: disease_ontology
-comment: OMIM mapping confirmed by DO. [SN].
+def: "A pseudohypoparathyroidism characterized by a lack of resistance to parathyroid hormone or other hormones along with the constellation of clinical features referred to as Albright hereditary osteodystrophy and that has_material_basis_in a mutation resulting in loss of function of the Gs-alpha isoform of the GNAS gene on the paternal allele. This results in expression of the Gs-alpha protein only from the maternal allele." [url:https\://pubmed.ncbi.nlm.nih.gov/17161328/]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Normocalcemic pseudohypoparathyroidism" EXACT []
+synonym: "PPHP" EXACT OMO:0003012 []
 xref: GARD:7860
 xref: MESH:D011556
 xref: MIM:612463
@@ -41327,13 +41328,13 @@ is_a: DOID:4184 ! pseudohypoparathyroidism
 id: DOID:4184
 name: pseudohypoparathyroidism
 namespace: disease_ontology
-comment: OMIM mapping confirmed by DO. [SN].
+def: "A metal metabolism disorder that is characterized by end-organ resistance to parathyroid hormone and/or a constellation of symptoms collectively termed Albright’s hereditary osteodystrophy, which include shortening and widening of long bones located_in the hand or located_in the foot along with short stature, obesity, and rounded face." [url:https\://pubmed.ncbi.nlm.nih.gov/27401862/, url:https\://www.chop.edu/conditions-diseases/pseudohypoparathyroidism-php, url:https\://www.ncbi.nlm.nih.gov/books/NBK279165/, url:https\://www.ncbi.nlm.nih.gov/sites/books/NBK559141/]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "PHP" EXACT OMO:0003012 []
 xref: GARD:10758
 xref: ICD10CM:E20.1
 xref: MESH:D011547
-xref: MIM:612462
 xref: NCI:C99027
 xref: SNOMEDCT_US_2023_03_01:190867002
 xref: UMLS_CUI:C0033806
@@ -45896,7 +45897,6 @@ synonym: "exocrine cancer" RELATED []
 synonym: "Exocrine pancreas carcinoma" EXACT []
 synonym: "Pancreatic carcinoma, familial" RELATED [MESH:C535837]
 xref: EFO:0002618
-xref: MESH:C562463
 xref: MIM:260350
 xref: NCI:C3850
 xref: SNOMEDCT_US_2023_03_01:154475002
@@ -52316,13 +52316,11 @@ id: DOID:583
 name: hemolytic anemia
 namespace: disease_ontology
 def: "A normocytic anemia that is characterized by the rate of descruction of red blood cells exceeding the rate than they can be made." [url:https\://www.hopkinsmedicine.org/health/conditions-and-diseases/hemolytic-anemia]
-comment: OMIM mapping confirmed by DO. [SN].\nOMIM mapping by NeuroDevNet. [LS].
+comment: OMIM mapping by NeuroDevNet, 2024 revised to subtypes. [LS].
 subset: NCIthesaurus
 synonym: "ANEMIA HEMOLYTIC" EXACT []
 xref: ICD10CM:D55-D59
 xref: MESH:D000743
-xref: MIM:266120
-xref: MIM:612631
 xref: NCI:C34376
 xref: SNOMEDCT_US_2023_03_01:61261009
 xref: UMLS_CUI:C0002878
@@ -62994,7 +62992,7 @@ namespace: disease_ontology
 alt_id: DOID:10275
 alt_id: DOID:10276
 alt_id: DOID:10947
-def: "A gastrointestinal system infectious disease that involves inflammation and infection of the appendix caused by the blockage of the lumen with a small, hard piece of stool, a foreign body or worms. Mucus backs up in the appendiceal lumen, causing bacteria that live inside the appendix to multiply. The infection has_symptom pain, in the upper abdomen initially and later in the lower abdomen, has_symptom nausea, has_symptom vomiting and has_symptom fever." [url:http\://www.merck.com/mmhe/sec09/ch132/ch132e.html#sec09-ch132-ch132e-1018, url:https\://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis]
+def: "An appendix disease that involves inflammation and infection of the appendix caused by the blockage of the lumen with a small, hard piece of stool, a foreign body or worms. Mucus backs up in the appendiceal lumen, causing bacteria that live inside the appendix to multiply. The infection has_symptom pain, in the upper abdomen initially and later in the lower abdomen, has_symptom nausea, has_symptom vomiting and has_symptom fever." [url:http\://www.merck.com/mmhe/sec09/ch132/ch132e.html#sec09-ch132-ch132e-1018, url:https\://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis]
 subset: NCIthesaurus
 synonym: "acute appendicitis" EXACT []
 synonym: "acute appendicitis with generalized peritonitis" EXACT []
@@ -63005,7 +63003,7 @@ xref: MESH:D001064
 xref: NCI:C35145
 xref: SNOMEDCT_US_2023_03_01:155729003
 xref: UMLS_CUI:C0003615
-is_a: DOID:5295 ! intestinal disease
+is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:8338
@@ -65688,6 +65686,7 @@ def: "A skin cancer that has_material_basis_in melanocytes." [url:http\://cancer
 comment: OMIM IDs, MIM:612263 and MIM:608035 represent susceptibility loci[LS].
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Cutaneous Malignant Melanoma" EXACT []
 synonym: "cutaneous melanoma" EXACT []
 synonym: "malignant ear melanoma" EXACT []
 synonym: "malignant lip melanoma" EXACT []
@@ -65702,7 +65701,7 @@ synonym: "malignant trunk melanoma" EXACT []
 synonym: "malignant upper limb melanoma" EXACT []
 xref: ICD10CM:C43.9
 xref: ICD9CM:172.9
-xref: MESH:C562393
+xref: MESH:D000096142
 xref: MIM:608035
 xref: MIM:612263
 xref: NCI:C3510
@@ -67677,11 +67676,6 @@ synonym: "Pituitary insufficiency" EXACT []
 xref: GARD:2917
 xref: ICD10CM:E23.0
 xref: MESH:D007018
-xref: MIM:221750
-xref: MIM:262600
-xref: MIM:262700
-xref: MIM:613038
-xref: MIM:613986
 xref: NCI:C62591
 xref: ORDO:95494
 xref: SNOMEDCT_US_2023_03_01:74728003
@@ -67716,12 +67710,12 @@ is_a: DOID:557 ! kidney disease
 
 [Term]
 id: DOID:9410
-name: panhypopituitarism
+name: combined pituitary hormone deficiency
 namespace: disease_ontology
 def: "A hypopituitarism characterized by deficiency in growth hormone and at least one other pituitary hormone." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27828722]
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "combined pituitary hormone deficiency" EXACT []
+synonym: "panhypopituitarism" EXACT []
 synonym: "Simmond's disease" EXACT []
 synonym: "Simmonds' disease" EXACT []
 xref: ICD10CM:E23.0

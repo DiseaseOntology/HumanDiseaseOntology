@@ -598,17 +598,24 @@ international: $(addprefix $(DO)-international,.owl .obo .json) \
 $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 	$(addprefix $(DM)-%,.owl .obo .json)
 
-## DOID FILES
-$(DO)-%.owl build/translations/doid-%.owl: $(LANGDIR)/doid-%.tsv  | build/translations check_robot
+## DOID-LANG FILES
+$(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
+  build/translations/doid-%-rt.tsv src/sparql/build/retain_lang-template.ru | \
+  build/translations check_robot
+	@cp $(word 3,$^) build/translations/retain_lang-$*.ru
+	@sed -i '' 's/!<<lang>>!/$*/g' build/translations/retain_lang-$*.ru
 	@$(ROBOT) template \
 	 --input $< \
 	 --template $(word 2,$^) \
 	 --merge-after \
 	 --output build/translations/doid-$*.owl \
+	query \
+	 --update build/translations/retain_lang-$*.ru \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $(DO)-$*.owl
+	@rm build/translations/retain_lang-$*.ru
 	@echo "Created $(DO)-$*.owl"
 
 $(DO)-international.owl: $(DO).owl $(LANG_OWL) | check_robot

@@ -37,7 +37,8 @@ FASTOBO_VRS = 0.4.6
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: version_edit test version_imports products verify publish post
+release: test products verify version_imports version_edit publish post
+	@echo "Release complete!"
 
 # Only run `make all` if you'd like to update imports to the latest version
 #	during the release!

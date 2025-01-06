@@ -594,8 +594,8 @@ LANG_IMPORT := $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS))
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
 
-international: $(addprefix $(DO)-international,.owl .obo .json) \
-	$(addprefix $(DM)-international,.owl .obo .json)
+international: $(addprefix $(DO)-international,.owl .json) \
+	$(addprefix $(DM)-international,.owl .json)
 
 $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 	$(addprefix $(DM)-%,.owl .obo .json)

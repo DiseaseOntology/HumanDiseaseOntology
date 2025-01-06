@@ -429,7 +429,7 @@ $(REFRESH_IMPS):
 ##########################################
 
 .PHONY: products
-products: primary human merged base international subsets release_reports
+products: primary human merged base subsets translations release_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -591,7 +591,9 @@ LANGDIR := src/ontology/translations
 LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-*.tsv)))
 LANG_IMPORT := $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
 
-.PHONY: international $(LANGS)
+.PHONY: translations international $(LANGS)
+translations: $(LANGS) international
+
 international: $(addprefix $(DO)-international,.owl .obo .json) \
 	$(addprefix $(DM)-international,.owl .obo .json)
 

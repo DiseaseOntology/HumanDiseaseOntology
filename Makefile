@@ -692,11 +692,7 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
 # Copy the latest release to the releases directory
 
 .PHONY: publish
-publish: $(DO).owl $(DO).obo $(DO).json\
- $(DB).owl\
- $(DM).owl $(DM).obo\
- $(DNC).owl $(DNC).obo $(DNC).json\
- subsets
+publish: products
 	@cp $(DO).* src/ontology/releases
 	@cp $(DB).owl src/ontology/releases
 	@cp $(DM).* src/ontology/releases

@@ -589,7 +589,7 @@ $(DNC).json: $(DNC).owl | check_robot
 
 LANGDIR := src/ontology/translations
 LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-*.tsv)))
-LANG_OWL = $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
+LANG_IMPORT := $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
 
 .PHONY: international $(LANGS)
 international: $(addprefix $(DO)-international,.owl .obo .json) \
@@ -618,12 +618,12 @@ $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
 	@rm build/translations/retain_lang-$*.ru
 	@echo "Created $(DO)-$*.owl"
 
-$(DO)-international.owl: $(DO).owl $(LANG_OWL) | check_robot
+$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) | check_robot
 	@INPUTS=($^) ; \
 	 INPUTS=("$${INPUTS[@]/#/--input }") ; \
 	$(ROBOT) merge \
-	 $${INPUTS} \
-	 --collapse-import-closure false
+	 $${INPUTS[@]} \
+	 --collapse-import-closure false \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \

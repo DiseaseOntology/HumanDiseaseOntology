@@ -782,7 +782,8 @@ publish: products
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases
 	@cp -r src/ontology/subsets src/ontology/releases
-	@cp $(LANGS) $(DO)-international.* $(DM)-international.* src/ontology/releases
+	@cp $(addprefix $(DO)-,$(LANGS)).* $(addprefix $(DM)-,$(LANGS)).* \
+		$(DO)-international.* $(DM)-international.* src/ontology/releases
 	@echo "Published to src/ontology/releases"
 	@echo ""
 

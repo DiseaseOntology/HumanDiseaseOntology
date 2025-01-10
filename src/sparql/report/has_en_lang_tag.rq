@@ -1,0 +1,8 @@
+# Returns entities with text that have an English language tag (includes
+# deprecated entities to ensure file-wide consistency)
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	?entity ?property ?value .
+	FILTER(lang(?value) = "en")
+}

@@ -588,8 +588,9 @@ $(DNC).json: $(DNC).owl | check_robot
 # ----------------------------------------
 
 LANGDIR := src/ontology/translations
-LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-??.tsv)))
-LANG_IMPORT := $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
+LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv,%,$(wildcard $(LANGDIR)/doid-??.tsv)))
+LANGBDIR := $(addprefix build/translations/,$(LANGS))
+LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
@@ -600,32 +601,40 @@ international: $(addprefix $(DO)-international,.owl .json) \
 $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 	$(addprefix $(DM)-%,.owl .obo .json)
 
+## LANG QUERY FILES
+$(LANGBDIR): | build/translations
+	@mkdir -p $@
+
+$(LANGBDIR)/%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
+	@sed 's/@lang/"$(notdir $(subst /$(notdir $@),,$@))"/g' $< > $@
+
 ## DOID-LANG FILES
 $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
-  build/translations/doid-%-rt.tsv src/sparql/build/retain_lang-template.ru | \
-  build/translations check_robot
-	@cp $(word 3,$^) build/translations/retain_lang-$*.ru
-	@sed -i '' 's/!<<lang>>!/$*/g' build/translations/retain_lang-$*.ru
+  build/translations/doid-%-rt.tsv src/sparql/build/lang-dedup_acronym.ru \
+  build/translations/%/mv_def_annot.ru \
+  build/translations/%/only_lang.ru | check_robot
 	@$(ROBOT) template \
 	 --input $< \
 	 --template $(word 2,$^) \
 	 --merge-after \
 	 --output build/translations/doid-$*.owl \
 	query \
-	 --update build/translations/retain_lang-$*.ru \
+	 --update $(word 3,$^) \
+	 --update $(word 4,$^) \
+	 --update $(word 5,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $(DO)-$*.owl
-	@rm build/translations/retain_lang-$*.ru
 	@echo "Created $(DO)-$*.owl"
 
-$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) | check_robot
-	@INPUTS=($^) ; \
-	 INPUTS=("$${INPUTS[@]/#/--input }") ; \
-	$(ROBOT) merge \
-	 $${INPUTS[@]} \
+$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
+  src/sparql/build/lang-dedup_acronym.ru | check_robot
+	@$(ROBOT) merge \
+	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
 	 --collapse-import-closure false \
+	query \
+	 --update $(lastword $^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \

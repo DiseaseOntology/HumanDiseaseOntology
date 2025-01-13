@@ -589,7 +589,7 @@ $(DNC).json: $(DNC).owl | check_robot
 
 LANGDIR := src/ontology/translations
 LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv,%,$(wildcard $(LANGDIR)/doid-??.tsv)))
-LANGBDIR := $(addprefix build/translations/,$(LANGS))
+LANGPFX := $(addprefix build/translations/,$(LANGS))
 LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 
 .PHONY: translations international $(LANGS)
@@ -601,18 +601,15 @@ international: $(addprefix $(DO)-international,.owl .json) \
 $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 	$(addprefix $(DM)-%,.owl .obo .json)
 
-## LANG QUERY FILES
-$(LANGBDIR): | build/translations
-	@mkdir -p $@
-
-$(LANGBDIR)/%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
-	@sed 's/@lang/"$(notdir $(subst /$(notdir $@),,$@))"/g' $< > $@
+## LANG-SPECIFIC QUERY FILES
+$(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
+	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
 ## DOID-LANG FILES
 $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
   build/translations/doid-%-rt.tsv src/sparql/build/lang-dedup_acronym.ru \
-  build/translations/%/mv_def_annot.ru \
-  build/translations/%/only_lang.ru | check_robot
+  build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
+  check_robot
 	@$(ROBOT) template \
 	 --input $< \
 	 --template $(word 2,$^) \

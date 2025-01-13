@@ -588,7 +588,7 @@ $(DNC).json: $(DNC).owl | check_robot
 # ----------------------------------------
 
 LANGDIR := src/ontology/translations
-LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-*.tsv)))
+LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv, %, $(wildcard $(LANGDIR)/doid-??.tsv)))
 LANG_IMPORT := $(addprefix build/translations/doid-, $(addsuffix .owl, $(LANGS)))
 
 .PHONY: translations international $(LANGS)

@@ -605,14 +605,22 @@ $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 $(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
 	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
+## GENERATE ROBOT TEMPLATES
+build/translations/doid-%-rtlist.txt: $(LANGDIR)/doid-%.tsv \
+  src/util/lang-rt.awk | build/translations
+	@awk -v pfx=$(dir $@)doid-$* -f $(word 2,$^) $<
+	@ls $(dir $@)doid-$*-rt-*.tsv > $@
+	@echo "Created doid-$* robot templates"
+
 ## DOID-LANG FILES
 $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
-  build/translations/doid-%-rt.tsv src/sparql/build/lang-dedup_acronym.ru \
+  build/translations/doid-%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
-	@$(ROBOT) template \
+	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
+	$(ROBOT) template \
 	 --input $< \
-	 --template $(word 2,$^) \
+	 $$TMPLT \
 	 --merge-after \
 	 --output build/translations/doid-$*.owl \
 	query \

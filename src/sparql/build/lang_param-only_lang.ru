@@ -23,7 +23,9 @@ WHERE {
 		rdfs:comment
 	}
 
-	?iri ?pred ?lang_rm .
+	?iri a owl:Class ;
+		?pred ?lang_rm .
+
 	OPTIONAL {
 		?axiom owl:annotatedSource ?iri ;
 			owl:annotatedProperty ?pred ;

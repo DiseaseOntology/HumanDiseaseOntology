@@ -2,7 +2,7 @@
 BEGIN {
     FS = "\t";
     # define file for unknown predicates
-    pred_unk = $pfx "-unknown.tsv";
+    pred_unk = pfx "-unknown.tsv";
 }
 
 # Read the header row to determine column positions
@@ -23,18 +23,18 @@ NR == 1 {
     input_header = $0;
 }
 
-{
+NR > 1 {
     # Determine the output file based on the predicate value
     if ($col["predicate"] == "IAO:0000115") {  # definition-specific
-        output_file = $pfx "-rt-def.tsv";
+        output_file = pfx "-rt-def.tsv";
     } else if ($col["predicate"] ~ /:/) {      # use LUI for CURIE predicates
         split($col["predicate"], parts, ":");
-        output_file = $pfx "-rt-" parts[2] ".tsv";
+        output_file = pfx "-rt-" parts[2] ".tsv";
     } else {                                   # error: non-CURIE predicates (signal at END)
         # create "unknown" output file and write full input header & rows to it
-        output_file = $pred_unk;
+        output_file = pred_unk;
         if (!(output_file in file_written)) {
-            print $input_header > output_file;
+            print input_header > output_file;
             file_written[output_file] = 1;
         }
         print $0 >> output_file;
@@ -55,8 +55,8 @@ NR == 1 {
 
 END {
     for (file in file_written) {
-        if (file = $pred_unk) {
-            print "Error: Some predicates were not recognized, see " $pred_unk > "/dev/stderr";
+        if (file == pred_unk) {
+            print "Error: Some predicates were not recognized, see " pred_unk > "/dev/stderr";
             exit 1;
         }
     }

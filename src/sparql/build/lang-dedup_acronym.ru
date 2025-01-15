@@ -24,13 +24,18 @@ WHERE {
 	}
 
 	?iri ?scope ?acronym_en, ?acronym_lang .
-	?axiom owl:annotatedSource ?iri ;
+	[] owl:annotatedSource ?iri ;
 		owl:annotatedProperty ?scope ;
-		owl:annotatedTarget ?acronym_en, ?acronym_lang ;
+		owl:annotatedTarget ?acronym_en ;
 		oboInOwl:hasSynonymType obo:OMO_0003012 ;
 		?pred ?obj .
-	}
+	?axiom owl:annotatedSource ?iri ;
+		owl:annotatedProperty ?scope ;
+		owl:annotatedTarget ?acronym_lang ;
+		oboInOwl:hasSynonymType obo:OMO_0003012 ;
+		?pred ?obj .
+
 	FILTER(lang(?acronym_en) = "" || langMatches(lang(?acronym_en), "en"))
-	FILTER(!lang(?acronym_en) = "" && !langMatches(lang(?acronym_en), "en"))
-	FILTER(?acronym_lang = ?acronym_en)
+	FILTER(lang(?acronym_lang) != "" && !langMatches(lang(?acronym_lang), "en"))
+	FILTER(str(?acronym_lang) = str(?acronym_en))
 }

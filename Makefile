@@ -429,7 +429,7 @@ $(REFRESH_IMPS):
 ##########################################
 
 .PHONY: products
-products: primary human merged base subsets translations release_reports
+products: primary human merged base subsets release_reports
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -584,97 +584,6 @@ $(DNC).json: $(DNC).owl | check_robot
 
 
 # ----------------------------------------
-# LANGUAGE / INTERNATIONAL
-# ----------------------------------------
-
-LANGDIR := src/ontology/translations
-LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv,%,$(wildcard $(LANGDIR)/doid-??.tsv)))
-LANGPFX := $(addprefix build/translations/,$(LANGS))
-LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
-
-.PHONY: translations international $(LANGS)
-translations: $(LANGS) international
-
-international: $(addprefix $(DO)-international,.owl .json) \
-	$(addprefix $(DM)-international,.owl .json)
-
-$(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
-	$(addprefix $(DM)-%,.owl .obo .json)
-
-## LANG-SPECIFIC QUERY FILES
-$(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
-	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
-
-## GENERATE ROBOT TEMPLATES
-build/translations/doid-%-rtlist.txt: $(LANGDIR)/doid-%.tsv \
-  src/util/lang-rt.awk | build/translations
-	@awk -v pfx=$(dir $@)doid-$* -f $(word 2,$^) $<
-	@ls $(dir $@)doid-$*-rt-*.tsv > $@
-	@echo "Created doid-$* robot templates"
-
-## DOID-LANG FILES
-$(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
-  build/translations/doid-%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
-  build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
-  check_robot
-	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
-	$(ROBOT) template \
-	 --input $< \
-	 $$TMPLT \
-	 --merge-after \
-	 --output build/translations/doid-$*.owl \
-	query \
-	 --update $(word 3,$^) \
-	 --update $(word 4,$^) \
-	 --update $(word 5,$^) \
-	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --output $(DO)-$*.owl
-	@echo "Created $(DO)-$*.owl"
-
-$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
-  src/sparql/build/lang-dedup_acronym.ru | check_robot
-	@$(ROBOT) merge \
-	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
-	 --collapse-import-closure false \
-	query \
-	 --update $(lastword $^) \
-	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --output $@
-	@echo "Created $@"
-
-$(DO)-%.obo: $(DO)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
-	@echo "Created $@"
-
-$(DO)-%.json: $(DO)-%.owl | check_robot
-	@$(ROBOT) convert --input $< --output $@
-	@echo "Created $@"
-
-## MERGED FILES
-$(DM)-%.owl: $(DO)-%.owl | check_robot
-	@$(ROBOT) merge \
-	 --input $< \
-	 --collapse-import-closure true \
-	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --output $@
-	@echo "Created $@"
-
-$(DM)-%.obo: $(DM)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
-	@echo "Created $@"
-
-$(DM)-%.json: $(DM)-%.owl | check_robot
-	@$(ROBOT) convert --input $< --output $@
-	@echo "Created $@"
-
-
-# ----------------------------------------
 # SUBSETS
 # ----------------------------------------
 
@@ -796,8 +705,6 @@ publish: products
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases
 	@cp -r src/ontology/subsets src/ontology/releases
-	@cp $(addprefix $(DO)-,$(LANGS)).* $(addprefix $(DM)-,$(LANGS)).* \
-		$(DO)-international.* $(DM)-international.* src/ontology/releases
 	@echo "Published to src/ontology/releases"
 	@echo ""
 
@@ -925,3 +832,104 @@ build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | check_rob
 
 build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
 	@python3 $^ $@
+
+
+##########################################
+## TRANSLATIONS
+##########################################
+
+LANGDIR := src/ontology/translations
+LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv,%,$(wildcard $(LANGDIR)/doid-??.tsv)))
+LANGPFX := $(addprefix build/translations/,$(LANGS))
+LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
+
+.PHONY: translations international $(LANGS)
+translations: $(LANGS) international
+
+international: $(addprefix $(DO)-international,.owl .json) \
+	$(addprefix $(DM)-international,.owl .json)
+
+$(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
+	$(addprefix $(DM)-%,.owl .obo .json)
+
+# ----------------------------------------
+# INTERMEDIATE FILES
+# ----------------------------------------
+
+## LANG-SPECIFIC QUERY FILES
+$(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
+	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
+
+## GENERATE ROBOT TEMPLATES
+build/translations/doid-%-rtlist.txt: $(LANGDIR)/doid-%.tsv \
+  src/util/lang-rt.awk | build/translations
+	@awk -v pfx=$(dir $@)doid-$* -f $(word 2,$^) $<
+	@ls $(dir $@)doid-$*-rt-*.tsv > $@
+	@echo "Created doid-$* robot templates"
+
+# ----------------------------------------
+# DOID-LANG/INTERNATIONAL
+# ----------------------------------------
+
+$(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
+  build/translations/doid-%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
+  build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
+  check_robot
+	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
+	$(ROBOT) template \
+	 --input $< \
+	 $$TMPLT \
+	 --merge-after \
+	 --output build/translations/doid-$*.owl \
+	query \
+	 --update $(word 3,$^) \
+	 --update $(word 4,$^) \
+	 --update $(word 5,$^) \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $(DO)-$*.owl
+	@echo "Created $(DO)-$*.owl"
+
+$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
+  src/sparql/build/lang-dedup_acronym.ru | check_robot
+	@$(ROBOT) merge \
+	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
+	 --collapse-import-closure false \
+	query \
+	 --update $(lastword $^) \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
+
+$(DO)-%.obo: $(DO)-%.owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	@echo "Created $@"
+
+$(DO)-%.json: $(DO)-%.owl | check_robot
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"
+
+# ----------------------------------------
+# DOID-MERGED-LANG/INTERNATIONAL
+# ----------------------------------------
+
+$(DM)-%.owl: $(DO)-%.owl | check_robot
+	@$(ROBOT) merge \
+	 --input $< \
+	 --collapse-import-closure true \
+	annotate \
+	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --output $@
+	@echo "Created $@"
+
+$(DM)-%.obo: $(DM)-%.owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	@echo "Created $@"
+
+$(DM)-%.json: $(DM)-%.owl | check_robot
+	@$(ROBOT) convert --input $< --output $@
+	@echo "Created $@"

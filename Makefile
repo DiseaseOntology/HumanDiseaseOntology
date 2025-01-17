@@ -840,7 +840,6 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 
 LANGS := es
 
-LANGPFX := $(addprefix build/translations/,$(LANGS))
 LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 
 .PHONY: translations international $(LANGS)
@@ -857,7 +856,9 @@ $(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
 # ----------------------------------------
 
 ## LANG-SPECIFIC QUERY FILES
-$(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
+LANGQPFX := $(addprefix build/translations/,$(LANGS))
+
+$(LANGQPFX)-%.ru: src/sparql/build/lang_param-%.ru | build/translations
 	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
 ## GENERATE ROBOT TEMPLATES

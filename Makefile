@@ -840,7 +840,6 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 
 LANGS := es
 
-LANGDIR := src/ontology/translations
 LANGPFX := $(addprefix build/translations/,$(LANGS))
 LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 
@@ -862,7 +861,7 @@ $(LANGPFX)-%.ru: src/sparql/build/lang_param-%.ru | $(LANGBDIR)
 	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
 ## GENERATE ROBOT TEMPLATES
-build/translations/doid-%-rtlist.txt: $(LANGDIR)/doid-%.tsv \
+build/translations/doid-%-rtlist.txt: src/ontology/translations/doid-%.tsv \
   src/util/lang-rt.awk | build/translations
 	@awk -v pfx=$(dir $@)doid-$* -f $(word 2,$^) $<
 	@ls $(dir $@)doid-$*-rt-*.tsv > $@

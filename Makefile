@@ -840,7 +840,6 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 
 LANGS := es
 
-LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
@@ -862,18 +861,18 @@ $(LANGQPFX)-%.ru: src/sparql/build/lang_param-%.ru | build/translations
 	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
 ## GENERATE ROBOT TEMPLATES
-build/translations/doid-%-rtlist.txt: src/ontology/translations/doid-%.tsv \
+build/translations/%-rtlist.txt: src/ontology/translations/doid-%.tsv \
   src/util/lang-rt.awk | build/translations
-	@awk -v pfx=$(dir $@)doid-$* -f $(word 2,$^) $<
-	@ls $(dir $@)doid-$*-rt-*.tsv > $@
-	@echo "Created doid-$* robot templates"
+	@awk -v pfx=$(dir $@)$* -f $(word 2,$^) $<
+	@ls $(dir $@)$*-rt-*.tsv > $@
+	@echo "Created $* robot templates"
 
 # ----------------------------------------
 # DOID-LANG/INTERNATIONAL
 # ----------------------------------------
 
-$(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
-  build/translations/doid-%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
+$(DO)-%.owl build/translations/%.owl: $(DO).owl \
+  build/translations/%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
 	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
@@ -881,7 +880,7 @@ $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
 	 --input $< \
 	 $$TMPLT \
 	 --merge-after \
-	 --output build/translations/doid-$*.owl \
+	 --output build/translations/$*.owl \
 	query \
 	 --update $(word 3,$^) \
 	 --update $(word 4,$^) \
@@ -891,6 +890,9 @@ $(DO)-%.owl build/translations/doid-%.owl: $(DO).owl \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --output $(DO)-$*.owl
 	@echo "Created $(DO)-$*.owl"
+
+
+LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
 
 $(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
   src/sparql/build/lang-dedup_acronym.ru | check_robot

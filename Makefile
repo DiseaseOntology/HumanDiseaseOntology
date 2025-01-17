@@ -838,8 +838,9 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 ## TRANSLATIONS
 ##########################################
 
+LANGS := es
+
 LANGDIR := src/ontology/translations
-LANGS := $(sort $(patsubst $(LANGDIR)/doid-%.tsv,%,$(wildcard $(LANGDIR)/doid-??.tsv)))
 LANGPFX := $(addprefix build/translations/,$(LANGS))
 LANG_IMPORT := $(addprefix build/translations/doid-,$(addsuffix .owl, $(LANGS)))
 

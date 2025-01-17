@@ -887,8 +887,8 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	 --update $(word 4,$^) \
 	 --update $(word 5,$^) \
 	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
 	 --output $(DOLANG)-$*.owl
 	@echo "Created $(DOLANG)-$*.owl"
 
@@ -906,8 +906,8 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) \
 	query \
 	 --update $(lastword $^) \
 	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -920,8 +920,8 @@ $(DOLANG)-merged-%.owl: $(DOLANG)-%.owl | check_robot
 	 --input $< \
 	 --collapse-import-closure true \
 	annotate \
-	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
 	 --output $@
 	@echo "Created $@"
 
@@ -930,7 +930,7 @@ $(DOLANG)-merged-%.owl: $(DOLANG)-%.owl | check_robot
 # ----------------------------------------
 
 $(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","")
 	@echo "Created $@"
 
 $(DOLANG)-%.json: $(DOLANG)-%.owl | check_robot

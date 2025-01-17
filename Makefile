@@ -839,16 +839,17 @@ build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.ts
 ##########################################
 
 LANGS := es
-
+DOLANG := src/ontology/releases/translations/doid
 
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
 
-international: $(addprefix $(DO)-international,.owl .json) \
-	$(addprefix $(DM)-international,.owl .json)
+international: $(addprefix $(DOLANG)-international,.owl .json) \
+	$(addprefix $(DOLANG)-merged-international,.owl .json)
 
-$(LANGS): %: $(addprefix $(DO)-%,.owl .obo .json) \
-	$(addprefix $(DM)-%,.owl .obo .json)
+$(LANGS): %: $(addprefix $(DOLANG)-%,.owl .obo .json) \
+	$(addprefix $(DOLANG)-merged-%,.owl .obo .json)
+
 
 # ----------------------------------------
 # INTERMEDIATE FILES
@@ -868,10 +869,10 @@ build/translations/%-rtlist.txt: src/ontology/translations/doid-%.tsv \
 	@echo "Created $* robot templates"
 
 # ----------------------------------------
-# DOID-LANG/INTERNATIONAL
+# DOID-LANG
 # ----------------------------------------
 
-$(DO)-%.owl build/translations/%.owl: $(DO).owl \
+$(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
   build/translations/%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
@@ -888,13 +889,16 @@ $(DO)-%.owl build/translations/%.owl: $(DO).owl \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
-	 --output $(DO)-$*.owl
-	@echo "Created $(DO)-$*.owl"
+	 --output $(DOLANG)-$*.owl
+	@echo "Created $(DOLANG)-$*.owl"
 
+# ----------------------------------------
+# DOID-INTERNATIONAL
+# ----------------------------------------
 
 LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
 
-$(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
+$(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) \
   src/sparql/build/lang-dedup_acronym.ru | check_robot
 	@$(ROBOT) merge \
 	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
@@ -907,19 +911,11 @@ $(DO)-international.owl: $(DO).owl $(LANG_IMPORT) \
 	 --output $@
 	@echo "Created $@"
 
-$(DO)-%.obo: $(DO)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
-	@echo "Created $@"
-
-$(DO)-%.json: $(DO)-%.owl | check_robot
-	@$(ROBOT) convert --input $< --output $@
-	@echo "Created $@"
-
 # ----------------------------------------
-# DOID-MERGED-LANG/INTERNATIONAL
+# DOID-MERGED GENERIC
 # ----------------------------------------
 
-$(DM)-%.owl: $(DO)-%.owl | check_robot
+$(DOLANG)-merged-%.owl: $(DOLANG)-%.owl | check_robot
 	@$(ROBOT) merge \
 	 --input $< \
 	 --collapse-import-closure true \
@@ -929,10 +925,14 @@ $(DM)-%.owl: $(DO)-%.owl | check_robot
 	 --output $@
 	@echo "Created $@"
 
-$(DM)-%.obo: $(DM)-%.owl | check_robot
+# ----------------------------------------
+# DOID .obo & .json GENERIC
+# ----------------------------------------
+
+$(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
 	@echo "Created $@"
 
-$(DM)-%.json: $(DM)-%.owl | check_robot
+$(DOLANG)-%.json: $(DOLANG)-%.owl | check_robot
 	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"

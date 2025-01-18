@@ -930,7 +930,7 @@ $(DOLANG)-merged-%.owl: $(DOLANG)-%.owl | check_robot
 # ----------------------------------------
 
 $(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","")
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","$(OBO)doid/translations/$(notdir $(basename $@))")
 	@echo "Created $@"
 
 $(DOLANG)-%.json: $(DOLANG)-%.owl | check_robot

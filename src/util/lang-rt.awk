@@ -1,8 +1,6 @@
 #!/bin/awk -f
 BEGIN {
     FS = "\t";
-    # define file for unknown predicates
-    pred_unk = pfx "-unknown.tsv";
 }
 
 # Read the header row to determine column positions
@@ -19,7 +17,7 @@ NR == 1 {
             exit 1;
         }
     }
-    # save whole header in case of unknown predicates
+    # save whole header in case of unknown predicates ERROR
     input_header = $0;
 }
 
@@ -32,16 +30,16 @@ NR > 1 {
         output_file = pfx "-rt-" parts[2] ".tsv";
     } else {                                   # error: non-CURIE predicates (signal at END)
         # create "unknown" output file and write full input header & rows to it
-        output_file = pred_unk;
-        if (!(output_file in file_written)) {
+        pred_unk = output_file = pfx "-unknown.tsv";;
+        if (!(output_file in non_rt_file)) {
             print input_header > output_file;
-            file_written[output_file] = 1;
+            non_rt_file[output_file] = 1;
         }
         print $0 >> output_file;
     }
 
-    # Write data to appropriate file, unless unrecognized (written above)
-    if (output_file != pred_unk) {
+    # Write data to appropriate robot template
+    if (!(output_file in non_rt_file)) {
         # Create expected output files with robot template header & template rows
         if (!(output_file in file_written)) {
             print "source_id\ttranslation_text\tsynonym_type" > output_file;
@@ -54,10 +52,8 @@ NR > 1 {
 }
 
 END {
-    for (file in file_written) {
-        if (file == pred_unk) {
-            print "Error: Some predicates were not recognized, see " pred_unk > "/dev/stderr";
-            exit 1;
-        }
+    if (pred_unk in non_rt_file) {
+        print "Error: Some predicates were not recognized, see " pred_unk > "/dev/stderr";
+        exit 1;
     }
 }

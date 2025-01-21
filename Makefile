@@ -844,8 +844,8 @@ DOLANG := src/ontology/releases/translations/doid
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
 
-international: $(addprefix $(DOLANG)-international,.owl .json) \
-	$(addprefix $(DOLANG)-merged-international,.owl .json)
+international: $(addprefix $(DOLANG)-international,.owl .obo .json) \
+	$(addprefix $(DOLANG)-merged-international,.owl .obo .json)
 
 $(LANGS): %: $(addprefix $(DOLANG)-%,.owl .obo .json) \
 	$(addprefix $(DOLANG)-merged-%,.owl .obo .json)
@@ -926,6 +926,32 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
 	 "$${ANNOT_ARRAY[@]}" \
 	 --output $@
 	@echo "Created $@"
+
+# custom OBO rule for international files
+# REQUIRES allowance of invalid OBO format (i.e. --check false) because multiple
+# labels or definitions are NOT allowed even when multiple languages are used
+OBOINTL := $(DOLANG)-international.obo $(DOLANG)-merged-international.obo
+
+$(OBOINTL): $(DOLANG)%international.obo: $(DOLANG)%international.owl
+	@$(ROBOT) query \
+	 --input $< \
+	 --update src/sparql/build/remove-ref-type.ru \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
+	remove \
+	 --select imports \
+	 --trim true \
+	annotate \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $(basename $@))" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
+	convert \
+	 --check false \
+	 --output $@
+	@grep -v ^owl-axioms $@ | \
+	 grep -v ^date | \
+	 perl -lpe 'print "date: $(TS)" if $$. == 3' > $@.tmp && \
+	 mv $@.tmp $@
 
 # ----------------------------------------
 # DOID-MERGED GENERIC

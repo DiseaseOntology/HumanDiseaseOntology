@@ -1,4 +1,10 @@
 #!/bin/awk -f
+# Function to strip quotes from a string
+function strip_quotes(str) {
+    gsub(/^["']|["']$/, "", str);
+    return str;
+}
+
 BEGIN {
     FS = "\t";
 }
@@ -22,13 +28,24 @@ NR == 1 {
 }
 
 NR > 1 {
+    # Process ontology annotations for robot annotate, not robot template
+    if ($col["source_id"] ~ /(doid$|\.owl$|\.obo$|\.json$)/) {
+        output_file = pfx "-annot.txt";
+        if (!(output_file in non_rt_file)) {
+            printf "" > output_file;    # create empty file
+            non_rt_file[output_file] = 1;
+        }
+        text = strip_quotes($col["translation_text"]);
+        lang = strip_quotes($col["translation_lang"]);
+        print "--language-annotation\n" $col["predicate"] "\n" text "\n" lang >> output_file;
+
     # Determine the output file based on the predicate value
-    if ($col["predicate"] == "IAO:0000115") {  # definition-specific
+    } else if ($col["predicate"] == "IAO:0000115") {    # definition-specific filename
         output_file = pfx "-rt-def.tsv";
-    } else if ($col["predicate"] ~ /:/) {      # use LUI for CURIE predicates
+    } else if ($col["predicate"] ~ /:/) {               # other CURIE predicates, LUI -> filename
         split($col["predicate"], parts, ":");
         output_file = pfx "-rt-" parts[2] ".tsv";
-    } else {                                   # error: non-CURIE predicates (signal at END)
+    } else {                                            # ERROR: non-CURIE predicates (signal at END to get list)
         # create "unknown" output file and write full input header & rows to it
         pred_unk = output_file = pfx "-unknown.tsv";;
         if (!(output_file in non_rt_file)) {

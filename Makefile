@@ -877,6 +877,10 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
 	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
+	ANNOT_ARRAY=() ; \
+	 while IFS= read -r line; do \
+		ANNOT_ARRAY+=("$$line") ; \
+	 done < build/translations/$*-annot.txt ; \
 	$(ROBOT) template \
 	 --input $< \
 	 $$TMPLT \
@@ -889,6 +893,8 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	annotate \
 	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
+	 --annotation dc11:language "$*" \
+	 "$${ANNOT_ARRAY[@]}" \
 	 --output $(DOLANG)-$*.owl
 	@echo "Created $(DOLANG)-$*.owl"
 
@@ -900,7 +906,13 @@ LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
 
 $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) \
   src/sparql/build/lang-dedup_acronym.ru | check_robot
-	@$(ROBOT) merge \
+	@ANNOT_ARRAY=() ; \
+	 for file in $(addprefix build/translations/,$(addsuffix -annot.txt, $(LANGS))); do \
+		while IFS= read -r line; do \
+			ANNOT_ARRAY+=("$$line") ; \
+		done < "$$file" ; \
+	done ; \
+	$(ROBOT) merge \
 	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
 	 --collapse-import-closure false \
 	query \
@@ -908,6 +920,8 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
+	 $(patsubst %,--annotation dc11:language "%",$(LANGS)) \
+	 "$${ANNOT_ARRAY[@]}" \
 	 --output $@
 	@echo "Created $@"
 

@@ -6,18 +6,14 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 DELETE {
-	# remove English definitions retaining axiom
-	?iri obo:IAO_0000115 ?def_en .
 	?def_axiom owl:annotatedTarget ?def_en .
 }
 INSERT {
-	# transfer lang def into existing axiom
 	?def_axiom owl:annotatedTarget ?def_lang .
 }
 WHERE {
 	# identify terms with both English & lang definitions (to transfer axioms)
-	?iri obo:IAO_0000115 ?def_en ;
-		obo:IAO_0000115 ?def_lang .
+	?iri obo:IAO_0000115 ?def_en , ?def_lang .
 
 	FILTER(langMatches(lang(?def_en), "en") || lang(?def_en) = "")
 	FILTER(lang(?def_lang) = @lang)

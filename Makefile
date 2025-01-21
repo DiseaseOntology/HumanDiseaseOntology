@@ -862,34 +862,35 @@ $(LANGQPFX)-%.ru: src/sparql/build/lang_param-%.ru | build/translations
 	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
 
 ## GENERATE ROBOT TEMPLATES
-build/translations/%-rtlist.txt: src/ontology/translations/doid-%.tsv \
-  src/util/lang-rt.awk | build/translations
+build/translations/%-rtlist.txt build/translations/%-annot.txt: \
+  src/ontology/translations/doid-%.tsv src/util/lang-rt.awk | build/translations
 	@awk -v pfx=$(dir $@)$* -f $(word 2,$^) $<
-	@ls $(dir $@)$*-rt-*.tsv > $@
-	@echo "Created $* robot templates"
+	@ls $(dir $@)$*-rt-*.tsv > build/translations/$*-rtlist.txt
+	@echo "Created language templates: $*"
 
 # ----------------------------------------
 # DOID-LANG
 # ----------------------------------------
 
 $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
-  build/translations/%-rtlist.txt src/sparql/build/lang-dedup_acronym.ru \
+  build/translations/%-rtlist.txt build/translations/%-annot.txt \
+  src/sparql/build/lang-dedup_acronym.ru \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
 	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
 	ANNOT_ARRAY=() ; \
 	 while IFS= read -r line; do \
 		ANNOT_ARRAY+=("$$line") ; \
-	 done < build/translations/$*-annot.txt ; \
+	 done < $(word 3,$^) ; \
 	$(ROBOT) template \
 	 --input $< \
 	 $$TMPLT \
 	 --merge-after \
 	 --output build/translations/$*.owl \
 	query \
-	 --update $(word 3,$^) \
 	 --update $(word 4,$^) \
 	 --update $(word 5,$^) \
+	 --update $(word 6,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
@@ -903,17 +904,18 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 # ----------------------------------------
 
 LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
+LANG_ANNOTS := $(addprefix build/translations/,$(addsuffix -annot.txt, $(LANGS)))
 
-$(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) \
+$(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
   src/sparql/build/lang-dedup_acronym.ru | check_robot
 	@ANNOT_ARRAY=() ; \
-	 for file in $(addprefix build/translations/,$(addsuffix -annot.txt, $(LANGS))); do \
+	 for file in $(filter build/translations/%-annot.txt,$^); do \
 		while IFS= read -r line; do \
 			ANNOT_ARRAY+=("$$line") ; \
 		done < "$$file" ; \
 	done ; \
 	$(ROBOT) merge \
-	 $(addprefix --input ,$(filter-out src/sparql/%,$^)) \
+	 $(addprefix --input ,$(filter %.owl,$^)) \
 	 --collapse-import-closure false \
 	query \
 	 --update $(lastword $^) \

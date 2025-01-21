@@ -25,16 +25,17 @@ NR == 1 {
     }
     # save whole header in case of unknown predicates ERROR
     input_header = $0;
+
+    # Always create a new file for ontology annotations
+    annot_file = pfx "-annot.txt"
+    printf "" > annot_file;
+    non_rt_file[annot_file] = 1;
 }
 
 NR > 1 {
     # Process ontology annotations for robot annotate, not robot template
     if ($col["source_id"] ~ /(doid$|\.owl$|\.obo$|\.json$)/) {
-        output_file = pfx "-annot.txt";
-        if (!(output_file in non_rt_file)) {
-            printf "" > output_file;    # create empty file
-            non_rt_file[output_file] = 1;
-        }
+        output_file = annot_file;
         text = strip_quotes($col["translation_text"]);
         lang = strip_quotes($col["translation_lang"]);
         print "--language-annotation\n" $col["predicate"] "\n" text "\n" lang >> output_file;

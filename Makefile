@@ -892,8 +892,8 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	 --update $(word 5,$^) \
 	 --update $(word 6,$^) \
 	annotate \
-	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $(DOLANG)-$*.owl)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $(DOLANG)-$*.owl)" \
 	 --annotation dc11:language "$*" \
 	 "$${ANNOT_ARRAY[@]}" \
 	 --output $(DOLANG)-$*.owl

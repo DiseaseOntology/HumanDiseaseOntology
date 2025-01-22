@@ -844,9 +844,9 @@ DOLANG := src/ontology/releases/translations/doid
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
 
-international: $(addprefix $(DOLANG)-international,.owl .obo .json)
+international: $(DOLANG)-international.owl
 
-$(LANGS): %: $(addprefix $(DOLANG)-%,.owl .obo .json)
+$(LANGS): %: $(DOLANG)-%.owl
 
 
 # ----------------------------------------
@@ -925,42 +925,4 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
 	 $(patsubst %,--annotation dc11:language "%",$(LANGS)) \
 	 "$${ANNOT_ARRAY[@]}" \
 	 --output $@
-	@echo "Created $@"
-
-# custom OBO rule for international files
-# REQUIRES allowance of invalid OBO format (i.e. --check false) because multiple
-# labels or definitions are NOT allowed even when multiple languages are used
-OBOINTL := $(DOLANG)-international.obo
-
-$(OBOINTL): $(DOLANG)%international.obo: $(DOLANG)%international.owl
-	@$(ROBOT) query \
-	 --input $< \
-	 --update src/sparql/build/remove-ref-type.ru \
-	remove \
-	 --select "parents equivalents" \
-	 --select "anonymous" \
-	remove \
-	 --select imports \
-	 --trim true \
-	annotate \
-	 --ontology-iri "$(OBO)doid/translations/$(notdir $(basename $@))" \
-	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
-	convert \
-	 --check false \
-	 --output $@
-	@grep -v ^owl-axioms $@ | \
-	 grep -v ^date | \
-	 perl -lpe 'print "date: $(TS)" if $$. == 3' > $@.tmp && \
-	 mv $@.tmp $@
-
-# ----------------------------------------
-# DOID .obo & .json GENERIC
-# ----------------------------------------
-
-$(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
-	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","$(OBO)doid/translations/$(notdir $(basename $@))")
-	@echo "Created $@"
-
-$(DOLANG)-%.json: $(DOLANG)-%.owl | check_robot
-	@$(ROBOT) convert --input $< --output $@
 	@echo "Created $@"

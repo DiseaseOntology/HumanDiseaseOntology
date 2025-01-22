@@ -844,11 +844,9 @@ DOLANG := src/ontology/releases/translations/doid
 .PHONY: translations international $(LANGS)
 translations: $(LANGS) international
 
-international: $(addprefix $(DOLANG)-international,.owl .obo .json) \
-	$(addprefix $(DOLANG)-merged-international,.owl .obo .json)
+international: $(addprefix $(DOLANG)-international,.owl .obo .json)
 
-$(LANGS): %: $(addprefix $(DOLANG)-%,.owl .obo .json) \
-	$(addprefix $(DOLANG)-merged-%,.owl .obo .json)
+$(LANGS): %: $(addprefix $(DOLANG)-%,.owl .obo .json)
 
 
 # ----------------------------------------
@@ -891,6 +889,8 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	 --update $(word 4,$^) \
 	 --update $(word 5,$^) \
 	 --update $(word 6,$^) \
+	merge \
+	 --collapse-import-closure true \
 	annotate \
 	 --ontology-iri "$(OBO)doid/translations/$(notdir $(DOLANG)-$*.owl)" \
 	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $(DOLANG)-$*.owl)" \
@@ -916,7 +916,7 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
 	done ; \
 	$(ROBOT) merge \
 	 $(addprefix --input ,$(filter %.owl,$^)) \
-	 --collapse-import-closure false \
+	 --collapse-import-closure true \
 	query \
 	 --update $(lastword $^) \
 	annotate \
@@ -930,7 +930,7 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
 # custom OBO rule for international files
 # REQUIRES allowance of invalid OBO format (i.e. --check false) because multiple
 # labels or definitions are NOT allowed even when multiple languages are used
-OBOINTL := $(DOLANG)-international.obo $(DOLANG)-merged-international.obo
+OBOINTL := $(DOLANG)-international.obo
 
 $(OBOINTL): $(DOLANG)%international.obo: $(DOLANG)%international.owl
 	@$(ROBOT) query \
@@ -952,20 +952,6 @@ $(OBOINTL): $(DOLANG)%international.obo: $(DOLANG)%international.owl
 	 grep -v ^date | \
 	 perl -lpe 'print "date: $(TS)" if $$. == 3' > $@.tmp && \
 	 mv $@.tmp $@
-
-# ----------------------------------------
-# DOID-MERGED GENERIC
-# ----------------------------------------
-
-$(DOLANG)-merged-%.owl: $(DOLANG)-%.owl | check_robot
-	@$(ROBOT) merge \
-	 --input $< \
-	 --collapse-import-closure true \
-	annotate \
-	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
-	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
-	 --output $@
-	@echo "Created $@"
 
 # ----------------------------------------
 # DOID .obo & .json GENERIC

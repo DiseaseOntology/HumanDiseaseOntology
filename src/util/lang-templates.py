@@ -1,28 +1,31 @@
 import csv
-import os
 import re
 import sys
+from collections import defaultdict
+
 
 def strip_quotes(s):
     return s.strip('"').strip("'")
 
-def process_tsv(input_file, output_prefix):
-    with open(input_file, newline='', encoding='utf-8') as tsvfile:
-        reader = csv.DictReader(tsvfile, delimiter='\t')
+
+def process_tsv(input_file, output_file, delimiter="|"):
+    data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+
+    with open(input_file, newline="", encoding="utf-8") as tsvfile:
+        reader = csv.DictReader(tsvfile, delimiter="\t")
         headers = reader.fieldnames
 
-        required_columns = ["source_id", "predicate", "translation_text", "translation_lang", "synonym_type"]
+        required_columns = [
+            "source_id",
+            "predicate",
+            "translation_text",
+            "translation_lang",
+            "synonym_type",
+        ]
         for col in required_columns:
             if col not in headers:
                 print(f"Error: Missing required column {col}", file=sys.stderr)
                 sys.exit(1)
-
-        input_header = "\t".join(headers)
-        non_rt_file = {}
-        annot_file = f"{output_prefix}-annot.txt"
-        non_rt_file[annot_file] = True
-        with open(annot_file, 'w', encoding='utf-8') as f:
-            pass  # Create empty file
 
         for row in reader:
             source_id = row["source_id"]
@@ -30,42 +33,53 @@ def process_tsv(input_file, output_prefix):
             translation_text = strip_quotes(row["translation_text"])
             translation_lang = strip_quotes(row["translation_lang"])
 
-            if re.search(r'(doid$|\.owl$|\.obo$|\.json$)', source_id):
-                output_file = annot_file
-                if output_file not in non_rt_file:
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(input_header + "\n")
-                    non_rt_file[output_file] = True
+            if re.search(r"(doid$|\.owl$|\.obo$|\.json$)", source_id):
+                continue  # Skip ontology annotations for this script
 
-                with open(output_file, 'a', encoding='utf-8') as f:
-                    f.write(f"--language-annotation\n{predicate}\n{translation_text}\n{translation_lang}\n")
-            elif predicate == "IAO:0000115":
-                output_file = f"{output_prefix}-rt-def.tsv"
-                with open(output_file, 'a', encoding='utf-8') as f:
-                    writer = csv.writer(f, delimiter='\t')
-                    writer.writerow([source_id, translation_text, translation_lang, row["synonym_type"]])
-            elif re.search(r':', predicate):
-                parts = predicate.split(":")
-                output_file = f"{output_prefix}-rt-{parts[1]}.tsv"
-                with open(output_file, 'a', encoding='utf-8') as f:
-                    writer = csv.writer(f, delimiter='\t')
-                    writer.writerow([source_id, translation_text, translation_lang, row["synonym_type"]])
-            else:
-                output_file = f"{output_prefix}-unknown.tsv"
-                if output_file not in non_rt_file:
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(input_header + "\n")
-                    non_rt_file[output_file] = True
+            data[source_id][predicate][translation_lang].append(translation_text)
 
-                with open(output_file, 'a', encoding='utf-8') as f:
-                    writer = csv.writer(f, delimiter='\t')
-                    writer.writerow([source_id, predicate, translation_text, translation_lang, row["synonym_type"]])
+    predicates_langs = sorted(
+        set(
+            (pred, lang)
+            for preds in data.values()
+            for pred, langs in preds.items()
+            for lang in langs
+        )
+    )
+
+    with open(output_file, "w", newline="", encoding="utf-8") as csvfile:
+        writer = csv.writer(csvfile, delimiter="\t")
+
+        # Write the first header row
+        header1 = ["ID"] + [
+            re.sub(r"IAO[_:]0000115", "definition", pred.split(":")[1])
+            for pred, lang in predicates_langs
+        ]
+        writer.writerow(header1)
+
+        # Write the second header row
+        header2 = ["ID"] + [
+            f"AL {pred}@{lang} SPLIT={delimiter}" for pred, lang in predicates_langs
+        ]
+        writer.writerow(header2)
+
+        # Write the data rows
+        for source_id, preds in data.items():
+            row = [source_id] + [
+                delimiter.join(preds[pred][lang]) if lang in preds[pred] else ""
+                for pred, lang in predicates_langs
+            ]
+            writer.writerow(row)
+
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python script.py <input_tsv_file> <output_prefix>")
+    if len(sys.argv) < 3 or len(sys.argv) > 4:
+        print(
+            "Usage: python process_translations.py <input_tsv_file> <output_tsv_file> [delimiter]"
+        )
         sys.exit(1)
 
     input_file = sys.argv[1]
-    output_prefix = sys.argv[2]
-    process_tsv(input_file, output_prefix)
+    output_file = sys.argv[2]
+    delimiter = sys.argv[3] if len(sys.argv) == 4 else "|"
+    process_tsv(input_file, output_file, delimiter)

@@ -122,6 +122,20 @@ $(FASTOBO): | build
 		fi ; \
 	fi
 
+# ----------------------------------------
+# PYTHON3
+# ----------------------------------------
+
+PYTHON := build/venv/bin/python3
+PIP := build/venv/bin/pip3
+
+build/venv: | build
+	@python3 -m venv $@
+	@$(PYTHON) -m pip install --upgrade pip
+	@$(PIP) install mkdocs
+	@PYVERS=$$($(PYTHON) --version) ; \
+	 printf "\nCreated $$PYVERS virtual environment at $@\n"
+
 
 ##########################################
 ## PRE-BUILD TESTS
@@ -229,7 +243,7 @@ build/be_synonyms.csv: src/util/compute_british_synonyms.py \
  build/update/labels.csv build/update/synonyms.csv \
  build/update/british_english_dictionary.csv
 	@echo "Building synonyms template..."
-	@python3 $^ $@
+	@$(PYTHON) $^ $@
 
 build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | check_robot
 	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
@@ -792,7 +806,7 @@ build/reports/%-new.tsv: src/sparql/build/%.rq $(DM).owl | check_robot build/rep
 
 # create a clean diff between last and current reports
 build/reports/report-diff.txt: last-reports new-reports
-	@python3 src/util/report-diff.py
+	@$(PYTHON) src/util/report-diff.py
 	@echo "Diff report between current release and last release available at $@"
 
 # create a count of asserted and total (asserted + inferred) classes in each branch
@@ -824,14 +838,14 @@ build/robot.diff: build/doid-last.owl $(DM).owl | check_robot
 	 --output $@
 
 build/reports/missing-axioms.txt: src/util/parse-diff.py build/robot.diff | build/reports
-	@python3 $^ $@
+	@$(PYTHON) $^ $@
 
 build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | check_robot
 	@echo "Finding overlap between HP and DO terms..."
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 
 build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
-	@python3 $^ $@
+	@$(PYTHON) $^ $@
 
 
 ##########################################

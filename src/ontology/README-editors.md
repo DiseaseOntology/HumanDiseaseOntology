@@ -1,11 +1,4 @@
-SETTING UP
-----------
-
-## Editing environment
-
-1. Install Protege 4.3 or higher
-2. Get the Elk plugin
-3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
+# Editing the Human Disease Ontology
 
 **DO Files**  
 
@@ -14,11 +7,9 @@ SETTING UP
 3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
 
 
-**ID range**: documented in the idranges file (doid-idranges.owl), 
-in the HumanDiseaseOntology/src/ontology/ directory)
+**ID range**: documented in the idranges file (doid-idranges.owl), in the HumanDiseaseOntology/src/ontology/ directory)
 
-The current (2015) ID ranges include 
- for the University of Maryland Baltimore curation team: 
+The current (2025) ID ranges for the University of Maryland Baltimore curation team are: 
  
  	DOID:$sequence(7,50000,50999)$  Lynn 
 	DOID:$sequence(7,61000,61999)$  Claudia

@@ -469,12 +469,14 @@ endef
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT) | check_robot test
+$(DO).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot test
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \
 	 --annotate-inferred-axioms false \
 	 --exclude-duplicate-axioms true \
+	query \
+	 --update $(word 2,$^) \
 	annotate \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
 	 --annotation oboInOwl:date "$(TS)" \
@@ -497,11 +499,13 @@ $(DO).json: $(DO).owl | check_robot
 .PHONY: base
 base: $(DB).owl $(DB).obo $(DB).json
 
-$(DB).owl: $(EDIT) | check_robot
+$(DB).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
 	 --trim false \
+	query \
+	 --update $(word 2,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
@@ -550,7 +554,7 @@ $(DM).json: $(DM).owl | check_robot
 .PHONY: human
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(EDIT) | check_robot
+$(DNC).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -558,6 +562,8 @@ $(DNC).owl: $(EDIT) | check_robot
 	remove \
 	 --select "parents equivalents" \
 	 --select anonymous \
+	query \
+	 --update $(word 2,$^) \
 	annotate \
 	 --ontology-iri "$(OBO)doid/$(notdir $@)" \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \

@@ -11,6 +11,54 @@
 
 ---
 
+## 2025 Releases
+
+### [v2025-01-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-01-31)
+
+This release of the Human Disease Ontology includes 11,765 disease classes, 9,446 with textual definitions (80.3%). It also includes  text describing diseases of the physical disorders branch (labels, definitions, and synonyms) in Spanish!
+
+Spanish translations can be found along with the corresponding English text in the DO's new doid-international.owl file, or on their own in the Spanish version of the DO, doid-es.owl.
+
+The persistent URLs (PURLs) for the new files containing translated text are:
+- **doid-international.owl** - `http://purl.obolibrary.org/obo/doid/translations/doid-international.owl`
+- **doid-es.owl** - `http://purl.obolibrary.org/obo/doid/translations/doid-es.owl`
+
+---
+
+A number of data updates are also included in this release, including revision and expansion of OMIM genetic susceptibilities (which the DO team maintains as an import) and the updates to diseases listed below.
+### Diseases revised & expanded
+- Duane retraction syndrome (subtypes)
+- adult onset demyelinating leukodystrophies
+- familial restrictive cardiomyopathy (subtypes)
+- visceral heterotaxy (subtypes)
+
+### Diseases revised
+- acromesomelic dysplasia subtypes
+- adiposis dolorosa
+- autosomal dominant distal hereditary motor neuronopathy 2
+- hemophilias
+- autosomal recessive nonsyndromic deafness 26
+- cerebrotendinous xanthomatosis
+-  congenital nongoitrous hypothyroidism 3
+- proteasome-associated autoinflammatory syndrome 1
+- retinitis pigmentosa 32
+- septooptic dysplasia
+- spermatogenic failure subtypes
+- spondylometaphyseal dysplasia Algerian type
+
+### New diseases
+- autosomal dominant primary microcephaly subtypes
+- autosomal recessive axonal Charcot-Marie-Tooth disease with vocal cord paresis
+- hereditary pyropoikilocytosis
+- mitochondrial DNA depletion syndrome-21"
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-01-31/src/ontology/doid-merged.obo) | |
+
 ## 2024 Releases
 
 ### [v2024-12-18](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2024-12-18)

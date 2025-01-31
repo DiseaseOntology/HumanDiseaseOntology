@@ -870,6 +870,8 @@ build/translations/%-rtlist.txt build/translations/%-annot.txt: \
 # DOID-LANG
 # ----------------------------------------
 
+# start from doid.owl instead of doid-merged.owl to avoid processing lang tags
+# on imported classes
 $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
   build/translations/%-rtlist.txt build/translations/%-annot.txt \
   src/sparql/build/lang-dedup_acronym.ru \
@@ -906,6 +908,8 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
 LANG_ANNOTS := $(addprefix build/translations/,$(addsuffix -annot.txt, $(LANGS)))
 
+# must set --collapse-import-closure true to use up-to-date imports
+#  ignores catalog files otherwise?
 $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
   src/sparql/build/lang-dedup_acronym.ru | check_robot
 	@ANNOT_ARRAY=() ; \

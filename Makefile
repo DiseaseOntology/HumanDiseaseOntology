@@ -53,7 +53,7 @@ all: imports release
 clean:
 	rm -rf build
 
-build build/update build/reports build/reports/temp:
+build build/update build/reports build/reports/temp build/translations:
 	mkdir -p $@
 
 # ----------------------------------------
@@ -582,6 +582,7 @@ $(DNC).json: $(DNC).owl | check_robot
 	@cp $@ $(HD).json
 	@echo "Created $@"
 
+
 # ----------------------------------------
 # SUBSETS
 # ----------------------------------------
@@ -831,3 +832,97 @@ build/hp-do-terms.tsv: $(DM).owl src/sparql/build/hp-and-do-terms.rq | check_rob
 
 build/reports/hp-do-overlap.csv: src/util/get_hp_overlap.py build/hp-do-terms.tsv
 	@python3 $^ $@
+
+
+##########################################
+## TRANSLATIONS
+##########################################
+
+LANGS := es
+DOLANG := src/ontology/releases/translations/doid
+
+.PHONY: translations international $(LANGS)
+translations: $(LANGS) international
+
+international: $(DOLANG)-international.owl
+
+$(LANGS): %: $(DOLANG)-%.owl
+
+
+# ----------------------------------------
+# INTERMEDIATE FILES
+# ----------------------------------------
+
+## LANG-SPECIFIC QUERY FILES
+LANGQPFX := $(addprefix build/translations/,$(LANGS))
+
+$(LANGQPFX)-%.ru: src/sparql/build/lang_param-%.ru | build/translations
+	@sed 's/@lang/"$(subst -$*,,$(notdir $(basename $@)))"/g' $< > $@
+
+## GENERATE ROBOT TEMPLATES
+build/translations/%-rtlist.txt build/translations/%-annot.txt: \
+  src/ontology/translations/doid-%.tsv src/util/lang-rt.awk | build/translations
+	@awk -v pfx=$(dir $@)$* -f $(word 2,$^) $<
+	@ls $(dir $@)$*-rt-*.tsv > build/translations/$*-rtlist.txt
+	@echo "Created language templates: $*"
+
+# ----------------------------------------
+# DOID-LANG
+# ----------------------------------------
+
+$(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
+  build/translations/%-rtlist.txt build/translations/%-annot.txt \
+  src/sparql/build/lang-dedup_acronym.ru \
+  build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
+  check_robot
+	@TMPLT=$$(sed 's/^/--template /' $(word 2,$^)) ; \
+	ANNOT_ARRAY=() ; \
+	 while IFS= read -r line; do \
+		ANNOT_ARRAY+=("$$line") ; \
+	 done < $(word 3,$^) ; \
+	$(ROBOT) template \
+	 --input $< \
+	 $$TMPLT \
+	 --merge-after \
+	 --output build/translations/$*.owl \
+	query \
+	 --update $(word 4,$^) \
+	 --update $(word 5,$^) \
+	 --update $(word 6,$^) \
+	merge \
+	 --collapse-import-closure true \
+	annotate \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $(DOLANG)-$*.owl)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $(DOLANG)-$*.owl)" \
+	 --annotation dc11:language "$*" \
+	 "$${ANNOT_ARRAY[@]}" \
+	 --output $(DOLANG)-$*.owl
+	@echo "Created $(DOLANG)-$*.owl"
+
+# ----------------------------------------
+# DOID-INTERNATIONAL
+# ----------------------------------------
+
+LANG_IMPORTS := $(addprefix build/translations/,$(addsuffix .owl, $(LANGS)))
+LANG_ANNOTS := $(addprefix build/translations/,$(addsuffix -annot.txt, $(LANGS)))
+
+$(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
+  src/sparql/build/lang-dedup_acronym.ru | check_robot
+	@ANNOT_ARRAY=() ; \
+	 for file in $(filter build/translations/%-annot.txt,$^); do \
+		while IFS= read -r line; do \
+			ANNOT_ARRAY+=("$$line") ; \
+		done < "$$file" ; \
+	done ; \
+	$(ROBOT) merge \
+	 $(addprefix --input ,$(filter %.owl,$^)) \
+	 --collapse-import-closure true \
+	query \
+	 --update $(lastword $^) \
+	annotate \
+	 --ontology-iri "$(OBO)doid/translations/$(notdir $@)" \
+	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $@)" \
+	 $(patsubst %,--annotation dc11:language "%",$(LANGS)) \
+	 "$${ANNOT_ARRAY[@]}" \
+	 --output $@
+	@echo "Created $@"

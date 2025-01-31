@@ -7,7 +7,9 @@ WHERE {
 	?class a owl:Class ;
         rdfs:subClassOf* ?branch_iri .
     ?branch_iri rdfs:subClassOf obo:DOID_4 ;
-        rdfs:label ?branch .
+        rdfs:label ?branch_lbl .
+    FILTER(lang(?branch_lbl) IN ('en', ''))
+    BIND(str(?branch_lbl) AS ?branch)
 }
 GROUP BY ?branch
 ORDER BY ?branch

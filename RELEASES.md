@@ -13,6 +13,17 @@
 
 ## 2025 Releases
 
+### [v2025-02-03](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-02-03)
+
+Updated release, to update some labels.
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-02-03/src/ontology/doid-merged.obo) | |
+
 ### [v2025-01-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-01-31)
 
 This release of the Human Disease Ontology includes 11,765 disease classes, 9,446 with textual definitions (80.3%). It also includes  text describing diseases of the physical disorders branch (labels, definitions, and synonyms) in Spanish!

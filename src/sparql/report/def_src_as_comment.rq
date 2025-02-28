@@ -1,0 +1,17 @@
+# identifies definition sources as comments instead of oboInOwl:hasDbXref
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { rdfs:comment }
+	?entity a owl:Class ;
+		obo:IAO_0000115 ?definition .
+	?blank owl:annotatedTarget ?definition ;
+		?property ?value .
+	FILTER(REGEX(?value, "^(url:)?https?:"))
+	FILTER NOT EXISTS { ?entity owl:deprecated "true"^^xsd:boolean }
+}

@@ -37,7 +37,7 @@ FASTOBO_VRS = 0.4.6
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: test version_imports products verify version_edit publish post
+release: test version_imports products verify publish post
 	@echo "Release complete!"
 
 # Only run `make all` if you'd like to update imports to the latest version
@@ -661,20 +661,14 @@ DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports check_robot
 
 
 # ----------------------------------------
-# VERSION INPUT FILES (DOID-EDIT.OWL & IMPORTS)
+# VERSION INPUT FILES (IMPORTS)
 # ----------------------------------------
 
 # Set versionIRI for imports & ext.owl (whether updated or not)
 VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 
-.PHONY: version_edit version_imports version_ext $(VERSION_IMPS)
-version_edit: | check_robot
-	@$(ROBOT) annotate \
-	 --input $(EDIT) \
-	 --version-iri "$(RELEASE_PREFIX)doid.owl" \
-	 --output $(EDIT).ofn \
-	&& mv $(EDIT).ofn $(EDIT)
-	@echo "Updated versionIRI of $(EDIT)"
+# No longer versioning edit file, following pattern of most of OBO
+.PHONY: version_imports version_ext $(VERSION_IMPS)
 
 version_imports: $(VERSION_IMPS) version_ext
 

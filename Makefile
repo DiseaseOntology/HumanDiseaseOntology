@@ -747,20 +747,45 @@ verify-dnc: $(DNC).obo | check_robot build/reports/report.tsv
 
 # Count classes, imports, and logical defs from old and new
 post: build/reports/report-diff.txt \
+      build/reports/doid-diff.tsv \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \
       build/reports/hp-do-overlap.csv
 
-# Get the last build of DO from IRI
-# .PHONY: build/doid-last.owl
-build/doid-last.owl: | check_robot
-	@$(ROBOT) merge \
-	 --input-iri http://purl.obolibrary.org/obo/doid/doid-merged.owl \
-	 --collapse-import-closure true \
-	 --output $@
+# Get the last release of doid-merged.owl, if newer available (always run)
+FORCE:
 
-build/reports/doid-diff.html: build/doid-last.owl $(DM).owl | check_robot build/reports
-	@$(ROBOT) diff --left $< --right $(word 2, $^) --format html --output $@
+build/doid-merged-last.version: FORCE | build
+	@SRC="http://purl.obolibrary.org/obo/doid/doid-merged.owl" ; \
+	 LATEST=$$(curl -sLk $${SRC} | \
+				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
+				sed -E 's/.*"([^"]+)".*/\1/') ; \
+	 if [[ -f $@ && -f $${SRC} ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
+
+build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
+	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
+
+build/reports/doid-diff.tsv: build/doid-merged-last.owl $(DM).owl | check_robot build/reports
+	@$(ROBOT) export \
+	 --input $< \
+	 --header "ID|owl:deprecated|LABEL|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]" \
+	 --export $(addsuffix .tsv,$(basename $<))
+	@$(ROBOT) export \
+	 --input $(word 2, $^) \
+	 --header "ID|owl:deprecated|LABEL|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]" \
+	 --export $(patsubst %.owl,build/%-new.tsv,$(notdir $(word 2, $^)))
+	@python3 src/util/diff-re.py \
+	 -1 $(addsuffix .tsv,$(basename $<)) \
+	 -2 $(patsubst %.owl,build/%-new.tsv,$(notdir $(word 2, $^))) \
+	 -p "DOID" \
+	 -o $@
 	@echo "Generated DOID diff report at $@"
 
 # all report queries

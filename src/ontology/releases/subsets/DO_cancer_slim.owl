@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-02-03/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-03-03/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -211,7 +211,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050523">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_5603"/>
-        <obo:IAO_0000115 xml:lang="en">A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in human T-cell leukemia virus type 1 (Deltaretrovirus priTlym1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:13103</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C91.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:9827/3</oboInOwl:hasDbXref>
@@ -219,6 +219,7 @@
         <oboInOwl:hasDbXref>NCI:C3184</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:77430005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0023493</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">ATLL</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Adult T-cell leukemia/lymphoma (HTLV-1 positive)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">adult T-cell leukemia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -232,9 +233,16 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050523"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in human T-cell leukemia virus type 1 (Deltaretrovirus priTlym1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK558968/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050523"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">ATLL</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 
@@ -2505,7 +2513,7 @@
         <oboInOwl:hasDbXref>NCI:C7572</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ORDO:319319</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_10_01:765095002</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C4049328</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5708330</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">RMC</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">kidney medullary carcinoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">medullary carcinoma of the kidney</oboInOwl:hasExactSynonym>
@@ -3335,12 +3343,13 @@
         <oboInOwl:hasDbXref>NCI:C80346</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ORDO:585948</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">B-ALL with IL3-IGH</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">B-lymphoblastic leukemia/lymphoma with IL3-IGH</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">B-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080648</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
-        <rdfs:label xml:lang="en">B-lymphoblastic leukemia/lymphoma with IL3-IGH</rdfs:label>
+        <rdfs:label xml:lang="en">B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion</rdfs:label>
         <skos:exactMatch>ORDO:585948</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
@@ -4221,6 +4230,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7305"/>
         <obo:IAO_0000115 xml:lang="en">An astroblastoma that is characterized by astroblastoma-like morphology with MN1 rearrangements involving the meningioma 1 (MN1) gene on chromosome 22q.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9430/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5708128</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5708129</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">CNS high-grade neuroepithelial tumors with MN1 alteration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080904</oboInOwl:id>
@@ -4243,6 +4254,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
         <obo:IAO_0000115 xml:lang="en">A central nervous system neuroblastoma that is characterized by FOXR2 activation and that is composed of small, round cells with hyperchromatic nuclei surrounded by a clear halo.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9500/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5670625</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">CNS NB-FOXR2</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">CNS neuroblastoma, FOXR2-activated</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">central nervous system neuroblastoma with FOXR2 activation</oboInOwl:hasExactSynonym>
@@ -4943,6 +4955,9 @@
         <obo:IAO_0000115 xml:lang="en">An acute myeloid leukemia associated with t(8;21)(q22;q22) resulting in RUNX1-RUNX1T1 fusion protein expression. The bone marrow and the peripheral blood show large myeloblasts with abundant basophilic cytoplasm, often containing azurophilic granules.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9896/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C9288</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C1292774</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C2347540</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5707782</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Acute Myeloid Leukemia with t(8;21); (q22; q22.1); RUNX1-RUNX1T1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">acute myeloid leukemia, t(8;21)(q22;q22)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -5431,6 +5446,7 @@
         <obo:IAO_0000115 xml:lang="en">A high grade glioma that is characterized by the absence of histone H3, IDH1, and IDH2 mutations.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9385/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C185467</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5669918</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0081277</oboInOwl:id>
@@ -5454,6 +5470,8 @@
         <obo:IAO_0000115 xml:lang="en">A diffuse astrocytoma that is a diffusely infiltrative astroglial neoplasm composed of monomorphic cells with genetic alterations in MYB or MYBL1.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9421/1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C185196</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5575348</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5575349</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0081279</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
@@ -5816,6 +5834,7 @@
         <obo:IAO_0000115 xml:lang="en">A central nervous system embryonal tumor that is characterized by the presence of uniform oval or spindle-shaped cells with round or oval nuclei, pseudorosette formation, and heterozygous internal tandem duplication in exon 15 of the BCOR gene.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:9500/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C186556</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5670630</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">CNS tumour with BCOR internal tandem duplication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0081315</oboInOwl:id>
@@ -6185,6 +6204,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0081413"/>
         <obo:IAO_0000115 xml:lang="en">A renal cell carcinoma with MiT translocations that is characterized by a TFE3 or TFEB-rearranged renal cell carcinoma that occurs during childhood.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NCI:C189242</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5708328</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0081416</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
@@ -7178,6 +7198,7 @@
         <oboInOwl:hasExactSynonym xml:lang="en">Bourneville&apos;s disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Epiloia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Tuberose sclerosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">Tuberous sclerosis complex</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Tuberous sclerosis syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">cerebral sclerosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -7471,7 +7492,7 @@
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/cancer</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=cancer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/cancer#medicalDictionary</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9792,6 +9813,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3033">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_234"/>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0279640</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C1707436</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Colonic Signet Ring adenocarcinoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:3033</oboInOwl:id>

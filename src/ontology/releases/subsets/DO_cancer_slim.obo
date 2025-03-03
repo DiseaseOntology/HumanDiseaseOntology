@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-02-03/subsets/DO_cancer_slim.obo
-date: 03:02:2025 15:03
+data-version: doid/releases/2025-03-03/subsets/DO_cancer_slim.obo
+date: 03:03:2025 14:42
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -45,13 +45,14 @@ is_a: DOID:0070004 ! myeloid neoplasm
 id: DOID:0050523
 name: adult T-cell leukemia/lymphoma
 namespace: disease_ontology
-def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma]
+def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in human T-cell leukemia virus type 1 (Deltaretrovirus priTlym1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:https\://www.ncbi.nlm.nih.gov/books/NBK558968/]
 subset: DO_cancer_slim
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adult T-cell leukemia" EXACT []
 synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
+synonym: "ATLL" EXACT OMO:0003012 []
 xref: GARD:13103
 xref: ICD10CM:C91.5
 xref: ICDO:9827/3
@@ -1172,7 +1173,7 @@ xref: GARD:13175
 xref: NCI:C7572
 xref: ORDO:319319
 xref: SNOMEDCT_US_2023_10_01:765095002
-xref: UMLS_CUI:C4049328
+xref: UMLS_CUI:C5708330
 is_a: DOID:4450 ! renal cell carcinoma
 property_value: exactMatch "GARD:13175" xsd:string
 property_value: exactMatch "NCI:C7572" xsd:string
@@ -1562,12 +1563,13 @@ property_value: exactMatch "UMLS_CUI:C2698312" xsd:string
 
 [Term]
 id: DOID:0080648
-name: B-lymphoblastic leukemia/lymphoma with IL3-IGH
+name: B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the IL3 gene on chromosome 5 and the IGH locus on chromosome 14, (q31.1;q32.3)." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80346]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "B-ALL with IL3-IGH" EXACT []
+synonym: "B-lymphoblastic leukemia/lymphoma with IL3-IGH" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH" EXACT []
 xref: ICDO:9817/3
 xref: NCI:C80346
@@ -2003,6 +2005,8 @@ def: "An astroblastoma that is characterized by astroblastoma-like morphology wi
 subset: DO_cancer_slim
 synonym: "CNS high-grade neuroepithelial tumors with MN1 alteration" EXACT []
 xref: ICDO:9430/3
+xref: UMLS_CUI:C5708128
+xref: UMLS_CUI:C5708129
 is_a: DOID:7305 ! astroblastoma
 
 [Term]
@@ -2015,6 +2019,7 @@ synonym: "central nervous system neuroblastoma with FOXR2 activation" EXACT []
 synonym: "CNS NB-FOXR2" EXACT OMO:0003012 []
 synonym: "CNS neuroblastoma, FOXR2-activated" EXACT []
 xref: ICDO:9500/3
+xref: UMLS_CUI:C5670625
 is_a: DOID:162 ! cancer
 
 [Term]
@@ -2348,6 +2353,9 @@ synonym: "Acute Myeloid Leukemia with t(8;21); (q22; q22.1); RUNX1-RUNX1T1" EXAC
 synonym: "acute myeloid leukemia, t(8;21)(q22;q22)" EXACT []
 xref: ICDO:9896/3
 xref: NCI:C9288
+xref: UMLS_CUI:C1292774
+xref: UMLS_CUI:C2347540
+xref: UMLS_CUI:C5707782
 is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
@@ -2600,6 +2608,7 @@ subset: NCIthesaurus
 synonym: "diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype" EXACT []
 xref: ICDO:9385/3
 xref: NCI:C185467
+xref: UMLS_CUI:C5669918
 is_a: DOID:3070 ! high grade glioma
 
 [Term]
@@ -2611,6 +2620,8 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9421/1
 xref: NCI:C185196
+xref: UMLS_CUI:C5575348
+xref: UMLS_CUI:C5575349
 is_a: DOID:4857 ! diffuse astrocytoma
 
 [Term]
@@ -2788,6 +2799,7 @@ subset: NCIthesaurus
 synonym: "CNS tumour with BCOR internal tandem duplication" EXACT []
 xref: ICDO:9500/3
 xref: NCI:C186556
+xref: UMLS_CUI:C5670630
 is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
@@ -2975,6 +2987,7 @@ subset: DO_cancer_slim
 subset: DO_childhood_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C189242
+xref: UMLS_CUI:C5708328
 is_a: DOID:0081413 ! renal cell carcinoma with MiT translocations
 
 [Term]
@@ -3581,6 +3594,7 @@ synonym: "Bourneville's disease" EXACT []
 synonym: "cerebral sclerosis" EXACT []
 synonym: "Epiloia" EXACT []
 synonym: "Tuberose sclerosis" EXACT []
+synonym: "Tuberous sclerosis complex" EXACT []
 synonym: "Tuberous sclerosis syndrome" EXACT []
 xref: GARD:7830
 xref: ICD10CM:Q85.1
@@ -3739,7 +3753,7 @@ is_a: DOID:162 ! cancer
 id: DOID:162
 name: cancer
 namespace: disease_ontology
-def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
+def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:https\://www.merriam-webster.com/dictionary/cancer#medicalDictionary]
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_cancer_slim
@@ -5196,6 +5210,8 @@ name: colon signet ring adenocarcinoma
 namespace: disease_ontology
 subset: DO_cancer_slim
 synonym: "Colonic Signet Ring adenocarcinoma" EXACT []
+xref: UMLS_CUI:C0279640
+xref: UMLS_CUI:C1707436
 is_a: DOID:234 ! colon adenocarcinoma
 
 [Term]

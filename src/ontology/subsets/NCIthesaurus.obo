@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-02-03/subsets/NCIthesaurus.obo
-date: 03:02:2025 15:03
+data-version: doid/releases/2025-03-03/subsets/NCIthesaurus.obo
+date: 03:03:2025 14:42
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -26,7 +26,7 @@ is_a: DOID:175 ! vascular cancer
 id: DOID:0014667
 name: disease of metabolism
 namespace: disease_ontology
-def: "A disease that involving errors in metabolic processes of building or degradation of molecules." [url:http\://www.ncbi.nlm.nih.gov/books/NBK22259/]
+def: "A disease that involves errors in metabolic processes of building or degradation of molecules." [url:http\://www.ncbi.nlm.nih.gov/books/NBK22259/]
 subset: DO_AGR_slim
 subset: DO_CFDE_slim
 subset: DO_GXD_slim
@@ -232,7 +232,7 @@ is_a: DOID:1459 ! hypothyroidism
 id: DOID:0050424
 name: familial adenomatous polyposis
 namespace: disease_ontology
-def: "An intestinal disease that has_material_basis_in mutations in the APC gene and involves formation of numerous polyps in the epithelium of the large intestine which are initially benign and later transform into colon cancer." [url:http\://en.wikipedia.org/wiki/Familial_adenomatous_polyposis, url:http\://www.omim.org/entry/175100?search=adenomatous%20polyposis]
+def: "An intestinal disease that is characterized by predisposition to colon cancer." [url:http\://en.wikipedia.org/wiki/Familial_adenomatous_polyposis, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8256374/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1345/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -566,15 +566,17 @@ is_a: DOID:906 ! peroxisomal disease
 
 [Term]
 id: DOID:0050445
-name: X-linked dominant hypophosphatemic rickets
+name: X-linked hypophosphatemic rickets
 namespace: disease_ontology
-def: "A rickets has_material_basis_in X-linked mutations in the PHEX gene that lead to increased circulating levels of FGF-23, a phosphate-regulating hormone (phosphatonin), that leads to reduced renal phosphate reabsorption and consequently abnormal bone mineralization." [url:http\://en.wikipedia.org/wiki/X-linked_hypophosphatemia, url:https\://rarediseases.info.nih.gov/diseases/12943/x-linked-hypophosphatemia]
+def: "A rickets that has_material_basis_in X-linked mutations in the PHEX gene that lead to increased circulating levels of FGF-23, a phosphate-regulating hormone (phosphatonin), that leads to reduced renal phosphate reabsorption and consequently abnormal bone mineralization." [url:http\://en.wikipedia.org/wiki/X-linked_hypophosphatemia, url:https\://www.ncbi.nlm.nih.gov/books/NBK83985/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Hypophosphatemia, Vitamin D-Resistant Rickets" EXACT []
 synonym: "hypophosphatemic rickets X-linked dominant" EXACT []
 synonym: "Vitamin D-Resistant Rickets, X-Linked" EXACT []
+synonym: "X-linked dominant hypophosphatemic rickets" EXACT []
 synonym: "X-linked hypophosphatemia" EXACT []
+xref: GARD:12943
 xref: MESH:D053098
 xref: MIM:307800
 xref: NCI:C85234
@@ -1119,13 +1121,14 @@ is_a: DOID:37 ! skin disease
 id: DOID:0050523
 name: adult T-cell leukemia/lymphoma
 namespace: disease_ontology
-def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in Human T-lymphotropic virus 1 (HTLV-1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma]
+def: "A T-cell acute leukemia that results_in abnormal increase of lymphocytes, derives_from T-cells, has_material_basis_in human T-cell leukemia virus type 1 (Deltaretrovirus priTlym1), which is transmitted_by sexual contact, transmitted_by contaminated needles used by intravenous-drug users, and transmitted_by breast feeding. The infection results_in_formation_of skin lesions." [url:http\://en.wikipedia.org/wiki/Adult_T-cell_leukemia/lymphoma, url:https\://www.ncbi.nlm.nih.gov/books/NBK558968/]
 subset: DO_cancer_slim
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "adult T-cell leukemia" EXACT []
 synonym: "Adult T-cell leukemia/lymphoma (HTLV-1 positive)" EXACT []
+synonym: "ATLL" EXACT OMO:0003012 []
 xref: GARD:13103
 xref: ICD10CM:C91.5
 xref: ICDO:9827/3
@@ -2432,8 +2435,7 @@ subset: NCIthesaurus
 synonym: "acrocephalopolysyndactyly type II" EXACT []
 xref: GARD:6003
 xref: MESH:C563187
-xref: MIM:201000
-xref: MIM:614976
+xref: MIM:PS201000
 xref: NCI:C98873
 xref: ORDO:65759
 xref: SNOMEDCT_US_2023_03_01:403767009
@@ -4507,7 +4509,7 @@ xref: GARD:13175
 xref: NCI:C7572
 xref: ORDO:319319
 xref: SNOMEDCT_US_2023_10_01:765095002
-xref: UMLS_CUI:C4049328
+xref: UMLS_CUI:C5708330
 is_a: DOID:4450 ! renal cell carcinoma
 property_value: exactMatch "GARD:13175" xsd:string
 property_value: exactMatch "NCI:C7572" xsd:string
@@ -5242,7 +5244,7 @@ property_value: exactMatch "UMLS_CUI:C0272236" xsd:string
 id: DOID:0080600
 name: COVID-19
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2." [url:https\://www.cdc.gov/coronavirus/2019-ncov/about/index.html, url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=32007143, url:https\://www.ncbi.nlm.nih.gov/pubmed/?term=32007145, url:https\://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049, url:https\://www.who.int/emergencies/diseases/novel-coronavirus-2019]
+def: "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2, a subtype of Betacoronavirus pandemicum." [url:https\://pubmed.ncbi.nlm.nih.gov/32007143/, url:https\://pubmed.ncbi.nlm.nih.gov/32007145/, url:https\://www.cdc.gov/covid/about/, url:https\://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049, url:https\://www.who.int/emergencies/diseases/novel-coronavirus-2019]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "2019 Novel Coronavirus (2019-nCoV)" EXACT []
@@ -5409,12 +5411,13 @@ property_value: exactMatch "UMLS_CUI:C2698312" xsd:string
 
 [Term]
 id: DOID:0080648
-name: B-lymphoblastic leukemia/lymphoma with IL3-IGH
+name: B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the IL3 gene on chromosome 5 and the IGH locus on chromosome 14, (q31.1;q32.3)." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80346]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "B-ALL with IL3-IGH" EXACT []
+synonym: "B-lymphoblastic leukemia/lymphoma with IL3-IGH" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH" EXACT []
 xref: ICDO:9817/3
 xref: NCI:C80346
@@ -6131,6 +6134,7 @@ subset: NCIthesaurus
 synonym: "Mixed Phenotype Acute Leukemia with t(v;11q23.3); MLL Rearranged" EXACT []
 xref: ICDO:9807/3
 xref: NCI:C82203
+xref: UMLS_CUI:C2826048
 is_a: DOID:9953 ! acute biphenotypic leukemia
 
 [Term]
@@ -6192,6 +6196,7 @@ subset: NCIthesaurus
 synonym: "cutaneous gamma/delta T-cell lymphoma" EXACT []
 synonym: "Primary Cutaneous Gamma-Delta T Cell Lymphomas" EXACT []
 xref: NCI:C45340
+xref: UMLS_CUI:C1707547
 is_a: DOID:0060061 ! primary cutaneous T-cell non-Hodgkin lymphoma
 
 [Term]
@@ -6419,6 +6424,9 @@ synonym: "Acute Myeloid Leukemia with t(8;21); (q22; q22.1); RUNX1-RUNX1T1" EXAC
 synonym: "acute myeloid leukemia, t(8;21)(q22;q22)" EXACT []
 xref: ICDO:9896/3
 xref: NCI:C9288
+xref: UMLS_CUI:C1292774
+xref: UMLS_CUI:C2347540
+xref: UMLS_CUI:C5707782
 is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
@@ -6672,6 +6680,7 @@ subset: NCIthesaurus
 synonym: "diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype" EXACT []
 xref: ICDO:9385/3
 xref: NCI:C185467
+xref: UMLS_CUI:C5669918
 is_a: DOID:3070 ! high grade glioma
 
 [Term]
@@ -6694,6 +6703,8 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9421/1
 xref: NCI:C185196
+xref: UMLS_CUI:C5575348
+xref: UMLS_CUI:C5575349
 is_a: DOID:4857 ! diffuse astrocytoma
 
 [Term]
@@ -6810,6 +6821,7 @@ synonym: "Massively Calcified Low Grade Glioma" EXACT []
 synonym: "Polymorphous low-grade neuroepithelial tumour of the young" EXACT []
 xref: ICDO:9413/0
 xref: NCI:C180378
+xref: UMLS_CUI:C5556330
 is_a: DOID:0060085 ! organ system benign neoplasm
 
 [Term]
@@ -6906,6 +6918,7 @@ subset: NCIthesaurus
 synonym: "CNS tumour with BCOR internal tandem duplication" EXACT []
 xref: ICDO:9500/3
 xref: NCI:C186556
+xref: UMLS_CUI:C5670630
 is_a: DOID:0060103 ! central nervous system embryonal tumor
 
 [Term]
@@ -7114,6 +7127,7 @@ subset: DO_cancer_slim
 subset: DO_childhood_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C189242
+xref: UMLS_CUI:C5708328
 is_a: DOID:0081413 ! renal cell carcinoma with MiT translocations
 
 [Term]
@@ -9233,7 +9247,7 @@ is_a: DOID:612 ! primary immunodeficiency disease
 id: DOID:0111967
 name: immunodeficiency 54
 namespace: disease_ontology
-def: "An NK cell deficiency characterized by severe intra- and extrauterine growth retardation, microcephaly, decreased numbers of CD56(dim) natural killer cells, adrenal insufficiency, and recurrent viral infections that has_material_basis_in homozygous or compound heterozygous mutation in the MCM4 gene on chromosome 8q11.21." [url:https\://pubmed.ncbi.nlm.nih.gov/16532402/, url:https\://pubmed.ncbi.nlm.nih.gov/22354167/]
+def: "A NK cell deficiency characterized by severe intra- and extrauterine growth retardation, microcephaly, decreased numbers of CD56(dim) natural killer cells, adrenal insufficiency, and recurrent viral infections that has_material_basis_in homozygous or compound heterozygous mutation in the MCM4 gene on chromosome 8q11.21." [url:https\://pubmed.ncbi.nlm.nih.gov/16532402/, url:https\://pubmed.ncbi.nlm.nih.gov/22354167/]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "familial isolated natural killer cell deficiency" EXACT []
@@ -11037,7 +11051,7 @@ name: tonsillitis
 namespace: disease_ontology
 alt_id: DOID:10454
 alt_id: DOID:13751
-def: "An upper respiratory tract disease which is characterized by inflammation of the tonsils resulting from bacterial (Group A streptococcus) and viral (Epstein-Barr virus, adenovirus) infections. Symptoms include a severe sore throat, painful or difficult swallowing, coughing, headache, myalgia, fever and chills." [url:http\://en.wikipedia.org/wiki/Tonsillitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tonsillitis]
+def: "An upper respiratory tract disease which is characterized by inflammation of the tonsils resulting from bacterial (Group A streptococcus) and viral (Epstein-Barr virus, adenovirus) infections. Symptoms include a severe sore throat, painful or difficult swallowing, coughing, headache, myalgia, fever and chills." [url:http\://en.wikipedia.org/wiki/Tonsillitis, url:https\://www.merriam-webster.com/dictionary/tonsillitis#medicalDictionary]
 subset: NCIthesaurus
 synonym: "chronic tonsillitis" EXACT []
 synonym: "Throat infection - tonsillitis" EXACT []
@@ -11090,7 +11104,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:10459
 name: common cold
 namespace: disease_ontology
-def: "An upper respiratory tract disease which involves inflammation of the mucous membranes of the nose, throat, eyes, and eustachian tubes with watery then purulent discharge. This is an acute contagious disease caused by rhinoviruses, human parainfluenza viruses, human respiratory syncytial virus, influenza viruses, adenoviruses, enteroviruses, or metapneumovirus." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=common%20cold, url:https\://medlineplus.gov/commoncold.html]
+def: "An upper respiratory tract disease which involves inflammation of the mucous membranes of the nose, throat, eyes, and eustachian tubes with watery then purulent discharge. This is an acute contagious disease caused by rhinoviruses, human parainfluenza viruses, human respiratory syncytial virus, influenza viruses, adenoviruses, enteroviruses, or metapneumovirus." [url:https\://medlineplus.gov/commoncold.html, url:https\://www.merriam-webster.com/dictionary/common%20cold#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "acute coryza" EXACT []
@@ -11674,7 +11688,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:1060
 name: Hartnup disease
 namespace: disease_ontology
-def: "An amino acid metabolic disorder that is caused by abnormalities of the renal tubules and is characterized especially by aminoaciduria involving only monocarboxylic monoamines, a dry red scaly rash, and episodic muscular incoordination due to the effects of the disease on the cerebellum." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Hartnup]
+def: "An amino acid metabolic disorder that is caused by abnormalities of the renal tubules and is characterized especially by aminoaciduria involving only monocarboxylic monoamines, a dry red scaly rash, and episodic muscular incoordination due to the effects of the disease on the cerebellum." [url:https\://www.merriam-webster.com/medical/Hartnup]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -12626,7 +12640,7 @@ is_a: DOID:150 ! disease of mental health
 id: DOID:10843
 name: Western equine encephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in brain of horses and humans, has_material_basis_in Western equine encephalomyelitis virus, which is transmitted_by Culex and transmitted_by Aedes species of mosquitoes. The infection has_symptom fever, has_symptom headache, has_symptom nausea, has_symptom vomiting, has_symptom anorexia, has_symptom malaise, has_symptom altered mental status, and has_symptom weakness." [url:http\://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm]
+def: "A viral infectious disease that results_in inflammation located_in brain of horses and humans, has_material_basis_in Western equine encephalomyelitis virus (Alphavirus western), which is transmitted_by Culex and transmitted_by Aedes species of mosquitoes. The infection has_symptom fever, has_symptom headache, has_symptom nausea, has_symptom vomiting, has_symptom anorexia, has_symptom malaise, has_symptom altered mental status, and has_symptom weakness." [url:https\://www.cdc.gov/wee/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK470228/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -12645,7 +12659,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:10844
 name: Japanese encephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection located_in brain, has_material_basis_in Japanese encephalitis virus, which is transmitted_by Culex tritaeniorhynchus mosquito bite. The infection has_symptom headache, has_symptom high fever, has_symptom neck stiffness, has_symptom stupor, has_symptom disorientation, has_symptom coma, has_symptom tremors, has_symptom convulsions, and has_symptom spastic paralysis." [url:http\://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm, url:http\://www.cdc.gov/ncidod/dvbid/jencephalitis/qa.htm]
+def: "A viral infectious disease that results_in infection located_in brain, has_material_basis_in Japanese encephalitis virus (Orthoflavivirus japonicum), which is transmitted_by Culex tritaeniorhynchus mosquito bite. The infection has_symptom headache, has_symptom high fever, has_symptom neck stiffness, has_symptom stupor, has_symptom disorientation, has_symptom coma, has_symptom tremors, has_symptom convulsions, and has_symptom spastic paralysis." [url:https\://www.cdc.gov/japanese-encephalitis/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK470423/, url:https\://www.who.int/news-room/fact-sheets/detail/japanese-encephalitis]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -12752,9 +12766,10 @@ is_a: DOID:4448 ! macular degeneration
 id: DOID:10881
 name: hand, foot and mouth disease
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human coxsackievirus A16 or has_material_basis_in Human enterovirus 71, which are transmitted_by contaminated fomites, and transmitted_by contact with nose and throat secretions, saliva, blister fluid and stool of infected persons. The infection has_symptom fever, has_symptom poor appetite, has_symptom malaise, has_symptom sore throat, has_symptom painful sores in the mouth, and has_symptom skin rash on the palms of the hands and soles of the feet." [url:http\://www.cdc.gov/ncidod/dvrd/revb/enterovirus/hfhf.htm]
+def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Enterovirus A (Enterovirus alphacoxsackie), which are transmitted_by contaminated fomites, and transmitted_by contact with nose and throat secretions, saliva, blister fluid and stool of infected persons. The infection has_symptom fever, has_symptom poor appetite, has_symptom malaise, has_symptom sore throat, has_symptom painful sores in the mouth, and has_symptom skin rash on the palms of the hands and soles of the feet." [url:https\://www.cdc.gov/hand-foot-mouth/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK431082/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
+synonym: "HFMD" EXACT OMO:0003012 []
 synonym: "Vesicular stomatitis and exanthem" EXACT []
 xref: ICD10CM:B08.4
 xref: ICD9CM:074.3
@@ -13698,26 +13713,41 @@ is_a: DOID:5330 ! dental pulp disease
 
 [Term]
 id: DOID:11123
-name: Henoch-Schoenlein purpura
+name: IgA vasculitis
 namespace: disease_ontology
 def: "A hypersensitivity vasculitis that is characterized by purpura (purplish plaques), arthralgia, gastrointestinal upset, and/or glomerulonephritis, and may be related to increased immune response following an infection." [url:https\://rarediseases.info.nih.gov/diseases/8204/henoch-schonlein-purpura]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Allergic purpura" EXACT []
 synonym: "Autoimmune purpura" EXACT []
-synonym: "Henoch-Sch?nlein purpura" EXACT []
-synonym: "Henoch-Sch@nlein purpura" EXACT []
+synonym: "Henoch Schoenlein purpura" EXACT []
+synonym: "Henoch Scholein purpura" EXACT []
+synonym: "Henoch Schonlein purpura" EXACT []
+synonym: "Henoch Schönlein purpura" EXACT []
+synonym: "Henoch-Schoenlein purpura" EXACT []
 synonym: "Henoch-Scholein purpura" EXACT []
-synonym: "Henoch-Schonlein Purpura" EXACT []
+synonym: "Henoch-Schonlein purpura" EXACT []
+synonym: "Henoch-Schönlein purpura" EXACT []
+synonym: "HSP" EXACT OMO:0003012 []
+synonym: "IgAV" EXACT OMO:0003012 []
+synonym: "immunoglobulin A vasculitis" EXACT []
 synonym: "Purpura, autoimmune" EXACT []
 xref: GARD:8204
 xref: ICD10CM:D69.0
 xref: ICD9CM:287.0
 xref: MESH:D011695
 xref: NCI:C34963
+xref: ORDO:761
 xref: SNOMEDCT_US_2023_03_01:191306005
 xref: UMLS_CUI:C0034152
 is_a: DOID:9809 ! hypersensitivity vasculitis
+property_value: exactMatch "GARD:8204" xsd:string
+property_value: exactMatch "ICD10CM:D69.0" xsd:string
+property_value: exactMatch "ICD9CM:287.0" xsd:string
+property_value: exactMatch "MESH:D011695" xsd:string
+property_value: exactMatch "NCI:C34963" xsd:string
+property_value: exactMatch "ORDO:761" xsd:string
+property_value: exactMatch "UMLS_CUI:C0034152" xsd:string
 
 [Term]
 id: DOID:11130
@@ -14107,7 +14137,7 @@ is_a: DOID:6195 ! conjunctivitis
 id: DOID:11227
 name: acute hemorrhagic conjunctivitis
 namespace: disease_ontology
-def: "A viral infectious disease that results in inflammation located in conjunctiva, has_material_basis_in Human coxsackievirus A24 or has_material_basis_in Human enterovirus 70, which are transmitted by contaminated fomites or transmitted by contact with contaminated hands. The infection has symptom vascular dilation, has symptom eyelid edema, has symptom photophobia, has symptom redness of the eyes, has symptom watering of the eye, has symptom conjunctival congestion, and has symptom superficial punctate epithelial keratitis." [url:https\://en.wikipedia.org/wiki/Acute_hemorrhagic_conjunctivitis]
+def: "A viral infectious disease that results in inflammation located in conjunctiva, has_material_basis_in Human coxsackievirus A24 (Enterovirus coxsackiepol) or has_material_basis_in Human enterovirus 70 (Enterovirus deconjuncti), which are transmitted by contaminated fomites or transmitted by contact with contaminated hands. The infection has symptom vascular dilation, has symptom eyelid edema, has symptom photophobia, has symptom redness of the eyes, has symptom watering of the eye, has symptom conjunctival congestion, and has symptom superficial punctate epithelial keratitis." [url:https\://en.wikipedia.org/wiki/Acute_hemorrhagic_conjunctivitis]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Apollo disease" EXACT []
@@ -14508,7 +14538,7 @@ is_a: DOID:1561 ! cognitive disorder
 id: DOID:11329
 name: ainhum
 namespace: disease_ontology
-def: "A connective tissue disease that results in increasing fibrous constriction and ultimately in spontaneous amputation of the toes and especially the little toes. A painful constriction of the base of the fifth toe frequently followed by bilateral spontaneous amputation (autoamputation) a few years later." [url:http\://en.wikipedia.org/wiki/Ainhum, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=ainhum]
+def: "A connective tissue disease that results in increasing fibrous constriction and ultimately in spontaneous amputation of the toes and especially the little toes. A painful constriction of the base of the fifth toe frequently followed by bilateral spontaneous amputation (autoamputation) a few years later." [url:http\://en.wikipedia.org/wiki/Ainhum, url:https\://www.merriam-webster.com/medical/ainhum]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -14568,7 +14598,7 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:11339
 name: pneumocystosis
 namespace: disease_ontology
-def: "An opportunistic mycosis that is located in lungs, but can also occur in eyes, ears, skin, thyroid, pituitary, palate, parathyroid, esophagus, pleura, heart, liver, spleen, small intestine, adrenals, kidneys, bone marrow, and lymph nodes, has_material_basis_in Pneumocystis jirovecii that effects interstitial and alveolar tissues and has symptom nonproductive cough, has symptom shortness of breath, and has symptom fever." [url:http\://www.nlm.nih.gov/medlineplus/ency/article/000671.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=pneumocystis%20carinii%20pneumonia]
+def: "An opportunistic mycosis that is located in lungs, but can also occur in eyes, ears, skin, thyroid, pituitary, palate, parathyroid, esophagus, pleura, heart, liver, spleen, small intestine, adrenals, kidneys, bone marrow, and lymph nodes, has_material_basis_in Pneumocystis jirovecii that effects interstitial and alveolar tissues and has symptom nonproductive cough, has symptom shortness of breath, and has symptom fever." [url:http\://www.nlm.nih.gov/medlineplus/ency/article/000671.htm, url:https\://www.merriam-webster.com/dictionary/Pneumocystis%20carinii%20pneumonia#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -14758,7 +14788,7 @@ is_a: DOID:93 ! language disorder
 id: DOID:11394
 name: adult respiratory distress syndrome
 namespace: disease_ontology
-def: "A respiratory failure that results from diffuse injury to the endothelium of the lung (as in sepsis, chest trauma, massive blood transfusion, aspiration of the gastric contents, or pneumonia) and is characterized by pulmonary edema with an abnormally high amount of protein in the edematous fluid and by difficult rapid breathing and hypoxemia." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=adult+respiratory+distress+syndrome, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5392788/]
+def: "A respiratory failure that results from diffuse injury to the endothelium of the lung (as in sepsis, chest trauma, massive blood transfusion, aspiration of the gastric contents, or pneumonia) and is characterized by pulmonary edema with an abnormally high amount of protein in the edematous fluid and by difficult rapid breathing and hypoxemia." [url:https\://www.merriam-webster.com/dictionary/adult%20respiratory%20distress%20syndrome#medicalDictionary, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5392788/]
 comment: PRISM.
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -15149,7 +15179,7 @@ is_a: DOID:4677 ! keratitis
 id: DOID:11549
 name: Adie syndrome
 namespace: disease_ontology
-def: "A syndrome that is a neurological disorder affecting the pupil of the eye and the autonomic nervous system. It is characterized by one eye with a pupil that is larger than normal and constricts slowly in bright light (tonic pupil), along with the absence of deep tendon reflexes, usually in the Achilles tendon." [url:http\://en.wikipedia.org/wiki/Adie_syndrome, url:http\://www.ninds.nih.gov/disorders/holmes_adie/holmes_adie.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Adie's%20syndrome]
+def: "A syndrome that is a neurological disorder affecting the pupil of the eye and the autonomic nervous system. It is characterized by one eye with a pupil that is larger than normal and constricts slowly in bright light (tonic pupil), along with the absence of deep tendon reflexes, usually in the Achilles tendon." [url:http\://en.wikipedia.org/wiki/Adie_syndrome, url:http\://www.ninds.nih.gov/disorders/holmes_adie/holmes_adie.htm, url:https\://www.merriam-webster.com/medical/Adie's%20syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -15684,13 +15714,13 @@ is_a: DOID:4194 ! glucose metabolism disease
 
 [Term]
 id: DOID:11717
-name: neonatal diabetes
+name: neonatal diabetes mellitus
 namespace: disease_ontology
 def: "A diabetes mellitus that is characterized by hyperglycemia occurring within the first 6 months of life." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5928785/]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "diabetes mellitus syndrome in newborn infant" EXACT []
-synonym: "neonatal diabetes mellitus" EXACT []
+synonym: "neonatal diabetes" EXACT []
 xref: ICD10CM:P70.2
 xref: ICD9CM:775.1
 xref: NCI:C99248
@@ -17044,7 +17074,7 @@ id: DOID:12205
 name: dengue disease
 namespace: disease_ontology
 alt_id: DOID:0050142
-def: "A viral infectious disease that results in infection, has_material_basis_in Dengue virus [NCBITaxon:12637] with four serotypes (Dengue virus 1, 2, 3 and 4), which are transmitted by Aedes mosquito bite. The infection has symptom fever, has symptom severe headache, has symptom severe pain behind the eyes, has symptom joint pain, has symptom muscle and bone pain, has symptom rash, and has symptom mild bleeding." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=dengue, url:https\://www.cdc.gov/dengue/about/index.html]
+def: "A viral infectious disease that results in infection, has_material_basis_in Dengue virus (Orthoflavivirus denguei), which are transmitted by Aedes mosquito bite. The infection has symptom fever, has symptom severe headache, has symptom severe pain behind the eyes, has symptom joint pain, has symptom muscle and bone pain, has symptom rash, and has symptom mild bleeding." [url:https\://www.cdc.gov/dengue/about/index.html, url:https\://www.merriam-webster.com/dictionary/dengue#medicalDictionary, url:https\://www.ncbi.nlm.nih.gov/books/NBK430732/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -17066,7 +17096,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:12206
 name: dengue hemorrhagic fever
 namespace: disease_ontology
-def: "A dengue disease that occurs when a person experiences a second infection with a heterologous Dengue virus serotype, which is transmitted_by Aedes mosquito bite. The infection has_symptom hemorrhagic lesions of the skin, has_symptom thrombocytopenia, has_symptom reduction in the fluid part of the blood, and has_symptom high fever." [url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC88892/pdf/cm000480.pdf, url:http\://www.nlm.nih.gov/MEDLINEPLUS/ency/article/001373.htm, url:http\://www.who.int/mediacentre/factsheets/fs117/en/, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=dengue%20hemorrhagic%20fever]
+def: "A dengue disease that occurs when a person experiences a second infection with a heterologous Dengue virus (Orthoflavivirus denguei) serotype, which is transmitted_by Aedes mosquito bite. The infection has_symptom hemorrhagic lesions of the skin, has_symptom thrombocytopenia, has_symptom reduction in the fluid part of the blood, and has_symptom high fever. Four distinct Dengue virus serotypes have been identified." [url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC88892/pdf/cm000480.pdf, url:http\://www.nlm.nih.gov/MEDLINEPLUS/ency/article/001373.htm, url:https\://www.merriam-webster.com/medical/dengue%20hemorrhagic%20fever]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -17578,7 +17608,7 @@ id: DOID:12365
 name: malaria
 namespace: disease_ontology
 alt_id: DOID:12552
-def: "A parasitic protozoa infectious disease characterized as a vector-borne infectious disease caused by the presence of protozoan parasites of the genus Plasmodium in the red blood cells, transmitted from an infected to an uninfected individual by the bite of anopheline mosquitoes, and characterized by periodic attacks of chills and fever that coincide with mass destruction of blood cells and the release of toxic substances by the parasite at the end of each reproductive cycle." [url:http\://en.wikipedia.org/wiki/Malaria, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=malaria]
+def: "A parasitic protozoa infectious disease characterized as a vector-borne infectious disease caused by the presence of protozoan parasites of the genus Plasmodium in the red blood cells, transmitted from an infected to an uninfected individual by the bite of anopheline mosquitoes, and characterized by periodic attacks of chills and fever that coincide with mass destruction of blood cells and the release of toxic substances by the parasite at the end of each reproductive cycle." [url:http\://en.wikipedia.org/wiki/Malaria, url:https\://www.merriam-webster.com/dictionary/malaria#medicalDictionary]
 comment: Xref MGI.
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
@@ -17599,7 +17629,7 @@ is_a: DOID:2789 ! parasitic protozoa infectious disease
 id: DOID:12375
 name: bronchopneumonia
 namespace: disease_ontology
-def: "A pneumonia involving inflammation of lungs that begins in the terminal bronchioles, which become clogged with thick mucus that forms consolidated patches in adjacent lobules. It is caused by bacteria and viruses." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=bronchopneumonia]
+def: "A pneumonia involving inflammation of lungs that begins in the terminal bronchioles, which become clogged with thick mucus that forms consolidated patches in adjacent lobules. It is caused by bacteria and viruses." [url:https\://www.merriam-webster.com/dictionary/bronchopneumonia#medicalDictionary]
 subset: NCIthesaurus
 synonym: "bronchial pneumonia" EXACT []
 synonym: "Chest infection - bronchopneumonia" EXACT []
@@ -18062,7 +18092,7 @@ id: DOID:12549
 name: hepatitis A
 namespace: disease_ontology
 alt_id: DOID:12547
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus, which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-a/]
+def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-a/, url:https\://www.ncbi.nlm.nih.gov/books/NBK459290/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Viral hepatitis A" RELATED []
@@ -18684,7 +18714,7 @@ id: DOID:12798
 name: mucopolysaccharidosis
 namespace: disease_ontology
 alt_id: DOID:14716
-def: "A lysosomal storage disease that involves the accumulation of glycosaminoglycans in the tissues and their excretion in the urine." [url:http\://en.wikipedia.org/wiki/Mucopolysaccharidosis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Mucopolysaccharidosis]
+def: "A lysosomal storage disease that involves the accumulation of glycosaminoglycans in the tissues and their excretion in the urine." [url:http\://en.wikipedia.org/wiki/Mucopolysaccharidosis, url:https\://www.merriam-webster.com/medical/mucopolysaccharidosis#medicalDictionary]
 comment: Xref MGI. OMIM mapping submitted by NeuroDevNet. [LS].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -18789,15 +18819,16 @@ is_a: DOID:12798 ! mucopolysaccharidosis
 
 [Term]
 id: DOID:12803
-name: Sly syndrome
+name: mucopolysaccharidosis type VII
 namespace: disease_ontology
-def: "A mucopolysaccharidosis characterized by a deficiency of the lysosomal enzyme beta-glucuronidase resulting in the inability to degrade glucuronic acid-containing glycosaminoglycans." [url:http\://en.wikipedia.org/wiki/Mucopolysaccharidosis_VII, url:http\://omim.org/entry/253220]
+def: "A mucopolysaccharidosis characterized by a deficiency of the lysosomal enzyme beta-glucuronidase resulting in the inability to degrade glucuronic acid-containing glycosaminoglycans." [url:http\://en.wikipedia.org/wiki/Mucopolysaccharidosis_VII, url:https\://www.ncbi.nlm.nih.gov/books/NBK598990/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "beta-glucuronidase deficiency" EXACT []
 synonym: "deficiency of beta-glucuronidase" EXACT []
 synonym: "MPS VII - Sly syndrome" EXACT []
 synonym: "mucopolysaccharidosis VII" EXACT []
+synonym: "Sly syndrome" EXACT []
 xref: ICD10CM:E76.29
 xref: MESH:D016538
 xref: MIM:253220
@@ -19290,7 +19321,7 @@ is_a: DOID:589 ! congenital hemolytic anemia
 id: DOID:12978
 name: Plasmodium vivax malaria
 namespace: disease_ontology
-def: "A malaria that is caused by the protozoan parasite Plasmodium vivax, which induces paroxysms at 48-hour intervals." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=vivax+malaria]
+def: "A malaria that is caused by the protozoan parasite Plasmodium vivax, which induces paroxysms at 48-hour intervals." [url:https\://www.merriam-webster.com/dictionary/vivax%20malaria#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Malaria by Plasmodium vivax" EXACT []
@@ -20188,7 +20219,7 @@ is_a: DOID:0060085 ! organ system benign neoplasm
 id: DOID:13300
 name: Scheuermann's disease
 namespace: disease_ontology
-def: "An osteochondrosis that results_in abnormal bone growth and curvature located_in thoracic vertebral column." [url:http\://en.wikipedia.org/wiki/Scheuermann%27s_disease, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Scheuermann%27s%20disease]
+def: "An osteochondrosis that results_in abnormal bone growth and curvature located_in thoracic vertebral column." [url:http\://en.wikipedia.org/wiki/Scheuermann%27s_disease, url:https\://www.merriam-webster.com/medical/Scheuermann%27s%20disease]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -20900,6 +20931,7 @@ synonym: "Bourneville's disease" EXACT []
 synonym: "cerebral sclerosis" EXACT []
 synonym: "Epiloia" EXACT []
 synonym: "Tuberose sclerosis" EXACT []
+synonym: "Tuberous sclerosis complex" EXACT []
 synonym: "Tuberous sclerosis syndrome" EXACT []
 xref: GARD:7830
 xref: ICD10CM:Q85.1
@@ -22475,7 +22507,7 @@ is_a: DOID:4781 ! diffuse glomerulonephritis
 id: DOID:14067
 name: Plasmodium falciparum malaria
 namespace: disease_ontology
-def: "A malaria described as a severe form of the disease caused by a parasite Plasmodium falciparum, which is marked by irrregular recurrence of paroxysms and prolonged or continuous fever." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=falciparum+malaria]
+def: "A malaria described as a severe form of the disease caused by a parasite Plasmodium falciparum, which is marked by irrregular recurrence of paroxysms and prolonged or continuous fever." [url:https\://www.merriam-webster.com/dictionary/falciparum%20malaria#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "falciparum malaria" EXACT []
@@ -22493,7 +22525,7 @@ is_a: DOID:12365 ! malaria
 id: DOID:14068
 name: blackwater fever
 namespace: disease_ontology
-def: "A malaria that presents as a rare febrile complication of repeated malarial attacks characterized by intravascular haemolysis, haemoglobinuria and kidney failure, resulting from destruction of red blood cells caused by heavy parasitization with Plasmodium falciparum or Plasmodium vivax." [url:http\://en.wikipedia.org/wiki/Blackwater_fever, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=blackwater%20fever]
+def: "A malaria that presents as a rare febrile complication of repeated malarial attacks characterized by intravascular haemolysis, haemoglobinuria and kidney failure, resulting from destruction of red blood cells caused by heavy parasitization with Plasmodium falciparum or Plasmodium vivax." [url:http\://en.wikipedia.org/wiki/Blackwater_fever, url:https\://www.merriam-webster.com/dictionary/blackwater%20fever#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Black water fever" EXACT []
@@ -23318,7 +23350,7 @@ is_a: DOID:2059 ! vulvar disease
 id: DOID:14305
 name: tuberculous empyema
 namespace: disease_ontology
-def: "A pleural empyema which involves presence of pus in the pleural cavity and calcified visceral pleura. It results from a large number of mycobacteria spilling into the pleural space, usually from rupture of a cavity or an adjacent paranchymal focus via a bronchopleural fistula." [url:http\://erj.ersjournals.com/cgi/reprint/10/4/942, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=empyema]
+def: "A pleural empyema which involves presence of pus in the pleural cavity and calcified visceral pleura. It results from a large number of mycobacteria spilling into the pleural space, usually from rupture of a cavity or an adjacent paranchymal focus via a bronchopleural fistula." [url:http\://erj.ersjournals.com/cgi/reprint/10/4/942, url:https\://www.merriam-webster.com/dictionary/empyema#medicalDictionary]
 subset: NCIthesaurus
 xref: MESH:D004654
 xref: NCI:C34575
@@ -23376,7 +23408,7 @@ property_value: exactMatch "MESH:D008382" xsd:string
 id: DOID:14324
 name: Plasmodium malariae malaria
 namespace: disease_ontology
-def: "A malaria caused by a parasite Plasmodium malariae, which is marked by recurrence of paroxysms at 72-hour intervals." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=malariae%20malaria]
+def: "A malaria caused by a parasite Plasmodium malariae, which is marked by recurrence of paroxysms at 72-hour intervals." [url:https\://www.merriam-webster.com/medical/malariae%20malaria]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Malaria by Plasmodium malariae" EXACT []
@@ -23673,16 +23705,16 @@ is_a: DOID:2277 ! gonadal disease
 
 [Term]
 id: DOID:14448
-name: 46,XY sex reversal
+name: 46,XY complete gonadal dysgenesis
 namespace: disease_ontology
 def: "A gonadal dysgenesis that is characterized by a normal 46,XY karyotype along with a progressive loss of germ cells on the developing gonads of an embryo." [url:http\://en.wikipedia.org/wiki/XY_gonadal_dysgenesis, url:https\://ghr.nlm.nih.gov/condition/swyer-syndrome#synonyms]
 comment: The term 46,XY DSD has replaced the following terms Male pseudohermaphrodite, Undervirilization of an XY male, Undermasculinization of an XY male, Mixed gonadal dysgenesis, Partial gonadal dysgenesis. OMIM mapping confirmed by DO. [SN]. OMIM mapping confirmed by DO. [LS].
 subset: NCIthesaurus
 synonym: "46 XY gonadal dysgenesis" EXACT []
+synonym: "46,XY sex reversal" EXACT []
 synonym: "Pure gonadal dysgenesis 46,XY" EXACT []
 synonym: "Swyer syndrome" EXACT []
 xref: MESH:D006061
-xref: MIM:607080
 xref: MIM:PS400044
 xref: NCI:C120198
 xref: UMLS_CUI:C0018054
@@ -23819,7 +23851,7 @@ is_a: DOID:863 ! nervous system disease
 id: DOID:14472
 name: hantavirus pulmonary syndrome
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection located in lung, has_material_basis_in Orthohantavirus sinnombreense, transmitted by deer mouse (Myodes glareolus), has_material_basis_in Orthohantavirus nigrorivense, transmitted by cotton rat (Sigmodon hispidus), has_material_basis_in Orthohantavirus bayoui, transmitted by marsh rice rat (Oryzomys palustris), has_material_basis_in Orthohantavirus negraense, transmitted by small vesper mouse (Calomys laucha), or has_material_basis_in Orthohantavirus andesense, transmitted by rice rat (Oligoryzomys longicaudatus). The infection has _symptom fever, muscle pain, headache, cough, vomiting, and chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence, pulmonary edema and hypoxia often resulting in death from shock or cardiac complications." [url:http\://books.google.com/books?id=VS5bqBQ9RWoC&pg=PR65&lpg=PR65&dq#v=onepage&q&f=false, url:http\://www.cdc.gov/ncidod/diseases/hanta/hps/noframes/generalinfoindex.htm, url:http\://www.ncbi.nlm.nih.gov/sites/entrez/10742726, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=hantavirus%20pulmonary%20syndrome]
+def: "A viral infectious disease that results in infection located in lung, has_material_basis_in Orthohantavirus sinnombreense, transmitted by deer mouse (Myodes glareolus), has_material_basis_in Orthohantavirus nigrorivense, transmitted by cotton rat (Sigmodon hispidus), has_material_basis_in Orthohantavirus bayoui, transmitted by marsh rice rat (Oryzomys palustris), has_material_basis_in Orthohantavirus negraense, transmitted by small vesper mouse (Calomys laucha), or has_material_basis_in Orthohantavirus andesense, transmitted by rice rat (Oligoryzomys longicaudatus). The infection has _symptom fever, muscle pain, headache, cough, vomiting, and chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence, pulmonary edema and hypoxia often resulting in death from shock or cardiac complications." [url:http\://books.google.com/books?id=VS5bqBQ9RWoC&pg=PR65&lpg=PR65&dq#v=onepage&q&f=false, url:http\://www.cdc.gov/ncidod/diseases/hanta/hps/noframes/generalinfoindex.htm, url:http\://www.ncbi.nlm.nih.gov/sites/entrez/10742726, url:https\://www.merriam-webster.com/medical/hantavirus%20pulmonary%20syndrome]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -24834,7 +24866,7 @@ name: echinococcosis
 namespace: disease_ontology
 alt_id: DOID:12149
 alt_id: DOID:2783
-def: "A parasitic helminthiasis infectious disease that involves parasitic infection of humans and domestic animals caused by the larval stages of tapeworms of the genus Echinococcus in the liver, lungs, spleen, brain, heart and kidneys." [url:http\://en.wikipedia.org/wiki/Echinococcosis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=echinococcosis]
+def: "A parasitic helminthiasis infectious disease that involves parasitic infection of humans and domestic animals caused by the larval stages of tapeworms of the genus Echinococcus in the liver, lungs, spleen, brain, heart and kidneys." [url:http\://en.wikipedia.org/wiki/Echinococcosis, url:https\://www.merriam-webster.com/dictionary/echinococcosis#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "echinococcal disease" EXACT []
@@ -25468,7 +25500,7 @@ is_a: DOID:0060085 ! organ system benign neoplasm
 id: DOID:162
 name: cancer
 namespace: disease_ontology
-def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cancer]
+def: "A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis." [url:http\://en.wikipedia.org/wiki/cancer, url:https\://www.merriam-webster.com/dictionary/cancer#medicalDictionary]
 comment: Updating out dated UMLS CUI.
 subset: DO_AGR_slim
 subset: DO_cancer_slim
@@ -25774,6 +25806,7 @@ is_a: DOID:1682 ! congenital heart disease
 id: DOID:1682
 name: congenital heart disease
 namespace: disease_ontology
+def: "A heart disease that is characterized by problems with the heart's structure that are present at birth." [url:https\://www.nhlbi.nih.gov/health/congenital-heart-defects]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -26721,7 +26754,7 @@ is_a: DOID:1826 ! epilepsy
 id: DOID:1826
 name: epilepsy
 namespace: disease_ontology
-def: "A brain disease that is characterized by the occurrance of at least two unprovoked seizures resulting from a persistent epileptogenic abnormality of the brain that is able to spontaneously generate paroxysmal activity and typically manifested by sudden brief episodes of altered or diminished consciousness, involuntary movements, or convulsions." [url:http\://books.google.com/books?id=YXqX04Te9ioC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false, url:http\://www.merriam-webster.com/medlineplus/epilepsy]
+def: "A brain disease that is characterized by the occurrance of at least two unprovoked seizures resulting from a persistent epileptogenic abnormality of the brain that is able to spontaneously generate paroxysmal activity and typically manifested by sudden brief episodes of altered or diminished consciousness, involuntary movements, or convulsions." [url:http\://books.google.com/books?id=YXqX04Te9ioC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false, url:http\://www.merriam-webster.com/medlineplus/epilepsy, url:https\://www.ilae.org/guidelines/definition-and-classification/ilae-classification-of-the-epilepsies-2017]
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
 synonym: "epilepsy syndrome" EXACT []
@@ -26740,12 +26773,12 @@ property_value: narrowMatch "ICD10CM:G40.909" xsd:string
 
 [Term]
 id: DOID:1827
-name: idiopathic generalized epilepsy
+name: generalized epilepsy
 namespace: disease_ontology
 def: "An epilepsy syndrome that is characterized by generalised seizures with no apparent cause which arise from many independent foci (multifocal epilepsies) or from epileptic circuits that involve the whole brain." [url:http\://en.wikipedia.org/wiki/Epilepsy, url:http\://en.wikipedia.org/wiki/Generalized_epilepsy]
 comment: Xref MGI.
 subset: NCIthesaurus
-synonym: "Generalised epilepsy" EXACT []
+synonym: "idiopathic generalized epilepsy" EXACT []
 xref: MESH:D004829
 xref: MIM:600669
 xref: NCI:C3021
@@ -27863,7 +27896,7 @@ namespace: disease_ontology
 alt_id: DOID:12591
 alt_id: DOID:12592
 alt_id: DOID:2042
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus, which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice." [url:http\://www.cdc.gov/hepatitis/HBV/index.htm, url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-b/]
+def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-b/, url:https\://www.ncbi.nlm.nih.gov/books/NBK555945/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
@@ -29055,7 +29088,7 @@ is_a: DOID:326 ! ischemia
 id: DOID:225
 name: syndrome
 namespace: disease_ontology
-def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=syndrome]
+def: "A disease characterized by a group of signs and symptoms that occur together and characterize a particular abnormality." [url:https\://www.merriam-webster.com/dictionary/syndrome#medicalDictionary]
 subset: DO_AGR_slim
 subset: DO_CFDE_slim
 subset: DO_GXD_slim
@@ -32292,7 +32325,7 @@ is_a: DOID:883 ! parasitic helminthiasis infectious disease
 id: DOID:2799
 name: bronchiolitis obliterans
 namespace: disease_ontology
-def: "A obstructive lung disease involving obstruction of the bronchioles due to inflammation and fibrosis which occurs as a complication of various lung conditions or physiological insults." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=bronchiolitis%20obliterans]
+def: "A obstructive lung disease involving obstruction of the bronchioles due to inflammation and fibrosis which occurs as a complication of various lung conditions or physiological insults." [url:https\://www.merriam-webster.com/medical/bronchiolitis%20obliterans]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Bronchiolitis exudativa" EXACT []
@@ -33003,7 +33036,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:2929
 name: Newcastle disease
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection in birds and humans, has_material_basis_in Avian orthoavulavirus 1, which is transmitted_by contact with feces and urine of an infected bird, or transmitted_by fomites. The infection has_symptom conjunctivitis, has_symptom headache, and has_symptom lacrimation in humans, and has_symptom gasping, has_symptom coughing, has_symptom twisting of head and neck, has_symptom circling, has_symptom complete paralysis, has_symptom watery diarrhea, and has_symptom reduced egg production in birds." [url:https\://en.wikipedia.org/wiki/Virulent_Newcastle_disease, url:https\://www.agric.wa.gov.au/livestock-biosecurity/newcastle-disease, url:https\://www.ncbi.nlm.nih.gov/articles/PMC1526237/, url:https\://www.ncbi.nlm.nih.gov/articles/PMC1822603/]
+def: "A viral infectious disease that results_in infection in birds and humans, has_material_basis_in Newcastle disease virus (Orthoavulavirus javaense), which is transmitted_by contact with feces and urine of an infected bird, or transmitted_by fomites. The infection has_symptom conjunctivitis, has_symptom headache, and has_symptom lacrimation in humans, and has_symptom gasping, has_symptom coughing, has_symptom twisting of head and neck, has_symptom circling, has_symptom complete paralysis, has_symptom watery diarrhea, and has_symptom reduced egg production in birds." [url:https\://en.wikipedia.org/wiki/Virulent_Newcastle_disease, url:https\://www.agric.wa.gov.au/livestock-biosecurity/newcastle-disease, url:https\://www.ncbi.nlm.nih.gov/articles/PMC1526237/, url:https\://www.ncbi.nlm.nih.gov/articles/PMC1822603/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -33100,7 +33133,7 @@ is_a: DOID:850 ! lung disease
 id: DOID:2945
 name: severe acute respiratory syndrome
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV), which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia." [url:http\://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=SARS]
+def: "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV/SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia." [url:http\://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome, url:https\://www.merriam-webster.com/dictionary/SARS#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -33165,7 +33198,7 @@ is_a: DOID:2742 ! auditory system disease
 id: DOID:2957
 name: pulmonary tuberculosis
 namespace: disease_ontology
-def: "A tuberculosis that is a contagious disease located_in lungs. The infection has_symptom fever, has_symptom cough, has_symptom difficulty in breathing, has_symptom inflammatory infiltrations, has_symptom formation of tubercles, has_symptom caseation, has_symptom pleural effusion, and has_symptom fibrosis." [url:http\://www.cdc.gov/tb/publications/factsheets/general/tb.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tuberculosis]
+def: "A tuberculosis that is a contagious disease located_in lungs. The infection has_symptom fever, has_symptom cough, has_symptom difficulty in breathing, has_symptom inflammatory infiltrations, has_symptom formation of tubercles, has_symptom caseation, has_symptom pleural effusion, and has_symptom fibrosis." [url:http\://www.cdc.gov/tb/publications/factsheets/general/tb.htm, url:https\://www.merriam-webster.com/dictionary/tuberculosis#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -35008,14 +35041,16 @@ is_a: DOID:2730 ! epidermolysis bullosa
 
 [Term]
 id: DOID:321
-name: tropical spastic paraparesis
+name: HTLV-1-associated myelopathy/tropical spastic paraparesis
 namespace: disease_ontology
-def: "A viral infectious disease that results in inflammation located in spinal cord, has_material_basis_in Human T-lymphotropic virus 1, which is transmitted by sexual contact, and transmitted by breast feeding. The infection has symptom spastic weakness of both legs, has symptom muscle stiffness, has symptom sensory disturbance, and has symptom spasms." [url:http\://en.wikipedia.org/wiki/Tropical_spastic_paraparesis, url:http\://www.merckmanuals.com/professional/sec16/ch224/ch224k.html]
+def: "A viral infectious disease that results in inflammation located in spinal cord, has_material_basis_in human T-cell leukemia virus type 1 (Deltaretrovirus priTlym1), which is transmitted by sexual contact, and transmitted by breast feeding. The infection has symptom spastic weakness of both legs, has symptom muscle stiffness, has symptom sensory disturbance, and has symptom spasms." [url:http\://en.wikipedia.org/wiki/Tropical_spastic_paraparesis, url:https\://www.merckmanuals.com/professional/neurologic-disorders/spinal-cord-disorders/htlv-1-associated-myelopathy-tropical-spastic-paraparesis-ham-tsp, url:https\://www.ncbi.nlm.nih.gov/books/NBK560825/, url:https\://www.ninds.nih.gov/health-information/disorders/htlv-1-associated-myelopathy-hamtropical-spastic-paraparesis-tsp]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
+synonym: "HAM/TSP" EXACT OMO:0003012 []
 synonym: "HTLV-associated myelopathy" EXACT []
 synonym: "Tropical spastic paralysis" EXACT []
+synonym: "tropical spastic paraparesis" EXACT []
 synonym: "Tropical spastic paraplegia" EXACT []
 xref: ICD10CM:G04.1
 xref: MESH:D015493
@@ -35558,7 +35593,7 @@ is_a: DOID:3277 ! thymus cancer
 id: DOID:3292
 name: mpox
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection of primates, rodents and humans, located in skin, has_material_basis_in Monkeypox virus, which is transmitted by contact with the animal's blood, body fluids, rash, or with the body fluids of a sick person, transmitted by fomites, and transmitted by respiratory droplets. The infection has symptom fever, has symptom muscle ache, has symptom headache, and has symptom lymphadenopathy." [url:http\://www.cdc.gov/ncidod/monkeypox/factsheet2.htm, url:https\://www.who.int/news/item/28-11-2022-who-recommends-new-name-for-monkeypox-disease]
+def: "A viral infectious disease that results in infection of primates, rodents and humans, located in skin, has_material_basis_in Monkeypox virus (Orthopoxvirus monkeypox), which is transmitted by contact with the animal's blood, body fluids, rash, or with the body fluids of a sick person, transmitted by fomites, and transmitted by respiratory droplets. The infection has symptom fever, has symptom muscle ache, has symptom headache, and has symptom lymphadenopathy." [url:http\://www.cdc.gov/ncidod/monkeypox/factsheet2.htm, url:https\://www.who.int/news/item/28-11-2022-who-recommends-new-name-for-monkeypox-disease]
 comment: November 2022 WHO name update.
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
@@ -36422,7 +36457,7 @@ is_a: DOID:162 ! cancer
 id: DOID:3385
 name: bacterial vaginosis
 namespace: disease_ontology
-def: "A vaginitis that is characterized by a grayish vaginal discharge usually of foul odor and the presence of Gardnerella vaginalis." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=bacterial+vaginosis]
+def: "A vaginitis that is characterized by a grayish vaginal discharge usually of foul odor and the presence of Gardnerella vaginalis." [url:https\://www.merriam-webster.com/dictionary/bacterial%20vaginosis#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 xref: MESH:D016585
@@ -36709,6 +36744,7 @@ synonym: "Paget cell neoplasm" EXACT []
 synonym: "Paget's disease" EXACT []
 synonym: "Paget's disease of the breast" EXACT []
 xref: NCI:C7073
+xref: UMLS_CUI:C0030185
 xref: UMLS_CUI:C1368019
 is_a: DOID:3458 ! breast adenocarcinoma
 
@@ -41209,7 +41245,7 @@ id: DOID:4157
 name: secondary syphilis
 namespace: disease_ontology
 alt_id: DOID:12122
-def: "A syphilis that is characterized as the second stage of syphilis which appears from 2 to 6 months after primary infection, and is marked by lesions especially in the skin but also in organs and tissues, and that lasts from 3 to 12 weeks." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=secondary+syphilis]
+def: "A syphilis that is characterized as the second stage of syphilis which appears from 2 to 6 months after primary infection, and is marked by lesions especially in the skin but also in organs and tissues, and that lasts from 3 to 12 weeks." [url:https\://www.merriam-webster.com/dictionary/secondary%20syphilis#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -42310,14 +42346,16 @@ is_a: DOID:174 ! acanthoma
 
 [Term]
 id: DOID:4325
-name: Ebola hemorrhagic fever
+name: Ebola virus disease
 namespace: disease_ontology
-def: "A viral infectious disease that is a hemorrhagic fever, has_material_basis_in Zaire ebolavirus, has_material_basis_in Sudan ebolavirus, has_material_basis_in Cote d'Ivoire ebolavirus, or has_material_basis_in Bundibugyo ebolavirus, which are transmitted_by contact with the body fluids of an infected animal or person, transmitted by contaminated fomites, or transmitted by infected medical equipment. The infection has_symptom fever, has_symptom headache, has_symptom joint pain, has_symptom muscle aches, has_symptom sore throat, has_symptom weakness, has_symptom diarrhea, has_symptom vomiting, has_symptom stomach pain, has_symptom rash, has_symptom red eyes, has_symptom hiccups, and has_symptom internal and external bleeding." [url:http\://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/ebola/qa.htm]
+def: "A viral infectious disease that is a hemorrhagic fever, has_material_basis_in Bundibugyo virus (Orthoebolavirus bundibugyoense), Sudan ebolavirus (Orthoebolavirus sudanense), Tai Forest ebolavirus (Orthoebolavirus taiense), or Zaire ebolavirus (Orthoebolavirus zairense), which are transmitted_by contact with the body fluids of an infected animal or person, transmitted by contaminated fomites, or transmitted by infected medical equipment. The infection has_symptom fever, has_symptom headache, has_symptom joint pain, has_symptom muscle aches, has_symptom sore throat, has_symptom weakness, has_symptom diarrhea, has_symptom vomiting, has_symptom stomach pain, has_symptom rash, has_symptom red eyes, has_symptom hiccups, and has_symptom internal and external bleeding." [url:https\://en.wikipedia.org/wiki/Ebola, url:https\://www.cdc.gov/ebola/about/, url:https\://www.nhs.uk/conditions/ebola/, url:https\://www.who.int/health-topics/ebola, url:https\://www.who.int/news-room/fact-sheets/detail/ebola-virus-disease]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
-synonym: "Ebola virus disease" EXACT []
+synonym: "Ebola" EXACT []
+synonym: "Ebola disease" EXACT []
+synonym: "Ebola hemorrhagic fever" EXACT []
 xref: GARD:2035
 xref: ICD10CM:A98.4
 xref: MESH:D019142
@@ -43375,7 +43413,7 @@ alt_id: DOID:12089
 alt_id: DOID:14030
 alt_id: DOID:8241
 alt_id: DOID:8242
-def: "A rhinitis that is an allergic inflammation and irritation of the nasal airways involving sneezing, runny nose, nasal congestion, itching and tearing of the eyes caused by exposure to an allergen such as pollen, dust, mold, animal dander and droppings of cockroaches or house dust mites." [url:http\://en.wikipedia.org/wiki/Allergic_rhinitis, url:http\://en.wikipedia.org/wiki/Rhinitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=allergic%20rhinitis] {comment="ls:IEDB"}
+def: "A rhinitis that is an allergic inflammation and irritation of the nasal airways involving sneezing, runny nose, nasal congestion, itching and tearing of the eyes caused by exposure to an allergen such as pollen, dust, mold, animal dander and droppings of cockroaches or house dust mites." [url:http\://en.wikipedia.org/wiki/Allergic_rhinitis, url:http\://en.wikipedia.org/wiki/Rhinitis, url:https\://www.merriam-webster.com/dictionary/allergic%20rhinitis#medicalDictionary] {comment="ls:IEDB"}
 subset: NCIthesaurus
 synonym: "atopic rhinitis" EXACT []
 synonym: "hay fever" EXACT []
@@ -44561,7 +44599,7 @@ is_a: DOID:5559 ! mediastinal cancer
 id: DOID:4692
 name: endophthalmitis
 namespace: disease_ontology
-def: "A globe disease that is characterized by inflammation of the inside of the eye." [url:http\://en.wikipedia.org/wiki/Endophthalmitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=endophthalmitis, url:https\://www.merckmanuals.com/home/eye-disorders/uveitis-and-related-disorders/endophthalmitis]
+def: "A globe disease that is characterized by inflammation of the inside of the eye." [url:http\://en.wikipedia.org/wiki/Endophthalmitis, url:https\://www.merckmanuals.com/home/eye-disorders/uveitis-and-related-disorders/endophthalmitis, url:https\://www.merriam-webster.com/medical/endophthalmitis]
 subset: NCIthesaurus
 xref: MESH:D009877
 xref: NCI:C34586
@@ -44790,7 +44828,7 @@ is_a: DOID:0060085 ! organ system benign neoplasm
 id: DOID:4730
 name: vasomotor rhinitis
 namespace: disease_ontology
-def: "A rhinitis which involves a hypersensitive reaction to various potentially irritating stimuli such as changes in weather, temperature, or barometric pressure, chemical irritants such as smoke, ozone, pollution, perfumes, and aerosol sprays, psychological stress and emotional shocks, medications, alcohol, and spicy food." [url:http\://en.wikipedia.org/wiki/Rhinitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=vasomotor%20rhinitis]
+def: "A rhinitis which involves a hypersensitive reaction to various potentially irritating stimuli such as changes in weather, temperature, or barometric pressure, chemical irritants such as smoke, ozone, pollution, perfumes, and aerosol sprays, psychological stress and emotional shocks, medications, alcohol, and spicy food." [url:http\://en.wikipedia.org/wiki/Rhinitis, url:https\://www.merriam-webster.com/medical/vasomotor%20rhinitis]
 subset: NCIthesaurus
 xref: ICD10CM:J30.0
 xref: MESH:D012223
@@ -45214,6 +45252,7 @@ namespace: disease_ontology
 def: "A GM2 gangliosidosis that is characterized by normal hexosaminidase A (HEXA) and hexosaminidase B (HEXB) but the inability to form a functional GM2 activator complex." [url:https\://ghr.nlm.nih.gov/condition/gm2-gangliosidosis-ab-variant]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
+synonym: "GM2 Activator Deficiency" EXACT []
 synonym: "Tay-Sachs disease AB variant" EXACT []
 synonym: "Tay-Sachs disease, variant AB" EXACT []
 xref: MESH:D049290
@@ -53750,7 +53789,7 @@ alt_id: DOID:6130
 alt_id: DOID:6131
 alt_id: DOID:9982
 alt_id: DOID:9983
-def: "A bronchial disease that is an inflammation of the bronchial tubes. It is caused by bacteria and viruses. The disease has_symptom cough with mucus, has_symptom shortness of breath, has_symptom low fever and has_symptom chest tightness." [url:http\://www.nhlbi.nih.gov/health/dci/Diseases/brnchi/brnchi_whatis.html, url:http\://www.nlm.nih.gov/medlineplus/bronchitis.html, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=bronchitis]
+def: "A bronchial disease that is an inflammation of the bronchial tubes. It is caused by bacteria and viruses. The disease has_symptom cough with mucus, has_symptom shortness of breath, has_symptom low fever and has_symptom chest tightness." [url:http\://www.nhlbi.nih.gov/health/dci/Diseases/brnchi/brnchi_whatis.html, url:http\://www.nlm.nih.gov/medlineplus/bronchitis.html, url:https\://www.merriam-webster.com/dictionary/bronchitis#medicalDictionary]
 subset: NCIthesaurus
 synonym: "acute Bronchitis" EXACT []
 synonym: "acute bronchitis and bronchiolitis" RELATED []
@@ -54815,7 +54854,7 @@ is_a: DOID:5940 ! malignant peripheral nerve sheath tumor
 id: DOID:635
 name: acquired immunodeficiency syndrome
 namespace: disease_ontology
-def: "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS." [url:http\://en.wikipedia.org/wiki/AIDS, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=aids]
+def: "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS." [url:http\://en.wikipedia.org/wiki/AIDS, url:https\://www.merriam-webster.com/dictionary/AIDS]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -58312,7 +58351,7 @@ is_a: DOID:848 ! arthritis
 id: DOID:7148
 name: rheumatoid arthritis
 namespace: disease_ontology
-def: "An arthritis that is an autoimmune disease which attacks healthy cells and tissue located_in joint." [url:http\://en.wikipedia.org/wiki/Rheumatoid_arthritis, url:http\://www.mayoclinic.org/diseases-conditions/rheumatoid-arthritis/home/ovc-20197388, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000431.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=rheumatoid%20arthritis]
+def: "An arthritis that is an autoimmune disease which attacks healthy cells and tissue located_in joint." [url:http\://en.wikipedia.org/wiki/Rheumatoid_arthritis, url:http\://www.mayoclinic.org/diseases-conditions/rheumatoid-arthritis/home/ovc-20197388, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000431.htm, url:https\://www.merriam-webster.com/dictionary/rheumatoid%20arthritis#medicalDictionary]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Arthritis or polyarthritis, rheumatic" EXACT []
@@ -62594,7 +62633,7 @@ property_value: exactMatch "MESH:D009205" xsd:string
 id: DOID:8200
 name: tertiary syphilis
 namespace: disease_ontology
-def: "A syphilis that is characterized as the third stage of syphilis that develops after the disappearance of the secondary symptoms and is marked by ulcers and gummas under the skin and commonly by involvement of the skeletal, cardiovascular, and nervous systems." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=tertiary+syphilis]
+def: "A syphilis that is characterized as the third stage of syphilis that develops after the disappearance of the secondary symptoms and is marked by ulcers and gummas under the skin and commonly by involvement of the skeletal, cardiovascular, and nervous systems." [url:https\://www.merriam-webster.com/dictionary/tertiary%20syphilis#medicalDictionary]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -63516,7 +63555,7 @@ id: DOID:8469
 name: influenza
 namespace: disease_ontology
 alt_id: DOID:8468
-def: "A viral infectious disease that results in infection, located in respiratory tract, has_material_basis_in Influenzavirus A, has_material_basis_in Influenzavirus B, or has_material_basis_in Influenzavirus C, which are transmitted_by droplet spread of oronasal secretions during coughing, sneezing, or talking from an infected person. It is a highly contagious disease that affects birds and mammals and has_symptom chills, has_symptom fever, has_symptom sore throat, has_symptom runny nose, has_symptom muscle pains, has_symptom severe headache, has_symptom cough, and has_symptom weakness." [url:http\://www.merck.com/mmhe/sec17/ch198/ch198d.html, url:http\://www.who.int/mediacentre/factsheets/2003/fs211/en/]
+def: "A viral infectious disease that results in infection, located in respiratory tract, has_material_basis_in Influenzavirus A (Alphainfluenzavirus), has_material_basis_in Influenzavirus B (Betainfluenzavirus), or has_material_basis_in Influenzavirus C (Gammainfluenzavirus), which are transmitted_by droplet spread of oronasal secretions during coughing, sneezing, or talking from an infected person. It is a highly contagious disease that affects birds and mammals and has_symptom chills, has_symptom fever, has_symptom sore throat, has_symptom runny nose, has_symptom muscle pains, has_symptom severe headache, has_symptom cough, and has_symptom weakness." [url:http\://www.merck.com/mmhe/sec17/ch198/ch198d.html, url:http\://www.who.int/mediacentre/factsheets/2003/fs211/en/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "flu" EXACT []
@@ -65092,7 +65131,7 @@ is_a: DOID:175 ! vascular cancer
 id: DOID:8736
 name: smallpox
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection located in skin, has_material_basis_in Variola virus, which is transmitted by droplets from oral, nasal or pharyngeal mucosa, transmitted by contact with the body fluids, or transmitted by fomites. The infection results in formation of lesions, first on the face, hands and forearms and later on the trunk." [url:http\://www.who.int/csr/disease/smallpox/en/]
+def: "A viral infectious disease that results in infection located in skin, has_material_basis_in Variola virus (Orthopoxvirus variola), which is transmitted by droplets from oral, nasal or pharyngeal mucosa, transmitted by contact with the body fluids, or transmitted by fomites. The infection results in formation of lesions, first on the face, hands and forearms and later on the trunk." [url:https\://www.cdc.gov/smallpox/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK470418/, url:https\://www.who.int/health-topics/smallpox]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -65275,7 +65314,7 @@ alt_id: DOID:9106
 alt_id: DOID:9116
 alt_id: DOID:9162
 alt_id: DOID:9179
-def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Rubella virus, which is transmitted_by droplet spread of oronasal secretions from the infected person through coughing and sneezing, and transmitted_by congenital method. The infection has_symptom rash on the face which spreads to the trunk and limbs, has_symptom fever, has_symptom lymphadenopathy, has_symptom joint pains, has_symptom headache, and has_symptom conjunctivitis." [url:http\://en.wikipedia.org/wiki/Rubella]
+def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Rubella virus (Rubivirus rubellae), which is transmitted_by droplet spread of oronasal secretions from the infected person through coughing and sneezing, and transmitted_by congenital method. The infection has_symptom rash on the face which spreads to the trunk and limbs, has_symptom fever, has_symptom lymphadenopathy, has_symptom joint pains, has_symptom headache, and has_symptom conjunctivitis." [url:http\://en.wikipedia.org/wiki/Rubella, url:https\://www.cdc.gov/rubella/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK559040/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -66170,7 +66209,7 @@ is_a: DOID:1564 ! fungal infectious disease
 id: DOID:9063
 name: Ritter's disease
 namespace: disease_ontology
-def: "A commensal bacterial infectious disease that is characterized by widespread erythema, peeling, and necrosis of the skin, that is caused by a toxin produced by a bacterium of the genus Staphylococcus (S. aureus). The infection has_symptom redness of skin, has_symptom fluid-filled blister formation, has_symptom fever and has_symptom irritability." [url:http\://en.wikipedia.org/wiki/Ritter%27s_disease, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=staphylococcal+scalded+skin]
+def: "A commensal bacterial infectious disease that is characterized by widespread erythema, peeling, and necrosis of the skin, that is caused by a toxin produced by a bacterium of the genus Staphylococcus (S. aureus). The infection has_symptom redness of skin, has_symptom fluid-filled blister formation, has_symptom fever and has_symptom irritability." [url:http\://en.wikipedia.org/wiki/Ritter%27s_disease, url:https\://www.merriam-webster.com/medical/staphylococcal%20scalded%20skin]
 subset: DO_infectious_disease_slim
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
@@ -67091,7 +67130,7 @@ is_a: DOID:9252 ! amino acid metabolic disorder
 id: DOID:9269
 name: maple syrup urine disease
 namespace: disease_ontology
-def: "An organic acidemia that is caused by a deficiency of decarboxylase leading to high concentrations of valine, leucine, isoleucine, and alloisoleucine in the blood, urine, and cerebrospinal fluid and characterized by an odor of maple syrup to the urine, vomiting, hypertonicity, severe mental retardation, seizures, and eventually death unless the condition is treated with dietary measures." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=maple%20syrup%20urine%20disease]
+def: "An organic acidemia that is caused by a deficiency of decarboxylase leading to high concentrations of valine, leucine, isoleucine, and alloisoleucine in the blood, urine, and cerebrospinal fluid and characterized by an odor of maple syrup to the urine, vomiting, hypertonicity, severe mental retardation, seizures, and eventually death unless the condition is treated with dietary measures." [url:https\://www.merriam-webster.com/medical/maple%20syrup%20urine%20disease]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -67421,7 +67460,7 @@ is_a: DOID:9507 ! ethmoid sinusitis
 id: DOID:9317
 name: lymphangitis
 namespace: disease_ontology
-def: "A lymphatic system disease that is characterized by inflammation of the lymphatic channels which occurs as a result of infection at a site distal to the channel. It is caused by Streptococcus pyogenes (Group A strep) or Staphylococcus aureus. Lymphangitis is also sometimes called blood poisoning." [url:http\://en.wikipedia.org/wiki/Lymphangitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Lymphangitis]
+def: "A lymphatic system disease that is characterized by inflammation of the lymphatic channels which occurs as a result of infection at a site distal to the channel. It is caused by Streptococcus pyogenes (Group A strep) or Staphylococcus aureus. Lymphangitis is also sometimes called blood poisoning." [url:http\://en.wikipedia.org/wiki/Lymphangitis, url:https\://www.merriam-webster.com/dictionary/Lymphangitis#medicalDictionary]
 subset: gram-positive_bacterial_infectious_disease
 subset: NCIthesaurus
 xref: ICD10CM:I89.1
@@ -67615,7 +67654,7 @@ property_value: exactMatch "MESH:D014136" xsd:string
 id: DOID:9395
 name: croup
 namespace: disease_ontology
-def: "A respiratory system infectious disease that involves inflammation, edema, and subsequent obstruction of the larynx, trachea, and bronchi. The disease is caused by viruses, bacteria, allergies and inhaled irritants. It is marked by episodes of difficult breathing and hoarse metallic cough in infants and young children. Croup is caused by parainfluenza virus (types 1 and 2), Influenza A and B viruses, Measles virus, adenovirus, respiratory syncytial virus, Staphylococcus and Streptococcus." [url:http\://books.google.com/books?id=G6k0tpPMRsIC&pg=PA254&lpg=PA254&dq#v=onepage&q=&f=false, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000959.htm, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=croup]
+def: "A respiratory system infectious disease that involves inflammation, edema, and subsequent obstruction of the larynx, trachea, and bronchi. The disease is caused by viruses, bacteria, allergies and inhaled irritants. It is marked by episodes of difficult breathing and hoarse metallic cough in infants and young children. Croup is caused by parainfluenza virus (types 1 and 2), Influenza A and B viruses, Measles virus, adenovirus, respiratory syncytial virus, Staphylococcus and Streptococcus." [url:http\://books.google.com/books?id=G6k0tpPMRsIC&pg=PA254&lpg=PA254&dq#v=onepage&q=&f=false, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000959.htm, url:https\://www.merriam-webster.com/dictionary/croup#medicalDictionary]
 subset: NCIthesaurus
 synonym: "acute laryngotracheobronchitis" EXACT []
 synonym: "acute Obstructive Laryngitis" EXACT []
@@ -68007,7 +68046,7 @@ is_a: DOID:5870 ! eosinophilic pneumonia
 id: DOID:9503
 name: Loeffler syndrome
 namespace: disease_ontology
-def: "An eosinophilic pneumonia described as a form of pulmonary eosinophilia characterized as a mild pneumonitis marked by transitory pulmonary infiltration and eosinophilia and usually considered to be an allergic reaction. It can occur in response to a parasitic infection." [url:http\://en.wikipedia.org/wiki/L%C3%B6ffler%27s_syndrome, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=Loeffler%27s%20syndrome]
+def: "An eosinophilic pneumonia described as a form of pulmonary eosinophilia characterized as a mild pneumonitis marked by transitory pulmonary infiltration and eosinophilia and usually considered to be an allergic reaction. It can occur in response to a parasitic infection." [url:http\://en.wikipedia.org/wiki/L%C3%B6ffler%27s_syndrome, url:https\://www.merriam-webster.com/medical/Loeffler%27s%20syndrome]
 subset: NCIthesaurus
 synonym: "Loeffler's pneumonia" EXACT []
 synonym: "Loffler's syndrome" EXACT []
@@ -68226,7 +68265,7 @@ namespace: disease_ontology
 alt_id: DOID:11046
 alt_id: DOID:11047
 alt_id: DOID:9571
-def: "A bronchial disease that is a chronic inflammatory condition of one or more bronchi or bronchioles marked by dilatation and loss of elasticity of the walls resulting from damage to the airway wall leading to the formation of small sacs on the bronchial wall and impairment of cilia mobility in the lung. Inflammation of the bronchial wall increases mucus secretion which serves as a breeding ground for bacteria. Bronchiectasis is caused by repeated respiratory infections, immune deficiency disorders, hereditary disorders (cystic fibrosis or primary ciliary dyskinesia), mechanical factors (inhaled object or a lung tumor) or inhaling toxic substances." [url:http\://www.merck.com/mmhe/sec04/ch047/ch047a.html, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=bronchiectasis]
+def: "A bronchial disease that is a chronic inflammatory condition of one or more bronchi or bronchioles marked by dilatation and loss of elasticity of the walls resulting from damage to the airway wall leading to the formation of small sacs on the bronchial wall and impairment of cilia mobility in the lung. Inflammation of the bronchial wall increases mucus secretion which serves as a breeding ground for bacteria. Bronchiectasis is caused by repeated respiratory infections, immune deficiency disorders, hereditary disorders (cystic fibrosis or primary ciliary dyskinesia), mechanical factors (inhaled object or a lung tumor) or inhaling toxic substances." [url:http\://www.merck.com/mmhe/sec04/ch047/ch047a.html, url:https\://www.merriam-webster.com/dictionary/bronchiectasis#medicalDictionary]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -68280,7 +68319,7 @@ is_a: DOID:1508 ! candidiasis
 id: DOID:9584
 name: Venezuelan equine encephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in brain of horses and humans, has_material_basis_in Venezuelan equine encephalitis virus, which is transmitted_by Culex mosquitoes. The infection has_symptom fever, has_symptom chills, has_symptom malaise, has_symptom severe headache, has_symptom photophobia, and has_symptom myalgia in the legs and lumbosacral region." [url:http\://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm]
+def: "A viral infectious disease that results_in inflammation located_in brain of horses and humans, has_material_basis_in Venezuelan equine encephalitis virus (Alphavirus venezuelan), which is transmitted_by Culex mosquitoes. The infection has_symptom fever, has_symptom chills, has_symptom malaise, has_symptom severe headache, has_symptom photophobia, and has_symptom myalgia in the legs and lumbosacral region." [url:http\://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm, url:https\://www.ncbi.nlm.nih.gov/books/NBK559332/, url:https\://wwwnc.cdc.gov/eid/article/16/3/09-0970_article]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -68676,7 +68715,7 @@ name: yellow fever
 namespace: disease_ontology
 alt_id: DOID:9683
 alt_id: DOID:9684
-def: "A viral infectious disease that results in infection, has_material_basis_in Yellow fever virus, which is transmitted by Aedes, transmitted by Haemagogus, or transmitted by Sabethes species of mosquitoes. The infection has symptom fever, has symptom muscle pain, has symptom backache, has symptom headache, has symptom shivers, has symptom loss of appetite, has symptom jaundice, and has symptom bleeding from the mouth, nose, eyes or stomach leading to vomitus containing blood." [url:http\://en.wikipedia.org/wiki/Yellow_fever, url:http\://www.who.int/mediacentre/factsheets/fs100/en/index.html, url:https\://www.cdc.gov/yellowfever/]
+def: "A viral infectious disease that results in infection, has_material_basis_in Yellow fever virus (Orthoflavivirus flavi), which is transmitted by Aedes, transmitted by Haemagogus, or transmitted by Sabethes species of mosquitoes. The infection has symptom fever, has symptom muscle pain, has symptom backache, has symptom headache, has symptom shivers, has symptom loss of appetite, has symptom jaundice, and has symptom bleeding from the mouth, nose, eyes or stomach leading to vomitus containing blood." [url:http\://en.wikipedia.org/wiki/Yellow_fever, url:https\://www.cdc.gov/yellowfever/, url:https\://www.ncbi.nlm.nih.gov/books/NBK470425/, url:https\://www.who.int/news-room/fact-sheets/detail/yellow-fever]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -68836,7 +68875,7 @@ is_a: DOID:799 ! varicose veins
 id: DOID:9765
 name: emphysematous cholecystitis
 namespace: disease_ontology
-def: "A cholecystitis consisting of an inflammation of the gallbladder characterized by air-filled expansions in interstitial or subcutaneous tissues, where gallbladder wall necrosis causes gas formation in the lumen or wall." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=choleysistitis, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=emphysematous, url:https\://radiopaedia.org/articles/emphysematous-cholecystitis?lang=us]
+def: "A cholecystitis consisting of an inflammation of the gallbladder characterized by air-filled expansions in interstitial or subcutaneous tissues, where gallbladder wall necrosis causes gas formation in the lumen or wall." [url:https\://radiopaedia.org/articles/emphysematous-cholecystitis?lang=us, url:https\://www.merriam-webster.com/dictionary/emphysematous#medicalDictionary, url:https\://www.merriam-webster.com/medical/choleysistitis]
 subset: NCIthesaurus
 synonym: "Gaseous pericholecystitis" EXACT []
 xref: MESH:D041882
@@ -69047,7 +69086,7 @@ is_a: DOID:9835 ! refractive error
 id: DOID:9840
 name: esotropia
 namespace: disease_ontology
-def: "A strabismus that is characterized the eye which turns inward toward the nose." [url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=cross-eye+]
+def: "A strabismus that is characterized the eye which turns inward toward the nose." [url:https\://www.merriam-webster.com/dictionary/cross-eye#medicalDictionary]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Convergence in manifest squint" EXACT []
@@ -69307,7 +69346,7 @@ id: DOID:9931
 name: Waterhouse-Friderichsen syndrome
 namespace: disease_ontology
 alt_id: DOID:12613
-def: "An adrenal gland disease that is characterized by failure of the adrenal gland due to bleeding into the gland." [url:http\://en.wikipedia.org/wiki/Waterhouse-Friderichsen_syndrome, url:http\://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&va=waterhouse]
+def: "An adrenal gland disease that is characterized by failure of the adrenal gland due to bleeding into the gland." [url:http\://en.wikipedia.org/wiki/Waterhouse-Friderichsen_syndrome, url:https\://www.merriam-webster.com/medical/waterhouse]
 subset: DO_rare_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: NCIthesaurus

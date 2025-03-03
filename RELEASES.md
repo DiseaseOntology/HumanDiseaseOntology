@@ -13,6 +13,26 @@
 
 ## 2025 Releases
 
+### [v2025-03-03](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-03-03)
+
+This release of the Human Disease Ontology includes 11,837 disease classes, 9,519 with textual definitions (80.4%).
+
+Newly added diseases include the new grouping term autosomal dominant primary microcephaly, and numerous genetic subtypes for autosomal dominant intellectual developmental disorder, Carpenter syndrome, congenital disorder of glycosylation, immunodeficiency, myofibrillar myopathy, severe combined immunodeficiency, Charcot-Marie-Tooth disease, and hypertrophic cardiomyopathy.
+
+Various revisions in process or completed are also included in this release. Many viral infectious diseases have been revised to include the latest viral species name in text definitions and to expand logical relationships between diseases and their viral causes in collaboration with the International Committee on Taxonomy of Viruses (ICTV). All defunct Merriam Webster definition source URLs have now been updated to their latest, correct source. Other revisions include spinocerebellar ataxia type 4, IgA vasculitis (previously Henoch-Schoenlein purpura), B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion, and many more. 
+
+### Obsoleted diseases
+The subtypes of idiopathic generalized epilepsy (now revised to generalized epilepsy) have all been obsoleted. These are not diseases but susceptibilities to disease and were migrated to the OMIM susceptibilities import.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-02-03...v2025-03-03
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-03/src/ontology/doid-merged.obo) | |
+
 ### [v2025-02-03](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-02-03)
 
 Updated release, to update some labels.

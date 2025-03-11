@@ -1,0 +1,36 @@
+# Identify diseases with multiple xrefs/mappings of the same type to a single
+# resource/namespace
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property
+	(GROUP_CONCAT(DISTINCT ?mapping; separator="|") AS ?value)
+WHERE {
+	{
+		SELECT DISTINCT ?entity ?property ?ns
+		WHERE {
+			VALUES ?property {
+				oboInOwl:hasDbXref
+				skos:exactMatch
+				skos:closeMatch
+				skos:narrowMatch
+				skos:broadMatch
+				skos:relatedMatch
+			}
+			?entity a owl:Class ;
+				?property ?value .
+			BIND(STRBEFORE(?value, ":") AS ?ns)
+		}
+		GROUP BY ?entity ?property ?ns
+		HAVING (COUNT(DISTINCT ?value) > 1)
+	} 
+	?entity a owl:Class ;
+		?property ?mapping .
+	FILTER(STRBEFORE(?mapping, ":") = ?ns)
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+}
+GROUP BY ?entity ?property
+ORDER BY ?entity ?property

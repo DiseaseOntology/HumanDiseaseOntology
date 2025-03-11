@@ -1,0 +1,22 @@
+# Identify SKOS mappings that are not Xrefs
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property {
+		skos:exactMatch
+		skos:closeMatch
+		skos:narrowMatch
+		skos:broadMatch
+		skos:relatedMatch
+	}
+	?entity a owl:Class ;
+		?property ?value .
+
+	FILTER NOT EXISTS { ?entity oboInOwl:hasDbXref ?value }
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+}

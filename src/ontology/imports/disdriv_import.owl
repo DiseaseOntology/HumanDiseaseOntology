@@ -11,8 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-03-03/imports/disdriv_import.owl"/>
-        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/disdriv/releases/2023-12-15/disdriv.owl</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl"/>
+        <rdfs:comment>Sourced from http://purl.obolibrary.org/obo/disdriv/releases/2025-03-20/disdriv.owl</rdfs:comment>
     </owl:Ontology>
     
 
@@ -88,6 +88,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
@@ -144,6 +150,56 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdfs:label>part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:label>has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0007000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0007000">
+        <obo:IAO_0000115>A relation between two entities, in which one of the entities is any natural or human-influenced factor that directly or indirectly causes a change in the other entity.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has_driver</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0007000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A relation between two entities, in which one of the entities is any natural or human-influenced factor that directly or indirectly causes a change in the other entity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://purl.obolibrary.org/obo/RO_0007000</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -152,12 +208,455 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_103210 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_103210">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A cyclic dicarboxylic anhydride that is the cyclic anhydride of hexahydrophthalic acid.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:103210</oboInOwl:id>
+        <rdfs:label>hexahydrophthalic anhydride</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_103210"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cyclic dicarboxylic anhydride that is the cyclic anhydride of hexahydrophthalic acid.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://pubchem.ncbi.nlm.nih.gov/compound/Hexahydrophthalic-anhydride</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_134063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_134063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_79314"/>
+        <obo:IAO_0000115>A bromoalkane consisting of cyclododecane bearing six bromo substituents at positions 1, 2, 5, 6, 9 and 10.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>hexabromocyclododecane</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHEBI:134063</oboInOwl:id>
+        <rdfs:label>1,2,5,6,9,10-hexabromocyclododecane</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_134063"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A bromoalkane consisting of cyclododecane bearing six bromo substituents at positions 1, 2, 5, 6, 9 and 10.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hexabromocyclododecane</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/flame_retardants/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_138015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_138015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Any compound that can disrupt the functions of the endocrine (hormone) system.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:138015</oboInOwl:id>
+        <rdfs:label>endochrine disruptor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any compound that can disrupt the functions of the endocrine (hormone) system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cf</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_15956 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_15956">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>An organic heterobicyclic compound that consists of 2-oxohexahydro-1H-thieno[3,4-d]imidazole having a valeric acid substituent attached to the tetrahydrothiophene ring.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:15956</oboInOwl:id>
+        <rdfs:label>biotin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15956"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An organic heterobicyclic compound that consists of 2-oxohexahydro-1H-thieno[3,4-d]imidazole having a valeric acid substituent attached to the tetrahydrothiophene ring.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Biotin</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK547751/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879"/>
+        <obo:IAO_0000115>A primary alcohol that is ethane in which one of the hydrogens is substituted by a hydroxy group.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:16236</oboInOwl:id>
+        <rdfs:label>ethanol</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16236"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A primary alcohol that is ethane in which one of the hydrogens is substituted by a hydroxy group.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Ethanol</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_164200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_164200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>An aromatic ether that is phenol which is substituted at C-5 by a chloro group and at C-2 by a 2,4-dichlorophenoxy group. It is widely used as a preservative and antimicrobial agent in personal care products such as soaps, skin creams, toothpaste and deodorants as well as in household items such as plastic chopping boards, sports equipment and shoes.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:164200</oboInOwl:id>
+        <rdfs:label>triclosan</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_164200"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An aromatic ether that is phenol which is substituted at C-5 by a chloro group and at C-2 by a 2,4-dichlorophenoxy group. It is widely used as a preservative and antimicrobial agent in personal care products such as soaps, skin creams, toothpaste and deodorants as well as in household items such as plastic chopping boards, sports equipment and shoes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Triclosan</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16716 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16716">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A six-carbon aromatic annulene in which each carbon atom donates one of its two 2p electrons into a delocalised pi system. A toxic, flammable liquid byproduct of coal distillation, it is used as an industrial solvent. Benzene is a carcinogen that also damages bone marrow and the central nervous system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C302</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:16716</oboInOwl:id>
+        <rdfs:label>benzene</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16716"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A six-carbon aromatic annulene in which each carbon atom donates one of its two 2p electrons into a delocalised pi system. A toxic, flammable liquid byproduct of coal distillation, it is used as an industrial solvent. Benzene is a carcinogen that also damages bone marrow and the central nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3271273/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16842">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>An aldehyde resulting from the formal oxidation of methanol.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:16842</oboInOwl:id>
+        <rdfs:label>formaldehyde</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16842"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An aldehyde resulting from the formal oxidation of methanol.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Formaldehyde</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/formaldehyde/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_172368 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_172368">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_79314"/>
+        <obo:IAO_0000115>A flame retardant that is brominated flame retardant, contain bromine and are the most abundantly used flame retardants. Used in many consumer goods, including electronics, furniture, building materials, etc. and have been linked to endocrine disruption among other effects.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:172368</oboInOwl:id>
+        <rdfs:label>brominated flame retardant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_172368"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A flame retardant that is brominated flame retardant, contain bromine and are the most abundantly used flame retardants. Used in many consumer goods, including electronics, furniture, building materials, etc. and have been linked to endocrine disruption among other effects.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/flame_retardants/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_172390 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_172390">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A hydroxyether which contains both an ether and alcohol functional groups. It is one of the most versatile classes of organic solvents which are commonly used in paints, cleaners, adhesives, pharmaceuticals and cosmetics.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:172390</oboInOwl:id>
+        <rdfs:label>glycol ether</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_172390"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A hydroxyether which contains both an ether and alcohol functional groups. It is one of the most versatile classes of organic solvents which are commonly used in paints, cleaners, adhesives, pharmaceuticals and cosmetics.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Glycol_ethers</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/niosh/docs/83-112/default.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.epa.gov/sites/production/files/2016-09/documents/glycol-ethers.pdf</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_172397 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_172397">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>An endocrine disruptor that is perfluoroalkyl substance, used widely in industrial applications, such as firefighting foams and non-stick pan, paper, and textile coatings.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:172397</oboInOwl:id>
+        <rdfs:label>perfluoroalkyl substance</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_172397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An endocrine disruptor that is perfluoroalkyl substance, used widely in industrial applications, such as firefighting foams and non-stick pan, paper, and textile coatings.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_17245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64909"/>
+        <obo:IAO_0000115>A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:17245</oboInOwl:id>
+        <rdfs:label>carbon monoxide</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17245"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/carbonmonoxidepoisoning.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/co/faqs.htm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_17514 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17514">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64909"/>
+        <obo:IAO_0000115>A pseudohalide anion that is the conjugate base of hydrogen cyanide.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:17514</oboInOwl:id>
+        <rdfs:label>cyanide</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17514"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pseudohalide anion that is the conjugate base of hydrogen cyanide.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://emergency.cdc.gov/agent/cyanide/basics/facts.asp</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_22271 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22271">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27026"/>
+        <obo:IAO_0000115>Any of a group of related and highly toxic secondary metabolites (mycotoxins) whose main structural feature is a fused coumarin-bis (dihydrofuran) ring system and which are produced by strains of the moulds Aspergillus flavus or A. parasiticus, together with further metabolites of these mycotoxins.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:22271</oboInOwl:id>
+        <rdfs:label>aflatoxin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22271"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any of a group of related and highly toxic secondary metabolites (mycotoxins) whose main structural feature is a fused coumarin-bis (dihydrofuran) ring system and which are produced by strains of the moulds Aspergillus flavus or A. parasiticus, together with further metabolites of these mycotoxins.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Aflatoxin</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aflatoxins</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.fda.gov/animal-veterinary/animal-health-literacy/aflatoxin-poisoning-pets</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_22977 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22977">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A heavy metal that is cadmium, a soft, malleable, bluish white metal found in zinc ores.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:22977</oboInOwl:id>
+        <rdfs:label>cadmium</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22977"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A heavy metal that is cadmium, a soft, malleable, bluish white metal found in zinc ores.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.osha.gov/cadmium</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_25016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A chemical driver that is composed of lead, which is found primarily in old paint, old paint dust, contaminated soil or contaminated drinking water.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:25016</oboInOwl:id>
         <rdfs:label xml:lang="en">lead</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chemical driver that is composed of lead, which is found primarily in old paint, old paint dust, contaminated soil or contaminated drinking water.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/lead</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A heavy metal that is mercury, is toxic to living organisms, is an odorless, shiny, silver-white liquid that is commonly used in thermometers, barometers and fluorescent light bulbs.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:25195</oboInOwl:id>
+        <rdfs:label>mercury</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25195"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A heavy metal that is mercury, is toxic to living organisms, is an odorless, shiny, silver-white liquid that is commonly used in thermometers, barometers and fluorescent light bulbs.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/mercury/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>An endocrine disruptor that is phthalate, used to make plastics more flexible, they are also found in some food packaging, cosmetics, children’s toys, and medical devices. A family of benzene derivatives that are formed by esterification of phthalic acid. Phthalates are added to increase the flexibility and softness of commercial plastics, which are incorporated into a wide variety of consumer goods. Ingested phthalates may exhibit estrogenic or antiandrogenic effects or they may act as endocrine disruptors.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C152072</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:26092</oboInOwl:id>
+        <rdfs:label>phthalate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An endocrine disruptor that is phthalate, used to make plastics more flexible, they are also found in some food packaging, cosmetics, children’s toys, and medical devices. A family of benzene derivatives that are formed by esterification of phthalic acid. Phthalates are added to increase the flexibility and softness of commercial plastics, which are incorporated into a wide variety of consumer goods. Ingested phthalates may exhibit estrogenic or antiandrogenic effects or they may act as endocrine disruptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000003"/>
+        <oboInOwl:id>CHEBI:27026</oboInOwl:id>
+        <rdfs:label>toxin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27470 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27470">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>An N-acyl-amino acid that is a form of the water-soluble vitamin B9. Its biologically active forms (tetrahydrofolate and others) are essential for nucleotide biosynthesis and homocysteine remethylation.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:27470</oboInOwl:id>
+        <rdfs:label>folic acid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27470"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An N-acyl-amino acid that is a form of the water-soluble vitamin B9. Its biologically active forms (tetrahydrofolate and others) are essential for nucleotide biosynthesis and homocysteine remethylation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK535377/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27563 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27563">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A heavy metal that is arsenic, a heavy metal that is poisonous at low concentrations.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C28131</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:27563</oboInOwl:id>
+        <rdfs:label>arsenic</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27563"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A heavy metal that is arsenic, a heavy metal that is poisonous at low concentrations.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/arsenic/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27638 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27638">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A cobalt group element atom that has atomic number 27.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:27638</oboInOwl:id>
+        <rdfs:label>cobalt atom</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27638"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cobalt group element atom that has atomic number 27.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Cobalt</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_28073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_28073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A heavy metal that is chromium, a chromium group element atom that has atomic number 24.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:28073</oboInOwl:id>
+        <rdfs:label>chromium</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28073"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A heavy metal that is chromium, a chromium group element atom that has atomic number 24.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Chromium</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_28619 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_28619">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A member of the class of acrylamides that results from the formal condensation of acrylic acid with ammonia.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>DRON:00723948</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C44329</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIT:0020033</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:28619</oboInOwl:id>
+        <rdfs:label>acrylamide</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A member of the class of acrylamides that results from the formal condensation of acrylic acid with ammonia.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/acrylamide/index.cf</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30440 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30440">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <obo:IAO_0000115>A metallic element first identified and named from the brilliant green line in its flame spectrum (from Greek thetaalphalambdalambdaomicronsigma, a green shoot).</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:30440</oboInOwl:id>
+        <rdfs:label>thalium</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30440"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A metallic element first identified and named from the brilliant green line in its flame spectrum (from Greek thetaalphalambdalambdaomicronsigma, a green shoot).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Thallium</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/niosh/ershdb/emergencyresponsecard_29750026.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30785 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30785">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64909"/>
+        <obo:IAO_0000115>A poison that is methylmercury.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:30785</oboInOwl:id>
+        <rdfs:label>methylmercury</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30785"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A poison that is methylmercury.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.epa.gov/mercury/how-people-are-exposed-mercury#methylmercury</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -174,6 +673,147 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound in which a hydroxy group, -OH, is attached to a saturated carbon atom.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://medlineplus.gov/alcohol.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>A bisphenol that is 4,4&apos;-methanediyldiphenol in which the methylene hydrogens are replaced by two methyl groups.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:33216</oboInOwl:id>
+        <rdfs:label>bisphenol A</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33216"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A bisphenol that is 4,4&apos;-methanediyldiphenol in which the methylene hydrogens are replaced by two methyl groups.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Bisphenol_A</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/sya-bpa/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_79314"/>
+        <obo:IAO_0000115>A bromobisphenol that is 4,4&apos;-methanediyldiphenol in which the methylene hydrogens are replaced by two methyl groups and the phenyl rings are substituted by bromo groups at positions 2, 2&apos;, 6 and 6&apos;. It is a brominated flame retardant.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>tetrabromobisphenol A</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHEBI:33217</oboInOwl:id>
+        <rdfs:label>3,3&apos;,5,5&apos;-tetrabromobisphenol A</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33217"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A bromobisphenol that is 4,4&apos;-methanediyldiphenol in which the methylene hydrogens are replaced by two methyl groups and the phenyl rings are substituted by bromo groups at positions 2, 2&apos;, 6 and 6&apos;. It is a brominated flame retardant.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/flame_retardants/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>A biochemical role played by any micronutrient that is an organic compound. Vitamins are present in foods in small amounts and are essential to normal metabolism and biochemical functions, usually as coenzymes.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:33229</oboInOwl:id>
+        <rdfs:label>vitamin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33229"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A biochemical role played by any micronutrient that is an organic compound. Vitamins are present in foods in small amounts and are essential to normal metabolism and biochemical functions, usually as coenzymes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Vitamin</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33284 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33284">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000003"/>
+        <obo:IAO_0000115>A nutrient is a food component that an organism uses to survive and grow.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C157938</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:33284</oboInOwl:id>
+        <rdfs:label>nutrient</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A nutrient is a food component that an organism uses to survive and grow.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.who.int/health-topics/micronutrients</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35446 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35446">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>A chloroarene that consists of a biphenyl skeleton substituted by one or more chloro groups.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:35446</oboInOwl:id>
+        <rdfs:label>chlorobiphenyl</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35446"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chloroarene that consists of a biphenyl skeleton substituted by one or more chloro groups.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_41922 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_41922">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>An olefinic compound that is trans-hex-3-ene in which the hydrogens at positions 3 and 4 have been replaced by p-hydroxyphenyl groups.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:41922</oboInOwl:id>
+        <rdfs:label>diethylstilbestrol</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_41922"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An olefinic compound that is trans-hex-3-ene in which the hydrogens at positions 3 and 4 have been replaced by p-hydroxyphenyl groups.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Diethylstilbestrol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/des/consumers/about/index.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46661 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46661">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Fibrous incombustible mineral composed of magnesium and calcium silicates with or without other elements.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C284</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:46661</oboInOwl:id>
+        <rdfs:label>asbestos</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46661"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Fibrous incombustible mineral composed of magnesium and calcium silicates with or without other elements.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/asbestos.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49706 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_49706">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>A monovalent inorganic anion obtained by deprotonation of perchloric acid.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:49706</oboInOwl:id>
+        <rdfs:label>percholrate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_49706"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A monovalent inorganic anion obtained by deprotonation of perchloric acid.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -195,12 +835,128 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_53212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_53212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Organonitrogen compounds that are derivatives of isocyanic acid; compounds containing the isocyanate functional group -N=C=O.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:53212</oboInOwl:id>
+        <rdfs:label>isocyanates</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53212"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Organonitrogen compounds that are derivatives of isocyanic acid; compounds containing the isocyanate functional group -N=C=O.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www.osha.gov/isocyanates</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_53218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_53218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A diisocyanate consisting of diphenylmethane with two isocyanate groups at the 4- and 4&apos;-positions.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:53218</oboInOwl:id>
+        <rdfs:label>diphenylmethane-4,4-diisocyanate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53218"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A diisocyanate consisting of diphenylmethane with two isocyanate groups at the 4- and 4&apos;-positions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Methylene_diphenyl_diisocyanate</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_5631 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_5631">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64909"/>
+        <obo:IAO_0000115>Any metal that is characterized by its rather high atomic mass and density. Although typically occurring in low concentrations, they can be found all throughout the Earth&apos;s crust (Commonly, a density of at least 5 g cm(3) is used to define a heavy metal and to differentiate it from other, &apos;&apos;light&apos;&apos; metals).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>OMIT:0019292</oboInOwl:hasDbXref>
+        <oboInOwl:id>CHEBI:5631</oboInOwl:id>
+        <rdfs:label>heavy metal</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any metal that is characterized by its rather high atomic mass and density. Although typically occurring in low concentrations, they can be found all throughout the Earth&apos;s crust (Commonly, a density of at least 5 g cm(3) is used to define a heavy metal and to differentiate it from other, &apos;&apos;light&apos;&apos; metals).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Heavy_metals</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.lenntech.com/processes/heavy/heavy-metals/heavy-metals.htm#ixzz6s7SaXlej</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64909 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64909">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Any substance that causes disturbance to organisms by chemical reaction or other activity on the molecular scale, when a sufficient quantity is absorbed by the organism.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:64909</oboInOwl:id>
+        <rdfs:label>poison</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64909"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any substance that causes disturbance to organisms by chemical reaction or other activity on the molecular scale, when a sufficient quantity is absorbed by the organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Poison</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/poisoning.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_76989 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_76989">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>Any compound produced by a plant that happens to have estrogenic activity.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:76989</oboInOwl:id>
+        <rdfs:label>phytoestrogen</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_76989"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any compound produced by a plant that happens to have estrogenic activity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Phytoestrogen</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/endocrine/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_79314 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_79314">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Any compound that is added to manufactured materials to inhibit, suppress, or delay the production of flames and so prevent the spread of fire.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:79314</oboInOwl:id>
+        <rdfs:label>flame retardant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_79314"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any compound that is added to manufactured materials to inhibit, suppress, or delay the production of flames and so prevent the spread of fire.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/flame_retardants/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_9513 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_9513">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A chemical driver that acts primarily by inhibiting both the production 
+of tumor necrosis factor alpha (TNF-alpha) in stimulated peripheral monocytes and the activities of interleukins and interferons and also inhibits polymorphonuclear chemotaxis and monocyte phagocytosis.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:9513</oboInOwl:id>
         <rdfs:label xml:lang="en">thalidomide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_9513"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chemical driver that acts primarily by inhibiting both the production 
+of tumor necrosis factor alpha (TNF-alpha) in stimulated peripheral monocytes and the activities of interleukins and interferons and also inhibits polymorphonuclear chemotaxis and monocyte phagocytosis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Thalidomide</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -333,6 +1089,59 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>An excreta material which is composed primarily of feces, an excreta consisting of waste products expelled from an animal&apos;s digestive tract through the anus (or cloaca) during defecation.</obo:IAO_0000115>
+        <oboInOwl:id>ENVO:00002003</oboInOwl:id>
+        <rdfs:label>fecal material</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An excreta material which is composed primarily of feces, an excreta consisting of waste products expelled from an animal&apos;s digestive tract through the anus (or cloaca) during defecation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Feces</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001297 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001297">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000007"/>
+        <obo:IAO_0000115>An atmospheric storm during which a large mass of atmospheric gas rotates around a centre of low atmospheric pressure, generating high winds which spiral towards that centre.</obo:IAO_0000115>
+        <oboInOwl:id>ENVO:01001297</oboInOwl:id>
+        <rdfs:label>cyclone</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001297"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An atmospheric storm during which a large mass of atmospheric gas rotates around a centre of low atmospheric pressure, generating high winds which spiral towards that centre.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Cyclone</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_2000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_2000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A feature that arises from a rapid increase or accumulation in the population of algae (typically microscopic) in an aquatic system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ENVO:02500018</oboInOwl:hasDbXref>
+        <oboInOwl:id>ENVO:2000004</oboInOwl:id>
+        <rdfs:label>algal bloom</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A feature that arises from a rapid increase or accumulation in the population of algae (typically microscopic) in an aquatic system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/algal-blooms/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ExO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000007">
@@ -423,19 +1232,428 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03413761 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03413761">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33229"/>
+        <obo:IAO_0000115>An essential nutrient and natural water-soluble vitamin of the B-complex family that must combine with an intrinsic factor for absorption by the intestine, Vitamin B12 (cyanocobalamin) is necessary for hematopoiesis, neural metabolism, DNA and RNA production, and carbohydrate, fat, and protein metabolism. B12 improves iron functions in the metabolic cycle and assists folic acid in choline synthesis. B12 metabolism is interconnected with that of folic acid. Vitamin B12 deficiency causes pernicious anemia, megaloblastic anemia, and neurologic lesions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C939</oboInOwl:hasDbXref>
+        <oboInOwl:id>FOODON:03413761</oboInOwl:id>
+        <rdfs:label>vitamin B12</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413761"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An essential nutrient and natural water-soluble vitamin of the B-complex family that must combine with an intrinsic factor for absorption by the intestine, Vitamin B12 (cyanocobalamin) is necessary for hematopoiesis, neural metabolism, DNA and RNA production, and carbohydrate, fat, and protein metabolism. B12 improves iron functions in the metabolic cycle and assists folic acid in choline synthesis. B12 metabolism is interconnected with that of folic acid. Vitamin B12 deficiency causes pernicious anemia, megaloblastic anemia, and neurologic lesions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.merckmanuals.com/home/disorders-of-nutrition/vitamins/vitamin-b12-deficiency</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6954">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>An allergen that is an American house dust mite, microscopic, insect-like pests that commonly live in house dust. They feed on flakes of dead skin, or dander, that are shed by people and pets. These tiny creatures are a big source of allergens and can worsen allergies and asthma. Dust mites can live in mattresses, bedding, upholstered furniture, carpets, and curtains in your home.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>OMIT:0022964</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Dermatophagoides farinae</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>NCBITaxon:6954</oboInOwl:id>
+        <rdfs:label>American house dust mite</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6954"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An allergen that is an American house dust mite, microscopic, insect-like pests that commonly live in house dust. They feed on flakes of dead skin, or dander, that are shed by people and pets. These tiny creatures are a big source of allergens and can worsen allergies and asthma. Dust mites can live in mattresses, bedding, upholstered furniture, carpets, and curtains in your home.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/dustmites/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6956 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6956">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>An allergen that is an European house dust mite, microscopic, insect-like pests that commonly live in house dust. They feed on flakes of dead skin, or dander, that are shed by people and pets. These tiny creatures are a big source of allergens and can worsen allergies and asthma. Dust mites can live in mattresses, bedding, upholstered furniture, carpets, and curtains in your home.</obo:IAO_0000115>
+        <oboInOwl:id>NCBITaxon:6956</oboInOwl:id>
+        <rdfs:label>European house dust mite</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6956"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An allergen that is an European house dust mite, microscopic, insect-like pests that commonly live in house dust. They feed on flakes of dead skin, or dander, that are shed by people and pets. These tiny creatures are a big source of allergens and can worsen allergies and asthma. Dust mites can live in mattresses, bedding, upholstered furniture, carpets, and curtains in your home.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/dustmites/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C14329 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C14329">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000003"/>
+        <obo:IAO_0000115>A biological agent that is a microorganism, including bacteria, viruses, or fungi. A microscopic organism. The term microorganism may refer to a prokaryote or eukaryote, and may be a unicellular or multicellular organism. All taxonomic kingdoms contain microorganisms.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C14329</oboInOwl:id>
+        <rdfs:label>microorganism</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C14329"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A biological agent that is a microorganism, including bacteria, viruses, or fungi. A microscopic organism. The term microorganism may refer to a prokaryote or eukaryote, and may be a unicellular or multicellular organism. All taxonomic kingdoms contain microorganisms.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.osha.gov/biological-agents</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C15354 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C15354">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>A choline that is the parent compound of the cholines class, consisting of ethanolamine having three methyl substituents attached to the amino function.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:15354</oboInOwl:id>
+        <rdfs:label>choline</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C15354"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A choline that is the parent compound of the cholines class, consisting of ethanolamine having three methyl substituents attached to the amino function.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ods.od.nih.gov/factsheets/Choline-HealthProfessional/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C163032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C163032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000003"/>
-        <obo:IAO_0000115>A biological driver that is botulinum toxin, caused by a toxin made by a bacterium called Clostridium botulinum.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27026"/>
+        <obo:IAO_0000115>A biological toxin that is botulinum toxin, caused by a toxin made by a bacterium called Clostridium botulinum.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FBbi:00000465</oboInOwl:hasDbXref>
         <oboInOwl:id>NCIT:C163032</oboInOwl:id>
         <rdfs:label>botulinum toxin</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C163032"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A biological driver that is botulinum toxin, caused by a toxin made by a bacterium called Clostridium botulinum.</owl:annotatedTarget>
+        <owl:annotatedTarget>A biological toxin that is botulinum toxin, caused by a toxin made by a bacterium called Clostridium botulinum.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://www.osha.gov/botulism</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C28266 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C28266">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C14329"/>
+        <obo:IAO_0000115>A very large group of microscopic fungi that live on plant or animal matter. Most are filamentous organisms and produce spores that can be air-, water-, or insect-borne.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C28266</oboInOwl:id>
+        <rdfs:label>mold</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C28266"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A very large group of microscopic fungi that live on plant or animal matter. Most are filamentous organisms and produce spores that can be air-, water-, or insect-borne.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/mold/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C3387 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C3387">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A dibenzoazepine that is 5H-dibenzo[b,f]azepine carrying a carbamoyl substituent at the azepine nitrogen, used as an anticonvulsant.</obo:IAO_0000115>
+        <oboInOwl:id>CHEBI:3387</oboInOwl:id>
+        <rdfs:label>carbamazepine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3387"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A dibenzoazepine that is 5H-dibenzo[b,f]azepine carrying a carbamoyl substituent at the azepine nitrogen, used as an anticonvulsant.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Carbamazepine</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/26329145/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C391 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C391">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>An element with atomic symbol Cu, atomic number 29, and atomic weight 63.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C391</oboInOwl:id>
+        <rdfs:label>copper</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C391"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An element with atomic symbol Cu, atomic number 29, and atomic weight 63.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5637704/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C44357 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C44357">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A highly corrosive, inorganic substance that contains the metallic element chromium in its positive-6 valence state. Chromium hexavalent compounds are used in stainless steel production, in chrome plating, in the manufacture of dyes and pigments, in leather tanning, in wood preservation and are used as corrosion inhibitors. Inhalation exposure of these compounds mainly affects the respiratory tract causing shortness of breath, nasal itching, asthma, coughing, bronchitis and pneumonia, but can also affect the liver, kidneys, gastrointestinal tract and the immune system. Chromium hexavalent compounds are carcinogenic in humans and are associated with an increased risk of developing lung cancer and cancer of the sinonasal cavity.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C44357</oboInOwl:id>
+        <rdfs:label>chromium hexavalent compound</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C44357"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A highly corrosive, inorganic substance that contains the metallic element chromium in its positive-6 valence state. Chromium hexavalent compounds are used in stainless steel production, in chrome plating, in the manufacture of dyes and pigments, in leather tanning, in wood preservation and are used as corrosion inhibitors. Inhalation exposure of these compounds mainly affects the respiratory tract causing shortness of breath, nasal itching, asthma, coughing, bronchitis and pneumonia, but can also affect the liver, kidneys, gastrointestinal tract and the immune system. Chromium hexavalent compounds are carcinogenic in humans and are associated with an increased risk of developing lung cancer and cancer of the sinonasal cavity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/hex-chromium/index.cf</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C594 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C594">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>An element that is necessary for the body to make thyroid hormone. It is found in shellfish and iodized salt.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>CHEBI:24859</oboInOwl:hasDbXref>
+        <oboInOwl:id>NCIT:C594</oboInOwl:id>
+        <rdfs:label>iodine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C594"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An element that is necessary for the body to make thyroid hormone. It is found in shellfish and iodized salt.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C598 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C598">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+        <obo:IAO_0000115>An important mineral the body needs to make hemoglobin, a substance in the blood that carries oxygen from the lungs to tissues throughout the body. Iron is also an important part of many other proteins and enzymes needed by the body for normal growth and development. It is found in red meat, fish, poultry, lentils, beans, and foods with iron added, such as cereal.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>CHEBI:18248</oboInOwl:hasDbXref>
+        <oboInOwl:id>NCIT:C598</oboInOwl:id>
+        <rdfs:label>iron</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C598"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An important mineral the body needs to make hemoglobin, a substance in the blood that carries oxygen from the lungs to tissues throughout the body. Iron is also an important part of many other proteins and enzymes needed by the body for normal growth and development. It is found in red meat, fish, poultry, lentils, beans, and foods with iron added, such as cereal.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/iron-deficiency-adults</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C603 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C603">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A chemical driver that is accutane (retinoic acid), a medication primarily used to treat severe acne.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Isotretinoin</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>NCIT:C603</oboInOwl:id>
+        <rdfs:label>accutane</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C603"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chemical driver that is accutane (retinoic acid), a medication primarily used to treat severe acne.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/018662s059lbl.pdf</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C689 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C689">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33229"/>
+        <obo:IAO_0000115>A water-soluble vitamin belonging to the vitamin B family, which occurs in many animal and plant tissues, with antihyperlipidemic activity. Niacin is converted to its active form niacinamide, which is a component of the coenzymes nicotinamide adenine dinucleotide (NAD) and its phosphate form, NADP. These coenzymes play an important role in tissue respiration and in glycogen, lipid, amino acid, protein, and purine metabolism. Although the exact mechanism of action by which niacin lowers cholesterol is not fully understood, it may act by inhibiting the synthesis of very low density lipoproteins (VLDL), inhibiting the release of free fatty acids from adipose tissue, increasing lipoprotein lipase activity, and reducing the hepatic synthesis of VLDL-C and LDL-C.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C689</oboInOwl:id>
+        <rdfs:label>niacin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C689"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A water-soluble vitamin belonging to the vitamin B family, which occurs in many animal and plant tissues, with antihyperlipidemic activity. Niacin is converted to its active form niacinamide, which is a component of the coenzymes nicotinamide adenine dinucleotide (NAD) and its phosphate form, NADP. These coenzymes play an important role in tissue respiration and in glycogen, lipid, amino acid, protein, and purine metabolism. Although the exact mechanism of action by which niacin lowers cholesterol is not fully understood, it may act by inhibiting the synthesis of very low density lipoproteins (VLDL), inhibiting the release of free fatty acids from adipose tissue, increasing lipoprotein lipase activity, and reducing the hepatic synthesis of VLDL-C and LDL-C.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK557728/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C79660 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C79660">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>The male genetic material of a seed plant contained in the anther, usually appearing as fine grains or dust.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BTO:0001097</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C79660</oboInOwl:hasDbXref>
+        <oboInOwl:id>NCIT:C79660</oboInOwl:id>
+        <rdfs:label>pollen</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C79660"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The male genetic material of a seed plant contained in the anther, usually appearing as fine grains or dust.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/pollen/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C809 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C809">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27026"/>
+        <obo:IAO_0000115>A phytotoxin and lectin comprised of a homodimer of ricin toxin A and B chains derived from the seeds of Ricinus communis, the castor oil plant, with protein synthesis inhibitory activity and extremely high cytotoxicity. Following ingestion, inhalation or injection of ricin, the B chain binds to complex carbohydrates containing either terminal N-acetylgalactosamine or beta-1,4-linked galactose residues on the surface of cells. Subsequently, the ricin A/B heterodimer is internalized and undergoes retrograde transport to the endoplasmic reticulum (ER). In the ER, the A chain, which has enzymatic activity that is sterically hindered by the B chain, is proteolytically released from the heterodimer by protein disulfide isomerase. In the ER, the free A chain has N-glycosidase activity that cleaves 28S rRNA. This enzymatic cleavage disrupts the ribosome, halts protein synthesis, and can lead to cell death. The extreme cytotoxicity of ricin makes it an attractive candidate for artificial fusion with binding proteins to create cell-type-specific toxins.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>OMIT:0013190</oboInOwl:hasDbXref>
+        <oboInOwl:id>NCIT:C809</oboInOwl:id>
+        <rdfs:label>ricin toxin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C809"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A phytotoxin and lectin comprised of a homodimer of ricin toxin A and B chains derived from the seeds of Ricinus communis, the castor oil plant, with protein synthesis inhibitory activity and extremely high cytotoxicity. Following ingestion, inhalation or injection of ricin, the B chain binds to complex carbohydrates containing either terminal N-acetylgalactosamine or beta-1,4-linked galactose residues on the surface of cells. Subsequently, the ricin A/B heterodimer is internalized and undergoes retrograde transport to the endoplasmic reticulum (ER). In the ER, the A chain, which has enzymatic activity that is sterically hindered by the B chain, is proteolytically released from the heterodimer by protein disulfide isomerase. In the ER, the free A chain has N-glycosidase activity that cleaves 28S rRNA. This enzymatic cleavage disrupts the ribosome, halts protein synthesis, and can lead to cell death. The extreme cytotoxicity of ricin makes it an attractive candidate for artificial fusion with binding proteins to create cell-type-specific toxins.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.osha.gov/ricin</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C81304 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C81304">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000003"/>
+        <obo:IAO_0000115>Any natural or synthetic composition that replicates the structure or function of a native component of blood.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C81304</oboInOwl:id>
+        <rdfs:label>blood product</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C81304"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any natural or synthetic composition that replicates the structure or function of a native component of blood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK539826/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C829 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C829">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>Smoke from burning tobacco (cigarettes, cigars, or pipes) and exhaled by a smoker. Tobacco smoke contains nicotine, a stimulant, and other biologically active chemicals having carcinogenic properties.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C829</oboInOwl:id>
+        <rdfs:label>tobacco smoke</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C829"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Smoke from burning tobacco (cigarettes, cigars, or pipes) and exhaled by a smoker. Tobacco smoke contains nicotine, a stimulant, and other biologically active chemicals having carcinogenic properties.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/index.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/26043318</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/smoke/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C943 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C943">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33229"/>
+        <obo:IAO_0000115>The term &quot;vitamin K&quot; refers to a group of chemically similar fat-soluble compounds called naphthoquinones: vitamin K1 (phytonadione) is found in plants and is the primary source of vitamin K for humans through dietary consumption, vitamin K2 compounds (menaquinones) are made by bacteria in the human gut, and vitamin K3 (menadione) is a water-soluble preparation available for adults only. Vitamin K is necessary for the liver to produce the coagulation factors II, VII, IX, and X, as well as the clotting factors protein C, protein S, and protein Z; vitamin K deficiency can result in deficiencies of these coagulation factors and excess bleeding. An injection of vitamin K is routinely given to newborn infants to prevent vitamin K deficiency bleeding, also known as hemorrhagic disease of the newborn. Vitamin K deficiency is rare in adults but may result from chronic malnutrition or an inability to absorb dietary vitamins.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>CHEBI:28384</oboInOwl:hasDbXref>
+        <oboInOwl:id>NCIT:C943</oboInOwl:id>
+        <rdfs:label>vitamin K</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C943"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The term &quot;vitamin K&quot; refers to a group of chemically similar fat-soluble compounds called naphthoquinones: vitamin K1 (phytonadione) is found in plants and is the primary source of vitamin K for humans through dietary consumption, vitamin K2 compounds (menaquinones) are made by bacteria in the human gut, and vitamin K3 (menadione) is a water-soluble preparation available for adults only. Vitamin K is necessary for the liver to produce the coagulation factors II, VII, IX, and X, as well as the clotting factors protein C, protein S, and protein Z; vitamin K deficiency can result in deficiencies of these coagulation factors and excess bleeding. An injection of vitamin K is routinely given to newborn infants to prevent vitamin K deficiency bleeding, also known as hemorrhagic disease of the newborn. Vitamin K deficiency is rare in adults but may result from chronic malnutrition or an inability to absorb dietary vitamins.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK536983/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIT_0001823 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIT_0001823">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
+        <obo:IAO_0000115>A chemical driver that is air pollution, that is composed of a mixture of chemical and particulate matter pollutants in outdoor air, including but not limited to carbon monoxide, ozone, sulfur dixoide, nitrogen dioxide, lead, and fine partiuculate matter. Vehicle emissions, fuel oils and natural gas to heat homes, by-products of manufacturing and power generation, particularly coal-fueled power plants, and fumes from chemical production are the primary sources of human-made air pollution. A pollution process during which particulates or other contaminants are released into a portion of air.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ENVO:02500037</oboInOwl:hasDbXref>
+        <oboInOwl:id>OMIT:0001823</oboInOwl:id>
+        <rdfs:label>air pollution</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001823"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A chemical driver that is air pollution, that is composed of a mixture of chemical and particulate matter pollutants in outdoor air, including but not limited to carbon monoxide, ozone, sulfur dixoide, nitrogen dioxide, lead, and fine partiuculate matter. Vehicle emissions, fuel oils and natural gas to heat homes, by-products of manufacturing and power generation, particularly coal-fueled power plants, and fumes from chemical production are the primary sources of human-made air pollution. A pollution process during which particulates or other contaminants are released into a portion of air.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.epa.gov/clean-air-act-overview/air-pollution-current-and-future-challenges</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/air-pollution/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIT_0004368 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIT_0004368">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>An allergen that is a cockroach, a source of indoor allergens.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCBITaxon:85823</oboInOwl:hasDbXref>
+        <oboInOwl:id>OMIT:0004368</oboInOwl:id>
+        <rdfs:label>cockroaches</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OMIT_0004368"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An allergen that is a cockroach, a source of indoor allergens.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/dustmites/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIT_0005411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIT_0005411">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138015"/>
+        <obo:IAO_0000115>An endocrine disruptor that is dioxin, are mainly byproducts of industrial practices. They are produced through a variety of incineration processes, including improper municipal waste incineration and burning of trash, and can be released into the air during natural processes, such as forest fires and volcanoes.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C442</oboInOwl:hasDbXref>
+        <oboInOwl:id>OMIT:0005411</oboInOwl:id>
+        <rdfs:label>dioxin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OMIT_0005411"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An endocrine disruptor that is dioxin, are mainly byproducts of industrial practices. They are produced through a variety of incineration processes, including improper municipal waste incineration and burning of trash, and can be released into the air during natural processes, such as forest fires and volcanoes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/dioxins/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIT_0028282 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMIT_0028282">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50904"/>
+        <obo:IAO_0000115>An allergen that is dander, may trigger allergy symptoms like sneezing or red, itchy eyes. Pet dander, the source of allergens, is composed of tiny, even microscopic, proteins from flecks of skin shed by pets.</obo:IAO_0000115>
+        <oboInOwl:id>OMIT:0028282</oboInOwl:id>
+        <rdfs:label>dander</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OMIT_0028282"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An allergen that is dander, may trigger allergy symptoms like sneezing or red, itchy eyes. Pet dander, the source of allergens, is composed of tiny, even microscopic, proteins from flecks of skin shed by pets.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/pets/index.cfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT:C13234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT:C13234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002003"/>
+        <obo:IAO_0000115>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C13234</oboInOwl:id>
+        <rdfs:label>feces</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT:C13234"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://nchh.org/information-and-evidence/learn-about-healthy-housing/health-hazards-prevention-and-solutions/rodents/</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

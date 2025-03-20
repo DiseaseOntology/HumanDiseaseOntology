@@ -23,7 +23,7 @@ ROBOT := java -Xmx10G -jar ../../../build/robot.jar
 # 2. `make versions` - Update only <import>.version files in imports/build
 # 3. `make sources` - Update versions and source files in imports/build
 
-IMPORT_OWL := cl eco foodon geno hp ro so symp trans uberon
+IMPORT_OWL := cl disdriv eco foodon geno hp ro so symp trans uberon
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
 IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
@@ -166,6 +166,15 @@ $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
 # ----------------------------------------
 # FULL IMPORTS
 # ----------------------------------------
+
+disdriv: disdriv_import.owl
+disdriv_import.owl: build/disdriv.owl | build/disdriv.version build/last
+	@$(call announce_version,$@,$|)
+	@$(save_last)
+	@$(ROBOT) remove \
+	 --input $< \
+	 --select "owl:deprecated='true'^^xsd:boolean" \
+	$(call annotate_import,$@,$|)
 
 symp: symp_import.owl
 symp_import.owl: build/symp.owl | build/symp.version build/last

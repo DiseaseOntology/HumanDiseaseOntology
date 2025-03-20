@@ -400,9 +400,9 @@ $(OPT_FIX): opt_fix_%: $(EDIT) src/sparql/update/opt_fix_%.ru | \
 # 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
 # 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
 
-IMPS := chebi cl eco foodon geno hp ncbitaxon ro so symp trans uberon
+IMPS := chebi cl disdriv eco foodon geno hp ncbitaxon ro so symp trans uberon
 # define imports updated manually, solely for versioning
-MANUAL_IMPS := disdriv omim_susc
+MANUAL_IMPS := omim_susc
 
 imports: | check_robot
 	@echo "Checking import modules..."

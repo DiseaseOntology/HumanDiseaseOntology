@@ -31,13 +31,13 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <obo:IAO_0000115>The official definition.</obo:IAO_0000115>
+        <obo:IAO_0000115>The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
         <rdfs:label>definition</rdfs:label>
     </owl:AnnotationProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The official definition.</owl:annotatedTarget>
+        <owl:annotatedTarget>The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://purl.obolibrary.org/obo/iao.owl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -112,7 +112,7 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
-        <rdfs:label>has exact synonym</rdfs:label>
+        <rdfs:label>has_exact_synonym</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -186,7 +186,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0007000">
         <obo:IAO_0000115>A relation between two entities, in which one of the entities is any natural or human-influenced factor that directly or indirectly causes a change in the other entity.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">has_driver</rdfs:label>
+        <rdfs:label xml:lang="en">has driver</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0007000"/>
@@ -594,7 +594,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5631"/>
         <obo:IAO_0000115>A heavy metal that is chromium, a chromium group element atom that has atomic number 24.</obo:IAO_0000115>
         <oboInOwl:id>CHEBI:28073</oboInOwl:id>
-        <rdfs:label>chromium</rdfs:label>
+        <rdfs:label>chromium atom</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28073"/>
@@ -858,7 +858,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DISDRIV_0000006"/>
         <obo:IAO_0000115>A diisocyanate consisting of diphenylmethane with two isocyanate groups at the 4- and 4&apos;-positions.</obo:IAO_0000115>
         <oboInOwl:id>CHEBI:53218</oboInOwl:id>
-        <rdfs:label>diphenylmethane-4,4-diisocyanate</rdfs:label>
+        <rdfs:label>diphenylmethane-4,4&apos;-diisocyanate</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53218"/>
@@ -1286,6 +1286,23 @@ of tumor necrosis factor alpha (TNF-alpha) in stimulated peripheral monocytes an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C13234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C13234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002003"/>
+        <obo:IAO_0000115>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</obo:IAO_0000115>
+        <oboInOwl:id>NCIT:C13234</oboInOwl:id>
+        <rdfs:label>feces</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C13234"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://nchh.org/information-and-evidence/learn-about-healthy-housing/health-hazards-prevention-and-solutions/rodents/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C14329 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C14329">
@@ -1637,23 +1654,6 @@ of tumor necrosis factor alpha (TNF-alpha) in stimulated peripheral monocytes an
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An allergen that is dander, may trigger allergy symptoms like sneezing or red, itchy eyes. Pet dander, the source of allergens, is composed of tiny, even microscopic, proteins from flecks of skin shed by pets.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://www.niehs.nih.gov/health/topics/agents/allergens/pets/index.cfm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT:C13234 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT:C13234">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002003"/>
-        <obo:IAO_0000115>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</obo:IAO_0000115>
-        <oboInOwl:id>NCIT:C13234</oboInOwl:id>
-        <rdfs:label>feces</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT:C13234"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://nchh.org/information-and-evidence/learn-about-healthy-housing/health-hazards-prevention-and-solutions/rodents/</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

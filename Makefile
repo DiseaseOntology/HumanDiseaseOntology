@@ -753,6 +753,7 @@ post: build/reports/report-diff.txt \
       build/reports/hp-do-overlap.csv
 
 # Get the last release of doid-merged.owl, if newer available (always run)
+.PHONY: FORCE
 FORCE:
 
 build/doid-merged-last.version: FORCE | build

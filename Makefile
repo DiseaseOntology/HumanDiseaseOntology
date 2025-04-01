@@ -921,6 +921,10 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	 --output $(DOLANG)-$*.owl
 	@echo "Created $(DOLANG)-$*.owl"
 
+$(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","$(OBO)doid/translations/$(notdir $(basename $@))")
+	@echo "Created $@"
+
 # ----------------------------------------
 # DOID-INTERNATIONAL
 # ----------------------------------------

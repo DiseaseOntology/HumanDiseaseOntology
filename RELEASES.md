@@ -13,13 +13,28 @@
 
 ## 2025 Releases
 
+### [v2025-03-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-03-31)
+
+This release of the Human Disease Ontology includes 11,858 disease classes, 9,540 with textual definitions (80.3%). This release also includes a large update expanding the disease text (labels, synonyms, & definitions) in Spanish.
+
+Newly revised and expanded diseases include subtypes for autosomal dominant tubulointerstitial kidney diseases, Carey-Fineman-Ziter syndromes, Perrault syndromes, retinitis pigmentosas, autosomal recessive intellectual developmental disorders, and sitosterolemias. Additionally, revisions have been made to Alkhumra hemorrhagic fever, Alpers-Huttenlocher syndrome, Powassan encephalitis, Billuart-type X-linked syndromic intellectual developmental disorder, cherubism, lissencephaly 1, primary ovarian insufficiency 3, renal cysts and diabetes syndrome, and tibial muscular dystrophy.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-03-03...v2025-03-31
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-03-31/src/ontology/doid-merged.obo) | |
+
 ### [v2025-03-03](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-03-03)
 
 This release of the Human Disease Ontology includes 11,837 disease classes, 9,519 with textual definitions (80.4%).
 
 Newly added diseases include the new grouping term autosomal dominant primary microcephaly, and numerous genetic subtypes for autosomal dominant intellectual developmental disorder, Carpenter syndrome, congenital disorder of glycosylation, immunodeficiency, myofibrillar myopathy, severe combined immunodeficiency, Charcot-Marie-Tooth disease, and hypertrophic cardiomyopathy.
 
-Various revisions in process or completed are also included in this release. Many viral infectious diseases have been revised to include the latest viral species name in text definitions and to expand logical relationships between diseases and their viral causes in collaboration with the International Committee on Taxonomy of Viruses (ICTV). All defunct Merriam Webster definition source URLs have now been updated to their latest, correct source. Other revisions include spinocerebellar ataxia type 4, IgA vasculitis (previously Henoch-Schoenlein purpura), B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion, and many more. 
+Various revisions in process or completed are also included in this release. Many viral infectious diseases have been revised to include the latest viral species name in text definitions and to expand logical relationships between diseases and their viral causes in collaboration with the International Committee on Taxonomy of Viruses (ICTV). All defunct Merriam Webster definition source URLs have now been updated to their latest, correct source. Other revisions include spinocerebellar ataxia type 4, IgA vasculitis (previously Henoch-Schoenlein purpura), B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion, and many more.
 
 ### Obsoleted diseases
 The subtypes of idiopathic generalized epilepsy (now revised to generalized epilepsy) have all been obsoleted. These are not diseases but susceptibilities to disease and were migrated to the OMIM susceptibilities import.

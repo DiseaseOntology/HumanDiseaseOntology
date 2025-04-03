@@ -892,8 +892,8 @@ build/translations/%-rtlist.txt build/translations/%-annot.txt: \
 
 # start from doid.owl instead of doid-merged.owl to avoid processing lang tags
 # on imported classes
-$(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
-  build/translations/%-rtlist.txt build/translations/%-annot.txt \
+$(DOLANG)-%.owl build/translations/%.owl build/translations/%-unmerged.owl: \
+  $(DO).owl build/translations/%-rtlist.txt build/translations/%-annot.txt \
   src/sparql/build/lang-dedup_acronym.ru \
   build/translations/%-mv_def_annot.ru build/translations/%-only_lang.ru | \
   check_robot
@@ -911,17 +911,19 @@ $(DOLANG)-%.owl build/translations/%.owl: $(DO).owl \
 	 --update $(word 4,$^) \
 	 --update $(word 5,$^) \
 	 --update $(word 6,$^) \
-	merge \
-	 --collapse-import-closure true \
 	annotate \
 	 --ontology-iri "$(OBO)doid/translations/$(notdir $(DOLANG)-$*.owl)" \
 	 --version-iri "$(RELEASE_PREFIX)translations/$(notdir $(DOLANG)-$*.owl)" \
 	 --annotation dc11:language "$*" \
 	 "$${ANNOT_ARRAY[@]}" \
+	 --output build/translations/$*-unmerged.owl
+	@$(ROBOT) merge \
+	 --input build/translations/$*-unmerged.owl \
+	 --collapse-import-closure true \
 	 --output $(DOLANG)-$*.owl
 	@echo "Created $(DOLANG)-$*.owl"
 
-$(DOLANG)-%.obo: $(DOLANG)-%.owl | check_robot
+$(DOLANG)-%.obo: build/translations/%-unmerged.owl | check_robot
 	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)translations/$(notdir $@)","$(OBO)doid/translations/$(notdir $(basename $@))")
 	@echo "Created $@"
 

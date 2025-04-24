@@ -168,12 +168,30 @@ build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
 # Verify doid-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
 
-verify-edit: $(EDIT) | check_robot
-	@echo -e "\n## Verifying $< (see build/reports on error)"
+.PRECIOUS: build/reports/edit-verify.csv
+verify-edit: build/reports/edit-verify.csv
+build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(EDIT_V_QUERIES) \
-	 --output-dir build/reports
+	 --fail-on-violation false \
+	 --output-dir build/reports/temp
+	@TMP_FILES=$$(find $(word 2,$|) -name "edit-verify-*.csv") ; \
+	 if [ "$$TMP_FILES" ]; then \
+		awk 'BEGIN { OFS = FS = "," } ; { \
+			if (FNR == 1) { \
+				gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
+				if (NR != 1) { print "" } ; \
+				print "TEST: " FILENAME ; print $$0 \
+			} \
+			else { print $$0 } \
+		}' $$TMP_FILES > $@ && \
+		rm -f $$TMP_FILES ; \
+		exit 1 ; \
+	 else \
+		touch $@ ; \
+		echo "--> No errors found" ; \
+	 fi ;
 
 # Verify of doid-edit.owl that should be run quarterly (not part of release)
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
@@ -197,7 +215,10 @@ build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 			else { print $$0 } \
 		}' $$TMP_FILES > $@ && \
 		rm -f $$TMP_FILES ; \
-		echo "--> See $@ for errors" ; \
+		exit 1 ; \
+	 else \
+		touch $@ ; \
+		echo "--> No errors found" ; \
 	 fi ;
 
 

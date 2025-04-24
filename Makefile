@@ -778,11 +778,10 @@ post: build/reports/report-diff.txt \
 FORCE:
 
 build/doid-merged-last.version: FORCE | build
-	@SRC="http://purl.obolibrary.org/obo/doid/doid-merged.owl" ; \
-	 LATEST=$$(curl -sLk $${SRC} | \
+	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
 				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
 				sed -E 's/.*"([^"]+)".*/\1/') ; \
-	 if [[ -f $@ && -f $${SRC} ]]; then \
+	 if [[ -f $@ ]]; then \
 		SRC_VERS=$$(sed '1q' $@) ; \
 		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
 			echo $${LATEST} > $@ ; \

@@ -37,7 +37,7 @@ FASTOBO_VRS = 0.4.6
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: test version_imports products verify publish post
+release: test diff version_imports products verify publish post
 	@echo "Release complete!"
 
 # Only run `make all` if you'd like to update imports to the latest version
@@ -220,6 +220,49 @@ build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 		touch $@ ; \
 		echo "--> No errors found" ; \
 	 fi ;
+
+
+##########################################
+## DIFF
+##########################################
+
+# Get the last release of doid-merged.owl, if newer available (always run)
+.PHONY: FORCE
+FORCE:
+
+build/doid-merged-last.version: FORCE | build
+	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
+				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
+				sed -E 's/.*"([^"]+)".*/\1/') ; \
+	 if [[ -f $@ ]]; then \
+		SRC_VERS=$$(sed '1q' $@) ; \
+		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
+			echo $${LATEST} > $@ ; \
+		fi ; \
+	 else \
+		echo $${LATEST} > $@ ; \
+	 fi
+
+build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
+	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
+
+diff: build/reports/doid-diff.tsv
+build/reports/doid-diff.tsv: build/doid-merged-last.owl \
+	build/update/doid-edit-reasoned.owl | check_robot test
+	@$(ROBOT) export \
+	 --input $< \
+	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
+	 --export $(addsuffix .tsv,$(basename $<))
+	@$(ROBOT) export \
+	 --input $(word 2, $^) \
+	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
+	 --export $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2, $^)))
+	@python3 src/util/diff-re.py \
+	 -1 $(addsuffix .tsv,$(basename $<)) \
+	 -2 $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2, $^))) \
+	 -p "DOID" \
+	 -o $@
+	@echo "Generated DOID diff report at $@"
 
 
 ##########################################
@@ -410,6 +453,7 @@ $(OPT_FIX): opt_fix_%: $(EDIT) src/sparql/update/opt_fix_%.ru | \
 	 --output doid-edit.ofn \
 	&& mv doid-edit.ofn $<
 	@echo "Fixed $* (review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
+
 
 ##########################################
 ## BUILDING IMPORTS
@@ -768,46 +812,9 @@ verify-dnc: $(DNC).obo | check_robot build/reports/report.tsv
 
 # Count classes, imports, and logical defs from old and new
 post: build/reports/report-diff.txt \
-      build/reports/doid-diff.tsv \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \
       build/reports/hp-do-overlap.csv
-
-# Get the last release of doid-merged.owl, if newer available (always run)
-.PHONY: FORCE
-FORCE:
-
-build/doid-merged-last.version: FORCE | build
-	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
-				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
-				sed -E 's/.*"([^"]+)".*/\1/') ; \
-	 if [[ -f $@ ]]; then \
-		SRC_VERS=$$(sed '1q' $@) ; \
-		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
-			echo $${LATEST} > $@ ; \
-		fi ; \
-	 else \
-		echo $${LATEST} > $@ ; \
-	 fi
-
-build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
-	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
-
-build/reports/doid-diff.tsv: build/doid-merged-last.owl $(DM).owl | check_robot build/reports
-	@$(ROBOT) export \
-	 --input $< \
-	 --header "ID|owl:deprecated|LABEL|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]" \
-	 --export $(addsuffix .tsv,$(basename $<))
-	@$(ROBOT) export \
-	 --input $(word 2, $^) \
-	 --header "ID|owl:deprecated|LABEL|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]" \
-	 --export $(patsubst %.owl,build/%-new.tsv,$(notdir $(word 2, $^)))
-	@python3 src/util/diff-re.py \
-	 -1 $(addsuffix .tsv,$(basename $<)) \
-	 -2 $(patsubst %.owl,build/%-new.tsv,$(notdir $(word 2, $^))) \
-	 -p "DOID" \
-	 -o $@
-	@echo "Generated DOID diff report at $@"
 
 # all report queries
 QUERIES := $(wildcard src/sparql/build/*-report.rq)

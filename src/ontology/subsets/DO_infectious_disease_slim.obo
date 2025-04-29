@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-03-31/subsets/DO_infectious_disease_slim.obo
-date: 31:03:2025 22:48
+data-version: doid/releases/2025-04-29/subsets/DO_infectious_disease_slim.obo
+date: 29:04:2025 14:19
 ontology: doid/subsets/DO_infectious_disease_slim
 
 [Term]
@@ -330,7 +330,7 @@ id: DOID:0050118
 name: La Crosse encephalitis
 namespace: disease_ontology
 alt_id: DOID:10840
-def: "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus, which is transmitted_by treehole mosquito, Ochlerotatus triseriatus. The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis." [url:http\://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm]
+def: "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus (Orthobunyavirus lacrosseense), which is primarily transmitted_by treehole mosquito (Ochlerotatus triseriatus) but also Asian tiger mosquito (Aedes albopictus) and Asian bush mosquito (Aedes japonicus). The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis." [url:https\://en.wikipedia.org/wiki/La_Crosse_encephalitis, url:https\://www.cdc.gov/la-crosse-encephalitis/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK562248/]
 subset: DO_infectious_disease_slim
 subset: zoonotic_infectious_disease
 synonym: "California Encephalitis" EXACT []
@@ -606,7 +606,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:0050204
 name: Epstein-Barr virus hepatitis
 namespace: disease_ontology
-def: "A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16711324, url:https\://www.ncbi.nlm.nih.gov/pubmed/17602362]
+def: "A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16711324, url:https\://www.ncbi.nlm.nih.gov/pubmed/17602362]
 subset: DO_FlyBase_slim
 subset: DO_infectious_disease_slim
 is_a: DOID:1884 ! viral hepatitis
@@ -1131,10 +1131,16 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:0050521
 name: Oropouche fever
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection, has_material_basis_in Oropouche virus, which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting." [url:http\://en.wikipedia.org/wiki/Oropouche_fever, url:http\://www.cdc.gov/EID/content/13/6/912.htm]
+def: "A viral infectious disease that results in infection, has_material_basis_in Oropouche virus (Orthobunyavirus oropoucheense), which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting." [url:http\://en.wikipedia.org/wiki/Oropouche_fever, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC5923469/, url:https\://wwwnc.cdc.gov/eid/article/13/6/06-1114_article]
 subset: DO_infectious_disease_slim
 subset: zoonotic_infectious_disease
+xref: ICD10CM:A93.0
+xref: UMLS_CUI:C0276386
 is_a: DOID:934 ! viral infectious disease
+property_value: broadMatch "ICD9CM:066.3" xsd:string
+property_value: broadMatch "MESH:D002044" xsd:string
+property_value: exactMatch "ICD10CM:A93.0" xsd:string
+property_value: exactMatch "UMLS_CUI:C0276386" xsd:string
 
 [Term]
 id: DOID:0050522
@@ -1396,7 +1402,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:0080600
 name: COVID-19
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2, a subtype of Betacoronavirus pandemicum." [url:https\://pubmed.ncbi.nlm.nih.gov/32007143/, url:https\://pubmed.ncbi.nlm.nih.gov/32007145/, url:https\://www.cdc.gov/covid/about/, url:https\://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049, url:https\://www.who.int/emergencies/diseases/novel-coronavirus-2019]
+def: "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a subtype of Betacoronavirus pandemicum." [url:https\://pubmed.ncbi.nlm.nih.gov/32007143/, url:https\://pubmed.ncbi.nlm.nih.gov/32007145/, url:https\://www.cdc.gov/covid/about/, url:https\://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049, url:https\://www.who.int/emergencies/diseases/novel-coronavirus-2019]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "2019 Novel Coronavirus (2019-nCoV)" EXACT []
@@ -1411,25 +1417,41 @@ xref: NCI:C171133
 xref: SNOMEDCT_US_2023_03_01:840539006
 xref: UMLS_CUI:C5203670
 is_a: DOID:0080599 ! Coronavirus infectious disease
+property_value: exactMatch "ICD10CM:U07.1" xsd:string
+property_value: exactMatch "MESH:D000086382" xsd:string
+property_value: exactMatch "NCI:C171133" xsd:string
+property_value: exactMatch "UMLS_CUI:C5203670" xsd:string
 
 [Term]
 id: DOID:0080642
 name: Middle East respiratory syndrome
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in MERS-CoV." [url:https\://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23891402/, url:https\://pubmed.ncbi.nlm.nih.gov/29495250, url:https\://www.cdc.gov/coronavirus/mers/index.html, url:https\://www.who.int/news-room/q-a-detail/middle-east-respiratory-syndrome-coronavirus-(mers-cov)]
+def: "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli)." [url:https\://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23891402/, url:https\://pubmed.ncbi.nlm.nih.gov/29495250, url:https\://www.cdc.gov/mers/about/index.html, url:https\://www.who.int/health-topics/middle-east-respiratory-syndrome-coronavirus-mers]
 subset: DO_infectious_disease_slim
+synonym: "MERS" EXACT OMO:0003012 []
+xref: NCI:C128424
+xref: UMLS_CUI:C3694279
 is_a: DOID:0080599 ! Coronavirus infectious disease
+property_value: broadMatch "ICD10CM:B34.2" xsd:string
+property_value: exactMatch "NCI:C128424" xsd:string
+property_value: exactMatch "UMLS_CUI:C3694279" xsd:string
 
 [Term]
 id: DOID:0080711
 name: multisystem inflammatory syndrome in children
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that is characterized by a patient aged less than 21 years with fever, laboratory evidence of inflammation, and evidence of clinically severe illness requiring hospitalization, with multisystem organ involvement (cardiovascular, dermatologic, gastrointestinal, hematologic, neurologic, renal, or respiratory) who tested positive for SARS-CoV-2 or had exposure to COVID-19." [url:https\://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/children/mis-c.html, url:https\://www.cdc.gov/mis-c/hcp/, url:https\://www.cdc.gov/mis-c/index.html, url:https\://www.cdc.gov/mmwr/volumes/69/wr/mm6932e2.htm?s_cid=mm6932e2_x]
+def: "A Coronavirus infectious disease that is characterized by a patient aged less than 21 years with fever, laboratory evidence of inflammation, and evidence of clinically severe illness requiring hospitalization, with multisystem organ involvement (cardiovascular, dermatologic, gastrointestinal, hematologic, neurologic, renal, or respiratory) who tested positive for SARS-CoV-2 or had exposure to COVID-19." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC9841678/, url:https\://pubmed.ncbi.nlm.nih.gov/40074901/, url:https\://www.cdc.gov/mis/about/, url:https\://www.cdc.gov/mmwr/volumes/69/wr/mm6932e2.htm?s_cid=mm6932e2_x]
 subset: DO_infectious_disease_slim
 synonym: "MIS-C" EXACT OMO:0003012 []
 synonym: "multisystem inflammatory disorder in children and adolescents" EXACT []
 synonym: "paediatric inflammatory multisystemic syndrome" EXACT []
+xref: MESH:C000705967
+xref: UMLS_CUI:C5389369
 is_a: DOID:0080599 ! Coronavirus infectious disease
+property_value: broadMatch "ORDO:598363" xsd:string
+property_value: broadMatch "UMLS_CUI:C5539184" xsd:string
+property_value: exactMatch "MESH:C000705967" xsd:string
+property_value: exactMatch "UMLS_CUI:C5389369" xsd:string
 
 [Term]
 id: DOID:0080784
@@ -2432,7 +2454,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:10882
 name: epidemic pleurodynia
 namespace: disease_ontology
-def: "A viral infectious disease that results in necrosis located in intercostal muscle, has_material_basis_in Human enterovirus B. The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache." [url:https\://www.merckmanuals.com/professional/infectious-diseases/enteroviruses/epidemic-pleurodynia]
+def: "A viral infectious disease that results in necrosis located in intercostal muscle and has_material_basis_in Human enterovirus B (Enterovirus betacoxsackie). The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache." [url:https\://en.wikipedia.org/wiki/Bornholm_disease, url:https\://pubmed.ncbi.nlm.nih.gov/30364740/, url:https\://www.merckmanuals.com/professional/infectious-diseases/enteroviruses/epidemic-pleurodynia]
 subset: DO_infectious_disease_slim
 synonym: "Bamble disease" EXACT []
 synonym: "Bornholm disease" EXACT []
@@ -3813,7 +3835,7 @@ id: DOID:12549
 name: hepatitis A
 namespace: disease_ontology
 alt_id: DOID:12547
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-a/, url:https\://www.ncbi.nlm.nih.gov/books/NBK459290/]
+def: "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-a/, url:https\://www.ncbi.nlm.nih.gov/books/NBK459290/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Viral hepatitis A" RELATED []
@@ -3822,7 +3844,7 @@ xref: MESH:D006506
 xref: NCI:C3096
 xref: SNOMEDCT_US_2023_03_01:40468003
 xref: UMLS_CUI:C0019159
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:1884 ! viral hepatitis
 
 [Term]
 id: DOID:1255
@@ -4641,7 +4663,7 @@ is_a: DOID:0050339 ! commensal bacterial infectious disease
 id: DOID:13801
 name: pharyngoconjunctival fever
 namespace: disease_ontology
-def: "A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or has_material_basis_in Human adenovirus 7, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache." [url:http\://en.wikipedia.org/wiki/Pharyngoconjunctival_fever]
+def: "A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or 7, serotypes of Mastadenovirus blackbeardi, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache." [url:http\://en.wikipedia.org/wiki/Pharyngoconjunctival_fever]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Adenoviral pharyngoconjunctivitis" EXACT []
@@ -5362,7 +5384,7 @@ namespace: disease_ontology
 alt_id: DOID:12430
 alt_id: DOID:12432
 alt_id: DOID:2049
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/HCV/index.htm, url:http\://www.cdc.gov/hepatitis/hcv/pdfs/hepcgeneralfactsheet.pdf, url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-c/about/index.html]
+def: "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice." [url:http\://www.cdc.gov/hepatitis/HCV/index.htm, url:http\://www.cdc.gov/hepatitis/hcv/pdfs/hepcgeneralfactsheet.pdf, url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-c/about/index.html]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "chronic hepatitis C" EXACT []
@@ -5377,7 +5399,7 @@ xref: MESH:D006526
 xref: NCI:C3098
 xref: SNOMEDCT_US_2023_03_01:154349000
 xref: UMLS_CUI:C0019196
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:1884 ! viral hepatitis
 
 [Term]
 id: DOID:1884
@@ -5419,7 +5441,7 @@ namespace: disease_ontology
 alt_id: DOID:12591
 alt_id: DOID:12592
 alt_id: DOID:2042
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-b/, url:https\://www.ncbi.nlm.nih.gov/books/NBK555945/]
+def: "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice." [url:http\://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf, url:https\://www.cdc.gov/hepatitis-b/, url:https\://www.ncbi.nlm.nih.gov/books/NBK555945/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
@@ -5431,20 +5453,20 @@ xref: MESH:D006509
 xref: NCI:C3097
 xref: SNOMEDCT_US_2023_03_01:66071002
 xref: UMLS_CUI:C0019163
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:1884 ! viral hepatitis
 
 [Term]
 id: DOID:2047
 name: hepatitis D
 namespace: disease_ontology
 alt_id: DOID:2046
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense." [url:https\://en.wikipedia.org/wiki/Hepatitis_D, url:https\://www.cdc.gov/hepatitis-d/about/index.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK470436/, url:https\://www.who.int/news-room/fact-sheets/detail/hepatitis-d]
+def: "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense." [url:https\://en.wikipedia.org/wiki/Hepatitis_D, url:https\://www.cdc.gov/hepatitis-d/about/index.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK470436/, url:https\://www.who.int/news-room/fact-sheets/detail/hepatitis-d]
 subset: DO_infectious_disease_slim
 synonym: "delta hepatitis" EXACT []
 xref: MESH:D003699
 xref: SNOMEDCT_US_2023_03_01:424460009
 xref: UMLS_CUI:C0011226
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:1884 ! viral hepatitis
 
 [Term]
 id: DOID:2058
@@ -5808,7 +5830,7 @@ property_value: exactMatch "MESH:D000453" xsd:string
 id: DOID:2938
 name: Epstein-Barr virus infectious disease
 namespace: disease_ontology
-def: "A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4." [url:https\://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus_infection, url:https\://www.cdc.gov/epstein-barr/about-ebv.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK559285/]
+def: "A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4 (Lymphocryptovirus humangamma4)." [url:https\://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus_infection, url:https\://www.cdc.gov/epstein-barr/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK559285/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "EBV Infection" EXACT []
@@ -5827,7 +5849,7 @@ property_value: exactMatch "UMLS_CUI:C0149678" xsd:string
 id: DOID:2945
 name: severe acute respiratory syndrome
 namespace: disease_ontology
-def: "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV/SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia." [url:http\://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome, url:https\://www.merriam-webster.com/dictionary/SARS#medicalDictionary]
+def: "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in Severe acute respiratory syndrome coronavirus (SARS-CoV or SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia." [url:http\://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome, url:https\://www.merriam-webster.com/dictionary/SARS#medicalDictionary, url:https\://www.ncbi.nlm.nih.gov/books/NBK558977/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -6405,7 +6427,7 @@ id: DOID:4411
 name: hepatitis E
 namespace: disease_ontology
 alt_id: DOID:12431
-def: "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice." [url:https\://www.cdc.gov/hepatitis-e/about/index.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK532278/, url:https\://www.who.int/news-room/fact-sheets/detail/hepatitis-e]
+def: "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice." [url:https\://www.cdc.gov/hepatitis-e/about/index.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK532278/, url:https\://www.who.int/news-room/fact-sheets/detail/hepatitis-e]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: zoonotic_infectious_disease
@@ -6413,7 +6435,7 @@ xref: GARD:9541
 xref: MESH:D016751
 xref: SNOMEDCT_US_2023_03_01:7111000119109
 xref: UMLS_CUI:C0085293
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:1884 ! viral hepatitis
 
 [Term]
 id: DOID:4492
@@ -6518,7 +6540,7 @@ is_a: DOID:4953 ! poliomyelitis
 id: DOID:4953
 name: poliomyelitis
 namespace: disease_ontology
-def: "A viral infectious disease that results in destruction located in motor neurons, has_material_basis_in Human poliovirus 1, has_material_basis_in Human poliovirus 2, or has_material_basis_in Human poliovirus 3, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis." [url:http\://en.wikipedia.org/wiki/Poliomyelitis, url:http\://www.cdc.gov/vaccines/pubs/pinkbook/downloads/polio.pdf, url:http\://www.mayoclinic.com/health/polio/DS00572/DSECTION=symptoms]
+def: "A viral infectious disease that results in destruction located in motor neurons and has_material_basis_in Human poliovirus 1, 2, or 3, serotypes of Enterovirus coxsackiepol, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis." [url:http\://en.wikipedia.org/wiki/Poliomyelitis, url:https\://www.cdc.gov/polio/hcp/clinical-overview/index.html, url:https\://www.mayoclinic.org/diseases-conditions/polio/symptoms-causes/syc-20376512]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -6617,12 +6639,13 @@ property_value: exactMatch "MESH:D001890" xsd:string
 id: DOID:526
 name: human immunodeficiency virus infectious disease
 namespace: disease_ontology
-def: "A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands." [url:http\://en.wikipedia.org/wiki/HIV, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000602.htm]
+def: "A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands." [url:http\://en.wikipedia.org/wiki/HIV, url:https\://medlineplus.gov/hiv.html, url:https\://www.cdc.gov/hiv/about/index.html]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "HIV infection" EXACT []
 xref: ICD10CM:B20
+xref: ICD9CM:042
 xref: ICD9CM:042-042.99
 xref: MESH:D015658
 xref: NCI:C3108
@@ -6751,7 +6774,7 @@ xref: UMLS_CUI:C0341110
 id: DOID:635
 name: acquired immunodeficiency syndrome
 namespace: disease_ontology
-def: "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS." [url:http\://en.wikipedia.org/wiki/AIDS, url:https\://www.merriam-webster.com/dictionary/AIDS]
+def: "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS." [url:http\://en.wikipedia.org/wiki/AIDS, url:https\://www.merriam-webster.com/dictionary/AIDS]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
@@ -6771,7 +6794,7 @@ property_value: exactMatch "MESH:D000163" xsd:string
 id: DOID:643
 name: progressive multifocal leukoencephalopathy
 namespace: disease_ontology
-def: "A viral infectious disease that involves reactivation of JC polyomavirus in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma." [url:http\://www.merck.com/mmpe/sec16/ch217/ch217f.html, url:http\://www.merriam-webster.com/medical/progressive%20multifocal%20leukoencephalopathy, url:http\://www.ninds.nih.gov/disorders/pml/pml.htm]
+def: "A viral infectious disease that involves reactivation of JC polyomavirus (Betapolyomavirus secuhominis) in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma." [url:http\://www.merck.com/mmpe/sec16/ch217/ch217f.html, url:http\://www.merriam-webster.com/medical/progressive%20multifocal%20leukoencephalopathy, url:https\://www.ninds.nih.gov/health-information/disorders/progressive-multifocal-leukoencephalopathy]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -7181,7 +7204,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:8568
 name: infectious mononucleosis
 namespace: disease_ontology
-def: "A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly." [url:http\://en.wikipedia.org/wiki/Infectious_mononucleosis, url:http\://www.cdc.gov/ncidod/diseases/ebv.htm]
+def: "A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly." [url:http\://en.wikipedia.org/wiki/Infectious_mononucleosis, url:https\://www.cdc.gov/epstein-barr/about/mononucleosis.html]
 subset: DO_FlyBase_slim
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
@@ -7239,12 +7262,12 @@ namespace: disease_ontology
 alt_id: DOID:8621
 alt_id: DOID:8963
 alt_id: DOID:9112
-def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus, which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash." [url:http\://en.wikipedia.org/wiki/Measles]
+def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus (Morbillivirus hominis), which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash." [url:http\://en.wikipedia.org/wiki/Measles, url:https\://www.cdc.gov/measles/, url:https\://www.ncbi.nlm.nih.gov/books/NBK448068/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "morbilli" EXACT []
-xref: GARD:3434
+synonym: "rubeola" EXACT []
 xref: ICD10CM:B05
 xref: ICD9CM:055
 xref: MESH:D008457
@@ -7403,6 +7426,7 @@ namespace: disease_ontology
 alt_id: DOID:8730
 alt_id: DOID:8744
 alt_id: DOID:9213
+def: "An exanthem that has_material_basis_in viruses." [url:https\://my.clevelandclinic.org/health/diseases/22510-viral-exanthem-rash, url:https\://www.pcds.org.uk/clinical-guidance/viral-exanthems]
 subset: DO_infectious_disease_slim
 xref: ICD9CM:057.8
 xref: SNOMEDCT_US_2023_03_01:186577001
@@ -7497,6 +7521,7 @@ xref: UMLS_CUI:C0004626
 id: DOID:8743
 name: erythema infectiosum
 namespace: disease_ontology
+def: "A viral exanthem that has_material_basis_in Human parvovirus B19 (Erythroparvovirus primate1)." [url:https\://my.clevelandclinic.org/health/diseases/15774-fifth-disease, url:https\://www.ncbi.nlm.nih.gov/books/NBK513309/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Fifth disease" EXACT []
@@ -7507,7 +7532,6 @@ xref: NCI:C84695
 xref: SNOMEDCT_US_2023_03_01:34730008
 xref: UMLS_CUI:C0085273
 is_a: DOID:8672 ! viral exanthem
-is_a: DOID:934 ! viral infectious disease
 
 [Term]
 id: DOID:8771
@@ -7636,7 +7660,7 @@ is_a: DOID:883 ! parasitic helminthiasis infectious disease
 id: DOID:8867
 name: molluscum contagiosum
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus, which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center." [url:http\://en.wikipedia.org/wiki/Molluscum_contagiosum, url:http\://www.cdc.gov/ncidod/dvrd/molluscum/overview.htm]
+def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus (Molluscipoxvirus molluscum), which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center." [url:http\://en.wikipedia.org/wiki/Molluscum_contagiosum, url:http\://www.cdc.gov/ncidod/dvrd/molluscum/overview.htm]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
@@ -7716,11 +7740,14 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:8970
 name: subacute sclerosing panencephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection located_in brain and that has_material_basis_in Measles virus which is immune resistant." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis]
+def: "A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Measles morbillivirus) which is immune resistant." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis, url:https\://medlineplus.gov/ency/article/001419.htm, url:https\://pubmed.ncbi.nlm.nih.gov/14872030/, url:https\://www.ncbi.nlm.nih.gov/books/NBK560673/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Immunosuppressive measles encephalitis" EXACT []
+synonym: "Dawson's encephalitis" EXACT []
+synonym: "Dawson's inclusion body encephalitis" EXACT []
+synonym: "immunosuppressive measles encephalitis" EXACT []
+synonym: "SSPE" EXACT OMO:0003012 []
 synonym: "subacute sclerosing leukoencephalopathy" EXACT []
 synonym: "Van Bogaert's sclerosing leukoencephalitis" EXACT []
 xref: GARD:7708
@@ -7729,9 +7756,18 @@ xref: ICD9CM:046.2
 xref: MESH:D013344
 xref: MIM:260470
 xref: NCI:C85171
+xref: ORDO:2806
 xref: SNOMEDCT_US_2023_03_01:84196008
 xref: UMLS_CUI:C0038522
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:646 ! viral encephalitis
+property_value: exactMatch "GARD:7708" xsd:string
+property_value: exactMatch "ICD10CM:A81.1" xsd:string
+property_value: exactMatch "ICD9CM:046.2" xsd:string
+property_value: exactMatch "MESH:D013344" xsd:string
+property_value: exactMatch "MIM:260470" xsd:string
+property_value: exactMatch "NCI:C85171" xsd:string
+property_value: exactMatch "ORDO:2806" xsd:string
+property_value: exactMatch "UMLS_CUI:C0038522" xsd:string
 
 [Term]
 id: DOID:9060

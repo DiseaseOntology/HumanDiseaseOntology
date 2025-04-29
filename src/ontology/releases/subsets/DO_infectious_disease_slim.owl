@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_infectious_disease_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-03-31/subsets/DO_infectious_disease_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/DO_infectious_disease_slim.owl"/>
     </owl:Ontology>
     
 
@@ -108,6 +108,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
     
 
 
@@ -801,7 +807,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050118">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus, which is transmitted_by treehole mosquito, Ochlerotatus triseriatus. The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus (Orthobunyavirus lacrosseense), which is primarily transmitted_by treehole mosquito (Ochlerotatus triseriatus) but also Asian tiger mosquito (Aedes albopictus) and Asian bush mosquito (Aedes japonicus). The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:10840</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:A83.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:062.5</oboInOwl:hasDbXref>
@@ -820,9 +826,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050118"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus, which is transmitted_by treehole mosquito, Ochlerotatus triseriatus. The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus (Orthobunyavirus lacrosseense), which is primarily transmitted_by treehole mosquito (Ochlerotatus triseriatus) but also Asian tiger mosquito (Aedes albopictus) and Asian bush mosquito (Aedes japonicus). The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm</oboInOwl:hasDbXref>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/La_Crosse_encephalitis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/la-crosse-encephalitis/about/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK562248/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1434,7 +1443,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050204">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
-        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050204</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
@@ -1444,7 +1453,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050204"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/16711324</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/17602362</oboInOwl:hasDbXref>
@@ -2603,21 +2612,29 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050521">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Oropouche virus, which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Oropouche virus (Orthobunyavirus oropoucheense), which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICD10CM:A93.0</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0276386</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050521</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Oropouche fever</rdfs:label>
+        <skos:broadMatch>ICD9CM:066.3</skos:broadMatch>
+        <skos:broadMatch>MESH:D002044</skos:broadMatch>
+        <skos:exactMatch>ICD10CM:A93.0</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0276386</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050521"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Oropouche virus, which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Oropouche virus (Orthobunyavirus oropoucheense), which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Oropouche_fever</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/EID/content/13/6/912.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC5923469/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://wwwnc.cdc.gov/eid/article/13/6/06-1114_article</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3179,7 +3196,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080600">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080599"/>
-        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2, a subtype of Betacoronavirus pandemicum.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a subtype of Betacoronavirus pandemicum.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:U07.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000086382</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C171133</oboInOwl:hasDbXref>
@@ -3196,11 +3213,15 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">COVID-19</rdfs:label>
+        <skos:exactMatch>ICD10CM:U07.1</skos:exactMatch>
+        <skos:exactMatch>MESH:D000086382</skos:exactMatch>
+        <skos:exactMatch>NCI:C171133</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C5203670</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080600"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2, a subtype of Betacoronavirus pandemicum.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a subtype of Betacoronavirus pandemicum.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/32007143/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/32007145/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.cdc.gov/covid/about/</oboInOwl:hasDbXref>
@@ -3220,21 +3241,33 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080642">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080599"/>
-        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in MERS-CoV.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCI:C128424</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C3694279</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">MERS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080642</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">Middle East respiratory syndrome</rdfs:label>
+        <skos:broadMatch>ICD10CM:B34.2</skos:broadMatch>
+        <skos:exactMatch>NCI:C128424</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C3694279</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080642"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in MERS-CoV.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/23891402/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/29495250</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/coronavirus/mers/index.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.who.int/news-room/q-a-detail/middle-east-respiratory-syndrome-coronavirus-(mers-cov)</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/mers/about/index.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.who.int/health-topics/middle-east-respiratory-syndrome-coronavirus-mers</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080642"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">MERS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 
@@ -3244,6 +3277,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080711">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080599"/>
         <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that is characterized by a patient aged less than 21 years with fever, laboratory evidence of inflammation, and evidence of clinically severe illness requiring hospitalization, with multisystem organ involvement (cardiovascular, dermatologic, gastrointestinal, hematologic, neurologic, renal, or respiratory) who tested positive for SARS-CoV-2 or had exposure to COVID-19.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MESH:C000705967</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C5389369</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">MIS-C</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">multisystem inflammatory disorder in children and adolescents</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">paediatric inflammatory multisystemic syndrome</oboInOwl:hasExactSynonym>
@@ -3251,14 +3286,19 @@
         <oboInOwl:id>DOID:0080711</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">multisystem inflammatory syndrome in children</rdfs:label>
+        <skos:broadMatch>ORDO:598363</skos:broadMatch>
+        <skos:broadMatch>UMLS_CUI:C5539184</skos:broadMatch>
+        <skos:exactMatch>MESH:C000705967</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C5389369</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080711"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that is characterized by a patient aged less than 21 years with fever, laboratory evidence of inflammation, and evidence of clinically severe illness requiring hospitalization, with multisystem organ involvement (cardiovascular, dermatologic, gastrointestinal, hematologic, neurologic, renal, or respiratory) who tested positive for SARS-CoV-2 or had exposure to COVID-19.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/children/mis-c.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/mis-c/hcp/</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/mis-c/index.html</oboInOwl:hasDbXref>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9841678/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/40074901/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/mis/about/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.cdc.gov/mmwr/volumes/69/wr/mm6932e2.htm?s_cid=mm6932e2_x</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -5030,7 +5070,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10882">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in necrosis located in intercostal muscle, has_material_basis_in Human enterovirus B. The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in necrosis located in intercostal muscle and has_material_basis_in Human enterovirus B (Enterovirus betacoxsackie). The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B33.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:074.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D011000</oboInOwl:hasDbXref>
@@ -5050,8 +5090,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10882"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in necrosis located in intercostal muscle, has_material_basis_in Human enterovirus B. The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in necrosis located in intercostal muscle and has_material_basis_in Human enterovirus B (Enterovirus betacoxsackie). The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Bornholm_disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/30364740/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.merckmanuals.com/professional/infectious-diseases/enteroviruses/epidemic-pleurodynia</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7381,8 +7424,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_12549 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_12549">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12547</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>MESH:D006506</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3096</oboInOwl:hasDbXref>
@@ -7399,7 +7442,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_12549"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.cdc.gov/hepatitis-a/</oboInOwl:hasDbXref>
@@ -8838,7 +8881,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_13801">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or has_material_basis_in Human adenovirus 7, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or 7, serotypes of Mastadenovirus blackbeardi, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD9CM:077.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000258</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C34924</oboInOwl:hasDbXref>
@@ -8855,7 +8898,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_13801"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or has_material_basis_in Human adenovirus 7, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or 7, serotypes of Mastadenovirus blackbeardi, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Pharyngoconjunctival_fever</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -10050,8 +10093,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_1883 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1883">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12430</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:12432</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:2049</oboInOwl:hasAlternativeId>
@@ -10076,7 +10119,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1883"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/hepatitis/HCV/index.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf</oboInOwl:hasDbXref>
@@ -10152,8 +10195,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_2043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2043">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12591</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:12592</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:2042</oboInOwl:hasAlternativeId>
@@ -10175,7 +10218,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2043"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf</oboInOwl:hasDbXref>
@@ -10188,8 +10231,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_2047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2047">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:2046</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>MESH:D003699</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:424460009</oboInOwl:hasDbXref>
@@ -10203,7 +10246,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2047"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hepatitis_D</oboInOwl:hasDbXref>
@@ -10841,7 +10884,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2938">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4 (Lymphocryptovirus humangamma4).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MESH:D020031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C38759</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_09_01:240530001</oboInOwl:hasDbXref>
@@ -10861,12 +10904,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2938"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4 (Lymphocryptovirus humangamma4).</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus_infection</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/epstein-barr/about-ebv.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/epstein-barr/about/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK559285/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10876,7 +10919,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2945">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080599"/>
-        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV/SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in Severe acute respiratory syndrome coronavirus (SARS-CoV or SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:9237</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:J12.81</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:079.82</oboInOwl:hasDbXref>
@@ -10897,11 +10940,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2945"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV/SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in Severe acute respiratory syndrome coronavirus (SARS-CoV or SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/SARS#medicalDictionary</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK558977/</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_2945"/>
@@ -11938,8 +11982,8 @@
     <!-- http://purl.obolibrary.org/obo/DOID_4411 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4411">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1884"/>
+        <obo:IAO_0000115 xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12431</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:9541</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D016751</oboInOwl:hasDbXref>
@@ -11955,7 +11999,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4411"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:https://www.cdc.gov/hepatitis-e/about/index.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK532278/</oboInOwl:hasDbXref>
@@ -12141,7 +12185,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4953">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in destruction located in motor neurons, has_material_basis_in Human poliovirus 1, has_material_basis_in Human poliovirus 2, or has_material_basis_in Human poliovirus 3, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in destruction located in motor neurons and has_material_basis_in Human poliovirus 1, 2, or 3, serotypes of Enterovirus coxsackiepol, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7413</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A80</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:045</oboInOwl:hasDbXref>
@@ -12159,12 +12203,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_4953"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in destruction located in motor neurons, has_material_basis_in Human poliovirus 1, has_material_basis_in Human poliovirus 2, or has_material_basis_in Human poliovirus 3, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in destruction located in motor neurons and has_material_basis_in Human poliovirus 1, 2, or 3, serotypes of Enterovirus coxsackiepol, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Poliomyelitis</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/vaccines/pubs/pinkbook/downloads/polio.pdf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.mayoclinic.com/health/polio/DS00572/DSECTION=symptoms</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/polio/hcp/clinical-overview/index.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.mayoclinic.org/diseases-conditions/polio/symptoms-causes/syc-20376512</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12320,8 +12364,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_526">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B20</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9CM:042</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:042-042.99</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D015658</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3108</oboInOwl:hasDbXref>
@@ -12338,11 +12383,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007640"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/HIV</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/ency/article/000602.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/hiv.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/hiv/about/index.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12545,7 +12590,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_635">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
-        <obo:IAO_0000115 xml:lang="en">A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>EFO:0000765</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B20</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000163</oboInOwl:hasDbXref>
@@ -12566,7 +12611,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_635"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/AIDS</oboInOwl:hasDbXref>
@@ -12585,7 +12630,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_643">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that involves reactivation of JC polyomavirus in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that involves reactivation of JC polyomavirus (Betapolyomavirus secuhominis) in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7468</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A81.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:046.3</oboInOwl:hasDbXref>
@@ -12604,12 +12649,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_643"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that involves reactivation of JC polyomavirus in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that involves reactivation of JC polyomavirus (Betapolyomavirus secuhominis) in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://www.merck.com/mmpe/sec16/ch217/ch217f.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.merriam-webster.com/medical/progressive%20multifocal%20leukoencephalopathy</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ninds.nih.gov/disorders/pml/pml.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ninds.nih.gov/health-information/disorders/progressive-multifocal-leukoencephalopathy</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_643"/>
@@ -13280,7 +13325,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8568">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B27</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:075</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D007244</oboInOwl:hasDbXref>
@@ -13303,11 +13348,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8568"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Infectious_mononucleosis</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/diseases/ebv.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/epstein-barr/about/mononucleosis.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13373,11 +13418,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus, which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus (Morbillivirus hominis), which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8621</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8963</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9112</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>GARD:3434</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B05</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:055</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008457</oboInOwl:hasDbXref>
@@ -13385,6 +13429,7 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:154338006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0025007</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">morbilli</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">rubeola</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:8622</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -13395,9 +13440,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8622"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus, which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus (Morbillivirus hominis), which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Measles</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/measles/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK448068/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13574,6 +13621,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_8672 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8672">
+        <obo:IAO_0000115 xml:lang="en">An exanthem that has_material_basis_in viruses.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8730</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8744</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9213</oboInOwl:hasAlternativeId>
@@ -13585,6 +13633,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">viral exanthem</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8672"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An exanthem that has_material_basis_in viruses.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://my.clevelandclinic.org/health/diseases/22510-viral-exanthem-rash</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.pcds.org.uk/clinical-guidance/viral-exanthems</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -13740,7 +13795,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8743">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_8672"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
+        <obo:IAO_0000115 xml:lang="en">A viral exanthem that has_material_basis_in Human parvovirus B19 (Erythroparvovirus primate1).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B08.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:057.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D016731</oboInOwl:hasDbXref>
@@ -13754,6 +13809,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">erythema infectiosum</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8743"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A viral exanthem that has_material_basis_in Human parvovirus B19 (Erythroparvovirus primate1).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://my.clevelandclinic.org/health/diseases/15774-fifth-disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK513309/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -13962,7 +14024,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8867">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus, which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus (Molluscipoxvirus molluscum), which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B08.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:078.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008976</oboInOwl:hasDbXref>
@@ -13979,7 +14041,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8867"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus, which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus (Molluscipoxvirus molluscum), which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Molluscum_contagiosum</oboInOwl:hasDbXref>
@@ -14107,18 +14169,22 @@
     <!-- http://purl.obolibrary.org/obo/DOID_8970 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8970">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in brain and that has_material_basis_in Measles virus which is immune resistant.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_646"/>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Measles morbillivirus) which is immune resistant.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7708</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A81.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:046.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D013344</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MIM:260470</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C85171</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:2806</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:84196008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0038522</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">Immunosuppressive measles encephalitis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">Dawson&apos;s encephalitis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">Dawson&apos;s inclusion body encephalitis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">SSPE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Van Bogaert&apos;s sclerosing leukoencephalitis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">immunosuppressive measles encephalitis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">subacute sclerosing leukoencephalopathy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:8970</oboInOwl:id>
@@ -14126,13 +14192,30 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">subacute sclerosing panencephalitis</rdfs:label>
+        <skos:exactMatch>GARD:7708</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:A81.1</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:046.2</skos:exactMatch>
+        <skos:exactMatch>MESH:D013344</skos:exactMatch>
+        <skos:exactMatch>MIM:260470</skos:exactMatch>
+        <skos:exactMatch>NCI:C85171</skos:exactMatch>
+        <skos:exactMatch>ORDO:2806</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0038522</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8970"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in brain and that has_material_basis_in Measles virus which is immune resistant.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Measles morbillivirus) which is immune resistant.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/ency/article/001419.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/14872030/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK560673/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8970"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">SSPE</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 

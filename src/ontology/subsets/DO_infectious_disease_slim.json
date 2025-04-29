@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_infectious_disease_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-03-31/subsets/DO_infectious_disease_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/DO_infectious_disease_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0040083",
@@ -617,8 +617,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus, which is transmitted_by treehole mosquito, Ochlerotatus triseriatus. The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.",
-          "xrefs" : [ "url:http://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm" ]
+          "val" : "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in La Crosse virus (Orthobunyavirus lacrosseense), which is primarily transmitted_by treehole mosquito (Ochlerotatus triseriatus) but also Asian tiger mosquito (Aedes albopictus) and Asian bush mosquito (Aedes japonicus). The infection has_symptom seizures, has_symptom headache, has_symptom fever, has_symptom coma, and has_symptom paralysis.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/La_Crosse_encephalitis", "url:https://www.cdc.gov/la-crosse-encephalitis/about/", "url:https://www.ncbi.nlm.nih.gov/books/NBK562248/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -1138,7 +1138,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.",
+          "val" : "A viral hepatitis that results_in inflammation, located_in liver, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has_symptom headache, has_symptom fatigue, has_symptom fever, has_symptom abdominal pain, has_symptom nausea, and has_symptom jaundice.",
           "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/16711324", "url:https://www.ncbi.nlm.nih.gov/pubmed/17602362" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
@@ -2122,13 +2122,30 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in infection, has_material_basis_in Oropouche virus, which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Oropouche_fever", "url:http://www.cdc.gov/EID/content/13/6/912.htm" ]
+          "val" : "A viral infectious disease that results in infection, has_material_basis_in Oropouche virus (Orthobunyavirus oropoucheense), which is transmitted by biting midge, Culicoides paraensis. The infection has symptom fever, has symptom chills, has symptom headache, has symptom anorexia, has symptom muscle pain, has symptom joint pain, and has symptom vomiting.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Oropouche_fever", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC5923469/", "url:https://wwwnc.cdc.gov/eid/article/13/6/06-1114_article" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:A93.0"
+        }, {
+          "val" : "UMLS_CUI:C0276386"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD9CM:066.3"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "MESH:D002044"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A93.0"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0276386"
         } ]
       }
     }, {
@@ -2663,7 +2680,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in SARS-CoV-2, a subtype of Betacoronavirus pandemicum.",
+          "val" : "A Coronavirus infectious disease that is characterized by fever, cough and shortness of breath and that has_material_basis_in Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a subtype of Betacoronavirus pandemicum.",
           "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/32007143/", "url:https://pubmed.ncbi.nlm.nih.gov/32007145/", "url:https://www.cdc.gov/covid/about/", "url:https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049", "url:https://www.who.int/emergencies/diseases/novel-coronavirus-2019" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -2701,6 +2718,18 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:U07.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D000086382"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C171133"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C5203670"
         } ]
       }
     }, {
@@ -2709,13 +2738,32 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in MERS-CoV.",
-          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome", "url:https://pubmed.ncbi.nlm.nih.gov/23891402/", "url:https://pubmed.ncbi.nlm.nih.gov/29495250", "url:https://www.cdc.gov/coronavirus/mers/index.html", "url:https://www.who.int/news-room/q-a-detail/middle-east-respiratory-syndrome-coronavirus-(mers-cov)" ]
+          "val" : "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli).",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome", "url:https://pubmed.ncbi.nlm.nih.gov/23891402/", "url:https://pubmed.ncbi.nlm.nih.gov/29495250", "url:https://www.cdc.gov/mers/about/index.html", "url:https://www.who.int/health-topics/middle-east-respiratory-syndrome-coronavirus-mers" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "MERS"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCI:C128424"
+        }, {
+          "val" : "UMLS_CUI:C3694279"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD10CM:B34.2"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C128424"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C3694279"
         } ]
       }
     }, {
@@ -2725,7 +2773,7 @@
       "meta" : {
         "definition" : {
           "val" : "A Coronavirus infectious disease that is characterized by a patient aged less than 21 years with fever, laboratory evidence of inflammation, and evidence of clinically severe illness requiring hospitalization, with multisystem organ involvement (cardiovascular, dermatologic, gastrointestinal, hematologic, neurologic, renal, or respiratory) who tested positive for SARS-CoV-2 or had exposure to COVID-19.",
-          "xrefs" : [ "url:https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/children/mis-c.html", "url:https://www.cdc.gov/mis-c/hcp/", "url:https://www.cdc.gov/mis-c/index.html", "url:https://www.cdc.gov/mmwr/volumes/69/wr/mm6932e2.htm?s_cid=mm6932e2_x" ]
+          "xrefs" : [ "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9841678/", "url:https://pubmed.ncbi.nlm.nih.gov/40074901/", "url:https://www.cdc.gov/mis/about/", "url:https://www.cdc.gov/mmwr/volumes/69/wr/mm6932e2.htm?s_cid=mm6932e2_x" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "synonyms" : [ {
@@ -2739,9 +2787,26 @@
           "pred" : "hasExactSynonym",
           "val" : "paediatric inflammatory multisystemic syndrome"
         } ],
+        "xrefs" : [ {
+          "val" : "MESH:C000705967"
+        }, {
+          "val" : "UMLS_CUI:C5389369"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ORDO:598363"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "UMLS_CUI:C5539184"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:C000705967"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C5389369"
         } ]
       }
     }, {
@@ -4788,8 +4853,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in necrosis located in intercostal muscle, has_material_basis_in Human enterovirus B. The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.",
-          "xrefs" : [ "url:https://www.merckmanuals.com/professional/infectious-diseases/enteroviruses/epidemic-pleurodynia" ]
+          "val" : "A viral infectious disease that results in necrosis located in intercostal muscle and has_material_basis_in Human enterovirus B (Enterovirus betacoxsackie). The infection has symptom severe chest pain, has symptom fever, has symptom malaise, has symptom pleuritis, and has symptom headache.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Bornholm_disease", "url:https://pubmed.ncbi.nlm.nih.gov/30364740/", "url:https://www.merckmanuals.com/professional/infectious-diseases/enteroviruses/epidemic-pleurodynia" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "synonyms" : [ {
@@ -7609,7 +7674,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.",
+          "val" : "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis A virus (Hepatovirus ahepa), which is transmitted_by ingestion of contaminated food or water, or transmitted_by direct contact with an infected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.",
           "xrefs" : [ "url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf", "url:https://www.cdc.gov/hepatitis-a/", "url:https://www.ncbi.nlm.nih.gov/books/NBK459290/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -9288,7 +9353,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or has_material_basis_in Human adenovirus 7, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.",
+          "val" : "A viral infectious disease that results in infection located in pharynx or located in conjunctiva, has_material_basis_in Human adenovirus 3 or 7, serotypes of Mastadenovirus blackbeardi, which are transmitted by droplet spread of respiratory secretions or transmitted by fomites. The infection has symptom fever, has symptom lymphadenopathy of the neck, and has symptom headache.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Pharyngoconjunctival_fever" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -10768,7 +10833,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.",
+          "val" : "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepacivirus hominis, which is transmitted_by blood from an infected person enters the body of an uninfected person. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom joint pain, and has_symptom jaundice.",
           "xrefs" : [ "url:http://www.cdc.gov/hepatitis/HCV/index.htm", "url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf", "url:http://www.cdc.gov/hepatitis/hcv/pdfs/hepcgeneralfactsheet.pdf", "url:https://www.cdc.gov/hepatitis-c/about/index.html" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -10900,7 +10965,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.",
+          "val" : "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis B virus (Orthohepadnavirus hominoidei), which is transmitted_by sexual contact, blood transfusions, or fomites like needles or syringes. The infection has_symptom fever, fatigue, loss of appetite, nausea, vomiting, abdominal pain, clay-colored bowel movements, joint pain, and jaundice.",
           "xrefs" : [ "url:http://www.cdc.gov/hepatitis/Resources/Professionals/PDFs/ABCTable.pdf", "url:https://www.cdc.gov/hepatitis-b/", "url:https://www.ncbi.nlm.nih.gov/books/NBK555945/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
@@ -10945,7 +11010,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.",
+          "val" : "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis delta virus, which is an incomplete virus that requires the helper function of Hepatitis B virus to replicate and only occurs among people who are infected with the Hepatitis B virus (Orthohepadnavirus hominoidei). The infection has_symptom fatigue, has_symptom lethargy, has_symptom anorexia, has_symptom nausea, has_symptom jaundice, has_symptom clay-colored stools, has_symptom dark urine, has_symptom changes in personality, has_symptom disturbances in sleep, has_symptom confusion, has_symptom abnormal behavior, has_symptom somnolence, and has_symptom coma. Hepatitis delta virus, also known as Hepatitis D virus, is not a single viral species but a group of viruses from the genus Deltavirus including Deltavirus italiense, Deltavirus japanense, Deltavirus peruense, Deltavirus taiwanense, Deltavirus togense, Deltavirus carense, Deltavirus cameroonense, Deltavirus senegalense.",
           "xrefs" : [ "url:https://en.wikipedia.org/wiki/Hepatitis_D", "url:https://www.cdc.gov/hepatitis-d/about/index.html", "url:https://www.ncbi.nlm.nih.gov/books/NBK470436/", "url:https://www.who.int/news-room/fact-sheets/detail/hepatitis-d" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
@@ -11683,8 +11748,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4.",
-          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus_infection", "url:https://www.cdc.gov/epstein-barr/about-ebv.html", "url:https://www.ncbi.nlm.nih.gov/books/NBK559285/" ]
+          "val" : "A viral infectious disease that has_material_basis_in Human gammaherpesvirus 4 (Lymphocryptovirus humangamma4).",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus_infection", "url:https://www.cdc.gov/epstein-barr/about/", "url:https://www.ncbi.nlm.nih.gov/books/NBK559285/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -11726,8 +11791,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in SARS coronavirus (SARS-CoV/SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome", "url:https://www.merriam-webster.com/dictionary/SARS#medicalDictionary" ]
+          "val" : "A Coronavirus infectious disease that results_in infection located_in respiratory tract, has_material_basis_in Severe acute respiratory syndrome coronavirus (SARS-CoV or SARS-CoV-1), a subtype of Betacoronavirus pandemicum, which is transmitted_by droplet spread of respiratory secretions, transmitted_by ingestion of contaminated food, or transmitted_by fomites. The infection has_symptom fever, has_symptom headache, has_symptom body aches, has_symptom dry cough, and has_symptom hypoxia.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome", "url:https://www.merriam-webster.com/dictionary/SARS#medicalDictionary", "url:https://www.ncbi.nlm.nih.gov/books/NBK558977/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -12868,7 +12933,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.",
+          "val" : "A viral hepatitis that results_in inflammation located_in liver, has_material_basis_in Hepatitis E virus (Paslahepevirus balayani), which is transmitted_by ingestion of contaminated food. The infection has_symptom fever, has_symptom fatigue, has_symptom loss of appetite, has_symptom nausea, has_symptom vomiting, has_symptom abdominal pain, has_symptom clay-colored bowel movements, has_symptom dark urine, has_symptom joint pain, and has_symptom jaundice.",
           "xrefs" : [ "url:https://www.cdc.gov/hepatitis-e/about/index.html", "url:https://www.ncbi.nlm.nih.gov/books/NBK532278/", "url:https://www.who.int/news-room/fact-sheets/detail/hepatitis-e" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
@@ -13095,8 +13160,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in destruction located in motor neurons, has_material_basis_in Human poliovirus 1, has_material_basis_in Human poliovirus 2, or has_material_basis_in Human poliovirus 3, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Poliomyelitis", "url:http://www.cdc.gov/vaccines/pubs/pinkbook/downloads/polio.pdf", "url:http://www.mayoclinic.com/health/polio/DS00572/DSECTION=symptoms" ]
+          "val" : "A viral infectious disease that results in destruction located in motor neurons and has_material_basis_in Human poliovirus 1, 2, or 3, serotypes of Enterovirus coxsackiepol, which are transmitted by ingestion of food or water contaminated with feces, or transmitted by direct contact with the oral secretions. The infection has symptom fever, has symptom sore throat, has symptom headache, has symptom vomiting, has symptom fatigue, has symptom neck stiffness, has symptom muscle spasms, and has symptom acute flaccid paralysis.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Poliomyelitis", "url:https://www.cdc.gov/polio/hcp/clinical-overview/index.html", "url:https://www.mayoclinic.org/diseases-conditions/polio/symptoms-causes/syc-20376512" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
@@ -13290,8 +13355,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/HIV", "url:http://www.nlm.nih.gov/medlineplus/ency/article/000602.htm" ]
+          "val" : "A viral infectious disease that results in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted by sexual contact, transmitted by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted by congenital method, and transmitted by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has symptom diarrhea, has symptom fatigue, has symptom fever, has symptom vaginal yeast infection, has symptom headache, has symptom mouth sores, has symptom muscle aches, has symptom sore throat, and has symptom swollen lymph glands.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/HIV", "url:https://medlineplus.gov/hiv.html", "url:https://www.cdc.gov/hiv/about/index.html" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -13300,6 +13365,8 @@
         } ],
         "xrefs" : [ {
           "val" : "ICD10CM:B20"
+        }, {
+          "val" : "ICD9CM:042"
         }, {
           "val" : "ICD9CM:042-042.99"
         }, {
@@ -13570,7 +13637,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.",
+          "val" : "A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per microliter of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 (Lentivirus humimdef1) or Human immunodeficiency virus 2 (Lentivirus humimdef2), which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/AIDS", "url:https://www.merriam-webster.com/dictionary/AIDS" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
@@ -13612,8 +13679,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that involves reactivation of JC polyomavirus in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.",
-          "xrefs" : [ "url:http://www.merck.com/mmpe/sec16/ch217/ch217f.html", "url:http://www.merriam-webster.com/medical/progressive%20multifocal%20leukoencephalopathy", "url:http://www.ninds.nih.gov/disorders/pml/pml.htm" ]
+          "val" : "A viral infectious disease that involves reactivation of JC polyomavirus (Betapolyomavirus secuhominis) in immune-compromised individuals which causes the loss of white matter (which is made up of myelin, a substance the surrounds and protects nerve fibers) in multiple areas of the brain. The symptoms include hemiparesis, aphasia, dysarthria, hemianopia, cognitive impairment and coma.",
+          "xrefs" : [ "url:http://www.merck.com/mmpe/sec16/ch217/ch217f.html", "url:http://www.merriam-webster.com/medical/progressive%20multifocal%20leukoencephalopathy", "url:https://www.ninds.nih.gov/health-information/disorders/progressive-multifocal-leukoencephalopathy" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -14461,8 +14528,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Infectious_mononucleosis", "url:http://www.cdc.gov/ncidod/diseases/ebv.htm" ]
+          "val" : "A viral infectious disease that results in inflammation, located in pharynx, has_material_basis_in Human herpesvirus 4 (Lymphocryptovirus humangamma4) and has symptom fever, has symptom fatigue, has symptom lymphadenopathy, and has symptom splenomegaly.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Infectious_mononucleosis", "url:https://www.cdc.gov/epstein-barr/about/mononucleosis.html" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -14577,17 +14644,18 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus, which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Measles" ]
+          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Measles virus (Morbillivirus hominis), which is transmitted_by contact with oronasal secretions, or semen of an infected person. The infection has_symptom fever, has_symptom cough, has_symptom coryza, has_symptom conjunctivitis, and has_symptom maculopapular, erythematous rash.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Measles", "url:https://www.cdc.gov/measles/", "url:https://www.ncbi.nlm.nih.gov/books/NBK448068/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "morbilli"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "rubeola"
         } ],
         "xrefs" : [ {
-          "val" : "GARD:3434"
-        }, {
           "val" : "ICD10CM:B05"
         }, {
           "val" : "ICD9CM:055"
@@ -14963,6 +15031,10 @@
       "lbl" : "viral exanthem",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An exanthem that has_material_basis_in viruses.",
+          "xrefs" : [ "url:https://my.clevelandclinic.org/health/diseases/22510-viral-exanthem-rash", "url:https://www.pcds.org.uk/clinical-guidance/viral-exanthems" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "xrefs" : [ {
           "val" : "ICD9CM:057.8"
@@ -15167,6 +15239,10 @@
       "lbl" : "erythema infectiosum",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A viral exanthem that has_material_basis_in Human parvovirus B19 (Erythroparvovirus primate1).",
+          "xrefs" : [ "url:https://my.clevelandclinic.org/health/diseases/15774-fifth-disease", "url:https://www.ncbi.nlm.nih.gov/books/NBK513309/" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -15463,7 +15539,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus, which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.",
+          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Molluscum contagiosum virus (Molluscipoxvirus molluscum), which is transmitted_by contact with the skin, and transmitted_by fomites. The infection has_symptom lesions which are flesh-colored with a pit in the center.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Molluscum_contagiosum", "url:http://www.cdc.gov/ncidod/dvrd/molluscum/overview.htm" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
@@ -15625,16 +15701,26 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in brain and that has_material_basis_in Measles virus which is immune resistant.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis" ]
+          "val" : "A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Measles morbillivirus) which is immune resistant.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis", "url:https://medlineplus.gov/ency/article/001419.htm", "url:https://pubmed.ncbi.nlm.nih.gov/14872030/", "url:https://www.ncbi.nlm.nih.gov/books/NBK560673/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "Immunosuppressive measles encephalitis"
+          "val" : "Dawson's encephalitis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Dawson's inclusion body encephalitis"
+        }, {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "SSPE"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Van Bogaert's sclerosing leukoencephalitis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "immunosuppressive measles encephalitis"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "subacute sclerosing leukoencephalopathy"
@@ -15652,6 +15738,8 @@
         }, {
           "val" : "NCI:C85171"
         }, {
+          "val" : "ORDO:2806"
+        }, {
           "val" : "SNOMEDCT_US_2023_03_01:84196008"
         }, {
           "val" : "UMLS_CUI:C0038522"
@@ -15659,6 +15747,30 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:7708"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A81.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:046.2"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D013344"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MIM:260470"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C85171"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:2806"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0038522"
         } ]
       }
     }, {
@@ -18125,7 +18237,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_12549",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1884"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1255",
       "pred" : "is_a",
@@ -18469,7 +18581,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1883",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1884"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1947",
       "pred" : "is_a",
@@ -18477,11 +18589,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2043",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1884"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2047",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1884"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2058",
       "pred" : "is_a",
@@ -18705,7 +18817,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4411",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_1884"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4492",
       "pred" : "is_a",
@@ -18911,10 +19023,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_8672"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_8743",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_8771",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_934"
@@ -18961,7 +19069,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_8970",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_934"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_646"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_9060",
       "pred" : "is_a",

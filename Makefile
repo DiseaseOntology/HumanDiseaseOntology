@@ -822,7 +822,7 @@ QUERIES := $(wildcard src/sparql/build/*-report.rq)
 # target names for previous release reports
 LAST_REPORTS := $(foreach Q,$(QUERIES), build/reports/$(basename $(notdir $(Q)))-last.tsv)
 last-reports: $(LAST_REPORTS)
-build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-last.owl | check_robot build/reports
+build/reports/%-last.tsv: src/sparql/build/%.rq build/doid-merged-last.owl | check_robot build/reports
 	@echo "Counting: $(notdir $(basename $@))"
 	@$(ROBOT) query \
 	 --input $(word 2,$^) \
@@ -862,7 +862,7 @@ build/reports/branch-count.tsv: $(branch_reports)
 
 
 # the following targets are used to build a smaller diff with only removed axioms to review
-build/robot.diff: build/doid-last.owl $(DM).owl | check_robot
+build/robot.diff: build/doid-merged-last.owl $(DM).owl | check_robot
 	@echo "Comparing axioms in previous release to current release"
 	@$(ROBOT) diff \
 	 --left $< \

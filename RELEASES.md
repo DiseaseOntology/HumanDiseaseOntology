@@ -13,6 +13,23 @@
 
 ## 2025 Releases
 
+### [v2025-04-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-04-29)
+
+This release of the Human Disease Ontology includes 11,870 disease classes, 9,554 with textual definitions (80.5%). Terms with Spanish translation have increased to include 10,447 labels (88%), 11,714 synonyms (60.8%), and 1,280 definitions (13.4%).
+
+Diseases revised and updated include viral infectious diseases, various congenital disease subtypes, citrullinemias, adiaspiromycosis, sickle cell diseases, Christianson syndrome, autosomal dominant intellectual developmental disorder 43, autosomal recessive nonsyndromic deafness 61, combined oxidative phosphorylation deficiency 21, congenital malabsorptive diarrhea 4,  progressive multifocal leukoencephalopathy, retinitis pigmentosa 96, and spermatogenic failure 14.
+
+Newly added diseases include subtypes of autosomal recessive limb-girdle muscular dystrophy, autosomal recessive nonsyndromic deafness, immunodeficiency, mucopolysaccharidosis, retinitis pigmentosa, and visceral heterotaxy.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-03-31...v2025-04-29
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-04-29/src/ontology/doid-merged.obo) | |
+
 ### [v2025-03-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-03-31)
 
 This release of the Human Disease Ontology includes 11,858 disease classes, 9,540 with textual definitions (80.3%). This release also includes a large update expanding the disease text (labels, synonyms, & definitions) in Spanish.

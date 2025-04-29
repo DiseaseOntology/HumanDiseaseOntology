@@ -166,7 +166,7 @@ build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
 	@echo -e "\n## Reasoning completed successfully!"
 
 # Verify doid-edit.owl
-EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq)
+EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verify/verify-*.rq)
 
 .PRECIOUS: build/reports/edit-verify.csv
 verify-edit: build/reports/edit-verify.csv
@@ -176,7 +176,7 @@ build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
 	 --queries $(EDIT_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir build/reports/temp
-	@TMP_FILES=$$(find $(word 2,$|) -name "edit-verify-*.csv") ; \
+	@TMP_FILES=$$(find $(word 2,$|) -name "edit-verify-*.csv" -name "verify-*.csv") ; \
 	 if [ "$$TMP_FILES" ]; then \
 		awk 'BEGIN { OFS = FS = "," } ; { \
 			if (FNR == 1) { \
@@ -190,7 +190,6 @@ build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
 		exit 1 ; \
 	 else \
 		touch $@ ; \
-		echo "--> No errors found" ; \
 	 fi ;
 
 # Verify of doid-edit.owl that should be run quarterly (not part of release)

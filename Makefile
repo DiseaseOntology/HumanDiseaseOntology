@@ -226,8 +226,10 @@ build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 ##########################################
 
 # Get the last release of doid-merged.owl, if newer available (always run)
-.PHONY: FORCE
+.PHONY: FORCE diff
 FORCE:
+
+diff: build/reports/doid-diff.tsv
 
 build/doid-merged-last.version: FORCE | build
 	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
@@ -245,7 +247,6 @@ build/doid-merged-last.version: FORCE | build
 build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
 	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
 
-diff: build/reports/doid-diff.tsv
 build/reports/doid-diff.tsv: build/doid-merged-last.owl \
 	build/update/doid-edit-reasoned.owl | check_robot test
 	@$(ROBOT) export \
@@ -253,12 +254,12 @@ build/reports/doid-diff.tsv: build/doid-merged-last.owl \
 	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
 	 --export $(addsuffix .tsv,$(basename $<))
 	@$(ROBOT) export \
-	 --input $(word 2, $^) \
+	 --input $(word 2,$^) \
 	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
-	 --export $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2, $^)))
+	 --export $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2,$^)))
 	@python3 src/util/diff-re.py \
 	 -1 $(addsuffix .tsv,$(basename $<)) \
-	 -2 $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2, $^))) \
+	 -2 $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2,$^))) \
 	 -p "DOID" \
 	 -o $@
 	@echo "Generated DOID diff report at $@"

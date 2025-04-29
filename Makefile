@@ -893,7 +893,7 @@ translations: $(LANGS) international
 
 international: $(DOLANG)-international.owl
 
-$(LANGS): %: $(DOLANG)-%.owl
+$(LANGS): %: $(DOLANG)-%.owl $(DOLANG)-%.obo
 
 
 # ----------------------------------------

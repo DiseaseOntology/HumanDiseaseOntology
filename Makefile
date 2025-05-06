@@ -889,7 +889,7 @@ LANGS := es
 DOLANG := src/ontology/releases/translations/doid
 
 .PHONY: translations international $(LANGS)
-translations: $(LANGS) international
+translations: $(LANGS) international lang-reports
 
 international: $(DOLANG)-international.owl
 
@@ -983,3 +983,19 @@ $(DOLANG)-international.owl: $(DO).owl $(LANG_IMPORTS) $(LANG_ANNOTS) \
 	 "$${ANNOT_ARRAY[@]}" \
 	 --output $@
 	@echo "Created $@"
+
+# ----------------------------------------
+# INTERNATIONAL REPORT
+# ----------------------------------------
+
+LANG_QUERIES := $(wildcard src/sparql/build/intl-report-*.rq)
+LANG_REPORTS := $(foreach Q,$(LANG_QUERIES),build/reports/$(basename $(notdir $(Q))).tsv)
+
+.PHONY: lang-reports
+lang-reports: $(LANG_REPORTS)
+
+$(LANG_REPORTS): build/reports/%.tsv: src/sparql/build/%.rq $(DOLANG)-international.owl | check_robot build/reports
+	@echo "Counting: $(notdir $(basename $@))"
+	@$(ROBOT) query \
+	 --input $(word 2,$^) \
+	 --query $< $@

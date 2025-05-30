@@ -1,0 +1,24 @@
+# Count of text by predicate and language
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?predicate ?lang (COUNT(DISTINCT ?text) AS ?count)
+WHERE {
+    VALUES (?p ?predicate) {
+        (rdfs:label "label")
+        (IAO:0000115 "definition")
+        (oboInOwl:hasExactSynonym "synonym")
+        (oboInOwl:hasBroadSynonym "synonym")
+        (oboInOwl:hasNarrowSynonym "synonym")
+        (oboInOwl:hasRelatedSynonym "synonym")
+    }
+  ?iri ?p ?text .
+  FILTER(CONTAINS(str(?iri), "DOID_"))
+  FILTER NOT EXISTS { ?iri owl:deprecated ?deprecated }
+  BIND(lang(?text) AS ?lang)
+}
+GROUP BY ?predicate ?lang
+ORDER BY ?predicate ?lang

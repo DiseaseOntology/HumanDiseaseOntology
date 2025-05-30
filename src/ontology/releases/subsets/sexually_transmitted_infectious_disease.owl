@@ -8,9 +8,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/sexually_transmitted_infectious_disease.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/sexually_transmitted_infectious_disease.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-05-30/subsets/sexually_transmitted_infectious_disease.owl"/>
     </owl:Ontology>
     
 
@@ -77,6 +78,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
     
 
 
@@ -1413,12 +1420,13 @@
     <!-- http://purl.obolibrary.org/obo/DOID_8704 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8704">
-        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8982</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>ICD10CM:A60</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:054.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006558</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C14364</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:154333002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:33839006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0019342</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Genital herpes simplex</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Herpes Genitalis</oboInOwl:hasExactSynonym>
@@ -1430,13 +1438,19 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease"/>
         <rdfs:label xml:lang="en">genital herpes</rdfs:label>
+        <skos:exactMatch>ICD10CM:A60</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:054.1</skos:exactMatch>
+        <skos:exactMatch>MESH:D006558</skos:exactMatch>
+        <skos:exactMatch>NCI:C14364</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019342</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8704"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/std/herpes/stdfact-herpes.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/genitalherpes.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/herpes/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

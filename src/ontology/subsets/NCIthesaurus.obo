@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-04-29/subsets/NCIthesaurus.obo
-date: 29:04:2025 14:18
+data-version: doid/releases/2025-05-30/subsets/NCIthesaurus.obo
+date: 30:05:2025 09:44
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -6024,13 +6024,15 @@ is_a: DOID:936 ! brain disease
 id: DOID:0080922
 name: bilateral frontoparietal polymicrogyria
 namespace: disease_ontology
-def: "A polymicrogyria that is characterized by excessive cortical folding and abnormal cortical layering, that involves the frontoparietal region of the brain and that presents with hypotonia, developmental delay, moderate to severe intellectual disability, pyramidal signs, epileptic seizures, non progressive cerebellar ataxia, dysconjugate gaze and/or strabismus and that has_material_basis_in homozygous mutation in the ADGRG1 gene on chromosome 16q21." [url:https\://rarediseases.info.nih.gov/diseases/10784/bilateral-frontoparietal-polymicrogyria/cases/32002]
+def: "A polymicrogyria that is characterized by a global developmental delay with impaired intellectual development, motor delay, poor speech development, and early-onset seizures, often focal or atypical absence and that has_material_basis_in homozygous mutation in the ADGRG1 gene on chromosome 16q21." [url:https\://pubmed.ncbi.nlm.nih.gov/34863467/]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "CDCBM14A" EXACT OMO:0003012 []
+synonym: "complex cortical dysplasia with other brain malformations 14A" EXACT []
 xref: GARD:10784
 xref: MIM:606854
 xref: NCI:C148367
-is_a: DOID:0080918 ! polymicrogyria
+is_a: DOID:936 ! brain disease
 
 [Term]
 id: DOID:0080925
@@ -9167,10 +9169,11 @@ is_a: DOID:612 ! primary immunodeficiency disease
 id: DOID:0111949
 name: immunodeficiency 36
 namespace: disease_ontology
-def: "A combined T cell and B cell immunodeficiency characterized by recurrent respiratory tract infections, lymphoproliferation, and antibody deficiency that has_material_basis_in heterozygous mutation in the PIK3R1 gene on chromosome 5q13.1." [url:https\://pubmed.ncbi.nlm.nih.gov/27221134/]
+def: "A combined T cell and B cell immunodeficiency characterized by infantile or childhood onset of recurrent bacterial respiratory tract infections, lymphoproliferation, variable antibody deficiency (sometimes with hyper IgM), chronic viral infection (EBV, CMV), and autoimmunity that has_material_basis_in heterozygous mutation in the PIK3R1 gene on chromosome 5q13." [url:https\://pubmed.ncbi.nlm.nih.gov/39714594/]
 subset: NCIthesaurus
 synonym: "activated phosphoinositide 3-kinase delta syndrome 2" EXACT []
 synonym: "IMD36" EXACT OMO:0003012 []
+synonym: "immunodeficiency-36 with lymphoproliferation" EXACT []
 xref: MIM:616005
 xref: NCI:C176703
 xref: UMLS_CUI:C4014934
@@ -10387,7 +10390,7 @@ is_a: DOID:2742 ! auditory system disease
 id: DOID:10264
 name: mumps
 namespace: disease_ontology
-def: "A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus, which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face." [url:http\://www.cdc.gov/mumps/about/downloads/mumps-factsheet.pdf]
+def: "A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus (Orthorubulavirus parotitidis), which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face." [url:https\://medlineplus.gov/ency/article/001557.htm, url:https\://www.cdc.gov/mumps/about/, url:https\://www.ncbi.nlm.nih.gov/books/NBK534785/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -14383,7 +14386,7 @@ is_a: DOID:11102 ! bartonellosis
 id: DOID:11260
 name: rabies
 namespace: disease_ontology
-def: "A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis." [url:http\://en.wikipedia.org/wiki/Rabies, url:https\://wwwnc.cdc.gov/travel/yellowbook/2020/travel-related-infectious-diseases/rabies]
+def: "A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs." [url:http\://en.wikipedia.org/wiki/Rabies, url:https\://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/rabies.html]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -14420,21 +14423,33 @@ is_a: DOID:104 ! bacterial infectious disease
 id: DOID:11266
 name: Hantavirus hemorrhagic fever with renal syndrome
 namespace: disease_ontology
-def: "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure." [url:http\://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/hfrs.htm, url:https\://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome]
+def: "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure." [url:https\://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome, url:https\://www.cdc.gov/hantavirus/about/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
+synonym: "hemorrhagic fever renal syndrome" EXACT []
 synonym: "Hemorrhagic fever, Russian" EXACT []
 synonym: "Hemorrhagic nephrosonephritis" EXACT []
 synonym: "HFRS" EXACT OMO:0003012 []
 synonym: "Puumala virus nephropathy" EXACT []
+xref: GARD:18689
 xref: ICD10CM:A98.5
 xref: ICD9CM:078.6
 xref: MESH:D006480
 xref: NCI:C84753
-xref: SNOMEDCT_US_2023_03_01:186701001
+xref: ORDO:340
+xref: SNOMEDCT_US_2025_05_01:716864001
 xref: UMLS_CUI:C0019101
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "GARD:18689" xsd:string
+property_value: exactMatch "ICD10CM:A98.5" xsd:string
+property_value: exactMatch "ICD9CM:078.6" xsd:string
+property_value: exactMatch "MESH:D006480" xsd:string
+property_value: exactMatch "NCI:C84753" xsd:string
+property_value: exactMatch "ORDO:340" xsd:string
+property_value: exactMatch "UMLS_CUI:C0019101" xsd:string
+property_value: relatedMatch "MESH:C535630" xsd:string
+property_value: relatedMatch "UMLS_CUI:C2930957" xsd:string
 
 [Term]
 id: DOID:11277
@@ -18590,6 +18605,7 @@ is_a: DOID:178 ! vascular disease
 id: DOID:12720
 name: cerebral atherosclerosis
 namespace: disease_ontology
+def: "An atherosclerosis of the cerebral vasculature." [url:https\://www.ncbi.nlm.nih.gov/books/NBK218744/]
 subset: NCIthesaurus
 xref: ICD10CM:I67.2
 xref: ICD9CM:437.0
@@ -18603,16 +18619,26 @@ is_a: DOID:1936 ! atherosclerosis
 id: DOID:1273
 name: respiratory syncytial virus infectious disease
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus, which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress." [url:http\://www.merck.com/mmhe/sec23/ch273/ch273i.html?qt=respiratory%20syncytial%20virus&alt=sh#sec23-ch273-ch273i-982g]
+def: "A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus (Orthopneumovirus hominis), which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress." [url:https\://medlineplus.gov/respiratorysyncytialvirusinfections.html, url:https\://www.lung.org/lung-health-diseases/lung-disease-lookup/rsv, url:https\://www.merckmanuals.com/professional/pediatrics/respiratory-disorders-in-young-children/respiratory-syncytial-virus-rsv-and-human-metapneumovirus-infections]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "respiratory syncytial virus" EXACT []
 synonym: "RSV" EXACT OMO:0003012 []
 xref: MESH:D018357
 xref: NCI:C3354
-xref: SNOMEDCT_US_2023_03_01:186750007
+xref: SNOMEDCT_US_2025_05_01:55735004
 xref: UMLS_CUI:C0035235
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "MESH:D018357" xsd:string
+property_value: exactMatch "NCI:C3354" xsd:string
+property_value: exactMatch "UMLS_CUI:C0035235" xsd:string
+property_value: relatedMatch "ICD10CM:B97.4" xsd:string
+property_value: relatedMatch "ICD10CM:J12.1" xsd:string
+property_value: relatedMatch "ICD10CM:J20.5" xsd:string
+property_value: relatedMatch "ICD10CM:J21.0" xsd:string
+property_value: relatedMatch "ICD9CM:079.6" xsd:string
+property_value: relatedMatch "ICD9CM:466.11" xsd:string
+property_value: relatedMatch "ICD9CM:480.1" xsd:string
 
 [Term]
 id: DOID:12731
@@ -20194,16 +20220,22 @@ is_a: DOID:13268 ! porphyria
 id: DOID:1328
 name: Rift Valley fever
 namespace: disease_ontology
-def: "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites." [url:http\://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/rvf/rvf_qa.htm, url:http\://www.who.int/mediacentre/factsheets/fs207/en/]
+def: "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites." [url:http\://www.who.int/mediacentre/factsheets/fs207/en/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/, url:https\://www.who.int/news-room/fact-sheets/detail/rift-valley-fever]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 xref: ICD10CM:A92.4
 xref: MESH:D012295
 xref: NCI:C128419
-xref: SNOMEDCT_US_2023_03_01:7077006
+xref: ORDO:319251
+xref: SNOMEDCT_US_2025_05_01:402917003
 xref: UMLS_CUI:C0035613
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "ICD10CM:A92.4" xsd:string
+property_value: exactMatch "MESH:D012295" xsd:string
+property_value: exactMatch "NCI:C128419" xsd:string
+property_value: exactMatch "ORDO:319251" xsd:string
+property_value: exactMatch "UMLS_CUI:C0035613" xsd:string
 
 [Term]
 id: DOID:133
@@ -23857,12 +23889,23 @@ subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
+synonym: "HPS" EXACT OMO:0003012 []
 xref: GARD:69
+xref: ICD10CM:B33.4
 xref: MESH:D018804
 xref: NCI:C84747
+xref: ORDO:319247
 xref: SNOMEDCT_US_2023_03_01:120639003
 xref: UMLS_CUI:C0243025
 is_a: DOID:934 ! viral infectious disease
+property_value: broadMatch "ICD9CM:079.81" xsd:string
+property_value: broadMatch "ICD9CM:480.8" xsd:string
+property_value: exactMatch "GARD:69" xsd:string
+property_value: exactMatch "ICD10CM:B33.4" xsd:string
+property_value: exactMatch "MESH:D018804" xsd:string
+property_value: exactMatch "NCI:C84747" xsd:string
+property_value: exactMatch "ORDO:319247" xsd:string
+property_value: exactMatch "UMLS_CUI:C0243025" xsd:string
 
 [Term]
 id: DOID:14482
@@ -27437,6 +27480,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:1936
 name: atherosclerosis
 namespace: disease_ontology
+def: "An arteriosclerotic cardiovascular disease that is characterized by the build-up of fatty material and calcium deposition in the arterial wall resulting in partial or complete occlusion of the arterial lumen. Disease is located within the tunica intima of large and small arteries." [url:https\://www.mayoclinic.org/diseases-conditions/arteriosclerosis-atherosclerosis/symptoms-causes/syc-20350569, url:https\://www.ncbi.nlm.nih.gov/books/NBK507799/]
 subset: DO_RAD_slim
 subset: NCIthesaurus
 xref: EFO:0003914
@@ -29499,6 +29543,7 @@ is_a: DOID:655 ! inherited metabolic disorder
 id: DOID:2347
 name: generalized atherosclerosis
 namespace: disease_ontology
+def: "An atherosclerosis that is not localized." [url:https\://www.ncbi.nlm.nih.gov/books/NBK218744/]
 subset: NCIthesaurus
 synonym: "Generalised atherosclerosis" EXACT []
 xref: ICD10CM:I70.91
@@ -29512,17 +29557,10 @@ is_a: DOID:1936 ! atherosclerosis
 id: DOID:2348
 name: arteriosclerotic cardiovascular disease
 namespace: disease_ontology
+def: "An arteriosclerosis that results in cardiovascular disease." [url:https\://www.ncbi.nlm.nih.gov/books/NBK218744/]
 subset: NCIthesaurus
 synonym: "Cardiovascular arteriosclerosis" EXACT []
-xref: ICD10CM:I70
-xref: ICD9CM:440
-xref: MESH:D050197
 xref: NCI:C34403
-xref: NCI:C35768
-xref: SNOMEDCT_US_2023_03_01:155414001
-xref: SNOMEDCT_US_2023_03_01:39468009
-xref: UMLS_CUI:C0004153
-xref: UMLS_CUI:C3665365
 is_a: DOID:2349 ! arteriosclerosis
 
 [Term]
@@ -53636,9 +53674,10 @@ is_a: DOID:3701 ! cervical mucinous adenocarcinoma
 id: DOID:6102
 name: herpetic gastritis
 namespace: disease_ontology
-def: "A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1063088]
+def: "A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus (Simplexvirus humanalpha1 or Simplexvirus humanalpha2)." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1063088]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
+synonym: "herpes gastritis" EXACT []
 xref: NCI:C27341
 xref: UMLS_CUI:C1333996
 is_a: DOID:2327 ! viral gastritis
@@ -63915,7 +63954,7 @@ alt_id: DOID:8555
 alt_id: DOID:8772
 alt_id: DOID:8801
 alt_id: DOID:9085
-def: "A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia." [url:http\://en.wikipedia.org/wiki/Herpes_zoster, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000858.htm]
+def: "A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia." [url:http\://en.wikipedia.org/wiki/Herpes_zoster, url:https\://medlineplus.gov/ency/article/000858.htm]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "herpes zona" EXACT []
@@ -63927,6 +63966,11 @@ xref: NCI:C71079
 xref: SNOMEDCT_US_2023_03_01:186514003
 xref: UMLS_CUI:C0019360
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "ICD10CM:B02" xsd:string
+property_value: exactMatch "ICD9CM:053" xsd:string
+property_value: exactMatch "MESH:D006562" xsd:string
+property_value: exactMatch "NCI:C71079" xsd:string
+property_value: exactMatch "UMLS_CUI:C0019360" xsd:string
 
 [Term]
 id: DOID:8538
@@ -64145,7 +64189,7 @@ namespace: disease_ontology
 alt_id: DOID:8763
 alt_id: DOID:9012
 alt_id: DOID:9239
-def: "A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which are transmitted_by direct contact with an active lesion or body fluid of an infected person." [url:http\://en.wikipedia.org/wiki/Herpes_simplex, url:https\://www.aad.org/public/diseases/a-z/herpes-simplex-overview]
+def: "A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which are transmitted_by direct contact with an active lesion or body fluid of an infected person." [url:http\://en.wikipedia.org/wiki/Herpes_simplex, url:https\://www.aad.org/public/diseases/a-z/herpes-simplex-overview]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Herpesvirus hominis disease" EXACT []
@@ -64156,6 +64200,11 @@ xref: NCI:C155871
 xref: SNOMEDCT_US_2023_03_01:88594005
 xref: UMLS_CUI:C0019348
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "ICD10CM:B00.9" xsd:string
+property_value: exactMatch "ICD9CM:054" xsd:string
+property_value: exactMatch "MESH:D006561" xsd:string
+property_value: exactMatch "NCI:C155871" xsd:string
+property_value: exactMatch "UMLS_CUI:C0019348" xsd:string
 
 [Term]
 id: DOID:8567
@@ -64375,7 +64424,7 @@ is_a: DOID:8618 ! oral cavity cancer
 id: DOID:8607
 name: herpetic whitlow
 namespace: disease_ontology
-def: "A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 and has_material_basis_in Human herpesvirus 2 and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes." [url:http\://en.wikipedia.org/wiki/Herpetic_whitlow]
+def: "A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2) and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes." [url:http\://en.wikipedia.org/wiki/Herpetic_whitlow, url:https\://dermnetnz.org/topics/herpetic-whitlow, url:https\://www.ncbi.nlm.nih.gov/books/NBK482379/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "Herpetic felon" EXACT []
@@ -64511,7 +64560,7 @@ alt_id: DOID:12778
 alt_id: DOID:6480
 alt_id: DOID:7239
 alt_id: DOID:8631
-def: "A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (HHV8)." [url:http\://cancerres.aacrjournals.org/content/58/8/1599.full.pdf, url:http\://en.wikipedia.org/wiki/Kaposi%27s_sarcoma]
+def: "A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (Rhadinovirus humangamma8)." [url:http\://cancerres.aacrjournals.org/content/58/8/1599.full.pdf, url:http\://en.wikipedia.org/wiki/Kaposi%27s_sarcoma]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
@@ -64741,7 +64790,7 @@ namespace: disease_ontology
 alt_id: DOID:8658
 alt_id: DOID:8693
 alt_id: DOID:9243
-def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3, which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters." [url:http\://www.nlm.nih.gov/medlineplus/chickenpox.html]
+def: "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters." [url:https\://medlineplus.gov/chickenpox.html, url:https\://www.cdc.gov/chickenpox/about/index.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK448191/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "varicella" EXACT []
@@ -64749,10 +64798,14 @@ xref: ICD10CM:B01.9
 xref: ICD9CM:052
 xref: MESH:D002644
 xref: NCI:C97132
-xref: SNOMEDCT_US_2023_03_01:186508005
+xref: SNOMEDCT_US_2023_03_01:38907003
+xref: SNOMEDCT_US_2025_05_01:186508005
 xref: UMLS_CUI:C0008049
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "ICD10CM:B01.9" xsd:string
 property_value: exactMatch "MESH:D002644" xsd:string
+property_value: exactMatch "NCI:C97132" xsd:string
+property_value: exactMatch "UMLS_CUI:C0008049" xsd:string
 
 [Term]
 id: DOID:8660
@@ -65005,7 +65058,7 @@ id: DOID:8704
 name: genital herpes
 namespace: disease_ontology
 alt_id: DOID:8982
-def: "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands." [url:http\://www.cdc.gov/std/herpes/stdfact-herpes.htm]
+def: "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands." [url:https\://medlineplus.gov/genitalherpes.html, url:https\://www.cdc.gov/herpes/about/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 subset: sexually_transmitted_infectious_disease
@@ -65013,12 +65066,18 @@ synonym: "Genital herpes simplex" EXACT []
 synonym: "Herpes Genitalis" EXACT []
 synonym: "venereal herpes" EXACT []
 synonym: "Virus-Genital Herpes" EXACT []
+xref: ICD10CM:A60
 xref: ICD9CM:054.1
 xref: MESH:D006558
 xref: NCI:C14364
-xref: SNOMEDCT_US_2023_03_01:154333002
+xref: SNOMEDCT_US_2025_05_01:33839006
 xref: UMLS_CUI:C0019342
 is_a: DOID:8566 ! herpes simplex
+property_value: exactMatch "ICD10CM:A60" xsd:string
+property_value: exactMatch "ICD9CM:054.1" xsd:string
+property_value: exactMatch "MESH:D006558" xsd:string
+property_value: exactMatch "NCI:C14364" xsd:string
+property_value: exactMatch "UMLS_CUI:C0019342" xsd:string
 
 [Term]
 id: DOID:8712
@@ -66487,7 +66546,7 @@ name: eczema herpeticum
 namespace: disease_ontology
 alt_id: DOID:4408
 alt_id: DOID:9081
-def: "A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 or Human herpesvirus 2. The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes." [url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3520662/]
+def: "A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2). The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes." [url:https\://dermnetnz.org/topics/eczema-herpeticum, url:https\://www.ncbi.nlm.nih.gov/books/NBK560781/, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3520662/]
 subset: DO_infectious_disease_slim
 subset: NCIthesaurus
 synonym: "herpes simplex dermatitis" EXACT []
@@ -66758,7 +66817,7 @@ is_a: DOID:6050 ! esophageal disease
 id: DOID:9210
 name: herpes zoster oticus
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
+def: "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -66775,9 +66834,17 @@ xref: ICD10CM:B02.21
 xref: ICD9CM:053.11
 xref: MESH:D016697
 xref: NCI:C84763
+xref: ORDO:3020
 xref: SNOMEDCT_US_2023_03_01:21954000
 xref: UMLS_CUI:C0017409
 is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "GARD:7525" xsd:string
+property_value: exactMatch "ICD10CM:B02.21" xsd:string
+property_value: exactMatch "ICD9CM:053.11" xsd:string
+property_value: exactMatch "MESH:D016697" xsd:string
+property_value: exactMatch "NCI:C84763" xsd:string
+property_value: exactMatch "ORDO:3020" xsd:string
+property_value: exactMatch "UMLS_CUI:C0017409" xsd:string
 
 [Term]
 id: DOID:9212

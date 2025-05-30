@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/zoonotic_infectious_disease.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/zoonotic_infectious_disease.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-05-30/subsets/zoonotic_infectious_disease.owl"/>
     </owl:Ontology>
     
 
@@ -96,6 +96,12 @@
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
     
 
 
@@ -753,20 +759,30 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050192 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050192">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus, which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus (Henipavirus nipahense), which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MESH:D045464</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:721791005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C4303115</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050192</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Nipah virus encephalitis</rdfs:label>
+        <skos:broadMatch>ORDO:99825</skos:broadMatch>
+        <skos:broadMatch>SNOMEDCT_US_2025_05_01:406597005</skos:broadMatch>
+        <skos:broadMatch>UMLS_CUI:C1320202</skos:broadMatch>
+        <skos:exactMatch>MESH:D045464</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C4303115</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050192"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus, which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus (Henipavirus nipahense), which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/vhf/nipah/index.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9345211/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/nipah-virus/about/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK570576/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/19141846</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.who.int/csr/disease/nipah/en/</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -969,19 +985,28 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0050202 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050202">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus, which has_symptom bleeding.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus (Mammarenavirus lujoense), which has_symptom bleeding.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:21410</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:C000723471</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319213</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:716585008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C4274433</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050202</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
-        <rdfs:label xml:lang="en">lujo hemorrhagic fever</rdfs:label>
+        <rdfs:label xml:lang="en">Lujo hemorrhagic fever</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050202"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus, which has_symptom bleeding.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus (Mammarenavirus lujoense), which has_symptom bleeding.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/sites/entrez/19478873</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Lujo_virus</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC4230886/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/19478873/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/lujo-fever/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1429,7 +1454,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050522">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
-        <obo:IAO_0000115 xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus, which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus (Orthohantavirus dobravaense), which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050522</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -1439,7 +1464,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050522"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus, which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus (Orthohantavirus dobravaense), which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Dobrava-Belgrade_orthohantavirus</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome</oboInOwl:hasDbXref>
@@ -1740,12 +1765,13 @@
     <!-- http://purl.obolibrary.org/obo/DOID_10841 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10841">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus, which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus (Alphavirus eastern), which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:10821</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A83.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:062.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D020242</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:40177004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:83594</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:416925005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0153065</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Neuroinvasive Eastern equine encephalitis virus infection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -1755,15 +1781,20 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Eastern equine encephalitis</rdfs:label>
+        <skos:exactMatch>GARD:10821</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:A83.2</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:062.2</skos:exactMatch>
+        <skos:exactMatch>MESH:D020242</skos:exactMatch>
+        <skos:exactMatch>ORDO:83594</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0153065</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10841"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus, which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus (Alphavirus eastern), which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/EasternEquineEncephalitis/index.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncagr.gov/vet/FactSheets/EEE.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK557692/</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10841"/>
@@ -2219,7 +2250,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_11260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11260">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7516</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A82</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:071</oboInOwl:hasDbXref>
@@ -2239,11 +2270,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11260"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Rabies</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://wwwnc.cdc.gov/travel/yellowbook/2020/travel-related-infectious-diseases/rabies</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/rabies.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2280,32 +2311,44 @@
     <!-- http://purl.obolibrary.org/obo/DOID_11266 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11266">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:18689</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A98.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:078.6</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006480</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84753</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:186701001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:340</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:716864001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0019101</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">HFRS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Hemorrhagic fever, Russian</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Hemorrhagic nephrosonephritis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Puumala virus nephropathy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">hemorrhagic fever renal syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:11266</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Hantavirus hemorrhagic fever with renal syndrome</rdfs:label>
+        <skos:exactMatch>GARD:18689</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:A98.5</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:078.6</skos:exactMatch>
+        <skos:exactMatch>MESH:D006480</skos:exactMatch>
+        <skos:exactMatch>NCI:C84753</skos:exactMatch>
+        <skos:exactMatch>ORDO:340</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019101</skos:exactMatch>
+        <skos:relatedMatch>MESH:C535630</skos:relatedMatch>
+        <skos:relatedMatch>UMLS_CUI:C2930957</skos:relatedMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/hfrs.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/hantavirus/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
@@ -2319,11 +2362,11 @@
     <!-- http://purl.obolibrary.org/obo/DOID_11360 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11360">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus, or has_material_basis_in Sandfly fever sicilian virus, which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus (Phlebovirus napoliense) or Sandfly fever sicilian virus (Phlebovirus siciliaense), which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:A93.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:066.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D010217</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:33670001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:407476002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0030372</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Sandfly fever</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Sandfly-borne arboviral fever</oboInOwl:hasExactSynonym>
@@ -2334,14 +2377,22 @@
         <oboInOwl:id>DOID:11360</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
-        <rdfs:label xml:lang="en">Phlebotomus fever</rdfs:label>
+        <rdfs:label xml:lang="en">phlebotomus fever</rdfs:label>
+        <skos:exactMatch>ICD10CM:A93.1</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:066.0</skos:exactMatch>
+        <skos:exactMatch>MESH:D010217</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0030372</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11360"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus, or has_material_basis_in Sandfly fever sicilian virus, which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus (Phlebovirus napoliense) or Sandfly fever sicilian virus (Phlebovirus siciliaense), which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007639"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Pappataci_fever</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.britannica.com/science/pappataci-fever</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/sandfly%20fever</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3102,11 +3153,12 @@
     <!-- http://purl.obolibrary.org/obo/DOID_1328 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1328">
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:A92.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012295</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C128419</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:7077006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319251</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:402917003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0035613</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:1328</oboInOwl:id>
@@ -3114,14 +3166,20 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Rift Valley fever</rdfs:label>
+        <skos:exactMatch>ICD10CM:A92.4</skos:exactMatch>
+        <skos:exactMatch>MESH:D012295</skos:exactMatch>
+        <skos:exactMatch>NCI:C128419</skos:exactMatch>
+        <skos:exactMatch>ORDO:319251</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0035613</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1328"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/rvf/rvf_qa.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.who.int/mediacentre/factsheets/fs207/en/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.who.int/news-room/fact-sheets/detail/rift-valley-fever</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3456,10 +3514,13 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_14472">
         <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection located in lung, has_material_basis_in Orthohantavirus sinnombreense, transmitted by deer mouse (Myodes glareolus), has_material_basis_in Orthohantavirus nigrorivense, transmitted by cotton rat (Sigmodon hispidus), has_material_basis_in Orthohantavirus bayoui, transmitted by marsh rice rat (Oryzomys palustris), has_material_basis_in Orthohantavirus negraense, transmitted by small vesper mouse (Calomys laucha), or has_material_basis_in Orthohantavirus andesense, transmitted by rice rat (Oligoryzomys longicaudatus). The infection has _symptom fever, muscle pain, headache, cough, vomiting, and chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence, pulmonary edema and hypoxia often resulting in death from shock or cardiac complications.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:69</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD10CM:B33.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018804</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84747</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319247</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:120639003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0243025</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">HPS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:14472</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -3467,6 +3528,14 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">hantavirus pulmonary syndrome</rdfs:label>
+        <skos:broadMatch>ICD9CM:079.81</skos:broadMatch>
+        <skos:broadMatch>ICD9CM:480.8</skos:broadMatch>
+        <skos:exactMatch>GARD:69</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:B33.4</skos:exactMatch>
+        <skos:exactMatch>MESH:D018804</skos:exactMatch>
+        <skos:exactMatch>NCI:C84747</skos:exactMatch>
+        <skos:exactMatch>ORDO:319247</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0243025</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_14472"/>
@@ -3478,6 +3547,12 @@
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/diseases/hanta/hps/noframes/generalinfoindex.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/sites/entrez/10742726</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/medical/hantavirus%20pulmonary%20syndrome</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_14472"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">HPS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 

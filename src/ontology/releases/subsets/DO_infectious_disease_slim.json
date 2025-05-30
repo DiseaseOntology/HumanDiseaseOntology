@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_infectious_disease_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/DO_infectious_disease_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-05-30/subsets/DO_infectious_disease_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0040083",
@@ -988,13 +988,35 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus, which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.",
-          "xrefs" : [ "url:https://www.cdc.gov/vhf/nipah/index.html", "url:https://www.ncbi.nlm.nih.gov/pubmed/19141846", "url:https://www.who.int/csr/disease/nipah/en/" ]
+          "val" : "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus (Henipavirus nipahense), which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.",
+          "xrefs" : [ "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9345211/", "url:https://www.cdc.gov/nipah-virus/about/", "url:https://www.ncbi.nlm.nih.gov/books/NBK570576/", "url:https://www.ncbi.nlm.nih.gov/pubmed/19141846", "url:https://www.who.int/csr/disease/nipah/en/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "xrefs" : [ {
+          "val" : "MESH:D045464"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:721791005"
+        }, {
+          "val" : "UMLS_CUI:C4303115"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ORDO:99825"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "SNOMEDCT_US_2025_05_01:406597005"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "UMLS_CUI:C1320202"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D045464"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C4303115"
         } ]
       }
     }, {
@@ -1119,14 +1141,25 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050202",
-      "lbl" : "lujo hemorrhagic fever",
+      "lbl" : "Lujo hemorrhagic fever",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection, has_material_basis_in Lujo virus, which has_symptom bleeding.",
-          "xrefs" : [ "url:http://www.ncbi.nlm.nih.gov/sites/entrez/19478873" ]
+          "val" : "A viral infectious disease that results_in infection, has_material_basis_in Lujo virus (Mammarenavirus lujoense), which has_symptom bleeding.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Lujo_virus", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC4230886/", "url:https://pubmed.ncbi.nlm.nih.gov/19478873/", "url:https://www.cdc.gov/lujo-fever/about/" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "xrefs" : [ {
+          "val" : "GARD:21410"
+        }, {
+          "val" : "MESH:C000723471"
+        }, {
+          "val" : "ORDO:319213"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:716585008"
+        }, {
+          "val" : "UMLS_CUI:C4274433"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
@@ -1973,8 +2006,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human herpesvirus 6 or has_material_basis_in Human herpesvirus 7 and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Exanthema_subitum" ]
+          "val" : "A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human betaherpesvirus 6B (Roseolovirus humanbeta6b) or 7 (Roseolovirus humanbeta7) and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Exanthema_subitum", "url:https://www.ncbi.nlm.nih.gov/books/NBK448190/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "synonyms" : [ {
@@ -1983,6 +2016,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Sixth Disease"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "exanthem subitum"
         } ],
         "xrefs" : [ {
           "val" : "ICD10CM:B08.2"
@@ -1991,6 +2027,8 @@
         }, {
           "val" : "MESH:D005077"
         }, {
+          "val" : "NCI:C128420"
+        }, {
           "val" : "SNOMEDCT_US_2023_03_01:54385001"
         }, {
           "val" : "UMLS_CUI:C0015231"
@@ -1998,6 +2036,21 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B08.2"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:058.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D005077"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C128420"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0015231"
         } ]
       }
     }, {
@@ -2069,17 +2122,38 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050516",
-      "lbl" : "O'nyong'nyong fever",
+      "lbl" : "O'nyong-nyong fever",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus, which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.",
-          "xrefs" : [ "url:http://books.google.com/books?id=VS5bqBQ9RWoC&pg=PA21&lpg#v=onepage&q&f=false" ]
+          "val" : "A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus (Alphavirus onyong), which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.",
+          "xrefs" : [ "url:http://books.google.com/books?id=VS5bqBQ9RWoC&pg=PA21&lpg#v=onepage&q&f=false", "url:https://doi.org/10.1016/0035-9203(60)90025-0", "url:https://ph.health.mil/PHC%20Resource%20Library/Onyong-nyongVirus_FS_18-087-0517.pdf", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC3293492/", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC5694854/" ]
         },
+        "comments" : [ "o’nyong-nyong is a phrase that originated among the Acholi tribe of Uganda. It is not a proper noun and in the earliest report (1960, https://doi.org/10.1016/0035-9203(60)90025-0) was not capitalized. However, most authors have, even since those early days, capitalized the word(s). The label for this disease follows this converntion and is also capitalized." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "O'nyong nyong fever"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "O'nyong'nyong fever"
+        } ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:A92.1"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:85579005"
+        }, {
+          "val" : "UMLS_CUI:C0276286"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A92.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0276286"
         } ]
       }
     }, {
@@ -2154,7 +2228,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus, which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.",
+          "val" : "A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus (Orthohantavirus dobravaense), which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.",
           "xrefs" : [ "url:https://en.wikipedia.org/wiki/Dobrava-Belgrade_orthohantavirus", "url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
@@ -2413,8 +2487,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that has_material_basis_in Zika virus, which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.",
-          "xrefs" : [ "url:http://ecdc.europa.eu/en/healthtopics/zika_virus_infection/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx", "url:http://www.who.int/mediacentre/factsheets/zika/en/", "url:https://en.wikipedia.org/wiki/Zika_fever", "url:https://www.cdc.gov/zika/about/" ]
+          "val" : "A viral infectious disease that has_material_basis_in Zika virus (Orthoflavivirus zikaense), which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Zika_fever", "url:https://www.cdc.gov/zika/about/", "url:https://www.ecdc.europa.eu/en/zika-virus-disease", "url:https://www.ncbi.nlm.nih.gov/books/NBK430981/", "url:https://www.who.int/news-room/fact-sheets/detail/zika-virus" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
         "synonyms" : [ {
@@ -2422,13 +2496,49 @@
           "val" : "Zika virus disease"
         } ],
         "xrefs" : [ {
+          "val" : "GARD:12894"
+        }, {
           "val" : "ICD10CM:A92.8"
         }, {
+          "val" : "ICD9CM:066.3"
+        }, {
           "val" : "MESH:D000071243"
+        }, {
+          "val" : "NCI:C128423"
+        }, {
+          "val" : "ORDO:448237"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:3928002"
+        }, {
+          "val" : "UMLS_CUI:C0276289"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD10CM:A92.8"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD9CM:066.3"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:12894"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:066.3"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D000071243"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C128423"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:448237"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0276289"
         } ]
       }
     }, {
@@ -2843,13 +2953,29 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that has_material_basis_in Human betaherpesvirus 5.",
-          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/25205255/" ]
+          "val" : "A viral infectious disease that has_material_basis_in Human betaherpesvirus 5 (Cytomegalovirus humanbeta5).",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/25205255/", "url:https://www.ncbi.nlm.nih.gov/books/NBK459185/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim" ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:B25"
+        }, {
+          "val" : "ICD9CM:078.5"
+        }, {
+          "val" : "MESH:D003586"
+        }, {
+          "val" : "NCI:C53649"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:28944009"
+        }, {
+          "val" : "UMLS_CUI:C0010823"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+          "val" : "ICD10CM:B25.9"
         } ]
       }
     }, {
@@ -3749,8 +3875,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus, which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.",
-          "xrefs" : [ "url:http://www.cdc.gov/mumps/about/downloads/mumps-factsheet.pdf" ]
+          "val" : "A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus (Orthorubulavirus parotitidis), which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.",
+          "xrefs" : [ "url:https://medlineplus.gov/ency/article/001557.htm", "url:https://www.cdc.gov/mumps/about/", "url:https://www.ncbi.nlm.nih.gov/books/NBK534785/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "xrefs" : [ {
@@ -4651,8 +4777,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus, which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.",
-          "xrefs" : [ "url:http://www.cdc.gov/EasternEquineEncephalitis/index.html", "url:http://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm", "url:http://www.ncagr.gov/vet/FactSheets/EEE.htm" ]
+          "val" : "A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus (Alphavirus eastern), which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.",
+          "xrefs" : [ "url:http://www.cdc.gov/EasternEquineEncephalitis/index.html", "url:https://www.ncbi.nlm.nih.gov/books/NBK557692/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -4672,13 +4798,33 @@
         }, {
           "val" : "MESH:D020242"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:40177004"
+          "val" : "ORDO:83594"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:416925005"
         }, {
           "val" : "UMLS_CUI:C0153065"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:10821"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A83.2"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:062.2"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D020242"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:83594"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0153065"
         } ]
       }
     }, {
@@ -5835,8 +5981,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Rabies", "url:https://wwwnc.cdc.gov/travel/yellowbook/2020/travel-related-infectious-diseases/rabies" ]
+          "val" : "A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Rabies", "url:https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/rabies.html" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -5986,8 +6132,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.",
-          "xrefs" : [ "url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/hfrs.htm", "url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome" ]
+          "val" : "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome", "url:https://www.cdc.gov/hantavirus/about/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -6003,8 +6149,13 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Puumala virus nephropathy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "hemorrhagic fever renal syndrome"
         } ],
         "xrefs" : [ {
+          "val" : "GARD:18689"
+        }, {
           "val" : "ICD10CM:A98.5"
         }, {
           "val" : "ICD9CM:078.6"
@@ -6013,13 +6164,42 @@
         }, {
           "val" : "NCI:C84753"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:186701001"
+          "val" : "ORDO:340"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:716864001"
         }, {
           "val" : "UMLS_CUI:C0019101"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:18689"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A98.5"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:078.6"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D006480"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C84753"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:340"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0019101"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "MESH:C535630"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "UMLS_CUI:C2930957"
         } ]
       }
     }, {
@@ -6280,12 +6460,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_11360",
-      "lbl" : "Phlebotomus fever",
+      "lbl" : "phlebotomus fever",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus, or has_material_basis_in Sandfly fever sicilian virus, which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Pappataci_fever" ]
+          "val" : "A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus (Phlebovirus napoliense) or Sandfly fever sicilian virus (Phlebovirus siciliaense), which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Pappataci_fever", "url:https://www.britannica.com/science/pappataci-fever", "url:https://www.merriam-webster.com/dictionary/sandfly%20fever" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "synonyms" : [ {
@@ -6311,13 +6491,25 @@
         }, {
           "val" : "MESH:D010217"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:33670001"
+          "val" : "SNOMEDCT_US_2025_05_01:407476002"
         }, {
           "val" : "UMLS_CUI:C0030372"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A93.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:066.0"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D010217"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0030372"
         } ]
       }
     }, {
@@ -7903,8 +8095,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus, which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.",
-          "xrefs" : [ "url:http://www.merck.com/mmhe/sec23/ch273/ch273i.html?qt=respiratory%20syncytial%20virus&alt=sh#sec23-ch273-ch273i-982g" ]
+          "val" : "A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus (Orthopneumovirus hominis), which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.",
+          "xrefs" : [ "url:https://medlineplus.gov/respiratorysyncytialvirusinfections.html", "url:https://www.lung.org/lung-health-diseases/lung-disease-lookup/rsv", "url:https://www.merckmanuals.com/professional/pediatrics/respiratory-disorders-in-young-children/respiratory-syncytial-virus-rsv-and-human-metapneumovirus-infections" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -7920,13 +8112,43 @@
         }, {
           "val" : "NCI:C3354"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:186750007"
+          "val" : "SNOMEDCT_US_2025_05_01:55735004"
         }, {
           "val" : "UMLS_CUI:C0035235"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D018357"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C3354"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0035235"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD10CM:B97.4"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD10CM:J12.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD10CM:J20.5"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD10CM:J21.0"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD9CM:079.6"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD9CM:466.11"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+          "val" : "ICD9CM:480.1"
         } ]
       }
     }, {
@@ -8626,8 +8848,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.",
-          "xrefs" : [ "url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/rvf/rvf_qa.htm", "url:http://www.who.int/mediacentre/factsheets/fs207/en/" ]
+          "val" : "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.",
+          "xrefs" : [ "url:http://www.who.int/mediacentre/factsheets/fs207/en/", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/", "url:https://www.who.int/news-room/fact-sheets/detail/rift-valley-fever" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
         "xrefs" : [ {
@@ -8637,13 +8859,30 @@
         }, {
           "val" : "NCI:C128419"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:7077006"
+          "val" : "ORDO:319251"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:402917003"
         }, {
           "val" : "UMLS_CUI:C0035613"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A92.4"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D012295"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C128419"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:319251"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0035613"
         } ]
       }
     }, {
@@ -10192,12 +10431,21 @@
           "xrefs" : [ "url:http://books.google.com/books?id=VS5bqBQ9RWoC&pg=PR65&lpg=PR65&dq#v=onepage&q&f=false", "url:http://www.cdc.gov/ncidod/diseases/hanta/hps/noframes/generalinfoindex.htm", "url:http://www.ncbi.nlm.nih.gov/sites/entrez/10742726", "url:https://www.merriam-webster.com/medical/hantavirus%20pulmonary%20syndrome" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "HPS"
+        } ],
         "xrefs" : [ {
           "val" : "GARD:69"
+        }, {
+          "val" : "ICD10CM:B33.4"
         }, {
           "val" : "MESH:D018804"
         }, {
           "val" : "NCI:C84747"
+        }, {
+          "val" : "ORDO:319247"
         }, {
           "val" : "SNOMEDCT_US_2023_03_01:120639003"
         }, {
@@ -10206,6 +10454,30 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD9CM:079.81"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD9CM:480.8"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:69"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B33.4"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D018804"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C84747"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:319247"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0243025"
         } ]
       }
     }, {
@@ -13599,10 +13871,14 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus.",
+          "val" : "A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus (Simplexvirus humanalpha1 or Simplexvirus humanalpha2).",
           "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/1063088" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "herpes gastritis"
+        } ],
         "xrefs" : [ {
           "val" : "NCI:C27341"
         }, {
@@ -14437,8 +14713,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Herpes_zoster", "url:http://www.nlm.nih.gov/medlineplus/ency/article/000858.htm" ]
+          "val" : "A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Herpes_zoster", "url:https://medlineplus.gov/ency/article/000858.htm" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -14479,6 +14755,21 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B02"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:053"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D006562"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C71079"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0019360"
         } ]
       }
     }, {
@@ -14487,7 +14778,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which are transmitted_by direct contact with an active lesion or body fluid of an infected person.",
+          "val" : "A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which are transmitted_by direct contact with an active lesion or body fluid of an infected person.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Herpes_simplex", "url:https://www.aad.org/public/diseases/a-z/herpes-simplex-overview" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -14520,6 +14811,21 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B00.9"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:054"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D006561"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C155871"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0019348"
         } ]
       }
     }, {
@@ -14616,8 +14922,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 and has_material_basis_in Human herpesvirus 2 and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.",
-          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Herpetic_whitlow" ]
+          "val" : "A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2) and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Herpetic_whitlow", "url:https://dermnetnz.org/topics/herpetic-whitlow", "url:https://www.ncbi.nlm.nih.gov/books/NBK482379/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -14688,7 +14994,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (HHV8).",
+          "val" : "A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (Rhadinovirus humangamma8).",
           "xrefs" : [ "url:http://cancerres.aacrjournals.org/content/58/8/1599.full.pdf", "url:http://en.wikipedia.org/wiki/Kaposi%27s_sarcoma" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
@@ -14988,8 +15294,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3, which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.",
-          "xrefs" : [ "url:http://www.nlm.nih.gov/medlineplus/chickenpox.html" ]
+          "val" : "A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.",
+          "xrefs" : [ "url:https://medlineplus.gov/chickenpox.html", "url:https://www.cdc.gov/chickenpox/about/index.html", "url:https://www.ncbi.nlm.nih.gov/books/NBK448191/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -15005,7 +15311,9 @@
         }, {
           "val" : "NCI:C97132"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:186508005"
+          "val" : "SNOMEDCT_US_2023_03_01:38907003"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:186508005"
         }, {
           "val" : "UMLS_CUI:C0008049"
         } ],
@@ -15023,7 +15331,16 @@
           "val" : "disease_ontology"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B01.9"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
           "val" : "MESH:D002644"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C97132"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0008049"
         } ]
       }
     }, {
@@ -15063,8 +15380,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.",
-          "xrefs" : [ "url:http://www.cdc.gov/std/herpes/stdfact-herpes.htm" ]
+          "val" : "A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.",
+          "xrefs" : [ "url:https://medlineplus.gov/genitalherpes.html", "url:https://www.cdc.gov/herpes/about/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus", "http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease" ],
         "synonyms" : [ {
@@ -15081,13 +15398,15 @@
           "val" : "venereal herpes"
         } ],
         "xrefs" : [ {
+          "val" : "ICD10CM:A60"
+        }, {
           "val" : "ICD9CM:054.1"
         }, {
           "val" : "MESH:D006558"
         }, {
           "val" : "NCI:C14364"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:154333002"
+          "val" : "SNOMEDCT_US_2025_05_01:33839006"
         }, {
           "val" : "UMLS_CUI:C0019342"
         } ],
@@ -15097,6 +15416,21 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:A60"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:054.1"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D006558"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C14364"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0019342"
         } ]
       }
     }, {
@@ -15988,8 +16322,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 or Human herpesvirus 2. The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.",
-          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3520662/" ]
+          "val" : "A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2). The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.",
+          "xrefs" : [ "url:https://dermnetnz.org/topics/eczema-herpeticum", "url:https://www.ncbi.nlm.nih.gov/books/NBK560781/", "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3520662/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
@@ -16248,7 +16582,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.",
+          "val" : "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.",
           "xrefs" : [ "url:https://rarediseases.info.nih.gov/diseases/7525/index" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
@@ -16288,6 +16622,8 @@
         }, {
           "val" : "NCI:C84763"
         }, {
+          "val" : "ORDO:3020"
+        }, {
           "val" : "SNOMEDCT_US_2023_03_01:21954000"
         }, {
           "val" : "UMLS_CUI:C0017409"
@@ -16295,6 +16631,27 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:7525"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:B02.21"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD9CM:053.11"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D016697"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C84763"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:3020"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0017409"
         } ]
       }
     }, {

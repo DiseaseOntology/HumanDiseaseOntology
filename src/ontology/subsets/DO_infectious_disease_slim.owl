@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_infectious_disease_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-04-29/subsets/DO_infectious_disease_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-05-30/subsets/DO_infectious_disease_slim.owl"/>
     </owl:Ontology>
     
 
@@ -120,6 +120,18 @@
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
     
 
 
@@ -1219,20 +1231,30 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050192">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus, which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus (Henipavirus nipahense), which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MESH:D045464</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:721791005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C4303115</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050192</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Nipah virus encephalitis</rdfs:label>
+        <skos:broadMatch>ORDO:99825</skos:broadMatch>
+        <skos:broadMatch>SNOMEDCT_US_2025_05_01:406597005</skos:broadMatch>
+        <skos:broadMatch>UMLS_CUI:C1320202</skos:broadMatch>
+        <skos:exactMatch>MESH:D045464</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C4303115</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050192"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus, which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Nipah virus (Henipavirus nipahense), which is transmitted_by direct contact with sick person or animals, or their contaminated tissues. The infection has_symptom dizziness, has_symptom drowsiness, has_symptom altered consciousness, has_symptom disorientation, and has_symptom coma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:https://www.cdc.gov/vhf/nipah/index.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9345211/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/nipah-virus/about/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK570576/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/19141846</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.who.int/csr/disease/nipah/en/</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1422,19 +1444,28 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050202">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus, which has_symptom bleeding.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus (Mammarenavirus lujoense), which has_symptom bleeding.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:21410</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:C000723471</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319213</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:716585008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C4274433</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050202</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
-        <rdfs:label xml:lang="en">lujo hemorrhagic fever</rdfs:label>
+        <rdfs:label xml:lang="en">Lujo hemorrhagic fever</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050202"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus, which has_symptom bleeding.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Lujo virus (Mammarenavirus lujoense), which has_symptom bleeding.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/sites/entrez/19478873</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Lujo_virus</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC4230886/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/19478873/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/lujo-fever/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2437,25 +2468,33 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050495">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human herpesvirus 6 or has_material_basis_in Human herpesvirus 7 and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human betaherpesvirus 6B (Roseolovirus humanbeta6b) or 7 (Roseolovirus humanbeta7) and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:B08.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:058.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D005077</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C128420</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:54385001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0015231</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Roseola Infantum</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Sixth Disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">exanthem subitum</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050495</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">exanthema subitum</rdfs:label>
+        <skos:exactMatch>ICD10CM:B08.2</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:058.1</skos:exactMatch>
+        <skos:exactMatch>MESH:D005077</skos:exactMatch>
+        <skos:exactMatch>NCI:C128420</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0015231</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050495"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human herpesvirus 6 or has_material_basis_in Human herpesvirus 7 and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human betaherpesvirus 6B (Roseolovirus humanbeta6b) or 7 (Roseolovirus humanbeta7) and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Exanthema_subitum</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK448190/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2548,18 +2587,31 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050516">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus, which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus (Alphavirus onyong), which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICD10CM:A92.1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:85579005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0276286</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">O&apos;nyong nyong fever</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">O&apos;nyong&apos;nyong fever</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050516</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
-        <rdfs:label xml:lang="en">O&apos;nyong&apos;nyong fever</rdfs:label>
+        <rdfs:comment xml:lang="en">o’nyong-nyong is a phrase that originated among the Acholi tribe of Uganda. It is not a proper noun and in the earliest report (1960, https://doi.org/10.1016/0035-9203(60)90025-0) was not capitalized. However, most authors have, even since those early days, capitalized the word(s). The label for this disease follows this converntion and is also capitalized.</rdfs:comment>
+        <rdfs:label xml:lang="en">O&apos;nyong-nyong fever</rdfs:label>
+        <skos:exactMatch>ICD10CM:A92.1</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0276286</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050516"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus, which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in joint, has_material_basis_in Onyong-nyong virus (Alphavirus onyong), which is transmitted_by Anopheles gambiae, and transmitted_by Anopheles funestus mosquitoes. The infection has_symptom fever, has_symptom arthralgia, has_symptom rash, and has_symptom lymphadenitis.</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
         <oboInOwl:hasDbXref>url:http://books.google.com/books?id=VS5bqBQ9RWoC&amp;pg=PA21&amp;lpg#v=onepage&amp;q&amp;f=false</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://doi.org/10.1016/0035-9203(60)90025-0</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://ph.health.mil/PHC%20Resource%20Library/Onyong-nyongVirus_FS_18-087-0517.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC3293492/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC5694854/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2643,7 +2695,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050522">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
-        <obo:IAO_0000115 xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus, which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus (Orthohantavirus dobravaense), which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0050522</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -2653,7 +2705,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0050522"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus, which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hemorrhagic fever with renal syndrome that results in infection located in kidney, has_material_basis_in Dobrava-Belgrade virus (Orthohantavirus dobravaense), which is transmitted by yellow-necked field mouse, Apodemus flavicollis. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Dobrava-Belgrade_orthohantavirus</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome</oboInOwl:hasDbXref>
@@ -2891,25 +2943,40 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060478">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Zika virus, which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Zika virus (Orthoflavivirus zikaense), which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:12894</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A92.8</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9CM:066.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000071243</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C128423</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:448237</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:3928002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0276289</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Zika virus disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060478</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">Zika fever</rdfs:label>
+        <skos:broadMatch>ICD10CM:A92.8</skos:broadMatch>
+        <skos:broadMatch>ICD9CM:066.3</skos:broadMatch>
+        <skos:exactMatch>GARD:12894</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:066.3</skos:exactMatch>
+        <skos:exactMatch>MESH:D000071243</skos:exactMatch>
+        <skos:exactMatch>NCI:C128423</skos:exactMatch>
+        <skos:exactMatch>ORDO:448237</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0276289</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060478"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Zika virus, which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Zika virus (Orthoflavivirus zikaense), which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
-        <oboInOwl:hasDbXref>url:http://ecdc.europa.eu/en/healthtopics/zika_virus_infection/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.who.int/mediacentre/factsheets/zika/en/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Zika_fever</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.cdc.gov/zika/about/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ecdc.europa.eu/en/zika-virus-disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK430981/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.who.int/news-room/fact-sheets/detail/zika-virus</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3344,17 +3411,27 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080827">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Human betaherpesvirus 5.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that has_material_basis_in Human betaherpesvirus 5 (Cytomegalovirus humanbeta5).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>ICD10CM:B25</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9CM:078.5</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D003586</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C53649</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:28944009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C0010823</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080827</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <rdfs:label xml:lang="en">human cytomegalovirus infection</rdfs:label>
+        <skos:narrowMatch>ICD10CM:B25.9</skos:narrowMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080827"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Human betaherpesvirus 5.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that has_material_basis_in Human betaherpesvirus 5 (Cytomegalovirus humanbeta5).</owl:annotatedTarget>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
         <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/25205255/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK459185/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4146,7 +4223,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10264">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus, which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus (Orthorubulavirus parotitidis), which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7116</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B26</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:072</oboInOwl:hasDbXref>
@@ -4164,9 +4241,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10264"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus, which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in salivary gland, has_material_basis_in Mumps rubulavirus (Orthorubulavirus parotitidis), which is transmitted by droplet spread of saliva or mucus from the mouth, nose, or throat of an infected person, or transmitted by contaminated fomites. The infection has symptom fever, has symptom headache, has symptom muscle aches, has symptom tiredness, has symptom loss of appetite, has symptom swollen and tender salivary glands under the ears or jaw on one or both sides of the face.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/mumps/about/downloads/mumps-factsheet.pdf</oboInOwl:hasDbXref>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007640"/>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/ency/article/001557.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/mumps/about/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK534785/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4871,12 +4951,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10841">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus, which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus (Alphavirus eastern), which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:10821</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A83.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:062.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D020242</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:40177004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:83594</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:416925005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0153065</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Neuroinvasive Eastern equine encephalitis virus infection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -4886,15 +4967,20 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Eastern equine encephalitis</rdfs:label>
+        <skos:exactMatch>GARD:10821</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:A83.2</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:062.2</skos:exactMatch>
+        <skos:exactMatch>MESH:D020242</skos:exactMatch>
+        <skos:exactMatch>ORDO:83594</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0153065</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10841"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus, which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain of horses and humans, has_material_basis_in Eastern equine encephalitis virus (Alphavirus eastern), which is transmitted by Aedes, transmitted by Coquillettidia, and transmitted by Culex species of mosquitoes. The infection has symptom sudden onset of headache, has symptom high fever, has symptom chills, has symptom vomiting, has symptom disorientation, has symptom seizures, and has symptom coma.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/EasternEquineEncephalitis/index.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvbid/arbor/arbdet.htm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.ncagr.gov/vet/FactSheets/EEE.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK557692/</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_10841"/>
@@ -5854,7 +5940,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11260">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7516</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A82</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:071</oboInOwl:hasDbXref>
@@ -5874,11 +5960,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11260"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in Rabies virus, which is transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in inflammation located in brain or located in spinal cord, has_material_basis_in viruses in the genus Lyssavirus, which are transmitted by bite of an infected animal, or transmitted by contact of mucous membranes with saliva of an infected animal. The infection has symptom fever, has symptom headache, has symptom prickling or itching sensation at the site of bite, has symptom anxiety, has symptom confusion, has symptom agitation, has symptom delirium, has symptom difficulty swallowing, has symptom hydrophobia, and has symptom paralysis. Most human cases of rabies are caused by the Rabies virus (Lyssavirus rabies) transmitted from dogs.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Rabies</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://wwwnc.cdc.gov/travel/yellowbook/2020/travel-related-infectious-diseases/rabies</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/rabies.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5985,32 +6071,44 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11266">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GARD:18689</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:A98.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:078.6</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006480</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84753</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:186701001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:340</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:716864001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0019101</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">HFRS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Hemorrhagic fever, Russian</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Hemorrhagic nephrosonephritis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Puumala virus nephropathy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">hemorrhagic fever renal syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:11266</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Hantavirus hemorrhagic fever with renal syndrome</rdfs:label>
+        <skos:exactMatch>GARD:18689</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:A98.5</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:078.6</skos:exactMatch>
+        <skos:exactMatch>MESH:D006480</skos:exactMatch>
+        <skos:exactMatch>NCI:C84753</skos:exactMatch>
+        <skos:exactMatch>ORDO:340</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019101</skos:exactMatch>
+        <skos:relatedMatch>MESH:C535630</skos:relatedMatch>
+        <skos:relatedMatch>UMLS_CUI:C2930957</skos:relatedMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, has_material_basis_in Orthohantavirus hantanense, has_material_basis_in Orthohantavirus puumalaense, has_material_basis_in Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/hfrs.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/hantavirus/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11266"/>
@@ -6266,11 +6364,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11360">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus, or has_material_basis_in Sandfly fever sicilian virus, which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus (Phlebovirus napoliense) or Sandfly fever sicilian virus (Phlebovirus siciliaense), which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:A93.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:066.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D010217</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:33670001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:407476002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0030372</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Sandfly fever</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Sandfly-borne arboviral fever</oboInOwl:hasExactSynonym>
@@ -6281,14 +6379,22 @@
         <oboInOwl:id>DOID:11360</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
-        <rdfs:label xml:lang="en">Phlebotomus fever</rdfs:label>
+        <rdfs:label xml:lang="en">phlebotomus fever</rdfs:label>
+        <skos:exactMatch>ICD10CM:A93.1</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:066.0</skos:exactMatch>
+        <skos:exactMatch>MESH:D010217</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0030372</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_11360"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus, or has_material_basis_in Sandfly fever sicilian virus, which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results in infection, has_material_basis_in Sandfly fever Naples virus (Phlebovirus napoliense) or Sandfly fever sicilian virus (Phlebovirus siciliaense), which are transmitted by Phlebotomus papatasi sandfly. The infection has symptom fever, has symptom severe frontal headaches, has symptom muscle ache, has symptom joint aches, has symptom flushing of the face, and has symptom tachycardia.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007639"/>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007643"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Pappataci_fever</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.britannica.com/science/pappataci-fever</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/sandfly%20fever</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7616,10 +7722,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1273">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus, which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus (Orthopneumovirus hominis), which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MESH:D018357</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3354</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:186750007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:55735004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0035235</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">RSV</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">respiratory syncytial virus</oboInOwl:hasExactSynonym>
@@ -7628,13 +7734,25 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">respiratory syncytial virus infectious disease</rdfs:label>
+        <skos:exactMatch>MESH:D018357</skos:exactMatch>
+        <skos:exactMatch>NCI:C3354</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0035235</skos:exactMatch>
+        <skos:relatedMatch>ICD10CM:B97.4</skos:relatedMatch>
+        <skos:relatedMatch>ICD10CM:J12.1</skos:relatedMatch>
+        <skos:relatedMatch>ICD10CM:J20.5</skos:relatedMatch>
+        <skos:relatedMatch>ICD10CM:J21.0</skos:relatedMatch>
+        <skos:relatedMatch>ICD9CM:079.6</skos:relatedMatch>
+        <skos:relatedMatch>ICD9CM:466.11</skos:relatedMatch>
+        <skos:relatedMatch>ICD9CM:480.1</skos:relatedMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1273"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus, which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in upper respiratory tract or located_in lower respiratory tract, has_material_basis_in Human respiratory syncytial virus (Orthopneumovirus hominis), which is transmitted_by droplet spread of nasal secretions from an infected person while coughing or sneezing, or transmitted_by contaminated fomites. The infection has_symptom runny nose, has_symptom fever, has_symptom cough, has_symptom wheezing, and has_symptom respiratory distress.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.merck.com/mmhe/sec23/ch273/ch273i.html?qt=respiratory%20syncytial%20virus&amp;alt=sh#sec23-ch273-ch273i-982g</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/respiratorysyncytialvirusinfections.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.lung.org/lung-health-diseases/lung-disease-lookup/rsv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.merckmanuals.com/professional/pediatrics/respiratory-disorders-in-young-children/respiratory-syncytial-virus-rsv-and-human-metapneumovirus-infections</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1273"/>
@@ -8239,11 +8357,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1328">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD10CM:A92.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012295</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C128419</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:7077006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319251</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:402917003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0035613</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:1328</oboInOwl:id>
@@ -8251,14 +8370,20 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">Rift Valley fever</rdfs:label>
+        <skos:exactMatch>ICD10CM:A92.4</skos:exactMatch>
+        <skos:exactMatch>MESH:D012295</skos:exactMatch>
+        <skos:exactMatch>NCI:C128419</skos:exactMatch>
+        <skos:exactMatch>ORDO:319251</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0035613</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_1328"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus, which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/dvrd/spb/mnpages/dispages/rvf/rvf_qa.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.who.int/mediacentre/factsheets/fs207/en/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.who.int/news-room/fact-sheets/detail/rift-valley-fever</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9579,10 +9704,13 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
         <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results in infection located in lung, has_material_basis_in Orthohantavirus sinnombreense, transmitted by deer mouse (Myodes glareolus), has_material_basis_in Orthohantavirus nigrorivense, transmitted by cotton rat (Sigmodon hispidus), has_material_basis_in Orthohantavirus bayoui, transmitted by marsh rice rat (Oryzomys palustris), has_material_basis_in Orthohantavirus negraense, transmitted by small vesper mouse (Calomys laucha), or has_material_basis_in Orthohantavirus andesense, transmitted by rice rat (Oligoryzomys longicaudatus). The infection has _symptom fever, muscle pain, headache, cough, vomiting, and chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence, pulmonary edema and hypoxia often resulting in death from shock or cardiac complications.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:69</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD10CM:B33.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018804</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84747</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:319247</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:120639003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0243025</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">HPS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:14472</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -9590,6 +9718,14 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label xml:lang="en">hantavirus pulmonary syndrome</rdfs:label>
+        <skos:broadMatch>ICD9CM:079.81</skos:broadMatch>
+        <skos:broadMatch>ICD9CM:480.8</skos:broadMatch>
+        <skos:exactMatch>GARD:69</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:B33.4</skos:exactMatch>
+        <skos:exactMatch>MESH:D018804</skos:exactMatch>
+        <skos:exactMatch>NCI:C84747</skos:exactMatch>
+        <skos:exactMatch>ORDO:319247</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0243025</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_14472"/>
@@ -9601,6 +9737,12 @@
         <oboInOwl:hasDbXref>url:http://www.cdc.gov/ncidod/diseases/hanta/hps/noframes/generalinfoindex.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/sites/entrez/10742726</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/medical/hantavirus%20pulmonary%20syndrome</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_14472"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">HPS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 
@@ -12552,9 +12694,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_2327"/>
-        <obo:IAO_0000115 xml:lang="en">A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus (Simplexvirus humanalpha1 or Simplexvirus humanalpha2).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NCI:C27341</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C1333996</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">herpes gastritis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:6102</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
@@ -12564,7 +12707,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_6102"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral gastritis that involves inflammation of the stomach lining caused by herpes simplex virus (Simplexvirus humanalpha1 or Simplexvirus humanalpha2).</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/1063088</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -13257,7 +13400,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8536">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8554</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8555</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8772</oboInOwl:hasAlternativeId>
@@ -13276,15 +13419,20 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">herpes zoster</rdfs:label>
+        <skos:exactMatch>ICD10CM:B02</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:053</skos:exactMatch>
+        <skos:exactMatch>MESH:D006562</skos:exactMatch>
+        <skos:exactMatch>NCI:C71079</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019360</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8536"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in nerve fiber, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The virus is transmitted_by direct contact with the rash, which can develop into chickenpox in newly-infected individuals. The infection has_symptom rash which is followed by blisters, has_symptom headache, has_symptom fever, has_symptom malaise, has_symptom itching, has_symptom burning pain, and has_symptom paresthesia.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007640"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Herpes_zoster</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/ency/article/000858.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/ency/article/000858.htm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13293,7 +13441,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8566">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which are transmitted_by direct contact with an active lesion or body fluid of an infected person.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which are transmitted_by direct contact with an active lesion or body fluid of an infected person.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8763</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9012</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9239</oboInOwl:hasAlternativeId>
@@ -13309,11 +13457,16 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">herpes simplex</rdfs:label>
+        <skos:exactMatch>ICD10CM:B00.9</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:054</skos:exactMatch>
+        <skos:exactMatch>MESH:D006561</skos:exactMatch>
+        <skos:exactMatch>NCI:C155871</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019348</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8566"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which are transmitted_by direct contact with an active lesion or body fluid of an infected person.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in_formation_of lesions, located_in mouth, located_in face, located_in genitalia, or located_in hands, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which are transmitted_by direct contact with an active lesion or body fluid of an infected person.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Herpes_simplex</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.aad.org/public/diseases/a-z/herpes-simplex-overview</oboInOwl:hasDbXref>
@@ -13392,7 +13545,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8607">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_8566"/>
-        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 and has_material_basis_in Human herpesvirus 2 and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2) and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICD9CM:054.6</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C128402</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:43891009</oboInOwl:hasDbXref>
@@ -13407,9 +13560,11 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8607"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 and has_material_basis_in Human herpesvirus 2 and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in skin of the finger, toe, or thumb, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2) and has_symptom lesions, has_symptom fever, and has_symptom swollen lymph nodes.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Herpetic_whitlow</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://dermnetnz.org/topics/herpetic-whitlow</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK482379/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13452,7 +13607,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_8632 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8632">
-        <obo:IAO_0000115 xml:lang="en">A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (HHV8).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (Rhadinovirus humangamma8).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:12761</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:12762</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:12764</oboInOwl:hasAlternativeId>
@@ -13577,7 +13732,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8632"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (HHV8).</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A connective tissue cancer that derives_from lymphatic endothelium, and derives_from spindle cells, results_in_formation_of vascular channels that fill with blood cells, has_material_basis_in Human herpesvirus 8 (Rhadinovirus humangamma8).</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:http://cancerres.aacrjournals.org/content/58/8/1599.full.pdf</oboInOwl:hasDbXref>
@@ -13590,7 +13745,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8659">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3, which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8658</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:8693</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9243</oboInOwl:hasAlternativeId>
@@ -13598,7 +13753,8 @@
         <oboInOwl:hasDbXref>ICD9CM:052</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D002644</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C97132</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:186508005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:38907003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:186508005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0008049</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">varicella</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
@@ -13606,14 +13762,19 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_infectious_disease_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">chickenpox</rdfs:label>
+        <skos:exactMatch>ICD10CM:B01.9</skos:exactMatch>
         <skos:exactMatch>MESH:D002644</skos:exactMatch>
+        <skos:exactMatch>NCI:C97132</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0008049</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8659"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3, which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in infection located_in skin, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which is transmitted_by direct contact with secretions from the rash, or transmitted_by droplet spread of respiratory secretions. The infection has_symptom anorexia, has_symptom myalgia, has_symptom nausea, has_symptom fever, has_symptom headache, has_symptom sore throat, and has_symptom blisters.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007644"/>
-        <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/chickenpox.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/chickenpox.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/chickenpox/about/index.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK448191/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13647,12 +13808,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8704">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_8566"/>
-        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:8982</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>ICD10CM:A60</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:054.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006558</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C14364</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:154333002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:33839006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0019342</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Genital herpes simplex</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Herpes Genitalis</oboInOwl:hasExactSynonym>
@@ -13664,13 +13826,19 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#sexually_transmitted_infectious_disease"/>
         <rdfs:label xml:lang="en">genital herpes</rdfs:label>
+        <skos:exactMatch>ICD10CM:A60</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:054.1</skos:exactMatch>
+        <skos:exactMatch>MESH:D006558</skos:exactMatch>
+        <skos:exactMatch>NCI:C14364</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0019342</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_8704"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 or has_material_basis_in Human herpesvirus 2, which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in genital system, or located_in rectum, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2), which is transmitted_by sexual contact. The infection has_symptom sores, has_symptom fever, and has_symptom swollen glands.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
-        <oboInOwl:hasDbXref>url:http://www.cdc.gov/std/herpes/stdfact-herpes.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://medlineplus.gov/genitalherpes.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cdc.gov/herpes/about/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14389,7 +14557,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9123">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_8566"/>
-        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 or Human herpesvirus 2. The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2). The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:4408</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>DOID:9081</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>ICD10CM:B00.0</oboInOwl:hasDbXref>
@@ -14416,8 +14584,10 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_9123"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 or Human herpesvirus 2. The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A herpes simplex that results_in infection located_in skin, effected by preexisting dermatosis, has_material_basis_in Human herpesvirus 1 (Simplexvirus humanalpha1) or 2 (Simplexvirus humanalpha2). The infection has_symptom watery blisters, has_symptom fever, and has_symptom swelling of the lymph nodes.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://dermnetnz.org/topics/eczema-herpeticum</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK560781/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3520662/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -14591,12 +14761,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9210">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_934"/>
-        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7525</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:B02.21</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:053.11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D016697</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C84763</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:3020</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:21954000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0017409</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Geniculate herpes zoster</oboInOwl:hasExactSynonym>
@@ -14613,11 +14784,18 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">herpes zoster oticus</rdfs:label>
+        <skos:exactMatch>GARD:7525</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:B02.21</skos:exactMatch>
+        <skos:exactMatch>ICD9CM:053.11</skos:exactMatch>
+        <skos:exactMatch>MESH:D016697</skos:exactMatch>
+        <skos:exactMatch>NCI:C84763</skos:exactMatch>
+        <skos:exactMatch>ORDO:3020</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0017409</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_9210"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3, which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:https://rarediseases.info.nih.gov/diseases/7525/index</oboInOwl:hasDbXref>
     </owl:Axiom>

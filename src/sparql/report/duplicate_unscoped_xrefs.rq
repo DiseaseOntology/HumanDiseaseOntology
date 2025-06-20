@@ -1,0 +1,38 @@
+# Identify "unscoped" xrefs (i.e. those without corresponding skos mappings)
+# that are annotated to multiple diseases
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+    {
+        SELECT ?property ?value
+        WHERE {
+            VALUES ?property { oboInOwl:hasDbXref }
+            ?entity a owl:Class ;
+                ?property ?value .
+            FILTER(
+                STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/DOID_")
+            )
+            FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+            FILTER NOT EXISTS {
+                VALUES ?skos {
+                    skos:exactMatch
+                    skos:narrowMatch
+                    skos:broadMatch
+                    skos:relatedMatch
+                }
+                ?entity ?skos ?value .
+            }
+        }
+        GROUP BY ?property ?value
+        HAVING (COUNT(DISTINCT ?entity) > 1)
+    } 
+    ?entity ?property ?value .
+    FILTER(STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/DOID_"))
+    FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+}
+ORDER BY ?value ?entity

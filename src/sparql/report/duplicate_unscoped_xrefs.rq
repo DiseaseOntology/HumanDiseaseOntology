@@ -1,6 +1,12 @@
 # Identify "unscoped" xrefs (i.e. those without corresponding skos mappings)
 # that are annotated to multiple diseases
 
+# CURRENTLY LIMITED TO PRIORITY 1 SOURCES!!! Eventually apply to all xrefs!!!
+# Priority 2 sources with duplicate xrefs: MESH|UMLS_CUI
+# Lowest priority sources with duplicate xrefs (re-generalize report for these):
+#   ICD10CM|ICD9CM|ICDO|KEGG|SNOMEDCT_US_2023_03_01
+
+
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
@@ -34,5 +40,8 @@ WHERE {
     ?entity ?property ?value .
     FILTER(STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/DOID_"))
     FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+
+    # PRIORITIZED XREFS
+    FILTER(REGEX(str(?value), "^(MIM|NCI|ORDO|GARD):"))
 }
 ORDER BY ?value ?entity

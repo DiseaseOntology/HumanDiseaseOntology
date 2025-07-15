@@ -289,22 +289,20 @@ build/update/labels.csv: $(EDIT) src/sparql/update/doid_labels.rq | check_robot 
 	@echo "Retrieving DO labels..."
 	@$(ROBOT) query -i $< --query $(word 2,$^) $@
 
-build/be_synonyms.csv: src/util/compute_british_synonyms.py \
+build/update/be_synonyms.csv: src/util/compute_british_synonyms.py \
  build/update/labels.csv build/update/synonyms.csv \
  build/update/british_english_dictionary.csv
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
-build/update/british_synonyms.owl: $(EDIT) build/update/be_synonyms.csv | check_robot
-	@$(ROBOT) template --input $< --template $(word 2,$^) --output $@
-
-add_british_synonyms: $(EDIT) build/update/british_synonyms.owl | check_robot
-	@$(ROBOT) merge \
+add_british_synonyms: $(EDIT) build/update/be_synonyms.csv | \
+ check_robot src/sparql/update/doid-edit_prefixes.json
+	@$(ROBOT) template \
 	 --input $< \
-	 --input $(word 2,$^) \
-	 --collapse-import-closure false \
-	 --output doid-edit.ofn \
-	&& mv doid-edit.ofn $^
+	 --template $(word 2,$^) \
+	 --merge-before \
+	 --output build/update/doid-edit.ofn \
+	&& mv build/update/doid-edit.ofn $<
 	@echo "British synonyms added to $^"
 
 # ----------------------------------------

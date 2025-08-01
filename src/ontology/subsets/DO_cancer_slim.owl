@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-06-27/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-08-01/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -14008,6 +14008,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4765">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1324"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_162"/>
         <obo:IAO_0000115 xml:lang="en">A lung cancer that has_material_basis_in tissues of the lung and has_material_basis_in pleural tissues. It is most commonly effects children.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:8972/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018202</oboInOwl:hasDbXref>
@@ -15323,20 +15324,28 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5363">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3382"/>
         <obo:IAO_0000115 xml:lang="en">A liposarcoma that is characterized by the presence of a hypocellular spindle cell proliferation set in a myxoid background and has_material_basis_in chromosomal translocations.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>DOID:5709</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:7157</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:8852/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D018208</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MIM:613488</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C27781</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ORDO:99967</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:404069006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0206634</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Myxoid/round cell liposarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">mixed-type liposarcoma</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>DOID:5363</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <rdfs:comment xml:lang="en">OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label xml:lang="en">myxoid liposarcoma</rdfs:label>
+        <skos:exactMatch>ICDO:8852/3</skos:exactMatch>
+        <skos:exactMatch>MESH:D018208</skos:exactMatch>
+        <skos:exactMatch>NCI:C27781</skos:exactMatch>
+        <skos:exactMatch>ORDO:99967</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0206634</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5363"/>
@@ -15947,16 +15956,27 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5703">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3382"/>
+        <obo:IAO_0000115 xml:lang="en">A liposarcoma characterized by the presence of a combination of liposarcomatous morphologic subtypes: myxoid/round cell and well differentiated/dedifferentiated liposarcoma or myxoid/round cell and pleomorphic liposarcoma.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ICDO:8855/3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C4253</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:11073003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0334472</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">mixed-type liposarcoma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:5703</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:label xml:lang="en">mixed liposarcoma</rdfs:label>
+        <skos:exactMatch>ICDO:8855/3</skos:exactMatch>
+        <skos:exactMatch>NCI:C4253</skos:exactMatch>
+        <skos:exactMatch>UMLS_CUI:C0334472</skos:exactMatch>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_5703"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A liposarcoma characterized by the presence of a combination of liposarcomatous morphologic subtypes: myxoid/round cell and well differentiated/dedifferentiated liposarcoma or myxoid/round cell and pleomorphic liposarcoma.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C4253</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 

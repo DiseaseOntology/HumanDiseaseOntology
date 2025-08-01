@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-06-27/subsets/NCIthesaurus.obo
-date: 27:06:2025 15:17
+data-version: doid/releases/2025-08-01/subsets/NCIthesaurus.obo
+date: 01:08:2025 11:30
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -3829,7 +3829,7 @@ is_a: DOID:1059 ! intellectual disability
 id: DOID:0060800
 name: syndromic X-linked intellectual disability 5
 namespace: disease_ontology
-def: "A syndromic X-linked intellectual disability characterized by intellectual disability and variable features including; choreoathetosis, hydrocephalus, Dandy-Walker malformation, seizures, and iron or calcium deposition in the brain that has_material_basis_in mutation in the AP1S2 gene on chromosome Xp22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19377476, url:https\://www.ncbi.nlm.nih.gov/pubmed/23756445]
+def: "A syndromic X-linked intellectual disability characterized by intellectual disability and variable features including choreoathetosis, hydrocephalus, Dandy-Walker malformation, seizures, and iron or calcium deposition in the brain that has_material_basis_in mutation in the AP1S2 gene on chromosome Xp22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/19377476, url:https\://www.ncbi.nlm.nih.gov/pubmed/23756445]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Fried syndrome" EXACT []
@@ -6486,6 +6486,7 @@ subset: NCIthesaurus
 synonym: "Pituitary Gland Blastoma" EXACT []
 xref: ICDO:8273/3
 xref: NCI:C155304
+is_a: DOID:162 ! cancer
 is_a: DOID:1785 ! pituitary cancer
 
 [Term]
@@ -13450,7 +13451,7 @@ is_a: DOID:10935 ! dissociative disorder
 id: DOID:11042
 name: Felty's syndrome
 namespace: disease_ontology
-def: "A syndrome that results_in rheumatoid arthritis, splenomegaly and neutropenia." [url:http\://en.wikipedia.org/wiki/Felty%27s_syndrome, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000445.htm]
+def: "An autoimmune disease that results_in rheumatoid arthritis, splenomegaly and neutropenia." [url:http\://en.wikipedia.org/wiki/Felty%27s_syndrome, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000445.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -13464,7 +13465,7 @@ xref: MIM:134750
 xref: NCI:C84712
 xref: SNOMEDCT_US_2023_03_01:57160007
 xref: UMLS_CUI:C0015773
-is_a: DOID:225 ! syndrome
+is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:11044
@@ -20111,6 +20112,7 @@ xref: MIM:109650
 xref: NCI:C34416
 xref: SNOMEDCT_US_2023_03_01:310701003
 xref: UMLS_CUI:C0004943
+is_a: DOID:4 ! disease
 is_a: DOID:865 ! vasculitis
 
 [Term]
@@ -23022,16 +23024,14 @@ is_a: DOID:655 ! inherited metabolic disorder
 id: DOID:14219
 name: renal tubular acidosis
 namespace: disease_ontology
-def: "A renal tubular transport disease characterized by excess levels of acid in the blood, due to a failure of the kidneys to appropriately acidify the urine." [url:http\://en.wikipedia.org/wiki/Renal_tubular_acidosis, url:http\://www.merckmanuals.com/professional/genitourinary_disorders/renal_transport_abnormalities/renal_tubular_acidosis_rta.html]
+def: "A renal tubular transport disease characterized by the accumulation of metabolically produced acids with elevated plasma chloride, hyperchloremic metabolic acidosis." [url:http\://en.wikipedia.org/wiki/Renal_tubular_acidosis, url:http\://www.merckmanuals.com/professional/genitourinary_disorders/renal_transport_abnormalities/renal_tubular_acidosis_rta.html]
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:7552
 xref: ICD10CM:N25.89
 xref: MESH:D000141
-xref: MIM:179830
 xref: MIM:267200
-xref: MIM:602722
 xref: NCI:C28129
 xref: SNOMEDCT_US_2023_03_01:1776003
 xref: UMLS_CUI:C0001126
@@ -25854,7 +25854,7 @@ is_a: DOID:1682 ! congenital heart disease
 id: DOID:1682
 name: congenital heart disease
 namespace: disease_ontology
-def: "A heart disease that is characterized by problems with the heart's structure that are present at birth." [url:https\://www.nhlbi.nih.gov/health/congenital-heart-defects]
+def: "A physical disorder that is characterized by problems with the heart's structure that are present at birth." [url:https\://www.nhlbi.nih.gov/health/congenital-heart-defects]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
@@ -25870,7 +25870,7 @@ xref: MESH:D006330
 xref: NCI:C34666
 xref: SNOMEDCT_US_2023_03_01:268315002
 xref: UMLS_CUI:C0018798
-is_a: DOID:114 ! heart disease
+is_a: DOID:4 ! disease
 
 [Term]
 id: DOID:1686
@@ -26942,20 +26942,18 @@ is_a: DOID:13580 ! cholestasis
 
 [Term]
 id: DOID:1856
-name: cherubism
+name: cherubism 1
 namespace: disease_ontology
-def: "A bone disease characterized by replacement of bone in the jaws with fibrous tissue leading to facial swelling that has_material_basis_in heterozygous mutation in the SH3BP2 gene on chromosome 4p16.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10364528, url:https\://www.ncbi.nlm.nih.gov/pubmed/11381256]
-comment: OMIM mapping confirmed by DO. [SN].
+def: "A cherubism that has_material_basis_in heterozygous mutation in the SH3BP2 gene on chromosome 4p16.3." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10364528, url:https\://www.ncbi.nlm.nih.gov/pubmed/11381256]
 subset: DO_rare_slim
 subset: NCIthesaurus
 xref: GARD:6036
-xref: ICD10CM:M27.8
-xref: MESH:D002636
 xref: MIM:118400
 xref: NCI:C84630
-xref: SNOMEDCT_US_2023_03_01:76098004
-xref: UMLS_CUI:C0008029
 is_a: DOID:65 ! connective tissue disease
+property_value: exactMatch "GARD:6036" xsd:string
+property_value: exactMatch "MIM:118400" xsd:string
+property_value: exactMatch "NCI:C84630" xsd:string
 
 [Term]
 id: DOID:1858
@@ -51376,12 +51374,17 @@ is_a: DOID:1393 ! visual pathway disease
 id: DOID:5692
 name: cellular myxoid liposarcoma
 namespace: disease_ontology
+def: "A liposarcoma characterized by the presence of solid sheets of primitive round mesenchymal cells and the absence of myxoid stroma." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4252]
 subset: NCIthesaurus
-synonym: "Round cell liposarcoma" EXACT []
+synonym: "round cell liposarcoma" EXACT []
+xref: ICDO:8853/3
 xref: NCI:C4252
 xref: SNOMEDCT_US_2023_03_01:404070007
 xref: UMLS_CUI:C0334471
 is_a: DOID:3382 ! liposarcoma
+property_value: exactMatch "ICDO:8853/3" xsd:string
+property_value: exactMatch "NCI:C4252" xsd:string
+property_value: exactMatch "UMLS_CUI:C0334471" xsd:string
 
 [Term]
 id: DOID:5693
@@ -51528,13 +51531,18 @@ is_a: DOID:3382 ! liposarcoma
 id: DOID:5703
 name: mixed liposarcoma
 namespace: disease_ontology
+def: "A liposarcoma characterized by the presence of a combination of liposarcomatous morphologic subtypes: myxoid/round cell and well differentiated/dedifferentiated liposarcoma or myxoid/round cell and pleomorphic liposarcoma." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4253]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "mixed-type liposarcoma" EXACT []
 xref: ICDO:8855/3
 xref: NCI:C4253
 xref: SNOMEDCT_US_2023_03_01:11073003
 xref: UMLS_CUI:C0334472
 is_a: DOID:3382 ! liposarcoma
+property_value: exactMatch "ICDO:8855/3" xsd:string
+property_value: exactMatch "NCI:C4253" xsd:string
+property_value: exactMatch "UMLS_CUI:C0334472" xsd:string
 
 [Term]
 id: DOID:5704
@@ -51558,12 +51566,13 @@ is_a: DOID:5690 ! well-differentiated liposarcoma
 
 [Term]
 id: DOID:5709
-name: mixed-type liposarcoma
+name: obsolete mixed-type liposarcoma
 namespace: disease_ontology
 subset: NCIthesaurus
 xref: NCI:C27781
 xref: UMLS_CUI:C0545074
-is_a: DOID:3382 ! liposarcoma
+is_obsolete: true
+replaced_by: DOID:5363
 
 [Term]
 id: DOID:5711

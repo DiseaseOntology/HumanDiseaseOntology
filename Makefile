@@ -908,8 +908,8 @@ $(LANGQPFX)-%.ru: src/sparql/build/lang_param-%.ru | build/translations
 
 ## GENERATE ROBOT TEMPLATES
 build/translations/%-rtlist.txt build/translations/%-annot.txt: \
-  src/translations/doid-%.tsv src/util/lang-rt.awk | build/translations
-	@awk -v pfx=$(dir $@)$* -f $(word 2,$^) $<
+  src/translations/doid-%.tsv src/util/lang-rt.py | build/translations
+	@python3 $(word 2,$^) $< $(dir $@)$*
 	@ls $(dir $@)$*-rt-*.tsv > build/translations/$*-rtlist.txt
 	@echo "Created language templates: $*"
 

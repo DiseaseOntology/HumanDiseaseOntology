@@ -13,6 +13,32 @@
 
 ## 2025 Releases
 
+### [v2025-08-01](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-08-01)
+
+This release of the Human Disease Ontology includes 11,926 disease classes, 9,619 with textual definitions (80.7%).
+
+Diseases revised and expanded include hereditary spastic paraplegias, cherubisms, transient neonatal diabetes mellituses, infantile onset multisystem autoimmune diseases, and autoinflammation, panniculitis, and dermatosis syndromes.
+
+Additional revisions were made to X-linked mental retardation-hypotonic facies syndrome-1, PAPA syndrome, X-linked intellectual disability-short stature-overweight syndrome, colitis, autosomal dominant intellectual developmental disorder 34, congenital heart disease, congenital muscular dystrophy with cataracts and intellectual disability, paroxysmal nonkinesigenic dyskinesia 3, renal tubular acidosis, syndromic X-linked intellectual disability 5, blastoma, pituitary blastoma, pulmonary blastoma, cellular myxoid liposarcoma, mixed liposarcoma, and myxoid liposarcoma.
+
+Newly added diseases include CASGID syndrome, Fliedner-Zweier syndrome, Kariminejad neurodevelopmental syndrome, Ramon syndrome, autosomal recessive distal renal tubular acidosis 3 with or without sensorineural hearing loss, autosomal recessive proximal renal tubular acidosis, coarctation of the aorta, immunodeficiency 130 with HPV-related verrucosis, kyphomelic dysplasia, mitochondrial axonal Charcot-Marie-Tooth disease, neurodevelopmental disorder with seizures and gingival overgrowth, proximal renal tubular acidosis, and retinopathy sensory neuropathy syndrome.
+
+Translation files now include 10,887 labels (91.3%), 11,472 synonyms (59.4%), and 3,763 definitions (39.1%) in Spanish. Also, a diff procedure has now been implemented to identify new text for translation and avoid including translations of the original text where it has been modified or removed.
+
+## Obsoleted diseases
+ID 	| label 	| term replaced by
+---|---|---
+DOID:5709 |  mixed-type liposarcoma |  myxoid liposarcoma (DOID:5363)
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-06-27...v2025-08-01
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-01/src/ontology/doid-merged.obo) | |
+
 ### [v2025-06-27](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-06-27)
 
 This release of the Human Disease Ontology includes 11,895 disease classes, 9,585 with textual definitions (80.6%). Terms with Spanish translation have increased to include 10,837 labels (91.1%), 11,714 synonyms (60.8%), and 2,145 definitions (22.4%).

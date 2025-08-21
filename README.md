@@ -4,7 +4,7 @@
 <!-- badges: end -->
 
 # HumanDiseaseOntology
-Repository for the Human Disease Ontology (DO; pronounced "doh").
+Repository for the Human Disease Ontology (DO)
 
 ## Details
 The primary release file, `doid.owl`, is available in the `src/ontology/releases` directory of this GitHub repository. _We strongly recommend downloading this file using its IRI, http://purl.obolibrary.org/obo/doid.owl, particularly where stable access to the latest version is desired._

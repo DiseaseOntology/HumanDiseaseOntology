@@ -20,3 +20,9 @@ Contact: [Lynn Schriml](mailto:lynn.schriml@gmail.com)
 
 ### For Older Releases (before 2015)
 DO curation and production moved to OWL, git, and GitHub in November 2015. DO's [SVN repository on Sourceforge.net](https://sourceforge.net/projects/diseaseontology/) has been retired but is still available for historical reference.
+
+
+## Other Languages
+
+### espańol
+Para información en español acerca de la Human Disease Ontology (ontología de enfermdades humanas) y la traducción de la ontología al español, consulte http://www.disease-ontology.org/translations y haga click `español` en el selector de idiomas.

@@ -13,6 +13,21 @@
 
 ## 2025 Releases
 
+### [v2025-08-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-08-29)
+
+This release of the Human Disease Ontology includes 11,946 disease classes, 9,640 with textual definitions (80.7%).
+
+Translation files now include 11,078 labels (92.7%), 11,461 synonyms (59.3%), and 6,402 definitions (66.4%) in Spanish.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-08-01...v2025-08-29
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-08-29/src/ontology/doid-merged.obo) | |
+
 ### [v2025-08-01](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-08-01)
 
 This release of the Human Disease Ontology includes 11,926 disease classes, 9,619 with textual definitions (80.7%).

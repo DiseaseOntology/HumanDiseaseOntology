@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-08-01/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2025-08-29/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -30,6 +30,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
     
 
 
@@ -108,6 +114,12 @@
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
     
 
 
@@ -2798,24 +2810,44 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080191 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080191">
-        <obo:IAO_0000115 xml:lang="en">A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A syndrome comprised of a spectrum of related disorders characterized by the formation of hamartomas, overgrowth, and predisposition to cancer that has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23.</obo:IAO_0000115>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/DOID_0050657"/>
         <oboInOwl:hasDbXref>GARD:12800</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD10CM:Q85.81</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCI:C179915</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORDO:306498</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US_2025_05_01:722859001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_CUI:C1959582</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">PHTS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080191</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
-        <rdfs:label xml:lang="en">PTEN hamartoma tumor syndrome</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete PTEN hamartoma tumor syndrome</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:closeMatch>ORDO:306498</skos:closeMatch>
+        <skos:closeMatch>UMLS_CUI:C1959582</skos:closeMatch>
+        <skos:exactMatch>GARD:12800</skos:exactMatch>
+        <skos:exactMatch>ICD10CM:Q85.81</skos:exactMatch>
+        <skos:exactMatch>NCI:C179915</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080191"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A syndrome comprised of a spectrum of related disorders characterized by the formation of hamartomas, overgrowth, and predisposition to cancer that has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007636"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007646"/>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC10600266/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pmc.ncbi.nlm.nih.gov/articles/PMC12010961/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/books/NBK1488/</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/22628360</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0080191"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">PHTS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 
@@ -7186,7 +7218,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_13515 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_13515">
-        <obo:IAO_0000115 xml:lang="en">A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:7830</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:Q85.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:759.5</oboInOwl:hasDbXref>
@@ -7213,7 +7245,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_13515"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <oboInOwl:hasDbXref>url:https://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -16986,36 +17018,35 @@
     <!-- http://purl.obolibrary.org/obo/DOID_6457 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6457">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080191"/>
-        <obo:IAO_0000115 xml:lang="en">A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>DOID:3471</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>GARD:6202</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICDO:9493/0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D006223</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MIM:PS158350</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3076</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCI:C8419</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ORDO:201</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:58037000</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US_2023_03_01:67944007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C0018553</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0391826</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Cowden disease</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">Lhermitte-Duclos disease</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">dysplastic Gangliocytoma of Cerebellum</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">multiple hamartoma syndrome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">multiple hamartoma syndrome</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>DOID:6457</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_rare_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
         <rdfs:comment xml:lang="en">Xref MGI. OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label xml:lang="en">Cowden syndrome</rdfs:label>
+        <skos:closeMatch>GARD:6202</skos:closeMatch>
+        <skos:closeMatch>MESH:D006223</skos:closeMatch>
+        <skos:closeMatch>NCI:C3076</skos:closeMatch>
+        <skos:closeMatch>UMLS_CUI:C0018553</skos:closeMatch>
+        <skos:exactMatch>MIM:PS158350</skos:exactMatch>
+        <skos:exactMatch>ORDO:201</skos:exactMatch>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_6457"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Cowden_syndrome</oboInOwl:hasDbXref>

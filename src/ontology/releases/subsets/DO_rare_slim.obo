@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-08-01/subsets/DO_rare_slim.obo
-date: 01:08:2025 11:30
+data-version: doid/releases/2025-08-29/subsets/DO_rare_slim.obo
+date: 29:08:2025 12:54
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -1785,12 +1785,13 @@ xref: MIM:200500
 id: DOID:0050604
 name: acrocapitofemoral dysplasia
 namespace: disease_ontology
-def: "An osteochondrodysplasia characterized by skeletal dysplasia, bradydactyly and narrow thorax and has_material_basis_in mutations in the Indian hedgehog homolog gene." [url:https\://rarediseases.info.nih.gov/diseases/10605/acrocapitofemoral-dysplasia]
+def: "An osteochondrodysplasia characterized by postnatal-onset disproportionate short stature, relatively large head, narrow thorax, lumbar lordosis, short limbs, and brachydactyly with small broad nails and that has_material_basis_in homozygous mutation in the  Indian hedgehog homolog (IHH) gene on chromosome 2q35." [url:https\://pubmed.ncbi.nlm.nih.gov/34530144/, url:https\://rarediseases.info.nih.gov/diseases/10605/acrocapitofemoral-dysplasia]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 xref: GARD:10605
 xref: MESH:C564334
 xref: MIM:607778
+xref: ORDO:63446
 
 [Term]
 id: DOID:0050605
@@ -2149,23 +2150,67 @@ xref: ORDO:1229
 
 [Term]
 id: DOID:0050657
-name: Bannayan-Riley-Ruvalcaba syndrome
+name: Cowden syndrome 1
 namespace: disease_ontology
+alt_id: DOID:0080191
 def: "A Cowden syndrome that is characterized by macrocephaly, multiple noncancerous tumors and hamartomas, and dark freckles on the penis, and has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://en.wikipedia.org/wiki/Bannayan%E2%80%93Riley%E2%80%93Ruvalcaba_syndrome, url:https\://ghr.nlm.nih.gov/condition/bannayan-riley-ruvalcaba-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/31062505]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Bannayan-Zonana syndrome" EXACT []
-synonym: "Cowden syndrome 1" EXACT []
-synonym: "Riley-Smith syndrome" EXACT []
-synonym: "Ruvalcaba-Myhre-Smith syndrome" EXACT []
+synonym: "Bannayan-Riley-Ruvalcaba syndrome" NARROW []
+synonym: "Bannayan-Zonana syndrome" NARROW []
+synonym: "BRRS" NARROW OMO:0003012 []
+synonym: "dysplastic cerebellar gangliocytoma" NARROW []
+synonym: "dysplastic gangliocytoma of cerebellum" NARROW []
+synonym: "Lhermitte-Duclos disease" NARROW []
+synonym: "PHTS" EXACT OMO:0003012 []
+synonym: "Proteus-like syndrome" NARROW []
+synonym: "PTEN hamartoma tumor syndrome" EXACT []
+synonym: "Riley-Smith syndrome" NARROW []
+synonym: "Ruvalcaba-Myhre-Smith syndrome" NARROW []
+synonym: "segmental overgrowth, lipomatosis, arteriovenous malformation, and epidermal nevus syndrome" NARROW []
+synonym: "SOLAMEN syndrome" NARROW []
+xref: GARD:12800
 xref: GARD:5887
+xref: GARD:6901
+xref: ICD10CM:Q85.81
 xref: ICD10CM:Q87.89
+xref: ICDO:9493/0
 xref: MESH:D006223
+xref: MESH:D016715
 xref: MIM:158350
+xref: NCI:C179915
+xref: NCI:C179930
 xref: NCI:C3939
+xref: NCI:C8419
 xref: ORDO:109
+xref: ORDO:137608
+xref: ORDO:306498
+xref: ORDO:65285
+xref: SNOMEDCT_US_2023_03_01:67944007
+xref: SNOMEDCT_US_2025_03_01:716862002
+xref: SNOMEDCT_US_2025_03_01:763867001
+xref: SNOMEDCT_US_2025_05_01:722859001
+xref: UMLS_CUI:C0391826
+xref: UMLS_CUI:C1866398
+xref: UMLS_CUI:C1959582
+xref: UMLS_CUI:C4706610
 is_a: DOID:6457 ! Cowden syndrome
+property_value: closeMatch "ORDO:306498" xsd:string
+property_value: closeMatch "UMLS_CUI:C1959582" xsd:string
+property_value: exactMatch "GARD:12800" xsd:string
+property_value: exactMatch "ICD10CM:Q85.81" xsd:string
+property_value: exactMatch "NCI:C179915" xsd:string
+property_value: narrowMatch "GARD:6901" xsd:string
+property_value: narrowMatch "ICDO:9493/0" xsd:string
+property_value: narrowMatch "NCI:C179930" xsd:string
+property_value: narrowMatch "NCI:C8419" xsd:string
+property_value: narrowMatch "ORDO:137608" xsd:string
+property_value: narrowMatch "ORDO:65285" xsd:string
+property_value: narrowMatch "UMLS_CUI:C0391826" xsd:string
+property_value: narrowMatch "UMLS_CUI:C1866398" xsd:string
+property_value: narrowMatch "UMLS_CUI:C4706610" xsd:string
+property_value: relatedMatch "MESH:D016715" xsd:string
 
 [Term]
 id: DOID:0050660
@@ -4687,7 +4732,6 @@ synonym: "Adams Oliver syndrome" EXACT []
 xref: GARD:5739
 xref: MIM:100300
 xref: MIM:614219
-xref: MIM:614814
 xref: MIM:615297
 xref: MIM:616028
 xref: MIM:PS100300
@@ -6076,7 +6120,6 @@ def: "A neonatal diabetes that is characterized by hyperglycemia during the neon
 subset: DO_rare_slim
 xref: GARD:1839
 xref: ICD10CM:P70.2
-xref: MIM:610374
 xref: ORDO:99886
 is_a: DOID:2978 ! carbohydrate metabolic disorder
 created_by: emitraka
@@ -9452,6 +9495,7 @@ namespace: disease_ontology
 def: "A methylmalonic acidemia characterized by autosomal recessive inheritance, defects in the synthesis of AdoCbl, vitamin B12 therapy responsiveness and that has_material_basis_in homozygous or compound heterozygous mutation in the MMAA gene on chromosome 4q31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12438653, url:https\://www.ncbi.nlm.nih.gov/pubmed/5686220]
 subset: DO_rare_slim
 synonym: "methylmalonic aciduria cblA type" EXACT []
+synonym: "methylmalonic aciduria of the cblA complementation type" EXACT []
 synonym: "methylmalonic aciduria, vitamin B12-responsive due to a defect in synthesis of adenosylcobalamin cb1A type" EXACT []
 xref: ICD10CM:E71.1
 xref: MIM:251100
@@ -14282,7 +14326,7 @@ def: "A hereditary spastic paraplegia 18 that has_material_basis_in homozygous m
 subset: DO_rare_slim
 synonym: "autosomal recessive spastic paraplegia 18" EXACT []
 synonym: "autosomal recessive spastic paraplegia type 18" EXACT []
-synonym: "IDMDC" EXACT [] {synonymtypedef="acronym"}
+synonym: "IDMDC" EXACT OMO:0003012 []
 synonym: "intellectual disability, motor dysfunction and joint contractures" EXACT []
 synonym: "spastic paraplegia 18B" EXACT []
 xref: MIM:611225
@@ -14322,7 +14366,7 @@ namespace: disease_ontology
 def: "A hereditary spastic paraplegia that has_material_basis_in homozygous or compound heterozygous mutation in the FICD gene on chromosome 12q23." [url:https\://pubmed.ncbi.nlm.nih.gov/36136088/]
 subset: DO_rare_slim
 synonym: "autosomal recessive spastic paraplegia 92" EXACT []
-synonym: "SPG92" EXACT [] {synonymtypedef="acronym"}
+synonym: "SPG92" EXACT OMO:0003012 []
 xref: MIM:620911
 is_a: DOID:2476 ! hereditary spastic paraplegia
 property_value: exactMatch "MIM:620911" xsd:string
@@ -14410,6 +14454,15 @@ def: "A syndrome characterized by a variable phenotype primarily including seizu
 subset: DO_rare_slim
 xref: MIM:619323
 property_value: exactMatch "MIM:619323" xsd:string
+
+[Term]
+id: DOID:0070652
+name: Nil-Deshwan neurodevelopmental syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by a range of congenital anomalies and central nervous system dysfunction, including global developmental delay, feeding difficulties, hypotonia, and impaired intellectual development that has_material_basis_in heterozygous mutation in the DOT1L gene on chromosome 19p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10645550/, url:https\://pubmed.ncbi.nlm.nih.gov/40494548/]
+subset: DO_rare_slim
+xref: MIM:621265
+property_value: exactMatch "MIM:621265" xsd:string
 
 [Term]
 id: DOID:0080016
@@ -15394,12 +15447,25 @@ xref: NCI:C3178
 
 [Term]
 id: DOID:0080191
-name: PTEN hamartoma tumor syndrome
+name: obsolete PTEN hamartoma tumor syndrome
 namespace: disease_ontology
-def: "A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene." [url:https\://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/22628360]
+def: "A syndrome comprised of a spectrum of related disorders characterized by the formation of hamartomas, overgrowth, and predisposition to cancer that has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10600266/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12010961/, url:https\://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/]
 subset: DO_cancer_slim
 subset: DO_rare_slim
+synonym: "PHTS" EXACT OMO:0003012 []
 xref: GARD:12800
+xref: ICD10CM:Q85.81
+xref: NCI:C179915
+xref: ORDO:306498
+xref: SNOMEDCT_US_2025_05_01:722859001
+xref: UMLS_CUI:C1959582
+property_value: closeMatch "ORDO:306498" xsd:string
+property_value: closeMatch "UMLS_CUI:C1959582" xsd:string
+property_value: exactMatch "GARD:12800" xsd:string
+property_value: exactMatch "ICD10CM:Q85.81" xsd:string
+property_value: exactMatch "NCI:C179915" xsd:string
+is_obsolete: true
+replaced_by: DOID:0050657
 
 [Term]
 id: DOID:0080193
@@ -17036,6 +17102,33 @@ xref: MIM:613070
 xref: ORDO:217371
 
 [Term]
+id: DOID:0080786
+name: Brown-Vialetto-Van Laere syndrome 2
+namespace: disease_ontology
+alt_id: DOID:0111612
+def: "A Brown-Vialetto-Van Laere syndrome that is characterized by early childhood onset of sensorineural deafness, bulbar dysfunction, and severe diffuse muscle weakness and wasting of the upper and lower limbs and axial muscles, resulting in respiratory insufficiency and that has_material_basis_in homozygous or compound heterozygous mutation in the SLC52A2 gene on chromosome 8q24." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC4970675/, url:https\://pubmed.ncbi.nlm.nih.gov/20206331/]
+subset: DO_rare_slim
+synonym: "autosomal recessive spinocerebellar ataxia 3" RELATED []
+synonym: "autosomal recessive spinocerebellar ataxia type 3" RELATED []
+synonym: "autosomal recessive spinocerebellar ataxia-blindness-deafness syndrome" BROAD []
+synonym: "autosomal recessive spinocerebellar ataxia-blindness-hearing loss syndrome" BROAD []
+synonym: "SCABD" BROAD OMO:0003012 []
+synonym: "SCABD2" EXACT OMO:0003012 []
+synonym: "SCAR3" RELATED OMO:0003012 []
+synonym: "spinocerebellar ataxia with blindness and deafness 2" EXACT []
+xref: GARD:9971
+xref: MESH:C537309
+xref: MIM:614707
+xref: ORDO:95433
+xref: SNOMEDCT_US_2023_03_01:1204415006
+xref: UMLS_CUI:C1849094
+property_value: exactMatch "MIM:614707" xsd:string
+property_value: relatedMatch "GARD:9971" xsd:string
+property_value: relatedMatch "MESH:C537309" xsd:string
+property_value: relatedMatch "ORDO:95433" xsd:string
+property_value: relatedMatch "UMLS_CUI:C1849094" xsd:string
+
+[Term]
 id: DOID:0080828
 name: VEXAS syndrome
 namespace: disease_ontology
@@ -18424,6 +18517,33 @@ def: "A syndrome that is characterized by intrauterine growth retardation (IUGR)
 subset: DO_rare_slim
 xref: MIM:251230
 xref: ORDO:572768
+
+[Term]
+id: DOID:0081433
+name: Peroxisome biogenesis disorder 4B
+namespace: disease_ontology
+alt_id: DOID:0111612
+def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous or compound heterozygous mutation in the PEX6 gene on chromosome 6p21.1, or overexpression of a heterozygous mutation in PEX6 due to allelic expression imbalance resulting from a polymorphism on the mutant allele in the PEX6 3-prime UTR." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC4970675/, url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
+subset: DO_rare_slim
+synonym: "autosomal recessive spinocerebellar ataxia 3" RELATED []
+synonym: "autosomal recessive spinocerebellar ataxia type 3" RELATED []
+synonym: "autosomal recessive spinocerebellar ataxia-blindness-deafness syndrome" BROAD []
+synonym: "autosomal recessive spinocerebellar ataxia-blindness-hearing loss syndrome" BROAD []
+synonym: "SCABD" BROAD OMO:0003012 []
+synonym: "SCABD1" EXACT OMO:0003012 []
+synonym: "SCAR3" RELATED OMO:0003012 []
+synonym: "spinocerebellar ataxia with blindness and deafness 1" EXACT []
+xref: GARD:9971
+xref: MESH:C537309
+xref: MIM:614863
+xref: ORDO:95433
+xref: SNOMEDCT_US_2023_03_01:1204415006
+xref: UMLS_CUI:C1849094
+property_value: exactMatch "MIM:614863" xsd:string
+property_value: relatedMatch "GARD:9971" xsd:string
+property_value: relatedMatch "MESH:C537309" xsd:string
+property_value: relatedMatch "ORDO:95433" xsd:string
+property_value: relatedMatch "UMLS_CUI:C1849094" xsd:string
 
 [Term]
 id: DOID:0081441
@@ -20930,6 +21050,7 @@ name: Charcot-Marie-Tooth disease type 4K
 namespace: disease_ontology
 def: "A Charcot-Marie-Tooth disease type 4 that has_material_basis_in homozygous or compound heterozygous mutation in the SURF1 gene on chromosome 9q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24027061]
 subset: DO_rare_slim
+synonym: "autosomal recessive Charcot-Marie-Tooth disease type 4K" EXACT []
 synonym: "autosomal recessive demyelinating Charcot-Marie-Tooth disease type 4K" EXACT []
 synonym: "autosomal recessive demyelinating Charcot-Marie-Tooth neuropathy type 4K" EXACT []
 synonym: "CMT4K" EXACT OMO:0003012 []
@@ -26234,7 +26355,7 @@ is_a: DOID:700 ! mitochondrial metabolism disease
 id: DOID:0111277
 name: mitochondrial trifunctional protein deficiency
 namespace: disease_ontology
-def: "A lipid metabolism disorder characterized by abnormal fatty acid oxidation resulting a wide range of clinical manifestations from servere neonatal symptoms including cardiomyopathy, hypoglycemia, metabolic acidosis, skeletal myopathy and neuropathy, liver disease and death to a more mild phenotype including peripheral polyneuropathy, episodic rhabdomyolysis and pigmentary retinopathy." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12754706, url:https\://www.ncbi.nlm.nih.gov/pubmed/12838198, url:https\://www.ncbi.nlm.nih.gov/pubmed/7738175]
+def: "A lipid metabolism disorder characterized by abnormal fatty acid oxidation resulting a wide range of clinical manifestations from several neonatal symptoms including cardiomyopathy, hypoglycemia, metabolic acidosis, skeletal myopathy and neuropathy, liver disease and death to a more mild phenotype including peripheral polyneuropathy, episodic rhabdomyolysis and pigmentary retinopathy." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12754706, url:https\://www.ncbi.nlm.nih.gov/pubmed/12838198, url:https\://www.ncbi.nlm.nih.gov/pubmed/7738175]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "MTPD" EXACT OMO:0003012 []
@@ -26315,6 +26436,7 @@ subset: DO_rare_slim
 synonym: "FOXP1 Haploinsufficiency" EXACT []
 synonym: "FOXP1 syndrome" EXACT []
 synonym: "FOXP1-Related Neurodevelopmental Disorder" EXACT []
+synonym: "intellectual developmental disorder with language impairment and with or without autistic features" EXACT []
 synonym: "Mental retardation with language impairment and with or without autistic features" EXACT []
 xref: GARD:12501
 xref: MIM:613670
@@ -29160,25 +29282,6 @@ xref: UMLS_CUI:C1846492
 is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
 
 [Term]
-id: DOID:0111612
-name: autosomal recessive spinocerebellar ataxia 3
-namespace: disease_ontology
-def: "An autosomal recessive cerebellar ataxia characterized by spinocerebellar ataxia with optic and cochlear degeneration that has_material_basis_in homozygous or compound heterozygous mutation in a region on chromosome 6p23-p21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11175288, url:https\://www.ncbi.nlm.nih.gov/pubmed/4154794, url:https\://www.ncbi.nlm.nih.gov/pubmed/4434170]
-subset: DO_rare_slim
-synonym: "autosomal recessive spinocerebellar ataxia type 3" EXACT []
-synonym: "autosomal recessive spinocerebellar ataxia-blindness-deafness syndrome" EXACT []
-synonym: "autosomal recessive spinocerebellar ataxia-blindness-hearing loss syndrome" EXACT []
-synonym: "SCABD" EXACT OMO:0003012 []
-synonym: "SCAR3" EXACT OMO:0003012 []
-xref: GARD:9971
-xref: MESH:C537309
-xref: MIM:271250
-xref: ORDO:95433
-xref: SNOMEDCT_US_2023_03_01:1204415006
-xref: UMLS_CUI:C1849094
-is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
-
-[Term]
 id: DOID:0111613
 name: autosomal recessive spinocerebellar ataxia 23
 namespace: disease_ontology
@@ -30611,7 +30714,7 @@ is_a: DOID:0111782 ! otopalatodigital syndrome spectrum disorder
 id: DOID:0111790
 name: congenital nystagmus 1
 namespace: disease_ontology
-def: "A congenital nystagmus that has_material_basis_in mutation in the FRMD7 gene on chromosome Xq26.2." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17013395]
+def: "A congenital nystagmus that has_material_basis_in mutation in the FRMD7 gene (FERM domain-containing-7) on chromosome Xq26." [url:https\://www.ncbi.nlm.nih.gov/pubmed/17013395]
 subset: DO_rare_slim
 synonym: "congenital motor nystagmus 1" EXACT []
 synonym: "NYS1" EXACT OMO:0003012 []
@@ -30652,8 +30755,6 @@ namespace: disease_ontology
 def: "A congenital nystagmus characterized by autosomal recessive inheritance." [url:https\://europepmc.org/article/med/305814]
 subset: DO_rare_slim
 synonym: "autosomal recessive congenital motor nystagmus" EXACT []
-xref: GARD:9609
-xref: MIM:257400
 is_a: DOID:9649 ! congenital nystagmus
 
 [Term]
@@ -38464,7 +38565,7 @@ is_a: DOID:13564 ! aspergillosis
 id: DOID:13241
 name: Behcet's disease
 namespace: disease_ontology
-def: "A vasculitis that is characterized by an autoimmune mediated inflammation of the blood vessels throughout the body leading to ulcerations on the mouth and sometimes the genitals, notorious for causing hypopyon uveitis." [url:http\://en.wikipedia.org/wiki/Beh%C3%A7et%27s_disease, url:http\://www.nlm.nih.gov/medlineplus/behcetssyndrome.html]
+def: "An autoimmune disease that is characterized by mucocutaneous manifestations, including recurrent oral and genital ulcerations, ocular manifestations, especially chronic relapsing uveitis, and systemic vasculitis involving arteries and veins of all sizes." [url:http\://en.wikipedia.org/wiki/Beh%C3%A7et%27s_disease, url:http\://www.nlm.nih.gov/medlineplus/behcetssyndrome.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK470257/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -38927,18 +39028,24 @@ property_value: exactMatch "MESH:D013796" xsd:string
 id: DOID:13482
 name: Proteus syndrome
 namespace: disease_ontology
-def: "A PTEN hamartoma tumor syndrome that is characterized by overgrowth of the bones, skin, and other tissues." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
+def: "A syndrome characterized by highly variable, progressive features including asymmetric and disproportionate overgrowth of body parts, connective tissue nevi, epidermal nevi, dysregulated adipose tissue, vascular malformations, dysmorphic facies with seizures or intellectual disability, and tumors that has_material_basis_in mosaicism for a somatic activating mutation in the AKT1 gene on chromosome 14q32.3. There is significant risk of deep vein thrombosis." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23992099/, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Wiedemann's syndrome" EXACT []
+synonym: "Wiedemann's syndrome" RELATED []
 xref: GARD:7475
 xref: MESH:D016715
 xref: MIM:176920
 xref: NCI:C85032
-xref: SNOMEDCT_US_2023_03_01:394527003
+xref: ORDO:744
+xref: SNOMEDCT_US_2025_05_01:23150001
 xref: UMLS_CUI:C0085261
-is_a: DOID:0080191 ! PTEN hamartoma tumor syndrome
+property_value: exactMatch "GARD:7475" xsd:string
+property_value: exactMatch "MESH:D016715" xsd:string
+property_value: exactMatch "MIM:176920" xsd:string
+property_value: exactMatch "NCI:C85032" xsd:string
+property_value: exactMatch "ORDO:744" xsd:string
+property_value: exactMatch "UMLS_CUI:C0085261" xsd:string
 
 [Term]
 id: DOID:13487
@@ -38980,7 +39087,7 @@ xref: UMLS_CUI:C0221060
 id: DOID:13515
 name: tuberous sclerosis
 namespace: disease_ontology
-def: "A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
+def: "A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
@@ -49084,27 +49191,26 @@ id: DOID:6457
 name: Cowden syndrome
 namespace: disease_ontology
 alt_id: DOID:3471
-def: "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
+def: "A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Cowden disease" EXACT []
-synonym: "dysplastic Gangliocytoma of Cerebellum" EXACT []
-synonym: "Lhermitte-Duclos disease" EXACT []
-synonym: "multiple hamartoma syndrome" RELATED []
+synonym: "multiple hamartoma syndrome" EXACT []
 xref: GARD:6202
-xref: ICDO:9493/0
 xref: MESH:D006223
 xref: MIM:PS158350
 xref: NCI:C3076
-xref: NCI:C8419
 xref: ORDO:201
 xref: SNOMEDCT_US_2023_03_01:58037000
-xref: SNOMEDCT_US_2023_03_01:67944007
 xref: UMLS_CUI:C0018553
-xref: UMLS_CUI:C0391826
-is_a: DOID:0080191 ! PTEN hamartoma tumor syndrome
+property_value: closeMatch "GARD:6202" xsd:string
+property_value: closeMatch "MESH:D006223" xsd:string
+property_value: closeMatch "NCI:C3076" xsd:string
+property_value: closeMatch "UMLS_CUI:C0018553" xsd:string
+property_value: exactMatch "MIM:PS158350" xsd:string
+property_value: exactMatch "ORDO:201" xsd:string
 
 [Term]
 id: DOID:6458
@@ -51521,15 +51627,16 @@ xref: UMLS_CUI:C0004763
 
 [Term]
 id: DOID:9210
-name: herpes zoster oticus
+name: Ramsay Hunt syndrome
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
+def: "A herpes zoster that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Geniculate herpes zoster" EXACT []
 synonym: "geniculate neuralgia" EXACT []
 synonym: "Herpes zoster auricularis" EXACT []
+synonym: "herpes zoster oticus" EXACT []
 synonym: "Herpetic geniculate ganglionitis" EXACT []
 synonym: "nervus intermedius neuralgia" EXACT []
 synonym: "Ramsay Hunt syndrome type 2" EXACT []

@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-08-01/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-08-29/subsets/DO_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -2707,21 +2707,55 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080191",
-      "lbl" : "PTEN hamartoma tumor syndrome",
+      "lbl" : "obsolete PTEN hamartoma tumor syndrome",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene.",
-          "xrefs" : [ "url:https://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/", "url:https://www.ncbi.nlm.nih.gov/books/NBK1488/", "url:https://www.ncbi.nlm.nih.gov/pubmed/22628360" ]
+          "val" : "A syndrome comprised of a spectrum of related disorders characterized by the formation of hamartomas, overgrowth, and predisposition to cancer that has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23.",
+          "xrefs" : [ "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC10600266/", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC12010961/", "url:https://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/", "url:https://www.ncbi.nlm.nih.gov/books/NBK1488/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "PHTS"
+        } ],
         "xrefs" : [ {
           "val" : "GARD:12800"
+        }, {
+          "val" : "ICD10CM:Q85.81"
+        }, {
+          "val" : "NCI:C179915"
+        }, {
+          "val" : "ORDO:306498"
+        }, {
+          "val" : "SNOMEDCT_US_2025_05_01:722859001"
+        }, {
+          "val" : "UMLS_CUI:C1959582"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/DOID_0050657"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
-        } ]
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "ORDO:306498"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "UMLS_CUI:C1959582"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:12800"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:Q85.81"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C179915"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080192",
@@ -7239,7 +7273,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.",
+          "val" : "A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body.",
           "xrefs" : [ "url:https://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms" ]
         },
         "comments" : [ "OMIM mapping confirmed by DO. [LS]." ],
@@ -19299,7 +19333,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.",
+          "val" : "A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Cowden_syndrome", "url:http://ghr.nlm.nih.gov/condition/cowden-syndrome" ]
         },
         "comments" : [ "Xref MGI. OMIM mapping confirmed by DO. [SN]." ],
@@ -19309,18 +19343,10 @@
           "val" : "Cowden disease"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "Lhermitte-Duclos disease"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "dysplastic Gangliocytoma of Cerebellum"
-        }, {
-          "pred" : "hasRelatedSynonym",
           "val" : "multiple hamartoma syndrome"
         } ],
         "xrefs" : [ {
           "val" : "GARD:6202"
-        }, {
-          "val" : "ICDO:9493/0"
         }, {
           "val" : "MESH:D006223"
         }, {
@@ -19328,17 +19354,11 @@
         }, {
           "val" : "NCI:C3076"
         }, {
-          "val" : "NCI:C8419"
-        }, {
           "val" : "ORDO:201"
         }, {
           "val" : "SNOMEDCT_US_2023_03_01:58037000"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:67944007"
-        }, {
           "val" : "UMLS_CUI:C0018553"
-        }, {
-          "val" : "UMLS_CUI:C0391826"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -19346,6 +19366,24 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "GARD:6202"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "MESH:D006223"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "NCI:C3076"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "val" : "UMLS_CUI:C0018553"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MIM:PS158350"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:201"
         } ]
       }
     }, {
@@ -24784,10 +24822,6 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_6386",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_6383"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_6457",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_0080191"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_6458",
       "pred" : "is_a",

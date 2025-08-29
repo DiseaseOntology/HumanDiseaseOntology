@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-08-01/subsets/DO_cancer_slim.obo
-date: 01:08:2025 11:30
+data-version: doid/releases/2025-08-29/subsets/DO_cancer_slim.obo
+date: 29:08:2025 12:54
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -1299,12 +1299,25 @@ is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:0080191
-name: PTEN hamartoma tumor syndrome
+name: obsolete PTEN hamartoma tumor syndrome
 namespace: disease_ontology
-def: "A syndrome characterized as a spectrum of disorders (Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, PTEN-related Proteus syndrome, and Proteus-like syndrome) caused by germline mutations of the PTEN gene." [url:https\://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/22628360]
+def: "A syndrome comprised of a spectrum of related disorders characterized by the formation of hamartomas, overgrowth, and predisposition to cancer that has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10600266/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12010961/, url:https\://rarediseases.org/rare-diseases/pten-hamartoma-tumor-syndrome/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/]
 subset: DO_cancer_slim
 subset: DO_rare_slim
+synonym: "PHTS" EXACT OMO:0003012 []
 xref: GARD:12800
+xref: ICD10CM:Q85.81
+xref: NCI:C179915
+xref: ORDO:306498
+xref: SNOMEDCT_US_2025_05_01:722859001
+xref: UMLS_CUI:C1959582
+property_value: closeMatch "ORDO:306498" xsd:string
+property_value: closeMatch "UMLS_CUI:C1959582" xsd:string
+property_value: exactMatch "GARD:12800" xsd:string
+property_value: exactMatch "ICD10CM:Q85.81" xsd:string
+property_value: exactMatch "NCI:C179915" xsd:string
+is_obsolete: true
+replaced_by: DOID:0050657
 
 [Term]
 id: DOID:0080192
@@ -3584,7 +3597,7 @@ is_a: DOID:162 ! cancer
 id: DOID:13515
 name: tuberous sclerosis
 namespace: disease_ontology
-def: "A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
+def: "A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
@@ -9582,27 +9595,26 @@ id: DOID:6457
 name: Cowden syndrome
 namespace: disease_ontology
 alt_id: DOID:3471
-def: "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
+def: "A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Cowden disease" EXACT []
-synonym: "dysplastic Gangliocytoma of Cerebellum" EXACT []
-synonym: "Lhermitte-Duclos disease" EXACT []
-synonym: "multiple hamartoma syndrome" RELATED []
+synonym: "multiple hamartoma syndrome" EXACT []
 xref: GARD:6202
-xref: ICDO:9493/0
 xref: MESH:D006223
 xref: MIM:PS158350
 xref: NCI:C3076
-xref: NCI:C8419
 xref: ORDO:201
 xref: SNOMEDCT_US_2023_03_01:58037000
-xref: SNOMEDCT_US_2023_03_01:67944007
 xref: UMLS_CUI:C0018553
-xref: UMLS_CUI:C0391826
-is_a: DOID:0080191 ! PTEN hamartoma tumor syndrome
+property_value: closeMatch "GARD:6202" xsd:string
+property_value: closeMatch "MESH:D006223" xsd:string
+property_value: closeMatch "NCI:C3076" xsd:string
+property_value: closeMatch "UMLS_CUI:C0018553" xsd:string
+property_value: exactMatch "MIM:PS158350" xsd:string
+property_value: exactMatch "ORDO:201" xsd:string
 
 [Term]
 id: DOID:6458

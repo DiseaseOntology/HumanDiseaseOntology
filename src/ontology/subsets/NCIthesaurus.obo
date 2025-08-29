@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-08-01/subsets/NCIthesaurus.obo
-date: 01:08:2025 11:30
+data-version: doid/releases/2025-08-29/subsets/NCIthesaurus.obo
+date: 29:08:2025 12:54
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -1319,23 +1319,67 @@ is_a: DOID:655 ! inherited metabolic disorder
 
 [Term]
 id: DOID:0050657
-name: Bannayan-Riley-Ruvalcaba syndrome
+name: Cowden syndrome 1
 namespace: disease_ontology
+alt_id: DOID:0080191
 def: "A Cowden syndrome that is characterized by macrocephaly, multiple noncancerous tumors and hamartomas, and dark freckles on the penis, and has_material_basis_in heterozygous germline mutation in the PTEN gene on chromosome 10q23." [url:https\://en.wikipedia.org/wiki/Bannayan%E2%80%93Riley%E2%80%93Ruvalcaba_syndrome, url:https\://ghr.nlm.nih.gov/condition/bannayan-riley-ruvalcaba-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1488/, url:https\://www.ncbi.nlm.nih.gov/pubmed/31062505]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Bannayan-Zonana syndrome" EXACT []
-synonym: "Cowden syndrome 1" EXACT []
-synonym: "Riley-Smith syndrome" EXACT []
-synonym: "Ruvalcaba-Myhre-Smith syndrome" EXACT []
+synonym: "Bannayan-Riley-Ruvalcaba syndrome" NARROW []
+synonym: "Bannayan-Zonana syndrome" NARROW []
+synonym: "BRRS" NARROW OMO:0003012 []
+synonym: "dysplastic cerebellar gangliocytoma" NARROW []
+synonym: "dysplastic gangliocytoma of cerebellum" NARROW []
+synonym: "Lhermitte-Duclos disease" NARROW []
+synonym: "PHTS" EXACT OMO:0003012 []
+synonym: "Proteus-like syndrome" NARROW []
+synonym: "PTEN hamartoma tumor syndrome" EXACT []
+synonym: "Riley-Smith syndrome" NARROW []
+synonym: "Ruvalcaba-Myhre-Smith syndrome" NARROW []
+synonym: "segmental overgrowth, lipomatosis, arteriovenous malformation, and epidermal nevus syndrome" NARROW []
+synonym: "SOLAMEN syndrome" NARROW []
+xref: GARD:12800
 xref: GARD:5887
+xref: GARD:6901
+xref: ICD10CM:Q85.81
 xref: ICD10CM:Q87.89
+xref: ICDO:9493/0
 xref: MESH:D006223
+xref: MESH:D016715
 xref: MIM:158350
+xref: NCI:C179915
+xref: NCI:C179930
 xref: NCI:C3939
+xref: NCI:C8419
 xref: ORDO:109
+xref: ORDO:137608
+xref: ORDO:306498
+xref: ORDO:65285
+xref: SNOMEDCT_US_2023_03_01:67944007
+xref: SNOMEDCT_US_2025_03_01:716862002
+xref: SNOMEDCT_US_2025_03_01:763867001
+xref: SNOMEDCT_US_2025_05_01:722859001
+xref: UMLS_CUI:C0391826
+xref: UMLS_CUI:C1866398
+xref: UMLS_CUI:C1959582
+xref: UMLS_CUI:C4706610
 is_a: DOID:6457 ! Cowden syndrome
+property_value: closeMatch "ORDO:306498" xsd:string
+property_value: closeMatch "UMLS_CUI:C1959582" xsd:string
+property_value: exactMatch "GARD:12800" xsd:string
+property_value: exactMatch "ICD10CM:Q85.81" xsd:string
+property_value: exactMatch "NCI:C179915" xsd:string
+property_value: narrowMatch "GARD:6901" xsd:string
+property_value: narrowMatch "ICDO:9493/0" xsd:string
+property_value: narrowMatch "NCI:C179930" xsd:string
+property_value: narrowMatch "NCI:C8419" xsd:string
+property_value: narrowMatch "ORDO:137608" xsd:string
+property_value: narrowMatch "ORDO:65285" xsd:string
+property_value: narrowMatch "UMLS_CUI:C0391826" xsd:string
+property_value: narrowMatch "UMLS_CUI:C1866398" xsd:string
+property_value: narrowMatch "UMLS_CUI:C4706610" xsd:string
+property_value: relatedMatch "MESH:D016715" xsd:string
 
 [Term]
 id: DOID:0050678
@@ -7876,7 +7920,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:0111277
 name: mitochondrial trifunctional protein deficiency
 namespace: disease_ontology
-def: "A lipid metabolism disorder characterized by abnormal fatty acid oxidation resulting a wide range of clinical manifestations from servere neonatal symptoms including cardiomyopathy, hypoglycemia, metabolic acidosis, skeletal myopathy and neuropathy, liver disease and death to a more mild phenotype including peripheral polyneuropathy, episodic rhabdomyolysis and pigmentary retinopathy." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12754706, url:https\://www.ncbi.nlm.nih.gov/pubmed/12838198, url:https\://www.ncbi.nlm.nih.gov/pubmed/7738175]
+def: "A lipid metabolism disorder characterized by abnormal fatty acid oxidation resulting a wide range of clinical manifestations from several neonatal symptoms including cardiomyopathy, hypoglycemia, metabolic acidosis, skeletal myopathy and neuropathy, liver disease and death to a more mild phenotype including peripheral polyneuropathy, episodic rhabdomyolysis and pigmentary retinopathy." [url:https\://www.ncbi.nlm.nih.gov/pubmed/12754706, url:https\://www.ncbi.nlm.nih.gov/pubmed/12838198, url:https\://www.ncbi.nlm.nih.gov/pubmed/7738175]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "MTPD" EXACT OMO:0003012 []
@@ -14680,6 +14724,7 @@ is_a: DOID:5614 ! eye disease
 id: DOID:11353
 name: bladder diverticulum
 namespace: disease_ontology
+def: "A bladder disease characterized by protrusion of the bladder urothelium and mucosa via muscle fibers of the bladder wall which results in one or more thin-walled structures connected to the bladder lumen." [url:https\://www.ncbi.nlm.nih.gov/books/NBK580557/, url:https\://www.urologyhealth.org/urology-a-z/b/bladder-diverticulum]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "Diverticulum - bladder" EXACT []
@@ -20094,7 +20139,7 @@ is_a: DOID:0060085 ! organ system benign neoplasm
 id: DOID:13241
 name: Behcet's disease
 namespace: disease_ontology
-def: "A vasculitis that is characterized by an autoimmune mediated inflammation of the blood vessels throughout the body leading to ulcerations on the mouth and sometimes the genitals, notorious for causing hypopyon uveitis." [url:http\://en.wikipedia.org/wiki/Beh%C3%A7et%27s_disease, url:http\://www.nlm.nih.gov/medlineplus/behcetssyndrome.html]
+def: "An autoimmune disease that is characterized by mucocutaneous manifestations, including recurrent oral and genital ulcerations, ocular manifestations, especially chronic relapsing uveitis, and systemic vasculitis involving arteries and veins of all sizes." [url:http\://en.wikipedia.org/wiki/Beh%C3%A7et%27s_disease, url:http\://www.nlm.nih.gov/medlineplus/behcetssyndrome.html, url:https\://www.ncbi.nlm.nih.gov/books/NBK470257/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -20842,18 +20887,25 @@ property_value: exactMatch "MESH:D013796" xsd:string
 id: DOID:13482
 name: Proteus syndrome
 namespace: disease_ontology
-def: "A PTEN hamartoma tumor syndrome that is characterized by overgrowth of the bones, skin, and other tissues." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
+def: "A syndrome characterized by highly variable, progressive features including asymmetric and disproportionate overgrowth of body parts, connective tissue nevi, epidermal nevi, dysregulated adipose tissue, vascular malformations, dysmorphic facies with seizures or intellectual disability, and tumors that has_material_basis_in mosaicism for a somatic activating mutation in the AKT1 gene on chromosome 14q32.3. There is significant risk of deep vein thrombosis." [url:https\://ghr.nlm.nih.gov/condition/proteus-syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23992099/, url:https\://www.ncbi.nlm.nih.gov/books/NBK99495/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "Wiedemann's syndrome" EXACT []
+synonym: "Wiedemann's syndrome" RELATED []
 xref: GARD:7475
 xref: MESH:D016715
 xref: MIM:176920
 xref: NCI:C85032
-xref: SNOMEDCT_US_2023_03_01:394527003
+xref: ORDO:744
+xref: SNOMEDCT_US_2025_05_01:23150001
 xref: UMLS_CUI:C0085261
 is_a: DOID:225 ! syndrome
+property_value: exactMatch "GARD:7475" xsd:string
+property_value: exactMatch "MESH:D016715" xsd:string
+property_value: exactMatch "MIM:176920" xsd:string
+property_value: exactMatch "NCI:C85032" xsd:string
+property_value: exactMatch "ORDO:744" xsd:string
+property_value: exactMatch "UMLS_CUI:C0085261" xsd:string
 
 [Term]
 id: DOID:13487
@@ -20960,7 +21012,7 @@ is_a: DOID:1679 ! cystitis
 id: DOID:13515
 name: tuberous sclerosis
 namespace: disease_ontology
-def: "A syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
+def: "A hamartoma syndrome that is characterized by the growth of numerous noncancerous tumors in many parts of the body." [url:https\://ghr.nlm.nih.gov/condition/tuberous-sclerosis-complex#synonyms]
 comment: OMIM mapping confirmed by DO. [LS].
 subset: DO_cancer_slim
 subset: DO_FlyBase_slim
@@ -50789,7 +50841,6 @@ def: "An adult acute lymphocytic leukemia occurring in adults and that has_mater
 subset: NCIthesaurus
 synonym: "Acute Adult T-cell Leukemia-Lymphoma" EXACT []
 synonym: "adult Precursor T Lymphoblastic Leukemia" EXACT []
-synonym: "ATLL" EXACT OMO:0003012 []
 xref: NCI:C9142
 xref: UMLS_CUI:C0279592
 is_a: DOID:5604 ! adult acute lymphocytic leukemia
@@ -55282,27 +55333,27 @@ id: DOID:6457
 name: Cowden syndrome
 namespace: disease_ontology
 alt_id: DOID:3471
-def: "A PTEN hamartoma tumor syndrome that is characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
+def: "A hamartoma syndrome characterized by multiple noncancerous, tumor-like growths (hamartomas) and an increased risk of certain forms of cancer, especially breast, thyroid and endometrium." [url:http\://en.wikipedia.org/wiki/Cowden_syndrome, url:http\://ghr.nlm.nih.gov/condition/cowden-syndrome]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Cowden disease" EXACT []
-synonym: "dysplastic Gangliocytoma of Cerebellum" EXACT []
-synonym: "Lhermitte-Duclos disease" EXACT []
-synonym: "multiple hamartoma syndrome" RELATED []
+synonym: "multiple hamartoma syndrome" EXACT []
 xref: GARD:6202
-xref: ICDO:9493/0
 xref: MESH:D006223
 xref: MIM:PS158350
 xref: NCI:C3076
-xref: NCI:C8419
 xref: ORDO:201
 xref: SNOMEDCT_US_2023_03_01:58037000
-xref: SNOMEDCT_US_2023_03_01:67944007
 xref: UMLS_CUI:C0018553
-xref: UMLS_CUI:C0391826
 is_a: DOID:225 ! syndrome
+property_value: closeMatch "GARD:6202" xsd:string
+property_value: closeMatch "MESH:D006223" xsd:string
+property_value: closeMatch "NCI:C3076" xsd:string
+property_value: closeMatch "UMLS_CUI:C0018553" xsd:string
+property_value: exactMatch "MIM:PS158350" xsd:string
+property_value: exactMatch "ORDO:201" xsd:string
 
 [Term]
 id: DOID:6458
@@ -64849,7 +64900,7 @@ is_a: DOID:869 ! cholesteatoma
 id: DOID:8670
 name: eating disorder
 namespace: disease_ontology
-def: "A specific developmental disorder that is characterized by abnormal eating habits that may involve either insufficient or excessive food intake to the detriment of an individual's physical and emotional health." [url:http\://en.wikipedia.org/wiki/Eating_disorder]
+def: "A disease of mental health that is characterized by abnormal eating habits that may involve either insufficient or excessive food intake to the detriment of an individual's physical and emotional health." [url:http\://en.wikipedia.org/wiki/Eating_disorder]
 subset: NCIthesaurus
 xref: ICD10CM:F50
 xref: ICD9CM:307.50
@@ -66837,15 +66888,16 @@ is_a: DOID:6050 ! esophageal disease
 
 [Term]
 id: DOID:9210
-name: herpes zoster oticus
+name: Ramsay Hunt syndrome
 namespace: disease_ontology
-def: "A viral infectious disease that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
+def: "A herpes zoster that results_in inflammation located_in facial nerve, which leads to paralysis of one side of the face, has_material_basis_in Human herpesvirus 3 (Varicellovirus humanalpha3), which reactivates after appearing as chickenpox in childhood. The infection has_symptom vesicular rash of the ear or mouth, has_symptom tinnitus, has_symptom vertigo, has_symptom otalgia, and has_symptom headache." [url:https\://rarediseases.info.nih.gov/diseases/7525/index]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Geniculate herpes zoster" EXACT []
 synonym: "geniculate neuralgia" EXACT []
 synonym: "Herpes zoster auricularis" EXACT []
+synonym: "herpes zoster oticus" EXACT []
 synonym: "Herpetic geniculate ganglionitis" EXACT []
 synonym: "nervus intermedius neuralgia" EXACT []
 synonym: "Ramsay Hunt syndrome type 2" EXACT []
@@ -66859,7 +66911,7 @@ xref: NCI:C84763
 xref: ORDO:3020
 xref: SNOMEDCT_US_2023_03_01:21954000
 xref: UMLS_CUI:C0017409
-is_a: DOID:934 ! viral infectious disease
+is_a: DOID:8536 ! herpes zoster
 property_value: exactMatch "GARD:7525" xsd:string
 property_value: exactMatch "ICD10CM:B02.21" xsd:string
 property_value: exactMatch "ICD9CM:053.11" xsd:string

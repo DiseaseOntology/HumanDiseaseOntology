@@ -5,7 +5,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
 
-SELECT ?predicate ?lang (COUNT(DISTINCT ?text) AS ?count)
+SELECT ?predicate ?lang (COUNT(?text) AS ?count)
 WHERE {
     VALUES (?p ?predicate) {
         (rdfs:label "label")

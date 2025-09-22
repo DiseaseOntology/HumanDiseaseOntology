@@ -34,6 +34,7 @@ SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 
 VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
+.PHONY: imports sources versions clean refresh_imports $(IMPORTS)
 imports: $(IMPORTS)
 
 sources: $(SOURCES)
@@ -50,6 +51,8 @@ refresh_imports:
 # Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
 IMP_REFRESH := ""
 REFRESH_IMPORTS := $(foreach IMP,$(IMPORTS),refresh_$(IMP))
+
+.PHONY: $(REFRESH_IMPORTS)
 $(REFRESH_IMPORTS):
 	$(eval IMP_REFRESH=$(patsubst refresh_%,%,$@))
 	@rm -f $(filter build/$(IMP_REFRESH)%,$(SOURCES))

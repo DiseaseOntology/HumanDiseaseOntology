@@ -13,6 +13,30 @@
 
 ## 2025 Releases
 
+### [v2025-09-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-09-30)
+
+This release of the Human Disease Ontology includes 11,953 disease classes, 9,656 with textual definitions (80.8%). Translation files now include 11,275 labels (94.3%), 11,495 synonyms (59.2%), and 6,401 definitions (66.3%) in Spanish.
+
+Disease groups revised and/or expanded include Usher syndrome type 1, alcohol-associated liver disease, periarthritis, bursitis, congenital myopathy, lymphedema, hyaline body myopathy, and viral infectious disease (many viral species updates thanks to the latest NCBITaxon release).
+
+Additional revisions were made to autosomal recessive intellectual developmental disorder 69, congenital nystagmus 1, giardiasis, GRN-related frontotemporal lobar degeneration with Tdp43 inclusions, RENI syndrome, and rigid spine muscular dystrophy 1.
+
+Newly added diseases include congenital variant of Rett syndrome, neonatal inflammatory skin and bowel disease 1, neonatal nephrocutaneous inflammatory syndrome, nephrotic syndrome type 24, and nephrotic syndrome type 26.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-08-29...v2025-09-30
+
+## Obsoleted Diseases
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:12223 | specific bursitis often of occupational origin | | | out of scope: generic disease with non-specific qualifier
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-09-30/src/ontology/doid-merged.obo) | |
+
 ### [v2025-08-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-08-29)
 
 This release of the Human Disease Ontology includes 11,946 disease classes, 9,640 with textual definitions (80.7%).

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-09-30/subsets/DO_rare_slim.obo
-date: 30:09:2025 12:24
+data-version: doid/releases/2025-10-31/subsets/DO_rare_slim.obo
+date: 31:10:2025 17:48
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -1905,12 +1905,13 @@ is_a: DOID:10969 ! hemiplegia
 
 [Term]
 id: DOID:0050636
-name: familial visceral amyloidosis
+name: hereditary systemic amyloidosis 2
 namespace: disease_ontology
 def: "An amyloidosis that is characterized by the abnormal deposition of amyloid proteins that is located_in the visceral organs, primarily the kidneys." [url:https\://en.wikipedia.org/wiki/Familial_renal_amyloidosis]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "AMYLOIDOSIS, FAMILIAL RENAL" EXACT []
+synonym: "familial visceral amyloidosis" EXACT []
 synonym: "German type amyloidosis" EXACT []
 synonym: "OSTERTAG TYPE AMYLOIDOSIS" EXACT []
 synonym: "systemic nonneuropathic amyloidosis" EXACT []
@@ -1935,7 +1936,7 @@ xref: ORDO:85448
 
 [Term]
 id: DOID:0050638
-name: transthyretin amyloidosis
+name: hereditary systemic amyloidosis 1
 namespace: disease_ontology
 alt_id: DOID:0050761
 def: "An amyloidosis that is characterized by a loss of sensation in the extremities, cardiomyopathy, nephropathy, vitreous opacities, and CNS amyloidosis resulting from abnormal deposits of amyloid protein in the body's organs and tissues and has_material_basis_in autosomal dominant inheritance of mutations in the TTR gene." [url:http\://en.wikipedia.org/wiki/Transthyretin-related_hereditary_amyloidosis, url:http\://ghr.nlm.nih.gov/condition/transthyretin-amyloidosis, url:http\://www.ncbi.nlm.nih.gov/books/NBK1194/, url:http\://www.orpha.net/consor4.01/www/cgi-bin/OC_Exp.php?lng=EN&Expert=85451, url:http\://www.paramiloidose.com/en/paramiloidose.php?a=2&id=25, url:https\://www.ncbi.nlm.nih.gov/books/NBK1194/, url:https\://www.ncbi.nlm.nih.gov/pubmed/19372706]
@@ -1949,6 +1950,7 @@ synonym: "Corino de Andrade's disease" EXACT []
 synonym: "familial amyloid polyneuropathy" EXACT []
 synonym: "Familial transthyretin amyloidosis" EXACT []
 synonym: "paramyloidosis" EXACT []
+synonym: "transthyretin amyloidosis" EXACT []
 synonym: "transthyretin-related hereditary amyloidosis" EXACT []
 synonym: "TTR amyloidosis" EXACT []
 xref: GARD:656
@@ -2249,14 +2251,24 @@ is_a: DOID:4448 ! macular degeneration
 id: DOID:0050663
 name: Bethlem myopathy
 namespace: disease_ontology
-def: "A congenital muscular dystrophy that is characterized by myopathy and joint contractures that progresses slowly, has_material_basis_in autosomal dominant inheritance of heterozygous mutation in the COL6A1 gene, the COL6A2 gene, or the COL6A3 gene." [url:https\://rarediseases.info.nih.gov/diseases/873/bethlem-myopathy]
+def: "A congenital muscular dystrophy that is characterized by myopathy and joint contractures that progresses slowly." [url:https\://rarediseases.info.nih.gov/diseases/873/bethlem-myopathy]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "benign congenital muscular dystrophy" EXACT []
 xref: GARD:873
 xref: MESH:C535436
-xref: MIM:158810
+xref: MIM:PS158810
+xref: NCI:C126688
+xref: ORDO:610
+xref: SNOMEDCT_US_2025_09_01:718572004
+xref: UMLS_CUI:C1834674
 is_a: DOID:0050557 ! congenital muscular dystrophy
+property_value: closeMatch "GARD:873" xsd:string
+property_value: closeMatch "MESH:C535436" xsd:string
+property_value: closeMatch "NCI:C126688" xsd:string
+property_value: exactMatch "MIM:PS158810" xsd:string
+property_value: narrowMatch "ORDO:610" xsd:string
+property_value: narrowMatch "UMLS_CUI:C1834674" xsd:string
 
 [Term]
 id: DOID:0050664
@@ -2664,10 +2676,11 @@ is_a: DOID:332 ! amyotrophic lateral sclerosis
 
 [Term]
 id: DOID:0050754
-name: ataxia with oculomotor apraxia type 1
+name: early-onset ataxia with oculomotor apraxia and hypoalbuminemia
 namespace: disease_ontology
 def: "An autosomal recessive cerebellar ataxia that is characterized by progressive cerebellar ataxia including oculomotor apraxia, severe neuropathy and hypoalbuminemia, has_material_basis_in autosomal recessive inheritance of mutation in the APTX gene." [url:https\://rarediseases.info.nih.gov/diseases/9283/ataxia-oculomotor-apraxia-type-1]
 subset: DO_rare_slim
+synonym: "ataxia with oculomotor apraxia type 1" EXACT []
 xref: GARD:9283
 xref: MIM:208920
 is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
@@ -3510,7 +3523,7 @@ creation_date: 2014-08-06T02:30:16Z
 
 [Term]
 id: DOID:0050882
-name: spinocerebellar ataxia type 5
+name: spinocerebellar ataxia 5
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by the early-onset of cerebellar signs and eye movement abnormalities with a very slow disease progression, and has_material_basis_in mutation in the SPTBN2 gene." [url:http\://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=98766, url:https\://www.ncbi.nlm.nih.gov/pubmed/20368622]
 subset: DO_FlyBase_slim
@@ -3724,7 +3737,7 @@ creation_date: 2015-10-05T14:38:17Z
 
 [Term]
 id: DOID:0050954
-name: spinocerebellar ataxia type 1
+name: spinocerebellar ataxia 1
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by ataxia, dysarthria, dysphagia, dystonia and peripheral neuropathy that begins in early adulthood, has_material_basis_in the expanded (CAG)n trinucleotide repeat of ataxin-1 gene on chromosome 6p22." [url:https\://rarediseases.info.nih.gov/diseases/4071/spinocerebellar-ataxia-1]
 subset: DO_rare_slim
@@ -3736,7 +3749,7 @@ creation_date: 2015-10-05T16:07:27Z
 
 [Term]
 id: DOID:0050956
-name: spinocerebellar ataxia type 6
+name: spinocerebellar ataxia 6
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by progressive ataxia, has_material_basis_in mutation in the CACNA1A gene." [url:https\://ghr.nlm.nih.gov/condition/spinocerebellar-ataxia-type-6]
 subset: DO_rare_slim
@@ -3748,7 +3761,7 @@ creation_date: 2015-10-05T16:07:27Z
 
 [Term]
 id: DOID:0050957
-name: spinocerebellar ataxia type 4
+name: spinocerebellar ataxia 4
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by progressive ataxia, dysarthria and peripheral neuropathy that has_material_basis_in heterozygous trinucleotide repeat expansion (GGCn) in the ZFHX3 gene on chromosome 16q22." [url:https\://pubmed.ncbi.nlm.nih.gov/38035881/, url:https\://rarediseases.info.nih.gov/diseases/9970/spinocerebellar-ataxia-4]
 subset: DO_rare_slim
@@ -3768,7 +3781,7 @@ creation_date: 2015-10-05T16:07:27Z
 
 [Term]
 id: DOID:0050960
-name: spinocerebellar ataxia type 10
+name: spinocerebellar ataxia 10
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by gait ataxia, upper-limb ataxia, dysarthria and dysphagia, has_material_basis_in mutation in the ATXN10 gene." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1175/]
 subset: DO_rare_slim
@@ -3780,7 +3793,7 @@ creation_date: 2015-10-05T16:12:39Z
 
 [Term]
 id: DOID:0050967
-name: spinocerebellar ataxia type 17
+name: spinocerebellar ataxia 17
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by chorea, dementia, dystonia, spasiticity and seizure, has_material_basis_in CAG repeat expansion in the TBP gene." [url:https\://rarediseases.info.nih.gov/diseases/10469/spinocerebellar-ataxia-17]
 subset: DO_rare_slim
@@ -3804,7 +3817,7 @@ creation_date: 2015-10-05T16:12:39Z
 
 [Term]
 id: DOID:0050969
-name: spinocerebellar ataxia type 18
+name: spinocerebellar ataxia 18
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by cerebellar ataxia and sensory neuropathy, has_material_basis_in mutation on chromosome 7q22-q23." [url:https\://rarediseases.info.nih.gov/diseases/9976/spinocerebellar-ataxia-18]
 subset: DO_rare_slim
@@ -3816,7 +3829,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050970
-name: spinocerebellar ataxia type 19/22
+name: spinocerebellar ataxia 19/22
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by mild cerebellar ataxia, cognitive impairment, myoclonus and tremor." [url:https\://rarediseases.info.nih.gov/diseases/12365/spinocerebellar-ataxia-19-and-22]
 subset: DO_rare_slim
@@ -3828,7 +3841,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050971
-name: spinocerebellar ataxia type 20
+name: spinocerebellar ataxia 20
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by cerebellar dysarthria." [url:https\://rarediseases.info.nih.gov/diseases/9997/spinocerebellar-ataxia-20]
 subset: DO_rare_slim
@@ -3840,7 +3853,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050972
-name: spinocerebellar ataxia type 21
+name: spinocerebellar ataxia 21
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by progressive cerebellar ataxia, cognitive impairment, tremor, bradykinesia and rigidity." [url:https\://rarediseases.info.nih.gov/diseases/9999/spinocerebellar-ataxia-21]
 subset: DO_rare_slim
@@ -3852,7 +3865,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050974
-name: spinocerebellar ataxia type 25
+name: spinocerebellar ataxia 25
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by ataxia and sensory neuropathy, has_material_basis_in repeat CAG expansion on chromosome 2p15-p21." [url:https\://rarediseases.info.nih.gov/diseases/9996/spinocerebellar-ataxia-25]
 subset: DO_rare_slim
@@ -3865,7 +3878,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050975
-name: spinocerebellar ataxia type 26
+name: spinocerebellar ataxia 26
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by slowly progressive ataxia and oculomotor abnormalities, has_material_basis_in mutation in the EEF2 gene." [url:https\://rarediseases.info.nih.gov/diseases/9995/spinocerebellar-ataxia-26]
 subset: DO_rare_slim
@@ -3878,7 +3891,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050976
-name: spinocerebellar ataxia type 27A
+name: spinocerebellar ataxia 27A
 namespace: disease_ontology
 alt_id: DOID:0111794
 def: "An autosomal dominant cerebellar ataxia that is characterized by general cerebellar dysfunction manifest as gait disturbances, ataxia, tremor, dysarthria, and gaze-evoked nystagmus and has_material_basis_in heterozygous mutation in the FGF14 gene on chromosome 13q33. Some patients have heterozygous deletions of chromosome 13q33 affecting the FGF14 and ITGBL1 genes, which may thus be considered a contiguous gene deletion syndrome." [url:https\://pubmed.ncbi.nlm.nih.gov/32162847/]
@@ -3896,7 +3909,7 @@ creation_date: 2015-10-06T16:11:07Z
 
 [Term]
 id: DOID:0050979
-name: spinocerebellar ataxia type 30
+name: spinocerebellar ataxia 30
 namespace: disease_ontology
 def: "An autosomal dominant cerebellar ataxia that is characterized by slowly progressive gait abnormalities and dysarthria, has_material_basis_in mutation in the ODZ3 gene." [url:https\://www.omim.org/entry/613371]
 subset: DO_rare_slim
@@ -4798,10 +4811,11 @@ synonym: "branchiootic dysplasia" EXACT []
 xref: GARD:10148
 xref: ICD10CM:Q87.0
 xref: MESH:C537104
-xref: MIM:120502
-xref: MIM:602588
-xref: MIM:608389
+xref: MIM:PS602588
 xref: ORDO:52429
+xref: SNOMEDCT_US_2025_09_01:764810000
+xref: UMLS_CUI:C4273131
+property_value: exactMatch "MIM:PS602588" xsd:string
 created_by: emitraka
 creation_date: 2015-01-23T15:24:02Z
 
@@ -10590,6 +10604,7 @@ def: "A syndromic X-linked intellectual disability characterized by moderate int
 subset: DO_rare_slim
 synonym: "mental retardation, X-linked, syndromic 11, Shashi type" EXACT []
 synonym: "MRXS11" EXACT OMO:0003012 []
+synonym: "Shashi type of X-linked syndromic intellectual developmental disorder" EXACT []
 synonym: "Shashi X-linked mental retardation syndrome" EXACT []
 synonym: "SMRXS" EXACT OMO:0003012 []
 synonym: "syndromic X-linked intellectual disability type 11" EXACT []
@@ -15025,7 +15040,6 @@ name: infantile myofibromatosis
 namespace: disease_ontology
 def: "A connective tissue benign neoplasm that is characterized by the development of benign tumors in the skin, striated muscles, bones, and in exceptional cases, visceral organs." [url:https\://pubmed.ncbi.nlm.nih.gov/27259011/, url:https\://www.ncbi.nlm.nih.gov/pubmed/23731542]
 subset: DO_rare_slim
-synonym: "lipofibromatosis" EXACT []
 xref: GARD:2998
 xref: MIM:228550
 xref: MIM:615293
@@ -18010,8 +18024,9 @@ xref: ORDO:1388
 id: DOID:0081123
 name: X-linked mental retardation Gustavson type
 namespace: disease_ontology
-def: "A syndromic X-linked intellectual disability that is characterized by severe intellectual disability, microcephaly, post-natal growth retardation, severe visual impairment or blindness, severe hearing defect, spasticity, epileptic seizures, restricted large-joint movements and early death." [url:https\://pubmed.ncbi.nlm.nih.gov/8503440/]
+def: "A syndromic X-linked intellectual disability that is characterized by intrauterine growth retardation, microcephaly, hypotonia, and severe global developmental delay, usually resulting in death in infancy or early childhood that has_material_basis_in hemizygous mutation in the RBMX gene on chromosome Xq26." [url:https\://pubmed.ncbi.nlm.nih.gov/37277488/]
 subset: DO_rare_slim
+synonym: "Gustavson type of X-linked syndromic intellectual developmental disorder" EXACT []
 synonym: "mental retardation with optic atrophy, deafness and seizures" EXACT []
 xref: GARD:5611
 xref: MIM:309555
@@ -18393,7 +18408,7 @@ is_a: DOID:3762 ! cytochrome-c oxidase deficiency disease
 
 [Term]
 id: DOID:0081383
-name: ataxia-oculomotor apraxia type 4
+name: ataxia-oculomotor apraxia 4
 namespace: disease_ontology
 def: "An autosomal recessive cerebellar ataxia that is characterized by onset of dystonia and ataxia in the first decade and that has_material_basis_in homozygous or compound heterozygous mutation in the PNKP gene on chromosome 19q13." [url:https\://pubmed.ncbi.nlm.nih.gov/25728773/]
 subset: DO_rare_slim
@@ -18404,7 +18419,7 @@ is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
 
 [Term]
 id: DOID:0081384
-name: ataxia-telangiectasia-like disorder-1
+name: ataxia-telangiectasia-like disorder 1
 namespace: disease_ontology
 def: "An autosomal recessive cerebellar ataxia that is characterized clinically by progressive cerebellar degeneration resulting in ataxia and oculomotor apraxia and that has_material_basis_in homozygous or compound heterozygous mutation in the MRE11A gene (MRE11) on chromosome 11q21." [url:https\://pubmed.ncbi.nlm.nih.gov/10612394/]
 subset: DO_rare_slim
@@ -18414,7 +18429,7 @@ is_a: DOID:0050950 ! autosomal recessive cerebellar ataxia
 
 [Term]
 id: DOID:0081385
-name: ataxia-telangiectasia-like disorder-2
+name: ataxia-telangiectasia-like disorder 2
 namespace: disease_ontology
 def: "An autosomal recessive cerebellar ataxia that is characterized by developmental delay, ataxia, and sensorineural hearing loss and that has_material_basis_in homozygous mutation in the PCNA gene on chromosome 20p12." [url:https\://pubmed.ncbi.nlm.nih.gov/24911150/]
 subset: DO_rare_slim
@@ -33276,10 +33291,11 @@ is_a: DOID:0112280 ! spondyloepiphyseal dysplasia
 
 [Term]
 id: DOID:0112292
-name: spondyloepiphyseal dysplasia tarda with intellectual disability
+name: spondyloepiphyseal dysplasia tarda with impaired intellectual development
 namespace: disease_ontology
 def: "A spondyloepiphyseal dysplasia tarda characterized by autosomal recessive inheritance of spondyloepiphyseal dysplasia associated with mild to moderate intellectual disability." [url:https\://pubmed.ncbi.nlm.nih.gov/3612708/]
 subset: DO_rare_slim
+synonym: "spondyloepiphyseal dysplasia tarda with intellectual disability" EXACT []
 xref: MESH:C564796
 xref: MIM:271620
 xref: ORDO:163665
@@ -33288,10 +33304,11 @@ is_a: DOID:0112284 ! spondyloepiphyseal dysplasia tarda
 
 [Term]
 id: DOID:0112294
-name: spondyloepiphyseal dysplasia with coronal craniosynostosis, cataracts, cleft palate, and intellectual disability
+name: spondyloepiphyseal dysplasia with coronal craniosynostosis, cataracts, cleft palate, and impaired intellectual development
 namespace: disease_ontology
 def: "A syndrome characterized by spondyloepiphyseal dysplasia, craniosynostosis, cataracts, cleft palate, and intellectual disability." [url:https\://pubmed.ncbi.nlm.nih.gov/9557884/]
 subset: DO_rare_slim
+synonym: "spondyloepiphyseal dysplasia with coronal craniosynostosis, cataracts, cleft palate, and intellectual disability" EXACT []
 xref: MIM:602611
 xref: ORDO:163649
 
@@ -45678,9 +45695,11 @@ subset: NCIthesaurus
 synonym: "Lafora Progressive Myoclonic Epilepsy" EXACT []
 synonym: "Lafora's disease" EXACT []
 synonym: "MYOCLONIC EPILEPSY OF LAFORA" EXACT []
+synonym: "progressive myoclonic epilepsy 2" EXACT []
 xref: GARD:8214
 xref: MESH:D020192
 xref: MIM:254780
+xref: MIM:PS254780
 xref: NCI:C84804
 xref: SNOMEDCT_US_2023_03_01:230425004
 xref: UMLS_CUI:C0751783
@@ -51870,8 +51889,7 @@ synonym: "multiple system tauopathy with presenile dementia" EXACT []
 synonym: "pallidopontonigral degeneration" EXACT []
 synonym: "Wilhemsen-Lynch disease" EXACT []
 xref: GARD:8436
-xref: MESH:C563003
-xref: MIM:600274
+xref: MESH:D057180
 xref: ORDO:282
 xref: SNOMEDCT_US_2023_03_01:42369001
 xref: UMLS_CUI:C0520716
@@ -52037,7 +52055,6 @@ id: DOID:9269
 name: maple syrup urine disease
 namespace: disease_ontology
 def: "An organic acidemia that is caused by a deficiency of decarboxylase leading to high concentrations of valine, leucine, isoleucine, and alloisoleucine in the blood, urine, and cerebrospinal fluid and characterized by an odor of maple syrup to the urine, vomiting, hypertonicity, severe mental retardation, seizures, and eventually death unless the condition is treated with dietary measures." [url:https\://www.merriam-webster.com/medical/maple%20syrup%20urine%20disease]
-comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "branched chain ketoaciduria" EXACT []
@@ -52046,14 +52063,13 @@ synonym: "Ketoacidaemia" EXACT []
 xref: GARD:3228
 xref: ICD10CM:E71.0
 xref: MESH:D008375
-xref: MIM:246900
-xref: MIM:248600
-xref: MIM:615135
+xref: MIM:PS248600
 xref: NCI:C34806
 xref: ORDO:511
 xref: SNOMEDCT_US_2023_03_01:27718001
 xref: UMLS_CUI:C0024776
 is_a: DOID:0060159 ! organic acidemia
+property_value: exactMatch "MIM:PS248600" xsd:string
 
 [Term]
 id: DOID:9270

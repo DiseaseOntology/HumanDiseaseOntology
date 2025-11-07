@@ -122,6 +122,39 @@ $(FASTOBO): | build
 		fi ; \
 	fi
 
+# ----------------------------------------
+# FILE UTILITIES
+# ----------------------------------------
+
+# clean old result files from directory (prevents old file inclusion in concat_files)
+# args = input-directory, command-to-match-test-files
+define clean_prior_results
+	@TMP_FILES=$$(find $(1) | $(2)) ; \
+	if [ "$$TMP_FILES" ]; then \
+		rm $$TMP_FILES ; \
+	fi ;
+endef
+
+# concatenate test results from multiple files into one
+# args = type ('TEST' will error if output), output-file, input-directory, command-to-match-test-files
+define concat_files
+	@TMP_FILES=$$(find $(3) | $(4)) ; \
+	if [ "$$TMP_FILES" ]; then \
+		awk 'BEGIN { OFS = FS = "," } ; { \
+			if (FNR == 1) { \
+				gsub(/^.*verify-|\.csv/, "", FILENAME) ; \
+				if (NR != 1) { print "" } ; \
+				print "$(1): " FILENAME ; print $$0 \
+			} \
+			else { print $$0 } \
+		}' $$TMP_FILES > $(2) \
+        && rm -f $$TMP_FILES ; \
+		if [ "$(1)" = "TEST" ] ; then exit 1 ; fi ; \
+	else \
+		touch $(2) ; \
+	fi ;
+endef
+
 
 ##########################################
 ## PRE-BUILD TESTS
@@ -171,54 +204,28 @@ EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verif
 .PRECIOUS: build/reports/edit-verify.csv
 verify-edit: build/reports/edit-verify.csv
 build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
+	$(call clean_prior_results,$(word 2,$|),grep -E "/(edit-)?verify-.*\.csv$$")
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(EDIT_V_QUERIES) \
 	 --fail-on-violation false \
-	 --output-dir build/reports/temp
-	@TMP_FILES=$$(find $(word 2,$|) -name "edit-verify-*.csv" -name "verify-*.csv") ; \
-	 if [ "$$TMP_FILES" ]; then \
-		awk 'BEGIN { OFS = FS = "," } ; { \
-			if (FNR == 1) { \
-				gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
-				if (NR != 1) { print "" } ; \
-				print "TEST: " FILENAME ; print $$0 \
-			} \
-			else { print $$0 } \
-		}' $$TMP_FILES > $@ && \
-		rm -f $$TMP_FILES ; \
-		exit 1 ; \
-	 else \
-		touch $@ ; \
-	 fi ;
+	 --output-dir $(word 2,$|)
+	$(call concat_files,TEST,$@,$(word 2,$|),grep -E "/(edit-)?verify-.*\.csv$$")
 
 # Verify of doid-edit.owl that should be run quarterly (not part of release)
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 
+.PRECIOUS: build/reports/quarterly_test.csv
 quarterly_test: build/reports/quarterly_test.csv
 build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 	@echo "Verifying $<..."
+	$(call clean_prior_results,$(word 2,$|),grep -E "/quarter-verify-.*\.csv$$")
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(QUARTER_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir $(word 2,$|)
-	@TMP_FILES=$$(find $(word 2,$|) -name "quarter-verify-*.csv") ; \
-	 if [ "$$TMP_FILES" ]; then \
-		awk 'BEGIN { OFS = FS = "," } ; { \
-			if (FNR == 1) { \
-				gsub(/^.*quarter-verify-|\.csv/, "", FILENAME) ; \
-				if (NR != 1) { print "" } ; \
-				print "TEST: " FILENAME ; print $$0 \
-			} \
-			else { print $$0 } \
-		}' $$TMP_FILES > $@ && \
-		rm -f $$TMP_FILES ; \
-		exit 1 ; \
-	 else \
-		touch $@ ; \
-		echo "--> No errors found" ; \
-	 fi ;
+	$(call concat_files,TEST,$@,$(word 2,$|),grep -E "/quarter-verify-.*\.csv$$")
 
 
 ##########################################

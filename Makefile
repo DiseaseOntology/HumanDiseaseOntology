@@ -531,6 +531,24 @@ define build_obo
 	 mv $(1).tmp.obo $(1)
 endef
 
+# ----------------------------------------
+# AUTOMATED IMPORTS -- MERGE ONLY
+# ----------------------------------------
+
+build/update/omim-susc-invert.owl: src/ontology/imports/omim_susc_import.owl \
+ src/sparql/update/omim-susc-invert.rq | check_robot build/update
+	@echo "Inverting OMIM susceptibility relations..."
+	@$(ROBOT) query \
+	 --input $< \
+	 --query $(word 2,$^) $@
+
+EDIT_EXT := build/update/doid-edit-extended.owl
+$(EDIT_EXT): $(EDIT) build/update/omim-susc-invert.owl | check_robot
+	@$(ROBOT) merge \
+	 --input $< \
+	 --input $(word 2,$^) \
+	 --collapse-import-closure false \
+	 --output $@
 
 # ----------------------------------------
 # DOID
@@ -539,7 +557,7 @@ endef
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot test
+$(DO).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot test
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \
@@ -563,13 +581,13 @@ $(DO).json: $(DO).owl | check_robot
 	@echo "Created $@"
 
 # ----------------------------------------
-# DOID-BASE
+# DOID-BASE (pre-reasoned, includes logical axioms, excludes imports)
 # ----------------------------------------
 
 .PHONY: base
 base: $(DB).owl $(DB).obo $(DB).json
 
-$(DB).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot
+$(DB).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -618,13 +636,13 @@ $(DM).json: $(DM).owl | check_robot
 	@echo "Created $@"
 
 # ----------------------------------------
-# HUMANDO
+# HUMANDO (pre-reasoned, excludes logical axioms and imports)
 # ----------------------------------------
 
 .PHONY: human
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(EDIT) src/sparql/build/add_en_tag.ru | check_robot
+$(DNC).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -708,12 +726,12 @@ release_reports: $(REL_REPORTS) DOreports/DO-subClassOf-anonymous.tsv \
 DOreports:
 	mkdir $@
 
-DOreports/%.tsv: $(EDIT) src/sparql/DOreports/%.rq | DOreports check_robot
+DOreports/%.tsv: $(EDIT_EXT) src/sparql/DOreports/%.rq | DOreports check_robot
 	@$(ROBOT) query --input $< --query $(word 2,$^) $@
 	@sed '1 s/?//g' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
-DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports check_robot
+DOreports/DO-subClassOf-anonymous.tsv: $(EDIT_EXT) | DOreports check_robot
 	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|LABEL|SubClass Of [ANON]" \
@@ -721,7 +739,7 @@ DOreports/DO-subClassOf-anonymous.tsv: $(EDIT) | DOreports check_robot
 	@awk -F"\t" '$$3!=""' $@ > $@.tmp && mv $@.tmp $@
 	@echo "Created $@"
 
-DOreports/DO-equivalentClass.tsv: $(EDIT) | DOreports check_robot
+DOreports/DO-equivalentClass.tsv: $(EDIT_EXT) | DOreports check_robot
 	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|LABEL|Equivalent Class" \

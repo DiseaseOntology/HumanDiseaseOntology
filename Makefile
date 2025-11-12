@@ -126,33 +126,46 @@ $(FASTOBO): | build
 # FILE UTILITIES
 # ----------------------------------------
 
-# clean old result files from directory (prevents old file inclusion in concat_files)
-# args = input-directory, command-to-match-test-files
-define clean_prior_results
-	@TMP_FILES=$$(find $(1) | $(2)) ; \
+# cleans csv files from a directory, optionally matching pattern(s)
+#  --> to prevent existing file inclusion in concat_csv
+# args = input-directory, pattern(s)-to-match-files (should end with .csv)
+define clean_existing_csv
+	@PATTERN=($(2)) ; \
+	if [ "$$PATTERN" ]; then \
+		TMP_FILES=$$(find $(1) -name "$(firstword $(2))" $(patsubst %,-o -name "%",$(wordlist 2,$(words $(2)),$(2)))) ; \
+	else \
+		TMP_FILES=$$(find $(1) -name "*.csv") ; \
+	fi ; \
 	if [ "$$TMP_FILES" ]; then \
-		rm $$TMP_FILES ; \
-	fi ;
+		rm -f $$TMP_FILES ; \
+	fi
 endef
 
-# concatenate test results from multiple files into one
-# args = type ('TEST' will error if output), output-file, input-directory, command-to-match-test-files
-define concat_files
-	@TMP_FILES=$$(find $(3) | $(4)) ; \
+# concatenate multiple CSV files into one
+# args = file category ('TEST' to error, if output), output-file, input-directory, pattern(s)-to-match-files (should end with .csv)
+define concat_csv
+	@PATTERN=($(4)) ; \
+	if [ "$$PATTERN" ]; then \
+		TMP_FILES=$$(find $(3) -name "$(firstword $(4))" $(patsubst %,-o -name "%",$(wordlist 2,$(words $(4)),$(4)))) ; \
+	else \
+		TMP_FILES=$$(find $(3) -name "*.csv") ; \
+	fi ; \
 	if [ "$$TMP_FILES" ]; then \
 		awk 'BEGIN { OFS = FS = "," } ; { \
 			if (FNR == 1) { \
-				gsub(/^.*verify-|\.csv/, "", FILENAME) ; \
+				gsub(/^.*\/|\.csv/, "", FILENAME) ; \
 				if (NR != 1) { print "" } ; \
 				print "$(1): " FILENAME ; print $$0 \
 			} \
 			else { print $$0 } \
 		}' $$TMP_FILES > $(2) \
         && rm -f $$TMP_FILES ; \
-		if [ "$(1)" = "TEST" ] ; then exit 1 ; fi ; \
-	else \
-		touch $(2) ; \
-	fi ;
+		if [ "$(1)" = "TEST" ] ; then \
+			exit 1 ; \
+		fi ; \
+	elif [ "$(1)" = "TEST" ]; then \
+		echo "" > $(2) ; \
+	fi
 endef
 
 
@@ -204,13 +217,13 @@ EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verif
 .PRECIOUS: build/reports/edit-verify.csv
 verify-edit: build/reports/edit-verify.csv
 build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
-	$(call clean_prior_results,$(word 2,$|),grep -E "/(edit-)?verify-.*\.csv$$")
+	$(call clean_existing_csv,$(word 2,$|),edit-verify-*.csv verify-*.csv)
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(EDIT_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir $(word 2,$|)
-	$(call concat_files,TEST,$@,$(word 2,$|),grep -E "/(edit-)?verify-.*\.csv$$")
+	$(call concat_csv,TEST,$@,$(word 2,$|),edit-verify-*.csv verify-*.csv)
 
 # Verify of doid-edit.owl that should be run quarterly (not part of release)
 QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
@@ -219,13 +232,13 @@ QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 quarterly_test: build/reports/quarterly_test.csv
 build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 	@echo "Verifying $<..."
-	$(call clean_prior_results,$(word 2,$|),grep -E "/quarter-verify-.*\.csv$$")
+	$(call clean_existing_csv,$(word 2,$|),quarter-verify-*.csv)
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(QUARTER_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir $(word 2,$|)
-	$(call concat_files,TEST,$@,$(word 2,$|),grep -E "/quarter-verify-.*\.csv$$")
+	$(call concat_csv,TEST,$@,$(word 2,$|),quarter-verify-*.csv)
 
 
 ##########################################

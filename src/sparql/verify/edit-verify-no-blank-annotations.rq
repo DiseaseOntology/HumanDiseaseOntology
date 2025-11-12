@@ -1,9 +1,29 @@
-# Ensure that there are no annotations with a value of empty string
+# Ensure that there are no annotations with a missing value
 
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?s WHERE {
-	?s ?ap ?xref .
-	?ap a owl:AnnotationProperty .
-	FILTER (str(?xref) = "")
+SELECT DISTINCT ?entity ?predicate ?value
+WHERE {
+	{
+		?entity ?predicate ?value .
+		?predicate a owl:AnnotationProperty .
+		FILTER(REGEX(str(?value), "^\\s*$"))
+		FILTER(!isBlank(?entity))
+	}
+	UNION
+	{
+		?iri ?p ?o .
+		?axiom a owl:Axiom ;
+			owl:annotatedSource ?iri ;
+			owl:annotatedProperty ?p ;
+			owl:annotatedTarget ?o ;
+			?predicate ?value .
+		?predicate a owl:AnnotationProperty .
+		FILTER(REGEX(str(?value), "^\\s*$"))
+		BIND(
+			concat(
+				"ANNOTATED:[", str(?iri), " ", str(?p), " ", str(?o), "]"
+			) AS ?entity
+		)
+	}
 }

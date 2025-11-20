@@ -173,10 +173,14 @@ endef
 ## PRE-BUILD TESTS
 ##########################################
 
-.PHONY: test report reason verify-edit quarterly_test
+.PHONY: ci_test test report reason verify-edit quarterly_test
 
-# `make test` is used for Github integration
-test: reason report verify-edit
+# Github continuous integration
+ci_test: reason report verify-edit
+	@echo ""
+
+# Local/release testing
+test: ci_test diff
 	@echo ""
 
 # Report for general issues on doid-edit

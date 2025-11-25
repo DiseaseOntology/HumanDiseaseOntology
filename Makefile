@@ -272,7 +272,7 @@ build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
 	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
 
 build/reports/doid-diff.tsv: build/doid-merged-last.owl \
-	build/update/doid-edit-reasoned.owl | check_robot test
+	build/update/doid-edit-reasoned.owl | check_robot
 	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \

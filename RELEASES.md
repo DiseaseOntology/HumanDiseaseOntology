@@ -13,6 +13,28 @@
 
 ## 2025 Releases
 
+### [v2025-11-25](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-11-25)
+
+This release of the Human Disease Ontology includes 11,997 disease classes, 9,713 with textual definitions (81.0%). Translation files now include 11,824 labels (98.6%), 11,483 synonyms (59.1%), and 6,409 definitions (66.0%) in Spanish.
+
+Newly added diseases include arterionephrosclerosis, chronic pancreatitis, left ventricular failure, Majeed syndrome, muscle dysmorphic disorder, stroke, hemorrhagic stroke, ischemic stroke, oropharyngeal squamous cell carcinoma, paranasal sinus squamous cell carcinoma, poorly differentiated thyroid carcinoma, soft tissue sarcoma, and subcutaneous panniculitis-like T-cell lymphoma.
+
+Disease that have been revised include 'autoimmune interstitial lung, joint, and kidney disease', autosomal dominant Alport syndrome 3A, autosomal dominant hyper-IgE syndromes, bronchiectasis, cerebral infarction, coronary artery disease, C9orf72 frontotemporal dementia and/or amyotrophic lateral sclerosis, complex cortical dysplasia with other brain malformations 14B, COVID-19, Duane retraction syndrome, early-onset epilepsies, Ehlers-Danlos syndrome periodontal types, hereditary fallopian tube carcinoma, hereditary ovarian carcinoma, hyper IgE recurrent infection syndrome 2, immunodeficiency with hyper-IgM type 4, Li-Fraumeni syndrome 2, Lodder-Merla syndrome type 1 with impaired intellectual development and cardiac arrhythmia, mitochondrial DNA depletion syndromes, pontocerebellar hypoplasia type 2A, metal allergy, chloramine T respiratory allergy, disodium cromoglycate allergy, potassium dichromate allergic contact dermatitis, remazole black respiratory allergy, pulmonary eosinophilia, eosinophilic pneumonia, hypereosinophilic syndrome, bone sarcoma, squamous cell carcinoma, head and neck squamous cell carcinoma, nasal cavity squamous cell carcinoma, oropharynx cancer, paranasal sinus cancer, cerebrovascular disease, and ureteral orifice cancer.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-10-31...v2025-11-25
+
+## Obsoleted Diseases
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:0110836 | Usher syndrome type 1J | DOID:0110505 | | merged by OMIM
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2025-11-25/src/ontology/doid-merged.obo) | |
+
 ### [v2025-10-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2025-10-31)
 
 This release of the Human Disease Ontology includes 11,985 disease classes, 9,698 with textual definitions (80.9%). Translation files now include 11,582 labels (96.6%), 11,490 synonyms (59.2%), and 6,409 definitions (66.1%) in Spanish.

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-10-31/subsets/DO_cancer_slim.obo
-date: 31:10:2025 17:48
+data-version: doid/releases/2025-11-25/subsets/DO_cancer_slim.obo
+date: 25:11:2025 15:47
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -3843,6 +3843,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "epidermoid carcinoma" EXACT []
 synonym: "malignant squamous cell tumor" EXACT []
+synonym: "SCC" EXACT OMO:0003012 []
 synonym: "squamous carcinoma" EXACT []
 synonym: "squamous cell cancer" EXACT []
 synonym: "squamous cell Epithelioma" EXACT []
@@ -8719,6 +8720,9 @@ xref: MESH:D000077195
 xref: NCI:C8192
 xref: UMLS_CUI:C0280333
 is_a: DOID:162 ! cancer
+property_value: broadMatch "NCI:C68611" xsd:string
+property_value: broadMatch "ORDO:500464" xsd:string
+property_value: broadMatch "UMLS_CUI:C0280332" xsd:string
 
 [Term]
 id: DOID:5517
@@ -8772,6 +8776,7 @@ xref: NCI:C34447
 xref: SNOMEDCT_US_2023_03_01:716659002
 xref: UMLS_CUI:C1168401
 is_a: DOID:1542 ! head and neck carcinoma
+property_value: exactMatch "MIM:275355" xsd:string
 
 [Term]
 id: DOID:5526
@@ -10847,28 +10852,22 @@ alt_id: DOID:9168
 def: "A pharynx cancer that is located_in the oropharynx." [url:http\://www.cancer.gov/dictionary?CdrID=446523]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "malignant Oropharyngeal tumor" EXACT []
+synonym: "malignant oropharyngeal tumor" EXACT []
 synonym: "malignant tumor of oropharynx" EXACT []
 synonym: "malignant tumour of mesopharynx" EXACT []
 synonym: "oropharyngeal cancer" EXACT []
 synonym: "Oropharyngeal carcinoma" EXACT []
 xref: ICD10CM:C10
-xref: ICD10CM:C10.2
-xref: ICD10CM:C10.3
-xref: ICD10CM:C10.8
 xref: ICD9CM:146
-xref: ICD9CM:146.5
-xref: ICD9CM:146.6
-xref: ICD9CM:146.7
 xref: NCI:C7398
-xref: SNOMEDCT_US_2023_03_01:187686007
-xref: SNOMEDCT_US_2023_03_01:93933005
-xref: SNOMEDCT_US_2023_03_01:93971002
+xref: SNOMEDCT_US_2025_09_01:363392002
 xref: UMLS_CUI:C0153382
-xref: UMLS_CUI:C0153388
-xref: UMLS_CUI:C0153389
-xref: UMLS_CUI:C0153390
 is_a: DOID:3119 ! gastrointestinal system cancer
+property_value: exactMatch "ICD10CM:C10" xsd:string
+property_value: exactMatch "ICD9CM:146" xsd:string
+property_value: exactMatch "NCI:C7398" xsd:string
+property_value: exactMatch "UMLS_CUI:C0153382" xsd:string
+property_value: relatedMatch "MESH:D009959" xsd:string
 
 [Term]
 id: DOID:8567

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-10-31/subsets/NCIthesaurus.obo
-date: 31:10:2025 17:48
+data-version: doid/releases/2025-11-25/subsets/NCIthesaurus.obo
+date: 25:11:2025 15:47
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -1258,7 +1258,6 @@ id: DOID:0050619
 name: paranasal sinus cancer
 namespace: disease_ontology
 alt_id: DOID:1354
-alt_id: DOID:2442
 alt_id: DOID:2765
 alt_id: DOID:2767
 alt_id: DOID:4689
@@ -1266,26 +1265,26 @@ def: "A respiratory system cancer that is located_in the paranasal sinuses." [ur
 subset: NCIthesaurus
 synonym: "adenoid cystic carcinoma of Accessory sinus" EXACT []
 synonym: "adenoid cystic carcinoma of paranasal sinus" RELATED []
-synonym: "Epidermoid carcinoma of the paranasal sinus" EXACT []
+synonym: "carcinoma of accessory sinus" EXACT []
+synonym: "carcinoma of paranasal sinus" EXACT []
 synonym: "Mucoepidermoid carcinoma of Accessory sinus" EXACT []
 synonym: "paranasal sinus adenocarcinoma" EXACT []
 synonym: "paranasal sinus adenoid cystic carcinoma" EXACT []
 synonym: "paranasal sinus mucoepidermoid carcinoma" EXACT []
-synonym: "paranasal sinus squamous cell carcinoma" EXACT []
-synonym: "squamous cell carcinoma of paranasal sinus" RELATED []
 xref: MESH:D010255
 xref: NCI:C6014
 xref: NCI:C6017
 xref: NCI:C6018
 xref: NCI:C6019
-xref: NCI:C8193
 xref: SNOMEDCT_US_2023_03_01:1255092002
-xref: UMLS_CUI:C0280334
 xref: UMLS_CUI:C0854995
 xref: UMLS_CUI:C1335336
 xref: UMLS_CUI:C1335337
 xref: UMLS_CUI:C1335340
 is_a: DOID:162 ! cancer
+property_value: exactMatch "MESH:D010255" xsd:string
+property_value: exactMatch "NCI:C6014" xsd:string
+property_value: exactMatch "UMLS_CUI:C0854995" xsd:string
 
 [Term]
 id: DOID:0050625
@@ -3776,7 +3775,6 @@ synonym: "hyper-IgM syndrome type 4" EXACT []
 xref: GARD:10580
 xref: MESH:C564277
 xref: MIM:608184
-xref: NCI:C564277
 xref: ORDO:101091
 xref: UMLS_CUI:C1842413
 is_a: DOID:0080544 ! hyper IgM syndrome
@@ -3784,7 +3782,6 @@ property_value: broadMatch "ORDO:183666" xsd:string
 property_value: exactMatch "GARD:10580" xsd:string
 property_value: exactMatch "MESH:C564277" xsd:string
 property_value: exactMatch "MIM:608184" xsd:string
-property_value: exactMatch "NCI:C564277" xsd:string
 property_value: exactMatch "ORDO:101091" xsd:string
 property_value: exactMatch "UMLS_CUI:C1842413" xsd:string
 
@@ -4886,7 +4883,7 @@ synonym: "mitochondrial neurogastrointestinal encephalopathy syndrome, TYMP-rela
 xref: GARD:9920
 xref: MESH:C536350
 xref: MIM:603041
-xref: NCI:C11967
+xref: NCI:C119678
 xref: ORDO:298
 is_a: DOID:655 ! inherited metabolic disorder
 
@@ -5141,7 +5138,6 @@ namespace: disease_ontology
 def: "A mitochondrial DNA depletion syndrome that is characterized by childhood onset of slowly progressive hypertrophic cardiomyopathy and generalized skeletal myopathy resulting in exercise intolerance, muscle weakness, and atrophy, and has_material_basis_in autosomal recessive inheritance of homozygous or compound heterozygous mutation in the the solute carrier family 25 member 4 on chromosome 4q35." [url:https\://ghr.nlm.nih.gov/gene/SLC25A4#conditions, url:https\://www.ncbi.nlm.nih.gov/pubmed/22187496, url:https\://www.ncbi.nlm.nih.gov/pubmed/27693233]
 subset: DO_rare_slim
 subset: NCIthesaurus
-xref: GARD:1142
 xref: MIM:615418
 xref: NCI:C129977
 xref: ORDO:1369
@@ -5295,8 +5291,6 @@ synonym: "2019 Novel Coronavirus (2019-nCoV)" EXACT []
 synonym: "2019-nCoV infection" EXACT []
 synonym: "COVID19" EXACT OMO:0003012 []
 synonym: "SARS-CoV-2 infection" EXACT []
-synonym: "Wuhan coronavirus infection" EXACT []
-synonym: "Wuhan seafood market pneumonia virus infection" EXACT []
 xref: ICD10CM:U07.1
 xref: MESH:D000086382
 xref: NCI:C171133
@@ -16084,21 +16078,6 @@ xref: UMLS_CUI:C0349666
 is_a: DOID:11054 ! urinary bladder cancer
 
 [Term]
-id: DOID:11818
-name: ureteric orifice cancer
-namespace: disease_ontology
-subset: NCIthesaurus
-synonym: "malignant neoplasm of ureteric orifice of urinary bladder" EXACT []
-synonym: "malignant tumor of ureteric orifice" EXACT []
-synonym: "Orifice of the Ureter" EXACT []
-xref: ICD10CM:C67.6
-xref: ICD9CM:188.6
-xref: NCI:C12337
-xref: SNOMEDCT_US_2023_03_01:188245008
-xref: UMLS_CUI:C0153614
-is_a: DOID:11054 ! urinary bladder cancer
-
-[Term]
 id: DOID:11819
 name: ureter cancer
 namespace: disease_ontology
@@ -18207,7 +18186,7 @@ is_a: DOID:1074 ! kidney failure
 id: DOID:12557
 name: Duane retraction syndrome
 namespace: disease_ontology
-def: "Duane retraction syndrome is a strabismus characterized by a failure of cranial nerve VI (the abducens nerve) to develop normally, resulting in restriction or absence of abduction, adduction, or both, and narrowing of the palpebral fissure and retraction of the globe on attempted adduction." [url:https\://www.genome.gov/Genetic-Disorders/Duane-Syndrome]
+def: "A strabismus characterized by a failure of cranial nerve VI (the abducens nerve) to develop normally, resulting in restriction or absence of abduction, adduction, or both, and narrowing of the palpebral fissure and retraction of the globe on attempted adduction." [url:https\://www.genome.gov/Genetic-Disorders/Duane-Syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -26271,6 +26250,7 @@ subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "epidermoid carcinoma" EXACT []
 synonym: "malignant squamous cell tumor" EXACT []
+synonym: "SCC" EXACT OMO:0003012 []
 synonym: "squamous carcinoma" EXACT []
 synonym: "squamous cell cancer" EXACT []
 synonym: "squamous cell Epithelioma" EXACT []
@@ -35452,12 +35432,13 @@ is_a: DOID:3247 ! rhabdomyosarcoma
 
 [Term]
 id: DOID:3261
-name: hyper IgE recurrent infection syndrome 1
+name: autosomal dominant hyper-IgE syndrome 1 with recurrent infections
 namespace: disease_ontology
 def: "A hyper IgE syndrome that has_material_basis_in heterozygous mutation in the STAT3 gene on chromosome 17q21." [url:https\://www.ncbi.nlm.nih.gov/books/NBK25507/, url:https\://www.niaid.nih.gov/diseases-conditions/stat3-dominant-negative-disease]
-comment: nomenclature update Oct 2024 [LS].
+comment: nomenclature update Oct 2024 [LS]. nomenclature update Nov 2025 [claudiasbj].
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "hyper IgE recurrent infection syndrome 1" EXACT []
 synonym: "hyperimmunoglobulin E syndrome" EXACT []
 synonym: "Job syndrome" EXACT []
 synonym: "Job's syndrome" EXACT []
@@ -36626,6 +36607,7 @@ synonym: "CHD" EXACT OMO:0003012 []
 synonym: "coronary arteriosclerosis" EXACT []
 synonym: "Coronary disease" EXACT []
 synonym: "coronary heart disease" EXACT []
+synonym: "Ischemic Heart Disease" EXACT []
 xref: EFO:0001645
 xref: ICD10CM:I20-I25
 xref: ICD10CM:I25
@@ -37381,9 +37363,6 @@ namespace: disease_ontology
 def: "A cerebrovascular disease that is characterized by an area of necrotic tissue in the brain resulting from a blockage or narrowing in the arteries supplying blood and oxygen to the brain." [url:https\://en.wikipedia.org/wiki/Cerebral_infarction]
 subset: NCIthesaurus
 synonym: "Cerebral infarct" EXACT []
-synonym: "CVA - Cerebral infarction" EXACT []
-synonym: "ischemic stroke" EXACT []
-synonym: "stroke" EXACT []
 xref: ICD10CM:I63
 xref: MESH:D002544
 xref: MIM:601367
@@ -50052,6 +50031,9 @@ xref: MESH:D000077195
 xref: NCI:C8192
 xref: UMLS_CUI:C0280333
 is_a: DOID:10811 ! nasal cavity cancer
+property_value: broadMatch "NCI:C68611" xsd:string
+property_value: broadMatch "ORDO:500464" xsd:string
+property_value: broadMatch "UMLS_CUI:C0280332" xsd:string
 
 [Term]
 id: DOID:5516
@@ -50146,6 +50128,7 @@ xref: NCI:C34447
 xref: SNOMEDCT_US_2023_03_01:716659002
 xref: UMLS_CUI:C1168401
 is_a: DOID:1542 ! head and neck carcinoma
+property_value: exactMatch "MIM:275355" xsd:string
 
 [Term]
 id: DOID:5521
@@ -56572,8 +56555,6 @@ def: "An vascular disease that is characterized by dysfunction of the blood vess
 comment: OMIM mapping confirmed by DO. [SN].
 subset: NCIthesaurus
 synonym: "cerebrovascular disorder" EXACT []
-synonym: "CVA" EXACT OMO:0003012 []
-synonym: "stroke" EXACT []
 xref: EFO:0000712
 xref: ICD10CM:I67.9
 xref: ICD9CM:437.9
@@ -57390,9 +57371,12 @@ is_a: DOID:2151 ! malignant ovarian surface epithelial-stromal neoplasm
 
 [Term]
 id: DOID:6901
-name: familiar ovarian carcinoma
+name: hereditary ovarian carcinoma
 namespace: disease_ontology
+def: "An ovary epithelial cancer that has developed in relatives of patients that have a history of ovarian carcinoma." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC4449870/]
+comment: removed previous disease name - familiar ovarian carcinoma, it is a typo[LS]
 subset: NCIthesaurus
+synonym: "familial ovarian carcinoma" EXACT []
 xref: NCI:C36102
 xref: UMLS_CUI:C1333992
 is_a: DOID:2152 ! ovary epithelial cancer
@@ -58999,9 +58983,12 @@ is_a: DOID:6025 ! selective immunoglobulin deficiency disease
 
 [Term]
 id: DOID:7266
-name: familiar fallopian tube carcinoma
+name: hereditary fallopian tube carcinoma
 namespace: disease_ontology
+def: "A fallopian tube carcinoma that has developed in relatives of patients that have a history of fallopian tube carcinoma." [url:https\://ascopubs.org/doi/10.1200/JOP.18.00662]
+comment: removed previous name -familiar fallopian tube carcinoma - was a typo[LS]
 subset: NCIthesaurus
+synonym: "familial fallopian tube carcinoma" EXACT []
 xref: NCI:C40455
 xref: UMLS_CUI:C1512418
 is_a: DOID:1963 ! fallopian tube carcinoma
@@ -64164,28 +64151,22 @@ alt_id: DOID:9168
 def: "A pharynx cancer that is located_in the oropharynx." [url:http\://www.cancer.gov/dictionary?CdrID=446523]
 subset: DO_cancer_slim
 subset: NCIthesaurus
-synonym: "malignant Oropharyngeal tumor" EXACT []
+synonym: "malignant oropharyngeal tumor" EXACT []
 synonym: "malignant tumor of oropharynx" EXACT []
 synonym: "malignant tumour of mesopharynx" EXACT []
 synonym: "oropharyngeal cancer" EXACT []
 synonym: "Oropharyngeal carcinoma" EXACT []
 xref: ICD10CM:C10
-xref: ICD10CM:C10.2
-xref: ICD10CM:C10.3
-xref: ICD10CM:C10.8
 xref: ICD9CM:146
-xref: ICD9CM:146.5
-xref: ICD9CM:146.6
-xref: ICD9CM:146.7
 xref: NCI:C7398
-xref: SNOMEDCT_US_2023_03_01:187686007
-xref: SNOMEDCT_US_2023_03_01:93933005
-xref: SNOMEDCT_US_2023_03_01:93971002
+xref: SNOMEDCT_US_2025_09_01:363392002
 xref: UMLS_CUI:C0153382
-xref: UMLS_CUI:C0153388
-xref: UMLS_CUI:C0153389
-xref: UMLS_CUI:C0153390
 is_a: DOID:0060119 ! pharynx cancer
+property_value: exactMatch "ICD10CM:C10" xsd:string
+property_value: exactMatch "ICD9CM:146" xsd:string
+property_value: exactMatch "NCI:C7398" xsd:string
+property_value: exactMatch "UMLS_CUI:C0153382" xsd:string
+property_value: relatedMatch "MESH:D009959" xsd:string
 
 [Term]
 id: DOID:856
@@ -68431,9 +68412,6 @@ synonym: "Polynesian bronchiectasis" EXACT []
 xref: ICD10CM:J47
 xref: ICD9CM:494
 xref: MESH:D001987
-xref: MIM:211400
-xref: MIM:613021
-xref: MIM:613071
 xref: MIM:PS211400
 xref: NCI:C84475
 xref: ORDO:60033

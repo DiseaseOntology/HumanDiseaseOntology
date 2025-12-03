@@ -1,4 +1,5 @@
-# identifies invalid predicates used for ECO codes
+# identifies invalid predicates used for ECO codes and where something has
+# been used instead of an expected ECO code
 
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -11,7 +12,10 @@ WHERE {
 		obo:IAO_0000115 ?definition .
 	?blank owl:annotatedTarget ?definition ;
 		?property ?value .
-	FILTER(CONTAINS(STR(?value), "ECO_"))
-	FILTER NOT EXISTS { ?blank dc:type ?value . }
-	FILTER NOT EXISTS { ?entity owl:deprecated "true"^^xsd:boolean }
+	FILTER(
+		(CONTAINS(STR(?value), "ECO_") && ?property != dc:type) ||
+		(!CONTAINS(STR(?value), "ECO_") && ?property = dc:type)
+	)
+
+	FILTER NOT EXISTS { ?entity owl:deprecated true }
 }

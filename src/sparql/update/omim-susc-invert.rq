@@ -16,4 +16,6 @@ WHERE {
     owl:onProperty RO:0003304 ;
     owl:someValuesFrom ?do_iri
   ] .
+
+  FILTER NOT EXISTS { ?do_iri owl:deprecated true }
 }

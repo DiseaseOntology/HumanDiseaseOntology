@@ -552,12 +552,15 @@ endef
 # AUTOMATED IMPORTS -- MERGE ONLY
 # ----------------------------------------
 
-build/update/omim-susc-invert.owl: src/ontology/imports/omim_susc_import.owl \
+build/update/omim-susc-invert.owl: $(EDIT) src/ontology/imports/omim_susc_import.owl \
  src/sparql/update/omim-susc-invert.rq | check_robot build/update
 	@echo "Inverting OMIM susceptibility relations..."
-	@$(ROBOT) query \
+	@$(ROBOT) merge \
 	 --input $< \
-	 --query $(word 2,$^) $@
+	 --input $(word 2,$^) \
+	 --collapse-import-closure false \
+	query \
+	 --query $(word 3,$^) $@
 
 EDIT_EXT := build/update/doid-edit-extended.owl
 $(EDIT_EXT): $(EDIT) build/update/omim-susc-invert.owl | check_robot

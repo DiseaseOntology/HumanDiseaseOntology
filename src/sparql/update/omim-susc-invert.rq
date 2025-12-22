@@ -1,0 +1,19 @@
+#
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+
+CONSTRUCT {
+  ?do_iri rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty RO:0004005 ;
+    owl:someValuesFrom ?omim_susc_iri
+  ] .
+}
+WHERE {
+  ?omim_susc_iri rdfs:subClassOf [ 
+    a owl:Restriction ;
+    owl:onProperty RO:0003304 ;
+    owl:someValuesFrom ?do_iri
+  ] .
+}

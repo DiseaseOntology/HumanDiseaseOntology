@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-11-25/subsets/DO_infectious_disease_slim.obo
-date: 25:11:2025 15:47
+data-version: doid/releases/2025-12-23/subsets/DO_infectious_disease_slim.obo
+date: 23:12:2025 09:56
 ontology: doid/subsets/DO_infectious_disease_slim
 
 [Term]
@@ -553,6 +553,7 @@ name: Venezuelan hemorrhagic fever
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, has_material_basis_in Guanarito virus (Mammarenavirus guanaritoense), which is transmitted_by cotton rat, Sigmodon alstoni or transmitted_by cane mouse, Zygodontomys brevicauda. The infection has_symptom fever, has_symptom headache, has_symptom myalgia, has_symptom sore throat, has_symptom weakness, has_symptom anorexia, has_symptom nausea, has_symptom vomiting, has_symptom convulsions, has_symptom epistaxis, has_symptom bleeding gums, has_symptom hematemesis, has_symptom melena, and has_symptom menorrhagia." [url:https\://pubmed.ncbi.nlm.nih.gov/34917387/, url:https\://pubmed.ncbi.nlm.nih.gov/7840443/]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: zoonotic_infectious_disease
 xref: ORDO:319234
 is_a: DOID:934 ! viral infectious disease
@@ -597,7 +598,7 @@ is_a: DOID:11266 ! Hantavirus hemorrhagic fever with renal syndrome
 id: DOID:0050201
 name: nephropathia epidemica
 namespace: disease_ontology
-def: "A hemorrhagic fever with renal syndrome that results_in infection located_in kidney, has_material_basis_in Orthohantavirus puumalaense, which is transmitted_by bank vole, Myodes glareolus [NCBITaxon:447135]. The infection has_symptom headache, has_symptom nausea, has_symptom back pain, has_symptom vomiting, has_symptom myalgia, has_symptom abdominal pain, has_symptom internal hemorrhage, and has_symptom renal failure." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1349231, url:https\://www.ncbi.nlm.nih.gov/pubmed/2574903, url:https\://www.ncbi.nlm.nih.gov/pubmed/2902106]
+def: "A hemorrhagic fever with renal syndrome that results_in infection located_in kidney, has_material_basis_in Orthohantavirus puumalaense, which is transmitted_by bank vole, Myodes glareolus. The infection has_symptom headache, has_symptom nausea, has_symptom back pain, has_symptom vomiting, has_symptom myalgia, has_symptom abdominal pain, has_symptom internal hemorrhage, and has_symptom renal failure." [url:https\://www.ncbi.nlm.nih.gov/pubmed/1349231, url:https\://www.ncbi.nlm.nih.gov/pubmed/2574903, url:https\://www.ncbi.nlm.nih.gov/pubmed/2902106]
 subset: DO_infectious_disease_slim
 subset: zoonotic_infectious_disease
 is_a: DOID:11266 ! Hantavirus hemorrhagic fever with renal syndrome
@@ -1077,6 +1078,7 @@ name: exanthema subitum
 namespace: disease_ontology
 def: "A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human betaherpesvirus 6B (Roseolovirus humanbeta6b) or 7 (Roseolovirus humanbeta7) and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck." [url:http\://en.wikipedia.org/wiki/Exanthema_subitum, url:https\://www.ncbi.nlm.nih.gov/books/NBK448190/]
 subset: DO_infectious_disease_slim
+subset: NCIthesaurus
 synonym: "exanthem subitum" EXACT []
 synonym: "Roseola Infantum" EXACT []
 synonym: "Sixth Disease" EXACT []
@@ -1316,6 +1318,8 @@ name: Zika fever
 namespace: disease_ontology
 def: "A viral infectious disease that has_material_basis_in Zika virus (Orthoflavivirus zikaense), which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain." [url:https\://en.wikipedia.org/wiki/Zika_fever, url:https\://www.cdc.gov/zika/about/, url:https\://www.ecdc.europa.eu/en/zika-virus-disease, url:https\://www.ncbi.nlm.nih.gov/books/NBK430981/, url:https\://www.who.int/news-room/fact-sheets/detail/zika-virus]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "Zika virus disease" EXACT []
 xref: GARD:12894
 xref: ICD10CM:A92.8
@@ -1444,6 +1448,19 @@ xref: MESH:D008583
 is_a: DOID:9470 ! bacterial meningitis
 
 [Term]
+id: DOID:0080180
+name: Zika virus congenital syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized in neonates by microcephaly, craniofacial disproportion, spasticity, seizures, irritability and brainstem dysfunction including feeding difficulties, ocular abnormalities and findings on neuroimaging such as calcifications, cortical disorders and ventriculomegaly and has_material_basis_in the acquisition of Zika virus (Orthoflavivirus zikaense) infection in utero." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC5823548/, url:https\://www.cdc.gov/zika/czs/index.html, url:https\://www.who.int/news-room/fact-sheets/detail/zika-virus]
+subset: DO_infectious_disease_slim
+synonym: "congenital Zika syndrome" EXACT []
+synonym: "ZIKV congenital infection" EXACT []
+xref: SNOMEDCT_US_2025_05_01:762725007
+xref: UMLS_CUI:C4546023
+property_value: exactMatch "UMLS_CUI:C4546023" xsd:string
+property_value: relatedMatch "MESH:D000071243" xsd:string
+
+[Term]
 id: DOID:0080599
 name: Coronavirus infectious disease
 namespace: disease_ontology
@@ -1479,6 +1496,7 @@ name: Middle East respiratory syndrome
 namespace: disease_ontology
 def: "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli)." [url:https\://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23891402/, url:https\://pubmed.ncbi.nlm.nih.gov/29495250, url:https\://www.cdc.gov/mers/about/index.html, url:https\://www.who.int/health-topics/middle-east-respiratory-syndrome-coronavirus-mers]
 subset: DO_infectious_disease_slim
+subset: NCIthesaurus
 synonym: "MERS" EXACT OMO:0003012 []
 xref: NCI:C128424
 xref: UMLS_CUI:C3694279
@@ -1521,6 +1539,7 @@ name: human cytomegalovirus infection
 namespace: disease_ontology
 def: "A viral infectious disease that has_material_basis_in Human betaherpesvirus 5 (Cytomegalovirus humanbeta5)." [url:https\://pubmed.ncbi.nlm.nih.gov/25205255/, url:https\://www.ncbi.nlm.nih.gov/books/NBK459185/]
 subset: DO_infectious_disease_slim
+subset: NCIthesaurus
 xref: ICD10CM:B25
 xref: ICD9CM:078.5
 xref: MESH:D003586
@@ -2626,7 +2645,7 @@ is_a: DOID:0050338 ! primary bacterial infectious disease
 id: DOID:11076
 name: Brucella suis brucellosis
 namespace: disease_ontology
-def: "A brucellosis that involves an infection caused by Brucella suis [NCBITaxon:29461] in swine and humans. The disease has_symptom fever, has_symptom chills, has_symptom malaise, has_symptom diaphoresis, has_symptom arthralgia, has_symptom myalgia, has_symptom headache, has_symptom anorexia, and has_symptom fatigue." [url:http\://www.cdc.gov/mmwr/preview/mmwrhtml/mm5822a3.htm]
+def: "A brucellosis that involves an infection caused by Brucella suis in swine and humans. The disease has_symptom fever, has_symptom chills, has_symptom malaise, has_symptom diaphoresis, has_symptom arthralgia, has_symptom myalgia, has_symptom headache, has_symptom anorexia, and has_symptom fatigue." [url:http\://www.cdc.gov/mmwr/preview/mmwrhtml/mm5822a3.htm]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
@@ -3069,6 +3088,7 @@ name: Hantavirus hemorrhagic fever with renal syndrome
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure." [url:https\://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome, url:https\://www.cdc.gov/hantavirus/about/]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "hemorrhagic fever renal syndrome" EXACT []
@@ -4392,6 +4412,7 @@ name: Rift Valley fever
 namespace: disease_ontology
 def: "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites." [url:http\://www.who.int/mediacentre/factsheets/fs207/en/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/, url:https\://www.who.int/news-room/fact-sheets/detail/rift-valley-fever]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 xref: ICD10CM:A92.4
@@ -4563,6 +4584,19 @@ xref: NCI:C84642
 xref: SNOMEDCT_US_2023_03_01:266218008
 xref: UMLS_CUI:C0009186
 is_a: DOID:0050292 ! primary systemic mycosis
+
+[Term]
+id: DOID:13453
+name: gonococcal bursitis
+namespace: disease_ontology
+def: "A bursitis that is characterized by an inflammation of a bursa caused by the Neisseria gonorrhoeae bacteria, resulting from gonorrhea that has spread to other parts of the body." [url:https\://gesund.bund.de/en/icd-code-search/m73-00]
+subset: DO_infectious_disease_slim
+subset: gram-negative_bacterial_infectious_disease
+subset: sexually_transmitted_infectious_disease
+xref: ICD10CM:A54.49
+xref: ICD9CM:098.52
+xref: SNOMEDCT_US_2023_03_01:186928003
+xref: UMLS_CUI:C0153218
 
 [Term]
 id: DOID:13521
@@ -4894,7 +4928,7 @@ is_a: DOID:0050117 ! disease by infectious agent
 id: DOID:14019
 name: Brucella canis brucellosis
 namespace: disease_ontology
-def: "A brucellosis involving an infection caused by Brucella canis [NCBITaxon:36855] in dogs and humans. The disease has_symptom fever, has_symptom sweats, has_symptom weakness, has_symptom weight loss, has_symptom headache, has_symptom lymphadenopathy and has_symptom splenomegaly." [url:http\://www.cdc.gov/ncidod/dbmd/diseaseinfo/Brucellosis_g.htm, url:https\://www.ncbi.nlm.nih.gov/pubmed/1172954]
+def: "A brucellosis involving an infection caused by Brucella canis in dogs and humans. The disease has_symptom fever, has_symptom sweats, has_symptom weakness, has_symptom weight loss, has_symptom headache, has_symptom lymphadenopathy and has_symptom splenomegaly." [url:http\://www.cdc.gov/ncidod/dbmd/diseaseinfo/Brucellosis_g.htm, url:https\://www.ncbi.nlm.nih.gov/pubmed/1172954]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
@@ -5138,7 +5172,7 @@ is_a: DOID:1080 ! filariasis
 id: DOID:14456
 name: Brucella melitensis brucellosis
 namespace: disease_ontology
-def: "A brucellosis that involves an infection caused by Brucella melitensis [NCBITaxon:29459] in cattle, goats, sheep and humans. The disease has_symptom fever, has_symptom malaise, has_symptom anorexia, has_symptom limb pain and has_symptom back pain." [url:http\://www.bmj.com/cgi/reprint/1/5644/612.pdf]
+def: "A brucellosis that involves an infection caused by Brucella melitensis in cattle, goats, sheep and humans. The disease has_symptom fever, has_symptom malaise, has_symptom anorexia, has_symptom limb pain and has_symptom back pain." [url:http\://www.bmj.com/cgi/reprint/1/5644/612.pdf]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease
@@ -5152,7 +5186,7 @@ is_a: DOID:11077 ! brucellosis
 id: DOID:14457
 name: Brucella abortus brucellosis
 namespace: disease_ontology
-def: "A brucellosis that involves an infection caused by Brucella abortus [NCBITaxon:235] in cattle and humans. The disease has_symptom fever, has_symptom chills, has_symptom sweats, has_symptom weight loss, has_symptom malaise, has_symptom headaches, has_symptom myalgia, and has_symptom arthralgia." [url:http\://www.cdc.gov/ncidod/dbmd/diseaseinfo/Brucellosis_g.htm, url:http\://www.ncbi.nlm.nih.gov/sites/entrez/10790142]
+def: "A brucellosis that involves an infection caused by Brucella abortus in cattle and humans. The disease has_symptom fever, has_symptom chills, has_symptom sweats, has_symptom weight loss, has_symptom malaise, has_symptom headaches, has_symptom myalgia, and has_symptom arthralgia." [url:http\://www.cdc.gov/ncidod/dbmd/diseaseinfo/Brucellosis_g.htm, url:http\://www.ncbi.nlm.nih.gov/sites/entrez/10790142]
 subset: DO_infectious_disease_slim
 subset: gram-negative_bacterial_infectious_disease
 subset: zoonotic_infectious_disease

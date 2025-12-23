@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2025-11-25/subsets/NCIthesaurus.obo
-date: 25:11:2025 15:47
+data-version: doid/releases/2025-12-23/subsets/NCIthesaurus.obo
+date: 23:12:2025 09:56
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -570,6 +570,7 @@ name: X-linked hypophosphatemic rickets
 namespace: disease_ontology
 def: "A rickets that has_material_basis_in X-linked mutations in the PHEX gene that lead to increased circulating levels of FGF-23, a phosphate-regulating hormone (phosphatonin), that leads to reduced renal phosphate reabsorption and consequently abnormal bone mineralization." [url:http\://en.wikipedia.org/wiki/X-linked_hypophosphatemia, url:https\://www.ncbi.nlm.nih.gov/books/NBK83985/]
 comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Hypophosphatemia, Vitamin D-Resistant Rickets" EXACT []
 synonym: "hypophosphatemic rickets X-linked dominant" EXACT []
@@ -1117,6 +1118,29 @@ xref: UMLS_CUI:C0015230
 is_a: DOID:37 ! skin disease
 
 [Term]
+id: DOID:0050495
+name: exanthema subitum
+namespace: disease_ontology
+def: "A viral infectious disease that results_in infection in infants and children, located_in skin, has_material_basis_in Human betaherpesvirus 6B (Roseolovirus humanbeta6b) or 7 (Roseolovirus humanbeta7) and has_symptom sudden high fever, and has_symptom red rash that occurs first on the trunk then spreading to legs and neck." [url:http\://en.wikipedia.org/wiki/Exanthema_subitum, url:https\://www.ncbi.nlm.nih.gov/books/NBK448190/]
+subset: DO_infectious_disease_slim
+subset: NCIthesaurus
+synonym: "exanthem subitum" EXACT []
+synonym: "Roseola Infantum" EXACT []
+synonym: "Sixth Disease" EXACT []
+xref: ICD10CM:B08.2
+xref: ICD9CM:058.1
+xref: MESH:D005077
+xref: NCI:C128420
+xref: SNOMEDCT_US_2023_03_01:54385001
+xref: UMLS_CUI:C0015231
+is_a: DOID:934 ! viral infectious disease
+property_value: exactMatch "ICD10CM:B08.2" xsd:string
+property_value: exactMatch "ICD9CM:058.1" xsd:string
+property_value: exactMatch "MESH:D005077" xsd:string
+property_value: exactMatch "NCI:C128420" xsd:string
+property_value: exactMatch "UMLS_CUI:C0015231" xsd:string
+
+[Term]
 id: DOID:0050523
 name: adult T-cell leukemia/lymphoma
 namespace: disease_ontology
@@ -1136,6 +1160,34 @@ xref: NCI:C3184
 xref: SNOMEDCT_US_2023_03_01:77430005
 xref: UMLS_CUI:C0023493
 is_a: DOID:9952 ! acute lymphoblastic leukemia
+
+[Term]
+id: DOID:0050524
+name: maturity-onset diabetes of the young
+namespace: disease_ontology
+def: "A diabetes mellitus that has_material_basis_in autosomal dominant inheritance of mutations in the MODY genes impacting beta-cell function, typically occurring before 25 years of age and caused by primary insulin secretion defects." [url:http\://en.wikipedia.org/wiki/Maturity_onset_diabetes_of_the_young]
+comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Mason-type diabetes" EXACT []
+synonym: "MODY" EXACT OMO:0003012 []
+xref: GARD:3697
+xref: ICD10CM:E11.8
+xref: KEGG:04950
+xref: MESH:C562772
+xref: MIM:PS125850
+xref: NCI:C114769
+xref: ORDO:552
+xref: SNOMEDCT_US_2025_05_01:609561005
+xref: UMLS_CUI:C0342276
+is_a: DOID:9351 ! diabetes mellitus
+property_value: exactMatch "GARD:3697" xsd:string
+property_value: exactMatch "MESH:C562772" xsd:string
+property_value: exactMatch "MIM:PS125850" xsd:string
+property_value: exactMatch "NCI:C114769" xsd:string
+property_value: exactMatch "ORDO:552" xsd:string
+property_value: exactMatch "UMLS_CUI:C0342276" xsd:string
+property_value: relatedMatch "ICD10CM:E11.8" xsd:string
 
 [Term]
 id: DOID:0050530
@@ -1379,6 +1431,30 @@ property_value: narrowMatch "UMLS_CUI:C0391826" xsd:string
 property_value: narrowMatch "UMLS_CUI:C1866398" xsd:string
 property_value: narrowMatch "UMLS_CUI:C4706610" xsd:string
 property_value: relatedMatch "MESH:D016715" xsd:string
+
+[Term]
+id: DOID:0050663
+name: Bethlem myopathy
+namespace: disease_ontology
+def: "A congenital muscular dystrophy that is characterized by myopathy and joint contractures that progresses slowly." [url:https\://rarediseases.info.nih.gov/diseases/873/bethlem-myopathy]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "benign congenital muscular dystrophy" EXACT []
+xref: GARD:873
+xref: MESH:C535436
+xref: MIM:PS158810
+xref: NCI:C126688
+xref: ORDO:610
+xref: SNOMEDCT_US_2025_09_01:718572004
+xref: UMLS_CUI:C1834674
+is_a: DOID:9884 ! muscular dystrophy
+property_value: closeMatch "GARD:873" xsd:string
+property_value: closeMatch "MESH:C535436" xsd:string
+property_value: closeMatch "NCI:C126688" xsd:string
+property_value: exactMatch "MIM:PS158810" xsd:string
+property_value: narrowMatch "ORDO:610" xsd:string
+property_value: narrowMatch "UMLS_CUI:C1834674" xsd:string
 
 [Term]
 id: DOID:0050678
@@ -1941,6 +2017,17 @@ xref: NCI:C3771
 is_a: DOID:3459 ! breast carcinoma
 created_by: lschriml
 creation_date: 2014-10-22T13:05:34Z
+
+[Term]
+id: DOID:0051054
+name: coarctation of the aorta
+namespace: disease_ontology
+def: "A congenital heart disease that is characterized by the luminal narrowing of the thoracic aortic arch, typically located just beyond the left subclavian artery. This narrowing creates an obstruction that can lead to significant cardiovascular complications, including systemic hypertension, left ventricular hypertrophy, and eventually heart failure." [url:https\://medlineplus.gov/ency/article/000191.htm, url:https\://pubmed.ncbi.nlm.nih.gov/38416090/, url:https\://www.annalsthoracicsurgery.org/article/S0003-4975(24)00077-8/fulltext, url:https\://www.mayoclinic.org/diseases-conditions/coarctation-of-the-aorta/symptoms-causes/syc-20352529, url:https\://www.ncbi.nlm.nih.gov/books/NBK430913/, url:https\://www.nyp.org/pediatrics/heart/coarctation-of-aorta]
+subset: NCIthesaurus
+xref: MESH:D001017
+xref: MIM:120000
+xref: NCI:C84567
+is_a: DOID:1682 ! congenital heart disease
 
 [Term]
 id: DOID:0060013
@@ -2734,6 +2821,7 @@ name: congenital ptosis
 namespace: disease_ontology
 def: "A ptosis characterized by superior eyelid drop present at birth." [url:http\://en.wikipedia.org/wiki/Ptosis_%28eyelid%29, url:https\://eyewiki.aao.org/Ptosis\,_Congenital]
 comment: NT MGI.
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "hereditary congenital ptosis" NARROW []
 xref: ICD10CM:Q10.0
@@ -3485,6 +3573,33 @@ created_by: elvira
 creation_date: 2015-11-18T16:21:35Z
 
 [Term]
+id: DOID:0060478
+name: Zika fever
+namespace: disease_ontology
+def: "A viral infectious disease that has_material_basis_in Zika virus (Orthoflavivirus zikaense), which is transmitted_by Aedes aegypti mosquitoes and targets neural progenitor cells and neuronal cells in all stages of maturity and has_symptom fever, has_symptom rash, has_symptom headaches and has_symptom joint pain." [url:https\://en.wikipedia.org/wiki/Zika_fever, url:https\://www.cdc.gov/zika/about/, url:https\://www.ecdc.europa.eu/en/zika-virus-disease, url:https\://www.ncbi.nlm.nih.gov/books/NBK430981/, url:https\://www.who.int/news-room/fact-sheets/detail/zika-virus]
+subset: DO_infectious_disease_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Zika virus disease" EXACT []
+xref: GARD:12894
+xref: ICD10CM:A92.8
+xref: ICD9CM:066.3
+xref: MESH:D000071243
+xref: NCI:C128423
+xref: ORDO:448237
+xref: SNOMEDCT_US_2025_05_01:3928002
+xref: UMLS_CUI:C0276289
+is_a: DOID:934 ! viral infectious disease
+property_value: broadMatch "ICD10CM:A92.8" xsd:string
+property_value: broadMatch "ICD9CM:066.3" xsd:string
+property_value: exactMatch "GARD:12894" xsd:string
+property_value: exactMatch "ICD9CM:066.3" xsd:string
+property_value: exactMatch "MESH:D000071243" xsd:string
+property_value: exactMatch "NCI:C128423" xsd:string
+property_value: exactMatch "ORDO:448237" xsd:string
+property_value: exactMatch "UMLS_CUI:C0276289" xsd:string
+
+[Term]
 id: DOID:0060485
 name: Mowat-Wilson syndrome
 namespace: disease_ontology
@@ -4160,6 +4275,15 @@ is_a: DOID:707 ! B-cell lymphoma
 property_value: exactMatch "MESH:D008258" xsd:string
 
 [Term]
+id: DOID:0061139
+name: coronary atherosclerosis
+namespace: disease_ontology
+def: "An atherosclerosis of the coronary vasculature." [url:https\://www.ncbi.nlm.nih.gov/books/NBK218744/]
+subset: NCIthesaurus
+xref: NCI:C35505
+is_a: DOID:1936 ! atherosclerosis
+
+[Term]
 id: DOID:0070039
 name: NESCAV syndrome
 namespace: disease_ontology
@@ -4816,6 +4940,368 @@ property_value: exactMatch "ORDO:231108" xsd:string
 property_value: exactMatch "UMLS_CUI:C2985524" xsd:string
 
 [Term]
+id: DOID:0070622
+name: ring chromosome 20 syndrome
+namespace: disease_ontology
+def: "A ring chromosome syndrome characterized by recognizable epileptic phenotype with typical EEG pattern, intellectual disability manifesting after seizure onset in otherwise normally developing children, and behavioral changes that has_material_basis_in chromosome 20 fusion into a ring or ring-like structure." [url:https\://medlineplus.gov/genetics/condition/ring-chromosome-20-syndrome/, url:https\://pubmed.ncbi.nlm.nih.gov/33363513/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "r(20) syndrome" EXACT []
+synonym: "r20 syndrome" EXACT []
+synonym: "ring 20" RELATED []
+synonym: "ring 20 syndrome" EXACT []
+synonym: "ring chromosome 20" RELATED []
+synonym: "ring chromosome 20 epilepsy syndrome" EXACT []
+xref: GARD:1334
+xref: MESH:C580424
+xref: NCI:C169001
+xref: ORDO:1444
+xref: UMLS_CUI:C0265482
+is_a: DOID:630 ! genetic disease
+property_value: exactMatch "GARD:1334" xsd:string
+property_value: exactMatch "MESH:C580424" xsd:string
+property_value: exactMatch "NCI:C169001" xsd:string
+property_value: exactMatch "ORDO:1444" xsd:string
+property_value: exactMatch "UMLS_CUI:C0265482" xsd:string
+
+[Term]
+id: DOID:0070623
+name: B-lymphoblastic leukemia with MEF2D rearrangement
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with MEF2D gene rearrangement." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199233, url:https\://pubmed.ncbi.nlm.nih.gov/38990294/]
+subset: NCIthesaurus
+synonym: "B-lymphoblastic leukaemia with MEF2D rearrangement" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C199233
+xref: UMLS_CUI:C5855479
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C199233" xsd:string
+property_value: exactMatch "UMLS_CUI:C5855479" xsd:string
+
+[Term]
+id: DOID:0070624
+name: B-lymphoblastic leukemia with MYC rearrangement
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with MYC gene rearrangement." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199230, url:https\://pubmed.ncbi.nlm.nih.gov/37120350/]
+subset: NCIthesaurus
+synonym: "B Acute Lymphoblastic Leukemia with MEF2D Rearrangement" EXACT []
+synonym: "B-lymphoblastic leukaemia with MYC rearrangement" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C199230
+xref: UMLS_CUI:C5855476
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C199230" xsd:string
+property_value: exactMatch "UMLS_CUI:C5855476" xsd:string
+
+[Term]
+id: DOID:0070625
+name: B-lymphoblastic leukemia with NUTM1 rearrangement
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with NUTM1 gene rearrangement." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199239, url:https\://pubmed.ncbi.nlm.nih.gov/37120350/]
+subset: NCIthesaurus
+synonym: "B-lymphoblastic leukaemia with NUTM1 rearrangement" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C199239
+xref: UMLS_CUI:C5855485
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C199239" xsd:string
+property_value: exactMatch "UMLS_CUI:C5855485" xsd:string
+
+[Term]
+id: DOID:0070626
+name: B-lymphoblastic leukemia with PAX5alt
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with PAX5 gene alteration, including rearrangements, point mutations, and intragenic lesions." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199264, url:https\://pubmed.ncbi.nlm.nih.gov/37120350/]
+subset: NCIthesaurus
+synonym: "B-Acute Lymphoblastic Leukemia with PAX5 Alteration" EXACT []
+synonym: "B-lymphoblastic leukaemia with PAX5alt" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C199264
+xref: UMLS_CUI:C5855502
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C199264" xsd:string
+property_value: exactMatch "UMLS_CUI:C5855502" xsd:string
+
+[Term]
+id: DOID:0070627
+name: B-lymphoblastic leukemia with TCF3-HLF fusion
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with TCF3-HLF gene rearrangement." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200587, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC3549381/, url:https\://pubmed.ncbi.nlm.nih.gov/31305009/, url:https\://pubmed.ncbi.nlm.nih.gov/37120350/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "B Lymphoblastic Leukemia/Lymphoma with TCF3-HLF Fusion" EXACT []
+synonym: "B Lymphoblastic Leukemia/Lymphoma with TCF3-HLF Rearrangement" EXACT []
+synonym: "B-lymphoblastic leukaemia with TCF3::HLF fusion" EXACT []
+synonym: "B-lymphoblastic leukemia with TCF3::HLF fusion" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C200587
+xref: ORDO:641375
+xref: UMLS_CUI:C5816789
+xref: UMLS_CUI:C5856321
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C200587" xsd:string
+property_value: exactMatch "ORDO:641375" xsd:string
+property_value: exactMatch "UMLS_CUI:C5816789" xsd:string
+property_value: exactMatch "UMLS_CUI:C5856321" xsd:string
+
+[Term]
+id: DOID:0070628
+name: B-lymphoblastic leukemia with ZNF384 rearrangement
+namespace: disease_ontology
+def: "A B-lymphoblastic leukemia/lymphoma associated with ZNF384 gene rearrangement." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199234, url:https\://pubmed.ncbi.nlm.nih.gov/37120350/]
+subset: NCIthesaurus
+synonym: "B-lymphoblastic leukaemia with ZNF384 rearrangement" EXACT []
+xref: ICDO:9811/3
+xref: NCI:C199234
+xref: UMLS_CUI:C5855480
+is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
+property_value: broadMatch "ICDO:9811/3" xsd:string
+property_value: exactMatch "NCI:C199234" xsd:string
+property_value: exactMatch "UMLS_CUI:C5855480" xsd:string
+
+[Term]
+id: DOID:0070629
+name: acute myeloid leukemia with CBFA2T3-GLIS2 fusion
+namespace: disease_ontology
+def: "An acute myeloid leukemia associated with CBFA2T3-GLIS2 chimeric oncogene." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132109, url:https\://pubmed.ncbi.nlm.nih.gov/23045605/, url:https\://pubmed.ncbi.nlm.nih.gov/23153540/, url:https\://pubmed.ncbi.nlm.nih.gov/30592296/]
+subset: NCIthesaurus
+synonym: "Acute Megakaryoblastic Leukemia with CBFA2T3-GLIS2" EXACT []
+synonym: "Acute myeloid leukaemia with CBFA2T3::GLIS2 fusion" EXACT []
+synonym: "acute myeloid leukemia with CBFA2T3::GLIS2 fusion" EXACT []
+synonym: "acute myeloid leukemia with inv(16)(p13q24)" EXACT []
+xref: ICDO:9861/3
+xref: NCI:C132109
+xref: UMLS_CUI:C4329266
+is_a: DOID:9119 ! acute myeloid leukemia
+property_value: broadMatch "ICDO:9861/3" xsd:string
+property_value: exactMatch "NCI:C132109" xsd:string
+property_value: exactMatch "UMLS_CUI:C4329266" xsd:string
+
+[Term]
+id: DOID:0070630
+name: acute myeloid leukemia with KAT6A-CREBBP fusion
+namespace: disease_ontology
+def: "An acute myeloid leukemia associated with KAT6A-CREBBP gene fusion." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200421, url:https\://pubmed.ncbi.nlm.nih.gov/23974201/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Acute myeloid leukaemia with KAT6A::CREBBP fusion" EXACT []
+synonym: "acute myeloid leukemia with KAT6A::CREBBP fusion" EXACT []
+synonym: "Acute myeloid leukemia with t(8;16)(p11;p13) translocation" EXACT []
+xref: ICDO:9861/3
+xref: NCI:C200421
+xref: ORDO:370026
+xref: UMLS_CUI:C4511003
+is_a: DOID:9119 ! acute myeloid leukemia
+property_value: broadMatch "ICDO:9861/3" xsd:string
+property_value: exactMatch "NCI:C200421" xsd:string
+property_value: exactMatch "ORDO:370026" xsd:string
+property_value: exactMatch "UMLS_CUI:C4511003" xsd:string
+
+[Term]
+id: DOID:0070631
+name: acute myeloid leukemia with FUS-ERG fusion
+namespace: disease_ontology
+def: "An acute myeloid leukemia associated with FUS-ERG gene fusion." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200419, url:https\://pubmed.ncbi.nlm.nih.gov/24068373/, url:https\://pubmed.ncbi.nlm.nih.gov/30150206/]
+subset: NCIthesaurus
+synonym: "Acute myeloid leukaemia with FUS::ERG fusion" EXACT []
+synonym: "acute myeloid leukemia with FUS::ERG fusion" EXACT []
+synonym: "acute myeloid leukemia with t(16;21)(p11.2;q22)" EXACT []
+xref: ICDO:9861/3
+xref: NCI:C200419
+xref: UMLS_CUI:C5856227
+is_a: DOID:9119 ! acute myeloid leukemia
+property_value: broadMatch "ICDO:9861/3" xsd:string
+property_value: exactMatch "NCI:C200419" xsd:string
+property_value: exactMatch "UMLS_CUI:C5856227" xsd:string
+
+[Term]
+id: DOID:0070632
+name: acute myeloid leukemia with MNX1-ETV6 fusion
+namespace: disease_ontology
+def: "An acute myeloid leukemia associated with MXN1-ETV6 gene fusion." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C122690, url:https\://pubmed.ncbi.nlm.nih.gov/29227476/, url:https\://pubmed.ncbi.nlm.nih.gov/29569294/]
+subset: NCIthesaurus
+synonym: "Acute myeloid leukaemia with MNX1::ETV6 fusion" EXACT []
+synonym: "acute myeloid leukemia with MNX1::ETV6 fusion" EXACT []
+synonym: "acute myeloid leukemia with t(7;12)(q36;p13)" EXACT []
+synonym: "Acute Myeloid Leukemia with t(7;12)(q36;p13); HLXB9-ETV6" EXACT []
+xref: ICDO:9861/3
+xref: NCI:C122690
+xref: UMLS_CUI:C4055493
+is_a: DOID:9119 ! acute myeloid leukemia
+property_value: broadMatch "ICDO:9861/3" xsd:string
+property_value: exactMatch "NCI:C122690" xsd:string
+property_value: exactMatch "UMLS_CUI:C4055493" xsd:string
+
+[Term]
+id: DOID:0070633
+name: acute myeloid leukemia with NPM1-MLF1 fusion
+namespace: disease_ontology
+def: "An acute myeloid leukemia associated with NPM1-MLF1 gene fusion." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200420, url:https\://pubmed.ncbi.nlm.nih.gov/14506644/, url:https\://pubmed.ncbi.nlm.nih.gov/20471513/]
+subset: NCIthesaurus
+synonym: "Acute myeloid leukaemia with NPM1::MLF1 fusion" EXACT []
+synonym: "acute myeloid leukemia with NPM1::MLF1 fusion" EXACT []
+synonym: "acute myeloid leukemia with t(3;5)(q25;q35)" EXACT []
+xref: ICDO:9861/3
+xref: NCI:C200420
+xref: UMLS_CUI:C5856228
+is_a: DOID:9119 ! acute myeloid leukemia
+property_value: broadMatch "ICDO:9861/3" xsd:string
+property_value: exactMatch "NCI:C200420" xsd:string
+property_value: exactMatch "UMLS_CUI:C5856228" xsd:string
+
+[Term]
+id: DOID:0070657
+name: congenital variant of Rett syndrome
+namespace: disease_ontology
+def: "A pervasive developmental disorder characterized by microcephaly, developmental delay, severe cognitive disabilities, early-onset dyskinesia and hyperkinetic movements, stereotypies, epilepsy, and cerebral malformation that has_material_basis_in heterozygous mutation in the FOXG1 gene on chromosome 14q13, encoding forkhead box protein G1." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC5522617/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6747066/, url:https\://pubmed.ncbi.nlm.nih.gov/28661489/, url:https\://www.ncbi.nlm.nih.gov/books/NBK604176/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "atypical Rett syndrome" RELATED []
+synonym: "FOXG1 syndrome" EXACT []
+synonym: "FOXG1-related encephalopathy" BROAD []
+synonym: "Rett syndrome, congenital variant" EXACT []
+xref: GARD:12825
+xref: ICD10CM:Q04.8
+xref: MIM:613454
+xref: NCI:C176903
+xref: ORDO:561854
+xref: SNOMEDCT_US_2025_05_01:702450004
+xref: UMLS_CUI:C3150705
+is_a: DOID:150 ! disease of mental health
+property_value: broadMatch "ICD10CM:Q04.8" xsd:string
+property_value: exactMatch "GARD:12825" xsd:string
+property_value: exactMatch "MIM:613454" xsd:string
+property_value: exactMatch "NCI:C176903" xsd:string
+property_value: exactMatch "ORDO:561854" xsd:string
+property_value: exactMatch "UMLS_CUI:C3150705" xsd:string
+
+[Term]
+id: DOID:0070658
+name: alcohol-associated liver disease
+namespace: disease_ontology
+def: "A liver disease resulting from excessive alcohol intake." [url:https\://pubmed.ncbi.nlm.nih.gov/31314133/, url:https\://www.ncbi.nlm.nih.gov/books/NBK546632/, url:https\://www.nhs.uk/conditions/alcohol-related-liver-disease-arld/]
+subset: NCIthesaurus
+synonym: "alcohol-related liver disease" EXACT []
+synonym: "alcoholic liver disease" EXACT []
+synonym: "ALD" EXACT OMO:0003012 []
+xref: ICD10CM:K70
+xref: ICD9CM:571.3
+xref: MESH:D008108
+xref: NCI:C34783
+xref: SNOMEDCT_US_2025_05_01:41309000
+xref: UMLS_CUI:C0023896
+is_a: DOID:409 ! liver disease
+property_value: exactMatch "ICD10CM:K70" xsd:string
+property_value: exactMatch "MESH:D008108" xsd:string
+property_value: exactMatch "NCI:C34783" xsd:string
+property_value: exactMatch "UMLS_CUI:C0023896" xsd:string
+property_value: narrowMatch "ICD9CM:571.3" xsd:string
+
+[Term]
+id: DOID:0070662
+name: subcutaneous panniculitis-like T-cell lymphoma
+namespace: disease_ontology
+def: "A primary cutaneous T-cell non-Hodgkin lymphoma characterized by infiltration of subcutaneous tissue by neoplastic alpha-beta cytotoxic T cells mimicking panniculitis. Homozygous or compound heterozygous mutation in the HAVCR2 gene may contribute to development of this disease, with some evidence of incomplete penetrance." [url:https\://pubmed.ncbi.nlm.nih.gov/19195975/, url:https\://pubmed.ncbi.nlm.nih.gov/30374066/, url:https\://www.ncbi.nlm.nih.gov/books/NBK538517/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "SPTCL" EXACT OMO:0003012 []
+xref: ICD10CM:C86.3
+xref: ICDO:9708/3
+xref: MESH:C537503
+xref: MIM:618398
+xref: NCI:C6918
+xref: ORDO:86884
+xref: SNOMEDCT_US_2025_09_01:404133000
+xref: UMLS_CUI:C0522624
+is_a: DOID:0060061 ! primary cutaneous T-cell non-Hodgkin lymphoma
+property_value: exactMatch "ICD10CM:C86.3" xsd:string
+property_value: exactMatch "ICDO:9708/3" xsd:string
+property_value: exactMatch "MESH:C537503" xsd:string
+property_value: exactMatch "MIM:618398" xsd:string
+property_value: exactMatch "NCI:C6918" xsd:string
+property_value: exactMatch "ORDO:86884" xsd:string
+property_value: exactMatch "UMLS_CUI:C0522624" xsd:string
+
+[Term]
+id: DOID:0070663
+name: soft tissue sarcoma
+namespace: disease_ontology
+def: "A connective tissue cancer that has_material_basis_in abnormally proliferating cells derived from embryonic mesoderm and starts in the soft tissues of the body (e.g. fat, muscle, nerves, blood vessels)." [url:https\://en.wikipedia.org/wiki/Soft-tissue_sarcoma, url:https\://pubmed.ncbi.nlm.nih.gov/31236647/, url:https\://www.cancer.org/cancer/types/soft-tissue-sarcoma/about/soft-tissue-sarcoma.html]
+subset: NCIthesaurus
+xref: NCI:C9306
+xref: SNOMEDCT_US_2025_09_01:424952003
+xref: UMLS_CUI:C4551687
+is_a: DOID:162 ! cancer
+property_value: exactMatch "NCI:C9306" xsd:string
+property_value: exactMatch "UMLS_CUI:C4551687" xsd:string
+
+[Term]
+id: DOID:0070664
+name: oropharyngeal squamous cell carcinoma
+namespace: disease_ontology
+def: "An oropharynx cancer that derives_from squamous epithelial cells." [url:https\://pubmed.ncbi.nlm.nih.gov/26215712/, url:https\://www.ncbi.nlm.nih.gov/books/NBK563268/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "epidermoid carcinoma of the oropharynx" EXACT []
+synonym: "OPSCC" EXACT OMO:0003012 []
+xref: NCI:C8181
+xref: ORDO:500478
+xref: SNOMEDCT_US_2025_09_01:423464009
+xref: UMLS_CUI:C0280313
+is_a: DOID:8557 ! oropharynx cancer
+property_value: exactMatch "NCI:C8181" xsd:string
+property_value: exactMatch "ORDO:500478" xsd:string
+property_value: exactMatch "UMLS_CUI:C0280313" xsd:string
+
+[Term]
+id: DOID:0070665
+name: lipofibromatosis
+namespace: disease_ontology
+def: "A connective tissue benign neoplasm that is characterized by mature adipose tissue and bundles of cuboidal to spindled fibroblast-like cells. It occurs mainly in children, more often in males, preferentially involves the hands and feet, and may recur locally." [url:https\://en.wikipedia.org/wiki/Lipofibromatosis, url:https\://pubmed.ncbi.nlm.nih.gov/11075850/, url:https\://pubmed.ncbi.nlm.nih.gov/30310176/]
+subset: NCIthesaurus
+xref: ICDO:8851/1
+xref: NCI:C99180
+xref: SNOMEDCT_US_2025_09_01:1290942005
+xref: UMLS_CUI:C3274592
+is_a: DOID:0060123 ! connective tissue benign neoplasm
+property_value: exactMatch "ICDO:8851/1" xsd:string
+property_value: exactMatch "NCI:C99180" xsd:string
+property_value: exactMatch "UMLS_CUI:C3274592" xsd:string
+
+[Term]
+id: DOID:0070666
+name: infantile myofibromatosis 1
+namespace: disease_ontology
+def: "An infantile myofibromatosis that has_material_basis_in heterozygous mutation in the PDGFRB gene on chromosome 5q32." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC3675240/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC3675260/]
+subset: NCIthesaurus
+xref: MIM:228550
+xref: NCI:C176943
+xref: UMLS_CUI:C4551572
+is_a: DOID:0080109 ! infantile myofibromatosis
+property_value: exactMatch "MIM:228550" xsd:string
+property_value: exactMatch "NCI:C176943" xsd:string
+property_value: exactMatch "UMLS_CUI:C4551572" xsd:string
+
+[Term]
+id: DOID:0070667
+name: infantile myofibromatosis 2
+namespace: disease_ontology
+def: "An infantile myofibromatosis that has_material_basis_in heterozygous mutation in the NOTCH3 gene on chromosome 19p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC3675260/]
+subset: NCIthesaurus
+xref: MIM:615293
+xref: NCI:C176944
+xref: UMLS_CUI:C3809084
+is_a: DOID:0080109 ! infantile myofibromatosis
+property_value: exactMatch "MIM:615293" xsd:string
+property_value: exactMatch "NCI:C176944" xsd:string
+property_value: exactMatch "UMLS_CUI:C3809084" xsd:string
+
+[Term]
 id: DOID:0080016
 name: spina bifida
 namespace: disease_ontology
@@ -4870,6 +5356,28 @@ xref: UMLS_CUI:C0021847
 is_a: DOID:5295 ! intestinal disease
 created_by: lschriml
 creation_date: 2015-10-19T14:28:30Z
+
+[Term]
+id: DOID:0080109
+name: infantile myofibromatosis
+namespace: disease_ontology
+def: "A connective tissue benign neoplasm that is characterized by the development of benign tumors in the skin, striated muscles, bones, and in exceptional cases, visceral organs." [url:https\://en.wikipedia.org/wiki/Infantile_myofibromatosis, url:https\://www.ncbi.nlm.nih.gov/pubmed/23731542]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "congenital generalized fibromatosis" EXACT []
+xref: GARD:2998
+xref: MESH:C562978
+xref: MIM:PS228550
+xref: ORDO:2591
+xref: SNOMEDCT_US_2025_09_01:254146000
+xref: UMLS_CUI:C0432284
+is_a: DOID:0060123 ! connective tissue benign neoplasm
+property_value: closeMatch "NCI:C3742" xsd:string
+property_value: exactMatch "GARD:2998" xsd:string
+property_value: exactMatch "MESH:C562978" xsd:string
+property_value: exactMatch "MIM:PS228550" xsd:string
+property_value: exactMatch "ORDO:2591" xsd:string
+property_value: exactMatch "UMLS_CUI:C0432284" xsd:string
 
 [Term]
 id: DOID:0080119
@@ -4983,6 +5491,31 @@ def: "An acute monocytic leukemia occurring in adults." [url:https\://en.wikiped
 subset: NCIthesaurus
 xref: NCI:C8263
 is_a: DOID:8692 ! myeloid leukemia
+
+[Term]
+id: DOID:0080163
+name: autosomal recessive autoinflammation, panniculitis, and dermatosis syndrome
+namespace: disease_ontology
+def: "An autoinflammation, panniculitis, and dermatosis syndrome characterized by neonatal onset of recurrent fever, erythematous rash with painful nodules, painful joints, and lipodystrophy and has_material_basis_in homozygous or compound heterozygous loss-of-function mutation in the OTULIN gene on chromosome 5p15." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27523608, url:https\://www.ncbi.nlm.nih.gov/pubmed/27559085, url:https\://www.nih.gov/news-events/news-releases/nih-researchers-discover-otulipenia-new-inflammatory-disease]
+comment: In 2024, patients with an autosomal dominant ORAS-like disease were identified. The terms OTULIN-related autoinflammatory syndrome (ORAS) and otulipenia have thus far referred only to this autosomal recessive form, but may become more generally used to mean both inherited forms [JAB, 2025-07-31].
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "autoinflammation, panniculitis and dermatosis syndrome" RELATED [] {comment="Initially, this term was used only for the autosomal recessive disease but, in 2024, a new autosomal dominant form was identified and its use broadened to encompass both [JAB, 2025-07-31]."}
+synonym: "ORAS" EXACT OMO:0003012 []
+synonym: "OTULIN-related autoinflammatory syndrome" EXACT []
+synonym: "otulipenia" EXACT []
+xref: GARD:13198
+xref: MIM:617099
+xref: NCI:C174441
+xref: ORDO:500062
+xref: SNOMEDCT_US_2025_05_01:765435009
+xref: UMLS_CUI:C4310614
+is_a: DOID:612 ! primary immunodeficiency disease
+property_value: exactMatch "GARD:13198" xsd:string
+property_value: exactMatch "MIM:617099" xsd:string
+property_value: exactMatch "NCI:C174441" xsd:string
+property_value: exactMatch "ORDO:500062" xsd:string
+property_value: exactMatch "UMLS_CUI:C4310614" xsd:string
 
 [Term]
 id: DOID:0080164
@@ -5371,11 +5904,27 @@ xref: NCI:C4440
 is_a: DOID:0050625 ! biliary tract benign neoplasm
 
 [Term]
+id: DOID:0080642
+name: Middle East respiratory syndrome
+namespace: disease_ontology
+def: "A Coronavirus infectious disease that is characterized by severe respiratory illness, including fever, cough, and shortness of breath and that has_material_basis_in Middle East respiratory syndrome-related coronavirus (MERS-CoV, Betacoronavirus cameli)." [url:https\://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome, url:https\://pubmed.ncbi.nlm.nih.gov/23891402/, url:https\://pubmed.ncbi.nlm.nih.gov/29495250, url:https\://www.cdc.gov/mers/about/index.html, url:https\://www.who.int/health-topics/middle-east-respiratory-syndrome-coronavirus-mers]
+subset: DO_infectious_disease_slim
+subset: NCIthesaurus
+synonym: "MERS" EXACT OMO:0003012 []
+xref: NCI:C128424
+xref: UMLS_CUI:C3694279
+is_a: DOID:934 ! viral infectious disease
+property_value: broadMatch "ICD10CM:B34.2" xsd:string
+property_value: exactMatch "NCI:C128424" xsd:string
+property_value: exactMatch "UMLS_CUI:C3694279" xsd:string
+
+[Term]
 id: DOID:0080643
 name: B-lymphoblastic leukemia/lymphoma with BCR-ABL1
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that derives_from B-lymphoblasts and carries a translocation between the BCR gene on chromosome 22 and the ABL1 gene on chromosome 9. It results in the production of the p190 kd or p210 kd fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80331]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-ALL with BCR-ABL1" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1" EXACT []
@@ -5393,6 +5942,7 @@ name: B-lymphoblastic leukemia/lymphoma MLL rearranged
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the KMT2A gene at 11q23.3 and another gene partner resulting in the production of a KMT2A related fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80342]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged" EXACT []
 synonym: "B-ALL KMT2A rearranged" EXACT []
@@ -5410,6 +5960,7 @@ name: B-lymphoblastic leukemia/lymphoma with ETV6-RUNX1
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the TEL gene on chromosome 12 and the AML1 gene on chromosome 21, (p13.2;q22.1). It results in the production of the TEL-AML1 (ETV6-RUNX1) fusion protein." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80343]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-ALL with ETV6-RUNX1" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1" EXACT []
@@ -5425,6 +5976,7 @@ name: B-lymphoblastic leukemia/lymphoma with hyperdiploidy
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is composed of B-lymphoblasts which contain more than 50 and usually less than 66 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80335]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-ALL with hyperdiploidy" EXACT []
 xref: ICDO:9815/3
@@ -5441,6 +5993,7 @@ name: B-lymphoblastic leukemia/lymphoma with hypodiploidy
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is composed of B-lymphoblasts which contain less than 46 chromosomes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80338]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-ALL with hypodiploidy" EXACT []
 xref: ICDO:9816/3
@@ -5457,6 +6010,7 @@ name: B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the IL3 gene on chromosome 5 and the IGH locus on chromosome 14, (q31.1;q32.3)." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80346]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B-ALL with IL3-IGH" EXACT []
 synonym: "B-lymphoblastic leukemia/lymphoma with IL3-IGH" EXACT []
@@ -5473,6 +6027,7 @@ name: B-lymphoblastic leukemia/lymphoma with TCF3-PBX1
 namespace: disease_ontology
 def: "A B-lymphoblastic leukemia/lymphoma that is characterized by the presence of lymphoblasts that carry a translocation between the E2A gene on chromosome 19 and the PBX1 gene on chromosome 1." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C80347]
 subset: DO_cancer_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "B Acute Lymphoblastic Leukemia with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)" EXACT []
 synonym: "B-ALL with TCF3-PBX1" EXACT []
@@ -5643,7 +6198,7 @@ is_a: DOID:0080706 ! medulloblastoma non-WNT/non-SHH
 id: DOID:0080708
 name: medulloblastoma non-WNT/non-SHH group 4
 namespace: disease_ontology
-def: "A medulloblastoma non-WNT/non-SHH that is characterized as a molecular subtype by the absence of MYC amplifications and TP53 mutations, while chromosome 17 abnormalities may be present." [url:https\://pubmed.ncbi.nlm.nih.gov/29427151/]
+def: "A medulloblastoma non-WNT/non-SHH that is characterized as a molecular subtype by the absence of MYC amplifications and TP53 gene mutations, while chromosome 17 abnormalities may be present." [url:https\://pubmed.ncbi.nlm.nih.gov/29427151/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C129446
@@ -5830,6 +6385,22 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: NCI:C62193
 is_a: DOID:8618 ! oral cavity cancer
+
+[Term]
+id: DOID:0080827
+name: human cytomegalovirus infection
+namespace: disease_ontology
+def: "A viral infectious disease that has_material_basis_in Human betaherpesvirus 5 (Cytomegalovirus humanbeta5)." [url:https\://pubmed.ncbi.nlm.nih.gov/25205255/, url:https\://www.ncbi.nlm.nih.gov/books/NBK459185/]
+subset: DO_infectious_disease_slim
+subset: NCIthesaurus
+xref: ICD10CM:B25
+xref: ICD9CM:078.5
+xref: MESH:D003586
+xref: NCI:C53649
+xref: SNOMEDCT_US_2025_05_01:28944009
+xref: UMLS_CUI:C0010823
+is_a: DOID:934 ! viral infectious disease
+property_value: narrowMatch "ICD10CM:B25.9" xsd:string
 
 [Term]
 id: DOID:0080829
@@ -7198,6 +7769,22 @@ xref: NCI:C154496
 is_a: DOID:4242 ! kidney sarcoma
 
 [Term]
+id: DOID:0081445
+name: sickle cell disease
+namespace: disease_ontology
+def: "A blood protein disease that is characterized by chronic hemolytic anemia and intermittent vaso-occlusive events that result in tissue ischemia leading to acute and chronic pain as well as organ damage that can affect any organ system, resulting from the replacement of one of the beta-globin subunits in hemoglobin with atypical hemoglobin molecules called hemoglobin S which can distort red blood cells into a sickle or crescent shape. Sickle cell disease subtypes should include a detailed genotypic description for the hemoglobin molecules (e.g., Hb S/S, Hb S/C, Hb S/β0-thalassemia)." [url:https\://medlineplus.gov/genetics/condition/sickle-cell-disease, url:https\://www.ncbi.nlm.nih.gov/books/NBK1377/, url:https\://www.ncbi.nlm.nih.gov/books/NBK482164/]
+subset: NCIthesaurus
+xref: ICD10CM:D57
+xref: ICD9CM:282.6
+xref: MESH:D006450
+xref: MIM:603903
+xref: NCI:C34383
+xref: NCI:C34676
+xref: SNOMEDCT_US_2025_04_25:417357006
+xref: UMLS_CUI:C0019034
+is_a: DOID:74 ! hematopoietic system disease
+
+[Term]
 id: DOID:0081457
 name: intrathyroid thymic carcinoma
 namespace: disease_ontology
@@ -7533,6 +8120,27 @@ xref: ORDO:258
 xref: SNOMEDCT_US_2023_03_01:787037000
 xref: UMLS_CUI:C1263858
 is_a: DOID:9884 ! muscular dystrophy
+
+[Term]
+id: DOID:0110826
+name: Usher syndrome type 1
+namespace: disease_ontology
+def: "An Usher syndrome characterized by profound congenital deafness, vestibular dysfunction and early development of retinitis pigmentosa." [url:https\://ghr.nlm.nih.gov/condition/usher-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1265/, url:https\://www.ncbi.nlm.nih.gov/pubmed/2909824]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "US1" EXACT OMO:0003012 []
+synonym: "USH1" EXACT OMO:0003012 []
+xref: GARD:5435
+xref: ICD10CM:H35.5
+xref: MIM:276900
+xref: NCI:C126327
+xref: ORDO:231169
+xref: UMLS_CUI:C1568247
+is_a: DOID:0050439 ! Usher syndrome
+property_value: exactMatch "GARD:5435" xsd:string
+property_value: exactMatch "NCI:C126327" xsd:string
+property_value: exactMatch "ORDO:231169" xsd:string
+property_value: exactMatch "UMLS_CUI:C1568247" xsd:string
 
 [Term]
 id: DOID:0110827
@@ -12989,7 +13597,7 @@ xref: MESH:D000755
 xref: ORDO:232
 xref: SNOMEDCT_US_2025_04_25:127040003
 xref: UMLS_CUI:C0002895
-is_a: DOID:74 ! hematopoietic system disease
+is_a: DOID:0081445 ! sickle cell disease
 
 [Term]
 id: DOID:10930
@@ -14463,6 +15071,7 @@ name: Hantavirus hemorrhagic fever with renal syndrome
 namespace: disease_ontology
 def: "A viral infectious disease that is a hemorrhagic fever, located in kidney, has_material_basis_in Orthohantavirus dobravaense, Orthohantavirus hantanense, Orthohantavirus puumalaense, or Orthohantavirus seoulense, which are carried and transmitted by rodents. The infection has symptom headache, has symptom fever, has symptom muscle pains, has symptom facial flush, has symptom petechiae, has symptom proteinuria, and has symptom renal failure." [url:https\://en.wikipedia.org/wiki/Hantavirus_hemorrhagic_fever_with_renal_syndrome, url:https\://www.cdc.gov/hantavirus/about/]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "hemorrhagic fever renal syndrome" EXACT []
@@ -20248,6 +20857,7 @@ name: Rift Valley fever
 namespace: disease_ontology
 def: "A viral infectious disease that results_in infection, has_material_basis_in Rift Valley fever virus (Phlebovirus riftense), which is transmitted_by Aedes mosquitoes. The virus affects domestic animals (cattle, buffalo, sheep, goats, and camels) and humans. The infection has_symptom jaundice, has_symptom vomiting blood, has_symptom passing blood in the feces, has_symptom ecchymoses (caused by bleeding in the skin), has_symptom bleeding from the nose or gums, has_symptom menorrhagia and has_symptom bleeding from venepuncture sites." [url:http\://www.who.int/mediacentre/factsheets/fs207/en/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8009587/, url:https\://www.who.int/news-room/fact-sheets/detail/rift-valley-fever]
 subset: DO_infectious_disease_slim
+subset: DO_rare_slim
 subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 xref: ICD10CM:A92.4
@@ -24474,7 +25084,6 @@ synonym: "major depression" EXACT []
 synonym: "recurrent major depression" EXACT []
 synonym: "single major depressive episode" EXACT []
 synonym: "unipolar depression" EXACT []
-xref: EFO:0003761
 xref: ICD10CM:F32
 xref: ICD10CM:F33.9
 xref: ICD9CM:296.2
@@ -30032,6 +30641,21 @@ xref: NCI:C6067
 xref: SNOMEDCT_US_2023_03_01:1260048003
 xref: UMLS_CUI:C1333646
 is_a: DOID:1360 ! frontal sinus cancer
+
+[Term]
+id: DOID:2442
+name: paranasal sinus squamous cell carcinoma
+namespace: disease_ontology
+def: "A paranasal sinus cancer that derives_from squamous epithelial cells." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6534741/, url:https\://www.cancer.gov/types/head-and-neck/patient/adult/paranasal-sinus-treatment-pdq]
+subset: NCIthesaurus
+synonym: "epidermoid carcinoma of the paranasal sinus" EXACT []
+synonym: "squamous cell carcinoma of paranasal sinus" EXACT []
+xref: NCI:C8193
+xref: UMLS_CUI:C0280334
+is_a: DOID:0050619 ! paranasal sinus cancer
+property_value: broadMatch "NCI:C68611" xsd:string
+property_value: broadMatch "ORDO:500464" xsd:string
+property_value: broadMatch "UMLS_CUI:C0280332" xsd:string
 
 [Term]
 id: DOID:2449
@@ -36982,6 +37606,23 @@ xref: UMLS_CUI:C0678222
 is_a: DOID:1612 ! breast cancer
 
 [Term]
+id: DOID:3462
+name: hamartoma
+namespace: disease_ontology
+alt_id: DOID:3474
+def: "A benign neoplasm characterized by disorganized tissue formed by a mixture of cells native to a particular anatomical location." [url:https\://en.wikipedia.org/wiki/Hamartoma, url:https\://my.clevelandclinic.org/health/diseases/24652-hamartoma, url:https\://www.ncbi.nlm.nih.gov/books/NBK562298/]
+subset: NCIthesaurus
+synonym: "hamartomatous polyp" EXACT []
+xref: MESH:D006222
+xref: NCI:C3075
+xref: SNOMEDCT_US_2025_03_01:400006008
+xref: UMLS_CUI:C0018552
+is_a: DOID:4 ! disease
+property_value: closeMatch "MESH:D006222" xsd:string
+property_value: exactMatch "NCI:C3075" xsd:string
+property_value: exactMatch "UMLS_CUI:C0018552" xsd:string
+
+[Term]
 id: DOID:3463
 name: breast disease
 namespace: disease_ontology
@@ -40290,6 +40931,25 @@ xref: ORDO:75249
 xref: SNOMEDCT_US_2023_03_01:389996009
 xref: UMLS_CUI:C0007196
 is_a: DOID:0050700 ! cardiomyopathy
+
+[Term]
+id: DOID:3972
+name: poorly differentiated thyroid carcinoma
+namespace: disease_ontology
+def: "A thyroid gland carcinoma characterized by intermediate follicular cell differentiation and either high mitotic activity or tumor necrosis." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6437626/, url:https\://pubmed.ncbi.nlm.nih.gov/16470605/]
+subset: NCIthesaurus
+synonym: "insular carcinoma" EXACT []
+synonym: "PDTC" EXACT OMO:0003012 []
+synonym: "poorly differentiated carcinoma of thyroid gland" EXACT []
+synonym: "poorly differentiated thyroid gland carcinoma" EXACT []
+xref: ICDO:8337/3
+xref: NCI:C6040
+xref: SNOMEDCT_US_2025_09_01:724552002
+xref: UMLS_CUI:C1266050
+is_a: DOID:3963 ! thyroid gland carcinoma
+property_value: exactMatch "ICDO:8337/3" xsd:string
+property_value: exactMatch "NCI:C6040" xsd:string
+property_value: exactMatch "UMLS_CUI:C1266050" xsd:string
 
 [Term]
 id: DOID:3973
@@ -48966,6 +49626,33 @@ xref: UMLS_CUI:C0206067
 is_a: DOID:934 ! viral infectious disease
 
 [Term]
+id: DOID:5363
+name: myxoid liposarcoma
+namespace: disease_ontology
+alt_id: DOID:5709
+def: "A liposarcoma that is characterized by the presence of a hypocellular spindle cell proliferation set in a myxoid background and has_material_basis_in chromosomal translocations." [url:https\://www.ncbi.nlm.nih.gov/pubmed/8913727]
+comment: OMIM mapping confirmed by DO. [SN].
+subset: DO_cancer_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "mixed-type liposarcoma" RELATED []
+synonym: "Myxoid/round cell liposarcoma" EXACT []
+xref: GARD:7157
+xref: ICDO:8852/3
+xref: MESH:D018208
+xref: MIM:613488
+xref: NCI:C27781
+xref: ORDO:99967
+xref: SNOMEDCT_US_2023_03_01:404069006
+xref: UMLS_CUI:C0206634
+is_a: DOID:3382 ! liposarcoma
+property_value: exactMatch "ICDO:8852/3" xsd:string
+property_value: exactMatch "MESH:D018208" xsd:string
+property_value: exactMatch "NCI:C27781" xsd:string
+property_value: exactMatch "ORDO:99967" xsd:string
+property_value: exactMatch "UMLS_CUI:C0206634" xsd:string
+
+[Term]
 id: DOID:5368
 name: Wolffian duct adenocarcinoma
 namespace: disease_ontology
@@ -56775,23 +57462,23 @@ is_a: DOID:184 ! bone cancer
 
 [Term]
 id: DOID:676
-name: juvenile rheumatoid arthritis
+name: systemic juvenile rheumatoid arthritis
 namespace: disease_ontology
 alt_id: DOID:10129
 alt_id: DOID:1264
 alt_id: DOID:675
-def: "A rheumatoid arthritis that involves an autoimmune disease onset in children under 16 which attacks the healthy cells and tissue of located_in joint." [url:http\://www.mayoclinic.com/health/juvenile-rheumatoid-arthritis/DS00018, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000451.htm, url:http\://www.umm.edu/ency/article/000451.htm]
+def: "A rheumatoid arthritis that involves an autoimmune disease onset in children under 16 which attacks the healthy cells and tissue of located_in joint." [url:http\://www.mayoclinic.com/health/juvenile-rheumatoid-arthritis/DS00018, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000451.htm, url:http\://www.umm.edu/ency/article/000451.htm, url:https\://www.nomidalliance.org/sjia.php]
 comment: Xref MGI.
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "acute juvenile rheumatoid arthritis" EXACT []
 synonym: "juvenile chronic polyarthritis" EXACT []
 synonym: "juvenile idiopathic arthritis" EXACT []
+synonym: "juvenile rheumatoid arthritis" EXACT []
 synonym: "monarticular juvenile rheumatoid arthritis" EXACT []
 synonym: "pauciarticular juvenile arthritis" EXACT []
 synonym: "Pauciarticular onset juvenile chronic arthritis" EXACT []
 synonym: "Still's disease" EXACT []
-synonym: "systemic juvenile rheumatoid arthritis" EXACT []
 xref: GARD:3067
 xref: ICD10CM:M08.4
 xref: ICD9CM:714.3
@@ -62000,7 +62687,7 @@ subset: NCIthesaurus
 synonym: "Myxoid Liposarcoma of Ovary" EXACT []
 xref: NCI:C5235
 xref: UMLS_CUI:C1335170
-is_a: DOID:3382 ! liposarcoma
+is_a: DOID:5363 ! myxoid liposarcoma
 is_a: DOID:5697 ! liposarcoma of the ovary
 
 [Term]

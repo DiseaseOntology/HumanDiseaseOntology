@@ -516,7 +516,7 @@ $(REFRESH_IMPS):
 ##########################################
 
 .PHONY: products
-products: primary human merged base subsets release_reports
+products: primary human merged base subsets release_reports src/facets.tsv
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -794,6 +794,7 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
 	 --output $<
 	@echo "Updated versionIRI of $<"
 
+
 # ----------------------------------------
 # RELEASE COPY
 # ----------------------------------------
@@ -809,6 +810,15 @@ publish: products
 	@cp -r src/ontology/subsets src/ontology/releases
 	@echo "Published to src/ontology/releases"
 	@echo ""
+
+
+# ----------------------------------------
+# FACET SEARCH FILE
+# ----------------------------------------
+
+src/facets.tsv: $(DM).owl src/sparql/build/facets.rq | check_robot
+	@$(ROBOT) query --input $< --query $(word 2,$^) $@
+	@echo "Created $@"
 
 
 ##########################################

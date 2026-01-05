@@ -1,0 +1,128 @@
+# PRODUCES DATA FOR THE DO-KB FACETED SEARCH
+# - Includes annotated evidence class and their superclasses
+# - Includes directly asserted, logically-related
+#   imported classes derived from direct assertions of disease classes,
+#   superclasses, and 'disease has feature' classes, along with their
+#   superclasses
+# - Excludes distant/weakly related classes resulting from multi-step import
+#   traversal
+# - Similar to 'OWL flattener' (https://github.com/DiseaseOntology/OWLFlattener)
+#   described in 2024 publication (https://pmc.ncbi.nlm.nih.gov/articles/PMC10767934/)
+#   with fixes to evidence code and EQ axiom handling, and greater flexbility
+#   for facet generation
+# - NOTE: Some facet names are adjusted for consistency with existing DO-KB
+#   facets; consider removal in future (identified by `# REMOVE?` in query)
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?id ?name ?definition ?facet ?import_keyword ?import_id
+FROM <http://purl.obolibrary.org/obo/doid/doid-merged.owl>
+WHERE {
+  # get logically-related import classes (with limits)
+  {
+    {
+      # get disease class, superclass, and 'disease has feature' asserted +
+      # logically-related classes
+      SELECT DISTINCT ?iri ?asserted
+      WHERE {
+        # for class asserted axioms, include classes in unions
+        {
+          ?iri a owl:Class ;
+            (owl:equivalentClass|rdfs:subClassOf) ?anon .
+          FILTER(CONTAINS(str(?iri), "DOID"))
+          FILTER NOT EXISTS { ?iri owl:deprecated true }
+          ?anon (owl:unionOf|owl:intersectionOf|owl:Restriction|rdf:first|rdf:rest|owl:someValuesFrom|owl:onClass)* ?asserted .
+        }
+        UNION
+        # for superclass or 'disease has feature' diseases, exclude classes in
+        # unions (frequent source of error, e.g. 
+        # DOID:0040085 'bacterial sepsis' --> NCBITaxon:10239 'Viruses')
+        {
+          ?iri a owl:Class ;
+            (owl:equivalentClass|rdfs:subClassOf|owl:intersectionOf|owl:Restriction|rdf:first|rdf:rest|owl:someValuesFrom|owl:onClass)+ ?sup_feat .
+          ?sup_feat (owl:equivalentClass|rdfs:subClassOf)* ?anon .
+          FILTER(CONTAINS(str(?iri), "DOID") && CONTAINS(str(?sup_feat), "DOID"))
+          FILTER NOT EXISTS { ?iri owl:deprecated true }
+
+          ?anon (owl:intersectionOf|owl:Restriction|rdf:first|rdf:rest|owl:someValuesFrom|owl:onClass)* ?asserted .
+        }
+      }
+    }
+    FILTER(
+      !isBlank(?asserted) &&
+      !CONTAINS(str(?asserted), "DOID") &&
+      !(?asserted IN (owl:Thing, rdf:nil))
+    )
+    
+    # get disease info
+    ?iri rdfs:label ?nm_lang .
+    OPTIONAL { ?iri obo:IAO_0000115 ?def_lang }
+    
+    # expand imported, related classes to include superclasses, excluding
+    # placeholder doid: classes
+    ?asserted rdfs:subClassOf* ?import_iri .
+    ?import_iri rdfs:label ?import_lang ;
+      rdfs:subClassOf* ?facet_iri .
+    FILTER(!isBlank(?import_iri) && !CONTAINS(str(?import_iri), "doid"))
+
+    # get facet label
+    ?facet_iri rdfs:label ?facet_lang .
+    # ensure facet name is root (including doid: placeholder labels)
+    FILTER(!isBlank(?facet_iri))
+    FILTER(
+      EXISTS { ?facet_iri rdfs:subClassOf owl:Thing } ||
+      (
+        NOT EXISTS { ?facet_iri rdfs:subClassOf ?any } &&
+        NOT EXISTS { ?facet_iri owl:deprecated ?obsolete }
+      )
+    )
+
+    # format output
+    BIND(CONCAT("DOID:", STRAFTER(str(?iri), "DOID_")) AS ?id)
+    BIND(REPLACE(str(?import_iri), "^.*/([^/]+)[#_]", "$1:") AS ?import_id)
+    BIND(str(?nm_lang) AS ?name)
+    BIND(str(?def_lang) AS ?definition)
+    BIND(str(?import_lang) AS ?import_keyword)
+    # REMOVE? (adjustment for facet names)
+    BIND(
+      IF(
+        str(?facet_lang) = "cell",
+        "cell_type",
+        REPLACE(str(?facet_lang), " +", "_")
+      ) AS ?facet)
+  }
+  UNION
+  # get evidence codes annotated on definitions (not logically-related)
+  {
+    VALUES ?facet_iri { obo:ECO_0000000 }
+    ?facet_iri rdfs:label ?facet_lang .
+
+    ?iri rdfs:label ?nm_lang ;
+      obo:IAO_0000115 ?def_lang .
+    FILTER(CONTAINS(str(?iri), "DOID"))
+    FILTER NOT EXISTS { ?iri owl:deprecated true }
+
+    ?axiom a owl:Axiom ;
+      owl:annotatedSource ?iri ;
+      owl:annotatedProperty obo:IAO_0000115 ;
+      owl:annotatedTarget ?def_lang ;
+      (dc:type|rdfs:subClassOf)* ?import_iri .
+    
+    ?import_iri rdfs:label ?import_lang ;
+      rdfs:subClassOf* ?facet_iri .
+
+    # format for output
+    BIND(CONCAT("DOID:", STRAFTER(str(?iri), "DOID_")) AS ?id)
+    BIND(CONCAT("ECO:", STRAFTER(str(?import_iri), "ECO_")) AS ?import_id)
+    BIND(str(?nm_lang) AS ?name)
+    BIND(str(?def_lang) AS ?definition)
+    BIND(str(?import_lang) AS ?import_keyword)
+    BIND(str(?facet_lang) AS ?facet)
+  }
+}
+ORDER BY ?id ?facet ?import_id

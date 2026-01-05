@@ -516,7 +516,7 @@ $(REFRESH_IMPS):
 ##########################################
 
 .PHONY: products
-products: primary human merged base subsets release_reports src/facets.tsv
+products: primary human merged base subsets release_reports src/facets.tsv.gz
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -816,8 +816,9 @@ publish: products
 # FACET SEARCH FILE
 # ----------------------------------------
 
-src/facets.tsv: $(DM).owl src/sparql/build/facets.rq | check_robot
-	@$(ROBOT) query --input $< --query $(word 2,$^) $@
+src/facets.tsv.gz: $(DM).owl src/sparql/build/facets.rq | check_robot
+	@$(ROBOT) query --input $< --query $(word 2,$^) $(basename $@)
+	@gzip $(basename $@)
 	@echo "Created $@"
 
 

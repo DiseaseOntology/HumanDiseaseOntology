@@ -37,12 +37,15 @@ FASTOBO_VRS = 0.4.6
 # 6. Publish to release directory
 # 7. Generate post-build reports (counts, etc.)
 .PHONY: release all
-release: test diff version_imports products verify publish post
+release: rel_test version_imports products verify publish post
 	@echo "Release complete!"
 
 # Only run `make all` if you'd like to update imports to the latest version
 #	during the release!
 all: imports release
+
+.PHONY: FORCE
+FORCE:
 
 
 ##########################################
@@ -170,16 +173,16 @@ endef
 
 
 ##########################################
-## PRE-BUILD TESTS
+## CI TESTS & DIFF
 ##########################################
 
 .PHONY: ci_test test report reason verify-edit quarterly_test
 
-# Github continuous integration
+# Github Continuous Integration (CI) testing
 ci_test: reason report verify-edit
 	@echo ""
 
-# Local/release testing
+# Local CI testing (includes diff)
 test: ci_test diff
 	@echo ""
 
@@ -203,9 +206,9 @@ build/reports/report-obo.tsv: $(EDIT) | check_robot build/reports
 	 --output $@
 
 # Simple reasoning test
-reason: build/update/doid-edit-reasoned.owl
+reason: build/doid-edit-reasoned.owl
 
-build/update/doid-edit-reasoned.owl: $(EDIT) | check_robot build/update
+build/doid-edit-reasoned.owl: $(EDIT) | check_robot build
 	@$(ROBOT) reason \
 	 --input $< \
 	 --create-new-ontology false \
@@ -244,17 +247,14 @@ build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 	 --output-dir $(word 2,$|)
 	$(call concat_csv,TEST,$@,$(word 2,$|),quarter-verify-*.csv)
 
+# ----------------------------------------
+# DIFF
+# ----------------------------------------
 
-##########################################
-## DIFF
-##########################################
+.PHONY: diff
+diff: build/reports/diff-ci.tsv
 
-# Get the last release of doid-merged.owl, if newer available (always run)
-.PHONY: FORCE diff
-FORCE:
-
-diff: build/reports/doid-diff.tsv
-
+# Get the last release of doid-merged.owl (only if newer available)
 build/doid-merged-last.version: FORCE | build
 	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
 				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
@@ -268,11 +268,19 @@ build/doid-merged-last.version: FORCE | build
 		echo $${LATEST} > $@ ; \
 	 fi
 
-build/doid-merged-last.owl: build/doid-merged-last.version | check_robot
+build/doid-merged-last.owl: build/doid-merged-last.version
+	@echo "Downloading latest doid-merged.owl as $@..."
 	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
 
-build/reports/doid-diff.tsv: build/doid-merged-last.owl \
-	build/update/doid-edit-reasoned.owl | check_robot
+# CI diff excludes 'has major susceptibility factor' relations
+build/doid-merged-last-no-msf.owl: build/doid-merged-last.owl | check_robot
+	@$(ROBOT) remove \
+	 --input $< \
+	 --term "RO:0004005" \
+	 --output $@
+
+build/reports/diff-ci.tsv: build/doid-merged-last-no-msf.owl \
+	build/doid-edit-reasoned.owl | check_robot
 	@$(ROBOT) export \
 	 --input $< \
 	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
@@ -280,10 +288,10 @@ build/reports/doid-diff.tsv: build/doid-merged-last.owl \
 	@$(ROBOT) export \
 	 --input $(word 2,$^) \
 	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
-	 --export $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2,$^)))
+	 --export $(addsuffix .tsv,$(basename $(word 2,$^)))
 	@python3 src/util/diff-re.py \
 	 -1 $(addsuffix .tsv,$(basename $<)) \
-	 -2 $(patsubst %-reasoned.owl,build/%-new.tsv,$(notdir $(word 2,$^))) \
+	 -2 $(addsuffix .tsv,$(basename $(word 2,$^))) \
 	 -p "DOID" \
 	 -o $@
 	@echo "Generated DOID diff report at $@"
@@ -344,7 +352,7 @@ update_slims: $(SUB_ADD) $(SUB_AUTO)
 # so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
 #	easier to keep one rule for all slim templates at the moment; may change
 #	this if multiple slims don't need reasoned file.
-build/update/%-template.tsv: build/update/doid-edit-reasoned.owl \
+build/update/%-template.tsv: build/doid-edit-reasoned.owl \
  src/sparql/update/subsets/%.rq | check_robot build/update
 	@echo "CHECKING $* subset for missing classes..."
 	@$(ROBOT) query \
@@ -512,6 +520,69 @@ $(REFRESH_IMPS):
 
 
 ##########################################
+## PRE-RELEASE UPDATES & TESTS
+##########################################
+
+# ----------------------------------------
+# AUTOMATED IMPORTS -- MERGE ONLY
+# ----------------------------------------
+
+build/update/omim-susc-invert.owl: $(EDIT) src/ontology/imports/omim_susc_import.owl \
+ src/sparql/update/omim-susc-invert.rq | check_robot build/update
+	@echo "Inverting OMIM susceptibility relations..."
+	@$(ROBOT) merge \
+	 --input $< \
+	 --input $(word 2,$^) \
+	 --collapse-import-closure false \
+	query \
+	 --query $(word 3,$^) $@
+
+EDIT_EXT := build/doid-edit-extended.owl
+$(EDIT_EXT): $(EDIT) build/update/omim-susc-invert.owl | check_robot
+	@$(ROBOT) merge \
+	 --input $< \
+	 --input $(word 2,$^) \
+	 --collapse-import-closure false \
+	 --output $@
+
+# ----------------------------------------
+# PRE-REASON
+# ----------------------------------------
+
+build/doid-precursor.owl: $(EDIT_EXT) | check_robot
+	@$(ROBOT) reason \
+	 --input $< \
+	 --create-new-ontology false \
+	 --annotate-inferred-axioms false \
+	 --exclude-duplicate-axioms true \
+	 --output $@
+
+# ----------------------------------------
+# PRE-RELEASE TESTS & DIFF
+# ----------------------------------------
+
+.PHONY: rel_test
+rel_test: ci_test build/reports/diff-release.tsv
+
+build/reports/diff-release.tsv: build/doid-merged-last.owl \
+ build/doid-precursor.owl | check_robot build/reports
+	@$(ROBOT) export \
+	 --input $< \
+	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
+	 --export $(addsuffix .tsv,$(basename $<))
+	@$(ROBOT) export \
+	 --input $(word 2,$^) \
+	 --header "ID|owl:deprecated|LABEL|SYNONYMS|IAO:0000115|SubClass Of [ID NAMED]|Equivalent Class|SubClass Of [ANON]|oboInOwl:hasDbXref|skos:exactMatch|skos:closeMatch|skos:broadMatch|skos:narrowMatch|skos:relatedMatch|oboInOwl:hasAlternativeId|oboInOwl:inSubset" \
+	 --export $(addsuffix .tsv,$(basename $(word 2,$^)))
+	@python3 src/util/diff-re.py \
+	 -1 $(addsuffix .tsv,$(basename $<)) \
+	 -2 $(addsuffix .tsv,$(basename $(word 2,$^))) \
+	 -p "DOID" \
+	 -o $@
+	@echo "Generated pre-release diff report at $@"
+
+
+##########################################
 ## RELEASE PRODUCTS
 ##########################################
 
@@ -549,41 +620,16 @@ define build_obo
 endef
 
 # ----------------------------------------
-# AUTOMATED IMPORTS -- MERGE ONLY
-# ----------------------------------------
-
-build/update/omim-susc-invert.owl: $(EDIT) src/ontology/imports/omim_susc_import.owl \
- src/sparql/update/omim-susc-invert.rq | check_robot build/update
-	@echo "Inverting OMIM susceptibility relations..."
-	@$(ROBOT) merge \
-	 --input $< \
-	 --input $(word 2,$^) \
-	 --collapse-import-closure false \
-	query \
-	 --query $(word 3,$^) $@
-
-EDIT_EXT := build/update/doid-edit-extended.owl
-$(EDIT_EXT): $(EDIT) build/update/omim-susc-invert.owl | check_robot
-	@$(ROBOT) merge \
-	 --input $< \
-	 --input $(word 2,$^) \
-	 --collapse-import-closure false \
-	 --output $@
-
-# ----------------------------------------
 # DOID
 # ----------------------------------------
 
 .PHONY: primary
 primary: $(DO).owl $(DO).obo $(DO).json
 
-$(DO).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot test
-	@$(ROBOT) reason \
+$(DO).owl: build/doid-precursor.owl src/sparql/build/add_en_tag.ru | \
+ check_robot rel_test
+	@$(ROBOT) query \
 	 --input $< \
-	 --create-new-ontology false \
-	 --annotate-inferred-axioms false \
-	 --exclude-duplicate-axioms true \
-	query \
 	 --update $(word 2,$^) \
 	annotate \
 	 --version-iri "$(RELEASE_PREFIX)$(notdir $@)" \
@@ -607,7 +653,7 @@ $(DO).json: $(DO).owl | check_robot
 .PHONY: base
 base: $(DB).owl $(DB).obo $(DB).json
 
-$(DB).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot
+$(DB).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot rel_test
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \
@@ -662,7 +708,7 @@ $(DM).json: $(DM).owl | check_robot
 .PHONY: human
 human: $(DNC).owl $(DNC).obo $(DNC).json
 
-$(DNC).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot
+$(DNC).owl: $(EDIT_EXT) src/sparql/build/add_en_tag.ru | check_robot rel_test
 	@$(ROBOT) remove \
 	 --input $< \
 	 --select imports \

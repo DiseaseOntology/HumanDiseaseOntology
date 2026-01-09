@@ -1,0 +1,13 @@
+# Ensure 'term replaced by' only used on obsolete entities
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { obo:IAO_0100001 }
+	?entity ?property ?value .
+
+	FILTER(!isURI(?value))
+}
+ORDER BY ?entity

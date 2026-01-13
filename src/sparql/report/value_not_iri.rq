@@ -1,0 +1,13 @@
+# Ensure 'term replaced by' and oboInOwl:consider values are IRIs
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { obo:IAO_0100001 oboInOwl:consider }
+	?entity ?property ?value .
+
+	FILTER(!isIRI(?value))
+}
+ORDER BY ?entity

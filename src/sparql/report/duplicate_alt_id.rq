@@ -1,0 +1,22 @@
+# Identify alternative IDs annotated to multiple classes
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+  {
+    SELECT ?value ?property (COUNT(?entity) AS ?n)
+    WHERE {
+      VALUES ?property { oboInOwl:hasAlternativeId }
+      ?entity ?property ?value .
+      FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+    }
+    GROUP BY ?value ?property
+    HAVING (?n > 1)
+  }
+  ?entity ?property ?value .
+}
+ORDER BY ?value ?entity

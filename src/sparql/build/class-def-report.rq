@@ -1,0 +1,33 @@
+# Return a count of non-obsolete classes & definitions
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?datatype (COUNT(?value) AS ?count)
+WHERE {
+  VALUES (?entity ?datatype) {
+    (owl:Class "class")
+    (obo:IAO_0000115 "definition")
+    (owl:equivalentClass "logical equivalentClass")
+    (rdfs:subClassOf "logical subClassOf")
+  }
+  ?class a owl:Class .
+  FILTER(CONTAINS(str(?class), "DOID_"))
+  FILTER NOT EXISTS { ?class owl:deprecated ?obsolete }
+
+  OPTIONAL {
+    ?value a ?entity .
+    FILTER(?value = ?class)
+  }
+  OPTIONAL {
+    ?class ?entity ?value .
+    FILTER(?entity = obo:IAO_0000115)
+  }
+  OPTIONAL {
+    ?class ?entity ?value .
+    FILTER(?entity IN (owl:equivalentClass, rdfs:subClassOf) && isBlank(?value))
+  }
+}
+GROUP BY ?datatype
+ORDER BY ?datatype

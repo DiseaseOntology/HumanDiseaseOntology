@@ -1,5 +1,8 @@
 # DO Releases
 
+* [2026 Releases](#2026-releases)
+* [2025 Releases](#2025-releases)
+* [2024 Releases](#2024-releases)
 * [2023 Releases](#2023-releases)
 * [2022 Releases](#2022-releases)
 * [2021 Releases](#2021-releases)
@@ -20,6 +23,7 @@ This release of the Human Disease Ontology includes 12,012 disease classes, 9,72
 Select revised and/or expanded diseases include brain small vessel diseases, Camurati-Engelmann diseases, CADASIL, enhanced S-cone syndromes, multiple mitochondrial dysfunctions syndrome, primary ciliary dyskinesias, CANVAS, and dental caries. 
 
 Additionally included in this release are updates to cross-references for various diseases and expanded use of logical definitions using `has disease driver`.
+
 
 **Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2025-12-23...v2026-02-02
 

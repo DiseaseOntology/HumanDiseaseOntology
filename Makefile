@@ -864,7 +864,7 @@ publish: products
 
 src/facets.tsv.gz: $(DM).owl src/sparql/build/facets.rq | check_robot
 	@$(ROBOT) query --input $< --query $(word 2,$^) $(basename $@)
-	@gzip $(basename $@)
+	@gzip -f $(basename $@)
 	@echo "Created $@"
 
 

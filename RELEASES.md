@@ -16,11 +16,34 @@
 
 ## 2026 Releases
 
+### [v2026-02-28](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-02-28)
+
+This release of the Human Disease Ontology includes 12,021 disease classes, 9,737 with textual definitions (81.0%). Translation files now include 11,848 labels (98.6%), 11,477 synonyms (59.0%), and 6,604 definitions (67.8%) in Spanish.
+
+Diseases that have been revised and expanded include periventricular nodular heterotopia, Stargardt disease, Axenfeld-Rieger syndrome, familial glucocorticoid deficiency, and Nil-Deshwar neurodevelopmental syndrome.
+
+Additional newly added diseases include aggressive periodontitis 1 and Snijders Blok-Campeau syndrome.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-02-02...v2026-02-28
+
+## Obsoleted Diseases
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:0050786 | obsolete iridogoniodysgenesis syndrome | DOID:0060648 | | non-grouping subtype
+DOID:0080701 | obsolete prothrombin thrombophilia | DOID:0111907 | | duplicate
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-02-28/src/ontology/doid-merged.obo) | |
+
 ### [v2026-02-02](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-02-02)
 
 This release of the Human Disease Ontology includes 12,012 disease classes, 9,728 with textual definitions (81.0%). Translation files now include 11,851 labels (98.7%), 11,479 synonyms (59.0%), and 6,609 definitions (68.0%) in Spanish.
 
-Select revised and/or expanded diseases include brain small vessel diseases, Camurati-Engelmann diseases, CADASIL, enhanced S-cone syndromes, multiple mitochondrial dysfunctions syndrome, primary ciliary dyskinesias, CANVAS, and dental caries. 
+Select revised and/or expanded diseases include brain small vessel diseases, Camurati-Engelmann diseases, CADASIL, enhanced S-cone syndromes, multiple mitochondrial dysfunctions syndrome, primary ciliary dyskinesias, CANVAS, and dental caries.
 
 Additionally included in this release are updates to cross-references for various diseases and expanded use of logical definitions using `has disease driver`.
 

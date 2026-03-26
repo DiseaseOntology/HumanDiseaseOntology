@@ -16,14 +16,24 @@ Over a single year, the Human Disease Ontology (DO) was accessed by researchers 
 
 ## Files
 
-Translations are stored in TSV files in the `src/ontology/translations/` directory.
+Ontology (OWL) files with translations are available with other release files in the `src/ontology/releases/translations/` directory. While these _can_ be accessed directly, we **_strongly recommend_** these be accessed using their persistent URLs (PURLs).
 
-Ontology (OWL) files with translations are available with the release files in the `src/ontology/releases/translations/` directory. While these _can_ be accessed directly, we **_strongly recommend_** these be accessed using their persistent URLs (PURLs).
-
-- **doid-es.owl**: Spanish text only (soon, the 2025-01-29 release includes English placeholders for terms not yet translated).
+- **doid-es.owl**: Spanish text only (soon, the current release includes English placeholders for terms not yet translated).
 	- PURL: http://purl.obolibrary.org/obo/doid/translations/doid-es.owl
+- **doid-es.obo**: OBO version of doid-es.owl.
+	- PURL: http://purl.obolibrary.org/obo/doid/translations/doid-es.obo
 - **doid-international.owl**: International version of the DO with original English and all currently translated text.
 	- PURL: http://purl.obolibrary.org/obo/doid/translations/doid-international.owl
+
+### Source TSV Files
+
+Translations are stored in TSV files in the `src/translations/` directory. These files include:
+- **doid-es-all.tsv**: Intended only for automated comparison, this file contains all unique translation records.
+- **doid-es-changed.tsv**: Designed to promote quick review when translations may already exist (e.g. a new translation record is created _and_ the source_text exists in a prior record that has a corresponding translation).
+- **doid-es-deprecated.tsv**: Includes deprecated translation records no longer in use.
+- **doid-es-translated.tsv**: Includes all translation records with any type of translation, including low quality translations.
+- **doid-es-untranslated.tsv**: Includes all records without translations (usually new text).
+- **doid-es.tsv**: Includes all approved translations matching existing source_text; this is the source for all translated text included in the ontology release files.
 
 
 ## Spanish Translation Process
@@ -53,7 +63,7 @@ Spanish translation of the DO was initiated in 2023
 
 Conversion of translated text from standardized TSV to OWL ontologies files is primarily accomplished by ROBOT using templates. The workflow involves the following steps:
 
-1. **Source Files**: The source TSV files for the translations are located in the `src/ontology/translations/` directory.
+1. **Source Files**: The source TSV files for the translations are located in the `src/translations/` directory.
 2. **ROBOT Templates**: Generate ROBOT templates to facilitate the translation process.
 3. **Translation**: Apply translations to create the final ontology files.
 4. **Products**: The final translated ontology files are stored in the `src/ontology/releases/translations/` directory.

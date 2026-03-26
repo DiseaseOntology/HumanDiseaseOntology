@@ -139,11 +139,11 @@ def compare_re(old_data, new_data, delim1="\n", delim2="|"):
 
                 result = []
                 if same:
-                    result.append(f"[same]: {'|'.join(map(str, same))}")
+                    result.append(f"[same]: {'|'.join(map(str, sorted(same)))}")
                 if old:
-                    result.append(f"[old]: {'|'.join(map(str, old))}")
+                    result.append(f"[old]: {'|'.join(map(str, sorted(old)))}")
                 if new:
-                    result.append(f"[new]: {'|'.join(map(str, new))}")
+                    result.append(f"[new]: {'|'.join(map(str, sorted(new)))}")
                 entry[col] = delim1.join(result)
 
         # Add ONLY if entry has changes

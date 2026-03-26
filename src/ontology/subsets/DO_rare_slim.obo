@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-02-02/subsets/DO_rare_slim.obo
-date: 02:02:2026 15:21
+data-version: doid/releases/2026-02-28/subsets/DO_rare_slim.obo
+date: 28:02:2026 19:37
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -799,11 +799,7 @@ comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 synonym: "periventricular heterotopia" EXACT []
 xref: MESH:D054091
-xref: MIM:300049
-xref: MIM:608097
-xref: MIM:608098
-xref: MIM:612881
-xref: MIM:615544
+xref: MIM:PS300049
 xref: ORDO:98892
 xref: SNOMEDCT_US_2023_03_01:448227009
 xref: SNOMEDCT_US_2023_03_01:816068000
@@ -3022,10 +3018,10 @@ creation_date: 2013-10-23T12:51:49Z
 
 [Term]
 id: DOID:0050786
-name: iridogoniodysgenesis syndrome
+name: obsolete iridogoniodysgenesis syndrome
 namespace: disease_ontology
 def: "An iris disease that is characterized by the iris stroma being hypoplastic resulting from abnormalities in the differentiation of the anterior segment structures and increased values of intraocular pressure and has_material_basis_in autosomal dominant inheritance of mutations in the PITX2 gene." [url:http\://disorders.eyes.arizona.edu/category/alternate-names/iridogoniodysgenesis-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/19175065]
-comment: Xref MGI.
+comment: Xref MGI.\n\nclaudiasbj: reason for this disease being obsolete detailed on: https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1566
 subset: DO_rare_slim
 synonym: "IGDS" EXACT OMO:0003012 []
 synonym: "IRID 1" EXACT OMO:0003012 []
@@ -3034,7 +3030,8 @@ synonym: "iridogoniodysgenesis type 1" EXACT []
 synonym: "iridogoniodysgenesis type 2" EXACT []
 xref: GARD:3026
 xref: ORDO:98634
-is_a: DOID:3480 ! uveal disease
+is_obsolete: true
+replaced_by: DOID:0060648
 creation_date: 2013-11-12T10:28:51Z
 
 [Term]
@@ -3306,9 +3303,7 @@ subset: DO_rare_slim
 synonym: "STARGARDT DISEASE 1" EXACT []
 xref: GARD:181
 xref: MESH:D000080362
-xref: MIM:248200
-xref: MIM:600110
-xref: MIM:603786
+xref: MIM:PS248200
 is_a: DOID:4448 ! macular degeneration
 creation_date: 2013-12-11T01:49:54Z
 
@@ -8463,11 +8458,13 @@ xref: ORDO:465824
 id: DOID:0060648
 name: anterior segment dysgenesis
 namespace: disease_ontology
+alt_id: DOID:0050786
 alt_id: DOID:0060605
 def: "An eye disease that is characterized by iris hypoplasia, an enlarged or reduced corneal diameter, corneal vascularization and opacity, posterior embryotoxon, corectopia, polycoria, an abnormal iridocorneal angle, ectopia lentis, and anterior synechiae between the iris and posterior corneal surface and is located_in the anterior segment of the eye." [url:https\://rarediseases.info.nih.gov/diseases/10025/anterior-segment-dysgenesis, url:https\://www.ncbi.nlm.nih.gov/pubmed/17914436, url:https\://www.ncbi.nlm.nih.gov/pubmed/30242500]
 subset: DO_rare_slim
 synonym: "anterior segment developmental anomaly" EXACT []
 synonym: "corneal opacification and other ocular anomalies" EXACT []
+synonym: "iridogoniodysgenesis syndrome" EXACT []
 synonym: "sclerocornea with other ocular anomalies" EXACT []
 xref: GARD:10025
 xref: ICD10CM:Q13.8
@@ -14568,7 +14565,7 @@ property_value: exactMatch "MIM:619323" xsd:string
 
 [Term]
 id: DOID:0070652
-name: Nil-Deshwan neurodevelopmental syndrome
+name: Nil-Deshwar neurodevelopmental syndrome
 namespace: disease_ontology
 def: "A syndrome characterized by a range of congenital anomalies and central nervous system dysfunction, including global developmental delay, feeding difficulties, hypotonia, and impaired intellectual development that has_material_basis_in heterozygous mutation in the DOT1L gene on chromosome 19p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10645550/, url:https\://pubmed.ncbi.nlm.nih.gov/40494548/]
 subset: DO_rare_slim
@@ -14691,6 +14688,24 @@ xref: UMLS_CUI:C0280313
 property_value: exactMatch "NCI:C8181" xsd:string
 property_value: exactMatch "ORDO:500478" xsd:string
 property_value: exactMatch "UMLS_CUI:C0280313" xsd:string
+
+[Term]
+id: DOID:0070668
+name: Snijders Blok-Campeau syndrome
+namespace: disease_ontology
+def: "An autosomal dominant intellectual developmental disorder characterized by global developmental delay with delayed speech acquisition, impaired intellectual development of variable severity, and hypotonia that has_material_basis_in heterozygous mutation in the CHD3 gene on chromosome 17p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6218476/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC7608102/]
+subset: DO_rare_slim
+synonym: "SNIBCPS" EXACT OMO:0003012 []
+xref: MESH:C000729467
+xref: MIM:618205
+xref: ORDO:599082
+xref: SNOMEDCT_US_2025_09_01:1179408008
+xref: UMLS_CUI:C4748701
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: exactMatch "MESH:C000729467" xsd:string
+property_value: exactMatch "MIM:618205" xsd:string
+property_value: exactMatch "ORDO:599082" xsd:string
+property_value: exactMatch "UMLS_CUI:C4748701" xsd:string
 
 [Term]
 id: DOID:0080016
@@ -31791,8 +31806,10 @@ is_a: DOID:2451 ! protein S deficiency
 id: DOID:0111907
 name: thrombophilia due to thrombin defect
 namespace: disease_ontology
-def: "A thrombophilia characterized by recurrent thrombophilia that has_material_basis_in heterozygous mutation in F2 on chromosome 11p11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/11570053/, url:https\://pubmed.ncbi.nlm.nih.gov/22716977/]
+alt_id: DOID:0080701
+def: "A thrombophilia characterized by recurrent thrombophilia that has_material_basis_in heterozygous mutation in F2 on chromosome 11p11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/11570053/, url:https\://pubmed.ncbi.nlm.nih.gov/21707594/, url:https\://pubmed.ncbi.nlm.nih.gov/22716977/]
 subset: DO_rare_slim
+synonym: "prothrombin thrombophilia" EXACT []
 synonym: "prothrombin-related thrombophilia" EXACT []
 synonym: "THPH1" EXACT OMO:0003012 []
 synonym: "thrombophilia due to factor 2 defect" EXACT []
@@ -41364,7 +41381,7 @@ xref: UMLS_CUI:C0220692
 id: DOID:14686
 name: Axenfeld-Rieger syndrome
 namespace: disease_ontology
-def: "An eye disease characterized by abnormalities of the front part of the eye, the anterior segment." [url:http\://en.wikipedia.org/wiki/Axenfeld_syndrome, url:http\://ghr.nlm.nih.gov/condition/axenfeld-rieger-syndrome]
+def: "An eye disease characterized by anterior segment ocular dysgenesis in addition to systemic abnormalities such as dental, cardiac, craniofacial, and abdominal wall defects." [url:http\://en.wikipedia.org/wiki/Axenfeld_syndrome, url:http\://ghr.nlm.nih.gov/condition/axenfeld-rieger-syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK538504/]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus

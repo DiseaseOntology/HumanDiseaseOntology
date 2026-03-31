@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_FlyBase_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-02-28/subsets/DO_FlyBase_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-03-31/subsets/DO_FlyBase_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050155",
@@ -86,7 +86,7 @@
         }, {
           "val" : "ORDO:910"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:44600005"
+          "val" : "SNOMEDCT_US_2025_09_01:44600005"
         }, {
           "val" : "UMLS_CUI:C0043346"
         } ],
@@ -130,7 +130,7 @@
         }, {
           "val" : "ORDO:247698"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:721188000"
+          "val" : "SNOMEDCT_US_2025_09_01:721188000"
         }, {
           "val" : "UMLS_CUI:C0025268"
         } ],
@@ -163,9 +163,9 @@
         }, {
           "val" : "ORDO:102009"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:204036008"
+          "val" : "SNOMEDCT_US_2025_09_01:204036008"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:23024003"
+          "val" : "SNOMEDCT_US_2025_09_01:23024003"
         }, {
           "val" : "UMLS_CUI:C0266463"
         }, {
@@ -213,7 +213,7 @@
         }, {
           "val" : "ORDO:280"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:17122004"
+          "val" : "SNOMEDCT_US_2025_09_01:17122004"
         }, {
           "val" : "UMLS_CUI:C0796117"
         }, {
@@ -254,7 +254,7 @@
         }, {
           "val" : "ORDO:317"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:70041004"
+          "val" : "SNOMEDCT_US_2025_09_01:70041004"
         }, {
           "val" : "UMLS_CUI:C0265961"
         }, {
@@ -305,7 +305,7 @@
         }, {
           "val" : "ORDO:111"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:297231002"
+          "val" : "SNOMEDCT_US_2025_09_01:297231002"
         }, {
           "val" : "UMLS_CUI:C0574083"
         } ],
@@ -356,7 +356,7 @@
         }, {
           "val" : "NCI:C156310"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:128212001"
+          "val" : "SNOMEDCT_US_2025_09_01:128212001"
         }, {
           "val" : "UMLS_CUI:C0393538"
         } ],
@@ -392,30 +392,62 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0050548",
-      "lbl" : "hereditary sensory neuropathy",
+      "lbl" : "hereditary sensory and autonomic neuropathy",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A neuropathy characterized by congenital insensitivity to pain resulting in ulceration to the fingers, tongue, lips, and other distal appendages.",
-          "xrefs" : [ "url:http://omim.org/entry/616488?search=616488&highlight=616488" ]
+          "val" : "A neuropathy characterized by axonal atrophy and degeneration, exclusively or predominantly affecting the sensory neurons, and variable autonomic dysfunction. Loss of pain and temperature sensation is an early and predominant, but not universal, symptom.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/23931820/", "url:https://pubmed.ncbi.nlm.nih.gov/31222456/" ]
         },
-        "comments" : [ "Xref MGI. OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim" ],
         "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
           "pred" : "hasExactSynonym",
-          "val" : "familial dysautonomia, type II"
+          "val" : "HSAN"
+        }, {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "HSN"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "hereditary sensory and autonomic neuropathy"
+          "val" : "hereditary sensory neuropathy"
         } ],
         "xrefs" : [ {
+          "val" : "GARD:12688"
+        }, {
+          "val" : "ICD10CM:G60.8"
+        }, {
           "val" : "MESH:D009477"
         }, {
           "val" : "MIM:PS162400"
+        }, {
+          "val" : "ORDO:140471"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:128205005"
+        }, {
+          "val" : "UMLS_CUI:C0027889"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD10CM:G60.8"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:12688"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MESH:D009477"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "MIM:PS162400"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:140471"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0027889"
         } ]
       }
     }, {
@@ -530,7 +562,7 @@
         }, {
           "val" : "NCI:C3138"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155759008"
+          "val" : "SNOMEDCT_US_2025_09_01:155759008"
         }, {
           "val" : "UMLS_CUI:C0021390"
         } ],
@@ -649,11 +681,11 @@
         }, {
           "val" : "NCI:C53654"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:266301006"
+          "val" : "SNOMEDCT_US_2025_09_01:266301006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:89461002"
+          "val" : "SNOMEDCT_US_2025_09_01:89461002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:89600009"
+          "val" : "SNOMEDCT_US_2025_09_01:89600009"
         }, {
           "val" : "UMLS_CUI:C0033141"
         }, {
@@ -901,7 +933,7 @@
         }, {
           "val" : "ORDO:138"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:47535005"
+          "val" : "SNOMEDCT_US_2025_09_01:47535005"
         }, {
           "val" : "UMLS_CUI:C0265354"
         }, {
@@ -945,15 +977,11 @@
         }, {
           "val" : "ICD10CM:G24.2"
         }, {
-          "val" : "ICD9CM:333.6"
-        }, {
           "val" : "ICD9CM:333.8"
         }, {
           "val" : "MESH:D004422"
         }, {
           "val" : "MESH:D020821"
-        }, {
-          "val" : "NCI:C34564"
         }, {
           "val" : "NCI:C35437"
         }, {
@@ -961,15 +989,15 @@
         }, {
           "val" : "NCI:C35527"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:192852006"
+          "val" : "SNOMEDCT_US_2025_09_01:192852006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:192859002"
+          "val" : "SNOMEDCT_US_2025_09_01:192859002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:22451001"
+          "val" : "SNOMEDCT_US_2025_09_01:230321007"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:230321007"
+          "val" : "SNOMEDCT_US_2025_09_01:267584007"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:267584007"
+          "val" : "SNOMEDCT_US_2025_09_01:431034009"
         }, {
           "val" : "UMLS_CUI:C0013423"
         }, {
@@ -1485,7 +1513,7 @@
         }, {
           "val" : "NCI:C85233"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:230253001"
+          "val" : "SNOMEDCT_US_2025_09_01:230253001"
         }, {
           "val" : "UMLS_CUI:C1839259"
         } ],
@@ -1527,7 +1555,7 @@
         }, {
           "val" : "NCI:C122653"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:702422004"
+          "val" : "SNOMEDCT_US_2025_09_01:702422004"
         }, {
           "val" : "UMLS_CUI:C0751781"
         } ],
@@ -1599,7 +1627,7 @@
         }, {
           "val" : "ORDO:569"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193037008"
+          "val" : "SNOMEDCT_US_2025_09_01:193037008"
         }, {
           "val" : "UMLS_CUI:C0477373"
         } ],
@@ -1683,13 +1711,11 @@
           "val" : "xanthine oxidase deficiency"
         } ],
         "xrefs" : [ {
-          "val" : "ICD10CM:E79.8"
-        }, {
           "val" : "MIM:PS278300"
         }, {
           "val" : "ORDO:3467"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:190919008"
+          "val" : "SNOMEDCT_US_2025_09_01:190919008"
         }, {
           "val" : "UMLS_CUI:C0220988"
         } ],
@@ -1723,7 +1749,7 @@
         }, {
           "val" : "ORDO:66631"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:722385008"
+          "val" : "SNOMEDCT_US_2025_09_01:722385008"
         }, {
           "val" : "UMLS_CUI:C1836033"
         } ],
@@ -1784,6 +1810,8 @@
         "xrefs" : [ {
           "val" : "GARD:8672"
         }, {
+          "val" : "ICD10CM:Q87.86"
+        }, {
           "val" : "MESH:C563043"
         }, {
           "val" : "MIM:610253"
@@ -1820,7 +1848,7 @@
         }, {
           "val" : "ORDO:408"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:297256008"
+          "val" : "SNOMEDCT_US_2025_09_01:297256008"
         }, {
           "val" : "UMLS_CUI:C0574108"
         } ],
@@ -1853,7 +1881,7 @@
         }, {
           "val" : "ORDO:2896"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:702344008"
+          "val" : "SNOMEDCT_US_2025_09_01:702344008"
         }, {
           "val" : "UMLS_CUI:C1970431"
         } ],
@@ -2046,7 +2074,7 @@
         }, {
           "val" : "NCI:C26739"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:60700002"
+          "val" : "SNOMEDCT_US_2025_09_01:60700002"
         }, {
           "val" : "UMLS_CUI:C0018784"
         } ],
@@ -2108,7 +2136,7 @@
         }, {
           "val" : "ORDO:247709"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:61530001"
+          "val" : "SNOMEDCT_US_2025_09_01:61530001"
         }, {
           "val" : "UMLS_CUI:C0025269"
         } ],
@@ -2202,9 +2230,9 @@
         }, {
           "val" : "ORDO:1331"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:126906006"
+          "val" : "SNOMEDCT_US_2025_09_01:126906006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:93974005"
+          "val" : "SNOMEDCT_US_2025_09_01:93974005"
         }, {
           "val" : "UMLS_CUI:C0033578"
         }, {
@@ -2235,7 +2263,7 @@
         }, {
           "val" : "NCI:C2890"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:87628006"
+          "val" : "SNOMEDCT_US_2025_09_01:87628006"
         }, {
           "val" : "UMLS_CUI:C0004623"
         } ],
@@ -2285,19 +2313,25 @@
         }, {
           "val" : "MIM:613659"
         }, {
+          "val" : "NCI:C194067"
+        }, {
+          "val" : "NCI:C194069"
+        }, {
+          "val" : "NCI:C194070"
+        }, {
           "val" : "NCI:C3387"
         }, {
           "val" : "NCI:C9331"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:126824007"
+          "val" : "SNOMEDCT_US_2025_09_01:126824007"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:269459004"
+          "val" : "SNOMEDCT_US_2025_09_01:93717002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:269460009"
+          "val" : "SNOMEDCT_US_2025_09_01:93818001"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:93717002"
+          "val" : "SNOMEDCT_US_2025_09_01:93867004"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:94074003"
+          "val" : "SNOMEDCT_US_2025_09_01:94074003"
         }, {
           "val" : "UMLS_CUI:C0024623"
         }, {
@@ -2358,7 +2392,7 @@
         }, {
           "val" : "ORDO:791"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155113002"
+          "val" : "SNOMEDCT_US_2025_09_01:155113002"
         }, {
           "val" : "UMLS_CUI:C0035334"
         }, {
@@ -2390,7 +2424,7 @@
         "xrefs" : [ {
           "val" : "NCI:C84392"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:1855002"
+          "val" : "SNOMEDCT_US_2025_09_01:1855002"
         }, {
           "val" : "UMLS_CUI:C0025362"
         } ],
@@ -2426,7 +2460,7 @@
         }, {
           "val" : "NCI:C75467"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193158000"
+          "val" : "SNOMEDCT_US_2025_09_01:193158000"
         }, {
           "val" : "UMLS_CUI:C0007959"
         } ],
@@ -2466,7 +2500,7 @@
         }, {
           "val" : "NCI:C85874"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:156893009"
+          "val" : "SNOMEDCT_US_2025_09_01:156893009"
         }, {
           "val" : "UMLS_CUI:C0025958"
         } ],
@@ -2507,9 +2541,9 @@
         }, {
           "val" : "NCI:C2867"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:247606008"
+          "val" : "SNOMEDCT_US_2025_09_01:247606008"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:3298001"
+          "val" : "SNOMEDCT_US_2025_09_01:3298001"
         }, {
           "val" : "UMLS_CUI:C0002622"
         }, {
@@ -2542,7 +2576,7 @@
         }, {
           "val" : "NCI:C3079"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:194707003"
+          "val" : "SNOMEDCT_US_2025_09_01:194707003"
         }, {
           "val" : "UMLS_CUI:C0018799"
         } ],
@@ -2575,7 +2609,7 @@
         }, {
           "val" : "NCI:C99248"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:49817004"
+          "val" : "SNOMEDCT_US_2025_09_01:49817004"
         }, {
           "val" : "UMLS_CUI:C0158981"
         } ],
@@ -2604,7 +2638,7 @@
         }, {
           "val" : "NCI:C84942"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:77097004"
+          "val" : "SNOMEDCT_US_2025_09_01:77097004"
         }, {
           "val" : "UMLS_CUI:C0270952"
         } ],
@@ -2650,7 +2684,7 @@
         }, {
           "val" : "NCI:C84914"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:1177122009"
+          "val" : "SNOMEDCT_US_2025_09_01:1177122009"
         }, {
           "val" : "UMLS_CUI:C0027126"
         } ],
@@ -2683,7 +2717,7 @@
         }, {
           "val" : "NCI:C75482"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155095006"
+          "val" : "SNOMEDCT_US_2025_09_01:155095006"
         }, {
           "val" : "UMLS_CUI:C0013264"
         } ],
@@ -2718,7 +2752,7 @@
         }, {
           "val" : "NCI:C84704"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:56096001"
+          "val" : "SNOMEDCT_US_2025_09_01:56096001"
         }, {
           "val" : "UMLS_CUI:C0238288"
         } ],
@@ -2748,7 +2782,7 @@
         }, {
           "val" : "NCI:C85075"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:5262007"
+          "val" : "SNOMEDCT_US_2025_09_01:5262007"
         }, {
           "val" : "UMLS_CUI:C0026847"
         } ],
@@ -2784,7 +2818,7 @@
         }, {
           "val" : "NCI:C2887"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:68504005"
+          "val" : "SNOMEDCT_US_2025_09_01:68504005"
         }, {
           "val" : "UMLS_CUI:C0004135"
         } ],
@@ -2821,7 +2855,7 @@
         }, {
           "val" : "NCI:C84718"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155011003"
+          "val" : "SNOMEDCT_US_2025_09_01:155011003"
         }, {
           "val" : "UMLS_CUI:C0016719"
         } ],
@@ -2872,7 +2906,7 @@
         }, {
           "val" : "NCI:C82342"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:58756001"
+          "val" : "SNOMEDCT_US_2025_09_01:58756001"
         }, {
           "val" : "UMLS_CUI:C0020179"
         } ],
@@ -2900,9 +2934,11 @@
         }, {
           "val" : "MESH:D019636"
         }, {
+          "val" : "NCI:C195952"
+        }, {
           "val" : "NCI:C27090"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:362975008"
+          "val" : "SNOMEDCT_US_2025_09_01:362975008"
         }, {
           "val" : "UMLS_CUI:C0524851"
         }, {
@@ -2959,7 +2995,7 @@
         }, {
           "val" : "ORDO:217604"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:74368002"
+          "val" : "SNOMEDCT_US_2025_09_01:74368002"
         }, {
           "val" : "UMLS_CUI:C0007193"
         } ],
@@ -3043,11 +3079,11 @@
         }, {
           "val" : "NCI:C7710"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:126952004"
+          "val" : "SNOMEDCT_US_2025_09_01:126952004"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:428061005"
+          "val" : "SNOMEDCT_US_2025_09_01:428061005"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:93727008"
+          "val" : "SNOMEDCT_US_2025_09_01:93727008"
         }, {
           "val" : "UMLS_CUI:C0006118"
         }, {
@@ -3109,7 +3145,7 @@
         }, {
           "val" : "NCI:C84397"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:30188007"
+          "val" : "SNOMEDCT_US_2025_09_01:30188007"
         }, {
           "val" : "UMLS_CUI:C0221757"
         } ],
@@ -3160,7 +3196,7 @@
         }, {
           "val" : "ORDO:337"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:82725007"
+          "val" : "SNOMEDCT_US_2025_09_01:82725007"
         }, {
           "val" : "UMLS_CUI:C0016037"
         } ],
@@ -3212,7 +3248,7 @@
         }, {
           "val" : "NCI:C3424"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:157033002"
+          "val" : "SNOMEDCT_US_2025_09_01:157033002"
         }, {
           "val" : "UMLS_CUI:C0041341"
         } ],
@@ -3251,7 +3287,7 @@
         "xrefs" : [ {
           "val" : "GARD:6425"
         }, {
-          "val" : "ICD10CM:D61.09"
+          "val" : "ICD10CM:D61.03"
         }, {
           "val" : "MESH:D005199"
         }, {
@@ -3261,7 +3297,7 @@
         }, {
           "val" : "ORDO:84"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:30575002"
+          "val" : "SNOMEDCT_US_2025_09_01:30575002"
         }, {
           "val" : "UMLS_CUI:C0015625"
         } ],
@@ -3287,7 +3323,7 @@
         }, {
           "val" : "NCI:C26951"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193166009"
+          "val" : "SNOMEDCT_US_2025_09_01:193166009"
         }, {
           "val" : "UMLS_CUI:C0152025"
         } ],
@@ -3321,7 +3357,7 @@
         }, {
           "val" : "NCI:C3105"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:46659004"
+          "val" : "SNOMEDCT_US_2025_09_01:46659004"
         }, {
           "val" : "UMLS_CUI:C0019562"
         } ],
@@ -3354,7 +3390,7 @@
         }, {
           "val" : "ORDO:217034"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:145008007"
+          "val" : "SNOMEDCT_US_2025_09_01:145008007"
         }, {
           "val" : "UMLS_CUI:C0004509"
         } ],
@@ -3411,7 +3447,7 @@
         }, {
           "val" : "ORDO:870"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:41040004"
+          "val" : "SNOMEDCT_US_2025_09_01:157019002"
         }, {
           "val" : "UMLS_CUI:C0013080"
         } ],
@@ -3456,7 +3492,7 @@
         }, {
           "val" : "ORDO:908"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:390007001"
+          "val" : "SNOMEDCT_US_2025_09_01:390007001"
         }, {
           "val" : "UMLS_CUI:C0016667"
         } ],
@@ -3490,7 +3526,7 @@
         }, {
           "val" : "ICD9CM:369"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193698004"
+          "val" : "SNOMEDCT_US_2025_09_01:193698004"
         }, {
           "val" : "UMLS_CUI:C0155020"
         } ],
@@ -3534,7 +3570,7 @@
         }, {
           "val" : "ORDO:2828"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:49049000"
+          "val" : "SNOMEDCT_US_2025_09_01:49049000"
         }, {
           "val" : "UMLS_CUI:C0030567"
         } ],
@@ -3583,7 +3619,7 @@
         }, {
           "val" : "ORDO:98757"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:91952008"
+          "val" : "SNOMEDCT_US_2025_09_01:91952008"
         }, {
           "val" : "UMLS_CUI:C0024408"
         } ],
@@ -3618,7 +3654,7 @@
         }, {
           "val" : "ORDO:94"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:129609000"
+          "val" : "SNOMEDCT_US_2025_09_01:129609000"
         }, {
           "val" : "UMLS_CUI:C0087012"
         } ],
@@ -3656,7 +3692,7 @@
         }, {
           "val" : "ORDO:79262"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:42012007"
+          "val" : "SNOMEDCT_US_2025_09_01:42012007"
         }, {
           "val" : "UMLS_CUI:C0027877"
         } ],
@@ -3695,7 +3731,7 @@
         }, {
           "val" : "NCI:C61269"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:58459009"
+          "val" : "SNOMEDCT_US_2025_09_01:58459009"
         }, {
           "val" : "UMLS_CUI:C0028064"
         } ],
@@ -3774,7 +3810,7 @@
         }, {
           "val" : "NCI:C98983"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:290006"
+          "val" : "SNOMEDCT_US_2025_09_01:290006"
         }, {
           "val" : "UMLS_CUI:C0265234"
         } ],
@@ -3815,7 +3851,7 @@
         }, {
           "val" : "ORDO:69189"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193223007"
+          "val" : "SNOMEDCT_US_2025_09_01:193223007"
         }, {
           "val" : "UMLS_CUI:C0175709"
         } ],
@@ -3850,7 +3886,7 @@
         }, {
           "val" : "NCI:C84947"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:67761004"
+          "val" : "SNOMEDCT_US_2025_09_01:67761004"
         }, {
           "val" : "UMLS_CUI:C0028968"
         } ],
@@ -3898,7 +3934,7 @@
         }, {
           "val" : "ORDO:65"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:193413001"
+          "val" : "SNOMEDCT_US_2025_09_01:193413001"
         }, {
           "val" : "UMLS_CUI:C0339527"
         } ],
@@ -3936,7 +3972,7 @@
         }, {
           "val" : "MESH:D002771"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:186087007"
+          "val" : "SNOMEDCT_US_2025_09_01:186087007"
         }, {
           "val" : "UMLS_CUI:C0008354"
         } ],
@@ -3974,7 +4010,7 @@
         }, {
           "val" : "NCI:C20701"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:15167005"
+          "val" : "SNOMEDCT_US_2025_09_01:15167005"
         }, {
           "val" : "UMLS_CUI:C0085762"
         } ],
@@ -4015,7 +4051,7 @@
         }, {
           "val" : "NCI:C9305"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:269513004"
+          "val" : "SNOMEDCT_US_2025_09_01:269513004"
         }, {
           "val" : "UMLS_CUI:C0006826"
         } ],
@@ -4063,7 +4099,7 @@
         }, {
           "val" : "NCI:C34666"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:268315002"
+          "val" : "SNOMEDCT_US_2025_09_01:268315002"
         }, {
           "val" : "UMLS_CUI:C0018798"
         } ],
@@ -4091,7 +4127,7 @@
         }, {
           "val" : "NCI:C26782"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155120009"
+          "val" : "SNOMEDCT_US_2025_09_01:155120009"
         }, {
           "val" : "UMLS_CUI:C0017601"
         } ],
@@ -4120,7 +4156,7 @@
         "xrefs" : [ {
           "val" : "EFO:0000474"
         }, {
-          "val" : "ICD10CM:G40"
+          "val" : "ICD10CM:G40.909"
         }, {
           "val" : "ICD9CM:345.9"
         }, {
@@ -4128,7 +4164,7 @@
         }, {
           "val" : "NCI:C3020"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:267698007"
+          "val" : "SNOMEDCT_US_2025_09_01:267698007"
         }, {
           "val" : "UMLS_CUI:C0014544"
         } ],
@@ -4172,7 +4208,7 @@
         }, {
           "val" : "NCI:C75486"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:59178007"
+          "val" : "SNOMEDCT_US_2025_09_01:59178007"
         }, {
           "val" : "UMLS_CUI:C0022716"
         } ],
@@ -4205,7 +4241,7 @@
         }, {
           "val" : "ORDO:284385"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:4637005"
+          "val" : "SNOMEDCT_US_2025_09_01:4637005"
         }, {
           "val" : "UMLS_CUI:C0008372"
         } ],
@@ -4252,7 +4288,7 @@
         }, {
           "val" : "ORDO:355"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:190794006"
+          "val" : "SNOMEDCT_US_2025_09_01:190794006"
         }, {
           "val" : "UMLS_CUI:C0017205"
         } ],
@@ -4289,7 +4325,7 @@
         }, {
           "val" : "NCI:C85232"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:63247009"
+          "val" : "SNOMEDCT_US_2025_09_01:63247009"
         }, {
           "val" : "UMLS_CUI:C0175702"
         } ],
@@ -4327,7 +4363,7 @@
         }, {
           "val" : "NCI:C75462"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:76880004"
+          "val" : "SNOMEDCT_US_2025_09_01:76880004"
         }, {
           "val" : "UMLS_CUI:C0162635"
         } ],
@@ -4360,7 +4396,7 @@
         }, {
           "val" : "NCI:C34460"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155024003"
+          "val" : "SNOMEDCT_US_2025_09_01:155024003"
         }, {
           "val" : "UMLS_CUI:C0007789"
         } ],
@@ -4413,7 +4449,7 @@
         }, {
           "val" : "ORDO:99966"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:128792003"
+          "val" : "SNOMEDCT_US_2025_09_01:128792003"
         }, {
           "val" : "UMLS_CUI:C1266184"
         } ],
@@ -4442,7 +4478,9 @@
         }, {
           "val" : "MESH:D016472"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:37340000"
+          "val" : "NCI:C197818"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:37340000"
         }, {
           "val" : "UMLS_CUI:C0085084"
         } ],
@@ -4502,11 +4540,11 @@
         }, {
           "val" : "ORDO:213517"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:123843001"
+          "val" : "SNOMEDCT_US_2025_09_01:123843001"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:372117006"
+          "val" : "SNOMEDCT_US_2025_09_01:372117006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:93934004"
+          "val" : "SNOMEDCT_US_2025_09_01:93934004"
         }, {
           "val" : "UMLS_CUI:C0919267"
         }, {
@@ -4565,7 +4603,7 @@
         }, {
           "val" : "NCI:C140267"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:267692008"
+          "val" : "SNOMEDCT_US_2025_09_01:267692008"
         }, {
           "val" : "UMLS_CUI:C0037773"
         } ],
@@ -4617,7 +4655,7 @@
         }, {
           "val" : "NCI:C27134"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:414388001"
+          "val" : "SNOMEDCT_US_2025_09_01:414388001"
         }, {
           "val" : "UMLS_CUI:C0376544"
         } ],
@@ -4659,7 +4697,7 @@
         }, {
           "val" : "ORDO:125"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:4434006"
+          "val" : "SNOMEDCT_US_2025_09_01:4434006"
         }, {
           "val" : "UMLS_CUI:C0005859"
         } ],
@@ -4691,7 +4729,7 @@
         }, {
           "val" : "NCI:C26757"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:194193002"
+          "val" : "SNOMEDCT_US_2025_09_01:194193002"
         }, {
           "val" : "UMLS_CUI:C0013447"
         } ],
@@ -4743,7 +4781,7 @@
         }, {
           "val" : "ORDO:768"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:9651007"
+          "val" : "SNOMEDCT_US_2025_09_01:9651007"
         }, {
           "val" : "UMLS_CUI:C0023976"
         } ],
@@ -4775,7 +4813,7 @@
         }, {
           "val" : "ICD9CM:279.9"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:154782004"
+          "val" : "SNOMEDCT_US_2025_09_01:154782004"
         }, {
           "val" : "UMLS_CUI:C0041806"
         } ],
@@ -4816,7 +4854,7 @@
         }, {
           "val" : "ORDO:167"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:111396008"
+          "val" : "SNOMEDCT_US_2025_09_01:111396008"
         }, {
           "val" : "UMLS_CUI:C0007965"
         } ],
@@ -4894,7 +4932,7 @@
         }, {
           "val" : "ORDO:191"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:205832003"
+          "val" : "SNOMEDCT_US_2025_09_01:205832003"
         }, {
           "val" : "UMLS_CUI:C0009207"
         } ],
@@ -4927,11 +4965,15 @@
           "val" : "inborn errors of carbohydrate metabolism"
         } ],
         "xrefs" : [ {
+          "val" : "ICD10CM:E74.9"
+        }, {
           "val" : "MESH:D002239"
         }, {
           "val" : "NCI:C97089"
         }, {
           "val" : "ORDO:79161"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:20957000"
         }, {
           "val" : "UMLS_CUI:C0007001"
         }, {
@@ -4991,11 +5033,11 @@
         }, {
           "val" : "NCI:C3709"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:188083002"
+          "val" : "SNOMEDCT_US_2025_09_01:188083002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:269513004"
+          "val" : "SNOMEDCT_US_2025_09_01:269513004"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:71298006"
+          "val" : "SNOMEDCT_US_2025_09_01:71298006"
         }, {
           "val" : "UMLS_CUI:C0007097"
         }, {
@@ -5047,11 +5089,11 @@
         }, {
           "val" : "NCI:C4890"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:128348002"
+          "val" : "SNOMEDCT_US_2025_09_01:128348002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:276806006"
+          "val" : "SNOMEDCT_US_2025_09_01:276806006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:428905002"
+          "val" : "SNOMEDCT_US_2025_09_01:428905002"
         }, {
           "val" : "UMLS_CUI:C0012243"
         }, {
@@ -5128,11 +5170,11 @@
         }, {
           "val" : "MESH:D017696"
         }, {
-          "val" : "MIM:PS161800"
+          "val" : "MIM:PS256030"
         }, {
           "val" : "ORDO:607"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:75072002"
+          "val" : "SNOMEDCT_US_2025_09_01:75072002"
         }, {
           "val" : "UMLS_CUI:C0206157"
         } ],
@@ -5166,7 +5208,7 @@
         }, {
           "val" : "NCI:C61250"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:23585005"
+          "val" : "SNOMEDCT_US_2025_09_01:28821000119102"
         }, {
           "val" : "UMLS_CUI:C0085078"
         } ],
@@ -5213,7 +5255,7 @@
         }, {
           "val" : "ORDO:803"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:86044005"
+          "val" : "SNOMEDCT_US_2025_09_01:86044005"
         }, {
           "val" : "UMLS_CUI:C0002736"
         } ],
@@ -5252,7 +5294,7 @@
         }, {
           "val" : "NCI:C61267"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:70528007"
+          "val" : "SNOMEDCT_US_2025_09_01:70528007"
         }, {
           "val" : "UMLS_CUI:C0026697"
         } ],
@@ -5287,7 +5329,7 @@
         }, {
           "val" : "ORDO:611"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:72315009"
+          "val" : "SNOMEDCT_US_2025_09_01:72315009"
         }, {
           "val" : "UMLS_CUI:C0238190"
         } ],
@@ -5327,7 +5369,7 @@
         }, {
           "val" : "ORDO:648"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:88327006"
+          "val" : "SNOMEDCT_US_2025_09_01:88327006"
         }, {
           "val" : "UMLS_CUI:C0028326"
         } ],
@@ -5363,13 +5405,15 @@
         "xrefs" : [ {
           "val" : "GARD:8214"
         }, {
+          "val" : "ICD10CM:G40.C"
+        }, {
           "val" : "MESH:D020192"
         }, {
           "val" : "MIM:PS254780"
         }, {
           "val" : "NCI:C84804"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:230425004"
+          "val" : "SNOMEDCT_US_2025_09_01:230425004"
         }, {
           "val" : "UMLS_CUI:C0751783"
         } ],
@@ -5415,7 +5459,7 @@
         }, {
           "val" : "ORDO:506"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:29570005"
+          "val" : "SNOMEDCT_US_2025_09_01:29570005"
         }, {
           "val" : "UMLS_CUI:C0023264"
         } ],
@@ -5454,7 +5498,7 @@
         }, {
           "val" : "ORDO:79430"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:60255003"
+          "val" : "SNOMEDCT_US_2025_09_01:60255003"
         }, {
           "val" : "UMLS_CUI:C0079504"
         } ],
@@ -5487,7 +5531,7 @@
         }, {
           "val" : "NCI:C98910"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:237991006"
+          "val" : "SNOMEDCT_US_2025_09_01:237991006"
         }, {
           "val" : "UMLS_CUI:C0268237"
         } ],
@@ -5516,7 +5560,7 @@
         }, {
           "val" : "NCI:C84643"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:15182000"
+          "val" : "SNOMEDCT_US_2025_09_01:15182000"
         }, {
           "val" : "UMLS_CUI:C0265252"
         } ],
@@ -5565,7 +5609,7 @@
         }, {
           "val" : "ORDO:740"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:190590004"
+          "val" : "SNOMEDCT_US_2025_09_01:190590004"
         }, {
           "val" : "UMLS_CUI:C0033300"
         } ],
@@ -5618,7 +5662,7 @@
         }, {
           "val" : "ORDO:157850"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:2992000"
+          "val" : "SNOMEDCT_US_2025_09_01:2992000"
         }, {
           "val" : "UMLS_CUI:C0018523"
         } ],
@@ -5651,7 +5695,7 @@
         }, {
           "val" : "NCI:C7958"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:404053004"
+          "val" : "SNOMEDCT_US_2025_09_01:404053004"
         }, {
           "val" : "UMLS_CUI:C0206655"
         }, {
@@ -5706,7 +5750,7 @@
         }, {
           "val" : "NCI:C101216"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155094005"
+          "val" : "SNOMEDCT_US_2025_09_01:155094005"
         }, {
           "val" : "UMLS_CUI:C0026848"
         } ],
@@ -5746,7 +5790,7 @@
         }, {
           "val" : "NCI:C84727"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:67155006"
+          "val" : "SNOMEDCT_US_2025_09_01:67155006"
         }, {
           "val" : "UMLS_CUI:C0017495"
         } ],
@@ -5773,13 +5817,15 @@
         "xrefs" : [ {
           "val" : "GARD:5774"
         }, {
+          "val" : "ICD10CM:G31.86"
+        }, {
           "val" : "MESH:D038261"
         }, {
           "val" : "MIM:203450"
         }, {
           "val" : "NCI:C84545"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:81854007"
+          "val" : "SNOMEDCT_US_2025_09_01:81854007"
         }, {
           "val" : "UMLS_CUI:C0270726"
         } ],
@@ -5813,7 +5859,7 @@
         }, {
           "val" : "ORDO:279"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:302891003"
+          "val" : "SNOMEDCT_US_2025_09_01:302891003"
         }, {
           "val" : "UMLS_CUI:C0024437"
         } ],
@@ -5833,7 +5879,7 @@
         }, {
           "val" : "NCI:C85034"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:77098009"
+          "val" : "SNOMEDCT_US_2025_09_01:77098009"
         }, {
           "val" : "UMLS_CUI:C0033805"
         } ],
@@ -5861,7 +5907,7 @@
         }, {
           "val" : "NCI:C84913"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155096007"
+          "val" : "SNOMEDCT_US_2025_09_01:155096007"
         }, {
           "val" : "UMLS_CUI:C0553604"
         } ],
@@ -5895,7 +5941,7 @@
         "xrefs" : [ {
           "val" : "MESH:D020240"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:39746003"
+          "val" : "SNOMEDCT_US_2025_09_01:39746003"
         }, {
           "val" : "UMLS_CUI:C0234523"
         } ],
@@ -5957,7 +6003,7 @@
         }, {
           "val" : "NCI:C3362"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:58214004"
+          "val" : "SNOMEDCT_US_2025_09_01:58214004"
         }, {
           "val" : "UMLS_CUI:C0036341"
         } ],
@@ -5994,9 +6040,9 @@
         }, {
           "val" : "NCI:C34563"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:15802004"
+          "val" : "SNOMEDCT_US_2025_09_01:15802004"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:250068003"
+          "val" : "SNOMEDCT_US_2025_09_01:250068003"
         }, {
           "val" : "UMLS_CUI:C0013421"
         }, {
@@ -6039,7 +6085,7 @@
         }, {
           "val" : "NCI:C3149"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:266612003"
+          "val" : "SNOMEDCT_US_2025_09_01:266612003"
         }, {
           "val" : "UMLS_CUI:C0022658"
         } ],
@@ -6070,7 +6116,7 @@
         }, {
           "val" : "NCI:C26767"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:371409005"
+          "val" : "SNOMEDCT_US_2025_09_01:371405004"
         }, {
           "val" : "UMLS_CUI:C0015397"
         } ],
@@ -6118,7 +6164,7 @@
         }, {
           "val" : "ORDO:902"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:51626007"
+          "val" : "SNOMEDCT_US_2025_09_01:51626007"
         }, {
           "val" : "UMLS_CUI:C0043119"
         } ],
@@ -6155,7 +6201,7 @@
         }, {
           "val" : "ORDO:98673"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155188004"
+          "val" : "SNOMEDCT_US_2025_09_01:155188004"
         }, {
           "val" : "UMLS_CUI:C0029124"
         } ],
@@ -6200,7 +6246,7 @@
         }, {
           "val" : "NCI:C39725"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:191005003"
+          "val" : "SNOMEDCT_US_2025_09_01:191005003"
         }, {
           "val" : "UMLS_CUI:C0021051"
         } ],
@@ -6244,7 +6290,7 @@
         }, {
           "val" : "NCI:C128346"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:20484008"
+          "val" : "SNOMEDCT_US_2025_09_01:20484008"
         }, {
           "val" : "UMLS_CUI:C0162534"
         } ],
@@ -6295,7 +6341,7 @@
         }, {
           "val" : "NCI:C101328"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:240096000"
+          "val" : "SNOMEDCT_US_2025_09_01:240096000"
         }, {
           "val" : "UMLS_CUI:C0162670"
         } ],
@@ -6319,7 +6365,7 @@
         }, {
           "val" : "MESH:D028361"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:240096000"
+          "val" : "SNOMEDCT_US_2025_09_01:240096000"
         }, {
           "val" : "UMLS_CUI:C0751651"
         } ],
@@ -6347,7 +6393,7 @@
         }, {
           "val" : "NCI:C34979"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:95695004"
+          "val" : "SNOMEDCT_US_2025_09_01:95695004"
         }, {
           "val" : "UMLS_CUI:C0035304"
         } ],
@@ -6375,7 +6421,7 @@
         }, {
           "val" : "NCI:C27204"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:268048008"
+          "val" : "SNOMEDCT_US_2025_09_01:268048008"
         }, {
           "val" : "UMLS_CUI:C0009326"
         } ],
@@ -6422,7 +6468,7 @@
         }, {
           "val" : "NCI:C34726"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:154359004"
+          "val" : "SNOMEDCT_US_2025_09_01:154359004"
         }, {
           "val" : "UMLS_CUI:C0021345"
         } ],
@@ -6443,6 +6489,8 @@
         }, {
           "val" : "ICD10CM:Q85.0"
         }, {
+          "val" : "ICD10CM:Q85.00"
+        }, {
           "val" : "ICD9CM:237.7"
         }, {
           "val" : "MESH:D017253"
@@ -6451,7 +6499,7 @@
         }, {
           "val" : "ORDO:634518"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:19133005"
+          "val" : "SNOMEDCT_US_2025_09_01:154642000"
         }, {
           "val" : "UMLS_CUI:C0162678"
         }, {
@@ -6510,7 +6558,7 @@
         "xrefs" : [ {
           "val" : "MESH:D017237"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:447292006"
+          "val" : "SNOMEDCT_US_2025_09_01:447292006"
         }, {
           "val" : "UMLS_CUI:C0162666"
         } ],
@@ -6543,9 +6591,9 @@
         }, {
           "val" : "NCI:C89334"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:1855002"
+          "val" : "SNOMEDCT_US_2025_09_01:1855002"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:192531005"
+          "val" : "SNOMEDCT_US_2025_09_01:192531005"
         }, {
           "val" : "UMLS_CUI:C0023186"
         }, {
@@ -6588,7 +6636,7 @@
         }, {
           "val" : "ORDO:912"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:88469006"
+          "val" : "SNOMEDCT_US_2025_09_01:88469006"
         }, {
           "val" : "UMLS_CUI:C0043459"
         } ],
@@ -6620,7 +6668,7 @@
         }, {
           "val" : "NCI:C85005"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:238059005"
+          "val" : "SNOMEDCT_US_2025_09_01:238059005"
         }, {
           "val" : "UMLS_CUI:C0282528"
         } ],
@@ -6679,7 +6727,7 @@
         }, {
           "val" : "NCI:C3171"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:17788007"
+          "val" : "SNOMEDCT_US_2025_09_01:17788007"
         }, {
           "val" : "UMLS_CUI:C0023467"
         } ],
@@ -6718,7 +6766,7 @@
         }, {
           "val" : "NCI:C2868"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:154769007"
+          "val" : "SNOMEDCT_US_2025_09_01:154769007"
         }, {
           "val" : "UMLS_CUI:C0002726"
         } ],
@@ -6757,11 +6805,11 @@
         "xrefs" : [ {
           "val" : "GARD:8436"
         }, {
-          "val" : "MESH:D057180"
+          "val" : "MESH:C563003"
         }, {
           "val" : "ORDO:282"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:42369001"
+          "val" : "SNOMEDCT_US_2025_09_01:42369001"
         }, {
           "val" : "UMLS_CUI:C0520716"
         } ],
@@ -6797,9 +6845,9 @@
         }, {
           "val" : "NCI:C4978"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:126837005"
+          "val" : "SNOMEDCT_US_2025_09_01:126837005"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:93854002"
+          "val" : "SNOMEDCT_US_2025_09_01:93854002"
         }, {
           "val" : "UMLS_CUI:C0009404"
         }, {
@@ -6845,9 +6893,9 @@
         }, {
           "val" : "NCI:C34396"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:34014006"
+          "val" : "SNOMEDCT_US_2025_09_01:34014006"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:40610006"
+          "val" : "SNOMEDCT_US_2025_09_01:40610006"
         }, {
           "val" : "UMLS_CUI:C0003723"
         }, {
@@ -6908,7 +6956,7 @@
         }, {
           "val" : "NCI:C26747"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:44054006"
+          "val" : "SNOMEDCT_US_2025_09_01:44054006"
         }, {
           "val" : "UMLS_CUI:C0011860"
         } ],
@@ -6965,9 +7013,11 @@
         }, {
           "val" : "MIM:228100"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:371330000"
+          "val" : "NCI:C197833"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:50325005"
+          "val" : "SNOMEDCT_US_2025_09_01:371330000"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:50325005"
         }, {
           "val" : "UMLS_CUI:C0015695"
         }, {
@@ -7010,8 +7060,6 @@
         }, {
           "val" : "ORDO:244"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:86204009"
-        }, {
           "val" : "UMLS_CUI:C0008780"
         } ],
         "basicPropertyValues" : [ {
@@ -7051,7 +7099,7 @@
         }, {
           "val" : "NCI:C84723"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:38177000"
+          "val" : "SNOMEDCT_US_2025_09_01:38177000"
         }, {
           "val" : "UMLS_CUI:C0016952"
         } ],
@@ -7093,7 +7141,7 @@
         }, {
           "val" : "NCI:C84910"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:155095006"
+          "val" : "SNOMEDCT_US_2025_09_01:155095006"
         }, {
           "val" : "UMLS_CUI:C0026850"
         } ],
@@ -7126,7 +7174,7 @@
         }, {
           "val" : "NCI:C159658"
         }, {
-          "val" : "SNOMEDCT_US_2023_03_01:5476005"
+          "val" : "SNOMEDCT_US_2025_09_01:5476005"
         }, {
           "val" : "UMLS_CUI:C0028754"
         } ],

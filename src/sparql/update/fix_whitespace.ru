@@ -12,8 +12,8 @@ WHERE {
     FILTER( datatype(?o) IN (rdf:langString, xsd:string) )
     BIND(
         REPLACE(
-            REPLACE(?o, " (,) *| +", "$1 "),
-            " (\\.)| +$|^ +", "$1"
+            REPLACE(?o, "[ \t\r\n](,)[ \t\r\n]*|[ \t\r\n]+", "$1 "),
+            "[ \t\r\n](\\.)|[ \t\r\n]+$|^[ \t\r\n]+", "$1"
         ) AS ?new_o
     )
 }

@@ -463,20 +463,20 @@ MANUAL_IMPS := omim_susc
 
 imports: | check_robot
 	@echo "Checking import modules..."
-	@cd src/ontology/imports && $(MAKE) imports
+	@$(MAKE) -C src/ontology/imports imports
 
 refresh_imports: | check_robot
 	@echo "Refreshing import modules (this may take some time)..."
-	@cd src/ontology/imports && $(MAKE) refresh_imports
+	@$(MAKE) -C src/ontology/imports refresh_imports
 
 $(IMPS): | check_robot
 	@echo "Generating $@ import module..."
-	@cd src/ontology/imports && $(MAKE) $@
+	@$(MAKE) -C src/ontology/imports $@
 
 # Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
 REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh_$(IMP))
 $(REFRESH_IMPS):
-	@cd src/ontology/imports && $(MAKE) $@
+	@$(MAKE) -C src/ontology/imports $@
 
 .PHONY: imports refresh_imports $(IMPS) $(REFRESH_IMPS)
 

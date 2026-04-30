@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-03-31/subsets/DO_rare_slim.obo
-date: 31:03:2026 15:18
+data-version: doid/releases/2026-04-30/subsets/DO_rare_slim.obo
+date: 30:04:2026 14:18
 ontology: doid/subsets/DO_rare_slim
 
 [Term]
@@ -802,6 +802,7 @@ namespace: disease_ontology
 def: "A congenital nervous system abnormality characterized by non proper migration of neurons during the early development of the fetal brain." [url:http\://ghr.nlm.nih.gov/condition/periventricular-heterotopia]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "periventricular heterotopia" EXACT []
 xref: MESH:D054091
 xref: MIM:PS300049
@@ -837,7 +838,7 @@ id: DOID:0050457
 name: Sertoli cell-only syndrome
 namespace: disease_ontology
 def: "A male infertility disease characterized by male sterility, has_material_basis_in azospermia without abnormal sexual development." [url:https\://rarediseases.info.nih.gov/diseases/8406/sertoli-cell-only-syndrome]
-comment: OMIM mapping confirmed by DO. [SN].
+comment: Azoospermia is the absence of sperm in the ejaculate, a major cause of male infertility, which may or may not be caused by Spermatogonial maturation arrest.
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "DEL CASTILLO SYNDROME" EXACT []
@@ -1383,7 +1384,7 @@ xref: ORDO:450
 id: DOID:0050548
 name: hereditary sensory and autonomic neuropathy
 namespace: disease_ontology
-def: "A neuropathy characterized by axonal atrophy and degeneration, exclusively or predominantly affecting the sensory neurons, and variable autonomic dysfunction. Loss of pain and temperature sensation is an early and predominant, but not universal, symptom." [url:https\://pubmed.ncbi.nlm.nih.gov/23931820/, url:https\://pubmed.ncbi.nlm.nih.gov/31222456/]
+def: "A neuropathy characterized by axonal atrophy and degeneration, exclusively or predominantly affecting the sensory neurons, and variable autonomic dysfunction that has_material_basis_in an inherited mutation. Loss of pain and temperature sensation is an early and predominant, but not universal, symptom." [url:https\://pubmed.ncbi.nlm.nih.gov/23931820/, url:https\://pubmed.ncbi.nlm.nih.gov/31222456/]
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
 synonym: "hereditary sensory neuropathy" EXACT []
@@ -2525,6 +2526,7 @@ namespace: disease_ontology
 def: "A skin disease that is characterized by the development of several types of tumors from the skin, has_material_basis_in heterozygous mutation in the CYLD gene on chromosome 16q12." [url:https\://rarediseases.info.nih.gov/diseases/10179/brooke-spiegler-syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "BRSS" EXACT OMO:0003012 []
 synonym: "BSS" EXACT OMO:0003012 []
 synonym: "CYLD cutaneous syndrome" EXACT []
@@ -2977,15 +2979,24 @@ id: DOID:0050778
 name: Meckel syndrome
 namespace: disease_ontology
 def: "A ciliopathy that is characterized by renal cystic dysplasia, occipital encephalocele, polydactyly (post axial), hepatic developmental defects, and pulmonary hypoplasia." [url:http\://en.wikipedia.org/wiki/Meckel_syndrome, url:http\://www.rarediseases.org/rare-disease-information/rare-diseases/byID/661/viewAbstract]
-comment: Xref MGI.
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "Meckel-Gruber syndrome" EXACT []
 xref: GARD:3436
+xref: ICD10CM:Q61.9
 xref: ICD9CM:753.1
 xref: MIM:PS249000
+xref: NCI:C98978
 xref: ORDO:564
-xref: SNOMEDCT_US_2025_09_01:204954005
-xref: UMLS_CUI:C0311245
+xref: SNOMEDCT_US_2025_09_01:29076005
+xref: UMLS_CUI:C0265215
+property_value: broadMatch "ICD10CM:Q61.9" xsd:string
+property_value: broadMatch "ICD9CM:753.1" xsd:string
+property_value: exactMatch "GARD:3436" xsd:string
+property_value: exactMatch "MIM:PS249000" xsd:string
+property_value: exactMatch "NCI:C98978" xsd:string
+property_value: exactMatch "ORDO:564" xsd:string
+property_value: exactMatch "UMLS_CUI:C0265215" xsd:string
 creation_date: 2013-04-04T11:28:16Z
 
 [Term]
@@ -3038,7 +3049,7 @@ id: DOID:0050786
 name: obsolete iridogoniodysgenesis syndrome
 namespace: disease_ontology
 def: "An iris disease that is characterized by the iris stroma being hypoplastic resulting from abnormalities in the differentiation of the anterior segment structures and increased values of intraocular pressure and has_material_basis_in autosomal dominant inheritance of mutations in the PITX2 gene." [url:http\://disorders.eyes.arizona.edu/category/alternate-names/iridogoniodysgenesis-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/19175065]
-comment: Xref MGI.\n\nclaudiasbj: reason for this disease being obsolete detailed on: https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1566
+comment: Xref MGI. claudiasbj: reason for this disease being obsolete detailed on: https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1566
 subset: DO_rare_slim
 synonym: "IGDS" EXACT OMO:0003012 []
 synonym: "IRID 1" EXACT OMO:0003012 []
@@ -3945,6 +3956,57 @@ xref: MIM:605407
 xref: ORDO:101150
 
 [Term]
+id: DOID:0051067
+name: Fontaine progeroid syndrome
+namespace: disease_ontology
+def: "A progeroid syndrome that is characterized by poor growth, abnormal skeletal features, and distinctive craniofacial features with sagging, thin skin, and decreased subcutaneous fat suggesting an aged appearance that is most pronounced in infancy and improves with time and that has_material_basis_in heterozygous mutation in the SLC25A24 gene on chromosome 1p36." [url:https\://pubmed.ncbi.nlm.nih.gov/35679445/, url:https\://www.ncbi.nlm.nih.gov/books/NBK581082/]
+subset: DO_rare_slim
+synonym: "Gorlin-Chaudhry-Moss syndrome" EXACT []
+synonym: "Progeroid Syndrome, Congenital, Petty Type" EXACT []
+xref: MIM:612289
+xref: ORDO:2095
+xref: ORDO:2963
+xref: ORDO:697101
+
+[Term]
+id: DOID:0051068
+name: early-onset obesity, adrenal insufficiency, and red hair
+namespace: disease_ontology
+def: "A syndrome that is characterized by early-onset obesity due to severe hyperphagia, pigmentary abnormalities, mainly pale skin and red hair, and secondary hypocortisolism and that has_material_basis_in homozygous or compound heterozygous mutation in the POMC gene on chromosome 2p23." [url:https\://medlineplus.gov/genetics/condition/proopiomelanocortin-deficiency/, url:https\://pubmed.ncbi.nlm.nih.gov/27468060/]
+subset: DO_rare_slim
+synonym: "POMC deficiency" EXACT []
+synonym: "pro-opiomelanocortin deficiency" EXACT []
+synonym: "proopiomelanocortin deficiency syndrome" EXACT []
+xref: GARD:10823
+xref: MIM:609734
+
+[Term]
+id: DOID:0051077
+name: diethylstilbestrol syndrome
+namespace: disease_ontology
+def: "A reproductive system disease that is characterized by reproductive tract malformations, decreased fertility and increased risk of developing clear cell carcinoma of the vagina and cervix in young women, in offspring or grandchildren of women exposed to diethylstilbestrol (DES) during pregnancy." [url:https\://rarediseases.org/mondo-disease/diethylstilbestrol-syndrome/, url:https\://www.cancer.gov/about-cancer/causes-prevention/risk/hormones/des-fact-sheet#what-is-des]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "DES syndrome" EXACT []
+xref: ICD10CM:Q86.8
+xref: ICD11:LB44.6
+xref: NCI:C113422
+xref: ORDO:1916
+xref: UMLS_CUI:C0853695
+
+[Term]
+id: DOID:0051080
+name: Alport syndrome 3B
+namespace: disease_ontology
+def: "An Alport syndrome that is characterized by glomerular basement membrane abnormalities and that has_material_basis_in homozygous or compound heterozygous mutation in the COL4A3 gene on chromosome 2q36. Sensorineural hearing loss and ocular manifestations may be present." [url:https\://pubmed.ncbi.nlm.nih.gov/9792860/]
+subset: DO_rare_slim
+xref: GARD:625
+xref: MIM:620536
+xref: ORDO:88919
+is_a: DOID:10983 ! Alport syndrome
+property_value: exactMatch "MIM:620536" xsd:string
+
+[Term]
 id: DOID:0060000
 name: infective endocarditis
 namespace: disease_ontology
@@ -4313,6 +4375,7 @@ name: Timothy syndrome
 namespace: disease_ontology
 def: "A syndrome characterized by cardiac, hand/foot, facial, and neurodevelopmental features that has_material_basis_in heterozygous mutation in the CACNA1C gene on chromosome 12p13.33. The two forms are type 1 (classic) and type 2, a rare form that has_material_basis_in mutations in a transcript variant of the CACNA1C gene." [url:http\://www.ncbi.nlm.nih.gov/books/NBK1403/, url:https\://ghr.nlm.nih.gov/condition/timothy-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/15863612]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "long QT syndrome with syndactyly" RELATED []
 xref: GARD:9294
 xref: MESH:C536962
@@ -5622,6 +5685,7 @@ namespace: disease_ontology
 def: "A Ohdo syndrome that is characterized by blepharophimosis, ptosis and intellectual disability and that has_material_basis_in heterozygous mutation in the KAT6B gene on chromosome 10q22." [url:https\://pubmed.ncbi.nlm.nih.gov/22077973/, url:https\://rarediseases.info.nih.gov/diseases/10892/blepharophimosis-intellectual-disability-syndromes]
 comment: NT MGI.
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "blepharophimosis-intellectual disability syndrome, SBBYS type" EXACT []
 synonym: "Say-Barber-Biesecker-Young-Simpson syndrome" EXACT []
 synonym: "SBBYSS" RELATED OMO:0003012 []
@@ -8021,6 +8085,7 @@ name: Kufor-Rakeb syndrome
 namespace: disease_ontology
 def: "An early-onset Parkinson's disease that is characterized by supranuclear gaze palsy, spasticity, and dementia and has_material_basis_in homozygous or compound heterozygous mutation in a lysosomal type 5 ATPase encoding gene on chromosome 1p36." [url:https\://www.ncbi.nlm.nih.gov/pubmed/15986421, url:https\://www.ncbi.nlm.nih.gov/pubmed/23791710]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "autosomal recessive juvenile onset Parkinson disease 9" EXACT []
 synonym: "autosomal recessive Parkinson disease 9" EXACT []
 xref: MESH:C537177
@@ -9215,13 +9280,14 @@ is_a: DOID:3209 ! junctional epidermolysis bullosa
 
 [Term]
 id: DOID:0060735
-name: epidermolysis bullosa simplex Dowling-Meara type
+name: generalized severe epidermolysis bullosa simplex 1A
 namespace: disease_ontology
-def: "An epidermolysis bullosa simplex characterized by generalized non-scarring skin blistering that often occurs in clusters, progressive hyperkeratosis of the palms and soles, clumping of keratin filaments in basal epidermal cells and that has_material_basis_in mutation in either the KRT5 or KRT14 genes. This is the most severe of the epidermolysis bullosa simplex types and may result in neonatal or infant lethality in some cases." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1369/, url:https\://www.ncbi.nlm.nih.gov/pubmed/1372711, url:https\://www.ncbi.nlm.nih.gov/pubmed/1717157, url:https\://www.ncbi.nlm.nih.gov/pubmed/18374450]
+def: "An epidermolysis bullosa simplex characterized by generalized non-scarring skin blistering that often occurs in clusters, progressive hyperkeratosis of the palms and soles, clumping of keratin filaments in basal epidermal cells and that has_material_basis_in mutation in the Keratin 14 (KRT14) gene on chromosome 17q21 either the KRT5 or KRT14 genes. This is the most severe of the epidermolysis bullosa simplex types and may result in neonatal or infant lethality in some cases." [url:https\://www.ncbi.nlm.nih.gov/books/NBK1369/, url:https\://www.ncbi.nlm.nih.gov/pubmed/1372711, url:https\://www.ncbi.nlm.nih.gov/pubmed/1717157, url:https\://www.ncbi.nlm.nih.gov/pubmed/18374450]
 subset: DO_rare_slim
 synonym: "EBS-gen sev" EXACT []
 synonym: "EBSDM" EXACT OMO:0003012 []
 synonym: "epidermolysis bullosa herpetiformis Dowling-Meara type" EXACT []
+synonym: "epidermolysis bullosa simplex Dowling-Meara type" EXACT []
 synonym: "epidermolysis bullosa simplex, herpetiformis" EXACT []
 synonym: "generalized severe epidermolysis bullosa simplex" EXACT []
 xref: ICD10CM:Q81.0
@@ -9231,13 +9297,14 @@ is_a: DOID:4644 ! epidermolysis bullosa simplex
 
 [Term]
 id: DOID:0060736
-name: epidermolysis bullosa simplex Ogna type
+name: epidermolysis bullosa simplex 5A Ogna type
 namespace: disease_ontology
 def: "An epidermolysis bullosa simplex characterized by skin blisters originating in the deepest areas of the basal cell cytoplasm just above the hemidesmosomes, skin bruising and that has_material_basis_in heterozygous mutation in the PLEC1 gene on chromosome 8q24." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11851880]
 subset: DO_rare_slim
 synonym: "EBS-O" EXACT OMO:0003012 []
 synonym: "EBS-Og" EXACT OMO:0003012 []
 synonym: "EBSOG" EXACT OMO:0003012 []
+synonym: "epidermolysis bullosa simplex Ogna type" EXACT []
 xref: ICD10CM:Q81.0
 xref: MIM:131950
 xref: ORDO:79401
@@ -10632,10 +10699,11 @@ is_a: DOID:10629 ! microphthalmia
 
 [Term]
 id: DOID:0060842
-name: isolated microphthalmia 3
+name: syndromic microphthalmia 16
 namespace: disease_ontology
-def: "An isolated microphthalmia characterized by clinical anophthalmia and/or microphthalmia that has_material_basis_in compound heterozygous mutation in the RAX gene on chromosome 18q21." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14662654, url:https\://www.ncbi.nlm.nih.gov/pubmed/18783408]
+def: "An isolated microphthalmia that is characterized by bilateral severe microphthalmia or anophthalmia with variable presence of midline defects, including cleft lip and palate, absence of frontal and/or sphenoidal sinuses, and absent pituitary gland and that has_material_basis_in compound heterozygous mutation in the RAX gene on chromosome 18q21." [url:https\://pubmed.ncbi.nlm.nih.gov/30811539/, url:https\://www.ncbi.nlm.nih.gov/pubmed/14662654, url:https\://www.ncbi.nlm.nih.gov/pubmed/18783408]
 subset: DO_rare_slim
+synonym: "isolated microphthalmia 3" EXACT []
 synonym: "MCOP3" EXACT OMO:0003012 []
 xref: ICD10CM:Q11.0
 xref: MIM:611038
@@ -11663,6 +11731,27 @@ xref: MIM:176690
 xref: ORDO:2959
 
 [Term]
+id: DOID:0061157
+name: retinopathy sensory neuropathy syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by progressive visual impairment due to retinopathy (usually retinitis pigmentosa) and progressive sensory neuropathy resulting in distal sensory loss of various modalities (vibration, proprioception, pain) that has_material_basis_inhomozygous or compound heterozygous mutation in the FLVCR1 gene on chromosome 1q32." [url:https\://pubmed.ncbi.nlm.nih.gov/39306721/]
+subset: DO_rare_slim
+synonym: "PCARP" EXACT OMO:0003012 []
+synonym: "Posterior Column Ataxia with Retinitis Pigmentosa" EXACT []
+synonym: "posterior column ataxia-retinitis pigmentosa syndrome" EXACT []
+xref: GARD:9898
+xref: MESH:C536343
+xref: MIM:609033
+xref: ORDO:88628
+xref: SNOMEDCT_US_2025_09_01:724065003
+xref: UMLS_CUI:C1836916
+property_value: exactMatch "GARD:9898" xsd:string
+property_value: exactMatch "MESH:C536343" xsd:string
+property_value: exactMatch "MIM:609033" xsd:string
+property_value: exactMatch "ORDO:88628" xsd:string
+property_value: exactMatch "UMLS_CUI:C1836916" xsd:string
+
+[Term]
 id: DOID:0061165
 name: proximal renal tubular acidosis
 namespace: disease_ontology
@@ -11711,6 +11800,24 @@ xref: MIM:609016
 xref: ORDO:5
 
 [Term]
+id: DOID:0061188
+name: autosomal recessive sensory neuropathy with spastic paraplegia
+namespace: disease_ontology
+def: "A hereditary sensory and autonomic neuropathy that has_material_basis_in homozygous mutation in the CCT5 gene on chromosome 5p15.2." [url:https\://pubmed.ncbi.nlm.nih.gov/16333315/]
+subset: DO_rare_slim
+xref: MESH:C564948
+xref: MIM:256840
+xref: ORDO:139578
+xref: UMLS_CUI:C1850395
+xref: UMLS_CUI:C5679610
+is_a: DOID:0050548 ! hereditary sensory and autonomic neuropathy
+property_value: closeMatch "MESH:C564948" xsd:string
+property_value: closeMatch "UMLS_CUI:C1850395" xsd:string
+property_value: closeMatch "UMLS_CUI:C5679610" xsd:string
+property_value: exactMatch "MIM:256840" xsd:string
+property_value: exactMatch "ORDO:139578" xsd:string
+
+[Term]
 id: DOID:0061196
 name: Mietens syndrome
 namespace: disease_ontology
@@ -11745,6 +11852,20 @@ xref: ORDO:210115
 property_value: exactMatch "GARD:10516" xsd:string
 property_value: exactMatch "MIM:612852" xsd:string
 property_value: exactMatch "ORDO:210115" xsd:string
+
+[Term]
+id: DOID:0061226
+name: primary ciliary dyskinesia 55
+namespace: disease_ontology
+def: "A primary ciliary dyskinesia characterized by impairment of the function of the motile cilia of the airways, resulting in chronic respiratory tract infections and has_material_basis_in homozygous or compound heterozygous mutation in the CFAP221 gene on chromosome 2q14." [url:https\://pubmed.ncbi.nlm.nih.gov/31636325/, url:https\://pubmed.ncbi.nlm.nih.gov/40272718/]
+subset: DO_rare_slim
+synonym: "Azoospermia-sinopulmonary infections syndrome" EXACT []
+synonym: "Sinusitis-infertility syndrome" EXACT []
+synonym: "young syndrome" EXACT []
+xref: GARD:341
+xref: MIM:279000
+xref: ORDO:3471
+is_a: DOID:9562 ! primary ciliary dyskinesia
 
 [Term]
 id: DOID:0061263
@@ -12025,6 +12146,7 @@ namespace: disease_ontology
 def: "A hereditary sensory and autonomic neuropathy characterized by impaired pain and thermal perception in the extremities and selective reduction in small myelinated fibers that has_material_basis_in homozygous mutation in the NGF gene on chromosome 1p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/14976160, url:https\://www.ncbi.nlm.nih.gov/pubmed/77656]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "congenital insensitivity to pain" BROAD []
 synonym: "hereditary sensory and autonomic neuropathy type V" EXACT []
 synonym: "HSAN5" EXACT OMO:0003012 []
 xref: GARD:12328
@@ -12093,6 +12215,7 @@ name: cerebellar ataxia, neuropathy, and vestibular areflexia syndrome
 namespace: disease_ontology
 def: "A syndrome characterized by adult onset of features ranging from isolated sensory peripheral neuropathy to slowly progressive cerebellar ataxia, neuropathy, and vestibular areflexia that has_material_basis_in homozygous or compound heterozygous pentanucleotide repeat expansion or truncation mutations in the RFC1 gene on chromosome 4p14. Additional associated features include cough and gastroesophageal reflux." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8262986/, url:https\://pubmed.ncbi.nlm.nih.gov/32873692/, url:https\://pubmed.ncbi.nlm.nih.gov/41084404/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "CANVAS" EXACT OMO:0003012 []
 synonym: "hereditary sensory and autonomic neuropathy type 1B" EXACT []
 synonym: "hereditary sensory neuropathy type 1B" EXACT []
@@ -12124,6 +12247,8 @@ name: hereditary sensory and autonomic neuropathy type 7
 namespace: disease_ontology
 def: "A hereditary sensory and autonomic neuropathy characterized by insensitivity to pain, mild muscle weakness, delayed motor development, hyperhidrosis and gastrointestinal dysfunction that has_material_basis_in heterozygous mutation in the SCN11A gene on chromosome 3p22." [url:https\://www.ncbi.nlm.nih.gov/pubmed/24036948]
 subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "congenital insensitivity to pain" BROAD []
 synonym: "hereditary sensory and autonomic neuropathy type VII" EXACT []
 synonym: "HSAN7" EXACT OMO:0003012 []
 xref: GARD:12732
@@ -12179,6 +12304,7 @@ name: hereditary sensory and autonomic neuropathy type 8
 namespace: disease_ontology
 def: "A hereditary sensory and autonomic neuropathy characterized by congenital insensitivity to pain and decreased sweating and tear production that has_material_basis_in homozygous mutation in the PRDM12 gene on chromosome 9q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/26005867]
 subset: DO_rare_slim
+synonym: "congenital insensitivity to pain" BROAD []
 synonym: "hereditary sensory and autonomic neuropathy type VIII" EXACT []
 synonym: "HSAN8" EXACT OMO:0003012 []
 xref: MIM:616488
@@ -12223,6 +12349,7 @@ name: hereditary sensory neuropathy type 1E
 namespace: disease_ontology
 def: "A hereditary sensory and autonomic neuropathy type 1 characterized by adult onset of progressive peripheral sensory loss, progressive hearing impairment, and early-onset dementia that has_material_basis_in heterozygous mutation in the DNMT1 gene on chromosome 19p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21532572]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "hereditary sensory and autonomic neuropathy type 1E" EXACT []
 synonym: "hereditary sensory and autonomic neuropathy type IE" EXACT []
 synonym: "hereditary sensory neuropathy type IE" EXACT []
@@ -13260,6 +13387,7 @@ def: "A childhood lymphoma that is characterized by monoclonal expansion of Epst
 subset: DO_cancer_slim
 subset: DO_childhood_cancer_slim
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "EBV-positive T-cell lymphoproliferative disorder of childhood" EXACT []
 synonym: "systemic EBV-positive T-cell lymphoma of childhood" EXACT []
 xref: ICDO:9724/3
@@ -14287,6 +14415,7 @@ name: glucose transporter type 1 deficiency syndrome 1
 namespace: disease_ontology
 def: "A glucose transporter type 1 deficiency syndrome characterized by infantile-onset epileptic encephalopathy associated with delayed development, acquired microcephaly, and complex movement disorders." [url:https\://pubmed.ncbi.nlm.nih.gov/36315575/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1430/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "classic glucose transporter type 1 deficiency syndrome" EXACT []
 synonym: "classic GLUT1 deficiency syndrome" EXACT []
 synonym: "classic GLUT1-DS" EXACT []
@@ -14449,6 +14578,7 @@ name: ring chromosome syndrome
 namespace: disease_ontology
 def: "A chromosomal disease that has_material_basis_in chromosome fusion into a ring or ring-like structure. Ring chromosome syndrome phenotypes are inherently variable." [url:https\://en.wikipedia.org/wiki/Ring_chromosome, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC9519620/, url:https\://rarechromo.org/glossary/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "RC" RELATED OMO:0003012 []
 synonym: "ring chromosome" RELATED []
 synonym: "ring syndrome" EXACT []
@@ -14468,6 +14598,7 @@ name: ring chromosome 14 syndrome
 namespace: disease_ontology
 def: "A ring chromosome syndrome characterized by early-onset epilepsy, developmental delay with mental retardation and poor speech, microcephaly, and dysmorphic facial features that has_material_basis_in chromosome 14 fusion into a ring or ring-like structure." [url:https\://medlineplus.gov/genetics/condition/ring-chromosome-14-syndrome/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC5387247/, url:https\://pubmed.ncbi.nlm.nih.gov/23610869/, url:https\://pubmed.ncbi.nlm.nih.gov/24116895/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "r(14) syndrome" EXACT []
 synonym: "r14 syndrome" EXACT []
 synonym: "ring 14" RELATED []
@@ -14700,6 +14831,7 @@ name: cherubism
 namespace: disease_ontology
 def: "A bone resorption disease characterized by replacement of bone in the jaws with fibrous tissue leading to facial swelling." [url:https\://medlineplus.gov/genetics/condition/cherubism/, url:https\://www.ncbi.nlm.nih.gov/books/NBK1137/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 xref: ICD10CM:M27.8
 xref: MESH:D002636
 xref: NCI:C84630
@@ -14918,6 +15050,7 @@ name: autosomal recessive nonsyndromic deafness 117
 namespace: disease_ontology
 def: "An autosomal recessive nonsyndromic deafness characterized by bilateral moderate-to-profound sensorineural deafness with onset in early childhood that has_material_basis_in homozygous mutation in the CLRN2 gene on chromosome 4p15." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8099798/]
 subset: DO_rare_slim
+synonym: "autosomal recessive deafness 117" EXACT []
 synonym: "DFNB117" EXACT [] {synonymtypedef="acronym"}
 xref: MIM:619174
 is_a: DOID:0050565 ! autosomal recessive nonsyndromic deafness
@@ -14973,6 +15106,7 @@ name: autosomal recessive nonsyndromic deafness 124
 namespace: disease_ontology
 def: "An autosomal recessive nonsyndromic deafness characterized by congenital progressive sensorineural hearing loss that has_material_basis_in homozygous or compound heterozygous mutation in the PKHD1L1 gene on chromosome 8q23." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC11043200/]
 subset: DO_rare_slim
+synonym: "autosomal recessive deafness 124" EXACT []
 synonym: "DFNB124" EXACT [] {synonymtypedef="acronym"}
 xref: MIM:620794
 is_a: DOID:0050565 ! autosomal recessive nonsyndromic deafness
@@ -15032,6 +15166,262 @@ xref: UMLS_CUI:C4748608
 is_a: DOID:0070678 ! congenital hypomyelinating neuropathy
 property_value: exactMatch "MIM:618186" xsd:string
 property_value: exactMatch "UMLS_CUI:C4748608" xsd:string
+
+[Term]
+id: DOID:0070681
+name: congenital hydrocephalus
+namespace: disease_ontology
+def: "A hydrocephalus characterized by fetal or congenital onset." [url:https\://www.aans.org/patients/conditions-treatments/hydrocephalus/, url:https\://www.mayoclinic.org/diseases-conditions/hydrocephalus/symptoms-causes/syc-20373604, url:https\://www.ncbi.nlm.nih.gov/books/NBK560875/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+xref: GARD:6682
+xref: ICD10CM:Q03
+xref: ICD9CM:742.3
+xref: MIM:PS236600
+xref: NCI:C98876
+xref: ORDO:2185
+xref: SNOMEDCT_US_2025_09_01:47032000
+xref: UMLS_CUI:C0020256
+is_a: DOID:10908 ! hydrocephalus
+property_value: exactMatch "GARD:6682" xsd:string
+property_value: exactMatch "ICD10CM:Q03" xsd:string
+property_value: exactMatch "ICD9CM:742.3" xsd:string
+property_value: exactMatch "MIM:PS236600" xsd:string
+property_value: exactMatch "NCI:C98876" xsd:string
+property_value: exactMatch "ORDO:2185" xsd:string
+property_value: exactMatch "UMLS_CUI:C0020256" xsd:string
+property_value: narrowMatch "MIM:236635" xsd:string
+
+[Term]
+id: DOID:0070682
+name: congenital hydrocephalus 1
+namespace: disease_ontology
+def: "A congenital hydrocephalus that has_material_basis_in homozygous mutation in the CCDC88C gene on chromosome 14q32." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8183048/, url:https\://pubmed.ncbi.nlm.nih.gov/29225145/]
+subset: DO_rare_slim
+xref: MIM:236600
+xref: ORDO:269510
+xref: SNOMEDCT_US_2025_09_01:762295002
+xref: UMLS_CUI:C4546092
+is_a: DOID:0070681 ! congenital hydrocephalus
+property_value: exactMatch "MIM:236600" xsd:string
+property_value: exactMatch "ORDO:269510" xsd:string
+property_value: exactMatch "UMLS_CUI:C4546092" xsd:string
+
+[Term]
+id: DOID:0070683
+name: congenital hydrocephalus 2
+namespace: disease_ontology
+def: "A congenital hydrocephalus that has_material_basis_in homozygous mutation in the MPDZ gene on chromosome 9p23." [url:https\://pubmed.ncbi.nlm.nih.gov/28556411/]
+subset: DO_rare_slim
+xref: MIM:615219
+is_a: DOID:0070681 ! congenital hydrocephalus
+property_value: broadMatch "ORDO:269505" xsd:string
+property_value: broadMatch "UMLS_CUI:C5679774" xsd:string
+property_value: exactMatch "MIM:615219" xsd:string
+
+[Term]
+id: DOID:0070684
+name: congenital hydrocephalus 3
+namespace: disease_ontology
+def: "A congenital hydrocephalus that has_material_basis_in homozygous mutation in the WDR81 gene on chromosome 17p13." [url:https\://pubmed.ncbi.nlm.nih.gov/28556411/]
+subset: DO_rare_slim
+xref: MIM:617967
+xref: UMLS_CUI:C4747885
+is_a: DOID:0070681 ! congenital hydrocephalus
+property_value: exactMatch "MIM:617967" xsd:string
+property_value: exactMatch "UMLS_CUI:C4747885" xsd:string
+
+[Term]
+id: DOID:0070685
+name: congenital hydrocephalus 4
+namespace: disease_ontology
+def: "A congenital hydrocephalus that has_material_basis_in heterozygous mutation in the TRIM71 gene on chromosome 3p22." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC11629693/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC7839075/]
+subset: DO_rare_slim
+xref: MIM:618667
+xref: UMLS_CUI:C5231454
+is_a: DOID:0070681 ! congenital hydrocephalus
+property_value: exactMatch "MIM:618667" xsd:string
+property_value: exactMatch "UMLS_CUI:C5231454" xsd:string
+
+[Term]
+id: DOID:0070686
+name: X-linked congenital hydrocephalus
+namespace: disease_ontology
+def: "A congenital hydrocephalus that has_material_basis_in homozygous mutation in the L1CAM gene on chromosome Xq28. Additional features include stenosis of the aqueduct of Sylvius, adducted thumbs, spastic paraparesis and impaired intellectual development." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10913327/, url:https\://pubmed.ncbi.nlm.nih.gov/1303258/]
+subset: DO_rare_slim
+synonym: "X-linked hydrocephalus" EXACT []
+xref: GARD:434
+xref: MESH:C536078
+xref: MIM:307000
+xref: ORDO:2182
+xref: SNOMEDCT_US_2025_09_01:71779008
+xref: UMLS_CUI:C0265216
+is_a: DOID:0070681 ! congenital hydrocephalus
+property_value: exactMatch "GARD:434" xsd:string
+property_value: exactMatch "MESH:C536078" xsd:string
+property_value: exactMatch "MIM:307000" xsd:string
+property_value: exactMatch "ORDO:2182" xsd:string
+property_value: exactMatch "UMLS_CUI:C0265216" xsd:string
+
+[Term]
+id: DOID:0070687
+name: normal pressure hydrocephalus 1
+namespace: disease_ontology
+def: "A normal pressure hydrocephalus that has_material_basis_in heterozygous mutation in the CFAP43 gene on chromosome 10q25." [url:https\://pubmed.ncbi.nlm.nih.gov/21704338/, url:https\://pubmed.ncbi.nlm.nih.gov/31004071/]
+subset: DO_rare_slim
+xref: MIM:236690
+xref: UMLS_CUI:C5231392
+is_a: DOID:10908 ! hydrocephalus
+property_value: exactMatch "MIM:236690" xsd:string
+property_value: exactMatch "UMLS_CUI:C5231392" xsd:string
+
+[Term]
+id: DOID:0070688
+name: autosomal recessive congenital indifference to pain
+namespace: disease_ontology
+def: "A neuropathy characterized by complete absence of pain perception with no impairment of other sensory, motor, or autonomic modalities that has_material_basis_in homozygous or compound heterozygous loss-of-function mutation in the SCN9A gene on chromosome 2q24. Hyposmia or anosmia is also common." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC7212082/, url:https\://pubmed.ncbi.nlm.nih.gov/22845492/]
+subset: DO_rare_slim
+synonym: "channelopathy-associated insensitivity to pain" EXACT []
+synonym: "congenital indifference to pain" RELATED []
+synonym: "congenital insensitivity to pain" BROAD []
+xref: GARD:12267
+xref: MIM:243000
+xref: ORDO:88642
+xref: SNOMEDCT_US_2025_09_01:1279831004
+xref: UMLS_CUI:C5680180
+property_value: exactMatch "GARD:12267" xsd:string
+property_value: exactMatch "MIM:243000" xsd:string
+property_value: exactMatch "ORDO:88642" xsd:string
+property_value: exactMatch "UMLS_CUI:C5680180" xsd:string
+
+[Term]
+id: DOID:0070689
+name: hereditary sensory and autonomic neuropathy type 2D
+namespace: disease_ontology
+def: "A hereditary sensory and autonomic neuropathy type 2 characterized by congenital to pediatric onset of distal loss of pain and temperature sensation and variable autonomic dysfunction that has_material_basis_in homozygous loss-of-function mutation in the SCN9A gene on chromosome 2q24." [url:https\://pubmed.ncbi.nlm.nih.gov/23596073/]
+subset: DO_rare_slim
+synonym: "hereditary sensory and autonomic neuropathy type IID" EXACT []
+synonym: "HSAN2D" EXACT OMO:0003012 []
+xref: GARD:0026489
+xref: UMLS_CUI:C4012054
+is_a: DOID:0070161 ! hereditary sensory and autonomic neuropathy type 2
+property_value: exactMatch "GARD:0026489" xsd:string
+property_value: exactMatch "UMLS_CUI:C4012054" xsd:string
+property_value: relatedMatch "MIM:243000" xsd:string
+
+[Term]
+id: DOID:0070692
+name: Davis-Wells syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by mild cognitive impairment, dysmorphism featuring oculoauricular abnormalities, and developmental defects involving genitourinary and digestive tracts that has_material_basis_in homozygous or compound heterozygous mutation in the CACHD1 gene on chromosome 1p31." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC11910193/]
+subset: DO_rare_slim
+xref: MIM:621566
+property_value: exactMatch "MIM:621566" xsd:string
+
+[Term]
+id: DOID:0070693
+name: Ebstein-Bezieau neurodevelopmental syndrome
+namespace: disease_ontology
+def: "A autosomal dominant intellectual developmental disorder characterized by neurodevelopmental delay, intellectual disability, and varying congenital malformations, most commonly skeletal and cardiac, that has_material_basis_in heterozygous mutation in the PSMC3 gene on chromosome 11p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC10506367/]
+subset: DO_rare_slim
+xref: MIM:621539
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: exactMatch "MIM:621539" xsd:string
+
+[Term]
+id: DOID:0070694
+name: neurodevelopmental disorder with congenital cardiac defects and variable renal and ocular abnormalities
+namespace: disease_ontology
+def: "A autosomal dominant intellectual developmental disorder characterized by global developmental delay with hypotonia, mildly delayed walking and speech acquisition, impaired intellectual development ranging from learning difficulties to severe cognitive impairment, behavioral abnormalities or autistic features, and congenital heart defects that has_material_basis_in heterozygous mutation in the KDM2B gene on chromosome 12q24." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12361114/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC9825659/]
+subset: DO_rare_slim
+synonym: "NEDCRO" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621474
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: exactMatch "MIM:621474" xsd:string
+
+[Term]
+id: DOID:0070695
+name: Yu-Kury neurodevelopmental syndrome
+namespace: disease_ontology
+def: "An autosomal dominant intellectual developmental disorder characterized by developmental delay, speech delay, motor delay, and intellectual disability that has_material_basis_in heterozygous mutation in the PSMC5 gene on chromosome 12q23." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC11336065/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12658096/]
+subset: DO_rare_slim
+xref: MIM:621565
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: exactMatch "MIM:621565" xsd:string
+
+[Term]
+id: DOID:0070696
+name: neurodevelopmental disorder with seizures, hypotonia, and variable spasticity
+namespace: disease_ontology
+def: "An autosomal recessive intellectual developmental disorder characterized by global developmental delay with limited or no speech, intellectual disability, ataxia-dystonia, and epilepsy that has_material_basis_in homozygous mutation in the PGBD5 gene on chromosome 1q42." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12802831/]
+subset: DO_rare_slim
+synonym: "NEDSHS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621482
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: exactMatch "MIM:621482" xsd:string
+
+[Term]
+id: DOID:0070697
+name: neurodevelopmental disorder with spasticity, thin corpus callosum, and decreased brain white matter
+namespace: disease_ontology
+def: "An autosomal recessive intellectual developmental disorder characterized by mild to moderate global developmental delay, mildly to moderately impaired intellectual development, and progressive spasticity of the lower limbs with hyperreflexia that has_material_basis_in homozygous or compound heterozygous mutations in the RPS6KC1 gene on chromosome 1q32." [url:https\://pubmed.ncbi.nlm.nih.gov/41130203/]
+subset: DO_rare_slim
+synonym: "NEDSCW" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621460
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: exactMatch "MIM:621460" xsd:string
+
+[Term]
+id: DOID:0070698
+name: X-linked neurodevelopmental disorder with poor or absent speech and behavioral abnormalities
+namespace: disease_ontology
+def: "A syndromic X-linked intellectual disability characterized by global developmental delay apparent from infancy, hypotonia with delayed walking or inability to walk, severe-to-profound intellectual disability with poor or absent speech, and early-onset epilepsy that has_material_basis_in hemizygous or heterozygous mutation in the IQSEC2 gene on chromosome Xp11. Females may be less severely affected than males." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6752297/, url:https\://pubmed.ncbi.nlm.nih.gov/30666632/]
+subset: DO_rare_slim
+synonym: "NEDXSB" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:301164
+property_value: exactMatch "MIM:301164" xsd:string
+
+[Term]
+id: DOID:0070699
+name: STAD syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by a skeletal dysplasia consisting of advanced bone maturation, short and dysplastic bones, and disproportionate body measurements; facial dysmorphisms and dental anomalies; and neurodevelopmental delays ranging in severity from isolated fine motor delays to impaired intellectual development that has_material_basis_in heterozygous mutation in the PTBP1 gene on chromosome 19p13." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC12618068/#sd]
+subset: DO_rare_slim
+synonym: "skeletal dysplasia, tooth anomalies, and developmental delay syndrome" EXACT []
+xref: MIM:621495
+property_value: exactMatch "MIM:621495" xsd:string
+
+[Term]
+id: DOID:0070700
+name: Luo-Agrawal neurodevelopmental syndrome
+namespace: disease_ontology
+def: "A syndrome characterized by neurodevelopmental delay, hypotonia, dysmorphic features, and growth restriction with or without structural brain abnormalities that has_material_basis_in homozygous mutation in the WSB2 gene on chromosome 12q24." [url:https\://pubmed.ncbi.nlm.nih.gov/40374945/]
+subset: DO_rare_slim
+xref: MIM:621552
+property_value: exactMatch "MIM:621552" xsd:string
+
+[Term]
+id: DOID:0070702
+name: measles inclusion body encephalitis
+namespace: disease_ontology
+def: "A viral encephalitis that has_material_basis_in measles virus (Morbillivirus hominis) and occurs in immunocompromised patients with acute onset of progressive seizures days to months after infection or vaccination with the live-attenuated vaccine, resulting near universally in death." [url:https\://doi.org/10.1542/9781610027373-S3_012_002, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6450100/, url:https\://pubmed.ncbi.nlm.nih.gov/38512528/]
+subset: DO_infectious_disease_slim
+subset: DO_rare_slim
+synonym: "immunosuppressive measles encephalitis" EXACT []
+synonym: "MIBE" EXACT OMO:0003012 []
+xref: SNOMEDCT_US_2025_09_01:416154000
+property_value: relatedMatch "UMLS_CUI:C0038522" xsd:string
+
+[Term]
+id: DOID:0070703
+name: Meckel syndrome 14
+namespace: disease_ontology
+def: "A Meckel syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the TXNDC15 gene on chromosome 5q31." [url:https\://pubmed.ncbi.nlm.nih.gov/27894351/, url:https\://pubmed.ncbi.nlm.nih.gov/30851085/]
+subset: DO_rare_slim
+synonym: "MKS14" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:619879
+is_a: DOID:0050778 ! Meckel syndrome
+property_value: exactMatch "MIM:619879" xsd:string
 
 [Term]
 id: DOID:0080016
@@ -16133,12 +16523,15 @@ xref: ORDO:93101
 
 [Term]
 id: DOID:0080205
-name: CAKUT
+name: congenital anomalies of kidney and urinary tract
 namespace: disease_ontology
 def: "A urinary system disease characterized by structural malformations in the kidney and/or urinary tract containing vesicoureteral reflux." [url:https\://www.jci.org/articles/view/95300, url:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC5468264/, url:https\://www.ncbi.nlm.nih.gov/pubmed/25313840]
 subset: DO_rare_slim
-synonym: "Congenital anomalies of the kidney and urinary tract" EXACT []
+synonym: "CAKUT" EXACT []
+synonym: "MCDK" EXACT []
+synonym: "Multicystic kidney dysplasia" EXACT []
 synonym: "Renal or urinary tract malformation" EXACT []
+xref: GARD:18748
 xref: MESH:C566906
 xref: MIM:PS610805
 xref: ORDO:93545
@@ -16574,6 +16967,7 @@ subset: DO_rare_slim
 synonym: "DEE25" EXACT OMO:0003012 []
 synonym: "developmental and epileptic encephalopathy 25, with amelogenesis imperfecta" EXACT []
 synonym: "early infantile epileptic encephalopathy 25" EXACT []
+synonym: "SLC13A5 citrate transporter disorder" EXACT []
 xref: GARD:12901
 xref: MIM:615905
 
@@ -17627,6 +18021,20 @@ xref: ORDO:1658
 is_a: DOID:2121 ! ectodermal dysplasia
 
 [Term]
+id: DOID:0080738
+name: Ehlers-Danlos syndrome spondylodysplastic type 1
+namespace: disease_ontology
+def: "An Ehlers-Danlos syndrome that is characterized by short stature, developmental anomalies of the forearm bones and elbow, and bowing of extremities, in addition to the classic stigmata of Ehlers-Danlos syndrome, including joint laxity, skin hyperextensibility, and poor wound healing and that has_material_basis_in homozygous or compound heterozygous mutation in the B4GALT7 gene on chromosome 5q35." [url:https\://pubmed.ncbi.nlm.nih.gov/23956117/]
+subset: DO_rare_slim
+xref: MIM:130070
+xref: ORDO:75496
+xref: SNOMEDCT_US_2025_09_01:720861000
+xref: UMLS_CUI:C4552003
+is_a: DOID:13359 ! Ehlers-Danlos syndrome
+property_value: exactMatch "ORDO:75496" xsd:string
+property_value: exactMatch "UMLS_CUI:C4552003" xsd:string
+
+[Term]
 id: DOID:0080741
 name: limbic encephalitis
 namespace: disease_ontology
@@ -17729,6 +18137,7 @@ name: pyridoxine-dependent epilepsy
 namespace: disease_ontology
 def: "An epilepsy that is characterized by intractable seizures within the first weeks to months of life that are not controlled with antiepileptic drugs but respond both clinically and electrographically to large daily supplements of pyridoxine." [url:https\://medlineplus.gov/genetics/condition/pyridoxine-dependent-epilepsy/, url:https\://rarediseases.org/rare-diseases/pyridoxine-dependent-epilepsy/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 xref: GARD:9298
 xref: MESH:C536254
 xref: NCI:C210888
@@ -18558,6 +18967,22 @@ synonym: "Brachycephalofrontonasal dysplasia" EXACT []
 xref: GARD:957
 xref: MIM:PS145420
 xref: ORDO:2745
+
+[Term]
+id: DOID:0081075
+name: Marsili syndrome
+namespace: disease_ontology
+def: "A syndrome that is characterized by a lowered ability to sense pain, to experience temperature, and to sweat and that has_material_basis_in heterozygous mutation in the ZFHX2 gene on chromosome 14q11." [url:https\://pubmed.ncbi.nlm.nih.gov/29253101/, url:https\://www.ncbi.nlm.nih.gov/books/NBK481553/]
+subset: DO_rare_slim
+synonym: "congenital analgesia" BROAD []
+synonym: "congenital insensitivity to pain" BROAD []
+xref: MIM:147430
+xref: ORDO:653728
+xref: UMLS_CUI:C4538468
+is_a: DOID:0050548 ! hereditary sensory and autonomic neuropathy
+property_value: exactMatch "MIM:147430" xsd:string
+property_value: exactMatch "ORDO:653728" xsd:string
+property_value: exactMatch "UMLS_CUI:C4538468" xsd:string
 
 [Term]
 id: DOID:0081077
@@ -20909,12 +21334,12 @@ is_a: DOID:1099 ! alpha thalassemia
 
 [Term]
 id: DOID:0110032
-name: autosomal dominant Alport syndrome 3A
+name: Alport syndrome 3A
 namespace: disease_ontology
 def: "An Alport syndrome that has_material_basis_in heterozygous mutation in the COL4A3 gene." [url:https\://www.ncbi.nlm.nih.gov/pubmed/11044206]
 comment: nomenclature update on Nov 2025 (claudiasbj)
 subset: DO_rare_slim
-synonym: "autosomal dominant Alport syndrome" EXACT []
+synonym: "autosomal dominant Alport syndrome 3A" EXACT []
 xref: GARD:624
 xref: MIM:104200
 xref: ORDO:88918
@@ -20922,10 +21347,11 @@ is_a: DOID:10983 ! Alport syndrome
 
 [Term]
 id: DOID:0110033
-name: autosomal recessive Alport syndrome
+name: Alport syndrome 2
 namespace: disease_ontology
 def: "An Alport syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the COL4A3 or the COL4A4 gene, both of which map to chromosome 2q." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25575550]
 subset: DO_rare_slim
+synonym: "autosomal recessive Alport syndrome" EXACT []
 xref: GARD:625
 xref: MIM:203780
 xref: ORDO:88919
@@ -27374,11 +27800,12 @@ is_a: DOID:4959 ! epidermolysis bullosa dystrophica
 
 [Term]
 id: DOID:0111346
-name: epidermolysis bullosa simplex with mottled pigmentation
+name: epidermolysis bullosa simplex 2F with mottled pigmentation
 namespace: disease_ontology
-def: "An epidermolysis bullosa simplex characterized by generalized blistering with mottled hyper- and hypopigmentation of the skin that has_material_basis_in heterozygous mutation in KRT5 on chromosome 12q13.13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/421361, url:https\://www.ncbi.nlm.nih.gov/pubmed/8799157]
+def: "An epidermolysis bullosa simplex characterized by generalized blistering with mottled hyper- and hypopigmentation of the skin that has_material_basis_in heterozygous mutation in the keratin-5 gene (KRT5) on chromosome 12q13.13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/421361, url:https\://www.ncbi.nlm.nih.gov/pubmed/8799157]
 subset: DO_rare_slim
 synonym: "EBSMP" EXACT OMO:0003012 []
+synonym: "epidermolysis bullosa simplex with mottled pigmentation" EXACT []
 synonym: "Epidermolysis bullosa simplex-MP" EXACT []
 synonym: "speckled hyperpigmentation with punctate palmoplantar keratoses and childhood blistering" EXACT []
 xref: GARD:9737
@@ -29747,6 +30174,7 @@ name: Gordon Holmes syndrome
 namespace: disease_ontology
 def: "An inherited metabolic disorder characterized by progressive cognitive decline, dementia, hypogonadotropic hypogonadism, and variable movement disorders resulting from disordered ubiquitination that has_material_basis_in homozygous or compound heterozygous mutation in the RNF216 gene on chromosome 7p22.1." [url:https\://ghr.nlm.nih.gov/condition/gordon-holmes-syndrome, url:https\://www.ncbi.nlm.nih.gov/pubmed/23656588, url:https\://www.ncbi.nlm.nih.gov/pubmed/25841028]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "CAHH" EXACT OMO:0003012 []
 synonym: "cerebellar ataxia-hypogonadism syndrome" EXACT []
 synonym: "GDHS" EXACT OMO:0003012 []
@@ -30680,11 +31108,12 @@ is_a: DOID:9252 ! amino acid metabolic disorder
 
 [Term]
 id: DOID:0111682
-name: diffuse cystic renal dysplasia
+name: cystic renal dysplasia
 namespace: disease_ontology
-def: "A cystic kidney disease characterized by nonsyndromic diffuse cystic dysplasia of the kidneys that has_material_basis_in heterozygous mutation in the BICC1 gene on chromosome 10q21.1. The same mutation maybe found in unaffected parents suggesting incomplete penetrance of the disorder or that additional environmental factors are required for development of the disorder." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21922595, url:https\://www.ncbi.nlm.nih.gov/pubmed/8725780]
+def: "A cystic kidney disease characterized by nonsyndromic diffuse cystic dysplasia of the kidneys that has_material_basis_in heterozygous mutation in the BICC1 gene on chromosome 10q21.1. The same mutation maybe found in unaffected parents suggesting incomplete penetrance of the disorder or that additional environmental factors are required for development of the disorder." [url:https\://radiopaedia.org/articles/cystic-renal-dysplasia, url:https\://www.ncbi.nlm.nih.gov/pubmed/21922595, url:https\://www.ncbi.nlm.nih.gov/pubmed/8725780]
 subset: DO_rare_slim
 synonym: "CYSRD" EXACT OMO:0003012 []
+synonym: "diffuse cystic renal dysplasia" EXACT []
 synonym: "renal dysplasia diffuse cystic" EXACT []
 synonym: "susceptibility to cystic renal dysplasia" EXACT []
 xref: GARD:4658
@@ -32645,6 +33074,25 @@ xref: ORDO:317430
 xref: UMLS_CUI:C2748557
 
 [Term]
+id: DOID:0111973
+name: immunodeficiency 17
+namespace: disease_ontology
+def: "A T cell deficiency characterized by partial T-cell lymphopenia with normal numbers of B and NK cells and highly variable clinical severity that has_material_basis_in homozygous or compound heterozygous mutation in the CD3G gene on chromosome 11q23.3." [url:https\://pubmed.ncbi.nlm.nih.gov/1635567/, url:https\://pubmed.ncbi.nlm.nih.gov/17277165/, url:https\://pubmed.ncbi.nlm.nih.gov/8325321/]
+subset: DO_rare_slim
+synonym: "CD3-gamma deficiency" EXACT []
+synonym: "IMD17" EXACT OMO:0003012 []
+synonym: "immunodeficiency 17, CD3 gamma deficient" EXACT []
+synonym: "SCID-like immunodeficiency, T cell-partial, B cell-positive, NK cell-positive" EXACT []
+xref: MIM:615607
+xref: ORDO:169082
+xref: SNOMEDCT_US_2025_09_01:766879006
+xref: UMLS_CUI:C3810107
+xref: UMLS_CUI:C4510864
+property_value: exactMatch "ORDO:169082" xsd:string
+property_value: exactMatch "UMLS_CUI:C3810107" xsd:string
+property_value: exactMatch "UMLS_CUI:C4510864" xsd:string
+
+[Term]
 id: DOID:0111976
 name: immunodeficiency 9
 namespace: disease_ontology
@@ -32801,6 +33249,21 @@ xref: ORDO:319552
 xref: UMLS_CUI:C4013949
 
 [Term]
+id: DOID:0111991
+name: immunodeficiency 62
+namespace: disease_ontology
+def: "A B cell deficiency characterized by onset late in the first decade of life of recurrent upper and lower respiratory infections, impaired antibody response to vaccination, low levels of circulating memory B cells, and almost undetectable antibodies that has_material_basis_in homozygous or compound heterozygous mutation in the ARHGEF1 gene on chromosome 19q13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/30521495/]
+subset: DO_rare_slim
+synonym: "IMD62" EXACT OMO:0003012 []
+xref: MIM:618459
+xref: ORDO:696942
+xref: UMLS_CUI:C5193109
+xref: UMLS_CUI:C6012259
+property_value: closeMatch "UMLS_CUI:C5193109" xsd:string
+property_value: closeMatch "UMLS_CUI:C6012259" xsd:string
+property_value: exactMatch "ORDO:696942" xsd:string
+
+[Term]
 id: DOID:0111993
 name: immunodeficiency 55
 namespace: disease_ontology
@@ -32841,6 +33304,26 @@ synonym: "MSN-related combined immunodeficiency" EXACT []
 synonym: "X-linked Moesin-associated immunodeficiency" EXACT []
 xref: MIM:300988
 xref: ORDO:504530
+
+[Term]
+id: DOID:0112002
+name: immunodeficiency 47
+namespace: disease_ontology
+def: "A primary immunodeficiency disease characterized by liver dysfunction, recurrent bacterial infections, hypogammaglobulinemia, and defective glycosylation of serum proteins that has_material_basis_in hemizygous mutation in the ATP6AP1 gene on chromosome Xq28." [url:https\://pubmed.ncbi.nlm.nih.gov/27231034/]
+subset: DO_rare_slim
+synonym: "CDG IIs" EXACT OMO:0003012 []
+synonym: "CDG2S" EXACT OMO:0003012 []
+synonym: "CDGIIs" EXACT OMO:0003012 []
+synonym: "congenital disorder of glycosylation type IIs" EXACT []
+synonym: "IMD47" EXACT OMO:0003012 []
+synonym: "immunodeficiency and hepatopathy with or without neurologic features" EXACT []
+xref: MIM:300972
+xref: ORDO:692790
+xref: UMLS_CUI:C4310819
+xref: UMLS_CUI:C6012366
+property_value: closeMatch "UMLS_CUI:C4310819" xsd:string
+property_value: closeMatch "UMLS_CUI:C6012366" xsd:string
+property_value: exactMatch "ORDO:692790" xsd:string
 
 [Term]
 id: DOID:0112011
@@ -35030,6 +35513,7 @@ name: siderosis
 namespace: disease_ontology
 def: "A pneumoconiosis that is characterized by the deposition of excess iron in body tissue resulting from inhalation of iron in the mining dust or welding fumes." [url:https\://en.wikipedia.org/wiki/Siderosis]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "pulmonary siderosis" EXACT []
 xref: GARD:7645
 xref: ICD10CM:J63.4
@@ -35964,26 +36448,21 @@ property_value: exactMatch "MESH:D008831" xsd:string
 id: DOID:10908
 name: hydrocephalus
 namespace: disease_ontology
-def: "A cerebral degeneration characterized by an abnormal accumulation of cerebrospinal fluid in the ventricles of the brain, leading to progressive enlargement of the head." [url:http\://en.wikipedia.org/wiki/Hydrocephalus, url:http\://ghr.nlm.nih.gov/glossary=hydrocephalus, url:http\://www.mayoclinic.org/diseases-conditions/hydrocephalus/basics/definition/con-20030706?_ga=1.124310025.2017809229.1415219956]
-comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
+def: "A cerebral degeneration characterized by an abnormal accumulation of cerebrospinal fluid in the ventricles of the brain, leading to progressive enlargement of the head." [url:http\://en.wikipedia.org/wiki/Hydrocephalus, url:http\://ghr.nlm.nih.gov/glossary=hydrocephalus, url:http\://www.mayoclinic.org/diseases-conditions/hydrocephalus/basics/definition/con-20030706, url:https\://www.ncbi.nlm.nih.gov/books/NBK560875/]
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "hydrocephalus, nonsyndromic, autosomal recessive" EXACT []
-synonym: "hydrocephalus, X-linked" EXACT []
-xref: GARD:6682
 xref: ICD10CM:G91
 xref: MESH:D006849
 xref: MIM:123155
-xref: MIM:236600
-xref: MIM:236635
-xref: MIM:307000
-xref: MIM:615219
 xref: NCI:C3111
-xref: ORDO:2182
-xref: ORDO:2185
-xref: SNOMEDCT_US_2025_09_01:267687006
+xref: SNOMEDCT_US_2025_09_01:230745008
 xref: UMLS_CUI:C0020255
 is_a: DOID:1443 ! cerebral degeneration
+property_value: exactMatch "ICD10CM:G91" xsd:string
+property_value: exactMatch "MESH:D006849" xsd:string
+property_value: exactMatch "NCI:C3111" xsd:string
+property_value: exactMatch "UMLS_CUI:C0020255" xsd:string
+property_value: narrowMatch "MIM:123155" xsd:string
 
 [Term]
 id: DOID:10923
@@ -36100,13 +36579,14 @@ xref: UMLS_CUI:C0154697
 id: DOID:10983
 name: Alport syndrome
 namespace: disease_ontology
-def: "A syndrome disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss." [url:http\://en.wikipedia.org/wiki/Alport_syndrome]
+def: "A syndrome disease that is characterized by glomerulonephritis, endstage kidney disease, and hearing loss." [url:http\://en.wikipedia.org/wiki/Alport_syndrome, url:https\://www.ncbi.nlm.nih.gov/books/NBK1207/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_MGI_slim
 subset: DO_rare_slim
 synonym: "Hereditary Nephritis" EXACT []
 xref: GARD:5785
 xref: MESH:D009394
+xref: MIM:PS301050
 xref: ORDO:63
 xref: SNOMEDCT_US_2025_09_01:57333009
 xref: UMLS_CUI:C0027706
@@ -37402,6 +37882,7 @@ id: DOID:11817
 name: urachus cancer
 namespace: disease_ontology
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "malignant tumor of urachus" EXACT []
 xref: GARD:7836
 xref: ICD10CM:C67.7
@@ -37895,6 +38376,7 @@ alt_id: DOID:0050020
 def: "A trypanosomiasis that is a tropical parasitic disease caused by the flagellate protozoan Trypanosoma cruzi, which is transmitted to humans and other mammals by an insect vector, the blood-sucking assassin bugs of the subfamily Triatominae (family Reduviidae), most commonly species belonging to the Triatoma, Rhodnius, and Panstrongylus genera. The symptoms include fever, fatigue, body aches, headache, rash, loss of appetite, diarrhea, vomiting, swelling of the eyelids and myocarditis." [url:http\://en.wikipedia.org/wiki/Chagas_disease]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
+subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "American trypanosomiasis" RELATED []
 synonym: "Chagas' disease" EXACT []
@@ -37950,6 +38432,7 @@ namespace: disease_ontology
 def: "An agammaglobulinemia that is characterized by low Ig levels with phenotypically normal B cells that can proliferate but do not develop into Ig-producing cells and that esults in insufficient production of antibodies needed to respond to exposure of pathogens." [url:http\://en.wikipedia.org/wiki/Common_variable_immunodeficiency, url:http\://www.merck.com/mmpe/sec13/ch164/ch164g.html]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "acquired agammaglobulinemia" EXACT []
 synonym: "acquired hypogammaglobulinemia" EXACT []
 synonym: "common variable agammaglobulinemia" EXACT []
@@ -38675,6 +39158,7 @@ name: locked-in syndrome
 namespace: disease_ontology
 def: "A nervous system disease that is characterized by complete paralysis of all voluntary muscles except for the ones that control the movements of the eyes." [url:http\://rarediseases.org/rare-diseases/locked-in-syndrome/]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "Locked in syndrome" EXACT []
 synonym: "Locked-in state" EXACT []
 xref: GARD:6919
@@ -41020,6 +41504,7 @@ name: adult-onset Still's disease
 namespace: disease_ontology
 def: "A rheumatoid arthritis that is characterized by high fevers, rash, sore throat and joint pain." [url:http\://en.wikipedia.org/wiki/Adult-onset_Still%27s_disease, url:http\://www.mayoclinic.com/health/adult-stills-disease/DS00792, url:http\://www.nlm.nih.gov/medlineplus/ency/article/000450.htm, url:http\://www.thedoctorwillseeyounow.com/content/arthritis/art1928.html, url:https\://www.aiarthritis.org/stillsdisease]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "adult onset Still's disease" EXACT []
 synonym: "adult-onset Still disease" EXACT []
 xref: GARD:436
@@ -41871,6 +42356,7 @@ namespace: disease_ontology
 def: "A syndrome that involves abnormal development of the pancreas, nose and scalp, with mental retardation, hearing loss and growth failure. It is inherited in an autosomal recessive manner." [url:http\://en.wikipedia.org/wiki/Johanson-Blizzard_syndrome]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "JBS" EXACT OMO:0003012 []
 xref: GARD:80
 xref: MESH:C535880
@@ -42589,6 +43075,7 @@ namespace: disease_ontology
 def: "A blood platelet disease that is characterized by low a platelet count in the blood." [url:http\://en.wikipedia.org/wiki/Thrombocytopenia, url:http\://ghr.nlm.nih.gov/glossary=thrombocytopenia, url:http\://www.merckmanuals.com/professional/hematology_and_oncology/thrombocytopenia_and_platelet_dysfunction/overview_of_platelet_disorders.html]
 comment: Xref MGI.
 subset: DO_rare_slim
+subset: NCIthesaurus
 xref: ICD10CM:D69.6
 xref: ICD9CM:287.5
 xref: MESH:D013921
@@ -43964,6 +44451,7 @@ name: gangliosidosis
 namespace: disease_ontology
 def: "A sphingolipidosis that is characterized by the accumulation of lipids known as gangliosides." [url:https\://en.wikipedia.org/wiki/Gangliosidosis]
 subset: DO_rare_slim
+subset: NCIthesaurus
 xref: GARD:12510
 xref: ICD10CM:E75.10
 xref: MESH:D005733
@@ -45789,6 +46277,7 @@ id: DOID:3223
 name: complex regional pain syndrome
 namespace: disease_ontology
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "Complex regional pain syndromes" EXACT []
 xref: GARD:4647
 xref: MESH:D020918
@@ -48392,6 +48881,7 @@ xref: ICD10CM:Q81.0
 xref: MESH:D016110
 xref: MIM:601001
 xref: MIM:615425
+xref: MIM:PS131760
 xref: NCI:C84692
 xref: ORDO:304
 xref: SNOMEDCT_US_2025_09_01:205585003
@@ -49491,6 +49981,28 @@ xref: NCI:C8885
 xref: UMLS_CUI:C1334582
 
 [Term]
+id: DOID:5684
+name: spondyloepimetaphyseal dysplasia, Sponastrime type
+namespace: disease_ontology
+def: "A spondyloepimetaphyseal dysplasia that is characterized by spondylar and nasal changes, with striations of the metaphyses that has_material_basis_in autosomal recessive inheritance." [url:http\://omim.org/entry/271510, url:https\://www.ncbi.nlm.nih.gov/pubmed/10797420]
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "sponastrime dysplasia" EXACT []
+synonym: "Spondylar and nasal Alterations-Striated Metaphyses syndrome" EXACT []
+xref: GARD:4970
+xref: MESH:C535786
+xref: MIM:271510
+xref: NCI:C129031
+xref: ORDO:93357
+xref: SNOMEDCT_US_2025_09_01:389161008
+xref: UMLS_CUI:C1300260
+property_value: exactMatch "GARD:4970" xsd:string
+property_value: exactMatch "MESH:C535786" xsd:string
+property_value: exactMatch "NCI:C129031" xsd:string
+property_value: exactMatch "ORDO:93357" xsd:string
+property_value: exactMatch "UMLS_CUI:C1300260" xsd:string
+
+[Term]
 id: DOID:5688
 name: Werner syndrome
 namespace: disease_ontology
@@ -50349,6 +50861,7 @@ name: anterior spinal artery syndrome
 namespace: disease_ontology
 def: "A syndrome that is characterized by loss of function of the anterior two-thirds of the spinal cord that results from ischemia of the anterior spinal artery." [url:https\://en.wikipedia.org/wiki/Anterior_spinal_artery_syndrome]
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "Anterior spinal artery occlusion syndrome" EXACT []
 xref: GARD:9653
 xref: ICD10CM:G83.82
@@ -51344,6 +51857,7 @@ comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_cancer_slim
 subset: DO_RAD_slim
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "chronic granulocytic leukaemia" EXACT []
 synonym: "chronic granulocytic leukemia" EXACT []
 synonym: "chronic myelogenous leukaemia" EXACT []
@@ -52013,6 +52527,7 @@ alt_id: DOID:9208
 def: "A monocytic leukemia where the majority of monocytic cells are promonocytes." [url:https\://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=18.09d&ns=ncit&code=C4861]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
+subset: NCIthesaurus
 synonym: "acute Monoblastic Leukemia and acute Monocytic Leukemia" EXACT []
 synonym: "acute monocytic leukaemia" EXACT []
 synonym: "acute monocytic leukaemia without mention of remission" EXACT []
@@ -52155,13 +52670,12 @@ xref: UMLS_CUI:C0002896
 id: DOID:8970
 name: subacute sclerosing panencephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Morbillivirus hominis) which is immune resistant." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis, url:https\://medlineplus.gov/ency/article/001419.htm, url:https\://pubmed.ncbi.nlm.nih.gov/14872030/, url:https\://www.ncbi.nlm.nih.gov/books/NBK560673/]
+def: "A viral encephalitis that has_material_basis_in persistent central nervous system infection of the wild-type measles virus (Morbillivirus hominis) characterized by onset of personality or behavioral changes and intellectual deterioriation years after initial infection, followed by progressive decline in motor function, akinetic mutism or coma, and death. Higher incidence or shorter latency periods may be observed in those initially infected under the age of 2 or in cases of intrafamilial transmission." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis, url:https\://doi.org/10.1542/9781610027373-S3_012_002, url:https\://medlineplus.gov/ency/article/001419.htm, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6450100/, url:https\://pubmed.ncbi.nlm.nih.gov/14872030/, url:https\://www.ncbi.nlm.nih.gov/books/NBK560673/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Dawson's encephalitis" EXACT []
 synonym: "Dawson's inclusion body encephalitis" EXACT []
-synonym: "immunosuppressive measles encephalitis" EXACT []
 synonym: "SSPE" EXACT OMO:0003012 []
 synonym: "subacute sclerosing leukoencephalopathy" EXACT []
 synonym: "Van Bogaert's sclerosing leukoencephalitis" EXACT []
@@ -52172,7 +52686,7 @@ xref: MESH:D013344
 xref: MIM:260470
 xref: NCI:C85171
 xref: ORDO:2806
-xref: SNOMEDCT_US_2025_09_01:84196008
+xref: SNOMEDCT_US_2025_09_01:192685000
 xref: UMLS_CUI:C0038522
 property_value: exactMatch "GARD:7708" xsd:string
 property_value: exactMatch "ICD10CM:A81.1" xsd:string
@@ -52187,7 +52701,7 @@ property_value: exactMatch "UMLS_CUI:C0038522" xsd:string
 id: DOID:898
 name: autosomal dominant polycystic kidney disease
 namespace: disease_ontology
-def: "A polycystic kidney disease characterized by the presence of multiple cysts located_in the kidney resulting from ciliopathy that disrupts the function of primary cilium, inherited in an autosomal dominant fashion." [url:https\://en.wikipedia.org/wiki/Ciliopathy#cite_note-davenport2008-4, url:https\://rarediseases.info.nih.gov/diseases/10413/autosomal-dominant-polycystic-kidney-disease, url:https\://www.genome.gov/Genetic-Disorders/Autosomal-Polycystic-Kidney-Disease]
+def: "A polycystic kidney disease characterized by the presence of multiple cysts located_in the kidney resulting from ciliopathy that disrupts the function of primary cilium, inherited in an autosomal dominant fashion." [url:https\://en.wikipedia.org/wiki/Ciliopathy#cite_note-davenport2008-4, url:https\://kdigo.org/wp-content/uploads/2025/01/KDIGO-2025-ADPKD-Guideline.pdf, url:https\://rarediseases.info.nih.gov/diseases/10413/autosomal-dominant-polycystic-kidney-disease, url:https\://www.genome.gov/Genetic-Disorders/Autosomal-Polycystic-Kidney-Disease]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN]. Updating outdated UMLS CUI. Removing Caroli disease as a synonym as this is a distinct disease.
 subset: DO_rare_slim
 subset: NCIthesaurus

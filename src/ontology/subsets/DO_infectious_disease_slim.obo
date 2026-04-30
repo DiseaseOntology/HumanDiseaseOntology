@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-03-31/subsets/DO_infectious_disease_slim.obo
-date: 31:03:2026 15:18
+data-version: doid/releases/2026-04-30/subsets/DO_infectious_disease_slim.obo
+date: 30:04:2026 14:18
 ontology: doid/subsets/DO_infectious_disease_slim
 
 [Term]
@@ -1407,6 +1407,18 @@ synonym: "CS" EXACT OMO:0003012 []
 is_a: DOID:0050340 ! opportunistic bacterial infectious disease
 
 [Term]
+id: DOID:0070702
+name: measles inclusion body encephalitis
+namespace: disease_ontology
+def: "A viral encephalitis that has_material_basis_in measles virus (Morbillivirus hominis) and occurs in immunocompromised patients with acute onset of progressive seizures days to months after infection or vaccination with the live-attenuated vaccine, resulting near universally in death." [url:https\://doi.org/10.1542/9781610027373-S3_012_002, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6450100/, url:https\://pubmed.ncbi.nlm.nih.gov/38512528/]
+subset: DO_infectious_disease_slim
+subset: DO_rare_slim
+synonym: "immunosuppressive measles encephalitis" EXACT []
+synonym: "MIBE" EXACT OMO:0003012 []
+xref: SNOMEDCT_US_2025_09_01:416154000
+property_value: relatedMatch "UMLS_CUI:C0038522" xsd:string
+
+[Term]
 id: DOID:0080159
 name: Cryptococcal meningitis
 namespace: disease_ontology
@@ -2161,6 +2173,19 @@ xref: MESH:D003139
 xref: NCI:C34500
 xref: SNOMEDCT_US_2025_09_01:195648002
 xref: UMLS_CUI:C0009443
+
+[Term]
+id: DOID:10461
+name: dentin caries
+namespace: disease_ontology
+subset: DO_infectious_disease_slim
+synonym: "Compound dental caries" EXACT []
+synonym: "Dental caries extending into dentine" EXACT []
+xref: ICD10CM:K02
+xref: ICD9CM:521.02
+xref: SNOMEDCT_US_2025_09_01:442551007
+xref: UMLS_CUI:C0266846
+is_a: DOID:216 ! dental caries
 
 [Term]
 id: DOID:10519
@@ -3410,6 +3435,16 @@ xref: UMLS_CUI:C0752235
 is_a: DOID:0050338 ! primary bacterial infectious disease
 
 [Term]
+id: DOID:11736
+name: odontoclasia
+namespace: disease_ontology
+subset: DO_infectious_disease_slim
+xref: ICD9CM:521.05
+xref: SNOMEDCT_US_2025_09_01:196305005
+xref: UMLS_CUI:C0341004
+is_a: DOID:216 ! dental caries
+
+[Term]
 id: DOID:11750
 name: Bordetella parapertussis whooping cough
 namespace: disease_ontology
@@ -3567,6 +3602,7 @@ alt_id: DOID:0050020
 def: "A trypanosomiasis that is a tropical parasitic disease caused by the flagellate protozoan Trypanosoma cruzi, which is transmitted to humans and other mammals by an insect vector, the blood-sucking assassin bugs of the subfamily Triatominae (family Reduviidae), most commonly species belonging to the Triatoma, Rhodnius, and Panstrongylus genera. The symptoms include fever, fatigue, body aches, headache, rash, loss of appetite, diarrhea, vomiting, swelling of the eyelids and myocarditis." [url:http\://en.wikipedia.org/wiki/Chagas_disease]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
+subset: NCIthesaurus
 subset: zoonotic_infectious_disease
 synonym: "American trypanosomiasis" RELATED []
 synonym: "Chagas' disease" EXACT []
@@ -5003,6 +5039,19 @@ xref: UMLS_CUI:C0024534
 is_a: DOID:12365 ! malaria
 
 [Term]
+id: DOID:14089
+name: root caries
+namespace: disease_ontology
+subset: DO_infectious_disease_slim
+synonym: "Cementum caries" EXACT []
+synonym: "Dental caries of root surface" EXACT []
+xref: ICD9CM:521.08
+xref: MESH:D017213
+xref: SNOMEDCT_US_2025_09_01:30512007
+xref: UMLS_CUI:C0162644
+is_a: DOID:216 ! dental caries
+
+[Term]
 id: DOID:14095
 name: boutonneuse fever
 namespace: disease_ontology
@@ -5727,6 +5776,43 @@ xref: MESH:D014401
 xref: SNOMEDCT_US_2025_09_01:4445009
 xref: UMLS_CUI:C0041333
 is_a: DOID:0050598 ! extrapulmonary tuberculosis
+
+[Term]
+id: DOID:216
+name: dental caries
+namespace: disease_ontology
+alt_id: DOID:10785
+alt_id: DOID:10870
+alt_id: DOID:11913
+def: "A teeth hard tissue disease that is characterized by damage to a tooth that can happen when decay-causing bacteria in your mouth make acids that attack the tooth’s surface, or enamel." [url:https\://www.nidcr.nih.gov/health-info/tooth-decay]
+subset: DO_infectious_disease_slim
+subset: NCIthesaurus
+synonym: "Dental caries extending into pulp" EXACT []
+synonym: "Dental caries of smooth surface" EXACT []
+synonym: "Dental caries pit and fissure" EXACT []
+xref: EFO:0003819
+xref: ICD10CM:K02
+xref: ICD10CM:K02.6
+xref: ICD9CM:521.0
+xref: ICD9CM:521.07
+xref: MESH:D003731
+xref: NCI:C52593
+xref: SNOMEDCT_US_2025_09_01:155632007
+xref: UMLS_CUI:C0011334
+xref: UMLS_CUI:C1456145
+
+[Term]
+id: DOID:217
+name: enamel caries
+namespace: disease_ontology
+subset: DO_infectious_disease_slim
+synonym: "Dental caries limited to enamel" EXACT []
+synonym: "primary dental caries" EXACT []
+synonym: "simple dental cavity" EXACT []
+xref: ICD9CM:521.01
+xref: SNOMEDCT_US_2025_09_01:80353004
+xref: UMLS_CUI:C0266853
+is_a: DOID:216 ! dental caries
 
 [Term]
 id: DOID:2272
@@ -7275,6 +7361,7 @@ name: maple bark strippers' lung
 namespace: disease_ontology
 def: "An opportunistic mycosis that is located_in lungs caused by inhalation of fungal spores while stripping the bark from maple logs, has_material_basis_in Cryptostroma corticale." [url:https\://www.ncbi.nlm.nih.gov/pubmed/2735559]
 subset: DO_infectious_disease_slim
+subset: NCIthesaurus
 synonym: "alveolitis due to cryptostroma corticale" EXACT []
 synonym: "maple bark disease" EXACT []
 synonym: "maple bark stripper's disease" EXACT []
@@ -7908,13 +7995,12 @@ property_value: broadMatch "ORDO:438279" xsd:string
 id: DOID:8970
 name: subacute sclerosing panencephalitis
 namespace: disease_ontology
-def: "A viral infectious disease that results_in persistent infection located_in brain and that has_material_basis_in Measles virus (Morbillivirus hominis) which is immune resistant." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis, url:https\://medlineplus.gov/ency/article/001419.htm, url:https\://pubmed.ncbi.nlm.nih.gov/14872030/, url:https\://www.ncbi.nlm.nih.gov/books/NBK560673/]
+def: "A viral encephalitis that has_material_basis_in persistent central nervous system infection of the wild-type measles virus (Morbillivirus hominis) characterized by onset of personality or behavioral changes and intellectual deterioriation years after initial infection, followed by progressive decline in motor function, akinetic mutism or coma, and death. Higher incidence or shorter latency periods may be observed in those initially infected under the age of 2 or in cases of intrafamilial transmission." [url:http\://en.wikipedia.org/wiki/Subacute_sclerosing_panencephalitis, url:https\://doi.org/10.1542/9781610027373-S3_012_002, url:https\://medlineplus.gov/ency/article/001419.htm, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC6450100/, url:https\://pubmed.ncbi.nlm.nih.gov/14872030/, url:https\://www.ncbi.nlm.nih.gov/books/NBK560673/]
 subset: DO_infectious_disease_slim
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Dawson's encephalitis" EXACT []
 synonym: "Dawson's inclusion body encephalitis" EXACT []
-synonym: "immunosuppressive measles encephalitis" EXACT []
 synonym: "SSPE" EXACT OMO:0003012 []
 synonym: "subacute sclerosing leukoencephalopathy" EXACT []
 synonym: "Van Bogaert's sclerosing leukoencephalitis" EXACT []
@@ -7925,7 +8011,7 @@ xref: MESH:D013344
 xref: MIM:260470
 xref: NCI:C85171
 xref: ORDO:2806
-xref: SNOMEDCT_US_2025_09_01:84196008
+xref: SNOMEDCT_US_2025_09_01:192685000
 xref: UMLS_CUI:C0038522
 is_a: DOID:646 ! viral encephalitis
 property_value: exactMatch "GARD:7708" xsd:string

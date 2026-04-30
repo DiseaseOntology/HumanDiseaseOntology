@@ -491,8 +491,10 @@ $(REFRESH_IMPS):
 # AUTOMATED IMPORTS -- MERGE ONLY
 # ----------------------------------------
 
+# version omim_susc_import.owl first to avoid file churn with repeat commands
 build/update/omim-susc-invert.owl: $(EDIT) src/ontology/imports/omim_susc_import.owl \
- src/sparql/update/omim-susc-invert.rq | check_robot build/update
+ src/sparql/update/omim-susc-invert.rq | check_robot build/update \
+ version_omim_susc
 	@echo "Inverting OMIM susceptibility relations..."
 	@$(ROBOT) merge \
 	 --input $< \
@@ -791,18 +793,21 @@ VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 version_imports: $(VERSION_IMPS) version_ext
 
 version_ext: src/ontology/ext.owl | check_robot
-	@$(ROBOT) annotate \
-	 --input $< \
-	 --version-iri "$(RELEASE_PREFIX)ext.owl" \
-	 --output $<
-	@echo "Updated versionIRI of $<"
+	@CUR_VERS=$$(cat $< | $(extract_versionIRI)) ; \
+	NEW_VERS="$(RELEASE_PREFIX)ext.owl" ; \
+	if [[ "$$CUR_VERS" != "$$NEW_VERS" ]]; then \
+		$(ROBOT) annotate --input $< --version-iri "$$NEW_VERS" --output $< ; \
+		echo "Updated versionIRI of $<" ; \
+	fi
 
+# only version if needed to avoid omim_susc_import.owl forced file churn
 $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
-	@$(ROBOT) annotate \
-	 --input $< \
-	 --version-iri "$(RELEASE_PREFIX)imports/$(notdir $<)" \
-	 --output $<
-	@echo "Updated versionIRI of $<"
+	@CUR_VERS=$$(cat $< | $(extract_versionIRI)) ; \
+	NEW_VERS="$(RELEASE_PREFIX)imports/$(notdir $<)" ; \
+	if [[ "$$CUR_VERS" != "$$NEW_VERS" ]]; then \
+		$(ROBOT) annotate --input $< --version-iri "$$NEW_VERS" --output $< ; \
+		echo "Updated versionIRI of $<" ; \
+	fi
 
 
 # ----------------------------------------

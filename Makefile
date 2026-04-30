@@ -8,6 +8,8 @@ SHELL := bash
 .SECONDARY:
 .NOTPARALLEL:
 
+include src/util/functions.mk
+
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
 OBO = http://purl.obolibrary.org/obo/

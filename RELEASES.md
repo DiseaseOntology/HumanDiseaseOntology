@@ -16,6 +16,27 @@
 
 ## 2026 Releases
 
+### [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-04-30)
+
+This release of the Human Disease Ontology includes 12,127 disease classes, 9,848 with textual definitions (81.2%). Translation files now include 11,825 labels (97.5%), 11,462 synonyms (58.6%), and 6,579 definitions (66.8%) in Spanish.
+
+Disease groups revised & expanded include Alport syndrome, glycogen storage disease, hydrocephalus, kidney disease, Meckel syndrome, neuropathies/HSANs, and viral encephalitis. While new subtypes have been added for Galloway-Mowat syndrome, Hermansky-Pudlak syndrome, Parkinson's disease, and retinitis pigmentosa.
+
+Additional new diseases include craniosynostosis-scoliosis syndrome; Davis-Wells syndrome; lobodontia; small fiber neuropathy; STAD syndrome; Zeitz-Han retinal dystrophy; Ebstein-Bezieau neurodevelopmental syndrome; Luo-Agrawal neurodevelopmental syndrome; neurodevelopmental disorder with congenital cardiac defects and variable renal and ocular abnormalities; neurodevelopmental disorder with seizures, hypotonia, and variable spasticity; neurodevelopmental disorder with spasticity, thin corpus callosum, and decreased brain white matter; X-linked neurodevelopmental disorder with poor or absent speech and behavioral abnormalities; and Yu-Kury neurodevelopmental syndrome.
+
+Additional revised diseases include autosomal recessive cerebral arteriopathy with subcortical infarcts and leukoencephalopathy 1; autosomal recessive nonsyndromic deafness subtypes; developmental and epileptic encephalopathy 25; early-onset obesity, adrenal insufficiency, and red hair; environmentally induced asthma; epidermolysis bullosa simplex & subtypes; isolated microphthalmia & syndromic microphthalmia 16; and spermatogenic failure.
+
+No terms changed obsoletion status in this release.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-03-31...v2026-04-30
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-04-30/src/ontology/doid-merged.obo) | |
+
 ### [v2026-03-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-03-31)
 
 This release of the Human Disease Ontology includes 12,079 disease classes, 9,796 with textual definitions (81.1%). Translation files now include 11,839 labels (98.0%), 11,470 synonyms (58.8%), and 6,589 definitions (67.3%) in Spanish.

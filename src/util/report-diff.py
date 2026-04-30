@@ -31,7 +31,7 @@ def get_reports():
 	reports = []
 	for f in files:
 		if '-report.rq' in f:
-			reports.append(re.sub('\.rq$', '', f))
+			reports.append(re.sub(r'\.rq$', '', f))
 	return reports
 
 if __name__ == '__main__':
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 			sign = '+'
 			if v < 0:
 				sign = '-'
-			out = '\t' + re.sub('^\?', '', h.strip()) + t + sign + str(v)
+			out = '\t' + re.sub(r'^\?', '', h.strip()) + t + sign + str(v)
 			output.append(out)
 	with open('build/reports/report-diff.txt', 'w+') as f:
 		for o in output:

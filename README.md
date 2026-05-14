@@ -6,6 +6,19 @@
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO)
 
+
+### Changes to OBO & JSON Production Files
+
+> [!TIP]
+> If you're here to get test files related to our July 2026 anticipated production software upgrade, all files can be found in their standard locations. If you normally access files via PURL (_good choice!_) you can find the files with the same name in the `src/ontology/releases` folder.
+
+The files in this test release correspond to [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2026-04-30) but released using ROBOT v1.9.10 (instead of v1.9.5).
+
+For additional details, please see https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1597#issuecomment-4453464803. If you have any questions or concerns, please comment on that issue or use the [contact form](https://disease-ontology.org/outreach/contact-us/) at disease-ontology.org.
+
+<br>
+
+
 ## Details
 The primary release file, `doid.owl`, is available in the `src/ontology/releases` directory of this GitHub repository. _We strongly recommend downloading this file using its IRI, http://purl.obolibrary.org/obo/doid.owl, particularly where stable access to the latest version is desired._
 

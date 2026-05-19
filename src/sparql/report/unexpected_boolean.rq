@@ -1,0 +1,13 @@
+# Identifies boolean values used anywhere other than owl:deprecated
+#
+# While not technically an error, this may cause parsing issues for some tools
+# see https://github.com/EnvironmentOntology/envo/issues/1656
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?entity ?predicate ?value
+WHERE { 
+  ?entity ?predicate ?value .
+  FILTER(datatype(?value) = xsd:boolean && ?predicate != owl:deprecated)
+}

@@ -16,6 +16,81 @@
 
 ## 2026 Releases
 
+### [v2026-05-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-05-30)
+
+This release of the Human Disease Ontology includes 12,191 disease classes, 9,914 with textual definitions (81.3%). Translation files include 11,820 labels, 11,461 synonyms, and 6,570 definitions in Spanish.
+
+Disease groups revised & expanded include chronic progressive external ophthalmoplegia, dentin dysplasia, developmental and epileptic encephalopathy, multiple mitochondrial dysfunctions syndrome, mitochondrial DNA depletion syndrome, spermatogenic failure, mitochondrial myopathy, & mitochondrial metabolism diseases.
+
+Disease groups revised include various autosomal genetic diseases (Alzheimer's disease, agammaglobulinemia, amelogenesis imperfecta, chromsomal diseases, common variable immunodeficiency, etc.), chronic kidney disease, complex cortical dysplasia with other brain malformations, and syndromic microphthalmia.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-04-30...v2026-05-30
+
+
+### Additional new diseases
+- adult-onset leukoencephalopathy without lacunae
+- Al Kaissi syndrome
+- autosomal recessive neurodevelopmental disorder with or without hyperkinetic movements and seizures
+- cerebellar atrophy with seizures and variable developmental delay
+- cerebellar atrophy, developmental delay, and seizures
+- combined immunodeficiency and megaloblastic anemia with or without hyperhomocysteinemia
+- congenital facial palsy with ptosis and velopharyngeal dysfunction
+- dental radicular dysplasia
+- developmental delay with sleep apnea
+- developmental delay with variable cardiac and renal congenital anomalies and dysmorphic facies
+- dyschromatosis, ichthyosis, deafness, and atopic disease
+- early childhood-onset progressive leukodystrophy
+- early-onset progressive encephalopathy with brain atrophy and spasticity
+- episodic mitochondrial myopathy with optic atrophy and reversible leukoencephalopathy
+- familial juvenile hyperuricemic nephropathy 3
+- Harel-Tora neurodevelopmental syndrome
+- HELIX syndrome
+- immune dysregulation, neurodevelopmental defects, and colitis
+- immunodeficiency, developmental delay, and hypohomocysteinemia
+- joint laxity, short stature, and myopia
+- Mendez-Johnson immunoneurologic syndrome
+- mitochondrial neurodevelopmental disorder with abnormal movements and lactic acidosis, with or without seizures
+- neurocardiorenal malformation syndrome
+- neurodevelopmental disorder with ataxic gait, absent speech, and decreased cortical white matter
+- neurodevelopmental disorder with behavioral abnormalities and childhood-onset spastic paraplegia
+- neurodevelopmental disorder with early-onset seizures, facial dysmorphism, and behavioral abnormalities
+- neurodevelopmental disorder with microcephaly, ataxia, and seizures
+- neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy
+- neurodevelopmental disorder with speech delay and behavioral abnormalities
+- neurodevelopmental disorder with structural brain abnormalities and craniofacial abnormalities
+- neurodevelopmental disorder with variable motor and speech impairment
+- Pilarowski-Bjornsson syndrome
+- Popov-Chang syndrome
+- progressive microcephaly with simplified gyral pattern and cerebellar hypoplasia
+- Ramond-Elliott neurodevelopmental syndrome
+- recurrent respiratory papillomatosis
+- Valence-Farazi cerebellar ataxia syndrome
+
+
+### Additional revised diseases
+- acromelic frontonasal dysostosis
+- autosomal dominant neurodevelopmental disorder with or without hyperkinetic movements and seizures
+- diffuse midline glioma, H3 K27-altered
+- DiGeorge syndrome
+- Down syndrome
+- epidermodysplasia verruciformis
+- focal epithelial hyperplasia
+- retinitis pigmentosa 101
+- skin squamous cell carcinoma
+
+
+### Obsoleted Diseases
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:0051079 | obsolete monogenic chronic kidney disease | | | unnecessary grouping term
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-05-30/src/ontology/doid-merged.obo) | |
+
 ### [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-04-30)
 
 This release of the Human Disease Ontology includes 12,127 disease classes, 9,848 with textual definitions (81.2%). Translation files now include 11,825 labels (97.5%), 11,462 synonyms (58.6%), and 6,579 definitions (66.8%) in Spanish.

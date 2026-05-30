@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-04-30/subsets/NCIthesaurus.obo
-date: 30:04:2026 14:18
+data-version: doid/releases/2026-05-30/subsets/NCIthesaurus.obo
+date: 30:05:2026 08:02
 ontology: doid/subsets/NCIthesaurus
 
 [Term]
@@ -6475,15 +6475,26 @@ is_a: DOID:3459 ! breast carcinoma
 
 [Term]
 id: DOID:0080684
-name: diffuse midline glioma, H3 K27M-mutant
+name: diffuse midline glioma, H3 K27-altered
 namespace: disease_ontology
-def: "A histone mutated tumor that is characterized by the presence of histone H3 K27M mutation located throughout the midline structures of the central nervous system." [url:https\://braintumor.org/wp-content/assets/WHO-Central-Nervous-System-Tumor-Classification.pdf, url:https\://pubmed.ncbi.nlm.nih.gov/31290035/, url:https\://www.frontiersin.org/articles/10.3389/fonc.2019.00031/full]
+def: "A histone mutated tumor that is characterized by loss of histone H3 p.K28me3 (K27me3) methylation and located throughout the midline structures of the central nervous system. Methylation loss may be due to p.K28M (K27M) mutation in one of the histone H3 isoforms (H3.1, H3.2, or H3.3), overexpression of EZHIP, or mutation of the EGFR gene." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8328013/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC9763979/, url:https\://pubmed.ncbi.nlm.nih.gov/30800634/, url:https\://pubmed.ncbi.nlm.nih.gov/31290035/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "diffuse intrinsic pontine glioma" EXACT []
+synonym: "diffuse midline glioma, H3 K27M-mutant" EXACT []
+xref: GARD:0026785
+xref: ICD10CM:C71.9
 xref: ICDO:9385/3
-xref: NCI:C129309
+xref: NCI:C185368
+xref: ORDO:723358
+xref: UMLS_CUI:C5669877
 is_a: DOID:3070 ! high grade glioma
+property_value: broadMatch "ICD10CM:C71.9" xsd:string
+property_value: exactMatch "ICDO:9385/3" xsd:string
+property_value: exactMatch "NCI:C185368" xsd:string
+property_value: exactMatch "ORDO:723358" xsd:string
+property_value: exactMatch "UMLS_CUI:C5669877" xsd:string
+property_value: narrowMatch "GARD:0026785" xsd:string
 
 [Term]
 id: DOID:0080694
@@ -7051,13 +7062,13 @@ is_a: DOID:936 ! brain disease
 
 [Term]
 id: DOID:0080922
-name: bilateral frontoparietal polymicrogyria
+name: complex cortical dysplasia with other brain malformations 14A
 namespace: disease_ontology
-def: "A polymicrogyria that is characterized by a global developmental delay with impaired intellectual development, motor delay, poor speech development, and early-onset seizures, often focal or atypical absence and that has_material_basis_in homozygous mutation in the ADGRG1 gene on chromosome 16q21." [url:https\://pubmed.ncbi.nlm.nih.gov/34863467/]
+def: "A complex cortical dysplasia with other brain malformations that is characterized by a global developmental delay with impaired intellectual development, motor delay, poor speech development, and early-onset seizures, often focal or atypical absence and that has_material_basis_in homozygous mutation in the ADGRG1 gene on chromosome 16q21." [url:https\://pubmed.ncbi.nlm.nih.gov/34863467/]
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "bilateral frontoparietal polymicrogyria" EXACT []
 synonym: "CDCBM14A" EXACT OMO:0003012 []
-synonym: "complex cortical dysplasia with other brain malformations 14A" EXACT []
 xref: GARD:10784
 xref: MIM:606854
 xref: NCI:C148367
@@ -7530,7 +7541,6 @@ subset: NCIthesaurus
 synonym: "Pituitary Gland Blastoma" EXACT []
 xref: ICDO:8273/3
 xref: NCI:C155304
-is_a: DOID:162 ! cancer
 is_a: DOID:1785 ! pituitary cancer
 
 [Term]
@@ -18537,7 +18547,7 @@ property_value: exactMatch "MESH:D006042" xsd:string
 id: DOID:12177
 name: common variable immunodeficiency
 namespace: disease_ontology
-def: "An agammaglobulinemia that is characterized by low Ig levels with phenotypically normal B cells that can proliferate but do not develop into Ig-producing cells and that esults in insufficient production of antibodies needed to respond to exposure of pathogens." [url:http\://en.wikipedia.org/wiki/Common_variable_immunodeficiency, url:http\://www.merck.com/mmpe/sec13/ch164/ch164g.html]
+def: "An agammaglobulinemia that is characterized by low Ig levels with phenotypically normal B cells that can proliferate but do not develop into Ig-producing cells and that results in insufficient production of antibodies needed to respond to exposure of pathogens." [url:http\://en.wikipedia.org/wiki/Common_variable_immunodeficiency, url:http\://www.merck.com/mmpe/sec13/ch164/ch164g.html]
 comment: Xref MGI. OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -20839,17 +20849,27 @@ is_a: DOID:397 ! restrictive cardiomyopathy
 id: DOID:12934
 name: Kearns-Sayre syndrome
 namespace: disease_ontology
+def: "A chronic progressive external ophthalmoplegia characterized by progressive external ophthalmoplegia, pigmentary retinopathy, and one or more of heart block, cerebellar ataxia, or a cerebrospinal fluid protein level above 100 mg/dl, that has_material_basis_in deletion of mitochondrial DNA. Onset is before 20 years of age." [url:https\://pubmed.ncbi.nlm.nih.gov/10072053/, url:https\://pubmed.ncbi.nlm.nih.gov/16365882/, url:https\://www.ncbi.nlm.nih.gov/books/NBK482341/]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
+synonym: "KSS" EXACT OMO:0003012 []
 xref: GARD:6817
 xref: ICD10CM:H49.81
 xref: MESH:D007625
 xref: MIM:530000
 xref: NCI:C84798
+xref: ORDO:480
 xref: SNOMEDCT_US_2025_09_01:25792000
 xref: UMLS_CUI:C0022541
 is_a: DOID:699 ! mitochondrial myopathy
+property_value: exactMatch "GARD:6817" xsd:string
+property_value: exactMatch "ICD10CM:H49.81" xsd:string
+property_value: exactMatch "MESH:D007625" xsd:string
+property_value: exactMatch "MIM:530000" xsd:string
+property_value: exactMatch "NCI:C84798" xsd:string
+property_value: exactMatch "ORDO:480" xsd:string
+property_value: exactMatch "UMLS_CUI:C0022541" xsd:string
 
 [Term]
 id: DOID:12935
@@ -23458,7 +23478,7 @@ is_a: DOID:934 ! viral infectious disease
 id: DOID:13777
 name: epidermodysplasia verruciformis
 namespace: disease_ontology
-def: "A primary immunodeficiency disease that results_in skin squamous cell carcinoma located_in skin, associated with a high risk of carcinoma. It is characterized by abnormal susceptibility to human papillomaviruses of the skin and has_symptom lesions on the body." [url:http\://en.wikipedia.org/wiki/Epidermodysplasia_verruciformis]
+def: "A primary immunodeficiency disease that is characterized by increased susceptibility to infection with specific human papillomavirus (HPV) genotypes, usually beta-HPV strains, and to the oncogenic potential of some of them, mainly HPV5 and HPV8. Affected individuals develop disseminated flat wart-like and pityriasis versicolor-like cutaneous lesions in childhood or adolescence. Associated with a high risk of carcinoma and has_symptom lesions on the body." [url:http\://en.wikipedia.org/wiki/Epidermodysplasia_verruciformis]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
@@ -24948,7 +24968,7 @@ is_a: DOID:1426 ! ureteral disease
 id: DOID:14250
 name: Down syndrome
 namespace: disease_ontology
-def: "A chromosomal disease that is characterized by flat-looking facial features and weak muscle tone (hypotonia) in infancy and is caused by trisomy of all or a critical portion of chromosome 21 and is associated with intellectual disability." [url:http\://en.wikipedia.org/wiki/Down_syndrome, url:http\://ghr.nlm.nih.gov/condition/down-syndrome, url:http\://www.nichd.nih.gov/health/topics/down/Pages/default.aspx, url:http\://www.omim.org/entry/190685?search=down%20syndrome&highlight=down%20syndromic%20syndrome, url:https\://research.nhgri.nih.gov/atlas/condition/trisomy-21]
+def: "A chromosomal duplication syndrome that is characterized by flat-looking facial features and weak muscle tone (hypotonia) in infancy and is caused by trisomy of all or a critical portion of chromosome 21 and is associated with intellectual disability." [url:http\://en.wikipedia.org/wiki/Down_syndrome, url:http\://ghr.nlm.nih.gov/condition/down-syndrome, url:http\://www.nichd.nih.gov/health/topics/down/Pages/default.aspx, url:http\://www.omim.org/entry/19068]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -36875,6 +36895,7 @@ namespace: disease_ontology
 def: "A skin carcinoma that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Cutaneous Squamous Cell Carcinoma" EXACT []
 synonym: "Epidermoid skin carcinoma" EXACT []
 synonym: "squamous cell carcinoma of skin" RELATED []
 xref: MESH:D000099314
@@ -47406,7 +47427,6 @@ xref: NCI:C3732
 xref: SNOMEDCT_US_2025_09_01:189815007
 xref: UMLS_CUI:C0206629
 is_a: DOID:1324 ! lung cancer
-is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:4766
@@ -60098,16 +60118,16 @@ id: DOID:699
 name: mitochondrial myopathy
 namespace: disease_ontology
 def: "A myopathy that is characterized by mitochondrial dysfunction." [url:http\://en.wikipedia.org/wiki/Mitochondrial_myopathies, url:http\://www.ninds.nih.gov/disorders/mitochondrial_myopathy/mitochondrial_myopathy.htm]
-comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: NCIthesaurus
-synonym: "mitochondrial cytopathy" EXACT []
 xref: MESH:D017240
-xref: MIM:251900
 xref: NCI:C101328
-xref: SNOMEDCT_US_2025_09_01:240096000
+xref: SNOMEDCT_US_2026_03_01:16851005
 xref: UMLS_CUI:C0162670
 is_a: DOID:423 ! myopathy
+property_value: exactMatch "MESH:D017240" xsd:string
+property_value: exactMatch "NCI:C101328" xsd:string
+property_value: exactMatch "UMLS_CUI:C0162670" xsd:string
 
 [Term]
 id: DOID:6992
@@ -68087,6 +68107,7 @@ name: acute megakaryocytic leukemia
 namespace: disease_ontology
 alt_id: DOID:9009
 def: "An acute myeloid leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers." [url:https\://en.wikipedia.org/wiki/Acute_megakaryoblastic_leukemia, url:https\://pubmed.ncbi.nlm.nih.gov/26228843/, url:https\://www.orpha.net/data/patho/GB/uk-AMLM7.pdf]
+subset: DO_cancer_slim
 subset: DO_RAD_slim
 subset: DO_rare_slim
 subset: NCIthesaurus

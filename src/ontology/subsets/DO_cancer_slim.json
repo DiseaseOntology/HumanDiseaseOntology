@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-04-30/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-05-30/subsets/DO_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -3215,26 +3215,55 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080684",
-      "lbl" : "diffuse midline glioma, H3 K27M-mutant",
+      "lbl" : "diffuse midline glioma, H3 K27-altered",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A histone mutated tumor that is characterized by the presence of histone H3 K27M mutation located throughout the midline structures of the central nervous system.",
-          "xrefs" : [ "url:https://braintumor.org/wp-content/assets/WHO-Central-Nervous-System-Tumor-Classification.pdf", "url:https://pubmed.ncbi.nlm.nih.gov/31290035/", "url:https://www.frontiersin.org/articles/10.3389/fonc.2019.00031/full" ]
+          "val" : "A histone mutated tumor that is characterized by loss of histone H3 p.K28me3 (K27me3) methylation and located throughout the midline structures of the central nervous system. Methylation loss may be due to p.K28M (K27M) mutation in one of the histone H3 isoforms (H3.1, H3.2, or H3.3), overexpression of EZHIP, or mutation of the EGFR gene.",
+          "xrefs" : [ "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC8328013/", "url:https://pmc.ncbi.nlm.nih.gov/articles/PMC9763979/", "url:https://pubmed.ncbi.nlm.nih.gov/30800634/", "url:https://pubmed.ncbi.nlm.nih.gov/31290035/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "diffuse intrinsic pontine glioma"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "diffuse midline glioma, H3 K27M-mutant"
         } ],
         "xrefs" : [ {
+          "val" : "GARD:0026785"
+        }, {
+          "val" : "ICD10CM:C71.9"
+        }, {
           "val" : "ICDO:9385/3"
         }, {
-          "val" : "NCI:C129309"
+          "val" : "NCI:C185368"
+        }, {
+          "val" : "ORDO:723358"
+        }, {
+          "val" : "UMLS_CUI:C5669877"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+          "val" : "ICD10CM:C71.9"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICDO:9385/3"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C185368"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:723358"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C5669877"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+          "val" : "GARD:0026785"
         } ]
       }
     }, {
@@ -11078,6 +11107,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Cutaneous Squamous Cell Carcinoma"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "Epidermoid skin carcinoma"
         }, {
@@ -21791,6 +21823,48 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_8761",
+      "lbl" : "acute megakaryocytic leukemia",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An acute myeloid leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers.",
+          "xrefs" : [ "url:https://en.wikipedia.org/wiki/Acute_megakaryoblastic_leukemia", "url:https://pubmed.ncbi.nlm.nih.gov/26228843/", "url:https://www.orpha.net/data/patho/GB/uk-AMLM7.pdf" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_RAD_slim", "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Megakaryocytic myelosis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Thrombocytic leukaemia"
+        } ],
+        "xrefs" : [ {
+          "val" : "GARD:524"
+        }, {
+          "val" : "ICD10CM:C94.2"
+        }, {
+          "val" : "ICD9CM:207.2"
+        }, {
+          "val" : "ICDO:9910/3"
+        }, {
+          "val" : "MESH:D007947"
+        }, {
+          "val" : "NCI:C3170"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:52220008"
+        }, {
+          "val" : "UMLS_CUI:C0023462"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:9009"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_8850",
       "lbl" : "salivary gland cancer",
       "type" : "CLASS",
@@ -22944,7 +23018,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080794",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_8761"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080795",
       "pred" : "is_a",
@@ -22960,7 +23034,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080798",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_8761"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080799",
       "pred" : "is_a",
@@ -24230,10 +24304,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_1324"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_4765",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_4769",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4765"
@@ -25029,6 +25099,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_8691",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0050749"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_8761",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_9119"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_8850",
       "pred" : "is_a",

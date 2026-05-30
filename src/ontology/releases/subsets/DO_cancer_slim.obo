@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-04-30/subsets/DO_cancer_slim.obo
-date: 30:04:2026 14:13
+data-version: doid/releases/2026-05-30/subsets/DO_cancer_slim.obo
+date: 30:05:2026 08:01
 ontology: doid/subsets/DO_cancer_slim
 
 [Term]
@@ -1579,15 +1579,26 @@ is_a: DOID:0080630 ! B-lymphoblastic leukemia/lymphoma
 
 [Term]
 id: DOID:0080684
-name: diffuse midline glioma, H3 K27M-mutant
+name: diffuse midline glioma, H3 K27-altered
 namespace: disease_ontology
-def: "A histone mutated tumor that is characterized by the presence of histone H3 K27M mutation located throughout the midline structures of the central nervous system." [url:https\://braintumor.org/wp-content/assets/WHO-Central-Nervous-System-Tumor-Classification.pdf, url:https\://pubmed.ncbi.nlm.nih.gov/31290035/, url:https\://www.frontiersin.org/articles/10.3389/fonc.2019.00031/full]
+def: "A histone mutated tumor that is characterized by loss of histone H3 p.K28me3 (K27me3) methylation and located throughout the midline structures of the central nervous system. Methylation loss may be due to p.K28M (K27M) mutation in one of the histone H3 isoforms (H3.1, H3.2, or H3.3), overexpression of EZHIP, or mutation of the EGFR gene." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC8328013/, url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC9763979/, url:https\://pubmed.ncbi.nlm.nih.gov/30800634/, url:https\://pubmed.ncbi.nlm.nih.gov/31290035/]
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "diffuse intrinsic pontine glioma" EXACT []
+synonym: "diffuse midline glioma, H3 K27M-mutant" EXACT []
+xref: GARD:0026785
+xref: ICD10CM:C71.9
 xref: ICDO:9385/3
-xref: NCI:C129309
+xref: NCI:C185368
+xref: ORDO:723358
+xref: UMLS_CUI:C5669877
 is_a: DOID:0080879 ! histone mutated tumor
+property_value: broadMatch "ICD10CM:C71.9" xsd:string
+property_value: exactMatch "ICDO:9385/3" xsd:string
+property_value: exactMatch "NCI:C185368" xsd:string
+property_value: exactMatch "ORDO:723358" xsd:string
+property_value: exactMatch "UMLS_CUI:C5669877" xsd:string
+property_value: narrowMatch "GARD:0026785" xsd:string
 
 [Term]
 id: DOID:0080702
@@ -1686,7 +1697,7 @@ subset: DO_childhood_cancer_slim
 subset: NCIthesaurus
 synonym: "pediatric non-Down syndrome acute megakaryoblastic leukemia" EXACT []
 xref: NCI:C7972
-is_a: DOID:9119 ! acute myeloid leukemia
+is_a: DOID:8761 ! acute megakaryocytic leukemia
 
 [Term]
 id: DOID:0080795
@@ -1729,7 +1740,7 @@ subset: DO_cancer_slim
 subset: NCIthesaurus
 xref: ICDO:9898/3
 xref: NCI:C43223
-is_a: DOID:9119 ! acute myeloid leukemia
+is_a: DOID:8761 ! acute megakaryocytic leukemia
 
 [Term]
 id: DOID:0080799
@@ -5476,6 +5487,7 @@ namespace: disease_ontology
 def: "A skin carcinoma that has_material_basis_in squamous cells." [url:http\://en.wikipedia.org/wiki/Squamous-cell_carcinoma]
 subset: DO_cancer_slim
 subset: NCIthesaurus
+synonym: "Cutaneous Squamous Cell Carcinoma" EXACT []
 synonym: "Epidermoid skin carcinoma" EXACT []
 synonym: "squamous cell carcinoma of skin" RELATED []
 xref: MESH:D000099314
@@ -7779,7 +7791,6 @@ xref: NCI:C3732
 xref: SNOMEDCT_US_2025_09_01:189815007
 xref: UMLS_CUI:C0206629
 is_a: DOID:1324 ! lung cancer
-is_a: DOID:162 ! cancer
 
 [Term]
 id: DOID:4769
@@ -10934,6 +10945,28 @@ xref: NCI:C3246
 xref: SNOMEDCT_US_2025_09_01:118618005
 xref: UMLS_CUI:C0026948
 is_a: DOID:0050749 ! peripheral T-cell lymphoma
+
+[Term]
+id: DOID:8761
+name: acute megakaryocytic leukemia
+namespace: disease_ontology
+alt_id: DOID:9009
+def: "An acute myeloid leukemia that derives from blood-forming tissue in which megakaryocytes proliferate in the bone marrow and circulate in the blood in large numbers." [url:https\://en.wikipedia.org/wiki/Acute_megakaryoblastic_leukemia, url:https\://pubmed.ncbi.nlm.nih.gov/26228843/, url:https\://www.orpha.net/data/patho/GB/uk-AMLM7.pdf]
+subset: DO_cancer_slim
+subset: DO_RAD_slim
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "Megakaryocytic myelosis" EXACT []
+synonym: "Thrombocytic leukaemia" EXACT []
+xref: GARD:524
+xref: ICD10CM:C94.2
+xref: ICD9CM:207.2
+xref: ICDO:9910/3
+xref: MESH:D007947
+xref: NCI:C3170
+xref: SNOMEDCT_US_2025_09_01:52220008
+xref: UMLS_CUI:C0023462
+is_a: DOID:9119 ! acute myeloid leukemia
 
 [Term]
 id: DOID:8850

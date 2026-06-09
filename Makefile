@@ -553,7 +553,7 @@ build/reports/diff-release.tsv: build/doid-merged-last.owl \
 ##########################################
 
 .PHONY: products
-products: primary human merged base subsets release_reports src/facets.tsv.gz
+products: primary human merged base subsets release_reports website
 
 # release vars
 TS = $(shell date +'%d:%m:%Y %H:%M')
@@ -828,13 +828,21 @@ publish: products
 
 
 # ----------------------------------------
-# FACET SEARCH FILE
+# FILES SUPPORTING disease-ontology.org
 # ----------------------------------------
 
+.PHONY: website
+website: src/facets.tsv.gz src/sitemap-disease-terms.xml
+
+# Supports faceted search on disease-ontology.org
 src/facets.tsv.gz: $(DM).owl src/sparql/build/facets.rq | check_robot
 	@$(ROBOT) query --input $< --query $(word 2,$^) $(basename $@)
 	@gzip -f $(basename $@)
 	@echo "Created $@"
+
+src/sitemap-disease-terms.xml: build/reports/diff-release.tsv
+	@python3 src/util/update-sitemap.py --date "$(DATE)" --diff $< --sitemap $@
+	@echo "Updated $@"
 
 
 ##########################################

@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2026-05-30/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2026-06-30/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -1775,20 +1775,26 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the presence of Her2 receptors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by excess HER2 (EBBR2) protein.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2+ breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-receptor positive breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">human epidermal growth factor 2 positive breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">human epidermal growth factor receptor 2 positive breast cancer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060079</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">Her2-receptor positive breast cancer</rdfs:label>
+        <rdfs:comment xml:lang="en">Excess HER2 protein is usually represented by an immunohistochemistry (IHC) score of 3+, or 2+ with a positive fluorescence in situ hybridization (FISH) result.</rdfs:comment>
+        <rdfs:label xml:lang="en">HER2 positive breast cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060079"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the presence of Her2 receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by excess HER2 (EBBR2) protein.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>url:https://www.sciencedirect.com/science/article/pii/S1470204511703369</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/22153890/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.bcrf.org/about-breast-cancer/her2-positive-breast-cancer-treatment-research/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1797,19 +1803,30 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of Her2 receptors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of HER2 (EBBR2) protein.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2- breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-null breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-receptor negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-zero breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">human epidermal growth factor 2 negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">human epidermal growth factor receptor 2 negative breast cancer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060080</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">Her2-receptor negative breast cancer</rdfs:label>
+        <rdfs:comment xml:lang="en">Absence of HER2 protein is usually represented by an immunohistochemistry (IHC) staining score of 0 with no membrane staining.</rdfs:comment>
+        <rdfs:label xml:lang="en">HER2 negative breast cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060080"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the absence of Her2 receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the absence of HER2 (EBBR2) protein.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
-        <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/25682076</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/40282933/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/41968415/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/42169015/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://pubmed.ncbi.nlm.nih.gov/42269397/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1817,20 +1834,37 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0060081 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of estrogen, progresterone and Her2 receptors.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060080"/>
+        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of estrogen, progresterone and HER2 (EBBR2) receptors.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-/HR- breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HER2-negative/HR-negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HR-/HER2- breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">HR-negative/HER2-negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">TNBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">hormone receptor negative/human epidermal growth factor receptor 2 negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">human epidermal growth factor receptor 2 negative/hormone receptor negative breast cancer</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">triple-negative breast cancer (TNBC / HR-/HER2-)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">triple-receptor negative breast cancer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060081</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">triple-receptor negative breast cancer</rdfs:label>
+        <rdfs:label xml:lang="en">triple-negative breast cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060081"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the absence of estrogen, progresterone and Her2 receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the absence of estrogen, progresterone and HER2 (EBBR2) receptors.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
+        <oboInOwl:hasDbXref>url:https://www.bcrf.org/about-breast-cancer/triple-negative-breast-cancer-treatment-symptoms-research/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/22826413</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060081"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget xml:lang="en">TNBC</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003012"/>
     </owl:Axiom>
     
 

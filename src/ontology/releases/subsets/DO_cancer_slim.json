@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-05-30/subsets/DO_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-06-30/subsets/DO_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -1529,14 +1529,28 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060079",
-      "lbl" : "Her2-receptor positive breast cancer",
+      "lbl" : "HER2 positive breast cancer",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A breast cancer that is characterized by the presence of Her2 receptors.",
-          "xrefs" : [ "url:https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html", "url:https://www.sciencedirect.com/science/article/pii/S1470204511703369" ]
+          "val" : "A breast cancer that is characterized by excess HER2 (EBBR2) protein.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/22153890/", "url:https://www.bcrf.org/about-breast-cancer/her2-positive-breast-cancer-treatment-research/", "url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html" ]
         },
+        "comments" : [ "Excess HER2 protein is usually represented by an immunohistochemistry (IHC) score of 3+, or 2+ with a positive fluorescence in situ hybridization (FISH) result." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2+ breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-receptor positive breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "human epidermal growth factor 2 positive breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "human epidermal growth factor receptor 2 positive breast cancer"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2011-06-08T12:23:02Z"
@@ -1547,14 +1561,34 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060080",
-      "lbl" : "Her2-receptor negative breast cancer",
+      "lbl" : "HER2 negative breast cancer",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A breast cancer that is characterized by the absence of Her2 receptors.",
-          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/25682076" ]
+          "val" : "A breast cancer that is characterized by the absence of HER2 (EBBR2) protein.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/40282933/", "url:https://pubmed.ncbi.nlm.nih.gov/41968415/", "url:https://pubmed.ncbi.nlm.nih.gov/42169015/", "url:https://pubmed.ncbi.nlm.nih.gov/42269397/", "url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html" ]
         },
+        "comments" : [ "Absence of HER2 protein is usually represented by an immunohistochemistry (IHC) staining score of 0 with no membrane staining." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2- breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-null breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-receptor negative breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-zero breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "human epidermal growth factor 2 negative breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "human epidermal growth factor receptor 2 negative breast cancer"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2011-06-08T12:23:02Z"
@@ -1565,14 +1599,43 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060081",
-      "lbl" : "triple-receptor negative breast cancer",
+      "lbl" : "triple-negative breast cancer",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A breast cancer that is characterized by the absence of estrogen, progresterone and Her2 receptors.",
-          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/22826413" ]
+          "val" : "A breast cancer that is characterized by the absence of estrogen, progresterone and HER2 (EBBR2) receptors.",
+          "xrefs" : [ "url:https://www.bcrf.org/about-breast-cancer/triple-negative-breast-cancer-treatment-symptoms-research/", "url:https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html", "url:https://www.ncbi.nlm.nih.gov/pubmed/22826413" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-/HR- breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HER2-negative/HR-negative breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HR-/HER2- breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "HR-negative/HER2-negative breast cancer"
+        }, {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "TNBC"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "hormone receptor negative/human epidermal growth factor receptor 2 negative breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "human epidermal growth factor receptor 2 negative/hormone receptor negative breast cancer"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "triple-negative breast cancer (TNBC / HR-/HER2-)"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "triple-receptor negative breast cancer"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2011-06-08T12:23:02Z"
@@ -22778,7 +22841,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060081",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1612"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_0060080"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060083",
       "pred" : "is_a",

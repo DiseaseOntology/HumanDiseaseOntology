@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/DO_childhood_cancer_slim.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-05-30/subsets/DO_childhood_cancer_slim.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-06-30/subsets/DO_childhood_cancer_slim.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0070322",
@@ -1459,11 +1459,24 @@
       "lbl" : "transient hypogammaglobulinemia of infancy",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An immune system disease characterized by a transitory drop in the levels of immunoglobulin G in an infant beginning between 5 and 24 months of age with levels typically returning to reference range by 6 years of age.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/37628357/", "url:https://www.ncbi.nlm.nih.gov/books/NBK544356/" ]
+        },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_childhood_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "THI"
+        } ],
         "xrefs" : [ {
+          "val" : "GARD:0020112"
+        }, {
           "val" : "ICD10CM:D80.7"
         }, {
           "val" : "NCI:C27071"
+        }, {
+          "val" : "ORDO:169139"
         }, {
           "val" : "SNOMEDCT_US_2025_09_01:88714009"
         }, {
@@ -1472,6 +1485,21 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "GARD:0020112"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ICD10CM:D80.7"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "NCI:C27071"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "ORDO:169139"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "val" : "UMLS_CUI:C0272238"
         } ]
       }
     }, {

@@ -21,7 +21,7 @@ DNC = src/ontology/doid-non-classified
 HD = src/ontology/HumanDO
 
 # Set the software versions to use
-ROBOT_VRS = 1.9.5
+ROBOT_VRS = 1.9.10
 FASTOBO_VRS = 0.4.6
 
 # ***NEVER run make commands in parallel (do NOT use the -j flag)***

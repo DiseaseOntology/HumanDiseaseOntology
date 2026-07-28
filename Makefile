@@ -111,7 +111,7 @@ check_fastobo:
 
 $(FASTOBO): | build
 	@if [[ $$(uname -m) == 'x86_64' ]]; then \
-		curl -Lk -o build/fastobo-validator.zip https://github.com/fastobo/fastobo-validator/releases/download/v$(FASTOBO_VRS)/fastobo-validator_null_x86_64-apple-darwin.zip ; \
+		curl -L -o build/fastobo-validator.zip https://github.com/fastobo/fastobo-validator/releases/download/v$(FASTOBO_VRS)/fastobo-validator_null_x86_64-apple-darwin.zip ; \
 		cd build && unzip -DD fastobo-validator.zip fastobo-validator && rm fastobo-validator.zip ; \
 	else \
 		if [[ $$(command -v cargo) != *"cargo" ]]; then \
@@ -220,7 +220,7 @@ diff: build/reports/diff-ci.tsv
 
 # Get the last release of doid-merged.owl (only if newer available)
 build/doid-merged-last.version: FORCE | build
-	@LATEST=$$(curl -sLk "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
+	@LATEST=$$(curl -sL "http://purl.obolibrary.org/obo/doid/doid-merged.owl" | \
 				sed -n '/owl:versionIRI/p;/owl:versionIRI/q' | \
 				sed -E 's/.*"([^"]+)".*/\1/') ; \
 	 if [[ -f $@ ]]; then \
@@ -234,7 +234,7 @@ build/doid-merged-last.version: FORCE | build
 
 build/doid-merged-last.owl: build/doid-merged-last.version
 	@echo "Downloading latest doid-merged.owl as $@..."
-	@curl -sLk http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
+	@curl -sL http://purl.obolibrary.org/obo/doid/doid-merged.owl -o $@
 
 # CI diff excludes 'has major susceptibility factor' relations
 build/doid-merged-last-no-msf.owl: build/doid-merged-last.owl | check_robot
@@ -275,7 +275,7 @@ build/reports/diff-ci.tsv: build/doid-merged-last-no-msf.owl \
 # Script and pipeline adapted from https://github.com/obophenotype/human-phenotype-ontology
 
 build/update/british_english_dictionary.csv: | build/update
-	curl -Lk -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
+	curl -L -o $@ https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/src/ontology/hpo_british_english_dictionary.csv
 
 build/update/synonyms.csv: $(EDIT) src/sparql/update/doid_synonyms.rq | check_robot build/update
 	@echo "Retrieving DO synonyms..."

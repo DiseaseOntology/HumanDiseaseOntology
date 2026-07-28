@@ -115,14 +115,14 @@ $(SOURCE_OWL): build/%.owl: build/%.version | build build/last/src
 		mv $@ build/last/src ; \
 	 fi
 	@echo "DOWNLOADING $@..."
-	@curl -Lk $(OBO)$(notdir $@) > $@
+	@curl -L $(OBO)$(notdir $@) > $@
 
 $(SOURCE_OWL_GZ): build/%.owl.gz: build/%.version | build build/last/src
 	@if [[ -f $@ ]]; then \
 		mv $@ build/last/src ; \
 	 fi
 	@echo "DOWNLOADING $@..."
-	@curl -Lk $(OBO)$(notdir $@) > $@
+	@curl -L $(OBO)$(notdir $@) > $@
 
 
 # ----------------------------------------
@@ -134,7 +134,7 @@ FORCE:
 
 $(patsubst %,build/%.version,$(IMPORT_OWL)): FORCE | build
 	@SRC=$(basename $@).owl ; \
-	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | $(extract_versionIRI)) ; \
+	 LATEST=$$(curl -sL $(OBO)$$(basename $${SRC}) | $(extract_versionIRI)) ; \
 	 if [[ -f $@ && -f $${SRC} ]]; then \
 		SRC_VERS=$$(sed '1q' $@) ; \
 		if [[ $${SRC_VERS} != $${LATEST} ]]; then \
@@ -146,7 +146,7 @@ $(patsubst %,build/%.version,$(IMPORT_OWL)): FORCE | build
 
 $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
 	@SRC=$(basename $@).owl.gz ; \
-	 LATEST=$$(curl -sLk $(OBO)$$(basename $${SRC}) | gzcat | $(extract_versionIRI)) ; \
+	 LATEST=$$(curl -sL $(OBO)$$(basename $${SRC}) | gzcat | $(extract_versionIRI)) ; \
 	 if [[ -f $@ && -f $${SRC} ]]; then \
 		SRC_VERS=$$(sed '1q' $@) ; \
 		if [[ $${SRC_VERS} != $${LATEST} ]]; then \

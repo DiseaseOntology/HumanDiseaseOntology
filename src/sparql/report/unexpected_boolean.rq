@@ -6,8 +6,8 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?entity ?predicate ?value
+SELECT DISTINCT ?entity ?property ?value
 WHERE { 
-  ?entity ?predicate ?value .
-  FILTER(datatype(?value) = xsd:boolean && ?predicate != owl:deprecated)
+  ?entity ?property ?value .
+  FILTER(datatype(?value) = xsd:boolean && ?property != owl:deprecated)
 }

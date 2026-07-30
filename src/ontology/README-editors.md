@@ -1,76 +1,73 @@
 SETTING UP
 ----------
 
-## Editing environment
+### Editing environment
 
-1. Install Protege 4.3 or higher
-2. Get the Elk plugin
-3. Install any required plugins from: http://wiki.geneontology.org/index.php/Ontology_editor_plugins
+For software installation instructions, refer to [Install_DO_curation](https://docs.google.com/document/d/1vmrc-acwffQom9QrpOTm3ywvPyyBnMpNcBPKolwJT0o/) google doc.
 
-**DO Files**  
+For Protégé set up, refer to [Note-Protege_setup](https://docs.google.com/document/d/1q21gvQ5iDLzzINv52GJDW857z0AsqRHwMC08eBGqm-s/) google doc.
 
-1. production file, actively edited: doid-edit.owl
-2. production GitHub file: produced after editing: doid.owl and doid.obo
-3. production SVN file: HumanDO.obo [this file is a copy of the current doid.obo file]
+### Files to Edit
+
+1. **src/ontology/doid-edit.owl**: This is the ONLY file in which DO disease terms should be edited.
+2. **src/ontology/imports/*_terms.txt**: The set of `*_terms.txt` files control what terms are imported and are named by the ontology terms are imported from. These are the ONLY files that should be edited to change imported terms.
 
 
-**ID range**: documented in the idranges file (doid-idranges.owl), 
-in the HumanDiseaseOntology/src/ontology/ directory)
+### ID range
+Each curator's ID range is documented in the idranges file (src/ontology/doid-idranges.owl) and are also listed below.
 
-The current (2015) ID ranges include 
- for the University of Maryland Baltimore curation team: 
+The current ID ranges for the University of Maryland School of Medicine curation team include: 
  
  	DOID:$sequence(7,50000,50999)$  Lynn 
-	DOID:$sequence(7,61000,61999)$  Claudia
+	DOID:$sequence(7,61000,61999)$  _awaiting assignment_
  	DOID:$sequence(7,70000,70999)$  Allen
  	DOID:$sequence(7,80000,85999)$  Lynn
- 	
+
+Additional curation ID ranges assigned include:
+
  	DOID:0100000 (in reserve)
  	DOID:0110000 Sue (MGD)
+
+_(Last updated 2026-07-30)_
 
 
 GETTING STARTED -- Setting up a DO Git remote repository
 ---------------
 
-Create a local DO git repository: 
+### Create a local DO git repository 
 
-1. create a local directory: HumanDiseaseOntology_git
-2. [in that directory]: run the command: create git directory
-     by the command: git init 
-3. clone the HumanDiseaseOntology git repository: 
-    by the command: git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git
+1. Open the directory on your local machine where you would like to place the
+`HumanDiseaseOntology` repository
+2. In that directory, run the command: `git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git`
 
-4. to view the status of your git repository: 
-   git status
-5. to bring in new udpates to your git repository: 
-   git pull https://github.com/DiseaseOntology/HumanDiseaseOntology.git
-
+- To view the status of your git repository use `git status`
+- To bring in new udpates to your local copy use `git pull origin` (optionally specifying the branch)
 
 'git help -a' and 'git help -g' lists available subcommands and some
 concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 
-# Git command steps: 
-Before working on DO file:
-git pull    -- get updates from master archive
+### Git command steps
 
-if adding a new file:
+Before working on DO file, run `git pull origin main`, while on the `main` branch locally to get updates from main branch of the repository on GitHub.
 
-	git add FILENAME
-	git commit -m "MY_TEXT" FILENAME      -- this a local commit
+If adding a new file:
+
+	`git add FILENAME`
+	`git commit -m "MY_TEXT" FILENAME`      -- this a local commit
 
 Before committing the updated or new file to the Master archive:
 
-	git pull    -- get updates from master archive
-	git push origin master   -- to commit the updated or new file to the master archive
+	`git pull`    -- get updates from master archive
+	`git push origin main`   -- to commit the updated or new file to the main branch
 
 
 Commit your changes
 
-   git commit -m "COMMIT MESSAGE" doid-edit.owl
+   `git commit -m "COMMIT MESSAGE" doid-edit.owl`
 
 If you are fixing as issue in the tracker, always reference this with
-a '#'. E.g.
+a '#', e.g.
 
    git commit -m "Fixed definition of hirsutism. Fixes issue #3" doid-edit.owl
 
@@ -78,62 +75,32 @@ a '#'. E.g.
 PROTEGE
 ------------------------
 
-Install Protege 4.3 (or higher version, if not in beta) and OBO-Edit Tools for Ontology Development 
-Download and install the latest version of Protege and OBO-Edit (2.3.1) for ontology development.
-http://protege.stanford.edu/products.php#desktop-protege
-https://sourceforge.net/projects/geneontology/files/OBO-Edit 2.3.1
+### Starting Protege
+
+First, open Protege. Then, open the doid-edit.owl file from your local HumanDiseaseOntology repository. Alternatively, you may be able to double-click
+the doid-edit.owl file (however, you will have to do this twice; the first time it opens Protégé and the second opens the actual file).
+
+### Reasoning
+
+Like most OBO ontologies, DO uses the Elk reasoner (https://github.com/liveontologies/elk-reasoner). Be sure this is selected in the Reasoner menu before starting the reasoner. If you are making changes, be sure to synchronize the reasoner afterward to update reasoning.
+
+### A few words of caution about Protégé
+
+Protégé 5.6 and higher are configured to automatically provide the correct IDs for any ontology, _IF_ they are properly defined in an accompanying `*-idranges.owl` file. This can set both the base IRI (e.g. `http://purl.obolibrary.org/obo/DOID_`) and the numbering scheme/range. If your user name matches one in the `*-idranges.owl` file, it will be used automatically. If not, you'll be given the option to choose an `*-idranges.owl` defined range. **DO curators should have a defined range and should not have to select one. _If your range is not automatically selected, please inform the repository manager._**
+
+Protégé _should_ use the next available ID in your range and attempts to track previously added IDs. However, it can make mistakes (e.g. you add a term and then delete it during a session). _YOU MUST_ be aware and check if ever in doubt. Some tips to check to see where you are in your range: click the search symbol (top right) and then search for IDs within your range. 
+
+If you are editing multiple ontologies, each _should_ configure properly on load. However, this can fail, particularly if more than one is open at the same time. _YOU MUST_ check when adding a term to be sure it is using the proper base IRI and number in your range.
 
 
-**Protege Configuration**
+-----------------
 
-Ensure that you have Protege configured to generate new URIs in your
-own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. DOID URIs should look like this:
-http://purl.obolibrary.org/obo/DOID_0000473
-Do a test to ensure that the ID generator is working properly.
-
-A word of caution about protege auto-id functionality. 
-Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it. Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. 
-Some tips to check to see where you are in your range: Go to the view menu, click "render by name (rdf:id)", and then use the search box to search for things starting within your range. 
-If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
-
-Setting up ID ranges in Protege: http://obofoundry.github.io/docs/SettingUpProtege.html
-
-You now want to set up Protege so that future entities you create are, by default, following the ID policy (and also auto incrementing their ID). To do so, go to "Protege > Preferences > New entities" 
-
-**Plugins**: 
-
-Obsolescence Plugin: 
-Get Jim's awesome obsolescence plugin here:
-https://github.com/balhoff/obo-actions/downloads
-
-To add plugins to Protege, 
-navigate to the application, open the application contents, 
-navigate to contents/Resources/Java/plugins 
-and put the jar file in there. 
-Your plugin should be installed next time you start protege.
-
-Elk Plugin: 
-Get Elk here:
-http://code.google.com/p/elk-reasoner/downloads/list
-perform same operation as above to install.
-## Editing DO in OWL 
-
-**Starting Protege**
-	1. Open Protege
-	2. Open the doid-edit.owl file from your local HumanDiseaseOntology repository
-	3. If prompted, updated imports [from your local repository files]
-
-Then, open the file doid-edit.owl in Protege
-
-Switch on the Elk reasoner (see how to get plugins above). If you are making changes, be sure to synchronize the reasoner.
-
-
-
+_The information below this line has not been updated in some time. Consider it with caution._
 
 OBSOLETING
 ---------------
 
-1. Find the  class you wish to obsolete, and compare it with the class you wish to replace (or consider) it with. You need to check that both the text definition and the logical axioms have the same intent, and that nothing desired is lost in the obsolescence.
+1. Find the class you wish to obsolete, and compare it with the class you wish to replace (or consider) it with. You need to check that both the text definition and the logical axioms have the same intent, and that nothing desired is lost in the obsolescence.
 
 2. Copy any subClass axioms that you intend to keep for historical purposes (e.g. those that are not replicated on the target class) into a comment annotation property. If you do this, please ensure to add to any exisiting comments rather than adding a new COMMENT. There can be only one COMMENT in obo format. If there are equivalence axioms, you may wish to consult with an expert to make sure the axioms are retained properly in the file.
 

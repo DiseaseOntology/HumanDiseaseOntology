@@ -9,6 +9,9 @@ Repository for the Human Disease Ontology (DO)
 <br>
 
 > [!IMPORTANT]
+> **_With the July 2026 release, the changes mentioned below are now live!!!_**
+> Please let us know if you experience any issues.
+
 > ### Announcment of Changes to OBO & JSON Production Files
 > The Disease Ontology will be upgrading the software used to create production files (planned implementation in July 2026). This will affect the data representation of both OBO (**_possible breaking changes!!!_**) and obographs JSON production files.
 >

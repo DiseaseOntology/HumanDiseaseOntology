@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid/subsets/DO_cancer_slim.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2026-06-30/subsets/DO_cancer_slim.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2026-07-31/subsets/DO_cancer_slim.owl"/>
     </owl:Ontology>
     
 
@@ -72,6 +72,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
     
 
 
@@ -1731,17 +1737,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the presence of estrogen receptors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hormone receptor-positive breast cancer that is characterized by the presence of estrogen receptors.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060075</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">estrogen-receptor positive breast cancer</rdfs:label>
+        <rdfs:label xml:lang="en">estrogen receptor-positive breast cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060075"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the presence of estrogen receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hormone receptor-positive breast cancer that is characterized by the presence of estrogen receptors.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/25471040</oboInOwl:hasDbXref>
@@ -1753,17 +1759,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060076">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
-        <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of estrogen receptors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A hormone receptor-negative breast cancer that is characterized by the absence of estrogen receptors.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0060076</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
-        <rdfs:label xml:lang="en">estrogen-receptor negative breast cancer</rdfs:label>
+        <rdfs:label xml:lang="en">estrogen receptor-negative breast cancer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/DOID_0060076"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A breast cancer that is characterized by the absence of estrogen receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A hormone receptor-negative breast cancer that is characterized by the absence of estrogen receptors.</owl:annotatedTarget>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007645"/>
         <oboInOwl:hasDbXref>url:https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/25471040</oboInOwl:hasDbXref>
@@ -1835,6 +1841,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060081">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060080"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1612"/>
         <obo:IAO_0000115 xml:lang="en">A breast cancer that is characterized by the absence of estrogen, progresterone and HER2 (EBBR2) receptors.</obo:IAO_0000115>
         <oboInOwl:creation_date>2011-06-08T12:23:02Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym xml:lang="en">HER2-/HR- breast cancer</oboInOwl:hasExactSynonym>
@@ -3444,7 +3451,7 @@
     <!-- http://purl.obolibrary.org/obo/DOID_0080684 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0080684">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0080879"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3070"/>
         <obo:IAO_0000115 xml:lang="en">A histone mutated tumor that is characterized by loss of histone H3 p.K28me3 (K27me3) methylation and located throughout the midline structures of the central nervous system. Methylation loss may be due to p.K28M (K27M) mutation in one of the histone H3 isoforms (H3.1, H3.2, or H3.3), overexpression of EZHIP, or mutation of the EGFR gene.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GARD:0026785</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:C71.9</oboInOwl:hasDbXref>
@@ -3453,7 +3460,9 @@
         <oboInOwl:hasDbXref>ORDO:723358</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_CUI:C5669877</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">diffuse intrinsic pontine glioma</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">diffuse midline glioma, H3 K27M-mutant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">diffuse midline glioma, EGFR-mutant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">diffuse midline glioma, H3 K27M-mutant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">diffuse midline glioma, H3-wildtype with EZHIP overexpression</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>DOID:0080684</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
@@ -19801,5 +19810,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

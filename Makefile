@@ -1021,7 +1021,7 @@ $(DOLANG)-%.owl build/translations/%.owl build/translations/%-unmerged.owl: \
 	 --annotation dc11:language "$*" \
 	 "$${ANNOT_ARRAY[@]}" \
 	 --output build/translations/$*-unmerged.owl
-	@$(ROBOT) merge \
+	@$(ROBOT) --catalog src/ontology/catalog-v001.xml merge \
 	 --input build/translations/$*-unmerged.owl \
 	 --collapse-import-closure true \
 	 --output $(DOLANG)-$*.owl

@@ -16,6 +16,64 @@
 
 ## 2026 Releases
 
+### [v2026-07-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-07-31)
+
+This release of the Human Disease Ontology includes 12,247 disease classes, 9,975 with textual definitions (81.4%). Translation files include 11,817 labels, 11,456 synonyms, and 6,568 definitions in Spanish.
+
+Disease groups revised and/or expanded include breast cancer, acrofrontofacionasal dysostosis, autosomal dominant intellectual developmental disorder, idiopathic generalized epilepsy, retinitis pigmentosa, spermatogenic failure, Charcot-Marie-Tooth disease, Coffin-Siris syndrome, adermatoglyphia, brachydactyly, and split hand-foot malformation.
+
+Additional diseases added include:
+- Alsahan-Harris syndrome
+- autosomal dominant adult-onset leukodystrophy without amyloid angiopathy
+- cataract alopecia oral mucosal disorder and psoriasis-like syndrome
+- congenital nonprogressive movement disorder with ataxia and eye movement abnormalities
+- craniofaciocardiohepatic syndrome
+- Dursun-Ozgul neurodevelopmental syndrome
+- FICUS syndrome
+- Guillouet-Gordon syndrome
+- hydroxyprolinemia
+- hyposulfatemia with skeletal dysplasia
+- ICHAD syndrome
+- immunodysregulation with variable immunodeficiency and autoimmunity
+- isolated glycolic aciduria
+- neurodevelopmental disorder with intellectual, visual, and language impairment
+- neurodevelopmental disorder with spasticity, hypoplasia of the corpus callosum, and recurrent infections
+
+Additional diseases revised include:
+- multifocal motor neuropathy
+- autosomal dominant polycystic kidney disease
+- boutonneuse fever
+- collecting duct carcinoma
+- diffuse midline glioma, H3 K27-altered
+- early-onset vitamin B6-dependent epilepsy 1
+- Fanconi-Bickel syndrome
+- Gaucher's disease type I
+- generalized epilepsy with febrile seizures plus
+- hepatic osteogenic sarcoma
+- liposarcoma of bone
+- malignant fibrous histiocytoma of bone
+- mediastinal osteogenic sarcoma
+- motor peripheral neuropathy
+- multiple acyl-CoA dehydrogenase deficiency
+- vitamin B12 deficiency
+- FG syndrome
+- hand-foot-genital syndrome
+- Mononen-Karnes-Senac syndrome
+- Rubinstein-Taybi syndrome
+### Obsoleted Diseases
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:2751 | glycogen storage disease VIII | DOID:0050594 - glycogen storage disease IX | | represent same disease
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-06-30...v2026-07-31
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-07-31/src/ontology/doid-merged.obo) | |
+
 ### [v2026-06-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-06-30)
 
 This release of the Human Disease Ontology includes 12,221 disease classes, 9,948 with textual definitions (81.4%). Translation files include 11,818 labels, 11,459 synonyms, and 6,569 definitions in Spanish.

@@ -19,7 +19,7 @@ Each curator's ID range is documented in the idranges file (src/ontology/doid-id
 The current ID ranges for the University of Maryland School of Medicine curation team include: 
  
  	DOID:$sequence(7,50000,50999)$  Lynn 
-	DOID:$sequence(7,61000,61999)$  _awaiting assignment_
+	DOID:$sequence(7,61000,61999)$  Luke
  	DOID:$sequence(7,70000,70999)$  Allen
  	DOID:$sequence(7,80000,85999)$  Lynn
 

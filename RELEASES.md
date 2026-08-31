@@ -16,6 +16,54 @@
 
 ## 2026 Releases
 
+### [v2026-08-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-08-31)
+
+This August 2026 release of the Human Disease Ontology includes 12,282 disease classes, 10,010 with textual definitions (81.5%). With 736 Equivalent and 9,699 SubClassOf Axioms. Translation files include 11,817 labels, 11,456 synonyms, and 6,568 definitions in Spanish.
+Disease groups revised and/or expanded include, subtypes of peroxisome biogenesis disorder, peroxisome biogenesis disorder and microcephaly, epilepsy, and diabetes syndrome. 
+Diseases added include: 
+- Gabriele-de Vries syndrome
+- Li-Takada-Miyake syndrome
+- Muggenthaler-Chowdhury-Chioza syndrome
+- Paul-Chao neurodevelopmental syndrome
+- Tayoun-Maawali syndrome
+- Witteveen-Kolk syndrome
+- X-linked female-restricted neurodegenerative disorder with Parkinsonism and cognitive impairment
+- X-linked retinal dystrophy, Gardner-Hardcastle type
+- early-childhood-onset neurodegeneration with retinitis pigmentosa, sensorineural hearing loss, and demyelinating peripheral neuropathy
+- infection-induced acute-onset axonal neuropathy
+- kyphomelic dysplasia, Itai-Ikegawa type
+- leukodystrophy and cerebellar atrophy
+- lung-brain developmental disorder
+- microcephaly, epilepsy, and diabetes syndrome
+- microcephaly, epilepsy, and diabetes syndrome 1
+- microcephaly, epilepsy, and diabetes syndrome 2
+- neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima
+- neurodevelopmental disorder with ataxia and brain abnormalities
+- neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities
+- neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures
+- neurodevelopmental disorder with growth impairment, quadriparesis, and poor or absent speech
+- neurodevelopmental disorder with hypotonia, poor growth, dysmorphic facies, and agammaglobulinemia
+- neurodevelopmental disorder with microcephaly, cortical malformations, and spasticity
+- neurodevelopmental disorder with poor growth, seizures, and brain abnormalities
+- neurodevelopmental disorder with poor or absent speech, dysmorphic facies, and behavioral abnormalities
+- neurodevelopmental disorder with progressive spasticity and brain abnormalities
+- neurodevelopmental disorder with seizures and joint laxity
+- neurodevelopmental disorder with seizures, spastic tetraparesis, and vision impairment
+- neurodevelopmental disorder with thin corpus callosum, hypotonia, and absent language
+- neurodevelopmental disorder with white matter abnormalities and gait disturbance
+- ocular pterygium-digital keloid dysplasia syndrome
+- oculovertebral syndrome
+- progressive ataxia absent speech neurodevelopmental disorder with poor growth and dysmorphic facies
+- spondyloepimetaphyseal dysplasia with tracheal stenosis and ectodermal dysplasia
+- spondyloepiphyseal dysplasia, Holling type
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-08-31/src/ontology/doid-merged.obo) | |
+
 ### [v2026-07-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-07-31)
 
 This release of the Human Disease Ontology includes 12,247 disease classes, 9,975 with textual definitions (81.4%). Translation files include 11,817 labels, 11,456 synonyms, and 6,568 definitions in Spanish.

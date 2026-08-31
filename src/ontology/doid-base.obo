@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-07-31/doid-base.obo
-date: 31:07:2026 21:26
+data-version: doid/releases/2026-08-31/doid-base.obo
+date: 31:08:2026 12:40
 saved-by: lschriml
 subsetdef: DO_AGR_slim "DO_AGR_slim"
 subsetdef: DO_cancer_slim "DO_cancer_slim"
@@ -33,7 +33,7 @@ property_value: dc:description "The Disease Ontology has been developed as a sta
 property_value: dc:language "en" xsd:string
 property_value: dc:title "Human Disease Ontology" xsd:string
 property_value: IAO:0000700 DOID:4
-property_value: owl:versionInfo "2026-07-31" xsd:string
+property_value: owl:versionInfo "2026-08-31" xsd:string
 property_value: terms:license https://creativecommons.org/publicdomain/zero/1.0/
 
 [Term]
@@ -15668,9 +15668,16 @@ synonym: "15q24 microdeletion syndrome" EXACT []
 xref: GARD:12219
 xref: ICD10CM:Q93.5
 xref: MESH:C579849
-xref: MIM:613406
 xref: ORDO:94065
+xref: SNOMEDCT_US_2026_03_01:699308002
+xref: UMLS_CUI:C3697269
 is_a: DOID:0060388 ! chromosomal deletion syndrome
+property_value: skos:broadMatch "ICD10CM:Q93.5" xsd:string
+property_value: skos:exactMatch "GARD:12219" xsd:string
+property_value: skos:exactMatch "MESH:C579849" xsd:string
+property_value: skos:exactMatch "ORDO:94065" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C3697269" xsd:string
+property_value: skos:relatedMatch "MIM:613406" xsd:string
 creation_date: 2015-09-28T16:25:55Z
 
 [Term]
@@ -22250,8 +22257,16 @@ id: DOID:0061030
 name: hemophilia
 def: "A blood coagulation disease characterized by spontaneous hemorrhage or prolonged bleeding." [url:https\://medlineplus.gov/hemophilia.html, url:https\://www.nhlbi.nih.gov/health/bleeding-disorders/types]
 subset: DO_rare_slim
-xref: GARD:0418
+xref: GARD:10418
+xref: NCI:C3093
+xref: ORDO:448
+xref: SNOMEDCT_US_2026_03_01:90935002
+xref: UMLS_CUI:C0684275
 is_a: DOID:1247 ! blood coagulation disease
+property_value: skos:exactMatch "GARD:10418" xsd:string
+property_value: skos:exactMatch "NCI:C3093" xsd:string
+property_value: skos:exactMatch "ORDO:448" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C0684275" xsd:string
 
 [Term]
 id: DOID:0061031
@@ -23471,6 +23486,7 @@ id: DOID:0061186
 name: long chain 3-hydroxyacyl-CoA dehydrogenase deficiency
 def: "A lipid metabolism disorder characterized by early-onset cardiomyopathy, hypoglycemia, neuropathy, and pigmentary retinopathy, and sudden death that has_material_basis_in homozygous or compound heterozygous mutations in the gene encoding long-chain hydroxyacyl-CoA dehydrogenase. The effect of the mutation on enzyme activity results solely from a deficiency in long-chain 3-hydroxyacyl-CoA dehydrogenase." [url:https\://pubmed.ncbi.nlm.nih.gov/11241049/, url:https\://pubmed.ncbi.nlm.nih.gov/34878152/, url:https\://pubmed.ncbi.nlm.nih.gov/37644104/]
 subset: DO_rare_slim
+synonym: "LCHADD" EXACT OMO:0003012 []
 xref: GARD:6867
 xref: MIM:609016
 xref: ORDO:5
@@ -33439,6 +33455,440 @@ property_value: skos:exactMatch "ORDO:697389" xsd:string
 property_value: skos:exactMatch "UMLS_CUI:C6012736" xsd:string
 
 [Term]
+id: DOID:0070798
+name: infection-induced acute-onset axonal neuropathy
+def: "A motor neuron disease characterized by acute onset of progressive muscle weakness and axonal sensorimotor neuropathy following an infection or febrile episode in infancy or early childhood that has_material_basis_in homozygous or compound heterozygous mutation in the RCC1 gene on chromosome 1p35. Affected individuals may have progressive cerebral and cerebellar atrophy and may have recurrent episodes resulting in loss of ambulation, long-term ventilatory support, or early death." [url:https\://pubmed.ncbi.nlm.nih.gov/40683276/]
+subset: DO_rare_slim
+synonym: "IIAAN" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621333
+xref: UMLS_CUI:C6065907
+is_a: DOID:231 ! motor neuron disease
+property_value: skos:exactMatch "MIM:621333" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065907" xsd:string
+
+[Term]
+id: DOID:0070799
+name: kyphomelic dysplasia, Itai-Ikegawa type
+def: "A bone development disease characterized by small thorax, bent long bones, short stature, and common facial dysmorphisms that has_material_basis_in heterozygous mutation in the KIF5B gene on chromosome 10p11." [url:https\://pubmed.ncbi.nlm.nih.gov/35342932/, url:https\://pubmed.ncbi.nlm.nih.gov/37934770/]
+subset: DO_rare_slim
+synonym: "KDII" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621644
+is_a: DOID:0080006 ! bone development disease
+property_value: skos:exactMatch "MIM:621644" xsd:string
+
+[Term]
+id: DOID:0070800
+name: leukodystrophy and cerebellar atrophy
+def: "A leukodystrophy characterized by neurodevelopmental defects, leukodystrophy, and cerebellar atrophy that has_material_basis_in homozygous or compound heterozygous mutation in the LSM7 gene on chromosome 19p13." [url:https\://pubmed.ncbi.nlm.nih.gov/39420558/]
+subset: DO_rare_slim
+synonym: "LDCA" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621191
+xref: UMLS_CUI:C6012719
+is_a: DOID:10579 ! leukodystrophy
+property_value: skos:exactMatch "MIM:621191" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012719" xsd:string
+
+[Term]
+id: DOID:0070801
+name: Li-Takada-Miyake syndrome
+def: "An autosomal recessive intellectual developmental disorder characterized by prenatal-onset growth impairment, developmental delay, mild intellectual disability, speech impairment, progressive and disproportionate microcephaly or small head, facial asymmetry, congenital heart anomaly, and brain structure abnormalities that has_material_basis_in homozygous mutation in the GON4L gene on chromosome 1q22." [url:https\://pubmed.ncbi.nlm.nih.gov/39500882/]
+subset: DO_rare_slim
+synonym: "LTMS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621212
+xref: UMLS_CUI:C6012727
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621212" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012727" xsd:string
+
+[Term]
+id: DOID:0070802
+name: Gabriele-de Vries syndrome
+def: "An autosomal dominant intellectual developmental disorder characterized by delayed psychomotor development, variable cognitive impairment, often with behavioral problems, feeding problems, some movement abnormalities, and dysmorphic facial features that has_material_basis_in heterozygous mutation in the YY1 gene on chromosome 14q32." [url:https\://pubmed.ncbi.nlm.nih.gov/28575647/]
+subset: DO_rare_slim
+xref: ICD10CM:Q87.8
+xref: MIM:617557
+xref: NCI:C165531
+xref: ORDO:506358
+xref: SNOMEDCT_US_2026_03_01:1186730002
+xref: UMLS_CUI:C4479652
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: skos:broadMatch "ICD10CM:Q87.8" xsd:string
+property_value: skos:exactMatch "MIM:617557" xsd:string
+property_value: skos:exactMatch "NCI:C165531" xsd:string
+property_value: skos:exactMatch "ORDO:506358" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C4479652" xsd:string
+
+[Term]
+id: DOID:0070803
+name: Witteveen-Kolk syndrome
+def: "An autosomal dominant intellectual developmental disorder characterized by distinctive facial features, microcephaly, short stature, and mildly impaired intellectual development with delayed cognitive and motor development and subtle anomalies on MRI-brain imaging that has_material_basis_in heterozygous mutation in the SIN3A gene on chromosome 15q24." [url:https\://pubmed.ncbi.nlm.nih.gov/33437032/]
+subset: DO_rare_slim
+xref: MIM:613406
+xref: ORDO:500163
+xref: SNOMEDCT_US_2026_03_01:1187122000
+xref: UMLS_CUI:C4310804
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: skos:broadMatch "ICD10CM:Q87.8" xsd:string
+property_value: skos:exactMatch "MIM:613406" xsd:string
+property_value: skos:exactMatch "ORDO:500163" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C4310804" xsd:string
+
+[Term]
+id: DOID:0070804
+name: lung-brain developmental disorder
+def: "A syndrome characterized by early-onset respiratory distress, chronic hypoxemia, diffuse parenchymal lung abnormalities on chest imaging, and developmental delay, with speech and language development more severely affected, that has_material_basis_in homozygous or compound heterozygous mutations in the TMEM63B gene on chromosome 6p21." [url:https\://pubmed.ncbi.nlm.nih.gov/42259295/]
+subset: DO_rare_slim
+synonym: "LBDD" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621645
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621645" xsd:string
+
+[Term]
+id: DOID:0070805
+name: Muggenthaler-Chowdhury-Chioza syndrome
+def: "A syndrome characterized by craniofacial dysmorphism, most consistently hypertelorism and a broad flat nose, myopia, and variable additional features including congenital cardiac anomalies, orofacial clefting, and hearing loss that has_material_basis_in homozygous or compound heterozygous mutation in the HYAL2 gene on chromosome 3p21." [url:https\://pubmed.ncbi.nlm.nih.gov/28081210/, url:https\://pubmed.ncbi.nlm.nih.gov/34906488/]
+subset: DO_rare_slim
+synonym: "MCCS" EXACT [] {synonymtypedef="acronym"}
+xref: ICD10CM:Q87.8
+xref: MIM:621063
+xref: ORDO:508476
+xref: SNOMEDCT_US_2026_03_01:1187039001
+xref: UMLS_CUI:C5568767
+xref: UMLS_CUI:C5975586
+is_a: DOID:225 ! syndrome
+property_value: skos:broadMatch "ICD10CM:Q87.8" xsd:string
+property_value: skos:closeMatch "UMLS_CUI:C5568767" xsd:string
+property_value: skos:exactMatch "MIM:621063" xsd:string
+property_value: skos:exactMatch "ORDO:508476" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975586" xsd:string
+
+[Term]
+id: DOID:0070806
+name: early-childhood-onset neurodegeneration with retinitis pigmentosa, sensorineural hearing loss, and demyelinating peripheral neuropathy
+def: "A neurodegenerative disease characterized by onset in early childhood of progressive walking difficulties, progressive visual impairment and blindness due to retinitis pigmentosa, sensorineural hearing loss, demyelinating peripheral neuropathy, and severely impaired intellectual development with poor or absent speech that has_material_basis_in homozygous mutation in the KLC4 gene on chromosome 6p21." [url:https\://pubmed.ncbi.nlm.nih.gov/26423925/]
+subset: DO_rare_slim
+synonym: "CONDRHN" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621129
+xref: UMLS_CUI:C6012705
+is_a: DOID:1289 ! neurodegenerative disease
+property_value: skos:exactMatch "MIM:621129" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012705" xsd:string
+
+[Term]
+id: DOID:0070807
+name: neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima
+def: "A syndrome characterized by mild developmental delay/impaired intellectual development, variable achalasia, and peripheral motor polyneuropathy without endocrine abnormalities  that has_material_basis_in homozygous mutation in the NDC1 gene (610115) on chromosome 1p32." [url:https\://pubmed.ncbi.nlm.nih.gov/39003500/]
+subset: DO_rare_slim
+synonym: "NEDAPA" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621328
+xref: UMLS_CUI:C6065904
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621328" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065904" xsd:string
+
+[Term]
+id: DOID:0070808
+name: neurodevelopmental disorder with ataxia and brain abnormalities
+def: "A mitochondrial metabolism disease characterized by developmental delay, microcephaly, facial dysmorphism, epilepsy, spasticity, cerebellar ataxia and nystagmus, sensorineural hearing loss, optic atrophy, and bulbar dysfunction with neonatal/infantile onset that has_material_basis_in homozygous mutation in the PTPMT1 gene on chromosome 11p11." [url:https\://pubmed.ncbi.nlm.nih.gov/39279645/]
+subset: DO_rare_slim
+synonym: "NEDAXBA" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621199
+xref: UMLS_CUI:C6012724
+is_a: DOID:700 ! mitochondrial metabolism disease
+property_value: skos:exactMatch "MIM:621199" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012724" xsd:string
+
+[Term]
+id: DOID:0070809
+name: neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities
+def: "An autosomal dominant intellectual developmental disorder characterized by behavioral phenotypes and a variable set of malformations, including brain anomalies, clubfeet, skeletal abnormalities, and facial dysmorphism that has_material_basis_in heterozygous mutation in the FEM1B gene on chromosome 15q23." [url:https\://pubmed.ncbi.nlm.nih.gov/38465576/]
+subset: DO_rare_slim
+synonym: "NEDBES" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621263
+xref: UMLS_CUI:C6012750
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621263" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012750" xsd:string
+
+[Term]
+id: DOID:0070810
+name: neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures
+def: "An autosomal recessive intellectual developmental disorder characterized by microcephaly, impaired intellectual development, seizures, brain abnormalities seen on MRI, and variable dysmorphic facial features that has_material_basis_in homozygous or compound heterozygous mutation in the GTF3C3 gene on chromosome 2q33." [url:https\://pubmed.ncbi.nlm.nih.gov/39636576/, url:https\://pubmed.ncbi.nlm.nih.gov/40040844/]
+subset: DO_rare_slim
+synonym: "NEDFBS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621201
+xref: UMLS_CUI:C6012725
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621201" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012725" xsd:string
+
+[Term]
+id: DOID:0070811
+name: neurodevelopmental disorder with growth impairment, quadriparesis, and poor or absent speech
+def: "An autosomal recessive intellectual developmental disorder characterized by global developmental delay, delayed walking or inability to walk, moderate to profoundly impaired intellectual development with poor or absent speech, and poor overall growth, often with microcephaly that has_material_basis_in homozygous mutation in the INPP4A gene gene on chromosome 2q11." [url:https\://pubmed.ncbi.nlm.nih.gov/39315527/]
+subset: DO_rare_slim
+synonym: "NEDGQS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621354
+xref: UMLS_CUI:C6065911
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621354" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065911" xsd:string
+
+[Term]
+id: DOID:0070812
+name: neurodevelopmental disorder with hypotonia, poor growth, dysmorphic facies, and agammaglobulinemia
+def: "A syndrome characterized by early infantile onset of hypotonia, feeding difficulties, poor overall growth, dysmorphic facies, profound developmental delay, and recurrent upper and lower respiratory infections associated with agammaglobulinemia that has_material_basis_in homozygous mutation in the SEL1L gene on chromosome 14q31." [url:https\://pubmed.ncbi.nlm.nih.gov/37943617/]
+subset: DO_rare_slim
+synonym: "NEDHGFA" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621068
+xref: UMLS_CUI:C5975596
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621068" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975596" xsd:string
+
+[Term]
+id: DOID:0070813
+name: progressive ataxia absent speech neurodevelopmental disorder with poor growth and dysmorphic facies
+def: "A syndrome characterized by dysmorphic facies, delayed motor development with ataxic or spastic gait, impaired intellectual development with absent speech, and poor overall growth, including microcephaly and short stature,  that has_material_basis_in homozygous mutation in the SEL1L gene on chromosome 14q31." [url:https\://pubmed.ncbi.nlm.nih.gov/37943610/]
+subset: DO_rare_slim
+synonym: "NEDGSAF" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621067
+xref: UMLS_CUI:C5975594
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621067" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975594" xsd:string
+
+[Term]
+id: DOID:0070814
+name: neurodevelopmental disorder with poor growth, seizures, and brain abnormalities
+def: "An autosomal recessive intellectual developmental disorder characterized by poor overall growth with short stature and microcephaly, motor and speech delay, and mild-to-severely impaired intellectual development that has_material_basis_in homozygous or compound heterozygous mutation in the SPOUT1 gene on chromosome 9q34." [url:https\://pubmed.ncbi.nlm.nih.gov/39962046/]
+subset: DO_rare_slim
+synonym: "NEDGSB" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621154
+xref: UMLS_CUI:C6012710
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621154" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012710" xsd:string
+
+[Term]
+id: DOID:0070815
+name: neurodevelopmental disorder with poor or absent speech, dysmorphic facies, and behavioral abnormalities
+def: "An autosomal recessive intellectual developmental disorder characterized by global developmental delay including delays in walking and speech development, with some having hypotonia and inability to walk unsupported and most being nonverbal, intellectual disability ranging from mild to severe, and behavioral features including aggression, hyperactivity, and autism that has_material_basis_in homozygous mutation in the NAV3 gene on chromosome 12q21." [url:https\://pubmed.ncbi.nlm.nih.gov/38977784/, url:https\://pubmed.ncbi.nlm.nih.gov/39038237/, url:https\://pubmed.ncbi.nlm.nih.gov/39708122/]
+subset: DO_rare_slim
+synonym: "NEDSFB" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621182
+xref: UMLS_CUI:C6012716
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621182" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012716" xsd:string
+
+[Term]
+id: DOID:0070816
+name: neurodevelopmental disorder with progressive spasticity and brain abnormalities
+def: "An autosomal recessive intellectual developmental disorder characterized by global developmental delay with moderate to severely impaired intellectual development, poor or absent speech, hypotonia, and delayed walking or inability to walk that has_material_basis_in homozygous or compound heterozygous mutation in the EEFSEC gene on chromosome 3q21." [url:https\://pubmed.ncbi.nlm.nih.gov/39753114/]
+subset: DO_rare_slim
+synonym: "NEDPSB" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621102
+xref: UMLS_CUI:C6012700
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621102" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012700" xsd:string
+
+[Term]
+id: DOID:0070817
+name: neurodevelopmental disorder with seizures and joint laxity
+def: "An autosomal dominant intellectual developmental disorder characterized by global developmental delay, impaired intellectual development, seizures, joint hypermobility, hypotonia, macrocephaly, and failure to thrive that has_material_basis_in heterozygous mutation in the RNU5B-1 gene on chromosome 15q22." [url:https\://pubmed.ncbi.nlm.nih.gov/40442284/]
+subset: DO_rare_slim
+synonym: "NEDSJL" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621302
+xref: UMLS_CUI:C6065898
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621302" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065898" xsd:string
+
+[Term]
+id: DOID:0070818
+name: neurodevelopmental disorder with seizures, spastic tetraparesis, and vision impairment
+def: "An autosomal recessive intellectual developmental disorder characterized by severe intellectual disability, spastic tetraparesis, reduced vision, and epilepsy, associated with severe hydrocephalus, corpus callosum agenesis/hypoplasia, mild ventricular dilation, optic nerve hypoplasia, and white matter reduction that has_material_basis_in homozygous or compound heterozygous mutation in the FSD1L gene on chromosome 9q31." [url:https\://pubmed.ncbi.nlm.nih.gov/41720098/]
+subset: DO_rare_slim
+synonym: "NEDSTV" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621643
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621643" xsd:string
+
+[Term]
+id: DOID:0070819
+name: neurodevelopmental disorder with thin corpus callosum, hypotonia, and absent language
+def: "An autosomal recessive intellectual developmental disorder characterized by microcephaly, thinning of the corpus callosum, intellectual disability, hypotonia, and spasticity that has_material_basis_in homozygous or compound heterozygous mutation in the EEF1D gene on chromosome 8q24." [url:https\://pubmed.ncbi.nlm.nih.gov/36576126/]
+subset: DO_rare_slim
+synonym: "NEDTCHAL" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621150
+xref: UMLS_CUI:C6012708
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621150" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012708" xsd:string
+
+[Term]
+id: DOID:0070820
+name: neurodevelopmental disorder with white matter abnormalities and gait disturbance
+def: "An autosomal recessive intellectual developmental disorder characterized by macrocephaly, global developmental delay, impaired intellectual development, seizures, behavioral abnormalities, hypotonia, and gait disturbance that has_material_basis_in homozygous or compound heterozygous mutation in the FAM177A1 gene on chromosome 14q13." [url:https\://omim.org/entry/621152#2]
+subset: DO_rare_slim
+synonym: "NEDWMG" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621152
+xref: UMLS_CUI:C6012709
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621152" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012709" xsd:string
+
+[Term]
+id: DOID:0070821
+name: ocular pterygium-digital keloid dysplasia syndrome
+def: "A syndrome characterized by aggressive circumferential ingrowth of conjunctiva beginning in early childhood that is resistant to treatment, ultimately covering the cornea and resulting in loss of vision, and digital keloid formation after minor trauma that has_material_basis_in heterozygous mutation in the PDGFRB gene on chromosome 5q32." [url:https\://pubmed.ncbi.nlm.nih.gov/25124224/, url:https\://pubmed.ncbi.nlm.nih.gov/33450762/, url:https\://pubmed.ncbi.nlm.nih.gov/9716334/]
+subset: DO_rare_slim
+synonym: "OPDKD" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621091
+xref: UMLS_CUI:C5975613
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621091" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975613" xsd:string
+
+[Term]
+id: DOID:0070822
+name: oculovertebral syndrome
+def: "A syndrome characterized by variable expressivity of uveal coloboma, often associated with other ocular abnormalities, and missing vertebrae in the thoracic and/or lumber spine that has_material_basis_in heterozygous mutation in the NR6A1 gene on chromosome 9q33." [url:https\://pubmed.ncbi.nlm.nih.gov/40610405/]
+subset: DO_rare_slim
+synonym: "OVS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621277
+xref: UMLS_CUI:C6065896
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621277" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065896" xsd:string
+
+[Term]
+id: DOID:0070823
+name: Paul-Chao neurodevelopmental syndrome
+def: "An autosomal dominant intellectual developmental disorder characterized by global developmental delay, delayed walking, variably impaired intellectual development, and poor or absent speech that has_material_basis_in heterozygous mutation in the PPFIA3 gene on chromosome 19q13." [url:https\://pubmed.ncbi.nlm.nih.gov/38181735/]
+subset: DO_rare_slim
+synonym: "NEDPACH" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621122
+xref: UMLS_CUI:C6012758
+is_a: DOID:0060307 ! autosomal dominant intellectual developmental disorder
+property_value: skos:exactMatch "MIM:621122" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012758" xsd:string
+
+[Term]
+id: DOID:0070824
+name: spondyloepimetaphyseal dysplasia with tracheal stenosis and ectodermal dysplasia
+def: "A spondyloepimetaphyseal dysplasia characterized by short stature, a general delay in bone maturation and epiphyseal ossification, and features suggestive of ectodermal dysplasia, including conical teeth and/or early tooth decay and sparse hair, that has_material_basis_in homozygous or compound heterozygous mutation in the MIMS1 gene on chromosome 18p11." [url:https\://pubmed.ncbi.nlm.nih.gov/42410297/]
+subset: DO_rare_slim
+synonym: "SEMDTSED" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621650
+is_a: DOID:0080027 ! spondyloepimetaphyseal dysplasia
+property_value: skos:exactMatch "MIM:621650" xsd:string
+
+[Term]
+id: DOID:0070825
+name: spondyloepiphyseal dysplasia, Holling type
+def: "A spondyloepiphyseal dysplasia characterized by disproportionate short stature and abnormalities of both the axial and appendicular skeleton with epiphyseal anomalies most prominent that has_material_basis_in homozygous mutation in the BNIP1 gene on chromosome 5q35." [url:https\://pubmed.ncbi.nlm.nih.gov/35266227/]
+subset: DO_rare_slim
+synonym: "SEDH" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621345
+xref: UMLS_CUI:C6065910
+is_a: DOID:0112280 ! spondyloepiphyseal dysplasia
+property_value: skos:exactMatch "MIM:621345" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065910" xsd:string
+
+[Term]
+id: DOID:0070826
+name: Tayoun-Maawali syndrome
+def: "A syndrome characterized by growth restriction, neurodevelopmental delay, and craniofacial abnormalities that has_material_basis_in homozygous mutation in the FBXO22 gene on chromosome 15q24." [url:https\://pubmed.ncbi.nlm.nih.gov/40215970/]
+subset: DO_rare_slim
+synonym: "TYMAS" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:621184
+xref: UMLS_CUI:C6012717
+is_a: DOID:225 ! syndrome
+property_value: skos:exactMatch "MIM:621184" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012717" xsd:string
+
+[Term]
+id: DOID:0070827
+name: X-linked female-restricted neurodegenerative disorder with Parkinsonism and cognitive impairment
+def: "A Parkinsonism that occurs in females characterized by progressive parkinsonism movement abnormalities associated with variable cognitive impairment and/or psychiatric abnormalities that has_material_basis_in heterozygous mutation in the SLC9A6 gene on chromosome Xq26." [url:https\://pubmed.ncbi.nlm.nih.gov/27142213/, url:https\://pubmed.ncbi.nlm.nih.gov/39810750/]
+comment: Many affected females have male family members with DOID:0060825.
+subset: DO_rare_slim
+synonym: "NDPACX" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:301142
+xref: UMLS_CUI:C6012689
+is_a: DOID:0080855 ! Parkinsonism
+property_value: skos:exactMatch "MIM:301142" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012689" xsd:string
+
+[Term]
+id: DOID:0070828
+name: X-linked retinal dystrophy, Gardner-Hardcastle type
+def: "A retinal degeneration characterized by early childhood onset of night blindness or light sensitivity, reduced visual acuity, and variable maculopathy with foveal hypoplasia that has_material_basis_in hemizygous interchromosomal insertion at chromosome Xq27." [url:https\://pubmed.ncbi.nlm.nih.gov/39892393/]
+subset: DO_rare_slim
+synonym: "RDXGH" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:301149
+xref: UMLS_CUI:C6012691
+is_a: DOID:8466 ! retinal degeneration
+property_value: skos:exactMatch "MIM:301149" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6012691" xsd:string
+
+[Term]
+id: DOID:0070829
+name: microcephaly, epilepsy, and diabetes syndrome
+def: "A syndrome characterized by microcephaly, epilepsy, and infantile diabetes." [url:https\://pubmed.ncbi.nlm.nih.gov/21835305/, url:https\://pubmed.ncbi.nlm.nih.gov/33164986/]
+subset: DO_rare_slim
+synonym: "MEDS" EXACT [] {synonymtypedef="acronym"}
+xref: ICD10CM:Q87.8
+xref: MIM:PS614231
+xref: ORDO:306558
+xref: SNOMEDCT_US_2026_03_01:782825008
+xref: UMLS_CUI:C5190632
+is_a: DOID:225 ! syndrome
+property_value: skos:broadMatch "ICD10CM:Q87.8" xsd:string
+property_value: skos:exactMatch "MIM:PS614231" xsd:string
+property_value: skos:exactMatch "ORDO:306558" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5190632" xsd:string
+
+[Term]
+id: DOID:0070830
+name: microcephaly, epilepsy, and diabetes syndrome 1
+def: "A microcephaly, epilepsy, and diabetes syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the IER3IP1 gene on chromosome 18q21." [url:https\://pubmed.ncbi.nlm.nih.gov/21835305/]
+subset: DO_rare_slim
+synonym: "MEDS1" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:614231
+xref: UMLS_CUI:C3280240
+is_a: DOID:0070829 ! microcephaly, epilepsy, and diabetes syndrome
+property_value: skos:exactMatch "MIM:614231" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C3280240" xsd:string
+
+[Term]
+id: DOID:0070831
+name: microcephaly, epilepsy, and diabetes syndrome 2
+def: "A microcephaly, epilepsy, and diabetes syndrome that has_material_basis_in homozygous mutation in the YIPF5 gene on chromosome 5q31." [url:https\://pubmed.ncbi.nlm.nih.gov/33164986/]
+subset: DO_rare_slim
+synonym: "MEDS2" EXACT [] {synonymtypedef="acronym"}
+xref: MIM:619278
+xref: UMLS_CUI:C5543294
+is_a: DOID:0070829 ! microcephaly, epilepsy, and diabetes syndrome
+property_value: skos:exactMatch "MIM:619278" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5543294" xsd:string
+
+[Term]
+id: DOID:0070832
+name: neurodevelopmental disorder with microcephaly, cortical malformations, and spasticity
+def: "An autosomal recessive intellectual developmental disorder characterized by developmental delay, microcephaly, impaired speech and ambulation, epilepsy, and cortical malformations, with a relatively wide spectrum of severity ranging from early death to intellectual disability with mild motor impairment, that has_material_basis_in homozygous or compound heterozygous mutation in the TMX2 gene on chromosome 11q12." [url:https\://pubmed.ncbi.nlm.nih.gov/31735293/]
+subset: DO_rare_slim
+synonym: "NEDMCMS" EXACT OMO:0003012 []
+xref: MIM:618730
+xref: UMLS_CUI:C5231480
+is_a: DOID:0060308 ! autosomal recessive intellectual developmental disorder
+property_value: skos:exactMatch "MIM:618730" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5231480" xsd:string
+
+[Term]
 id: DOID:0080000
 name: muscular disease
 def: "A musculoskeletal system disease that affects the muscles." [url:http\://www.nlm.nih.gov/medlineplus/muscledisorders.html]
@@ -34892,6 +35342,7 @@ id: DOID:0080153
 name: medium chain acyl-CoA dehydrogenase deficiency
 def: "A lipid metabolism disorder that is characterized by a deficiency of the enzyme medium chain acyl-CoA dehydrogenase that results in the inability to convert medium chain fatty acids to energy, particularly during fasting." [url:http\://rarediseases.org/rare-diseases/medium-chain-acyl-coa-dehydrogenase-deficiency/, url:https\://ghr.nlm.nih.gov/condition/medium-chain-acyl-coa-dehydrogenase-deficiency]
 subset: DO_rare_slim
+synonym: "MCAD" EXACT OMO:0003012 []
 xref: GARD:540
 xref: MESH:C536038
 xref: MIM:201450
@@ -34903,6 +35354,7 @@ id: DOID:0080154
 name: short chain acyl-CoA dehydrogenase deficiency
 def: "A lipid metabolism disorder that is characterized by deficiency of the enzyme short chain acyl-CoA dehydrogenase that results in the inability to convert short chain fatty acids." [url:http\://rarediseases.org/rare-diseases/short-chain-acyl-coa-dehydrogenase-deficiency-scad/]
 subset: DO_rare_slim
+synonym: "SCADD" EXACT OMO:0003012 []
 xref: GARD:4822
 xref: MIM:201470
 xref: ORDO:26792
@@ -34914,6 +35366,7 @@ name: very long chain acyl-CoA dehydrogenase deficiency
 def: "A lipid metabolism disorder that is characterized by deficiency of the enzyme very long chain acyl-CoA dehydrogenase that results in the inability to convert very long chain fatty acids." [url:http\://rarediseases.org/rare-diseases/very-long-chain-acyl-coa-dehydrogenase-deficiency-lcad/, url:https\://ghr.nlm.nih.gov/condition/very-long-chain-acyl-coa-dehydrogenase-deficiency]
 subset: DO_rare_slim
 synonym: "VLCAD deficiency" EXACT []
+synonym: "VLCADD" EXACT OMO:0003012 []
 xref: GARD:5508
 xref: MIM:201475
 xref: ORDO:26793
@@ -45876,7 +46329,7 @@ is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:0081433
-name: Peroxisome biogenesis disorder 4B
+name: peroxisome biogenesis disorder 4B
 alt_id: DOID:0111612
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous or compound heterozygous mutation in the PEX6 gene on chromosome 6p21.1, or overexpression of a heterozygous mutation in PEX6 due to allelic expression imbalance resulting from a polymorphism on the mutant allele in the PEX6 3-prime UTR." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC4970675/, url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 subset: DO_rare_slim
@@ -45902,49 +46355,49 @@ property_value: skos:relatedMatch "UMLS_CUI:C1849094" xsd:string
 
 [Term]
 id: DOID:0081434
-name: Peroxisome biogenesis disorder 5B
+name: peroxisome biogenesis disorder 5B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous or compound heterozygous mutation in the PEX2 gene on chromosome 8q21." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:614867
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081435
-name: Peroxisome biogenesis disorder 6B
+name: peroxisome biogenesis disorder 6B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in compound heterozygous mutation in the PEX10 gene on chromosome 1p36." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:614871
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081436
-name: Peroxisome biogenesis disorder 7B
+name: peroxisome biogenesis disorder 7B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous or compound heterozygous mutation in the PEX26 gene on chromosome 22q11.21." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:614873
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081437
-name: Peroxisome biogenesis disorder 8B
+name: peroxisome biogenesis disorder 8B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous mutation in the PEX16 gene on chromosome 11p11." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:614877
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081438
-name: Peroxisome biogenesis disorder 9B
+name: peroxisome biogenesis disorder 9B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous or compound heterozygous mutation in the PEX7 gene on chromosome 6q23." [url:https\://pubmed.ncbi.nlm.nih.gov/12325024/]
 xref: MIM:614879
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081439
-name: Peroxisome biogenesis disorder 11B
+name: peroxisome biogenesis disorder 11B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in homozygous mutation in the PEX13 gene on chromosome 2p15." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:614885
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
 
 [Term]
 id: DOID:0081440
-name: Peroxisome biogenesis disorder 10B
+name: peroxisome biogenesis disorder 10B
 def: "A peroxisomal biogenesis disorder that is characterized by the overlapping phenotypes of neonatal adrenoleukodystrophy and infantile Refsum disease and that has_material_basis_in compound heterozygous mutation in the PEX3 gene on chromosome 6q24." [url:https\://pubmed.ncbi.nlm.nih.gov/22871920/]
 xref: MIM:617370
 is_a: DOID:0080377 ! peroxisomal biogenesis disorder
@@ -78499,7 +78952,7 @@ def: "A syndrome that has_material_basis_in mutation in the OCRL gene on chromos
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_rare_slim
 subset: NCIthesaurus
-synonym: "lowe oculocerebrorenal syndrome" EXACT []
+synonym: "Lowe oculocerebrorenal syndrome" EXACT []
 synonym: "Lowe syndrome" EXACT []
 synonym: "oculocerebrorenal syndrome of Lowe" EXACT []
 xref: GARD:3295

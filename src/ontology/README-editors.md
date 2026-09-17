@@ -38,7 +38,7 @@ GETTING STARTED -- Setting up a DO Git remote repository
 
 1. Open the directory on your local machine where you would like to place the
 `HumanDiseaseOntology` repository
-2. In that directory, run the command: `git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git`
+2. In that directory, run the command 'git init' to initialize the directory, then run the command: `git clone https://github.com/DiseaseOntology/HumanDiseaseOntology.git`
 
 - To view the status of your git repository use `git status`
 - To bring in new udpates to your local copy use `git pull origin` (optionally specifying the branch)

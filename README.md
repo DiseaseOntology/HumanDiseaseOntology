@@ -6,21 +6,6 @@
 # HumanDiseaseOntology
 Repository for the Human Disease Ontology (DO)
 
-<br>
-
-> [!IMPORTANT]
-> **_With the July 2026 release, the changes mentioned below are now live!!!_**
-> Please let us know if you experience any issues.
-
-> ### Announcment of Changes to OBO & JSON Production Files
-> The Disease Ontology will be upgrading the software used to create production files (planned implementation in July 2026). This will affect the data representation of both OBO (**_possible breaking changes!!!_**) and obographs JSON production files.
->
-> A complete test release, corresponding to [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2026-04-30), with all files using the new data representations is available on the `robot_1.9.10_test_release` branch (https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/robot_1.9.10_test_release).
->
-> For more complete details, please see https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1597#issuecomment-4453464803. If you have any questions or concerns, please comment on that issue or use the [contact form](https://disease-ontology.org/outreach/contact-us/) at disease-ontology.org.
-
-<br>
-
 ## Details
 The primary release file, `doid.owl`, is available in the `src/ontology/releases` directory of this GitHub repository. _We strongly recommend downloading this file using its IRI, http://purl.obolibrary.org/obo/doid.owl, particularly where stable access to the latest version is desired._
 
@@ -32,6 +17,20 @@ Refer to [CONTRIBUTING.md](https://github.com/DiseaseOntology/HumanDiseaseOntolo
 
 Contact: [Lynn Schriml](mailto:lynn.schriml@gmail.com)
 
+
+<br>
+
+> [!NOTE]
+> **_As of the July 2026 release, the changes mentioned in the quoted notice are live!!!_** The associated issue has now been closed but please feel free to to request assistance migrating, or to reopen the issue to describe issues you have experienced.
+>
+> > ### Announcment of Changes to OBO & JSON Production Files (April 2026 Release)
+> > The Disease Ontology will be upgrading the software used to create production files (planned implementation in July 2026). This will affect the data representation of both OBO (**_possible breaking changes!!!_**) and obographs JSON production files.
+> >
+> > A complete test release, corresponding to [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2026-04-30), with all files using the new data representations is available on the `robot_1.9.10_test_release` branch (https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/robot_1.9.10_test_release).
+> >
+> > For more complete details, please see https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1597#issuecomment-4453464803. If you have any questions or concerns, please comment on that issue or use the [contact form](https://disease-ontology.org/outreach/contact-us/) at disease-ontology.org.
+
+<br> 
 
 ### For Older Releases (before 2015)
 DO curation and production moved to OWL, git, and GitHub in November 2015. DO's [SVN repository on Sourceforge.net](https://sourceforge.net/projects/diseaseontology/) has been retired but is still available for historical reference.

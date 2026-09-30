@@ -16,11 +16,56 @@
 
 ## 2026 Releases
 
+### [v2026-09-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-09-30)
+
+This release of the Human Disease Ontology includes 12,335 disease classes, 10,065 with textual definitions (81.6%). Translation files include 11,813 labels, 11,456 synonyms, and 6,567 definitions in Spanish.
+
+Disease groups revised and/or expanded include Adams-Oliver syndrome, blood platelet diseases (including platelet-type bleeding disorders and Glanzmann thrombasthenias), autosomal recessive dyskeratosis congenita, Charcot-Marie-tooth disease subtypes, and Joubert syndrome subtypes. 
+
+Additional diseases added include:
+- clear cell odontogenic carcinoma
+- hyalinizing clear cell carcinoma
+- omphalocele-exstrophy-imperforate anus-spinal defects complex
+- oocyte/zygote/embryo maturation arrest (including subtypes 1-27)
+
+Additional diseases revised include:
+- 3-methylglutaconic aciduria subtypes
+- Malan syndrome
+- Sotos syndrome
+- bladder exstrophy
+- bladder exstrophy-epispadias-cloacal exstrophy complex
+- cloacal exstrophy
+- lung clear cell carcinoma
+- maple syrup urine disease
+- maxillary cancer
+- metaphyseal dysplasia-maxillary hypoplasia-brachydactyly syndrome
+- pancreatic ductal adenocarcinoma
+- pancreatic intraductal papillary-mucinous neoplasm
+- restrictive cardiomyopathy
+
+### Obsoleted Diseases
+
+ID | label | term replaced by | consider | reason
+--- | --- | --- | --- | ---
+DOID:0061144 | complex cortical dysplasia with other brain malformations 13 | DOID:0070043 - complex cortical dysplasia with other brain malformations 13 (renamed) | | #1621
+DOID:11367 | congenital aphakia | DOID:0080607 - anterior segment dysgenesis 2 | | #1624
+DOID:14748 | Sotos syndrome | DOID:0112103 - Sotos syndrome (renamed) | | #1622
+DOID:0112104 | Sotos syndrome 3 | DOID:0081218 - autosomal recessive intellectual developmental disorder 74 | | #1622
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-08-31...v2026-09-30
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-09-30/src/ontology/doid-merged.obo) | |
+
 ### [v2026-08-31](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-08-31)
 
 This August 2026 release of the Human Disease Ontology includes 12,282 disease classes, 10,010 with textual definitions (81.5%). With 736 Equivalent and 9,699 SubClassOf Axioms. Translation files include 11,817 labels, 11,456 synonyms, and 6,568 definitions in Spanish.
-Disease groups revised and/or expanded include, subtypes of peroxisome biogenesis disorder, peroxisome biogenesis disorder and microcephaly, epilepsy, and diabetes syndrome. 
-Diseases added include: 
+Disease groups revised and/or expanded include, subtypes of peroxisome biogenesis disorder, peroxisome biogenesis disorder and microcephaly, epilepsy, and diabetes syndrome.
+Diseases added include:
 - Gabriele-de Vries syndrome
 - Li-Takada-Miyake syndrome
 - Muggenthaler-Chowdhury-Chioza syndrome

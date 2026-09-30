@@ -819,9 +819,10 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
 .PHONY: publish
 publish: products
 	@cp $(DO).* src/ontology/releases
-	@cp $(DB).owl src/ontology/releases
+	@cp $(DB).* src/ontology/releases
 	@cp $(DM).* src/ontology/releases
 	@cp $(DNC).* src/ontology/releases
+	@cp $(HD).* src/ontology/releases
 	@cp -r src/ontology/subsets src/ontology/releases
 	@echo "Published to src/ontology/releases"
 	@echo ""

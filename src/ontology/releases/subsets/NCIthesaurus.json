@@ -2,7 +2,7 @@
   "graphs" : [ {
     "id" : "http://purl.obolibrary.org/obo/doid/subsets/NCIthesaurus.json",
     "meta" : {
-      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-08-31/subsets/NCIthesaurus.json"
+      "version" : "http://purl.obolibrary.org/obo/doid/releases/2026-09-30/subsets/NCIthesaurus.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/DOID_0001816",
@@ -2580,7 +2580,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A 3-methylglutaconic aciduria that has_material_basis_in X-linked inheritance of the tafazzin gene and is characterized by decreased production of an enzyme required to produce cardiolipin.",
+          "val" : "A 3-methylglutaconic aciduria that is characterized by dilated cardiomyopathy with endocardial fibroelastosis, a predominantly proximal skeletal myopathy, growth retardation, neutropenia, and organic aciduria, particularly excess of 3-methylglutaconic acid and that has_material_basis_in mutation in the tafazzin gene on chromosome Xq28.",
           "xrefs" : [ "url:http://en.wikipedia.org/wiki/Barth_syndrome", "url:http://www.ninds.nih.gov/disorders/barth/barth.htm" ],
           "meta" : {
             "basicPropertyValues" : [ {
@@ -15666,6 +15666,51 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0080607",
+      "lbl" : "anterior segment dysgenesis 2",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An anterior segment dysgenesis that has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation in the FOXE3 gene on chromosome 1p33.",
+          "xrefs" : [ "url:https://www.ncbi.nlm.nih.gov/pubmed/21150893" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "ASGD2"
+        }, {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "CPAK"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "congenital absence of lens"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "congenital aphakia"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "congenital primary aphakia"
+        } ],
+        "xrefs" : [ {
+          "val" : "ICD10CM:Q12.3"
+        }, {
+          "val" : "MIM:610256"
+        }, {
+          "val" : "NCI:C222344"
+        }, {
+          "val" : "UMLS_CUI:C0152422"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:11367"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0080617",
       "lbl" : "lymph node benign neoplasm",
       "type" : "CLASS",
@@ -25358,6 +25403,63 @@
           "val" : "UMLS_CUI:C4013949"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "disease_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_0112103",
+      "lbl" : "Sotos syndrome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A syndrome that occurs rarely and is characterized by excessive physical growth during the first 2 to 3 years of life and that has_material_basis_in heterozygous mutation in the NSD1 gene or deletion in the chromosome region 5q35 that includes the NSD1 gene.",
+          "xrefs" : [ "url:https://pubmed.ncbi.nlm.nih.gov/11896389/", "url:https://pubmed.ncbi.nlm.nih.gov/14517949/" ],
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.org/dc/elements/1.1/type",
+              "val" : "http://purl.obolibrary.org/obo/ECO_0007645"
+            } ]
+          }
+        },
+        "comments" : [ "Xref MGI." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "SOTOS"
+        }, {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "SOTOS1"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Sotos syndrome 1"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "cerebral gigantism"
+        } ],
+        "xrefs" : [ {
+          "val" : "GARD:10091"
+        }, {
+          "val" : "ICD10CM:Q87.3"
+        }, {
+          "val" : "MESH:D058495"
+        }, {
+          "val" : "MIM:117550"
+        }, {
+          "val" : "NCI:C75019"
+        }, {
+          "val" : "ORDO:821"
+        }, {
+          "val" : "SNOMEDCT_US_2025_09_01:75968004"
+        }, {
+          "val" : "UMLS_CUI:C0175695"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "DOID:14748"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
         } ]
@@ -38413,38 +38515,6 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#exactMatch",
           "val" : "MESH:D007906"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/DOID_11367",
-      "lbl" : "congenital aphakia",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "APHAKIA, CONGENITAL PRIMARY"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "Congenital absence of lens"
-        } ],
-        "xrefs" : [ {
-          "val" : "ICD10CM:Q12.3"
-        }, {
-          "val" : "ICD9CM:743.35"
-        }, {
-          "val" : "MIM:610256"
-        }, {
-          "val" : "NCI:C35172"
-        }, {
-          "val" : "SNOMEDCT_US_2025_09_01:35387008"
-        }, {
-          "val" : "UMLS_CUI:C0152422"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "disease_ontology"
         } ]
       }
     }, {
@@ -61663,7 +61733,7 @@
             } ]
           }
         },
-        "comments" : [ "OMIM mapping confirmed by DO. [SN]." ],
+        "comments" : [ "OMIM mapping confirmed by DO. [SN]. OMIM represents both fissured and geographic tongue." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_rare_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -62554,7 +62624,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_14748",
-      "lbl" : "Sotos syndrome",
+      "lbl" : "obsolete Sotos syndrome",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -62580,8 +62650,6 @@
         }, {
           "val" : "MESH:D058495"
         }, {
-          "val" : "MIM:PS117550"
-        }, {
           "val" : "NCI:C75019"
         }, {
           "val" : "ORDO:821"
@@ -62591,9 +62659,13 @@
           "val" : "UMLS_CUI:C0175695"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/DOID_0112103"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "disease_ontology"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_1475",
@@ -73039,9 +73111,14 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "platelet disorder"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "platelet-type bleeding disorder"
         } ],
         "xrefs" : [ {
           "val" : "MESH:D001791"
+        }, {
+          "val" : "MIM:PS231200"
         }, {
           "val" : "NCI:C131634"
         }, {
@@ -73056,7 +73133,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_2219",
-      "lbl" : "Glanzmann's thrombasthenia",
+      "lbl" : "Glanzmann thrombasthenia 1",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -73078,6 +73155,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Glanzmann thrombasthenia"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Glanzmann's thrombasthenia"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "Glycoprotein IIb/IIIa defect"
@@ -92953,6 +93033,10 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/doid#DO_cancer_slim", "http://purl.obolibrary.org/obo/doid#NCIthesaurus" ],
         "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/OMO_0003012",
+          "pred" : "hasExactSynonym",
+          "val" : "PDAC"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "ductal adenocarcinoma of the pancreas"
         } ],
@@ -100015,8 +100099,6 @@
           "val" : "ICD10CM:I42.5"
         }, {
           "val" : "MESH:D002313"
-        }, {
-          "val" : "MIM:115210"
         }, {
           "val" : "MIM:PS115210"
         }, {
@@ -162697,8 +162779,6 @@
         }, {
           "val" : "MESH:D008375"
         }, {
-          "val" : "MIM:246900"
-        }, {
           "val" : "MIM:PS248600"
         }, {
           "val" : "NCI:C34806"
@@ -169962,6 +170042,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_4"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0080607",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_5614"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0080617",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060085"
@@ -171061,6 +171145,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DOID_0111990",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_612"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DOID_0112103",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/DOID_225"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0112128",
       "pred" : "is_a",
@@ -172355,10 +172443,6 @@
       "obj" : "http://purl.obolibrary.org/obo/DOID_365"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_11364",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_110"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_11367",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_110"
     }, {
@@ -174850,10 +174934,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_225"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/DOID_14748",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_225"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_1475",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_0060085"
@@ -175916,7 +175996,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2219",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/DOID_1247"
+      "obj" : "http://purl.obolibrary.org/obo/DOID_2218"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_2222",
       "pred" : "is_a",

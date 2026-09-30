@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-08-31/subsets/NCIthesaurus.obo
-date: 31:08:2026 12:42
+data-version: doid/releases/2026-09-30/subsets/NCIthesaurus.obo
+date: 30:09:2026 11:25
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: skos http://www.w3.org/2004/02/skos/core# 
@@ -1100,7 +1100,7 @@ is_a: DOID:225 ! syndrome
 id: DOID:0050476
 name: Barth syndrome
 namespace: disease_ontology
-def: "A 3-methylglutaconic aciduria that has_material_basis_in X-linked inheritance of the tafazzin gene and is characterized by decreased production of an enzyme required to produce cardiolipin." [url:http\://en.wikipedia.org/wiki/Barth_syndrome, url:http\://www.ninds.nih.gov/disorders/barth/barth.htm]
+def: "A 3-methylglutaconic aciduria that is characterized by dilated cardiomyopathy with endocardial fibroelastosis, a predominantly proximal skeletal myopathy, growth retardation, neutropenia, and organic aciduria, particularly excess of 3-methylglutaconic acid and that has_material_basis_in mutation in the tafazzin gene on chromosome Xq28." [url:http\://en.wikipedia.org/wiki/Barth_syndrome, url:http\://www.ninds.nih.gov/disorders/barth/barth.htm]
 comment: OMIM mapping confirmed by DO. [SN].
 subset: DO_FlyBase_slim
 subset: DO_rare_slim
@@ -6214,6 +6214,24 @@ xref: NCI:C67107
 is_a: DOID:4 ! disease
 
 [Term]
+id: DOID:0080607
+name: anterior segment dysgenesis 2
+namespace: disease_ontology
+alt_id: DOID:11367
+def: "An anterior segment dysgenesis that has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation in the FOXE3 gene on chromosome 1p33." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21150893]
+subset: NCIthesaurus
+synonym: "ASGD2" EXACT OMO:0003012 []
+synonym: "congenital absence of lens" EXACT []
+synonym: "congenital aphakia" EXACT []
+synonym: "congenital primary aphakia" EXACT []
+synonym: "CPAK" EXACT OMO:0003012 []
+xref: ICD10CM:Q12.3
+xref: MIM:610256
+xref: NCI:C222344
+xref: UMLS_CUI:C0152422
+is_a: DOID:5614 ! eye disease
+
+[Term]
 id: DOID:0080617
 name: lymph node benign neoplasm
 namespace: disease_ontology
@@ -10435,6 +10453,29 @@ xref: NCI:C176800
 xref: ORDO:319552
 xref: UMLS_CUI:C4013949
 is_a: DOID:612 ! primary immunodeficiency disease
+
+[Term]
+id: DOID:0112103
+name: Sotos syndrome
+namespace: disease_ontology
+alt_id: DOID:14748
+def: "A syndrome that occurs rarely and is characterized by excessive physical growth during the first 2 to 3 years of life and that has_material_basis_in heterozygous mutation in the NSD1 gene or deletion in the chromosome region 5q35 that includes the NSD1 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/11896389/, url:https\://pubmed.ncbi.nlm.nih.gov/14517949/]
+comment: Xref MGI.
+subset: DO_rare_slim
+subset: NCIthesaurus
+synonym: "cerebral gigantism" EXACT []
+synonym: "SOTOS" EXACT OMO:0003012 []
+synonym: "Sotos syndrome 1" EXACT []
+synonym: "SOTOS1" EXACT OMO:0003012 []
+xref: GARD:10091
+xref: ICD10CM:Q87.3
+xref: MESH:D058495
+xref: MIM:117550
+xref: NCI:C75019
+xref: ORDO:821
+xref: SNOMEDCT_US_2025_09_01:75968004
+xref: UMLS_CUI:C0175695
+is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:0112128
@@ -16018,22 +16059,6 @@ xref: SNOMEDCT_US_2025_09_01:155203002
 xref: UMLS_CUI:C0023316
 is_a: DOID:110 ! lens disease
 property_value: skos:exactMatch "MESH:D007906" xsd:string
-
-[Term]
-id: DOID:11367
-name: congenital aphakia
-namespace: disease_ontology
-comment: OMIM mapping confirmed by DO. [SN].
-subset: NCIthesaurus
-synonym: "APHAKIA, CONGENITAL PRIMARY" EXACT []
-synonym: "Congenital absence of lens" EXACT []
-xref: ICD10CM:Q12.3
-xref: ICD9CM:743.35
-xref: MIM:610256
-xref: NCI:C35172
-xref: SNOMEDCT_US_2025_09_01:35387008
-xref: UMLS_CUI:C0152422
-is_a: DOID:110 ! lens disease
 
 [Term]
 id: DOID:11372
@@ -26130,7 +26155,7 @@ id: DOID:1455
 name: geographic tongue
 namespace: disease_ontology
 def: "An atrophic glossitis that is characterized as an inflammatory condition of the mucous membrane of the tongue, usually on the dorsal surface." [url:http\://en.wikipedia.org/wiki/Geographic_tongue]
-comment: OMIM mapping confirmed by DO. [SN].
+comment: OMIM mapping confirmed by DO. [SN]. OMIM represents both fissured and geographic tongue.
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "benign migratory glossitis" EXACT []
@@ -26528,7 +26553,7 @@ is_a: DOID:225 ! syndrome
 
 [Term]
 id: DOID:14748
-name: Sotos syndrome
+name: obsolete Sotos syndrome
 namespace: disease_ontology
 def: "A syndrome that occurs rarely and is characterized by excessive physical growth during the first 2 to 3 years of life." [url:http\://en.wikipedia.org/wiki/Cerebral_gigantism, url:https\://research.nhgri.nih.gov/atlas/condition/sotos-syndrome]
 comment: Xref MGI.
@@ -26538,12 +26563,12 @@ synonym: "cerebral gigantism" EXACT []
 xref: GARD:10091
 xref: ICD10CM:Q87.3
 xref: MESH:D058495
-xref: MIM:PS117550
 xref: NCI:C75019
 xref: ORDO:821
 xref: SNOMEDCT_US_2025_09_01:75968004
 xref: UMLS_CUI:C0175695
-is_a: DOID:225 ! syndrome
+is_obsolete: true
+replaced_by: DOID:0112103
 
 [Term]
 id: DOID:1475
@@ -30943,8 +30968,10 @@ namespace: disease_ontology
 def: "A blood coagulation disease that is characterized by an abnormal increase or decrease in platelets or platelet dysfunction." [url:https\://www.merckmanuals.com/home/blood-disorders/platelet-disorders/overview-of-platelet-disorders]
 subset: NCIthesaurus
 synonym: "platelet disorder" EXACT []
+synonym: "platelet-type bleeding disorder" EXACT []
 synonym: "Thrombocytopathy" EXACT []
 xref: MESH:D001791
+xref: MIM:PS231200
 xref: NCI:C131634
 xref: SNOMEDCT_US_2025_09_01:22716005
 xref: UMLS_CUI:C0005818
@@ -30952,7 +30979,7 @@ is_a: DOID:1247 ! blood coagulation disease
 
 [Term]
 id: DOID:2219
-name: Glanzmann's thrombasthenia
+name: Glanzmann thrombasthenia 1
 namespace: disease_ontology
 def: "A blood coagulation disease characterized by autosomal recessive inheritance of failure of platelet aggregation and absent or diminished clot retraction that has_material_basis_in mutation in the ITGA2B or ITGB3 genes on chromosome 17q21.32." [url:https\://www.ncbi.nlm.nih.gov/pubmed/16463284, url:https\://www.ncbi.nlm.nih.gov/pubmed/2014236, url:https\://www.ncbi.nlm.nih.gov/pubmed/9160670]
 comment: OMIM mapping confirmed by DO. [LS].
@@ -30963,6 +30990,7 @@ synonym: "deficiency of glycoprotein complex IIb-IIIa" EXACT []
 synonym: "deficiency of GP IIb-IIIa complex" EXACT []
 synonym: "deficiency of platelet fibrinogen receptor" EXACT []
 synonym: "Glanzmann thrombasthenia" EXACT []
+synonym: "Glanzmann's thrombasthenia" EXACT []
 synonym: "Glycoprotein IIb/IIIa defect" EXACT []
 synonym: "platelet glycoprotein IIb-IIIa deficiency" EXACT []
 synonym: "platelet-type bleeding disorder 2" EXACT []
@@ -30976,7 +31004,7 @@ xref: NCI:C61249
 xref: ORDO:849
 xref: SNOMEDCT_US_2025_09_01:32942005
 xref: UMLS_CUI:C0040015
-is_a: DOID:1247 ! blood coagulation disease
+is_a: DOID:2218 ! blood platelet disease
 
 [Term]
 id: DOID:2222
@@ -39521,6 +39549,7 @@ def: "A pancreatic adenocarcinoma that derives_from pancreatic duct cells." [url
 subset: DO_cancer_slim
 subset: NCIthesaurus
 synonym: "ductal adenocarcinoma of the pancreas" EXACT []
+synonym: "PDAC" EXACT OMO:0003012 []
 xref: NCI:C9120
 xref: SNOMEDCT_US_2025_09_01:792907004
 xref: UMLS_CUI:C1335302
@@ -42603,7 +42632,6 @@ synonym: "Familial restrictive cardiomyopathy" RELATED [MIM:115210]
 synonym: "primary restrictive cardiomyopathy" EXACT []
 xref: ICD10CM:I42.5
 xref: MESH:D002313
-xref: MIM:115210
 xref: MIM:PS115210
 xref: NCI:C62798
 xref: ORDO:75249
@@ -70243,7 +70271,6 @@ synonym: "Ketoacidaemia" EXACT []
 xref: GARD:3228
 xref: ICD10CM:E71.0
 xref: MESH:D008375
-xref: MIM:246900
 xref: MIM:PS248600
 xref: NCI:C34806
 xref: ORDO:511

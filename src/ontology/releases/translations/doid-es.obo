@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-08-31/translations/doid-es.obo
-date: 31:08:2026 13:12
+data-version: doid/releases/2026-09-30/translations/doid-es.obo
+date: 30:09:2026 11:46
 saved-by: lschriml
 subsetdef: DO_AGR_slim "DO_AGR_slim"
 subsetdef: DO_cancer_slim "DO_cancer_slim"
@@ -33,7 +33,7 @@ property_value: dc:language "en" xsd:string
 property_value: dc:language "es" xsd:string
 property_value: dc:title "Human Disease Ontology" xsd:string
 property_value: IAO:0000700 DOID:4
-property_value: owl:versionInfo "2026-08-31" xsd:string
+property_value: owl:versionInfo "2026-09-30" xsd:string
 property_value: terms:license https://creativecommons.org/publicdomain/zero/1.0/
 
 [Term]
@@ -10746,6 +10746,23 @@ xref: MIM:621629
 is_a: DOID:0051102 ! acrofrontofacionasal dysostosis
 
 [Term]
+id: DOID:0051105
+name: clear cell odontogenic carcinoma
+def: "A mandibular cancer that is characterized by sheets, nests, and cords of vacuolated clear cells encompassed by a hyalinized, fibrous stroma." [url:https\://pubmed.ncbi.nlm.nih.gov/41306197/, url:https\://pubmed.ncbi.nlm.nih.gov/42743086/, url:https\://tumourclassification.iarc.who.int/chaptercontent/52/146]
+xref: ICDO:9341/3
+xref: NCI:C54300
+is_a: DOID:2338 ! cáncer mandibular
+property_value: skos:exactMatch "ICDO:9341/3" xsd:string
+property_value: skos:exactMatch "NCI:C54300" xsd:string
+
+[Term]
+id: DOID:0051106
+name: hyalinizing clear cell carcinoma
+def: "A salivary gland carcinoma that is composed of clear and eosinophilic cells in a variably hyalinized stroma, usually associated with EWSR1 rearrangement." [url:https\://pubmed.ncbi.nlm.nih.gov/42743086/]
+xref: NCI:C201821
+is_a: DOID:0060119 ! cáncer de faringe
+
+[Term]
 id: DOID:0060000
 name: endocarditis infecciosa
 def: "Endocarditis que se caracteriza por la inflamación del endocardio causada por agentes infecciosos." [url:http\://en.wikipedia.org/wiki/Endocarditis, url:http\://en.wikipedia.org/wiki/Infective_endocarditis]
@@ -12864,10 +12881,6 @@ def: "Síndrome caracterizado por defectos del cuero cabelludo (aplasia cutis co
 subset: DO_rare_slim
 synonym: "síndrome de Adams Oliver" EXACT []
 xref: GARD:5739
-xref: MIM:100300
-xref: MIM:614219
-xref: MIM:615297
-xref: MIM:616028
 xref: MIM:PS100300
 xref: ORDO:974
 xref: SNOMEDCT_US_2025_09_01:34748004
@@ -22475,10 +22488,10 @@ is_a: DOID:0090131 ! displasia cortical compleja con otras malformaciones cerebr
 [Term]
 id: DOID:0061144
 name: displasia cortical compleja con otras malformaciones cerebrales 13
-def: "A complex cortical dysplasia with other brain malformations characterized by global developmental delay with impaired intellectual development that has_material_basis_in heterozygous mutation in the DYNC1H1 gene on chromosome 14q32." [url:https\://pubmed.ncbi.nlm.nih.gov/23603762/]
+def: "A complex cortical dysplasia with other brain malformations characterized by global developmental delay with impaired intellectual development that has_material_basis_in heterozygous mutation in the DYNC1H1 gene on chromosome 14q32.31." [url:https\://pubmed.ncbi.nlm.nih.gov/23603762/]
 xref: MIM:614563
-is_a: DOID:0050736 ! enfermedad autosómica dominante
-is_a: DOID:0090131 ! displasia cortical compleja con otras malformaciones cerebrales
+is_obsolete: true
+replaced_by: DOID:0070043
 
 [Term]
 id: DOID:0061145
@@ -22767,7 +22780,8 @@ is_a: DOID:0111797 ! nistagmo congénito autosómico recesivo
 [Term]
 id: DOID:0061179
 name: síndrome de Adams-Oliver 3
-def: "An Adams-Oliver syndrome that has_material_basis_in heterozygous mutation in the RBPJ gene on chromosome 4p15." [url:https\://pubmed.ncbi.nlm.nih.gov/22883147/]
+def: "An Adams-Oliver syndrome that has_material_basis_in heterozygous mutation in the RBPJ gene on chromosome 4p15.2." [url:https\://pubmed.ncbi.nlm.nih.gov/22883147/]
+subset: DO_rare_slim
 xref: MIM:614814
 is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0060227 ! síndrome de Adams-Oliver
@@ -23622,6 +23636,14 @@ xref: MIM:616629
 is_a: DOID:0050576 ! síndrome de Senior-Loken
 
 [Term]
+id: DOID:0061284
+name: autosomal recessive dyskeratosis congenita 8
+def: "A dyskeratosis congenita that has_material_basis_in an autosomal recessive mutation of the APOLLO gene on chromosome 1p13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/35007328/]
+xref: MIM:620133
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:2729 ! disqueratosis congénita
+
+[Term]
 id: DOID:0061285
 name: glycogen storage disease X
 def: "A glycogen storage disease that has_material_basis_in homozygous or compound heterozygous mutation in the PGAM2 gene, which encodes muscle phosphoglycerate mutase, on chromosome 7p13." [url:https\://pubmed.ncbi.nlm.nih.gov/6262916/]
@@ -23752,6 +23774,496 @@ id: DOID:0061301
 name: Hermansky-Pudlak syndrome 11
 def: "A Hermansky-Pudlak syndrome characterized by mild oculocutaneous albinism in association with a moderate bleeding diathesis that has_material_basis_in homozygous mutation in the BLOC1S5 gene on chromosome 6p24." [url:https\://pubmed.ncbi.nlm.nih.gov/32565547/]
 is_a: DOID:3753 ! síndrome de Hermansky-Pudlak
+
+[Term]
+id: DOID:0061302
+name: oocyte/zygote/embryo maturation arrest
+def: "A female reproductive system disease that is characterized by the presence of abnormal oocytes that lack a zona pellucida." [url:https\://pubmed.ncbi.nlm.nih.gov/36360157/]
+xref: MIM:PS615774
+xref: ORDO:404466
+is_a: DOID:229 ! enfermedad del aparato reproductor femenino
+
+[Term]
+id: DOID:0061303
+name: oocyte/zygote/embryo maturation arrest 1
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by the presence of abnormal oocytes that lack a zona pellucida and that has_material_basis_in homozygous or compound heterozygous mutation in the ZP1 gene on chromosome 11q12.2." [url:https\://pubmed.ncbi.nlm.nih.gov/36360157/]
+xref: MIM:615774
+xref: ORDO:404466
+xref: UMLS_CUI:C4749433
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:404466" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C4749433" xsd:string
+
+[Term]
+id: DOID:0061304
+name: oocyte/zygote/embryo maturation arrest 2
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation arrest with various meiotic spindle defects and that has_material_basis_in heterozygous or homozygous mutation in the TUBB8 gene on chromosome 10p15.3." [url:https\://pubmed.ncbi.nlm.nih.gov/27273344/]
+xref: MIM:616780
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061305
+name: oocyte/zygote/embryo maturation arrest 3
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by infertility, caused by absence of the zona pellucida that results in degeneration of oocytes and 'empty follicle syndrome' on in vitro fertilization procedures and that has_material_basis_in heterozygous mutation in the ZP3 gene on chromosome 7q11.23." [url:https\://pubmed.ncbi.nlm.nih.gov/28886344/]
+xref: MIM:617712
+xref: ORDO:404466
+xref: UMLS_CUI:C4749433
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:404466" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C4749433" xsd:string
+
+[Term]
+id: DOID:0061306
+name: oocyte/zygote/embryo maturation arrest 4
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by phenotypic variability, with some oocytes exhibiting maturation arrest at the germinal vesicle stage and others at the metaphase I stage. In some patients, a few oocytes progress to polar body I; those oocytes either undergo fertilization failure or, in those that are fertilized, early embryonic arrest and that has_material_basis_in homozygous or compound heterozygous mutation in the PATL2 gene on chromosome 15q21.1." [url:https\://pubmed.ncbi.nlm.nih.gov/28965849/]
+xref: MIM:617743
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061307
+name: oocyte/zygote/embryo maturation arrest 5
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to inability of the oocyte to exit metaphase II, resulting in fertilization failure and that has_material_basis_in homozygous or compound heterozygous mutation in the WEE2 gene on chromosome 7q34." [url:https\://pubmed.ncbi.nlm.nih.gov/29606300/]
+xref: MIM:617996
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061308
+name: oocyte/zygote/embryo maturation arrest 6
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by primary infertility due to defective sperm-binding to an abnormally thin zona pellucida (ZP) in patient oocytes and that has_material_basis_in homozygous mutation in the ZP2 gene on chromosome 16p12.3-p12.2." [url:https\://pubmed.ncbi.nlm.nih.gov/29895852/]
+xref: MIM:618353
+xref: ORDO:404466
+xref: UMLS_CUI:C4749433
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:404466" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C4749433" xsd:string
+
+[Term]
+id: DOID:0061309
+name: oocyte/zygote/embryo maturation arrest 7
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by infertility due to oocyte death, which may occur before or after fertilization and that has_material_basis_in heterozygous mutation in the PANX1 gene on chromosome 11q21." [url:https\://pubmed.ncbi.nlm.nih.gov/30918116/]
+xref: MIM:618550
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061310
+name: oocyte/zygote/embryo maturation arrest 8
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to failure of the fertilized ovum to undergo zygotic cleavage and that has_material_basis_in homozygous mutation in the BTG4 gene on chromosome 11q23.1." [url:https\://pubmed.ncbi.nlm.nih.gov/32502391/]
+xref: MIM:619009
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061311
+name: oocyte/zygote/embryo maturation arrest 9
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte meiotic arrest at metaphase 1 and abnormal zygotic cleavage that has_material_basis_in homozygous or compound heterozygous mutation in the TRIP13 gene on chromosome 5p15.33." [url:https\://pubmed.ncbi.nlm.nih.gov/32473092/]
+xref: MIM:619011
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061312
+name: oocyte/zygote/embryo maturation arrest 10
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by high rates of abnormal fertilization of mature oocytes, with development of multiple pronuclei or absent pronucleus and that has_material_basis_in homozygous mutation in the REC114 gene on chromosome 15q24.1." [url:https\://pubmed.ncbi.nlm.nih.gov/31704776/]
+xref: MIM:619176
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061313
+name: oocyte/zygote/embryo maturation arrest 11
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by reduced or absent fertility and poor embryonic outcomes with assisted reproductive technology and that has_material_basis_in homozygous mutation in the ASTL gene on chromosome 2q11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/34704130/]
+xref: MIM:619643
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061314
+name: oocyte/zygote/embryo maturation arrest 12
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to early embryonic arrest and that has_material_basis_in homozygous mutation in the FBXO43 gene on chromosome 8q22.2." [url:https\://pubmed.ncbi.nlm.nih.gov/34052850/]
+xref: MIM:619697
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061315
+name: oocyte/zygote/embryo maturation arrest 13
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to recurrent preimplantation embryonic arrest and that has_material_basis_in homozygous or compound heterozygous mutation in the ZFP36L2 gene on chromosome 2p21." [url:https\://pubmed.ncbi.nlm.nih.gov/34611029/]
+xref: MIM:620154
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061316
+name: oocyte/zygote/embryo maturation arrest 14
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation arrest, fertilization failure, and/or early embryonic arrest and that has_material_basis_in homozygous or compound heterozygous mutation in the CDC20 gene on chromosome 1p34.2." [url:https\://pubmed.ncbi.nlm.nih.gov/32666501/, url:https\://pubmed.ncbi.nlm.nih.gov/33683667/, url:https\://pubmed.ncbi.nlm.nih.gov/33898437/, url:https\://pubmed.ncbi.nlm.nih.gov/34218387/]
+xref: MIM:620276
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061317
+name: oocyte/zygote/embryo maturation arrest 15
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by severely impaired zygote formation despite ovulation proceeding normally and retrieved oocytes appearing normal that has_material_basis_in homozygous mutation in the TLE6 gene on chromosome 19p13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/26537248/]
+xref: MIM:616814
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061318
+name: oocyte/zygote/embryo maturation arrest 16
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to embryonic arrest at the 2- to 5-cell stage and that has_material_basis_in homozygous or compound heterozygous mutation in the PADI6 gene on chromosome 1p36.13." [url:https\://pubmed.ncbi.nlm.nih.gov/27545678/]
+xref: MIM:617234
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061319
+name: oocyte/zygote/embryo maturation arrest 17
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to arrest of the embryo after the first rounds of cleavage or failure to establish pregnancy after implantation and that has_material_basis_in homozygous or compound heterozygous mutation in the KPNA7 gene on chromosome 7q22.1." [url:https\://pubmed.ncbi.nlm.nih.gov/36647821/]
+xref: MIM:620319
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061320
+name: oocyte/zygote/embryo maturation arrest 18
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to early embryonic arrest. Most oocytes can be fertilized and begin cleavage, but very few viable embryos are obtained and most fail to establish pregnancy and that has_material_basis_in homozygous or compound heterozygous mutation in the NLRP2 gene on chromosome 19q13.42." [url:https\://pubmed.ncbi.nlm.nih.gov/30877238/]
+xref: MIM:620332
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061321
+name: oocyte/zygote/embryo maturation arrest 19
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation arrest and early embryonic arrest. Oocyte arrest at the germinal vesicle stage has been observed and that has_material_basis_in homozygous or compound heterozygous mutation in the NLRP5 gene on chromosome 19q13.43." [url:https\://pubmed.ncbi.nlm.nih.gov/30877238/, url:https\://pubmed.ncbi.nlm.nih.gov/35091966/]
+xref: MIM:620333
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061322
+name: oocyte/zygote/embryo maturation arrest 20
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by early embryonic arrest with fragmentation and that has_material_basis_in homozygous or compound heterozygous mutation in the MOS gene on chromosome 8q12.1." [url:https\://pubmed.ncbi.nlm.nih.gov/34779126/, url:https\://pubmed.ncbi.nlm.nih.gov/35670744/]
+xref: MIM:620383
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061323
+name: oocyte/zygote/embryo maturation arrest 21
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility caused by zygote arrest due to pronuclei fusion failure and  that has_material_basis_in heterozygous mutation in the CHEK1 gene on chromosome 11q24.2." [url:https\://pubmed.ncbi.nlm.nih.gov/33953335/]
+xref: MIM:620610
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061324
+name: oocyte/zygote/embryo maturation arrest 22
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation arrest, primarily at the germinal vesicle or metaphase I stages and that has_material_basis_in homozygous or compound heterozygous mutation in the PABPC1L gene on chromosome 20q13.12." [url:https\://pubmed.ncbi.nlm.nih.gov/37052235/, url:https\://pubmed.ncbi.nlm.nih.gov/37723834/, url:https\://pubmed.ncbi.nlm.nih.gov/38177974/]
+xref: MIM:621093
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061325
+name: oocyte/zygote/embryo maturation arrest 23
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to developmental arrest. Oocytes can be fertilized, but maturation fails at the oocyte, zygote, or embryo stage and that has_material_basis_in heterozygous or homozygous mutation in the TUBA4A gene  on chromosome 2q35." [url:https\://pubmed.ncbi.nlm.nih.gov/37024973/, url:https\://pubmed.ncbi.nlm.nih.gov/39872894/]
+xref: MIM:621231
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061326
+name: oocyte/zygote/embryo maturation arrest 24
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to preimplantation embryo maturation arrest and that has_material_basis_in homozygous mutation in the TUBA1C gene on chromosome 12q13.12." [url:https\://pubmed.ncbi.nlm.nih.gov/39209701/]
+xref: MIM:621232
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061327
+name: oocyte/zygote/embryo maturation arrest 25
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to embryo maturation arrest and that has_material_basis_in heterozygous mutation in the NLRP7 gene on chromosome 19q13.42." [url:https\://pubmed.ncbi.nlm.nih.gov/37148315/]
+xref: MIM:621471
+xref: ORDO:488191
+xref: UMLS_CUI:C5567489
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+property_value: skos:narrowMatch "ORDO:488191" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C5567489" xsd:string
+
+[Term]
+id: DOID:0061328
+name: platelet-type bleeding disorder 21
+def: "A blood platelet disease characterized by increased risk of bleeding resulting from a functional platelet defect. Platelets have decreased or even absent dense bodies and abnormally enlarged and fused alpha-granules, and they show defective secretion and aggregation responses to agonists and that has_material_basis_in heterozygous mutation in the FLI1 gene on chromosome 11q24.3." [url:https\://pubmed.ncbi.nlm.nih.gov/28255014/]
+subset: DO_rare_slim
+xref: MIM:617443
+xref: ORDO:248340
+xref: UMLS_CUI:C0032197
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:2218 ! enfermedad plaquetaria
+
+[Term]
+id: DOID:0061329
+name: platelet-type bleeding disorder 22
+def: "A blood platelet disease characterized by impaired platelet aggregation due to intracellular signaling defects. Patients present in the first decade with spontaneous subcutaneous bleeding and excessive bleeding after minor injuries and that has_material_basis_in homozygous mutation in the EPHB2 gene on chromosome 1p36.12." [url:https\://pubmed.ncbi.nlm.nih.gov/30213874/]
+subset: DO_rare_slim
+xref: MIM:618462
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:2218 ! enfermedad plaquetaria
+
+[Term]
+id: DOID:0061330
+name: platelet-type bleeding disorder 24
+def: "A blood platelet disease characterized by an autosomal dominant form of congenital macrothrombocytopenia associated with platelet anisocytosis and that has_material_basis_in heterozygous mutation in the ITGB3 gene, which encodes platelet glycoprotein alpha-III, on chromosome 17q21.32." [url:https\://pubmed.ncbi.nlm.nih.gov/21454453/, url:https\://pubmed.ncbi.nlm.nih.gov/22102273/]
+subset: DO_rare_slim
+xref: MIM:619271
+xref: ORDO:140957
+xref: UMLS_CUI:C4304021
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:2218 ! enfermedad plaquetaria
+property_value: skos:narrowMatch "ORDO:140957" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C4304021" xsd:string
+
+[Term]
+id: DOID:0061331
+name: platelet-type bleeding disorder 25
+def: "A blood platelet disease characterized by increased susceptibility to bleeding episodes due to decreased or dysfunctional platelets and that has_material_basis_in heterozygous mutation in the TPM4 gene on chromosome 19p13.12-p13.11." [url:https\://pubmed.ncbi.nlm.nih.gov/28134622/, url:https\://pubmed.ncbi.nlm.nih.gov/34758189/, url:https\://pubmed.ncbi.nlm.nih.gov/35170221/]
+subset: DO_rare_slim
+xref: MIM:620486
+xref: ORDO:140957
+xref: UMLS_CUI:C4304021
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:2218 ! enfermedad plaquetaria
+property_value: skos:narrowMatch "ORDO:140957" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C4304021" xsd:string
+
+[Term]
+id: DOID:0061332
+name: Glanzmann thrombasthenia 2
+def: "A blood platelet disease characterized by failure of platelet aggregation and by absent or diminished clot retraction and that has_material_basis_in homozygous or compound heterozygous mutation in the ITGB3 gene, which encodes platelet glycoprotein IIIa, on chromosome 17q21.32." [url:https\://pubmed.ncbi.nlm.nih.gov/9160670/]
+subset: DO_rare_slim
+xref: GARD:2478
+xref: MIM:619267
+xref: ORDO:849
+xref: UMLS_CUI:C0040015
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:2218 ! enfermedad plaquetaria
+property_value: skos:narrowMatch "GARD:2478" xsd:string
+property_value: skos:narrowMatch "ORDO:849" xsd:string
+property_value: skos:narrowMatch "UMLS_CUI:C0040015" xsd:string
+
+[Term]
+id: DOID:0061333
+name: omphalocele-exstrophy-imperforate anus-spinal defects complex
+def: "A bladder exstrophy-epispadias-cloacal exstrophy complex that is characterized by a combination of defects comprising omphalocele, exstrophy of the cloaca, imperforate anus, and spinal defects." [url:https\://pubmed.ncbi.nlm.nih.gov/10797425/]
+subset: DO_rare_slim
+xref: MIM:258040
+xref: ORDO:322
+is_a: DOID:0080173 ! complejo de extrofia vesical-epispadias-extrofia cloacal
+property_value: skos:narrowMatch "ORDO:322" xsd:string
+
+[Term]
+id: DOID:0061334
+name: oocyte/zygote/embryo maturation arrest 26
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by recurrent pregnancy loss due to early embryonic arrest and implantation failure and that has_material_basis_in homozygous or compound heterozygous mutation in the MEI1 gene on chromosome 22q13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/34037756/]
+xref: MIM:621620
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061335
+name: oocyte/zygote/embryo maturation arrest 27
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation arrest at metaphase I and that has_material_basis_in compound heterozygous mutation in the TACC3 gene on chromosome 4p16.3." [url:https\://pubmed.ncbi.nlm.nih.gov/36395215/]
+xref: MIM:621713
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
+id: DOID:0061336
+name: Joubert syndrome 34
+def: "A Joubert syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the B9D2 gene on chromosome 19q13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/26092869/]
+xref: MIM:614175
+xref: ORDO:564
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:564" xsd:string
+
+[Term]
+id: DOID:0061337
+name: Joubert syndrome 35
+def: "A Joubert syndrome that is characterized by brain malformations that result in developmental delay, oculomotor apraxia, and hypotonia and that has_material_basis_in homozygous mutation in the ARL3 gene on chromosome 10q24.32." [url:https\://pubmed.ncbi.nlm.nih.gov/30269812/]
+xref: MIM:618161
+xref: ORDO:475
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061338
+name: Joubert syndrome 36
+def: "A Joubert syndrome that is characterized by global developmental delay, ocular movement abnormalities, and mesoaxial polydactyly and that has_material_basis_in homozygous mutation in the FAM149B1 gene on chromosome 10q22.2." [url:https\://pubmed.ncbi.nlm.nih.gov/30905400/]
+xref: MIM:618763
+xref: ORDO:475
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061340
+name: Joubert syndrome 37
+def: "A Joubert syndrome that is characterized by a distinctive hindbrain malformation affecting the midbrain and cerebellum, recognizable as the 'molar tooth sign' on brain imaging and that has_material_basis_in homozygous or compound heterozygous mutation in the TOGARAM1 gene on chromosome 14q21.2." [url:https\://pubmed.ncbi.nlm.nih.gov/32453716/]
+xref: MIM:619185
+xref: ORDO:475
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061341
+name: Joubert syndrome 38
+def: "A Joubert syndrome that is characterized by hypotonia, global developmental delay, oculomotor apraxia, and breathing abnormalities, with a 'molar tooth sign' on brain MRI and that has_material_basis_in compound heterozygous mutation in the KIAA0753 gene on chromosome 17p13.1." [url:https\://pubmed.ncbi.nlm.nih.gov/28220259/]
+xref: MIM:619476
+xref: ORDO:475
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061342
+name: Joubert syndrome 39
+def: "A Joubert syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the TMEM218 gene on chromosome 11q24.2." [url:https\://pubmed.ncbi.nlm.nih.gov/33791682/]
+xref: MIM:619562
+xref: ORDO:475
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061343
+name: Joubert syndrome 40
+def: "A Joubert syndrome that is characterized by developmental delay, postaxial polydactyly, subtle midline notching or clefting of the upper lip, hypotonia, and the 'molar tooth sign' on brain imaging and that has_material_basis_in compound heterozygous mutation in the IFT74 gene on chromosome 9p21.2." [url:https\://pubmed.ncbi.nlm.nih.gov/34539760/]
+xref: MIM:619582
+xref: ORDO:475
+is_a: DOID:0050777 ! síndrome de Joubert
+property_value: skos:narrowMatch "ORDO:475" xsd:string
+
+[Term]
+id: DOID:0061344
+name: Adams-Oliver syndrome 1
+def: "An Adams-Oliver syndrome that has_material_basis_in heterozygous mutation in the ARHGAP31 gene on chromosome 3q13.32-q13.33." [url:https\://pubmed.ncbi.nlm.nih.gov/25132448/]
+subset: DO_rare_slim
+xref: MIM:100300
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0060227 ! síndrome de Adams-Oliver
+
+[Term]
+id: DOID:0061345
+name: Adams-Oliver syndrome 2
+def: "An Adams-Oliver syndrome that is characterized by aplasia cutis congenita and terminal transverse limb defects, in association with variable involvement of the brain, eyes, and cardiovascular systems and that has_material_basis_in homozygous or compound heterozygous mutation in the DOCK6 gene on chromosome 19p13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/21820096/]
+subset: DO_rare_slim
+xref: MIM:614219
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060227 ! síndrome de Adams-Oliver
+
+[Term]
+id: DOID:0061346
+name: Adams-Oliver syndrome 4
+def: "An Adams-Oliver syndrome that is characterized by aplasia cutis congenita and terminal transverse limb defects. Additional abnormalities may be present in other organs, e.g., heart, brain, and/or eyes and that has_material_basis_in homozygous mutation in the EOGT gene on chromosome 3p14.1." [url:https\://pubmed.ncbi.nlm.nih.gov/23522784/]
+subset: DO_rare_slim
+xref: MIM:615297
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060227 ! síndrome de Adams-Oliver
+
+[Term]
+id: DOID:0061347
+name: Adams-Oliver syndrome 5
+def: "An Adams-Oliver syndrome that has_material_basis_in heterozygous mutation in the NOTCH1 gene on chromosome 9q34.3." [url:https\://pubmed.ncbi.nlm.nih.gov/25132448/]
+subset: DO_rare_slim
+xref: MIM:616028
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0060227 ! síndrome de Adams-Oliver
+
+[Term]
+id: DOID:0061348
+name: Adams-Oliver syndrome 6
+def: "An Adams-Oliver syndrome that has_material_basis_in heterozygous mutation in the DLL4 gene on chromosome 15q15.1." [url:https\://pubmed.ncbi.nlm.nih.gov/25132448/]
+subset: DO_rare_slim
+xref: MIM:616589
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0060227 ! síndrome de Adams-Oliver
 
 [Term]
 id: DOID:0070000
@@ -24133,12 +24645,15 @@ is_a: DOID:1925 ! síndrome de Coffin-Siris
 [Term]
 id: DOID:0070043
 name: trastorno autosómico dominante del desarrollo intelectual 13
+alt_id: DOID:0061144
 def: "Un trastorno autosómico dominante del desarrollo intelectual que tiene_como_base una mutación autosómica dominante del gen DYNC1H1 en el cromosoma 14q32.31." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21076407]
 synonym: "discapacidad intelectual autosómica dominante no sindrómica 13" EXACT []
 synonym: "retraso mental autosómico dominante 13" EXACT []
 synonym: "retraso mental, autosómico dominante 13, con defectos de migración neuronal" EXACT []
 xref: MIM:614563
-is_a: DOID:0060307 ! trastorno del desarrollo intelectual autosómico dominante
+xref: UMLS_CUI:C3281202
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0090131 ! displasia cortical compleja con otras malformaciones cerebrales
 
 [Term]
 id: DOID:0070044
@@ -32660,6 +33175,104 @@ property_value: skos:exactMatch "MIM:618730" xsd:string
 property_value: skos:exactMatch "UMLS_CUI:C5231480" xsd:string
 
 [Term]
+id: DOID:0070833
+name: Charcot-Marie-tooth disease type 1H
+def: "A Charcot-Marie-Tooth disease type 1 characterized by foot deformities, upper or lower limb sensory disturbances, and motor deficits (mainly impaired gait) that has_material_basis_in heterozygous mutation in the FBLN5 gene, encoding fibulin-5, on chromosome 14q32. The disorder is slowly progressive and becomes more apparent with age." [url:https\://pubmed.ncbi.nlm.nih.gov/21576112/, url:https\://pubmed.ncbi.nlm.nih.gov/32757322/]
+subset: DO_rare_slim
+xref: MIM:619764
+xref: UMLS_CUI:C5676926
+is_a: DOID:0050538 ! enfermedad de Charcot-Marie-Tooth tipo 1
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:619764" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5676926" xsd:string
+
+[Term]
+id: DOID:0070834
+name: Charcot-Marie-tooth disease type 1I
+def: "A Charcot-Marie-Tooth disease type 1 characterized by delayed motor development in the first years of life associated with gait abnormalities, sensory ataxia, hyporeflexia, and distal sensory impairment due to a sensorimotor peripheral neuropathy that mainly affects the lower limbs that has_material_basis_in heterozygous mutation in the POLR3B gene on chromosome 12q23. This disease is progressive." [url:https\://pubmed.ncbi.nlm.nih.gov/33417887/]
+subset: DO_rare_slim
+xref: MIM:619742
+xref: UMLS_CUI:C5676914
+is_a: DOID:0050538 ! enfermedad de Charcot-Marie-Tooth tipo 1
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:619742" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5676914" xsd:string
+
+[Term]
+id: DOID:0070835
+name: Charcot-Marie-tooth disease type 1J
+def: "A Charcot-Marie-Tooth disease type 1 characterized by distal muscle weakness and atrophy, as well as distal sensory impairment, predominantly affecting the lower limbs and resulting in gait abnormalities that has_material_basis_in heterozygous mutation in the ITPR3 gene on chromosome 6p21. This disease is progressive but highly variable in both age of onset, ranging from early childhood to mid-adulthood, and severity." [url:https\://pubmed.ncbi.nlm.nih.gov/32949214/]
+subset: DO_rare_slim
+xref: MIM:620111
+xref: ORDO:730332
+xref: UMLS_CUI:C5774249
+is_a: DOID:0050538 ! enfermedad de Charcot-Marie-Tooth tipo 1
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:620111" xsd:string
+property_value: skos:exactMatch "ORDO:730332" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5774249" xsd:string
+
+[Term]
+id: DOID:0070836
+name: Charcot-Marie-tooth disease axonal type 2FF
+def: "A Charcot-Marie-Tooth disease type 2 characterized by early-childhood onset of difficulties walking or running due to atrophy and weakness of the lower limbs that has_material_basis_in heterozygous mutation in the CADM3 gene on chromosome 1q21. Additional symptoms include foot and ankle deformities requiring surgery or walking aids, variable distal sensory impairment, and prominent involvement of the upper limbs, with weakness and atrophy of the forearm, wrist, and intrinsic hand muscles." [url:https\://pubmed.ncbi.nlm.nih.gov/33889941/]
+subset: DO_rare_slim
+xref: MIM:619519
+xref: UMLS_CUI:C5561981
+is_a: DOID:0050539 ! enfermedad de Charcot-Marie-Tooth tipo 2
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:619519" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5561981" xsd:string
+
+[Term]
+id: DOID:0070837
+name: Charcot-Marie-tooth disease axonal type 2HH
+def: "A Charcot-Marie-Tooth disease type 2 characterized by onset of vocal cord weakness resulting in stridor in infancy or early childhood that has_material_basis_in heterozygous mutation in the JAG1 gene on chromosome 20p12." [url:https\://pubmed.ncbi.nlm.nih.gov/32065591/]
+subset: DO_rare_slim
+xref: MIM:619574
+xref: UMLS_CUI:C5562003
+is_a: DOID:0050539 ! enfermedad de Charcot-Marie-Tooth tipo 2
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:619574" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5562003" xsd:string
+
+[Term]
+id: DOID:0070838
+name: Charcot-Marie-tooth disease axonal type 2II
+def: "A Charcot-Marie-Tooth disease type 2 characterized by a slowly progressive sensorimotor peripheral neuropathy affecting mainly the lower limbs, resulting in distal muscle weakness and atrophy and subsequent walking difficulties, that has_material_basis_in heterozygous mutation in the SLC12A6 gene on chromosome 15q13." [url:https\://pubmed.ncbi.nlm.nih.gov/31439721/, url:https\://pubmed.ncbi.nlm.nih.gov/35733399/]
+subset: DO_rare_slim
+xref: MIM:620068
+xref: UMLS_CUI:C5774227
+is_a: DOID:0050539 ! enfermedad de Charcot-Marie-Tooth tipo 2
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+property_value: skos:exactMatch "MIM:620068" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5774227" xsd:string
+
+[Term]
+id: DOID:0070839
+name: Charcot-Marie-tooth disease axonal type 2LL
+def: "A Charcot-Marie-Tooth disease type 2 characterized by childhood-onset progressive gait difficulties, distal muscle weakness and atrophy, and areflexia that has_material_basis_in compound heterozygous mutation in the DARS2 gene, encoding mitochondrial aspartyl-tRNA synthetase, on chromosome 1q25." [url:https\://pubmed.ncbi.nlm.nih.gov/40814755/]
+subset: DO_rare_slim
+xref: MIM:621485
+xref: UMLS_CUI:C6065954
+is_a: DOID:0050539 ! enfermedad de Charcot-Marie-Tooth tipo 2
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+property_value: skos:exactMatch "MIM:621485" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065954" xsd:string
+
+[Term]
+id: DOID:0070840
+name: Charcot-Marie-tooth disease axonal type 2MM
+def: "A Charcot-Marie-Tooth disease type 2 characterized by progressive sensorimotor polyneuropathy with age of onset between the first and fifth decade that has_material_basis_in homozygous or compound heterozygous mutation in the COX18 gene on chromosome 4q13." [url:https\://pubmed.ncbi.nlm.nih.gov/40830826/]
+subset: DO_rare_slim
+xref: MIM:621488
+xref: UMLS_CUI:C6065956
+is_a: DOID:0050539 ! enfermedad de Charcot-Marie-Tooth tipo 2
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+property_value: skos:exactMatch "MIM:621488" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C6065956" xsd:string
+
+[Term]
 id: DOID:0080000
 name: enfermedad muscular
 def: "Enfermedad del sistema musculoesquelético que afecta a los músculos." [url:http\://www.nlm.nih.gov/medlineplus/muscledisorders.html]
@@ -34326,9 +34939,10 @@ name: complejo de extrofia vesical-epispadias-extrofia cloacal
 def: "A physical disorder that is characterized as a spectrum of anomalies involving the urinary tract, genital tract, musculoskeletal system and sometimes the intestinal tract." [url:https\://rarediseases.org/rare-diseases/bladder-exstrophy-epispadias-cloacal-exstrophy-complex/, url:https\://www.ncbi.nlm.nih.gov/pubmed/22055685]
 subset: DO_rare_slim
 synonym: "complejo extrofia-epispadias" EXACT []
-xref: MIM:258040
+xref: MIM:600057
 xref: ORDO:322
 is_a: DOID:0080015 ! trastorno físico
+property_value: skos:narrowMatch "ORDO:322" xsd:string
 
 [Term]
 id: DOID:0080174
@@ -34338,7 +34952,6 @@ subset: DO_rare_slim
 xref: ICD10CM:Q64.10
 xref: ICD9CM:753.5
 xref: MESH:D001746
-xref: MIM:600057
 xref: ORDO:93930
 is_a: DOID:0080173 ! complejo de extrofia vesical-epispadias-extrofia cloacal
 is_a: DOID:365 ! enfermedad de la vejiga
@@ -34348,7 +34961,6 @@ id: DOID:0080175
 name: extrofia cloacal
 def: "A bladder exstrophy-epispadias-cloacal exstrophy complex that is characterized by a defect in the urethra, bladder and bowel." [url:https\://rarediseases.org/rare-diseases/bladder-exstrophy-epispadias-cloacal-exstrophy-complex/]
 subset: DO_rare_slim
-xref: MIM:258040
 xref: ORDO:93929
 is_a: DOID:0080173 ! complejo de extrofia vesical-epispadias-extrofia cloacal
 
@@ -38198,8 +38810,13 @@ is_a: DOID:0060648 ! disgenesia del segmento anterior
 [Term]
 id: DOID:0080607
 name: disgenesia del segmento anterior 2
+alt_id: DOID:11367
 def: "Una disgenesia del segmento anterior que presenta una mutación homocigota, heterocigota compuesta o heterocigota en el gen FOXE3 del cromosoma 1p33." [url:https\://www.ncbi.nlm.nih.gov/pubmed/21150893]
+subset: NCIthesaurus
+xref: ICD10CM:Q12.3
 xref: MIM:610256
+xref: NCI:C222344
+xref: UMLS_CUI:C0152422
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0060648 ! disgenesia del segmento anterior
 
@@ -42883,6 +43500,7 @@ is_a: DOID:9252 ! trastorno metabólico de los aminoácidos
 id: DOID:0081133
 name: Aciduria 3-metilglutacónica tipo 7a
 def: "Una aciduria 3-metilglutacónica que se caracteriza principalmente por un aumento de los niveles de ácido 3-metilglutacónico (3-MGA) asociado con déficits neurológicos variables y neutropenia y que presenta una mutación heterocigota dominante-negativa en el gen CLPB en el cromosoma 11q13." [url:https\://pubmed.ncbi.nlm.nih.gov/34140661/]
+subset: DO_rare_slim
 xref: MIM:619835
 is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0110003 ! Aciduria 3-metilglutacónica con cataratas, afectación neurológica y neutropenia
@@ -42891,7 +43509,9 @@ is_a: DOID:0110003 ! Aciduria 3-metilglutacónica con cataratas, afectación neu
 id: DOID:0081134
 name: Aciduria 3-metilglutacónica tipo 7b
 def: "Una aciduria 3-metilglutacónica que presenta mutaciones homocigóticas o heterocigóticas compuestas de pérdida de función en el gen CLPB del cromosoma 11q13." [url:https\://pubmed.ncbi.nlm.nih.gov/25597510/, url:https\://pubmed.ncbi.nlm.nih.gov/25597511/]
+subset: DO_rare_slim
 xref: MIM:616271
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0110003 ! Aciduria 3-metilglutacónica con cataratas, afectación neurológica y neutropenia
 
 [Term]
@@ -43464,6 +44084,7 @@ is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
 [Term]
 id: DOID:0081218
 name: trastorno del desarrollo intelectual autosómico recesivo 74
+alt_id: DOID:0112104
 def: "Trastorno del desarrollo intelectual autosómico recesivo que se caracteriza por deficiencia intelectual, macrocefalia y rasgos dismórficos y que presenta una mutación homocigota en el gen APC2 del cromosoma 19p13. También se ha descrito epilepsia con mioclonía del párpado." [url:https\://pubmed.ncbi.nlm.nih.gov/33161245/]
 xref: MIM:617169
 is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
@@ -47474,9 +48095,8 @@ def: "Una aciduria 3-metilglutacónica que presenta una mutación homocigota o h
 subset: DO_rare_slim
 synonym: "aciduria 3-metilglutacónica tipo 7" EXACT []
 synonym: "aciduria 3-metilglutacónica tipo VII" EXACT []
-xref: MIM:616271
+synonym: "MEGCANN" EXACT OMO:0003012 []
 xref: ORDO:445038
-is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0060336 ! aciduria 3-metilglutacónica
 
 [Term]
@@ -69810,26 +70430,36 @@ is_a: DOID:0112100 ! deficiencia del complejo I mitocondrial de tipo mitocondria
 [Term]
 id: DOID:0112102
 name: síndrome de Sotos 2
-def: "A Sotos syndrome that has_material_basis_in heterozygous mutation in the NFIX gene on chromosome 19p13." [url:https\://pubmed.ncbi.nlm.nih.gov/20673863/]
+def: "A bone development disease that is characterized by overgrowth, advanced bone age, macrocephaly, and dysmorphic facial features and that has_material_basis_in heterozygous mutation in the NFIX gene on chromosome 19p13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/20673863/]
 xref: MIM:614753
 is_a: DOID:0050736 ! enfermedad autosómica dominante
-is_a: DOID:14748 ! síndrome de Sotos
+is_a: DOID:0080006 ! enfermedad del desarrollo óseo
 
 [Term]
 id: DOID:0112103
 name: síndrome de Sotos 1
-def: "A Sotos syndrome that has_material_basis_in heterozygous mutation in the NSD1 gene or deletion in the chromosome region 5q35 that includes the NSD1 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/11896389/, url:https\://pubmed.ncbi.nlm.nih.gov/14517949/]
+alt_id: DOID:14748
+def: "A syndrome that occurs rarely and is characterized by excessive physical growth during the first 2 to 3 years of life and that has_material_basis_in heterozygous mutation in the NSD1 gene or deletion in the chromosome region 5q35 that includes the NSD1 gene." [url:https\://pubmed.ncbi.nlm.nih.gov/11896389/, url:https\://pubmed.ncbi.nlm.nih.gov/14517949/]
+subset: DO_rare_slim
+subset: NCIthesaurus
+xref: GARD:10091
+xref: ICD10CM:Q87.3
+xref: MESH:D058495
 xref: MIM:117550
+xref: NCI:C75019
+xref: ORDO:821
+xref: SNOMEDCT_US_2025_09_01:75968004
+xref: UMLS_CUI:C0175695
 is_a: DOID:0050736 ! enfermedad autosómica dominante
-is_a: DOID:14748 ! síndrome de Sotos
+is_a: DOID:225 ! síndrome
 
 [Term]
 id: DOID:0112104
 name: síndrome de Sotos 3
 def: "A Sotos syndrome that has_material_basis_in homozygous mutation in the APC2 gene on chromosome 19p13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/25753423/]
 xref: MIM:617169
-is_a: DOID:0050737 ! enfermedad autosómica recesiva
-is_a: DOID:14748 ! síndrome de Sotos
+is_obsolete: true
+replaced_by: DOID:0081218
 
 [Term]
 id: DOID:0112105
@@ -81373,7 +82003,6 @@ property_value: skos:exactMatch "MESH:D007906" xsd:string
 [Term]
 id: DOID:11367
 name: afaquia congénita
-subset: NCIthesaurus
 synonym: "AFAQUIA, PRIMARIA CONGÉNITA" EXACT []
 xref: ICD10CM:Q12.3
 xref: ICD9CM:743.35
@@ -81381,8 +82010,8 @@ xref: MIM:610256
 xref: NCI:C35172
 xref: SNOMEDCT_US_2025_09_01:35387008
 xref: UMLS_CUI:C0152422
-is_a: DOID:0080015 ! trastorno físico
-is_a: DOID:110 ! enfermedad del cristalino
+is_obsolete: true
+replaced_by: DOID:0080607
 
 [Term]
 id: DOID:11371
@@ -98843,13 +99472,12 @@ subset: NCIthesaurus
 xref: GARD:10091
 xref: ICD10CM:Q87.3
 xref: MESH:D058495
-xref: MIM:PS117550
 xref: NCI:C75019
 xref: ORDO:821
 xref: SNOMEDCT_US_2025_09_01:75968004
 xref: UMLS_CUI:C0175695
-is_a: DOID:0050739 ! enfermedad genética autosómica
-is_a: DOID:225 ! síndrome
+is_obsolete: true
+replaced_by: DOID:0112103
 
 [Term]
 id: DOID:14749
@@ -104485,6 +105113,7 @@ subset: NCIthesaurus
 synonym: "trastorno plaquetario" EXACT []
 synonym: "trombocitopatía" EXACT []
 xref: MESH:D001791
+xref: MIM:PS231200
 xref: NCI:C131634
 xref: SNOMEDCT_US_2025_09_01:22716005
 xref: UMLS_CUI:C0005818
@@ -118309,7 +118938,6 @@ synonym: "Miocardiopatía restrictiva familiar" RELATED []
 synonym: "Miocardiopatía restrictiva primaria" EXACT []
 xref: ICD10CM:I42.5
 xref: MESH:D002313
-xref: MIM:115210
 xref: MIM:PS115210
 xref: NCI:C62798
 xref: ORDO:75249
@@ -140500,6 +141128,7 @@ is_a: DOID:1963 ! carcinoma de las trompas de Falopio
 [Term]
 id: DOID:7267
 name: carcinoma pulmonar de células claras
+def: "A lung carcinoma that is composed_of cells with a clear cytoplasm." [url:https\://pubmed.ncbi.nlm.nih.gov/16214540/] {NARROW="url:https://pubmed.ncbi.nlm.nih.gov/24029707/"}
 xref: SNOMEDCT_US_2025_09_01:254630009
 xref: UMLS_CUI:C0345959
 is_a: DOID:3905 ! carcinoma pulmonar
@@ -151891,7 +152520,6 @@ synonym: "deficiencia de dihidrolipoamida deshidrogenasa" RELATED []
 xref: GARD:3228
 xref: ICD10CM:E71.0
 xref: MESH:D008375
-xref: MIM:246900
 xref: MIM:PS248600
 xref: NCI:C34806
 xref: ORDO:511

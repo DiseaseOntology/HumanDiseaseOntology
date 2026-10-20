@@ -345,7 +345,6 @@ mp_import.owl: build/mp.owl mp_terms.txt | annotations.txt build/mp.version \
 	 --drop-axiom-annotations "all" \
 	remove \
 	 --term-file annotations.txt \
-	 --term IAO:0000115 \
 	 --select complement \
 	 --select annotation-properties \
 	$(call annotate_import,$@,$(word 2,$|))

@@ -1,0 +1,36 @@
+# Ensure synonym type annotations are valid
+
+# Error patterns include:
+# 1. Synonym annotation property other than oboInOwl:hasSynonymType used (e.g.
+#    oboInOwl:SynonymTypeProperty)
+# 2. String used instead of URI (e.g. "acronym" instead of obo:OMO_0003012)
+# 3. Both 1 & 2
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+  VALUES ?syn_scope {
+    oboInOwl:hasExactSynonym
+    oboInOwl:hasNarrowSynonym
+    oboInOwl:hasBroadSynonym
+    oboInOwl:hasRelatedSynonym
+  }
+
+  ?entity ?syn_scope ?value .
+
+  [] a owl:Axiom ;
+    owl:annotatedSource ?entity ;
+    owl:annotatedProperty ?syn_scope ;
+    owl:annotatedTarget ?value ;
+    ?property ?annot_value .
+
+  FILTER(
+    ?property = oboInOwl:SynonymTypeProperty ||
+    CONTAINS(str(?property), "ynonym") && datatype(?annot_value) = xsd:string
+  )
+}
+ORDER BY ?entity

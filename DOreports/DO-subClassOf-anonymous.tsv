@@ -52,7 +52,7 @@ DOID:0040051	hexahydrophthalic anhydride allergic asthma	'has allergic trigger' 
 DOID:0040052	diphenylmethane-4,4'-diisocyanate allergic contact dermatitis	'has allergic trigger' some diphenylmethane-4,4'-diisocyanate|'has disease driver' some diphenylmethane-4,4'-diisocyanate
 DOID:0040053	cobalt allergic contact dermatitis	'has allergic trigger' some 'cobalt atom'|'has disease driver' some 'cobalt atom'
 DOID:0040054	cobalt allergic asthma	'has allergic trigger' some 'cobalt atom'
-DOID:0040055	palladium allergic contact dermatitis	'has allergic trigger' some palladium
+DOID:0040055	palladium allergic contact dermatitis	'has allergic trigger' some 'palladium atom'
 DOID:0040056	chromium allergic contact dermatitis	'has allergic trigger' some 'chromium atom'|'has disease driver' some 'chemical driver'|'has disease driver' some 'chromium atom'
 DOID:0040057	benzoic acid allergic contact dermatitis	'has allergic trigger' some 'benzoic acid'|'has disease driver' some 'benzoic acid'|'has disease driver' some 'chemical driver'
 DOID:0040058	1,4-phenylenediamine allergic contact dermatitis	'has allergic trigger' some 1,4-phenylenediamine|'has disease driver' some 'chemical driver'|'has disease driver' some 1,4-phenylenediamine
@@ -115,7 +115,7 @@ DOID:0050052	Rocky Mountain spotted fever	'has material basis in' some 'Ricketts
 DOID:0050059	oropharyngeal anthrax	'has symptom' some 'loss of appetite'|'has symptom' some 'severe diarrhea'|'has symptom' some diarrhea|'has symptom' some hematemesis|'has symptom' some vomiting
 DOID:0050061	erysipeloid	'has material basis in' some 'Erysipelothrix rhusiopathiae'|'transmitted by' some 'contact transmission'
 DOID:0050072	adiaspiromycosis	'disease has location' some ('zone of skin' or lung)|'has material basis in' some ('Blastomyces parvus' or '[Emmonsia] crescens')
-DOID:0050073	invasive aspergillosis	'disease has feature' some pneumonia|'disease has location' some lung|'has material basis in' some 'Aspergillus <genus>'|'has symptom' some hemorrhage
+DOID:0050073	invasive aspergillosis	'disease has feature' some pneumonia|'disease has location' some lung|'has material basis in' some Aspergillus|'has symptom' some hemorrhage
 DOID:0050096	tinea barbae	'disease has location' some 'stratum corneum of epidermis'|'disease has location' some 'zone of skin'|'has material basis in' some ('Trichophyton mentagrophytes' or 'Trichophyton verrucosum')
 DOID:0050097	ectothrix infectious disease	'disease has location' some 'cuticle of hair'|'disease has location' some 'strand of hair'|'has material basis in' some ('Trichophyton verrucosum' or 'Trichophyton equinum')
 DOID:0050105	endothrix infectious disease	'disease has location' some 'cuticle of hair'|'disease has location' some 'strand of hair'|'has material basis in' some Ascomycota
@@ -137,7 +137,7 @@ DOID:0050143	asymptomatic dengue	'has material basis in' some 'Orthoflavivirus d
 DOID:0050145	adenoiditis	'has symptom' some 'swelling symptom'|'has symptom' some dysphagia|'has symptom' some pain
 DOID:0050150	Pontiac fever	'has symptom' some fever|'has symptom' some headache|'transmitted by' some 'droplet spread transmission'
 DOID:0050152	aspiration pneumonia	'has symptom' some dysphagia|'has symptom' some tachypnea
-DOID:0050153	pulmonary aspergilloma	'disease has location' some lung|'has material basis in' some 'Aspergillus <genus>'
+DOID:0050153	pulmonary aspergilloma	'disease has location' some lung|'has material basis in' some Aspergillus
 DOID:0050156	idiopathic pulmonary fibrosis	'has material basis in' some 'autosomal dominant inheritance'|'has material basis in' some ('Abnormal pulmonary interstitial morphology' and ('has material basis in' some Scarring) and ('disease has location' some lung))
 DOID:0050157	cryptogenic organizing pneumonia	'has symptom' some 'weight loss'|'has symptom' some cough|'has symptom' some inflammation
 DOID:0050159	lymphoid interstitial pneumonia	'has symptom' some cough
@@ -310,8 +310,8 @@ DOID:0050640	anauxetic dysplasia 1	'has material basis in' some 'autosomal reces
 DOID:0050644	arterial calcification of infancy	'disease has location' some artery|'existence starts during' some 'Infantile onset'
 DOID:0050648	atelosteogenesis	'disease has location' some 'vertebral column'
 DOID:0050649	atransferrinemia	'has material basis in' some 'autosomal recessive inheritance'
-DOID:0050650	familial atrial fibrillation	'has symptom' some 'atrial fibrillation'
-DOID:0050651	atrioventricular septal defect	'has major susceptibility factor' some 'susceptibility to atrioventricular septal defect 2'
+DOID:0050650	familial atrial fibrillation	'has major susceptibility factor' some 'susceptibility to familial atrial fibrillation 8'|'has symptom' some 'atrial fibrillation'
+DOID:0050651	atrioventricular septal defect	'has major susceptibility factor' some 'susceptibility to atrioventricular septal defect 2'|'has major susceptibility factor' some obo:MIM_606215
 DOID:0050656	pseudo-TORCH syndrome 1	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0050657	Cowden syndrome 1	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0050658	Bart-Pumphrey syndrome	'has material basis in' some 'autosomal dominant inheritance'
@@ -765,6 +765,8 @@ DOID:0060654	lethal congenital contracture syndrome 4	'disease has basis in' som
 DOID:0060655	autosomal recessive congenital ichthyosis	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0060656	autosomal recessive congenital ichthyosis 1	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060669	cerebral cavernous malformation	'disease has location' some cerebrum
+DOID:0060670	cerebral cavernous malformation 2	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0060671	cerebral cavernous malformation 3	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0060672	frontotemporal dementia 2	'has material basis in' some 'autosomal dominant inheritance'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0060674	catecholaminergic polymorphic ventricular tachycardia	'disease has basis in' some gene|'has symptom' some 'ventricular tachycardia'
 DOID:0060675	catecholaminergic polymorphic ventricular tachycardia 1	'has symptom' some 'ventricular tachycardia'
@@ -793,7 +795,6 @@ DOID:0060712	autosomal recessive congenital ichthyosis 4A	'disease has basis in'
 DOID:0060713	autosomal recessive congenital ichthyosis 4B	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060714	autosomal recessive congenital ichthyosis 5	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060715	autosomal recessive congenital ichthyosis 6	'disease has basis in' some 'Abnormality of prenatal development or birth'
-DOID:0060716	autosomal recessive congenital ichthyosis 7	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060717	autosomal recessive congenital ichthyosis 8	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060718	autosomal recessive congenital ichthyosis 9	'disease has basis in' some 'Abnormality of prenatal development or birth'
 DOID:0060719	autosomal recessive congenital ichthyosis 10	'disease has basis in' some 'Abnormality of prenatal development or birth'
@@ -960,7 +961,7 @@ DOID:0060968	hypotrichosis 15	'has material basis in' some 'autosomal recessive 
 DOID:0060970	Cornelia de Lange syndrome 6	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0060971	interstitial lung disease 2	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0060972	renal hypomagnesemia 7, with or without dilated cardiomyopathy	'has material basis in' some 'autosomal dominant inheritance'
-DOID:0060973	WHIM syndrome 2	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0060973	severe congenital neutropenia 13	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0060974	autosomal recessive Robinow syndrome 2	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0060975	polycystic liver disease 2	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0060976	polycystic liver disease 3	'has material basis in' some 'autosomal dominant inheritance'
@@ -1288,6 +1289,59 @@ DOID:0061345	Adams-Oliver syndrome 2	'has material basis in' some 'autosomal rec
 DOID:0061346	Adams-Oliver syndrome 4	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0061347	Adams-Oliver syndrome 5	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0061348	Adams-Oliver syndrome 6	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061349	severe congenital neutropenia 9	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061350	severe congenital neutropenia 11	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061351	severe congenital neutropenia 10	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061352	severe congenital neutropenia 12	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061354	severe congenital neutropenia 14	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061355	Aicardi-Goutieres syndrome 1	'has material basis in' some 'autosomal dominant inheritance'|'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061356	Aicardi-Goutieres syndrome 2	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061357	Aicardi-Goutieres syndrome 3	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061358	Aicardi-Goutieres syndrome 4	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061359	Aicardi-Goutieres syndrome 5	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061360	Aicardi-Goutieres syndrome 6	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061361	Aicardi-Goutieres syndrome 7	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061362	Aicardi-Goutieres syndrome 8	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061363	Aicardi-Goutieres syndrome 9	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061364	distal arthrogryposis type 11	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061365	distal arthrogryposis type 12	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061366	cataract 49	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061367	cataract 50 with or without glaucoma	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061369	46,XY sex reversal 11	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061370	familial atrial fibrillation 1	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061371	familial atrial fibrillation 2	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061372	familial atrial fibrillation 3	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061373	familial atrial fibrillation 4	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061375	familial atrial fibrillation 6	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061376	familial atrial fibrillation 7	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061377	familial atrial fibrillation 9	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061378	familial atrial fibrillation 10	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061379	familial atrial fibrillation 11	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061380	familial atrial fibrillation 12	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061381	familial atrial fibrillation 13	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061382	familial atrial fibrillation 14	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061383	familial atrial fibrillation 15	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061384	familial atrial fibrillation 18	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061399	combined oxidative phosphorylation deficiency 58	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061400	combined oxidative phosphorylation deficiency 59	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061401	hypertrophic cardiomyopathy 31	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061402	hypertrophic cardiomyopathy 29 with polyglucosan bodies	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061403	atrial hypertrophic cardiomyopathy 30	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061404	combined oxidative phosphorylation deficiency 60	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061405	hypertrophic cardiomyopathy 28	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061406	autosomal recessive cutis laxa type IIE	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061407	autosomal recessive cutis laxa type ID	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061408	muscular dystrophy-dystroglycanopathy (limb-girdle) 15 type C	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061409	Diamond-Blackfan anemia 21	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061410	Diamond-Blackfan anemia 22	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061411	dilated cardiomyopathy 2H	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061412	dilated cardiomyopathy 1OO	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0061413	dilated cardiomyopathy 2I	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061414	dilated cardiomyopathy 2J	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061415	dilated cardiomyopathy 2K	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061416	dilated cardiomyopathy 2L	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061417	autosomal recessive dilated cardiomyopathy 2M	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0061418	dilated cardiomopathy 2N	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0070000	3-methylglutaconic aciduria type 8	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0070002	3-methylglutaconic aciduria type 9	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0070013	Seckel syndrome 2	'has material basis in' some 'autosomal recessive inheritance'
@@ -1314,6 +1368,7 @@ DOID:0070044	Coffin-Siris syndrome 2	'has material basis in' some 'autosomal dom
 DOID:0070045	Coffin-Siris syndrome 3	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070046	Coffin-Siris syndrome 4	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070057	Coffin-Siris syndrome 9	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0070070	neurodevelopmental disorder with hypotonia, impaired language, and dysmorphic features	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070077	schizophrenia 1	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070078	schizophrenia 2	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070079	schizophrenia 3	'has material basis in' some 'autosomal dominant inheritance'
@@ -1857,6 +1912,18 @@ DOID:0070837	Charcot-Marie-tooth disease axonal type 2HH	'has material basis in'
 DOID:0070838	Charcot-Marie-tooth disease axonal type 2II	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0070839	Charcot-Marie-tooth disease axonal type 2LL	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0070840	Charcot-Marie-tooth disease axonal type 2MM	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070841	Parkinson's disease 27	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070843	aplasia cutis-enamel dysplasia syndrome	'disease has location' some UBERON:0001752|'disease has location' some scalp|'has material basis in' some 'autosomal dominant inheritance'|'has phenotype' some HP:0007385
+DOID:0070845	arterial tortuosity-bone fragility syndrome	'disease has location' some 'bone element'|'disease has location' some artery|'has material basis in' some 'autosomal recessive inheritance'|'has phenotype' some HP:0005116|'has phenotype' some HP:0006687
+DOID:0070846	auroneurodental syndrome	'disease has feature' some 'sensorineural hearing loss'|'disease has location' some 'calcareous tooth'|'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070847	autoinflammation with arthritis and vasculitis	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070848	autoinflammation with episodic fever and immune dysregulation	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070849	vascular-type bleeding disorder	'has material basis in' some 'autosomal dominant inheritance'|'has symptom' some bleeding
+DOID:0070850	brain malformation renal syndrome	'disease has feature' some 'Dandy-Walker syndrome'|'disease has location' some brain|'disease has location' some kidney|'has material basis in' some 'autosomal recessive inheritance'|'has phenotype' some HP:0000110
+DOID:0070851	bronchiectasis and nasal polyposis	'disease has feature' some 'chronic rhinitis'|'disease has feature' some bronchiectasis|'disease has feature' some sinusitis|'has material basis in' some 'autosomal recessive inheritance'|'has phenotype' some HP:0100582
+DOID:0070852	camptodactyly, impaired intellectual development, and facial dysmorphism syndrome	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0070853	childhood-onset neurodegeneration with movement disorders, cognitive decline, and brain abnormalities	'disease has location' some brain|'has material basis in' some 'autosomal recessive inheritance'
+DOID:0070854	congenital myelofibrosis with anemia, neutropenia, developmental delay, and ocular abnormalities	'disease has feature' some 'intellectual disability'|'disease has feature' some anemia|'disease has feature' some myelofibrosis|'disease has feature' some neutropenia|'disease has feature' some thrombocytopenia|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080007	bone deterioration disease	'disease has location' some 'bone element'
 DOID:0080010	bone structure disease	'has phenotype' some 'Abnormal bone structure'
 DOID:0080020	Jansen's metaphyseal chondrodysplasia	'has material basis in' some 'autosomal dominant inheritance'|'has phenotype' some 'Disproportionate short-limb short stature'
@@ -2115,7 +2182,7 @@ DOID:0080450	developmental and epileptic encephalopathy 17	'has material basis i
 DOID:0080451	developmental and epileptic encephalopathy 29	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080452	developmental and epileptic encephalopathy 28	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080453	developmental and epileptic encephalopathy 25	'disease has feature' some 'intellectual disability'|'has material basis in' some 'autosomal recessive inheritance'
-DOID:0080454	developmental and epileptic encephalopathy 42	'has material basis in' some 'autosomal dominant inheritance'
+DOID:0080454	developmental and epileptic encephalopathy 42A	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080455	developmental and epileptic encephalopathy 52	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080456	developmental and epileptic encephalopathy 46	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080457	microcephaly, seizures, and developmental delay	'has material basis in' some 'autosomal recessive inheritance'
@@ -2134,6 +2201,7 @@ DOID:0080471	developmental and epileptic encephalopathy 92	'has material basis i
 DOID:0080472	developmental and epileptic encephalopathy 91	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080473	developmental delay and seizures with or without movement abnormalities	'has material basis in' some 'autosomal dominant inheritance'|'has phenotype' some 'Neurodevelopmental delay'
 DOID:0080489	GM1 gangliosidosis type 3	'has material basis in' some 'autosomal recessive inheritance'
+DOID:0080491	cerebral cavernous malformation 1	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080493	ovarian dysgenesis 1	'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080494	ovarian dysgenesis 2	'has material basis in' some 'X-linked inheritance'
 DOID:0080495	ovarian dysgenesis 3	'has material basis in' some 'autosomal recessive inheritance'
@@ -2377,7 +2445,7 @@ DOID:0080934	immunoglobulin heavy chain amyloidosis	'disease has location' some 
 DOID:0080936	serum amyloid A amyloidosis	'disease has location' some kidney|'disease has location' some liver|'disease has location' some spleen
 DOID:0080937	wild-type amyloidosis	'disease has location' some heart
 DOID:0080938	nonobstructive coronary artery disease	'disease has feature' some 'coronary stenosis'|'has symptom' some 'neck pain'|'has symptom' some 'severe chest pain'|'has symptom' some 'shoulder pain'|'has symptom' some pain
-DOID:0080939	hereditary angioedema type I	'has material basis in' some 'autosomal dominant inheritance'|'has material basis in' some 'autosomal recessive inheritance'
+DOID:0080939	hereditary angioedema 1	'has material basis in' some 'autosomal dominant inheritance'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0080943	46,XX sex reversal 5	'disease has basis in' some gene|'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080944	familial Behcet-like autoinflammatory syndrome	'has material basis in' some 'autosomal dominant inheritance'
 DOID:0080946	retinal dystrophy with leukodystrophy	'has material basis in' some 'autosomal recessive inheritance'
@@ -4132,7 +4200,7 @@ DOID:0112127	HRPT-related hyperuricemia	'has material basis in' some 'X-linked r
 DOID:0112128	X-linked severe congenital neutropenia	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'X-linked recessive inheritance'
 DOID:0112129	severe congenital neutropenia 7	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0112130	autosomal dominant severe congenital neutropenia	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal dominant inheritance'
-DOID:0112131	severe congenital neutropenia 2	'disease has basis in' some 'Abnormality of prenatal development or birth'
+DOID:0112131	severe congenital neutropenia 2	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal dominant inheritance'
 DOID:0112132	severe congenital neutropenia 5	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0112133	severe congenital neutropenia 3	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal recessive inheritance'
 DOID:0112134	severe congenital neutropenia 6	'disease has basis in' some 'Abnormality of prenatal development or birth'|'has material basis in' some 'autosomal recessive inheritance'
@@ -4692,7 +4760,7 @@ DOID:13146	esophageal candidiasis	'disease has location' some esophagus|'has sym
 DOID:13147	fungal esophagitis	'has material basis in' some Fungi
 DOID:13159	scrotum squamous cell carcinoma	'derives from' some 'squamous epithelial cell'
 DOID:13160	scrotum melanoma	'derives from' some melanocyte|'disease has location' some scrotum
-DOID:13166	allergic bronchopulmonary aspergillosis	'disease has location' some 'respiratory tract'|'has material basis in' some 'Aspergillus <genus>'|'has symptom' some 'allergic reaction'|'has symptom' some cough|'has symptom' some fever|'has symptom' some wheezing
+DOID:13166	allergic bronchopulmonary aspergillosis	'disease has location' some 'respiratory tract'|'has material basis in' some Aspergillus|'has symptom' some 'allergic reaction'|'has symptom' some cough|'has symptom' some fever|'has symptom' some wheezing
 DOID:13238	Haverhill fever	'has material basis in' some 'Streptobacillus moniliformis'|'has symptom' some 'joint pain'|'has symptom' some chills|'has symptom' some fever|'has symptom' some rash|'transmitted by' some 'contact transmission'
 DOID:13241	Behcet's disease	'has phenotype' some 'Abnormal circulating immunoglobulin concentration'|'has symptom' some inflammation
 DOID:13254	diverticulitis of colon	'has symptom' some inflammation
@@ -4740,8 +4808,8 @@ DOID:13544	low tension glaucoma	'disease has feature' some 'ocular hypertension'
 DOID:13549	interval angle-closure glaucoma	'disease has feature' some 'ocular hypertension'|'has symptom' some 'acute pain'|'has symptom' some 'bloodshot eye'|'has symptom' some headache
 DOID:1355	paranasal sinus lymphoma	'has material basis in' some lymphocyte
 DOID:13550	angle-closure glaucoma	'disease has feature' some 'ocular hypertension'|'has symptom' some 'bloodshot eye'|'has symptom' some 'loss of vision'
-DOID:13564	aspergillosis	'has allergic trigger' some 'Aspergillus <genus>'|'has major susceptibility factor' some 'susceptibility to aspergillosis'|'has material basis in' some 'Aspergillus <genus>'
-DOID:13565	neuroaspergillosis	'disease has location' some 'nervous system'|'has material basis in' some 'Aspergillus <genus>'
+DOID:13564	aspergillosis	'has allergic trigger' some Aspergillus|'has major susceptibility factor' some 'susceptibility to aspergillosis'|'has material basis in' some Aspergillus
+DOID:13565	neuroaspergillosis	'disease has location' some 'nervous system'|'has material basis in' some Aspergillus
 DOID:13566	tibial collateral ligament bursitis	'disease has location' some knee
 DOID:13579	kwashiorkor	'has symptom' some 'swelling symptom'|'has symptom' some anasarca|'has symptom' some cough|'has symptom' some dehydration|'has symptom' some edema
 DOID:1362	paranasal sinus sarcoma	'derives from' some 'mesodermal cell'
@@ -5739,6 +5807,7 @@ DOID:6457	Cowden syndrome	'disease has feature' some hamartoma
 DOID:6459	rectal lipoma	('derives from' some adipocyte) and ('disease has location' some rectum)
 DOID:6460	large intestine lipoma	'derives from' some adipocyte|'disease has location' some 'large intestine'
 DOID:6474	childhood teratocarcinoma of the testis	'existence starts during' some 'Childhood onset'
+DOID:648	kuru	'has major susceptibility factor' some 'susceptibility to kuru'
 DOID:6483	rete testis adenoma	'disease has location' some 'rete testis'|('derives from' some 'epithelial cell') and (has_origin some gland)
 DOID:6494	childhood myxoid chondrosarcoma	'existence starts during' some 'Childhood onset'
 DOID:65	connective tissue disease	'has symptom' some inflammation
@@ -5892,7 +5961,7 @@ DOID:7656	adult infiltrating astrocytic neoplasm	'existence starts during' some 
 DOID:7678	sphenoid sinus inverted papilloma	'derives from' some 'epithelial cell'|'derives from' some mucosa
 DOID:7684	maxillary sinus adenocarcinoma	'derives from' some ('epithelial cell' and (has_origin some gland))|'disease has location' some 'maxillary sinus'
 DOID:7689	leptomeninges sarcoma	'derives from' some 'mesodermal cell'|'disease has location' some leptomeninx
-DOID:769	neuroblastoma	'existence starts during' some 'Childhood onset'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 2'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 4'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 5'|'has major susceptibility factor' some 'susceptibility to neuroblastoma'
+DOID:769	neuroblastoma	'existence starts during' some 'Childhood onset'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 2'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 3'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 4'|'has major susceptibility factor' some 'susceptibility to neuroblastoma 5'|'has major susceptibility factor' some 'susceptibility to neuroblastoma'
 DOID:7694	bladder urachal adenocarcinoma	'disease has location' some urachus
 DOID:77	gastrointestinal system disease	'has symptom' some ascites
 DOID:7731	childhood malignant hemangiopericytoma	'existence starts during' some 'Childhood onset'

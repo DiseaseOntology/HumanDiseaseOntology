@@ -466,6 +466,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_648 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_648"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_769 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_769"/>
@@ -559,6 +565,7 @@
     <!-- http://purl.obolibrary.org/obo/MIM_000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_000000">
+        <oboInOwl:id>MIM:000000</oboInOwl:id>
         <rdfs:label>omim_susceptibility</rdfs:label>
     </owl:Class>
     
@@ -831,7 +838,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id>MIM:166760</oboInOwl:id>
-        <rdfs:label xml:lang="en">susceptibility to otitis media</rdfs:label>
+        <rdfs:label>susceptibility to otitis media</rdfs:label>
     </owl:Class>
     
 
@@ -1000,6 +1007,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_245300">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_648"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:id>MIM:245300</oboInOwl:id>
         <rdfs:label>susceptibility to kuru</rdfs:label>
     </owl:Class>
@@ -1610,6 +1623,22 @@
         </rdfs:subClassOf>
         <oboInOwl:id>MIM:605990</oboInOwl:id>
         <rdfs:label>susceptibility to uric acid nephrolithiasis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MIM_606215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_606215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0050651"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:id>MIM:606215</oboInOwl:id>
+        <rdfs:label>susceptibility to atrioventricular septal defect 1</rdfs:label>
     </owl:Class>
     
 
@@ -2573,6 +2602,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_14330"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oboInOwl:id>MIM:610297</oboInOwl:id>
         <rdfs:label>susceptibility to autosomal dominant parkinson disease 13</rdfs:label>
     </owl:Class>
     
@@ -3686,6 +3716,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_613014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_769"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:id>MIM:613014</oboInOwl:id>
         <rdfs:label>susceptibility to neuroblastoma 3</rdfs:label>
     </owl:Class>
@@ -4538,7 +4574,7 @@
     <!-- http://purl.obolibrary.org/obo/MIM_615848 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_615848">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <oboInOwl:id>MIM:615848</oboInOwl:id>
         <rdfs:label>obsolete susceptibility to cutaneous malignant melanoma 10</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -4719,7 +4755,7 @@
     <!-- http://purl.obolibrary.org/obo/MIM_618307 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_618307">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <oboInOwl:id>MIM:618307</oboInOwl:id>
         <rdfs:label>obsolete susceptibility to epidermodysplasia verruciformis 4</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -4729,7 +4765,7 @@
     <!-- http://purl.obolibrary.org/obo/MIM_618309 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM_618309">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
+        <oboInOwl:id>MIM:618309</oboInOwl:id>
         <rdfs:label>obsolete susceptibility to epidermodysplasia verruciformis 5</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -4876,22 +4912,6 @@
         </rdfs:subClassOf>
         <oboInOwl:id>MIM:621588</oboInOwl:id>
         <rdfs:label>susceptibility to epidermodysplasia verruciformis 6</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/MIM:606215 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MIM:606215">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MIM_000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003304"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0050651"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <oboInOwl:id>MIM:606215</oboInOwl:id>
-        <rdfs:label>susceptibility to atrioventricular septal defect 1</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

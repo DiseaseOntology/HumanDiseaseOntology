@@ -6,12 +6,15 @@ SHELL := bash
 .DELETE_ON_ERROR:
 .SUFFIXES:
 
-# Get functions from src/util/functions.mk
 SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
-include $(SELF_DIR)/../../util/functions.mk
+SRC_DIR := $(SELF_DIR)/../../
+ROOT_DIR := $(SRC_DIR)/..
+
+# Get functions from src/util/functions.mk
+include $(SRC_DIR)/util/functions.mk
 
 OBO = http://purl.obolibrary.org/obo/
-ROBOT := java -Xmx10G -jar ../../../build/robot.jar
+ROBOT := java -Xmx10G -jar $(ROOT_DIR)/build/robot.jar
 
 # Import update options (each can be executed here or from the src/ontology/imports dir)
 # PRIMARY COMMANDS
@@ -279,7 +282,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt \
 	 --select annotation-properties \
 	 --term-file annotations.txt \
 	query \
-	 --update ../../sparql/build/remove_non_en_labels.ru \
+	 --update $(SRC_DIR)/sparql/build/remove_non_en_labels.ru \
 	$(call annotate_import,$@,$(word 2,$|))
 
 geno: geno_import.owl
@@ -316,9 +319,9 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
 	remove \
 	 --term-file $(word 3,$^) \
 	query \
-	 --update ../../sparql/build/remove_def_annotations.ru \
-	 --update ../../sparql/build/remove_phenotype_defs.ru \
-	 --update ../../sparql/build/remove_non_en_labels.ru \
+	 --update $(SRC_DIR)/sparql/build/remove_def_annotations.ru \
+	 --update $(SRC_DIR)/sparql/build/remove_phenotype_defs.ru \
+	 --update $(SRC_DIR)/sparql/build/remove_non_en_labels.ru \
 	remove \
 	 --select complement \
 	 --select annotation-properties \

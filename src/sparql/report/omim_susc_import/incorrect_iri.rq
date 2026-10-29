@@ -1,0 +1,16 @@
+# identifies IRIs in omim_susc_import.owl that are not in the expected format
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+  # VALUES ?property { "" }
+	?entity a owl:Class .
+	FILTER (!CONTAINS(str(?entity), "DOID"))
+	FILTER (!isBlank(?entity))
+  FILTER (!REGEX(str(?entity), CONCAT(str(obo:), "MIM_[0-9]{6}")))
+
+  BIND(IRI("obo:iri-string") AS ?property)
+  BIND(str(?entity) AS ?value)
+}

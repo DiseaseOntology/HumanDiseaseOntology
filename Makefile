@@ -450,10 +450,11 @@ $(OPT_FIX): opt_fix_%: $(EDIT) src/sparql/update/opt_fix_%.ru | \
 
 
 ##########################################
-## BUILDING IMPORTS
+## IMPORTS
 ##########################################
 
-# Import update options (each can be executed here or from the src/ontology/imports dir):
+# Import options (each can be executed here or from the src/ontology/imports dir):
+# 0. `make test_omim_susc` - Run QC tests on omim_susc_import.owl.
 # 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
 # 2. `make refresh_imports` - Make all imports from newly downloaded source files.
 # 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
@@ -462,6 +463,27 @@ $(OPT_FIX): opt_fix_%: $(EDIT) src/sparql/update/opt_fix_%.ru | \
 IMPS := chebi cl disdriv eco foodon geno hp ncbitaxon ro so symp trans uberon
 # define imports updated manually, solely for versioning
 MANUAL_IMPS := omim_susc
+
+# ----------------------------------------
+# VALIDATION
+# ----------------------------------------
+
+.PHONY: test_omim_susc
+test_omim_susc: build/reports/report-omim_susc.tsv
+
+.PRECIOUS: build/reports/report-omim_susc.tsv
+build/reports/report-omim_susc.tsv: src/ontology/imports/omim_susc_import.owl \
+  src/sparql/report/omim_susc_import/report_profile.txt | build/reports
+	@echo -e "\n## omim_susc_import QC report\nFull report at $@"
+	@$(ROBOT) report \
+	 --input $< \
+	 --profile $(word 2,$^) \
+	 --labels true \
+	 --output $@
+
+# ----------------------------------------
+# BUILD
+# ----------------------------------------
 
 imports: | check_robot
 	@echo "Checking import modules..."

@@ -442,3 +442,12 @@ build/so_variant.owl: build/so.owl
 
 build/uberon_rm_label.txt: uberon_terms.txt | build
 	@sed -nE 's/^[^U]*(UBERON:[0-9]+).*@REPLACE/\1/p' $< > $@
+
+
+##########################################
+## IMPORT VALIDATION
+##########################################
+
+.PHONY: test_omim_susc
+test_omim_susc:
+	@$(MAKE) -C $(ROOT_DIR) test_omim_susc

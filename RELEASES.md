@@ -16,11 +16,34 @@
 
 ## 2026 Releases
 
+### [v2026-10-29](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-10-29)
+
+This release of the Human Disease Ontology includes 12,419 disease classes, 10,149 with textual definitions (81.7%). Translation files include 11,812 labels, 11,456 synonyms, and 6,567 definitions in Spanish.
+
+### Summary of changes _(see also `term-changes-v2026-10-29.tsv`)_
+
+Newly added diseases include aplasia cutis-enamel dysplasia syndrome, arterial tortuosity-bone fragility syndrome, auroneurodental syndrome, autoinflammation with arthritis and vasculitis, autoinflammation with episodic fever and immune dysregulation, brain malformation renal syndrome, bronchiectasis and nasal polyposis, 'camptodactyly, impaired intellectual development, and facial dysmorphism syndrome', 'childhood-onset neurodegeneration with movement disorders, cognitive decline, and brain abnormalities', 'congenital myelofibrosis with anemia, neutropenia, developmental delay, and ocular abnormalities', and vascular-type bleeding disorder.
+
+Diseases with added subtypes include 46,XY sex reversal, atrial hypertrophic cardiomyopathy, autosomal recessive dilated cardiomyopathy, muscular dystrophy-dystroglycanopathy (limb-girdle), oocyte/zygote/embryo maturation arrest, Diamond-Blackfan anemia, autosomal recessive cutis laxa, autosomal recessive intellectual developmental disorder, cataract, combined oxidative phosphorylation deficiency, and dilated cardiomopathy.
+
+Revised diseases include Bernard-Soulier syndrome, Kufor-Rakeb syndrome, autosomal recessive congenital ichthyosis subtypes, and 'neurodevelopmental disorder with hypotonia, impaired language, and dysmorphic features'.
+
+Revised and expanded diseases include Aicardi-Goutieres syndrome, Parkinson's disease subtypes, atrioventricular septal defect, cerebral cavernous malformation subtypes, distal arthrogryposis, familial atrial fibrillation, hereditary angioedema subtypes, hypertrophic cardiomyopathy subtypes, severe congenital neutropenia subtypes, and developmental and epileptic encephalopathy 42.
+
+**Full Changelog**: https://github.com/DiseaseOntology/HumanDiseaseOntology/compare/v2026-09-30...v2026-10-29
+
+|  | OWL | OBO | JSON |
+| --- | --- | --- | --- |
+| Disease Ontology | [doid.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid.owl) | [doid.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid.obo) | [doid.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid.json) |
+| Human DO | [HumanDO.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/HumanDO.owl) | [HumanDO.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/HumanDO.obo) | |
+| DO Non-Classified | [doid-non-classified.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid-non-classified.owl) | [doid-non-classified.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid-non-classified.obo) | [doid-non-classified.json](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid-non-classified.json) |
+| DO Merged | [doid-merged.owl](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid-merged.owl) | [doid-merged.obo](https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/v2026-10-29/src/ontology/doid-merged.obo) | |
+
 ### [v2026-09-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/v2026-09-30)
 
 This release of the Human Disease Ontology includes 12,335 disease classes, 10,065 with textual definitions (81.6%). Translation files include 11,813 labels, 11,456 synonyms, and 6,567 definitions in Spanish.
 
-Disease groups revised and/or expanded include Adams-Oliver syndrome, blood platelet diseases (including platelet-type bleeding disorders and Glanzmann thrombasthenias), autosomal recessive dyskeratosis congenita, Charcot-Marie-tooth disease subtypes, and Joubert syndrome subtypes. 
+Disease groups revised and/or expanded include Adams-Oliver syndrome, blood platelet diseases (including platelet-type bleeding disorders and Glanzmann thrombasthenias), autosomal recessive dyskeratosis congenita, Charcot-Marie-tooth disease subtypes, and Joubert syndrome subtypes.
 
 Additional diseases added include:
 - clear cell odontogenic carcinoma

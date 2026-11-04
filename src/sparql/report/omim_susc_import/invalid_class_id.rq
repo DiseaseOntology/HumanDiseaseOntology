@@ -1,0 +1,24 @@
+# identifies IDs in omim_susc_import.owl that 1) do not match the class URI,
+# 2) are not in the expected format, or 3) are missing
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { oboInOwl:id }
+	?entity a owl:Class .
+	FILTER (!CONTAINS(str(?entity), "DOID"))
+	FILTER (!isBlank(?entity))
+
+  OPTIONAL { ?entity ?property ?value }
+
+	# capture & compare entity/id numbers
+	BIND(REPLACE(str(?entity), ".*[:_]", "MIM:") AS ?lui)
+
+	FILTER (
+		?value != ?iri_id ||
+		!REGEX(?value, "^MIM:[0-9]{6}$") ||
+		NOT EXISTS { ?entity ?property ?value }
+	)
+}

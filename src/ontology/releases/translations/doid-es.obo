@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: doid/releases/2026-09-30/translations/doid-es.obo
-date: 30:09:2026 11:46
+data-version: doid/releases/2026-10-29/translations/doid-es.obo
+date: 29:10:2026 18:44
 saved-by: lschriml
 subsetdef: DO_AGR_slim "DO_AGR_slim"
 subsetdef: DO_cancer_slim "DO_cancer_slim"
@@ -33,7 +33,7 @@ property_value: dc:language "en" xsd:string
 property_value: dc:language "es" xsd:string
 property_value: dc:title "Human Disease Ontology" xsd:string
 property_value: IAO:0000700 DOID:4
-property_value: owl:versionInfo "2026-09-30" xsd:string
+property_value: owl:versionInfo "2026-10-29" xsd:string
 property_value: terms:license https://creativecommons.org/publicdomain/zero/1.0/
 
 [Term]
@@ -6018,15 +6018,9 @@ subset: DO_rare_slim
 synonym: "encefalitis de Cree" EXACT []
 xref: GARD:575
 xref: ICD10CM:G31.8
-xref: MIM:225750
-xref: MIM:610181
-xref: MIM:610329
-xref: MIM:610333
-xref: MIM:612952
-xref: MIM:615010
-xref: MIM:615846
 xref: MIM:PS225750
 xref: ORDO:51
+xref: UMLS_CUI:C0393591
 is_a: DOID:0050739 ! enfermedad genética autosómica
 is_a: DOID:225 ! síndrome
 
@@ -6237,6 +6231,7 @@ xref: GARD:786
 xref: MIM:PS108120
 xref: ORDO:1147
 xref: ORDO:97120
+xref: UMLS_CUI:C0265213
 is_a: DOID:66 ! enfermedad del tejido muscular
 
 [Term]
@@ -6283,21 +6278,6 @@ name: fibrilación auricular familiar
 def: "Una fibrilación auricular que tiene_como_base la herencia autosómica dominante de los genes de la fibrilación auricular familiar (ATFB)." [url:http\://en.wikipedia.org/wiki/Familial_atrial_fibrillation]
 subset: DO_rare_slim
 xref: GARD:9740
-xref: MIM:607554
-xref: MIM:608583
-xref: MIM:608988
-xref: MIM:611493
-xref: MIM:611494
-xref: MIM:612201
-xref: MIM:612240
-xref: MIM:613055
-xref: MIM:613980
-xref: MIM:614022
-xref: MIM:614049
-xref: MIM:614050
-xref: MIM:615377
-xref: MIM:615378
-xref: MIM:615770
 xref: MIM:PS608583
 xref: ORDO:334
 is_a: DOID:0060224 ! fibrilación auricular
@@ -6314,8 +6294,7 @@ xref: ICD10CM:Q21.2
 xref: ICD9CM:745.6
 xref: MESH:D004694
 xref: MIM:606215
-xref: MIM:614430
-xref: MIM:614474
+xref: MIM:PS606215
 xref: ORDO:98722
 xref: SNOMEDCT_US_2025_09_01:204322008
 xref: UMLS_CUI:C0014116
@@ -10568,9 +10547,10 @@ is_a: DOID:898 ! enfermedad renal poliquística autosómica dominante
 
 [Term]
 id: DOID:0051082
-name: Parkinson's disease 27
+name: GBA1-related Parkinson's disease
 def: "A Parkinson's disease that has_material_basis_in mutation in the GBA1 gene on chromosome 1q22." [url:https\://pmc.ncbi.nlm.nih.gov/articles/PMC11241486/]
 is_a: DOID:14330 ! enfermedad de Parkinson
+property_value: skos:broadMatch "MIM:168600" xsd:string
 
 [Term]
 id: DOID:0051083
@@ -14883,7 +14863,7 @@ creation_date: 2015-09-17T16:36:59Z
 [Term]
 id: DOID:0060367
 name: enfermedad de Parkinson 1
-def: "A late onset Parkinson's disease that has_material_basis_in mutation in the alpha-synuclein gene on chromosome 4q22.1." [url:http\://www.omim.org/entry/168601, url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
+def: "A late onset Parkinson's disease that has_material_basis_in mutation in the SNCA gene, which encodes alpha-synuclein, on chromosome 4q22.1." [url:http\://www.omim.org/entry/168601, url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
 subset: DO_rare_slim
 synonym: "enfermedad de Parkinson autosómica dominante 1" EXACT []
 xref: MIM:168601
@@ -14894,12 +14874,13 @@ creation_date: 2015-09-17T16:48:14Z
 [Term]
 id: DOID:0060368
 name: enfermedad de Parkinson 2
-def: "An early-onset Parkinson's disease that has_material_basis_in mutation in the parkin gene on chromosome 6q25.2-q27." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
+def: "An early-onset Parkinson's disease that has_material_basis_in mutation in the PRKN gene, which encodes parkin RBR E3 ubiquitin protein ligase, on chromosome 6q25.2-q27." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
 subset: DO_rare_slim
 synonym: "enfermedad de Parkinson juvenil autosómica recesiva 2" EXACT []
 xref: MIM:600116
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0060894 ! enfermedad de Parkinson de inicio precoz
+is_a: DOID:0070844 ! mitochondrial Parkinson's disease
 creation_date: 2015-09-17T16:56:33Z
 
 [Term]
@@ -14911,6 +14892,7 @@ synonym: "enfermedad de Parkinson de inicio temprano autosómica recesiva 6" EXA
 xref: MIM:605909
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0060894 ! enfermedad de Parkinson de inicio precoz
+is_a: DOID:0070844 ! mitochondrial Parkinson's disease
 is_a: DOID:0080578 ! enfermedad digénica
 creation_date: 2015-09-17T17:00:11Z
 
@@ -14928,7 +14910,7 @@ creation_date: 2015-09-17T17:04:57Z
 [Term]
 id: DOID:0060371
 name: enfermedad de Parkinson 8
-def: "A late onset Parkinson's disease that has_material_basis_in heterozygous mutation in the dardarin encoding gene on chromosome 12q12." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
+def: "A late onset Parkinson's disease that has_material_basis_in heterozygous mutation in the LRRK2 gene, which encodes leucine rich repeat kinase 2 (dardarin), on chromosome 12q12." [url:https\://www.ncbi.nlm.nih.gov/pubmed/22315721]
 subset: DO_rare_slim
 synonym: "enfermedad de Parkinson autosómica dominante 8" EXACT []
 xref: MIM:607060
@@ -17902,6 +17884,7 @@ subset: DO_rare_slim
 xref: ICD10CM:Q28.3
 xref: MIM:603284
 xref: ORDO:221061
+is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0060669 ! malformación cavernosa cerebral
 
 [Term]
@@ -17912,6 +17895,7 @@ subset: DO_rare_slim
 xref: ICD10CM:Q28.3
 xref: MIM:603285
 xref: ORDO:221061
+is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0060669 ! malformación cavernosa cerebral
 
 [Term]
@@ -18382,7 +18366,8 @@ def: "An autosomal recessive congenital ichthyosis characterized by fine whitish
 subset: DO_rare_slim
 xref: ICD10CM:Q80.2
 xref: MIM:615022
-is_a: DOID:0060655 ! ictiosis congénita autosómica recesiva
+is_obsolete: true
+replaced_by: DOID:0080257
 
 [Term]
 id: DOID:0060717
@@ -21131,10 +21116,10 @@ is_a: DOID:0060879 ! hipomagnesemia primaria
 [Term]
 id: DOID:0060973
 name: síndrome de WHIM 2
-def: "An immunodeficiency disease that is characterized by chronic neutropenia and myelokathexis, which is impaired neutrophil mobilization from the bone marrow and that has_material_basis_in homozygous mutation in the CXCR2 gene on chromosome 2q35." [url:https\://pubmed.ncbi.nlm.nih.gov/24777453/]
+def: "A severe congenital neutropenia that is characterized by early-childhood onset of recurrent oral, skin, and respiratory infections associated with peripheral neutropenia that has_material_basis_in homozygous or compound heterozygous mutation in the CXCR2 gene on chromosome 2q35." [url:https\://pubmed.ncbi.nlm.nih.gov/24777453/, url:https\://pubmed.ncbi.nlm.nih.gov/34854278/, url:https\://pubmed.ncbi.nlm.nih.gov/40874343/]
 xref: MIM:619407
+is_a: DOID:0050590 ! neutropenia congénita grave
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
-is_a: DOID:612 ! enfermedad de inmunodeficiencia primaria
 
 [Term]
 id: DOID:0060974
@@ -22147,9 +22132,11 @@ is_a: DOID:612 ! enfermedad de inmunodeficiencia primaria
 [Term]
 id: DOID:0061102
 name: miocardiopatía hipertrófica 27
-def: "A familial hypertrophic cardiomyopathy characterized by biventricular involvement and atypical distribution of hypertrophy that has_material_basis_in homozygous or compound heterozygous mutation in the ALPK3 gene on chromosome 15q25." [url:https\://pubmed.ncbi.nlm.nih.gov/26846950/]
+def: "A familial hypertrophic cardiomyopathy characterized by biventricular involvement and atypical distribution of hypertrophy that has_material_basis_in homozygous or compound heterozygous mutation in the ALPK3 gene on chromosome 15q25.3." [url:https\://pubmed.ncbi.nlm.nih.gov/26846950/]
+xref: MIM:618052
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0080326 ! Miocardiopatía hipertrófica familiar
+property_value: skos:exactMatch "MIM:618052" xsd:string
 
 [Term]
 id: DOID:0061103
@@ -22773,7 +22760,7 @@ is_a: DOID:0111910 ! fallo espermatogénico
 [Term]
 id: DOID:0061178
 name: nistagmo congénito autosómico recesivo 8
-def: "A congenital nystagmus that has_material_basis_in mutation in the FRMD7 gene on chromosome Xq26.2." [url:https\://pubmed.ncbi.nlm.nih.gov/35348658/]
+def: "An autosomal recessive congenital nystagmus characterized by the presence of bilateral horizontal nystagmus in the absence of other neurologic signs or symptoms and that has_material_basis_in homozygous mutation in the ROBO1 gene on chromosome 3p12.3." [url:https\://pubmed.ncbi.nlm.nih.gov/35348658/]
 xref: MIM:257400
 is_a: DOID:0111797 ! nistagmo congénito autosómico recesivo
 
@@ -23038,7 +23025,7 @@ is_a: DOID:9269 ! enfermedad de la orina con olor a jarabe de arce
 [Term]
 id: DOID:0061208
 name: epidermolytic hyperkeratosis 2B
-def: "An epidermolytic hyperkeratosis that is characterized by generalized erythema, erosions, scaling, and easily breaking blisters that become less frequent later in life, while hyperkeratosis increases that has_material_basis_in homozygous mutation in the KRT10 geneon chromosome 17q21." [url:https\://pubmed.ncbi.nlm.nih.gov/19474805/]
+def: "An epidermolytic hyperkeratosis that is characterized by generalized erythema, erosions, scaling, and easily breaking blisters that become less frequent later in life, while hyperkeratosis increases that has_material_basis_in homozygous mutation in the KRT10 gene on chromosome 17q21." [url:https\://pubmed.ncbi.nlm.nih.gov/19474805/]
 xref: MIM:620707
 is_a: DOID:0050737 ! enfermedad autosómica recesiva
 is_a: DOID:0081359 ! hiperqueratosis epidermolítica 2
@@ -24182,6 +24169,13 @@ is_a: DOID:0050777 ! síndrome de Joubert
 property_value: skos:narrowMatch "ORDO:475" xsd:string
 
 [Term]
+id: DOID:0061339
+name: oocyte/zygote/embryo maturation arrest 28
+def: "An oocyte/zygote/embryo maturation arrest that is characterized by female infertility due to oocyte maturation defects, including oocyte arrest at metaphase I, fertilization failure, and early embryonic arrest and that has_material_basis_in homozygous or compound heterozygous mutation in the CDC23 gene on chromosome 5q31.2." [url:https\://pubmed.ncbi.nlm.nih.gov/37768355/, url:https\://pubmed.ncbi.nlm.nih.gov/40238067/]
+xref: MIM:621730
+is_a: DOID:0061302 ! oocyte/zygote/embryo maturation arrest
+
+[Term]
 id: DOID:0061340
 name: Joubert syndrome 37
 def: "A Joubert syndrome that is characterized by a distinctive hindbrain malformation affecting the midbrain and cerebellum, recognizable as the 'molar tooth sign' on brain imaging and that has_material_basis_in homozygous or compound heterozygous mutation in the TOGARAM1 gene on chromosome 14q21.2." [url:https\://pubmed.ncbi.nlm.nih.gov/32453716/]
@@ -24264,6 +24258,606 @@ subset: DO_rare_slim
 xref: MIM:616589
 is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0060227 ! síndrome de Adams-Oliver
+
+[Term]
+id: DOID:0061349
+name: severe congenital neutropenia 9
+def: "An autosomal dominant severe congenital neutropenia characterized by onset of neutropenia in the first years of life and that has_material_basis_in heterozygous mutation in the CLPB gene on chromosome 11q13.4." [url:https\://pubmed.ncbi.nlm.nih.gov/34115842/]
+xref: GARD:9558
+xref: MIM:619813
+xref: UMLS_CUI:C4749612
+is_a: DOID:0112130 ! neutropenia congénita grave autosómica dominante
+property_value: skos:narrowMatch "ORDO:486" xsd:string
+
+[Term]
+id: DOID:0061350
+name: severe congenital neutropenia 11
+def: "An autosomal dominant severe congenital neutropenia characterized by the onset of recurrent infections, mainly bacterial, in early childhood and that has_material_basis_in heterozygous mutation in the SEC61A1 gene on chromosome 3q21.3." [url:https\://pubmed.ncbi.nlm.nih.gov/32325141/]
+xref: MIM:620674
+is_a: DOID:0112130 ! neutropenia congénita grave autosómica dominante
+
+[Term]
+id: DOID:0061351
+name: severe congenital neutropenia 10
+def: "A severe congenital neutropenia characterized by infantile onset of neutropenia, which may be associated with bacterial infections, including skin abscesses and that has_material_basis_in compound heterozygous mutation in the SRP68 gene on chromosome 17q25.1." [url:https\://omim.org/entry/620534#1]
+xref: MIM:620534
+is_a: DOID:0050590 ! neutropenia congénita grave
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061352
+name: severe congenital neutropenia 12
+def: "A severe congenital neutropenia characterized by the onset of recurrent severe infections in the first month of life and that has_material_basis_in homozygous mutation in the COPZ1 gene on chromosome 12q13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/39642330/]
+xref: MIM:621439
+is_a: DOID:0050590 ! neutropenia congénita grave
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061353
+name: autosomal recessive intellectual developmental disorder 78
+def: "An autosomal recessive intellectual developmental disorder that is characterized by impaired intellectual development that is usually mild, but shows variable severity and that has_material_basis_in homozygous or compound heterozygous mutation in the WDR11 gene on chromosome 10q26.12." [url:https\://pubmed.ncbi.nlm.nih.gov/34413497/]
+xref: MIM:620237
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061354
+name: severe congenital neutropenia 14
+def: "A severe congenital neutropenia characterized by recurrent febrile infections beginning in infancy or early childhood and associated with neutropenia and that has_material_basis_in homozygous mutation in the CSF3 gene on chromosome 17q21.1." [url:https\://pubmed.ncbi.nlm.nih.gov/37612131/]
+xref: MIM:621729
+is_a: DOID:0050590 ! neutropenia congénita grave
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061355
+name: Aicardi-Goutieres syndrome 1
+def: "A Aicardi-Goutieres syndrome that has_material_basis_in homozygous, compound heterozygous, or heterozygous mutation in the TREX1 gene on chromosome 3p21.31." [url:https\://pubmed.ncbi.nlm.nih.gov/15908569/]
+subset: DO_rare_slim
+xref: MIM:225750
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061356
+name: Aicardi-Goutieres syndrome 2
+def: "A Aicardi-Goutieres syndrome characterized by calcification of the basal ganglia, chronic cerebrospinal fluid lymphocytosis, and negative serologic investigations for common prenatal infections and that has_material_basis_in homozygous or compound heterozygous mutation in the gene encoding subunit B of ribonuclease H2, RNASEH2B, on chromosome 13q14.3." [url:https\://pubmed.ncbi.nlm.nih.gov/16845400/]
+subset: DO_rare_slim
+xref: MIM:610181
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061357
+name: Aicardi-Goutieres syndrome 3
+def: "A Aicardi-Goutieres syndrome characterized by onset of encephalopathy in the first year of life following normal early development and that has_material_basis_in homozygous mutation in the gene encoding subunit C of ribonuclease H2, RNASEH2C, on chromosome 11q13.1." [url:https\://pubmed.ncbi.nlm.nih.gov/23322642/]
+subset: DO_rare_slim
+xref: MIM:610329
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061358
+name: Aicardi-Goutieres syndrome 4
+def: "A Aicardi-Goutieres syndrome characterized by progressive microcephaly, spasticity, dystonic posturing, and profound psychomotor retardation and that has_material_basis_in homozygous or compound heterozygous mutation in the gene encoding subunit A of ribonuclease H2, RNASEH2A, on chromosome 19p13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/16845400/]
+subset: DO_rare_slim
+xref: MIM:610333
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061359
+name: Aicardi-Goutieres syndrome 5
+def: "A Aicardi-Goutieres syndrome characterized by infantile-onset encephalopathy and intracranial calcifications, cerebrospinal fluid (CSF) lymphocytosis or chilblains, and negative investigations for common prenatal infections and that has_material_basis_in homozygous or compound heterozygous mutation in the SAMHD1 gene on chromosome 20q11.23." [url:https\://pubmed.ncbi.nlm.nih.gov/21102625/]
+subset: DO_rare_slim
+xref: MIM:612952
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061360
+name: Aicardi-Goutieres syndrome 6
+def: "A Aicardi-Goutieres syndrome that has_material_basis_in homozygous or compound heterozygous mutation in the ADAR gene on chromosome 1q21.3." [url:https\://pubmed.ncbi.nlm.nih.gov/24262145/]
+subset: DO_rare_slim
+xref: MIM:615010
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061361
+name: Aicardi-Goutieres syndrome 7
+def: "A Aicardi-Goutieres syndrome characterized by severe neurologic impairment and that has_material_basis_in heterozygous gain-of-function mutation in the IFIH1 gene on chromosome 2q24.2." [url:https\://pubmed.ncbi.nlm.nih.gov/24686847/]
+subset: DO_rare_slim
+xref: MIM:615846
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061362
+name: Aicardi-Goutieres syndrome 8
+def: "A Aicardi-Goutieres syndrome characterized by severe developmental delay and progressive neurologic deterioration ending in premature death and that has_material_basis_in homozygous or compound heterozygous mutation in the LSM11 gene on chromosome 5q33.3." [url:https\://pubmed.ncbi.nlm.nih.gov/33230297/]
+subset: DO_rare_slim
+xref: MIM:619486
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061363
+name: Aicardi-Goutieres syndrome 9
+def: "A Aicardi-Goutieres syndrome characterized by  severe developmental delay and progressive neurologic deterioration and that has_material_basis_in compound heterozygous mutation in the RNU7-1 gene on chromosome 12p13.31." [url:https\://pubmed.ncbi.nlm.nih.gov/33230297/]
+subset: DO_rare_slim
+xref: MIM:619487
+is_a: DOID:0050629 ! síndrome de Aicardi-Goutieres
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061364
+name: distal arthrogryposis type 11
+def: "A distal arthrogryposis characterized by camptodactyly and that has_material_basis_in heterozygous mutation in the MET gene on chromosome 7q31.2." [url:https\://pubmed.ncbi.nlm.nih.gov/30777867/]
+subset: DO_rare_slim
+xref: MIM:620019
+is_a: DOID:0050646 ! artrogriposis distal
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061365
+name: distal arthrogryposis type 12
+def: "A distal arthrogryposis characterized bycongenital contractures, primarily affecting the small joints of the fingers and toes and that has_material_basis_in homozygous mutation in the ADAMTS15 gene on chromosome 11q24.3." [url:https\://pubmed.ncbi.nlm.nih.gov/35962790/]
+subset: DO_rare_slim
+xref: MIM:620545
+is_a: DOID:0050646 ! artrogriposis distal
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+
+[Term]
+id: DOID:0061366
+name: cataract 49
+def: "A cataract characterized by congenital cataract located in the posterior region of the lens and that has_material_basis_in heterozygous mutation in the PANK4 gene on chromosome 1p36.32." [url:https\://pubmed.ncbi.nlm.nih.gov/30585370/]
+xref: MIM:619593
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:83 ! cataratas
+
+[Term]
+id: DOID:0061367
+name: cataract 50 with or without glaucoma
+def: "A cataract characterized by pediatric or early-onset cataract, with more than half of affected individuals exhibiting high-tension glaucoma and that has_material_basis_in heterozygous mutation in the TRPM3 gene on chromosome 9q21.12-q21.13." [url:https\://pubmed.ncbi.nlm.nih.gov/25090642/]
+xref: MIM:620253
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:83 ! cataratas
+
+[Term]
+id: DOID:0061368
+name: autosomal recessive intellectual developmental disorder 79
+def: "An autosomal recessive intellectual developmental disorder that is characterized by global developmental delay apparent from infancy and that has_material_basis_in compound heterozygous mutation in the TPR gene on chromosome 1q31.1." [url:https\://pubmed.ncbi.nlm.nih.gov/34494102/]
+xref: MIM:620393
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061369
+name: 46,XY sex reversal 11
+def: "A 46 XY sex reversal characterized by a genital phenotype that may range from predominantly female to predominantly male, including marked sex ambiguity depending on the duration of normal testicular function prior to the loss of testicular tissue and that has_material_basis_in heterozygous mutation in the DHX37 gene on chromosome 12q24.31." [url:https\://pubmed.ncbi.nlm.nih.gov/31287541/, url:https\://pubmed.ncbi.nlm.nih.gov/31337883/]
+xref: MIM:273250
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:14448 ! 46,XY disgenesia gonadal completa
+
+[Term]
+id: DOID:0061370
+name: familial atrial fibrillation 1
+def: "A familial atrial fibrillation that has_material_basis_in variation in the chromosome region 10q22-q24." [url:https\://pubmed.ncbi.nlm.nih.gov/9070470/]
+subset: DO_rare_slim
+xref: MIM:608583
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061371
+name: familial atrial fibrillation 2
+def: "A familial atrial fibrillation that has_material_basis_in variation in the chromosome region 6q14-q16." [url:https\://pubmed.ncbi.nlm.nih.gov/12782570/]
+subset: DO_rare_slim
+xref: MIM:608988
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061372
+name: familial atrial fibrillation 3
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the KCNQ1 gene on chromosome 11p15.5-p15.4." [url:https\://pubmed.ncbi.nlm.nih.gov/12522251/]
+subset: DO_rare_slim
+xref: MIM:607554
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061373
+name: familial atrial fibrillation 4
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the KCNE2 gene on chromosome 21q22.11." [url:https\://pubmed.ncbi.nlm.nih.gov/15368194/]
+subset: DO_rare_slim
+xref: MIM:611493
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061374
+name: familial atrial fibrillation 5
+def: "A familial atrial fibrillation that has_material_basis_in variation in the chromosome region 4q25." [url:https\://pubmed.ncbi.nlm.nih.gov/17603472/]
+subset: DO_rare_slim
+xref: MIM:611494
+is_a: DOID:0050650 ! fibrilación auricular familiar
+
+[Term]
+id: DOID:0061375
+name: familial atrial fibrillation 6
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the NPPA gene on chromosome 1p36.22." [url:https\://pubmed.ncbi.nlm.nih.gov/18614783/]
+subset: DO_rare_slim
+xref: MIM:612201
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061376
+name: familial atrial fibrillation 7
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the KCNA5 gene on chromosome 12p13.32." [url:https\://pubmed.ncbi.nlm.nih.gov/16772329/]
+subset: DO_rare_slim
+xref: MIM:612240
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061377
+name: familial atrial fibrillation 9
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the KCNJ2 gene on chromosome 17q24.3." [url:https\://pubmed.ncbi.nlm.nih.gov/15922306/]
+subset: DO_rare_slim
+xref: MIM:613980
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061378
+name: familial atrial fibrillation 10
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the SCN5A gene on chromosome 3p22.2." [url:https\://pubmed.ncbi.nlm.nih.gov/16684018/]
+subset: DO_rare_slim
+xref: MIM:614022
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061379
+name: familial atrial fibrillation 11
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the GJA5 gene on chromosome 1q21.2." [url:https\://pubmed.ncbi.nlm.nih.gov/16790700/]
+subset: DO_rare_slim
+xref: MIM:614049
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061380
+name: familial atrial fibrillation 12
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the ABCC9 gene on chromosome 12p12.1." [url:https\://pubmed.ncbi.nlm.nih.gov/17245405/]
+subset: DO_rare_slim
+xref: MIM:614050
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061381
+name: familial atrial fibrillation 13
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the SCN1B gene on chromosome 19q13.11." [url:https\://pubmed.ncbi.nlm.nih.gov/19808477/]
+subset: DO_rare_slim
+xref: MIM:615377
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061382
+name: familial atrial fibrillation 14
+def: "A familial atrial fibrillation that has_material_basis_in heterozygous mutation in the SCN2B gene on chromosome 11q23.3." [url:https\://pubmed.ncbi.nlm.nih.gov/19808477/]
+subset: DO_rare_slim
+xref: MIM:615378
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061383
+name: familial atrial fibrillation 15
+def: "A familial atrial fibrillation that has_material_basis_in homozygous mutation in the NUP155 gene on chromosome 5p13.2." [url:https\://pubmed.ncbi.nlm.nih.gov/15596564/]
+subset: DO_rare_slim
+xref: MIM:615770
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061384
+name: familial atrial fibrillation 18
+def: "A familial atrial fibrillation that has_material_basis_in mutation in the MYL4 gene on chromosome 17q21.32." [url:https\://pubmed.ncbi.nlm.nih.gov/27066836/]
+subset: DO_rare_slim
+xref: MIM:617280
+is_a: DOID:0050650 ! fibrilación auricular familiar
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+
+[Term]
+id: DOID:0061385
+name: autosomal recessive intellectual developmental disorder 80 with variant lissencephaly
+def: "An autosomal recessive intellectual developmental disorder that is characterized by  global developmental delay with mildly to moderately impaired intellectual development and behavioral abnormalities and that has_material_basis_in homozygous or compound heterozygous mutation in the CASP2 gene on chromosome 7q34." [url:https\://pubmed.ncbi.nlm.nih.gov/37880421/]
+xref: MIM:620653
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061386
+name: autosomal recessive intellectual developmental disorder 81
+def: "An autosomal recessive intellectual developmental disorder that is characterized by a variable neurobehavioral and neuromuscular phenotype and that has_material_basis_in homozygous or compound heterozygous mutation in the ASCC3 gene on chromosome 6q16.3." [url:https\://pubmed.ncbi.nlm.nih.gov/35047834/]
+xref: MIM:620700
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061387
+name: autosomal recessive intellectual developmental disorder 84
+def: "An autosomal recessive intellectual developmental disorder that is characterized by developmental delay, short stature, and dysmorphic facial features and that has_material_basis_in homozygous mutation in the SGSM3 gene on chromosome 22q13.1." [url:https\://pubmed.ncbi.nlm.nih.gov/37833060/]
+xref: MIM:620401
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061388
+name: autosomal recessive intellectual developmental disorder 85
+def: "An autosomal recessive intellectual developmental disorder that is characterized by global developmental delay, learning disabilities, mild to severe intellectual disability, autism, epilepsy, and hypotonia and that has_material_basis_in homozygous or compound heterozygous mutation in the PRMT9 gene on chromosome 4q31.23." [url:https\://pubmed.ncbi.nlm.nih.gov/41260215/]
+xref: MIM:621649
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061389
+name: autosomal recessive intellectual developmental disorder 86
+def: "An autosomal recessive intellectual developmental disorder that is characterized by heterogeneous neurodevelopmental phenotypes, including global developmental delay, intellectual disability, autistic features, seizures, hypotonia, feeding difficulty, dysmorphic craniofacial features and that has_material_basis_in homozygous or compound heterozygous mutation in the DMAP1 gene on chromosome 1p34.1." [url:https\://pubmed.ncbi.nlm.nih.gov/42275155/]
+xref: MIM:621738
+is_a: DOID:0060308 ! trastorno autosómico recesivo del desarrollo intelectual
+
+[Term]
+id: DOID:0061390
+name: hereditary angioedema 4
+def: "A hereditary angioedema that is characterized by pisodic subcutaneous or submucosal edema with onset usually in adulthood and that has_material_basis_in heterozygous mutation in the PLG gene on chromosome 6q26." [url:https\://pubmed.ncbi.nlm.nih.gov/33799813/]
+xref: MIM:619360
+is_a: DOID:14735 ! Angioedema hereditario
+
+[Term]
+id: DOID:0061391
+name: hereditary angioedema 5
+def: "A hereditary angioedema that is characterized by localized and self-limiting edema of the subcutaneous or submucosal tissue due to an episodic increase in vascular permeability and that has_material_basis_in heterozygous mutation in the ANGPT1 gene on chromosome 8q23.1." [url:https\://pubmed.ncbi.nlm.nih.gov/28601681/]
+xref: MIM:619361
+is_a: DOID:14735 ! Angioedema hereditario
+
+[Term]
+id: DOID:0061392
+name: hereditary angioedema 6
+def: "A hereditary angioedema that is characterized by  onset of episodic subcutaneous and submucosal swelling in adulthood and that has_material_basis_in heterozygous mutation in the KNG1 gene on chromosome 3q27.3." [url:https\://pubmed.ncbi.nlm.nih.gov/31087670/]
+xref: MIM:619363
+is_a: DOID:14735 ! Angioedema hereditario
+
+[Term]
+id: DOID:0061393
+name: hereditary angioedema 7
+def: "A hereditary angioedema that is characterized by onset of recurrent episodic swelling of the face, lips, and oral mucosa in the second decade and that has_material_basis_in heterozygous mutation in the MYOF gene on chromosome 10q24.33." [url:https\://pubmed.ncbi.nlm.nih.gov/32542751/]
+xref: MIM:619366
+is_a: DOID:14735 ! Angioedema hereditario
+
+[Term]
+id: DOID:0061394
+name: hereditary angioedema 8
+def: "A hereditary angioedema that is characterized by recurrent and self-limited episodes of localized edema in various organs, including the face, tongue, larynx, and extremities and that has_material_basis_in heterozygous mutation in the HS3ST6 gene on chromosome 16p13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/33508266/]
+xref: MIM:619367
+is_a: DOID:14735 ! Angioedema hereditario
+
+[Term]
+id: DOID:0061395
+name: cerebral cavernous malformation 4
+def: "A cerebral cavernous malformation that has_material_basis_in somatic mutation in the PIK3CA gene on chromosome 3q26.32." [url:https\://pubmed.ncbi.nlm.nih.gov/34496175/]
+subset: DO_rare_slim
+xref: MIM:619538
+is_a: DOID:0060669 ! malformación cavernosa cerebral
+
+[Term]
+id: DOID:0061396
+name: cerebral cavernous malformation 5
+def: "A cerebral cavernous malformation that has_material_basis_in somatic mutation in the MAP3K3 gene on chromosome 17q23.3." [url:https\://pubmed.ncbi.nlm.nih.gov/36995941/]
+subset: DO_rare_slim
+xref: MIM:621032
+is_a: DOID:0060669 ! malformación cavernosa cerebral
+
+[Term]
+id: DOID:0061397
+name: atrioventricular septal defect 4
+def: "An atrioventricular septal defect that has_material_basis_in heterozygous mutation in the GATA4 gene on chromosome 8p23.1." [url:https\://pubmed.ncbi.nlm.nih.gov/17643447/]
+subset: DO_rare_slim
+xref: MIM:614430
+is_a: DOID:0050651 ! defecto del tabique auriculoventricular
+
+[Term]
+id: DOID:0061398
+name: atrioventricular septal defect 5
+def: "An atrioventricular septal defect that has_material_basis_in heterozygous mutation in the GATA6 gene on chromosome 18q11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/20581743/]
+subset: DO_rare_slim
+xref: MIM:614474
+is_a: DOID:0050651 ! defecto del tabique auriculoventricular
+
+[Term]
+id: DOID:0061399
+name: combined oxidative phosphorylation deficiency 58
+def: "A combined oxidative phosphorylation deficiency characterized by a wide range of clinical presentations including neonatal lactic acidosis, epileptic encephalopathy, developmental delay and impaired intellectual development with nonspecific changes on brain MRI, or mitochondrial myopathy with a treatable neuromuscular transmission defect and that has_material_basis_in homozygous or compound heterozygous mutation in the TEFM gene on chromosome 17q11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/36823193/]
+subset: DO_rare_slim
+xref: MIM:620451
+xref: ORDO:590
+xref: ORDO:716917
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060286 ! deficiencia combinada de fosforilación oxidativa
+property_value: skos:exactMatch "MIM:620451" xsd:string
+
+[Term]
+id: DOID:0061400
+name: combined oxidative phosphorylation deficiency 59
+def: "A combined oxidative phosphorylation deficiency that has_material_basis_in homozygous or compound heterozygous mutation in the MRPL39 gene on chromosome 21q21.3." [url:https\://pubmed.ncbi.nlm.nih.gov/37133451/]
+subset: DO_rare_slim
+xref: MIM:620646
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060286 ! deficiencia combinada de fosforilación oxidativa
+property_value: skos:exactMatch "MIM:620646" xsd:string
+
+[Term]
+id: DOID:0061401
+name: hypertrophic cardiomyopathy 31
+def: "A familial hypertrophic cardiomyopathy characterized by moderate to severe hypertrophy, high incidence of ventricular arrhythmias, extensive fibrosis, and frequent left ventricular dysfunction that has_material_basis_in homozygous or compound heterozygous mutation in the TRIM63 gene  on chromosome 1p36.11." [url:https\://pubmed.ncbi.nlm.nih.gov/32451364/]
+xref: MIM:621270
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0080326 ! Miocardiopatía hipertrófica familiar
+property_value: skos:exactMatch "MIM:621270" xsd:string
+
+[Term]
+id: DOID:0061402
+name: hypertrophic cardiomyopathy 29 with polyglucosan bodies
+def: "A familial hypertrophic cardiomyopathy characterized by recurrent syncope, dyspnea on exertion, and palpitationsthat has_material_basis_in homozygous mutation in the KLHL24 gene on chromosome 3q27.1." [url:https\://pubmed.ncbi.nlm.nih.gov/30715372/]
+xref: MIM:620236
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0080326 ! Miocardiopatía hipertrófica familiar
+property_value: skos:exactMatch "MIM:620236" xsd:string
+
+[Term]
+id: DOID:0061403
+name: atrial hypertrophic cardiomyopathy 30
+def: "A familial hypertrophic cardiomyopathy characterized by atrial arrhythmias, including flutter and fibrillation, atrial structural abnormalities with hypertrophic cardiomyopathy and fibrosis, and hypertension and that has_material_basis_in homozygous mutation in the CORIN gene on chromosome 4p12." [url:https\://pubmed.ncbi.nlm.nih.gov/37913506/]
+xref: MIM:620734
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0080326 ! Miocardiopatía hipertrófica familiar
+property_value: skos:exactMatch "MIM:620734" xsd:string
+
+[Term]
+id: DOID:0061404
+name: combined oxidative phosphorylation deficiency 60
+def: "A combined oxidative phosphorylation deficiency characterized by a complex variable mitochondrial phenotype with sensorineural hearing loss, primary ovarian insufficiency, leukodystrophy, retinopathy, and impaired intellectual development and that has_material_basis_in homozygous or compound heterozygous mutation in the MRPL49 gene on chromosome 11q13.1." [url:https\://pubmed.ncbi.nlm.nih.gov/40043708/]
+subset: DO_rare_slim
+xref: MIM:621195
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060286 ! deficiencia combinada de fosforilación oxidativa
+property_value: skos:exactMatch "MIM:621195" xsd:string
+
+[Term]
+id: DOID:0061405
+name: hypertrophic cardiomyopathy 28
+def: "A familial hypertrophic cardiomyopathy characterized by  asymmetric septal hypertrophy, atrial fibrillation and nonsustained ventricular tachycardia, and risk of sudden death and that has_material_basis_in  heterozygous mutation in the FHOD3 gene on chromosome 18q12.2." [url:https\://pubmed.ncbi.nlm.nih.gov/30442288/]
+xref: MIM:619402
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0080326 ! Miocardiopatía hipertrófica familiar
+property_value: skos:exactMatch "MIM:619402" xsd:string
+
+[Term]
+id: DOID:0061406
+name: autosomal recessive cutis laxa type IIE
+def: "A cutis laxa characterized by connective tissue features, including generalized cutis laxa and inguinal hernia, craniofacial dysmorphology, variable mild heart defects, and prominent skeletal features, including craniosynostosis, short stature, brachydactyly, clinodactyly, and syndactyly and that has_material_basis_in homozygous mutation in the LTBP1 gene on chromosome 2p22.3." [url:https\://pubmed.ncbi.nlm.nih.gov/33991472/]
+subset: DO_rare_slim
+xref: MIM:619451
+is_a: DOID:0070141 ! cutis laxa autosómica recesiva tipo II tipo clásico
+property_value: skos:exactMatch "MIM:619451" xsd:string
+
+[Term]
+id: DOID:0061407
+name: autosomal recessive cutis laxa type ID
+def: "A cutis laxa characterized by facial dysmorphism, joint hypermobility, muscle hypotonia, and multiple severe herniations, including inguinal, ventral, diaphragmatic, sciatic, and obturator, as well as large diverticula of the gastrointestinal tract and urinary bladder that has_material_basis_in homozygous or compound heterozygous mutation in the EFEMP1 gene on chromosome 2p16.1." [url:https\://pubmed.ncbi.nlm.nih.gov/22489068/, url:https\://pubmed.ncbi.nlm.nih.gov/31792352/, url:https\://pubmed.ncbi.nlm.nih.gov/32006683/, url:https\://pubmed.ncbi.nlm.nih.gov/33807164/]
+subset: DO_rare_slim
+xref: MIM:620780
+is_a: DOID:0070144 ! cutis laxa autosómica recesiva tipo I
+property_value: skos:exactMatch "MIM:620780" xsd:string
+
+[Term]
+id: DOID:0061408
+name: muscular dystrophy-dystroglycanopathy (limb-girdle) 15 type C
+def: "A muscular dystrophy-dystroglycanopathy characterized by progressive proximal muscle weakness, manifest initially as unsteady gait, but later including more distal muscles, and dilated cardiomyopathy that has_material_basis_in homozygous mutation in the DPM3 gene on chromosome 1q22." [url:https\://pubmed.ncbi.nlm.nih.gov/31266720/]
+xref: MIM:612937
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0112374 ! distrofia muscular-distroglicanopatía
+property_value: skos:exactMatch "MIM:612937" xsd:string
+
+[Term]
+id: DOID:0061409
+name: Diamond-Blackfan anemia 21
+def: "A Diamond-Blackfan anemia that has_material_basis_in homozygous or compound heterozygous mutations in the HEATR3 gene on chromosome 16q12.1." [url:https\://pubmed.ncbi.nlm.nih.gov/35213692/]
+xref: MIM:620072
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:1339 ! anemia de Diamond-Blackfan
+property_value: skos:exactMatch "MIM:620072" xsd:string
+
+[Term]
+id: DOID:0061410
+name: Diamond-Blackfan anemia 22
+def: "A Diamond-Blackfan anemia characterized by erythroid maturation failure and skeletal developmental defects that has_material_basis_in heterozygous mutation in the RPL17 gene, which encodes ribosomal protein L17, on chromosome 18q21.1." [url:https\://pubmed.ncbi.nlm.nih.gov/39088281/]
+xref: MIM:621262
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:1339 ! anemia de Diamond-Blackfan
+property_value: skos:exactMatch "MIM:621262" xsd:string
+
+[Term]
+id: DOID:0061411
+name: dilated cardiomyopathy 2H
+def: "A dilated cardiomyopathy characterized by rapidly progressive dilated cardiomyopathy and death in early infancy that has_material_basis_in compound heterozygous mutation in the GET3 gene on chromosome 19p13.13." [url:https\://pubmed.ncbi.nlm.nih.gov/31461301/]
+xref: MIM:620203
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:620203" xsd:string
+
+[Term]
+id: DOID:0061412
+name: dilated cardiomyopathy 1OO
+def: "A dilated cardiomyopathy characterized by enlarged left ventricular end-diastolic diameter and reduced left ventricular ejection fraction, resulting in cardiac failure that may result in premature death and that has_material_basis_in heterozygous mutation in the VEZF1 gene on chromosome 17q22." [url:https\://pubmed.ncbi.nlm.nih.gov/36657711/]
+xref: MIM:620247
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:620247" xsd:string
+
+[Term]
+id: DOID:0061413
+name: dilated cardiomyopathy 2I
+def: "A dilated cardiomyopathy characterized by characterized by early-onset severe congestive heart failure that has_material_basis_in homozygous mutation in the CAP2 gene on chromosome 6p22.3." [url:https\://pubmed.ncbi.nlm.nih.gov/30518548/, url:https\://pubmed.ncbi.nlm.nih.gov/33083013/, url:https\://pubmed.ncbi.nlm.nih.gov/34862840/]
+xref: MIM:620462
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:620462" xsd:string
+
+[Term]
+id: DOID:0061414
+name: dilated cardiomyopathy 2J
+def: "A dilated cardiomyopathy characterized by onset of heart failure within the first year of life, with severely reduced left ventricular ejection fractions that has_material_basis_in homozygous or compound heterozygous mutation in the FLII gene on chromosome 17p11.2." [url:https\://pubmed.ncbi.nlm.nih.gov/37561591/]
+xref: MIM:620635
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:620635" xsd:string
+
+[Term]
+id: DOID:0061415
+name: dilated cardiomyopathy 2K
+def: "A dilated cardiomyopathy characterized by predominantly left ventricular involvement, although patients with biventricular disease have been observed that has_material_basis_in homozygous or compound heterozygous mutation within the GRINL1A complex transcription unit on chromosome 15q21.3, affecting the MYZAP and or GCOM1 genes." [url:https\://pubmed.ncbi.nlm.nih.gov/34899865/, url:https\://pubmed.ncbi.nlm.nih.gov/35840178/, url:https\://pubmed.ncbi.nlm.nih.gov/38436102/]
+xref: MIM:620894
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:620894" xsd:string
+
+[Term]
+id: DOID:0061416
+name: dilated cardiomyopathy 2L
+def: "A dilated cardiomyopathy that has_material_basis_in homozygous or compound heterozygous mutation in the LDB3 gene on chromosome 10q23.2." [url:https\://pubmed.ncbi.nlm.nih.gov/36253531/]
+xref: MIM:621237
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:621237" xsd:string
+
+[Term]
+id: DOID:0061417
+name: autosomal recessive dilated cardiomyopathy 2M
+def: "A dilated cardiomyopathy that has_material_basis_in homozygous or compound heterozygous mutation in the NEXN gene on chromosome 1p31.1." [url:https\://pubmed.ncbi.nlm.nih.gov/35166435/, url:https\://pubmed.ncbi.nlm.nih.gov/39183344/]
+xref: MIM:621261
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:621261" xsd:string
+
+[Term]
+id: DOID:0061418
+name: dilated cardiomopathy 2N
+def: "A dilated cardiomyopathy characterized by a variable age of onset and reduced penetrance that has_material_basis_in homozygous or compound heterozygous mutation in the NRAP gene on chromosome 10q25.3." [url:https\://pubmed.ncbi.nlm.nih.gov/33534821/, url:https\://pubmed.ncbi.nlm.nih.gov/41033658/]
+xref: MIM:621595
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:12930 ! Miocardiopatía dilatada
+property_value: skos:exactMatch "MIM:621595" xsd:string
 
 [Term]
 id: DOID:0070000
@@ -24892,11 +25486,21 @@ is_a: DOID:0060307 ! trastorno del desarrollo intelectual autosómico dominante
 [Term]
 id: DOID:0070070
 name: trastorno autosómico dominante del desarrollo intelectual 40
-def: "Un trastorno autosómico dominante del desarrollo intelectual que tiene_como_base una mutación de novo heterocigota autosómica dominante en el gen CHAMP1 del cromosoma 13q34." [url:https\://www.ncbi.nlm.nih.gov/pubmed/25533962]
+def: "Un trastorno autosómico dominante del desarrollo intelectual que tiene_como_base una mutación de novo heterocigota autosómica dominante en el gen CHAMP1 del cromosoma 13q34." [url:https\://pubmed.ncbi.nlm.nih.gov/26340335/, url:https\://pubmed.ncbi.nlm.nih.gov/26751395/, url:https\://pubmed.ncbi.nlm.nih.gov/35271727, url:https\://pubmed.ncbi.nlm.nih.gov/41111978, url:https\://pubmed.ncbi.nlm.nih.gov/42125344/]
 synonym: "discapacidad intelectual no sindrómica autosómica dominante 40" EXACT []
 synonym: "retraso mental autosómico dominante 40" EXACT []
+xref: GARD:0013539
 xref: MIM:616579
+xref: ORDO:692193
+xref: SNOMEDCT_US_2026_03_01:1396399001
+xref: UMLS_CUI:C5676894
+xref: UMLS_CUI:C6012363
 is_a: DOID:0060307 ! trastorno del desarrollo intelectual autosómico dominante
+property_value: skos:closeMatch "UMLS_CUI:C6012363" xsd:string
+property_value: skos:exactMatch "GARD:0013539" xsd:string
+property_value: skos:exactMatch "MIM:616579" xsd:string
+property_value: skos:exactMatch "ORDO:692193" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5676894" xsd:string
 
 [Term]
 id: DOID:0070071
@@ -33273,6 +33877,185 @@ property_value: skos:exactMatch "MIM:621488" xsd:string
 property_value: skos:exactMatch "UMLS_CUI:C6065956" xsd:string
 
 [Term]
+id: DOID:0070841
+name: Parkinson's disease 27
+def: "An early-onset Parkinson's disease with onset between the first and fifth decade of life, particularly during late adolescence or the third decade, that has_material_basis_in homozygous or compound heterozygous mutations in the PSMF1 gene on chromosome 20p13." [url:https\://pubmed.ncbi.nlm.nih.gov/41986367/]
+subset: DO_rare_slim
+xref: MIM:621693
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0060894 ! enfermedad de Parkinson de inicio precoz
+property_value: skos:exactMatch "MIM:621693" xsd:string
+
+[Term]
+id: DOID:0070842
+name: developmental and epileptic encephalopathy 42B
+def: "A developmental and epileptic encephalopathy characterized by neonatal hypotonia, early-onset refractory seizures, optic atrophy, blindness, and profoundly impaired neurodevelopment that has_material_basis_in homozygous or compound heterozygous mutation in the CACNA1A gene on chromosome 19p13." [url:https\://pubmed.ncbi.nlm.nih.gov/27250579/, url:https\://pubmed.ncbi.nlm.nih.gov/34267336/]
+xref: MIM:621692
+is_a: DOID:0112202 ! encefalopatía epiléptica y del desarrollo
+property_value: skos:exactMatch "MIM:621692" xsd:string
+
+[Term]
+id: DOID:0070843
+name: aplasia cutis-enamel dysplasia syndrome
+def: "A syndrome characterized by localized scalp aplasia, dental enamel anomalies, and a relatively mild neurodevelopmental disorder that has_material_basis_in heterozygous mutation in the FOSL2 gene on chromosome 2p23." [url:https\://pubmed.ncbi.nlm.nih.gov/36197437/]
+subset: DO_rare_slim
+xref: GARD:0028322
+xref: MIM:620789
+xref: ORDO:697356
+xref: UMLS_CUI:C5935608
+xref: UMLS_CUI:C6012284
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:225 ! síndrome
+property_value: skos:closeMatch "UMLS_CUI:C6012284" xsd:string
+property_value: skos:exactMatch "GARD:0028322" xsd:string
+property_value: skos:exactMatch "MIM:620789" xsd:string
+property_value: skos:exactMatch "ORDO:697356" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5935608" xsd:string
+
+[Term]
+id: DOID:0070844
+name: mitochondrial Parkinson's disease
+def: "A Parkinson's disease that is largely attributable to mitochondrial dysfunction." [url:https\://pubmed.ncbi.nlm.nih.gov/41992946/, url:https\://pubmed.ncbi.nlm.nih.gov/42076824/]
+xref: MESH:C564015
+xref: MIM:556500
+xref: UMLS_CUI:C1838867
+is_a: DOID:14330 ! enfermedad de Parkinson
+property_value: skos:exactMatch "MESH:C564015" xsd:string
+property_value: skos:exactMatch "MIM:556500" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C1838867" xsd:string
+
+[Term]
+id: DOID:0070845
+name: arterial tortuosity-bone fragility syndrome
+def: "A syndrome characterized by congenital severe tortuosity of the aorta and its side branches, including the carotid, pulmonary, and subclavian arteries, and prenatal and neonatal fractures that has_material_basis_in homozygous or compound heterozygous mutation in the EMILIN1 gene on chromosome 2p23." [url:https\://pubmed.ncbi.nlm.nih.gov/36351433/]
+subset: DO_rare_slim
+xref: GARD:0028086
+xref: MIM:620908
+xref: UMLS_CUI:C5935641
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0080001 ! enfermedad ósea
+is_a: DOID:225 ! síndrome
+property_value: skos:exactMatch "GARD:0028086" xsd:string
+property_value: skos:exactMatch "MIM:620908" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5935641" xsd:string
+
+[Term]
+id: DOID:0070846
+name: auroneurodental syndrome
+def: "A syndrome characterized by progressive high-frequency sensorineural hearing loss, mild proximal and axial muscle weakness, and dental anomalies that has_material_basis_in homozygous mutation in the NAA80 gene on chromosome 3p21." [url:https\://pubmed.ncbi.nlm.nih.gov/34805998/]
+subset: DO_rare_slim
+xref: MIM:620830
+xref: UMLS_CUI:C5889721
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:1091 ! enfermedad dental
+is_a: DOID:225 ! síndrome
+property_value: skos:exactMatch "MIM:620830" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5889721" xsd:string
+
+[Term]
+id: DOID:0070847
+name: autoinflammation with arthritis and vasculitis
+def: "An autoinflammatory disease characterized by onset in infancy or early childhood of recurrent fever, erythematous skin rashes, vasculitis, oral aphthous lesions, and polyarthritis that has_material_basis_in homozygous mutation in the TBK1 gene on chromosome 12q14." [url:https\://pubmed.ncbi.nlm.nih.gov/34363755/]
+subset: DO_rare_slim
+xref: GARD:0026460
+xref: MIM:620880
+xref: UMLS_CUI:C5935634
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:0051000 ! enfermedad autoinflamatoria
+property_value: skos:exactMatch "GARD:0026460" xsd:string
+property_value: skos:exactMatch "MIM:620880" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5935634" xsd:string
+
+[Term]
+id: DOID:0070848
+name: autoinflammation with episodic fever and immune dysregulation
+def: "A primary immunodeficiency disease characterized by onset in infancy or early childhood of recurrent fever and autoinflammation affecting various organ systems with high variability that has_material_basis_in homozygous mutation in the SHARPIN gene on chromosome 8q24." [url:https\://pubmed.ncbi.nlm.nih.gov/38609546/]
+subset: DO_rare_slim
+xref: GARD:0027236
+xref: MIM:620795
+xref: UMLS_CUI:C5935613
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:612 ! enfermedad de inmunodeficiencia primaria
+property_value: skos:exactMatch "GARD:0027236" xsd:string
+property_value: skos:exactMatch "MIM:620795" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5935613" xsd:string
+
+[Term]
+id: DOID:0070849
+name: vascular-type bleeding disorder
+def: "A blood coagulation disease characterized by spontaneous episodic bleeding usually beginning in childhood, including epistaxis, oral cavity bleeding, menorrhagia, and excessive bleeding during surgery or childbirth, without platelet dysfunction that has_material_basis_in heterozygous mutation in the APOLD1 gene on chromosome 12p13." [url:https\://pubmed.ncbi.nlm.nih.gov/35638551/]
+subset: DO_rare_slim
+xref: MIM:620715
+xref: UMLS_CUI:C5935577
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:1247 ! enfermedad de la coagulación sanguínea
+property_value: skos:exactMatch "MIM:620715" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5935577" xsd:string
+
+[Term]
+id: DOID:0070850
+name: brain malformation renal syndrome
+def: "A syndrome characterized by brain abnormalities, Dandy-Walker malformation, and renal dysplasia that has_material_basis_in homozygous mutation in the EXOC3L2 gene on chromosome 19q13." [url:https\://pubmed.ncbi.nlm.nih.gov/30327448/]
+subset: DO_rare_slim
+xref: MIM:620943
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:225 ! síndrome
+is_a: DOID:557 ! enfermedad renal
+is_a: DOID:936 ! enfermedad cerebral
+property_value: skos:exactMatch "MIM:620943" xsd:string
+
+[Term]
+id: DOID:0070851
+name: bronchiectasis and nasal polyposis
+def: "A respiratory system disease characterized by bronchiectasis, chronic infection of the airways, pronounced chronic rhinosinusitis, and nasal polyposis that has_material_basis_in homozygous or compound heterozygous mutation in the WFDC2 gene on chromosome 20q13." [url:https\://pubmed.ncbi.nlm.nih.gov/38626355/]
+subset: DO_rare_slim
+xref: MIM:620984
+xref: UMLS_CUI:C5975469
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:1579 ! enfermedad del sistema respiratorio
+property_value: skos:exactMatch "MIM:620984" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975469" xsd:string
+
+[Term]
+id: DOID:0070852
+name: camptodactyly, impaired intellectual development, and facial dysmorphism syndrome
+def: "A syndromic intellectual disability characterized by camptodactyly and/or contractures, impaired intellectual development, facial dysmorphism, and postnatal growth restriction that has_material_basis_in heterozygous mutation in the FBRSL1 gene on chromosome 12q24." [url:https\://pubmed.ncbi.nlm.nih.gov/41232796/]
+subset: DO_rare_slim
+xref: MIM:621722
+is_a: DOID:0050736 ! enfermedad autosómica dominante
+is_a: DOID:0050888 ! discapacidad intelectual sindrómica
+property_value: skos:exactMatch "MIM:621722" xsd:string
+
+[Term]
+id: DOID:0070853
+name: childhood-onset neurodegeneration with movement disorders, cognitive decline, and brain abnormalities
+def: "A syndrome characterized by movement disorders encompassing parkinsonism, moderate to severe pyramidal tract signs, ataxia, or a combination thereof, most often in the context of neurodevelopmental delay and associated with mild to moderate intellectual disability, epilepsy, and cognitive decline that has_material_basis_in homozygous or compound heterozygous mutations in the PSMF1 gene on chromosome 20p13." [url:https\://pubmed.ncbi.nlm.nih.gov/41986367/]
+subset: DO_rare_slim
+xref: MIM:621694
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:225 ! síndrome
+is_a: DOID:936 ! enfermedad cerebral
+property_value: skos:exactMatch "MIM:621694" xsd:string
+
+[Term]
+id: DOID:0070854
+name: congenital myelofibrosis with anemia, neutropenia, developmental delay, and ocular abnormalities
+def: "A syndrome characterized by hematologic abnormalities apparent in infancy including neutropenia, anemia, and variable thrombocytopenia; myelofibrosis; severe neurodevelopmental delay with absent speech and inability to walk; delayed bone age; ocular abnormalities; and dysmorphic facial features that has_material_basis_in homozygous mutation in the RBSN gene on chromosome 3p25." [url:https\://pubmed.ncbi.nlm.nih.gov/29784638/]
+subset: DO_rare_slim
+xref: GARD:0027196
+xref: MIM:620939
+xref: ORDO:675775
+xref: UMLS_CUI:C5925096
+xref: UMLS_CUI:C5975380
+is_a: DOID:0050737 ! enfermedad autosómica recesiva
+is_a: DOID:225 ! síndrome
+property_value: skos:closeMatch "UMLS_CUI:C5925096" xsd:string
+property_value: skos:exactMatch "GARD:0027196" xsd:string
+property_value: skos:exactMatch "MIM:620939" xsd:string
+property_value: skos:exactMatch "ORDO:675775" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C5975380" xsd:string
+
+[Term]
 id: DOID:0080000
 name: enfermedad muscular
 def: "Enfermedad del sistema musculoesquelético que afecta a los músculos." [url:http\://www.nlm.nih.gov/medlineplus/muscledisorders.html]
@@ -35714,7 +36497,10 @@ is_a: DOID:0050857 ! síndrome de Perrault
 [Term]
 id: DOID:0080257
 name: ictiosis congénita autosómica recesiva 13
-def: "An autosomal recessive congenital ichthyosis that is characterized by lamellar ichthyosis, ectropion, eclabium and hyperkeratosis that has_material_basis_in homozygous mutation in the SDR9C7 gene on chromosome 12q13." [url:https\://pubmed.ncbi.nlm.nih.gov/28369735/]
+alt_id: DOID:0060716
+def: "An autosomal recessive congenital ichthyosis that is characterized by abnormal skin scaling over the whole body and that has_material_basis_in  homozygous mutation in the SDR9C7 gene on chromosome 12q13.3." [url:https\://pubmed.ncbi.nlm.nih.gov/20643494/, url:https\://pubmed.ncbi.nlm.nih.gov/28369735/]
+subset: DO_rare_slim
+xref: ICD10CM:Q80.2
 xref: MIM:617574
 is_a: DOID:0060655 ! ictiosis congénita autosómica recesiva
 
@@ -37410,8 +38196,13 @@ name: encefalopatía epiléptica y del desarrollo 42
 def: "Encefalopatía epiléptica y del desarrollo caracterizada por la aparición de convulsiones en las primeras horas o días de vida y retraso global del desarrollo con grave deterioro del desarrollo intelectual que presenta una mutación heterocigota en el gen CACNA1A del cromosoma 19p13." [url:https\://www.ncbi.nlm.nih.gov/pubmed/27476654]
 synonym: "encefalopatía epiléptica infantil precoz 42" EXACT []
 xref: MIM:617106
+xref: NCI:C188142
+xref: UMLS_CUI:C4310716
 is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0112202 ! encefalopatía epiléptica y del desarrollo
+property_value: skos:exactMatch "MIM:617106" xsd:string
+property_value: skos:exactMatch "NCI:C188142" xsd:string
+property_value: skos:exactMatch "UMLS_CUI:C4310716" xsd:string
 
 [Term]
 id: DOID:0080455
@@ -37724,7 +38515,11 @@ is_a: DOID:0080488 ! mucolipidosis
 id: DOID:0080491
 name: malformación cavernosa cerebral 1
 def: "Una malformación cavernosa cerebral que presenta una mutación heterocigota en el gen KRIT1 del cromosoma 7q21." [url:https\://www.omim.org/entry/116860?search=116860&highlight=116860]
+subset: DO_rare_slim
+xref: ICD10CM:Q28.3
 xref: MIM:116860
+xref: ORDO:221061
+is_a: DOID:0050736 ! enfermedad autosómica dominante
 is_a: DOID:0060669 ! malformación cavernosa cerebral
 
 [Term]
@@ -105088,7 +105883,7 @@ is_a: DOID:1247 ! enfermedad de la coagulación sanguínea
 [Term]
 id: DOID:2217
 name: síndrome de Bernard-Soulier
-def: "A blood coagulation disease characterized by autosomal recessive inheritance of mucosal bleeding, purpuric skin bleeding, epistaxis, and menorrhagia with prolonged bleeding times, enlarged platelets and absence of platelet aggregation in response to von Willebrand factor that has_material_basis_in mutation in the GP1BA gene, the GP1BB gene, or the GP9 gene which are subunits of the platelet membrane von Willebrand factor receptor complex, glycoprotein Ib." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10706630, url:https\://www.ncbi.nlm.nih.gov/pubmed/8481514, url:https\://www.ncbi.nlm.nih.gov/pubmed/8703016, url:https\://www.ncbi.nlm.nih.gov/pubmed/9616133]
+def: "A blood coagulation disease characterized by autosomal recessive inheritance of mucosal bleeding, purpuric skin bleeding, epistaxis, and menorrhagia with prolonged bleeding times, enlarged platelets and absence of platelet aggregation in response to von Willebrand factor that has_material_basis_in mutation in the GP1BA gene, the GP1BB gene, or the GP9 gene which are subunits of the platelet membrane von Willebrand factor receptor complex, glycoprotein Ib. The forms of BSS caused by homozygous or compound heterozygous mutation in these genes are here referred to as types A1, B, and C, respectively." [url:https\://www.ncbi.nlm.nih.gov/pubmed/10706630, url:https\://www.ncbi.nlm.nih.gov/pubmed/8481514, url:https\://www.ncbi.nlm.nih.gov/pubmed/8703016, url:https\://www.ncbi.nlm.nih.gov/pubmed/9616133]
 subset: DO_rare_slim
 subset: NCIthesaurus
 synonym: "Síndrome de Bernard Soulier" EXACT []

@@ -1,0 +1,29 @@
+# identifies OMIM susceptibility terms that do not have a 'contributes to condition'
+# relation to a DOID
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property { obo:RO_0003304 }
+  
+	?entity a owl:Class .
+  FILTER (!CONTAINS(str(?entity), "DOID"))
+	FILTER (?entity != obo:MIM_000000)
+	FILTER (!isBlank(?entity))
+	FILTER NOT EXISTS { ?entity owl:deprecated ?any }
+
+	OPTIONAL { 
+		?entity rdfs:subClassOf [
+			a owl:Restriction ;
+			owl:onProperty ?property ;
+			owl:someValuesFrom ?value
+		] .
+	}
+
+	FILTER (
+		!REGEX(?value, CONCAT(str(obo:) + "DOID_[0-9]{1,7}$")) || !BOUND(?value)
+	)
+}

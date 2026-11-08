@@ -2,13 +2,15 @@
 MAKEFLAGS += --warn-undefined-variables
 SHELL := bash
 .SHELLFLAGS := -eu -o pipefail -c
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := help
 .DELETE_ON_ERROR:
 .SUFFIXES:
 .SECONDARY:
 .NOTPARALLEL:
 
 include src/util/functions.mk
+include src/util/help-root.mk
+include src/util/help.mk
 
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
@@ -26,24 +28,13 @@ FASTOBO_VRS = 0.4.6
 
 # ***NEVER run make commands in parallel (do NOT use the -j flag)***
 
-# to make a release, use `make release`
-# to update imports, use `make imports`
-# to run QC tests on doid-edit.owl, use `make test`
-
-# Release process:
-# 1. Build import modules (if anything has changed)
-# 2. Update versionIRIs of import modules to release
-# 3. Build all products (doid, doid-non-classified, doid-merged, all subsets)
-# 4. Validate syntax of OBO-format products with fastobo-validator
-# 5. Verify logical structure of products with SPARQL queries
-# 6. Publish to release directory
-# 7. Generate post-build reports (counts, etc.)
+# Run `make help` for available targets; release steps are in src/ontology/README-make.md
 .PHONY: release all
+## [release] Release, without import updates
 release: rel_test version_imports products verify publish post
 	@echo "Release complete!"
 
-# Only run `make all` if you'd like to update imports to the latest version
-#	during the release!
+## [release] Release, with import updates
 all: imports release
 
 .PHONY: FORCE
@@ -55,6 +46,7 @@ FORCE:
 ##########################################
 
 .PHONY: clean
+## [caution] Remove the build directory (start fresh)
 clean:
 	rm -rf build
 
@@ -81,8 +73,8 @@ check_robot:
 		$(MAKE) build/robot.jar ; \
 	fi
 
-# run `make refresh_robot` if ROBOT is not working correctly
 .PHONY: refresh_robot
+## [caution] Re-download ROBOT
 refresh_robot:
 	rm -rf build/robot.jar && $(MAKE) build/robot.jar
 
@@ -127,6 +119,11 @@ $(FASTOBO): | build
 		fi ; \
 	fi
 
+.PHONY: refresh_fastobo
+## [caution] Re-download fastobo-validator
+refresh_fastobo:
+	rm -rf build/fastobo-validator && $(MAKE) $(FASTOBO)
+
 
 ##########################################
 ## CI TESTS & DIFF
@@ -134,15 +131,15 @@ $(FASTOBO): | build
 
 .PHONY: ci_test test report reason verify-edit quarterly_test
 
-# Github Continuous Integration (CI) testing
+## [tests] GitHub continuous integration tests
 ci_test: reason report verify-edit
 	@echo ""
 
-# Local CI testing (includes diff)
+## [tests] ci_test + diff
 test: ci_test diff
 	@echo ""
 
-# Report for general issues on doid-edit
+## [tests:ci_test] ROBOT QC reports for doid-edit.owl
 report: build/reports/report-obo.tsv build/reports/report.tsv
 
 .PRECIOUS: build/reports/report.tsv build/reports/report-obo.tsv
@@ -161,7 +158,7 @@ build/reports/report-obo.tsv: $(EDIT) | check_robot build/reports
 	 --labels true \
 	 --output $@
 
-# Simple reasoning test
+## [tests:ci_test] Reasoning test for doid-edit.owl
 reason: build/doid-edit-reasoned.owl
 
 build/doid-edit-reasoned.owl: $(EDIT) | check_robot build
@@ -179,6 +176,7 @@ EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verif
 EDIT_V_RES := $(patsubst src/sparql/verify/%.rq,build/reports/temp/%.csv,$(EDIT_V_QUERIES))
 
 .PRECIOUS: build/reports/edit-verify.csv
+## [tests:ci_test] SPARQL verification checks for doid-edit.owl
 verify-edit: build/reports/edit-verify.csv
 build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
 	@rm -f $(EDIT_V_RES)
@@ -197,6 +195,7 @@ QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 QUARTER_V_RES := $(patsubst src/sparql/verify/%.rq,build/reports/temp/%.csv,$(QUARTER_V_QUERIES))
 
 .PRECIOUS: build/reports/quarterly_test.csv
+## [maintain] Quarterly SPARQL checks for doid-edit.owl
 quarterly_test: build/reports/quarterly_test.csv
 build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 	@echo "Verifying $<..."
@@ -216,6 +215,7 @@ build/reports/quarterly_test.csv: $(EDIT) | check_robot build/reports/temp
 # ----------------------------------------
 
 .PHONY: diff
+## [tests:test] Compare doid-edit.owl against last release
 diff: build/reports/diff-ci.tsv
 
 # Get the last release of doid-merged.owl (only if newer available)
@@ -291,6 +291,7 @@ build/update/be_synonyms.csv: src/util/compute_british_synonyms.py \
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
+## [maintain] Add British English synonyms to doid-edit.owl
 add_british_synonyms: $(EDIT) build/update/be_synonyms.csv | \
  check_robot src/sparql/update/doid-edit_prefixes.json
 	@$(ROBOT) template \
@@ -311,6 +312,7 @@ SUB_AUTO := $(patsubst src/sparql/update/subsets/%.ru, update_%, \
 	$(wildcard src/sparql/update/subsets/*.ru))
 
 .PHONY: update_slims $(SUB_ADD) $(SUB_AUTO)
+## [maintain] Update subsets/slims in doid-edit.owl (see help-update)
 update_slims: $(SUB_ADD) $(SUB_AUTO)
 
 # so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
@@ -373,6 +375,7 @@ XREF_AUTO := $(patsubst src/sparql/update/xrefs/%.ru, update_%, \
 	$(wildcard src/sparql/update/xrefs/*.ru))
 
 .PHONY: update_xrefs $(XREF_AUTO)
+## [maintain] Update xrefs in doid-edit.owl (see help-update)
 update_xrefs: $(XREF_AUTO)
 
 $(XREF_AUTO): update_%: $(EDIT) src/sparql/update/xrefs/%.ru | check_robot \
@@ -399,7 +402,7 @@ $(XREF_AUTO): update_%: $(EDIT) src/sparql/update/xrefs/%.ru | check_robot \
 	@echo " -> See build/update/$*-report.txt for changes"
 
 # ----------------------------------------
-# FIX DATA - TYPOS, PATTERNS, ETC. (use fix_cmds to list)
+# FIX DATA - TYPOS, PATTERNS, ETC. (use help-fix to list)
 # ----------------------------------------
 
 FIX_FILES := $(wildcard src/sparql/update/fix_*.ru)
@@ -407,22 +410,9 @@ OPT_FIX_FILES := $(wildcard src/sparql/update/opt_fix_*.ru)
 FIX := $(basename $(notdir $(FIX_FILES)))
 OPT_FIX :=  $(basename $(notdir $(OPT_FIX_FILES)))
 
-.PHONY: fix_cmds fix $(FIX) $(OPT_FIX)
+.PHONY: fix $(FIX) $(OPT_FIX)
 
-# reports possible commands with description from first line of SPARQL update file
-fix_cmds:
-	@echo -e "\n\nThese rules can be used to 'fix' data ('make fix' to run all):\n"
-
-	@for f in $(FIX_FILES); do \
-		printf -- '- %s:\t%s\n' $$(basename $$f .ru) "$$(sed '1s/# //;q' $$f )" ; \
-	 done
-	@echo -e "\n### Optional fix rules ###\nExcluded from 'make fix'. REVIEW RESULTS CAREFULLY!\n"
-	@for f in $(OPT_FIX_FILES); do \
-		printf -- '- %s:\t%s\n' $$(basename $$f .ru) "$$(sed '1s/# //;q' $$f )" ; \
-	 done
-	@echo -e "\n"
-
-# run all fix_cmds
+## [maintain] Run all fix_* rules (see help-fix)
 fix: $(FIX)
 	@echo " -> Review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
 
@@ -453,12 +443,8 @@ $(OPT_FIX): opt_fix_%: $(EDIT) src/sparql/update/opt_fix_%.ru | \
 ## IMPORTS
 ##########################################
 
-# Import options (each can be executed here or from the src/ontology/imports dir):
-# 0. `make test_omim_susc` - Run QC tests on omim_susc_import.owl.
-# 1. `make imports` - Make all imports from existing source files (WARNING: will download ONLY if they don't exist).
-# 2. `make refresh_imports` - Make all imports from newly downloaded source files.
-# 3. `make <import name>` - Make specified import from existing soure file (WARNING: will download ONLY if it doesn't exist).
-# 4. `make refresh_<import name>` - Make specified import from newly downloaded source file.
+# Imports can be built here or from src/ontology/imports; see `make help-imports`.
+# Individual imports (`make <name>`, `make refresh_<name>`) are listed in IMPS.
 
 IMPS := chebi cl disdriv eco foodon geno hp ncbitaxon ro so symp trans uberon
 # define imports updated manually, solely for versioning
@@ -469,6 +455,7 @@ MANUAL_IMPS := omim_susc
 # ----------------------------------------
 
 .PHONY: test_omim_susc
+## [tests] ROBOT QC report for omim_susc_import.owl
 test_omim_susc: build/reports/report-omim_susc.tsv
 
 .PRECIOUS: build/reports/report-omim_susc.tsv
@@ -485,10 +472,12 @@ build/reports/report-omim_susc.tsv: src/ontology/imports/omim_susc_import.owl \
 # BUILD
 # ----------------------------------------
 
+## [imports] Build all imports; use `<import>` for single import
 imports: | check_robot
 	@echo "Checking import modules..."
 	@$(MAKE) -C src/ontology/imports imports
 
+## [imports] Rebuild all imports from fresh downloads (slow); use `refresh_<import>` for single import
 refresh_imports: | check_robot
 	@echo "Refreshing import modules (this may take some time)..."
 	@$(MAKE) -C src/ontology/imports refresh_imports
@@ -550,8 +539,10 @@ build/doid-precursor.owl: $(EDIT_EXT) | check_robot
 # ----------------------------------------
 
 .PHONY: rel_test
+## [release:release] Pre-release tests
 rel_test: ci_test build/reports/diff-release.tsv
 
+# includes 'has major susceptibility factor' relations
 build/reports/diff-release.tsv: build/doid-merged-last.owl \
  build/doid-precursor.owl | check_robot build/reports
 	@$(ROBOT) export \
@@ -575,6 +566,7 @@ build/reports/diff-release.tsv: build/doid-merged-last.owl \
 ##########################################
 
 .PHONY: products
+## [release:release] Build ontologies, subsets, DOreports, sitemap, & facets
 products: primary human merged base subsets release_reports website
 
 # release vars
@@ -812,6 +804,7 @@ VERSION_IMPS = $(foreach I,$(IMPS) $(MANUAL_IMPS),$(addprefix version_, $(I)))
 # No longer versioning edit file, following pattern of most of OBO
 .PHONY: version_imports version_ext $(VERSION_IMPS)
 
+## [release:release] Set versionIRIs of imports and ext.owl
 version_imports: $(VERSION_IMPS) version_ext
 
 version_ext: src/ontology/ext.owl | check_robot
@@ -839,6 +832,7 @@ $(VERSION_IMPS): version_%: src/ontology/imports/%_import.owl | check_robot
 # Copy the latest release to the releases directory
 
 .PHONY: publish
+## [release:release] Copy products to release directory
 publish: products
 	@cp $(DO).* src/ontology/releases
 	@cp $(DB).* src/ontology/releases
@@ -875,6 +869,7 @@ src/sitemap-disease-terms.xml: build/reports/diff-release.tsv
 .PHONY: verify validate-obo verify-do verify-dnc validate-doid \
  validate-doid-merged validate-doid-non-classified validate-doid-base
 
+## [release:release] Verify OBO release products
 verify: validate-obo verify-do verify-dnc
 
 # Using fastobo-validator
@@ -911,6 +906,7 @@ verify-dnc: $(DNC).obo | check_robot build/reports/report.tsv
 ##########################################
 
 # Count classes, imports, and logical defs from old and new
+## [release:release] Post-build reports for release products
 post: build/reports/report-diff.txt \
       build/reports/branch-count.tsv \
       build/reports/missing-axioms.txt \
@@ -989,8 +985,10 @@ LANGS := es
 DOLANG := src/ontology/releases/translations/doid
 
 .PHONY: translations international $(LANGS)
+## [release] Build translation products & generate reports
 translations: $(LANGS) international lang-reports
 
+## [release:translations] Build doid-international.owl
 international: $(DOLANG)-international.owl
 
 $(LANGS): %: $(DOLANG)-%.owl $(DOLANG)-%.obo
@@ -1092,6 +1090,7 @@ LANG_QUERIES := $(wildcard src/sparql/build/intl-report-*.rq)
 LANG_REPORTS := $(foreach Q,$(LANG_QUERIES),build/reports/$(basename $(notdir $(Q))).tsv)
 
 .PHONY: lang-reports
+## [release:translations] Language counts
 lang-reports: $(LANG_REPORTS)
 
 $(LANG_REPORTS): build/reports/%.tsv: src/sparql/build/%.rq $(DOLANG)-international.owl | check_robot build/reports

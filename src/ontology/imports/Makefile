@@ -2,7 +2,7 @@
 MAKEFLAGS += --warn-undefined-variables
 SHELL := bash
 .SHELLFLAGS := -eu -o pipefail -c
-.DEFAULT_GOAL := imports
+.DEFAULT_GOAL := help
 .DELETE_ON_ERROR:
 .SUFFIXES:
 
@@ -13,22 +13,16 @@ ROOT_DIR := $(SRC_DIR)/..
 # Get functions from src/util/functions.mk
 include $(SRC_DIR)/util/functions.mk
 
+# HELP SETUP
+HELP_GROUPS := TARGETS
+HELP_COMMON := imports
+include $(SRC_DIR)/util/help.mk
+
 OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar $(ROOT_DIR)/build/robot.jar
 
-# Import update options (each can be executed here or from the src/ontology/imports dir)
-# PRIMARY COMMANDS
-# 1. `make imports` - Make all imports, updating if newer versions exist.
-# 2. `make <import name>` - Make specified import, updating if a newer version exists.
-# SECONDARY COMMANDS (these should rarely be needed)
-# 3. `make refresh_imports` - Remove imports/build directory and make all imports from newly downloaded source files.
-# 4. `make refresh_<import name>` - Remove source file from imports/build directory and make import from newly downloaded source file.
-# * For import names see IMPORT_OWL and IMPORT_OWL_GZ variables below
-
-# Other commands (primarily exist for debugging)
-# 1. `make clean` - Remove imports/build directory
-# 2. `make versions` - Update only <import>.version files in imports/build
-# 3. `make sources` - Update versions and source files in imports/build
+# For import names see IMPORT_OWL and IMPORT_OWL_GZ variables below;
+# `make <import name>` and `make refresh_<import name>` work for each.
 
 IMPORT_OWL := cl disdriv eco foodon geno hp ro so symp trans uberon
 # Download compressed (large file size)
@@ -42,20 +36,25 @@ SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
 .PHONY: imports sources versions clean refresh_imports $(IMPORTS)
+## [TARGETS] Build all imports; or singly with `<import>`
 imports: $(IMPORTS)
 
+## [TARGETS] Download the latest source files to build/
 sources: $(SOURCES)
 
+## [TARGETS] Save the latest source versions to build/
 versions: $(VERSIONS)
 
+## [TARGETS] Remove the imports build directory
 clean:
 	rm -rf build
 
+## [TARGETS] Re-download/build all imports (slow); or singly with `refresh_<import>`
 refresh_imports:
 	$(MAKE) clean
 	$(MAKE) imports
 
-# Refresh (clean & rebuild) *individual* imports with `refresh_{import}`
+# Refresh (clean & rebuild) individual imports with `refresh_{import}`
 IMP_REFRESH := ""
 REFRESH_IMPORTS := $(foreach IMP,$(IMPORTS),refresh_$(IMP))
 
@@ -449,5 +448,6 @@ build/uberon_rm_label.txt: uberon_terms.txt | build
 ##########################################
 
 .PHONY: test_omim_susc
+## [TARGETS] ROBOT QC report for omim_susc_import.owl
 test_omim_susc:
 	@$(MAKE) -C $(ROOT_DIR) test_omim_susc

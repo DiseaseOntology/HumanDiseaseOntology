@@ -9,12 +9,14 @@ Open the corresponding `.txt` file and do a text search to ensure the ID has not
 UBERON:0000955	# brain
 ```
 
-Save the file, and then in terminal, run the desired `make` command (see below). This can be run from the `ontology` directory OR the `imports` directory. You can make one at a time with the command `make <import name>`, e.g.:
+Save the file, and then in terminal, run the desired `make` command (see below and [README-make.md](../README-make.md)). This can be run from the `root` directory OR the `imports` directory. You can make one at a time with the command `make <import name>`, e.g.:
+
 ```
 make uberon
 ```
 
 Or you can make all the import modules at once:
+
 ```
 make imports
 ```
@@ -29,8 +31,16 @@ Open the corresponding `.txt` file and do a text search to find the line with th
 
 * `chebi` - Chemical Entities of Biological Interest
 * `cl` - Cell Ontology
+* `disdriv` - Disease Drivers Ontology[^1]
+* `eco` - Evidence and Conclusion Ontology
 * `foodon` - Food Ontology
+* `geno` - Genotype Ontology
 * `hp` - Human Phenotype Ontology
 * `ncbitaxon` - NCBI organismal classification
+* `ro` - OBO Relations Ontology (object properties)
+* `so` - Sequence Ontology
+* `symp` - Symptom Ontology[^1]
+* `trans` - Pathogen Transmission Ontology[^1]
 * `uberon` - Uberon multi-species anatomy ontology
-* `ro` - Relations Ontology (object properties)
+
+[^1]: These imports are additional ontologies developed by the DO team and are available at https://github.com/DiseaseOntology.

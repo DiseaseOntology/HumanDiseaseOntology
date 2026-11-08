@@ -4,33 +4,38 @@
 <!-- badges: end -->
 
 # HumanDiseaseOntology
-Repository for the Human Disease Ontology (DO)
+
+Repository for the Human Disease Ontology (DO).
+
+Website: http://www.disease-ontology.org
+
+Principal Investigator & Contact: [Lynn Schriml](mailto:lynn.schriml@gmail.com)
+
 
 ## Details
-The primary release file, `doid.owl`, is available in the `src/ontology/releases` directory of this GitHub repository. _We strongly recommend downloading this file using its IRI, http://purl.obolibrary.org/obo/doid.owl, particularly where stable access to the latest version is desired._
 
-A complete list of release files and their description can be found in [README-release-files.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/releases/README-release-files.md).
+The Disease Ontology project publishes many files with each monthly release. These can all be found in the [src/ontology/releases](src/ontology/releases) directory of this repository. _However, we **strongly recommend** that users download these files using their ontology or version [IRIs](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier) (also referred to as [URIs](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) or [PURLs](https://en.wikipedia.org/wiki/Persistent_uniform_resource_locator)), instead of direct GitHub URLs, for stable & reproducible access ([FAIR data](https://en.wikipedia.org/wiki/FAIR_data) access)._
 
-DO website: http://www.disease-ontology.org
-
-Refer to [CONTRIBUTING.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/?tab=contributing-ov-file) and [CODE_OF_CONDUCT.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/?tab=coc-ov-file) for how to contribute. A tutorial describing DO's editorial activities is also available: [README-editors.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md).
-
-Contact: [Lynn Schriml](mailto:lynn.schriml@gmail.com)
+For a list of files with their descriptions, refer to [README-release-files.md](src/ontology/releases/README-release-files.md) in the `src/ontology/releases` directory.
 
 
-<br>
+## Contributing
 
-> [!NOTE]
-> **_As of the July 2026 release, the changes mentioned in the quoted notice are live!!!_** The associated issue has now been closed but please feel free to to request assistance migrating, or to reopen the issue to describe issues you have experienced.
->
-> > ### Announcment of Changes to OBO & JSON Production Files (April 2026 Release)
-> > The Disease Ontology will be upgrading the software used to create production files (planned implementation in July 2026). This will affect the data representation of both OBO (**_possible breaking changes!!!_**) and obographs JSON production files.
-> >
-> > A complete test release, corresponding to [v2026-04-30](https://github.com/DiseaseOntology/HumanDiseaseOntology/releases/tag/v2026-04-30), with all files using the new data representations is available on the `robot_1.9.10_test_release` branch (https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/robot_1.9.10_test_release).
-> >
-> > For more complete details, please see https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/1597#issuecomment-4453464803. If you have any questions or concerns, please comment on that issue or use the [contact form](https://disease-ontology.org/outreach/contact-us/) at disease-ontology.org.
+Are you interested in contributing and collaborating?
 
-<br> 
+_We'd love to work with you!_ Please read our guidelines for [CONTRIBUTING.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/?tab=contributing-ov-file) and [CODE_OF_CONDUCT.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/?tab=coc-ov-file).
 
-### For Older Releases (before 2015)
-DO curation and production moved to OWL, git, and GitHub in November 2015. DO's [SVN repository on Sourceforge.net](https://sourceforge.net/projects/diseaseontology/) has been retired but is still available for historical reference.
+And, feel free to contact us.
+
+
+## Curators
+
+The following reference materials are available for curators:
+- [README-editors.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-editors.md) - Getting started and basic reference
+- [README-make.md](https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/master/src/ontology/README-make.md) (or run `make help`) - Description of available `make` commands
+- [imports/README.md](src/ontology/imports/README.md) - Adding terms to imports
+
+
+## For Older Releases (before 2015)
+
+Initially, the DO was generated in the Open Biomedical Ontology (OBO) format with development and releases managed in an Subversion (SVN) repository on SourceForge (https://sourceforge.net/projects/diseaseontology/). In November 2015, the DO transitioned to OWL as the primary format and Git/GitHub as the development platform. The DO's SVN repository is inactive but still available for historical reference.

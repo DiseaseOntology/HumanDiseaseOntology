@@ -22,7 +22,7 @@ OBO = http://purl.obolibrary.org/obo/
 ROBOT := java -Xmx10G -jar $(ROOT_DIR)/build/robot.jar
 
 # For import names see IMPORT_OWL and IMPORT_OWL_GZ variables below;
-# `make <import name>` and `make refresh_<import name>` work for each.
+# `make <import name>` and `make refresh-<import name>` work for each.
 
 IMPORT_OWL := cl disdriv eco foodon geno hp ro so symp trans uberon
 # Download compressed (large file size)
@@ -35,7 +35,7 @@ SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 
 VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
-.PHONY: imports sources versions clean refresh_imports $(IMPORTS)
+.PHONY: imports sources versions clean refresh-imports $(IMPORTS)
 ## [TARGETS] Build all imports; or singly with `<import>`
 imports: $(IMPORTS)
 
@@ -49,18 +49,18 @@ versions: $(VERSIONS)
 clean:
 	rm -rf build
 
-## [TARGETS] Re-download/build all imports (slow); or singly with `refresh_<import>`
-refresh_imports:
+## [TARGETS] Re-download/build all imports (slow); or singly with `refresh-<import>`
+refresh-imports:
 	$(MAKE) clean
 	$(MAKE) imports
 
-# Refresh (clean & rebuild) individual imports with `refresh_{import}`
+# Refresh (clean & rebuild) individual imports with `refresh-{import}`
 IMP_REFRESH := ""
-REFRESH_IMPORTS := $(foreach IMP,$(IMPORTS),refresh_$(IMP))
+REFRESH_IMPORTS := $(foreach IMP,$(IMPORTS),refresh-$(IMP))
 
 .PHONY: $(REFRESH_IMPORTS)
 $(REFRESH_IMPORTS):
-	$(eval IMP_REFRESH=$(patsubst refresh_%,%,$@))
+	$(eval IMP_REFRESH=$(patsubst refresh-%,%,$@))
 	@rm -f $(filter build/$(IMP_REFRESH)%,$(SOURCES))
 	@$(MAKE) $(IMP_REFRESH)
 	$(eval IMP_REFRESH="")
@@ -447,7 +447,7 @@ build/uberon_rm_label.txt: uberon_terms.txt | build
 ## IMPORT VALIDATION
 ##########################################
 
-.PHONY: test_omim_susc
+.PHONY: test-omim
 ## [TARGETS] ROBOT QC report for omim_susc_import.owl
-test_omim_susc:
-	@$(MAKE) -C $(ROOT_DIR) test_omim_susc
+test-omim:
+	@$(MAKE) -C $(ROOT_DIR) test-omim

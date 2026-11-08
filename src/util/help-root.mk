@@ -10,7 +10,7 @@ HELP_DESC_maintain := Occasional curator tools: fixes, updates, quarterly tests
 HELP_DESC_release := Creating release files and reports
 HELP_DESC_caution := Reset software and support files
 
-HELP_COMMON_tests := test, test_omim_susc
+HELP_COMMON_tests := test, test-omim
 HELP_COMMON_release := release, translations
 
 define list_sparql
@@ -23,7 +23,7 @@ endef
 
 .PHONY: help-fix help-update
 
-## [maintain] List fix_* rules and descriptions
+## [maintain] List fix-* rules and descriptions
 help-fix:
 	@echo -e "\nRules that 'fix' data ('make fix' runs all):\n"
 	$(call list_sparql,$(FIX_FILES),)
@@ -31,10 +31,10 @@ help-fix:
 	$(call list_sparql,$(OPT_FIX_FILES),)
 	@echo ""
 
-## [maintain] List update_* targets and descriptions
+## [maintain] List update-* targets and descriptions
 help-update:
-	@echo -e "\nSubset updates ('make update_slims' runs all):\n"
-	$(call list_sparql,$(wildcard src/sparql/update/subsets/*.rq src/sparql/update/subsets/*.ru),update_)
-	@echo -e "\nxref updates ('make update_xrefs' runs all):\n"
-	$(call list_sparql,$(wildcard src/sparql/update/xrefs/*.ru),update_)
+	@echo -e "\nSubset updates ('make update-slims' runs all):\n"
+	$(call list_sparql,$(wildcard src/sparql/update/subsets/*.rq src/sparql/update/subsets/*.ru),update-)
+	@echo -e "\nxref updates ('make update-xrefs' runs all):\n"
+	$(call list_sparql,$(wildcard src/sparql/update/xrefs/*.ru),update-)
 	@echo ""

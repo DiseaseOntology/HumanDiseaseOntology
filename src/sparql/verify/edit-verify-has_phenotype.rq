@@ -11,7 +11,7 @@ WHERE {
         owl:someValuesFrom ?not_phenotype .
 
     FILTER(isBlank(?anonymous))
-    FILTER(!isBlank(?not_phenotype) && !CONTAINS(str(?not_phenotype), "HP_"))
+    FILTER(!isBlank(?not_phenotype) && !CONTAINS(str(?not_phenotype), "HP_") && !CONTAINS(srt(?not_phenotype), "MP_"))
 
     OPTIONAL {
         VALUES ?type { rdfs:subClassOf owl:equivalentClass }

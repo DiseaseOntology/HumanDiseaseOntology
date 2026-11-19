@@ -447,7 +447,7 @@ build/uberon_rm_label.txt: uberon_terms.txt | build
 ## IMPORT VALIDATION
 ##########################################
 
-.PHONY: test-omim
+.PHONY: test-omim_susc
 ## [TARGETS] ROBOT QC report for omim_susc_import.owl
-test-omim:
-	@$(MAKE) -C $(ROOT_DIR) test-omim
+test-omim_susc:
+	@$(MAKE) -C $(ROOT_DIR) test-omim_susc

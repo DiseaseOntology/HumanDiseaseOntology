@@ -454,9 +454,9 @@ MANUAL_IMPS := omim_susc
 # VALIDATION
 # ----------------------------------------
 
-.PHONY: test-omim
+.PHONY: test-omim_susc
 ## [tests] ROBOT QC report for omim_susc_import.owl
-test-omim: build/reports/report-omim_susc.tsv
+test-omim_susc: build/reports/report-omim_susc.tsv
 
 .PRECIOUS: build/reports/report-omim_susc.tsv
 build/reports/report-omim_susc.tsv: src/ontology/imports/omim_susc_import.owl \

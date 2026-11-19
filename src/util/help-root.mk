@@ -10,7 +10,7 @@ HELP_DESC_maintenance := Occasional curator tools: fixes, updates, quarterly tes
 HELP_DESC_release := Creating release files and reports
 HELP_DESC_caution := Reset software and support files
 
-HELP_COMMON_tests := test, test-omim
+HELP_COMMON_tests := test, test-omim_susc
 HELP_COMMON_release := release, translations
 
 define list_sparql

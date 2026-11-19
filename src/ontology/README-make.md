@@ -7,7 +7,7 @@ Run commands from the repository root or, for import specific commands, from the
 | Group | Audience | What it covers |
 |---|---|---|
 | `help-tests` | all curators | Curation QC tests |
-| `help-maintain` | curators (occasional) | fixes, updates and quarterly tests on `doid-edit.owl` |
+| `help-maintenance` | curators (occasional) | fixes, updates and quarterly tests on `doid-edit.owl` |
 | `help-imports` | curators, release managers | building import modules |
 | `help-release` | release managers | creating release files and reports |
 | `help-caution` | developers | reset software and support files |

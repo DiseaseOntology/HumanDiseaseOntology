@@ -33,7 +33,7 @@ ifeq ($(words $(HELP_GROUPS)),1)
 else
 	@echo ""
 	@echo "Display help for groups of targets:"
-	@echo "  help-all       Show all documentation groups and their targets"
+	@echo "  help-all           Show all documentation groups and their targets"
 	@$(HELP_AWK) -v mode=summary $(HELP_SRC)
 endif
 	@echo ""

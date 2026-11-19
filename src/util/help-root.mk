@@ -3,10 +3,10 @@
 # targets are the first line of each SPARQL file. args = files, target prefix
 
 # Display order of groups
-HELP_GROUPS := tests imports maintain release caution
+HELP_GROUPS := tests imports maintenance release caution
 HELP_DESC_tests := Curation Quality Control (QC) tests
 HELP_DESC_imports := Build and update import modules
-HELP_DESC_maintain := Occasional curator tools: fixes, updates, quarterly tests
+HELP_DESC_maintenance := Occasional curator tools: fixes, updates, quarterly tests
 HELP_DESC_release := Creating release files and reports
 HELP_DESC_caution := Reset software and support files
 
@@ -23,7 +23,7 @@ endef
 
 .PHONY: help-fix help-update
 
-## [maintain] List fix-* rules and descriptions
+## [maintenance] List fix-* rules and descriptions
 help-fix:
 	@echo -e "\nRules that 'fix' data ('make fix' runs all):\n"
 	$(call list_sparql,$(FIX_FILES),)
@@ -31,7 +31,7 @@ help-fix:
 	$(call list_sparql,$(OPT_FIX_FILES),)
 	@echo ""
 
-## [maintain] List update-* targets and descriptions
+## [maintenance] List update-* targets and descriptions
 help-update:
 	@echo -e "\nSubset updates ('make update-slims' runs all):\n"
 	$(call list_sparql,$(wildcard src/sparql/update/subsets/*.rq src/sparql/update/subsets/*.ru),update-)

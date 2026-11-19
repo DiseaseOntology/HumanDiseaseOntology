@@ -82,7 +82,7 @@ END {
     for (i = 1; i <= norder; i++) {
         g = order[i]
         if (mode == "summary" && n[g] > 0) {
-            printf "  %-14s %s\n", "help-" g, desc[g]
+            printf "  %-18s %s\n", "help-" g, desc[g]
         } else if (mode == "all" || (mode == "list" && g == grp)) {
             show(g)
         }

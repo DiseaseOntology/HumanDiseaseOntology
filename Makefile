@@ -195,7 +195,7 @@ QUARTER_V_QUERIES := $(wildcard src/sparql/verify/quarter-verify-*.rq)
 QUARTER_V_RES := $(patsubst src/sparql/verify/%.rq,build/reports/temp/%.csv,$(QUARTER_V_QUERIES))
 
 .PRECIOUS: build/reports/test-quarterly.csv
-## [maintain] Quarterly SPARQL checks for doid-edit.owl
+## [maintenance] Quarterly SPARQL checks for doid-edit.owl
 test-quarterly: build/reports/test-quarterly.csv
 build/reports/test-quarterly.csv: $(EDIT) | check-robot build/reports/temp
 	@echo "Verifying $<..."
@@ -291,7 +291,7 @@ build/update/be_synonyms.csv: src/util/compute_british_synonyms.py \
 	@echo "Building synonyms template..."
 	@python3 $^ $@
 
-## [maintain] Add British English synonyms to doid-edit.owl
+## [maintenance] Add British English synonyms to doid-edit.owl
 add-british-synonyms: $(EDIT) build/update/be_synonyms.csv | \
  check-robot src/sparql/update/doid-edit_prefixes.json
 	@$(ROBOT) template \
@@ -312,7 +312,7 @@ SUB_AUTO := $(patsubst src/sparql/update/subsets/%.ru, update-%, \
 	$(wildcard src/sparql/update/subsets/*.ru))
 
 .PHONY: update-slims $(SUB_ADD) $(SUB_AUTO)
-## [maintain] Update subsets/slims in doid-edit.owl (see help-update)
+## [maintenance] Update subsets/slims in doid-edit.owl (see help-update)
 update-slims: $(SUB_ADD) $(SUB_AUTO)
 
 # so far only DO_infectious_disease_slim needs a reasoned doid-edit but it's
@@ -375,7 +375,7 @@ XREF_AUTO := $(patsubst src/sparql/update/xrefs/%.ru, update-%, \
 	$(wildcard src/sparql/update/xrefs/*.ru))
 
 .PHONY: update-xrefs $(XREF_AUTO)
-## [maintain] Update xrefs in doid-edit.owl (see help-update)
+## [maintenance] Update xrefs in doid-edit.owl (see help-update)
 update-xrefs: $(XREF_AUTO)
 
 $(XREF_AUTO): update-%: $(EDIT) src/sparql/update/xrefs/%.ru | check-robot \
@@ -412,7 +412,7 @@ OPT_FIX :=  $(basename $(notdir $(OPT_FIX_FILES)))
 
 .PHONY: fix $(FIX) $(OPT_FIX)
 
-## [maintain] Run all fix-* rules (see help-fix)
+## [maintenance] Run all fix-* rules (see help-fix)
 fix: $(FIX)
 	@echo " -> Review with: git diff --word-diff-regex='.' -- src/ontology/doid-edit.owl)"
 

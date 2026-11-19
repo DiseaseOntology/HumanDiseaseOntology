@@ -11,6 +11,7 @@ SHELL := bash
 include src/util/functions.mk
 include src/util/help-root.mk
 include src/util/help.mk
+# export INVOCATION_DIR ?= $(CURDIR)
 
 DO = src/ontology/doid
 EDIT = src/ontology/doid-edit.owl
@@ -443,55 +444,18 @@ $(OPT_FIX): opt-fix-%: $(EDIT) src/sparql/update/opt-fix-%.ru | \
 ## IMPORTS
 ##########################################
 
-# Imports can be built here or from src/ontology/imports; see `make help-imports`.
-# Individual imports (`make <name>`, `make refresh-<name>`) are listed in IMPS.
-
-IMPS := chebi cl disdriv eco foodon geno hp ncbitaxon ro so symp trans uberon
-# define imports updated manually, solely for versioning
-MANUAL_IMPS := omim_susc
-
-# ----------------------------------------
-# VALIDATION
-# ----------------------------------------
-
-.PHONY: test-omim_susc
-## [tests] ROBOT QC report for omim_susc_import.owl
-test-omim_susc: build/reports/report-omim_susc.tsv
-
-.PRECIOUS: build/reports/report-omim_susc.tsv
-build/reports/report-omim_susc.tsv: src/ontology/imports/omim_susc_import.owl \
-  src/sparql/report/omim_susc_import/report_profile.txt | build/reports
-	@echo -e "\n## omim_susc_import QC report\nFull report at $@"
-	@$(ROBOT) report \
-	 --input $< \
-	 --profile $(word 2,$^) \
-	 --labels true \
-	 --output $@
-
-# ----------------------------------------
-# BUILD
-# ----------------------------------------
-
-## [imports] Build all imports; use OBO namespace for specific import(s) (e.g. `make hp`)
-imports: | check-robot
-	@echo "Checking import modules..."
-	@$(MAKE) -C src/ontology/imports imports
-
-## [imports] Rebuild all imports from fresh downloads (slow); use `refresh-<import>` for specific import
-refresh-imports: | check-robot
-	@echo "Refreshing import modules (this may take some time)..."
-	@$(MAKE) -C src/ontology/imports refresh-imports
-
-$(IMPS): | check-robot
-	@echo "Generating $@ import module..."
-	@$(MAKE) -C src/ontology/imports $@
-
-# Refresh (clean & rebuild) *individual* imports with `refresh-{import}`
+# Imports can be built/tested here or from src/ontology/imports; see `make help-imports`.
+IMPS := $(shell $(MAKE) -s --no-print-directory -C src/ontology/imports list-imports)
 REFRESH_IMPS := $(foreach IMP,$(IMPS),refresh-$(IMP))
-$(REFRESH_IMPS):
-	@$(MAKE) -C src/ontology/imports $@
 
-.PHONY: imports refresh-imports $(IMPS) $(REFRESH_IMPS)
+# imports updated manually, solely for versioning
+MANUAL_IMPS := $(shell $(MAKE) -s --no-print-directory -C src/ontology/imports list-imports-manual)
+
+IMPORT_TARGETS := imports refresh-imports $(IMPS) $(REFRESH_IMPS) test-omim_susc
+
+.PHONY: $(IMPORT_TARGETS)
+$(IMPORT_TARGETS): | check-robot
+	@$(MAKE) -C src/ontology/imports $@
 
 
 ##########################################

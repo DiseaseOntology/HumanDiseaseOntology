@@ -12,6 +12,7 @@ HELP_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 # Recursive so that makefiles included after this one are also parsed.
 HELP_SRC = $(MAKEFILE_LIST)
 HELP_COMMON ?=
+HELP_DEFAULT_MODE ?= summary
 HELP_COMMON_GROUPS = $(foreach g,$(HELP_GROUPS),$(if $(filter undefined,$(origin HELP_COMMON_$(g))),,$(if $(strip $(HELP_COMMON_$(g))),$(g))))
 
 HELP_SPEC = $(foreach g,$(HELP_GROUPS),$(g)|$(if $(filter undefined,$(origin HELP_DESC_$(g))),,$(HELP_DESC_$(g)));)
@@ -28,7 +29,9 @@ else ifneq "$(strip $(HELP_COMMON))" ""
 	@echo ""
 	@echo "Frequent target(s): $(HELP_COMMON)"
 endif
-ifeq ($(words $(HELP_GROUPS)),1)
+ifeq ($(HELP_DEFAULT_MODE),all)
+	@$(HELP_AWK) -v mode=all $(HELP_SRC)
+else ifeq ($(words $(HELP_GROUPS)),1)
 	@$(HELP_AWK) -v mode=all $(HELP_SRC)
 else
 	@echo ""
@@ -41,8 +44,10 @@ endif
 
 $(addprefix help-,$(HELP_GROUPS)): help-%:
 	@$(HELP_AWK) -v mode=list -v grp=$* $(HELP_SRC)
+	@$(if $(filter undefined,$(origin HELP_AFTER_$*)),:,$(HELP_AFTER_$*))
 	@echo ""
 
 help-all:
 	@$(HELP_AWK) -v mode=all $(HELP_SRC)
+	@$(if $(filter undefined,$(origin HELP_AFTER_all)),:,$(HELP_AFTER_all))
 	@echo ""

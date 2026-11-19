@@ -9,6 +9,10 @@ HELP_DESC_imports := Build and update import modules
 HELP_DESC_maintenance := Occasional curator tools: fixes, updates, quarterly tests
 HELP_DESC_release := Creating release files and reports
 HELP_DESC_caution := Reset software and support files
+HELP_AFTER_imports = $(MAKE) -s --no-print-directory -C src/ontology/imports help-imports
+HELP_AFTER_tests = $(MAKE) -s --no-print-directory -C src/ontology/imports help-tests
+HELP_AFTER_all = $(MAKE) -s --no-print-directory -C src/ontology/imports help-imports && \
+	$(MAKE) -s --no-print-directory -C src/ontology/imports help-tests
 
 HELP_COMMON_tests := test, test-omim_susc
 HELP_COMMON_release := release, translations

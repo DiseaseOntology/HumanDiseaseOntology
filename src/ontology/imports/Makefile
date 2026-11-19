@@ -36,7 +36,7 @@ SOURCES := $(SOURCE_OWL) $(SOURCE_OWL_GZ)
 VERSIONS := $(addprefix build/, $(addsuffix .version,$(IMPORTS)))
 
 .PHONY: imports sources versions clean refresh-imports $(IMPORTS)
-## [TARGETS] Build all imports; or singly with `<import>`
+## [TARGETS] Build all imports; use OBO namespace for specific import(s)
 imports: $(IMPORTS)
 
 ## [TARGETS] Download the latest source files to build/
@@ -163,6 +163,7 @@ $(patsubst %,build/%.version,$(IMPORT_OWL_GZ)): FORCE | build
 # FULL IMPORTS
 # ----------------------------------------
 
+## [TARGETS:imports] Disease Drivers Ontology
 disdriv: disdriv_import.owl
 disdriv_import.owl: build/disdriv.owl | build/disdriv.version build/last
 	@$(call announce_version,$@,$|)
@@ -172,6 +173,7 @@ disdriv_import.owl: build/disdriv.owl | build/disdriv.version build/last
 	 --select "owl:deprecated='true'^^xsd:boolean" \
 	$(call annotate_import,$@,$|)
 
+## [TARGETS:imports] Symptom Ontology
 symp: symp_import.owl
 symp_import.owl: build/symp.owl | build/symp.version build/last
 	@$(call announce_version,$@,$|)
@@ -183,6 +185,7 @@ symp_import.owl: build/symp.owl | build/symp.version build/last
 	 --select object-properties \
 	$(call annotate_import,$@,$|)
 
+## [TARGETS:imports] Pathogen Transmission Ontology
 trans: trans_import.owl
 trans_import.owl: build/trans.owl | build/trans.version build/last
 	@$(call announce_version,$@,$|)
@@ -199,6 +202,7 @@ trans_import.owl: build/trans.owl | build/trans.version build/last
 # IMPORT MODULES
 # ----------------------------------------
 
+## [TARGETS:imports] Chemical Entities of Biological Interest
 chebi: chebi_import.owl
 chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt \
  build/chebi.version build/last
@@ -216,6 +220,7 @@ chebi_import.owl: build/chebi.owl.gz chebi_terms.txt | annotations.txt \
 	 --term "owl:Thing" \
 	$(call annotate_import,$@,$(word 2,$|))
 
+## [TARGETS:imports] Cell Ontology
 cl: cl_import.owl
 cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version \
  build/last
@@ -239,6 +244,7 @@ cl_import.owl: build/cl.owl cl_terms.txt | annotations.txt build/cl.version \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # NOTE: Unlike other imports, build drops intermediate ECO classes
+## [TARGETS:imports] Evidence & Conclusion Ontology
 eco: eco_import.owl
 eco_import.owl: build/eco.owl eco_terms.txt | annotations.txt build/eco.version \
  build/last
@@ -257,6 +263,7 @@ eco_import.owl: build/eco.owl eco_terms.txt | annotations.txt build/eco.version 
 	 --term oboInOwl:hasDbXref \
 	$(call annotate_import,$@,$(word 2,$|))
 
+## [TARGETS:imports] Food Ontology
 foodon: foodon_import.owl
 foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt \
  build/foodon.version build/last
@@ -284,6 +291,7 @@ foodon_import.owl: build/foodon.owl foodon_terms.txt | annotations.txt \
 	 --update $(SRC_DIR)/sparql/build/remove_non_en_labels.ru \
 	$(call annotate_import,$@,$(word 2,$|))
 
+## [TARGETS:imports] Genotype Ontology
 geno: geno_import.owl
 geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt \
  build/geno.version build/last
@@ -304,6 +312,7 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # The HP module is a subset of the Phenotypic abnormality branch
+## [TARGETS:imports] Human Phenotype Ontology
 hp: hp_import.owl
 hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
  build/hp.version build/last
@@ -334,6 +343,7 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # WARNING: NCBITaxon is BIG! This will take time.
+## [TARGETS:imports] NCBI Taxonomy
 ncbitaxon: ncbitaxon_import.owl
 ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | \
  annotations.txt build/ncbitaxon.version build/last
@@ -355,6 +365,7 @@ ncbitaxon_import.owl: build/ncbitaxon.owl.gz ncbitaxon_terms.txt | \
 	 --trim false \
 	$(call annotate_import,$@,$(word 2,$|))
 
+## [TARGETS:imports] OBO Relations Ontology
 ro: ro_import.owl
 ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version \
  build/last
@@ -372,6 +383,7 @@ ro_import.owl: build/ro.owl ro_terms.txt | annotations.txt build/ro.version \
 
 # The SO import contains only the sequence_variant branch plus a few terms
 # from sequence_feature. See IMPORT INTERMEDIATES below for more details.
+## [TARGETS:imports] Sequence Ontology
 so: so_import.owl
 so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt \
  build/so.version build/last
@@ -386,6 +398,7 @@ so_import.owl: build/so_feature.owl build/so_variant.owl | annotations.txt \
 	 --term-file annotations.txt \
 	$(call annotate_import,$@,$(word 2,$|))
 
+## [TARGETS:imports] Uber-anatomy ontology
 uberon: uberon_import.owl
 uberon_import.owl: build/uberon.owl uberon_terms.txt build/uberon_rm_label.txt \
  | annotations.txt build/uberon.version build/last

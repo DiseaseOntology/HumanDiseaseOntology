@@ -472,12 +472,12 @@ build/reports/report-omim_susc.tsv: src/ontology/imports/omim_susc_import.owl \
 # BUILD
 # ----------------------------------------
 
-## [imports] Build all imports; use `<import>` for single import
+## [imports] Build all imports; use OBO namespace for specific import(s) (e.g. `make hp`)
 imports: | check-robot
 	@echo "Checking import modules..."
 	@$(MAKE) -C src/ontology/imports imports
 
-## [imports] Rebuild all imports from fresh downloads (slow); use `refresh-<import>` for single import
+## [imports] Rebuild all imports from fresh downloads (slow); use `refresh-<import>` for specific import
 refresh-imports: | check-robot
 	@echo "Refreshing import modules (this may take some time)..."
 	@$(MAKE) -C src/ontology/imports refresh-imports

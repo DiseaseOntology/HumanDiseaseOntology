@@ -15374,6 +15374,10 @@ AnnotationAssertion(rdfs:label skos:relatedMatch "has related match")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://purl.obolibrary.org/obo/IDO_0000664") obo:IAO_0000115 obo:IDO_0000664 "Relating the disease to it’s causation (disease and disorder).")
 AnnotationAssertion(rdfs:label obo:IDO_0000664 "has material basis in")
 
+# Object Property: obo:RO_0001000 (derives from)
+
+ReflexiveObjectProperty(obo:RO_0001000)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO#_is_a> (is_a)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://geneontology.org/docs/ontology-relations/") Annotation(oboInOwl:hasDbXref "url:http://purl.obolibrary.org/obo/rex#is_a") obo:IAO_0000115 <http://purl.obolibrary.org/obo/RO#_is_a> "Relation defining child to partent inheritance type.")
@@ -23016,6 +23020,7 @@ AnnotationAssertion(rdfs:comment obo:DOID_0050576 "Xref MGI. OMIM mapping confir
 AnnotationAssertion(rdfs:label obo:DOID_0050576 "Senior-Loken syndrome")
 SubClassOf(obo:DOID_0050576 obo:DOID_225)
 SubClassOf(obo:DOID_0050576 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000148))
+SubClassOf(obo:DOID_0050576 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_0050577 (cranioectodermal dysplasia)
 
@@ -23030,6 +23035,7 @@ AnnotationAssertion(rdfs:comment obo:DOID_0050577 "OMIM mapping confirmed by DO.
 AnnotationAssertion(rdfs:label obo:DOID_0050577 "cranioectodermal dysplasia")
 SubClassOf(obo:DOID_0050577 obo:DOID_225)
 SubClassOf(obo:DOID_0050577 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000148))
+SubClassOf(obo:DOID_0050577 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_0050578 (occult macular dystrophy)
 
@@ -23227,6 +23233,7 @@ AnnotationAssertion(rdfs:comment obo:DOID_0050592 "OMIM mapping confirmed by DO.
 AnnotationAssertion(rdfs:label obo:DOID_0050592 "asphyxiating thoracic dystrophy")
 SubClassOf(obo:DOID_0050592 obo:DOID_0080006)
 SubClassOf(obo:DOID_0050592 ObjectSomeValuesFrom(obo:RO_0002200 ObjectIntersectionOf(obo:HP_0000773 obo:HP_0005257)))
+SubClassOf(obo:DOID_0050592 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 SubClassOf(obo:DOID_0050592 ObjectSomeValuesFrom(obo:RO_0004026 obo:UBERON_0002228))
 
 # Class: obo:DOID_0050593 (primary congenital glaucoma)
@@ -34491,9 +34498,8 @@ AnnotationAssertion(oboInOwl:creation_date obo:DOID_0060340 "2015-05-21T10:41:29
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:DOID_0060340 "disease_ontology")
 AnnotationAssertion(oboInOwl:id obo:DOID_0060340 "DOID:0060340")
 AnnotationAssertion(rdfs:label obo:DOID_0060340 "ciliopathy")
-EquivalentClasses(obo:DOID_0060340 ObjectIntersectionOf(obo:DOID_4 ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0002200 obo:MP_0013202) ObjectSomeValuesFrom(obo:RO_0002200 obo:MP_0013208))))
+EquivalentClasses(obo:DOID_0060340 ObjectIntersectionOf(obo:DOID_4 ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0002200 obo:MP_0013202) ObjectSomeValuesFrom(obo:RO_0002200 obo:MP_0013208) ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))))
 SubClassOf(obo:DOID_0060340 obo:DOID_225)
-SubClassOf(obo:DOID_0060340 ObjectSomeValuesFrom(obo:RO_0004019 obo:SO_0000704))
 
 # Class: obo:DOID_0060341 (agnathia-otocephaly complex)
 
@@ -91614,6 +91620,7 @@ SubClassOf(obo:DOID_0110861 obo:DOID_0080322)
 SubClassOf(obo:DOID_0110861 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000148))
 SubClassOf(obo:DOID_0110861 ObjectSomeValuesFrom(obo:RO_0002488 obo:HP_0003593))
 SubClassOf(obo:DOID_0110861 ObjectSomeValuesFrom(obo:RO_0002488 obo:HP_0011463))
+SubClassOf(obo:DOID_0110861 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_0110862 (congenital stationary night blindness autosomal dominant 1)
 
@@ -134062,6 +134069,7 @@ AnnotationAssertion(rdfs:comment obo:DOID_12712 "Xref MGI. OMIM mapping confirme
 AnnotationAssertion(rdfs:label obo:DOID_12712 "nephronophthisis")
 SubClassOf(obo:DOID_12712 obo:DOID_557)
 SubClassOf(obo:DOID_12712 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000148))
+SubClassOf(obo:DOID_12712 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_12713 (obsolete medullary sponge kidney)
 
@@ -152397,6 +152405,7 @@ AnnotationAssertion(rdfs:comment obo:DOID_1935 "OMIM mapping confirmed by DO. [S
 AnnotationAssertion(rdfs:label obo:DOID_1935 "Bardet-Biedl syndrome")
 SubClassOf(obo:DOID_1935 obo:DOID_225)
 SubClassOf(obo:DOID_1935 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000148))
+SubClassOf(obo:DOID_1935 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_1936 (atherosclerosis)
 
@@ -213558,6 +213567,7 @@ SubClassOf(obo:DOID_898 obo:DOID_0080322)
 SubClassOf(obo:DOID_898 ObjectSomeValuesFrom(obo:IDO_0000664 obo:GENO_0000147))
 SubClassOf(obo:DOID_898 ObjectSomeValuesFrom(obo:RO_0002200 obo:HP_0012212))
 SubClassOf(obo:DOID_898 ObjectSomeValuesFrom(obo:RO_0002488 obo:HP_0003581))
+SubClassOf(obo:DOID_898 ObjectSomeValuesFrom(obo:RO_0004020 obo:GO_0005929))
 
 # Class: obo:DOID_8980 (obsolete Hodgkin's lymphoma, lymphocytic-histiocytic predominance involving spleen)
 

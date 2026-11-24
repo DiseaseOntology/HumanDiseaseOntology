@@ -30,7 +30,7 @@ ROBOT := java -Xmx10G -jar $(ROOT_DIR)/build/robot.jar
 # 2. `make versions` - Update only <import>.version files in imports/build
 # 3. `make sources` - Update versions and source files in imports/build
 
-IMPORT_OWL := cl disdriv eco foodon geno hp ro so symp trans uberon
+IMPORT_OWL := cl disdriv eco foodon geno hp go mp ro so symp trans uberon
 # Download compressed (large file size)
 IMPORT_OWL_GZ := chebi ncbitaxon
 IMPORTS := $(IMPORT_OWL) $(IMPORT_OWL_GZ)
@@ -304,6 +304,24 @@ geno_import.owl: build/geno.owl geno_terms.txt | annotations.txt \
 	 --select "self descendants" \
 	$(call annotate_import,$@,$(word 2,$|))
 
+go: go_import.owl
+go_import.owl: build/go.owl go_terms.txt | annotations.txt build/go.version \
+ build/last
+	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
+	@$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --select complement \
+	 --drop-axiom-annotations all \
+	remove \
+	 --term-file annotations.txt \
+	 --select complement \
+	 --select annotation-properties \
+	$(call annotate_import,$@,$(word 2,$|))
+
 # The HP module is a subset of the Phenotypic abnormality branch
 hp: hp_import.owl
 hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
@@ -332,6 +350,24 @@ hp_import.owl: build/hp.owl hp_terms.txt exclude-hp.txt | annotations.txt \
 	 --term rdfs:label \
 	 --axioms annotation \
 	 --trim false \
+	$(call annotate_import,$@,$(word 2,$|))
+
+mp: mp_import.owl
+mp_import.owl: build/mp.owl mp_terms.txt | annotations.txt build/mp.version \
+ build/last
+	@$(call announce_version,$@,$(word 2,$|))
+	@$(save_last)
+	@$(ROBOT) extract \
+	 --input $< \
+	 --method mireot \
+	 --lower-terms $(word 2,$^) \
+	remove \
+	 --select complement \
+	 --drop-axiom-annotations "all" \
+	remove \
+	 --term-file annotations.txt \
+	 --select complement \
+	 --select annotation-properties \
 	$(call annotate_import,$@,$(word 2,$|))
 
 # WARNING: NCBITaxon is BIG! This will take time.
